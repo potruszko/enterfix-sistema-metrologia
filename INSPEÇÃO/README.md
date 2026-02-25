@@ -7,8 +7,7 @@ Sistema web completo para geração de Relatórios de Fabricação e Calibraçã
 📖 **Toda a documentação técnica está disponível na pasta [`/docs`](docs/)**
 
 **Destaques:**
-- 🚀 **[GUIA-DEPLOY-PRODUCAO.md](docs/GUIA-DEPLOY-PRODUCAO.md)** - Deploy em produção com autenticação corporativa (@enterfix.com.br)
-- ⚡ **[GUIA-RAPIDO.md](docs/GUIA-RAPIDO.md)** - Guia rápido para desenvolvedores
+- 🚀 **[GUIA-DEPLOY-PRODUCAO.md](docs/GUIA-DEPLOY-PRODUCAO.md)** - Deploy em produção com autenticação corporativa (@enterfix.com.br)- 🔑 **[azure-ad-configuracao.md](docs/azure-ad-configuracao.md)** - ⭐ Checklist SSO com Microsoft 365/Azure AD- ⚡ **[GUIA-RAPIDO.md](docs/GUIA-RAPIDO.md)** - Guia rápido para desenvolvedores
 - ⚙️ **[CORRIGIR-API-KEY.md](docs/CORRIGIR-API-KEY.md)** - Configuração do Supabase
 
 Veja o [índice completo de documentação](docs/README.md) para mais recursos.
@@ -244,12 +243,14 @@ Os arquivos otimizados serão gerados na pasta `dist/`
 
 Para publicar a aplicação no domínio da Enterfix com restrição de acesso apenas para emails **@enterfix.com.br**, consulte o **[GUIA-DEPLOY-PRODUCAO.md](docs/GUIA-DEPLOY-PRODUCAO.md)**.
 
+**🔑 Para usuários Microsoft 365:** Siga o checklist rápido **[azure-ad-configuracao.md](docs/azure-ad-configuracao.md)** para configurar SSO com Azure AD.
+
 Este guia completo inclui:
+- ✅ **SSO com Azure AD/Microsoft 365** (recomendado para quem usa Microsoft 365)
 - ✅ Autenticação corporativa (restrição @enterfix.com.br)
 - ✅ Deploy no Vercel (gratuito, SSL automático, CI/CD)
 - ✅ Configuração do Supabase com Row Level Security
 - ✅ Domínio customizado (sistema.enterfix.com.br)
-- ✅ Google OAuth SSO com Workspace
 - ✅ Segurança e melhores práticas
 - ✅ Troubleshooting e checklist de deploy
 

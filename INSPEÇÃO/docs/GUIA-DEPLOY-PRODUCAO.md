@@ -32,7 +32,240 @@ Este guia fornece instruções completas para publicar o Sistema de Gestão de R
 
 ## 🔐 Autenticação Corporativa
 
-### Método 1: E-mail Domain Restriction (Supabase - RECOMENDADO)
+> **💡 IMPORTANTE:** Como a Enterfix utiliza **Microsoft 365**, recomendamos o **Método 1 (Azure AD/Microsoft 365 SSO)** para melhor integração com o ambiente corporativo existente. Este método oferece Single Sign-On (SSO) com as contas Microsoft da empresa.
+
+### Método 1: Azure AD / Microsoft 365 SSO (⭐ RECOMENDADO PARA MICROSOFT 365)
+
+Para empresas que utilizam Microsoft 365, esta é a solução ideal pois permite autenticação com as contas corporativas existentes.
+
+**Vantagens:**
+- ✅ Single Sign-On (SSO) - usuários fazem login com suas contas Microsoft
+- ✅ Integração nativa com Azure Active Directory (Entra ID)
+- ✅ Restrição automática por domínio @enterfix.com.br
+- ✅ Controle centralizado de usuários no Microsoft 365 Admin
+- ✅ MFA (autenticação multifator) se já configurado no Microsoft 365
+- ✅ Sem necessidade de criar senhas separadas
+
+**Passo a Passo:**
+
+#### 1. Configurar Azure AD Application
+
+1. **Acesse o Azure Portal:**
+   ```
+   https://portal.azure.com
+   ```
+
+2. **Navegue até Azure Active Directory (Entra ID):**
+   - Menu lateral → **Azure Active Directory**
+   - Ou buscar por "Azure Active Directory"
+
+3. **Registre um novo aplicativo:**
+   - Clique em **App registrations** (Registros de aplicativo)
+   - Clique em **+ New registration**
+   - Preencha:
+     - **Nome:** `Enterfix Sistema Metrologia`
+     - **Supported account types:** "Accounts in this organizational directory only (Enterfix only - Single tenant)"
+     - **Redirect URI:** 
+       - Tipo: Web
+       - URL: `https://[SEU_PROJETO].supabase.co/auth/v1/callback`
+   - Clique em **Register**
+
+4. **Anote as credenciais:**
+   - Na página Overview, copie:
+     - **Application (client) ID** - você vai precisar
+     - **Directory (tenant) ID** - você vai precisar
+   
+5. **Criar Client Secret:**
+   - No menu lateral, clique em **Certificates & secrets**
+   - Clique em **+ New client secret**
+   - Descrição: `Supabase Integration`
+   - Expira em: `24 months` (ou conforme política da empresa)
+   - Clique em **Add**
+   - **⚠️ IMPORTANTE:** Copie o **Value** imediatamente (só aparece uma vez)
+
+6. **Configurar Permissões API:**
+   - Menu lateral → **API permissions**
+   - Clique em **+ Add a permission**
+   - Selecione **Microsoft Graph**
+   - Selecione **Delegated permissions**
+   - Adicione as seguintes permissões:
+     - ✅ `User.Read` (para ler perfil do usuário)
+     - ✅ `email` (para obter o e-mail)
+     - ✅ `openid` (para autenticação OpenID)
+     - ✅ `profile` (para obter informações do perfil)
+   - Clique em **Add permissions**
+   - Clique em **Grant admin consent for Enterfix** (requer admin)
+
+#### 2. Configurar Supabase para Azure AD
+
+1. **Acesse o Dashboard do Supabase:**
+   ```
+   https://app.supabase.com
+   ```
+
+2. **Configure Azure Provider:**
+   - **Authentication → Providers → Azure**
+   - Habilite **Azure** (toggle ON)
+   - Preencha:
+     - **Azure Client ID:** Cole o Application (client) ID do passo anterior
+     - **Azure Secret:** Cole o Client Secret Value do passo anterior
+     - **Azure Tenant ID:** Cole o Directory (tenant) ID
+   - **Restrict to Tenant:** Deixe marcado (restringe ao domínio @enterfix.com.br)
+   - Clique em **Save**
+
+3. **Adicione Políticas RLS para Azure:**
+
+   No **SQL Editor**, execute:
+
+   ```sql
+   -- Habilitar RLS na tabela relatorios
+   ALTER TABLE relatorios ENABLE ROW LEVEL SECURITY;
+
+   -- Política para SELECT (visualização)
+   DROP POLICY IF EXISTS "Azure AD users podem ver relatórios" ON relatorios;
+   CREATE POLICY "Azure AD users podem ver relatórios"
+   ON relatorios FOR SELECT
+   USING (
+     auth.jwt() ->> 'email' LIKE '%@enterfix.com.br'
+   );
+
+   -- Política para INSERT (criação)
+   DROP POLICY IF EXISTS "Azure AD users podem criar relatórios" ON relatorios;
+   CREATE POLICY "Azure AD users podem criar relatórios"
+   ON relatorios FOR INSERT
+   WITH CHECK (
+     auth.jwt() ->> 'email' LIKE '%@enterfix.com.br'
+   );
+
+   -- Política para UPDATE (edição)
+   DROP POLICY IF EXISTS "Azure AD users podem atualizar relatórios" ON relatorios;
+   CREATE POLICY "Azure AD users podem atualizar relatórios"
+   ON relatorios FOR UPDATE
+   USING (
+     auth.jwt() ->> 'email' LIKE '%@enterfix.com.br'
+   );
+
+   -- Política para DELETE (exclusão)
+   DROP POLICY IF EXISTS "Azure AD users podem deletar relatórios" ON relatorios;
+   CREATE POLICY "Azure AD users podem deletar relatórios"
+   ON relatorios FOR DELETE
+   USING (
+     auth.jwt() ->> 'email' LIKE '%@enterfix.com.br'
+   );
+
+   -- Função para verificar domínio corporativo
+   CREATE OR REPLACE FUNCTION public.is_enterfix_azure_user()
+   RETURNS boolean AS $$
+   BEGIN
+     RETURN (auth.jwt() ->> 'email') LIKE '%@enterfix.com.br';
+   END;
+   $$ LANGUAGE plpgsql SECURITY DEFINER;
+   ```
+
+#### 3. Implementar Login com Azure no Frontend
+
+Atualize ou crie o componente de autenticação:
+
+**`src/components/Auth.jsx`:**
+
+```jsx
+import { useState } from 'react';
+import { supabase } from '../lib/supabase';
+import { useAlert } from './AlertSystem';
+
+export const Auth = () => {
+  const [loading, setLoading] = useState(false);
+  const alert = useAlert();
+
+  const handleAzureLogin = async () => {
+    setLoading(true);
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'azure',
+        options: {
+          scopes: 'email profile',
+          redirectTo: `${window.location.origin}/dashboard`
+        }
+      });
+
+      if (error) throw error;
+    } catch (error) {
+      alert.error('Erro ao fazer login: ' + error.message);
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100">
+      <div className="max-w-md w-full space-y-8 p-10 bg-white rounded-2xl shadow-2xl">
+        <div className="text-center">
+          <div className="mx-auto h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+            <svg className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h2 className="text-3xl font-bold text-gray-900">
+            Enterfix Metrologia
+          </h2>
+          <p className="mt-2 text-sm text-gray-600">
+            Sistema de Gestão de Relatórios
+          </p>
+        </div>
+        
+        <div className="mt-8">
+          <button
+            onClick={handleAzureLogin}
+            disabled={loading}
+            className="w-full flex items-center justify-center gap-3 px-6 py-4 border border-gray-300 rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {loading ? (
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+            ) : (
+              <>
+                <svg className="h-6 w-6" viewBox="0 0 23 23" fill="none">
+                  <path fill="#f3f3f3" d="M0 0h23v23H0z"/>
+                  <path fill="#f35325" d="M1 1h10v10H1z"/>
+                  <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                  <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                  <path fill="#ffba08" d="M12 12h10v10H12z"/>
+                </svg>
+                <span className="text-base font-medium text-gray-700">
+                  Entrar com Microsoft 365
+                </span>
+              </>
+            )}
+          </button>
+
+          <p className="mt-6 text-center text-xs text-gray-500">
+            Acesso restrito a colaboradores com e-mail @enterfix.com.br
+          </p>
+        </div>
+
+        <div className="mt-6 text-center text-xs text-gray-400">
+          <p>Ao fazer login, você concorda com os</p>
+          <p>Termos de Uso e Política de Privacidade</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
+
+#### 4. Testar a Integração
+
+1. **Deploy a aplicação** (Vercel/Netlify - ver seções posteriores)
+2. **Acesse a URL da aplicação**
+3. **Clique em "Entrar com Microsoft 365"**
+4. **Será redirecionado para login Microsoft**
+5. **Faça login com uma conta @enterfix.com.br**
+6. **Autorize o aplicativo** (primeira vez)
+7. **Será redirecionado de volta para o dashboard**
+
+✅ **Pronto!** Os usuários agora podem fazer login com suas contas Microsoft 365.
+
+---
+
+### Método 2: E-mail Domain Restriction (Supabase - Alternativa)
 
 O Supabase permite restringir cadastros por domínio de e-mail.
 
@@ -97,31 +330,9 @@ O Supabase permite restringir cadastros por domínio de e-mail.
    );
    ```
 
-5. **Adicionar Hook de Validação no Signup:**
+---
 
-   No Supabase Dashboard:
-   - **Database → Functions → Create Function**
-   - Nome: `validate_enterfix_email`
-
-   ```sql
-   CREATE OR REPLACE FUNCTION public.validate_enterfix_email()
-   RETURNS TRIGGER AS $$
-   BEGIN
-     IF NEW.email NOT LIKE '%@enterfix.com.br' THEN
-       RAISE EXCEPTION 'Apenas e-mails @enterfix.com.br são permitidos';
-     END IF;
-     RETURN NEW;
-   END;
-   $$ LANGUAGE plpgsql SECURITY DEFINER;
-
-   -- Trigger para validar no insert
-   DROP TRIGGER IF EXISTS validate_email_domain ON auth.users;
-   CREATE TRIGGER validate_email_domain
-   BEFORE INSERT ON auth.users
-   FOR EACH ROW EXECUTE FUNCTION validate_enterfix_email();
-   ```
-
-### Método 2: Google OAuth (Single Sign-On)
+### Método 3: Google OAuth (Single Sign-On - Alternativa)
 
 Para autenticação com contas Google corporativas (@enterfix.com.br):
 
@@ -159,7 +370,9 @@ Para autenticação com contas Google corporativas (@enterfix.com.br):
    FOR EACH ROW EXECUTE FUNCTION handle_new_user();
    ```
 
-### Método 3: Validação no Frontend (Adicional)
+---
+
+### Método 4: Validação no Frontend (Camada Adicional)
 
 Adicione validação extra no componente de registro:
 
@@ -294,6 +507,22 @@ export const Auth = () => {
   );
 };
 ```
+
+---
+
+### 📊 Comparação dos Métodos de Autenticação
+
+| Método | Ideal Para | Vantagens | Implementação |
+|--------|-----------|-----------|---------------|
+| **1. Azure AD/Microsoft 365** | ⭐ **Empresas com Microsoft 365** | SSO, MFA integrado, gerenciamento centralizado | ⭐⭐⭐⭐ Média |
+| **2. Email Domain** | Pequenas equipes | Simplicidade, controle total | ⭐⭐⭐⭐⭐ Fácil |
+| **3. Google OAuth** | Empresas com Google Workspace | SSO Google, fácil setup | ⭐⭐⭐⭐ Média |
+| **4. Frontend Validation** | Camada adicional de segurança | UX melhorada, feedback rápido | ⭐⭐⭐⭐⭐ Fácil |
+
+**Recomendação para Enterfix:**
+- 🎯 **Use o Método 1 (Azure AD/Microsoft 365)** como principal
+- ➕ **Adicione o Método 4 (Frontend Validation)** para UX aprimorada
+- ✅ **Configure as políticas RLS do Supabase** para segurança adicional
 
 ---
 

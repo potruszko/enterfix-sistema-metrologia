@@ -6,6 +6,7 @@ Este diretório contém toda a documentação técnica do sistema de gestão de 
 
 ### 🚀 Deploy e Produção
 - **[GUIA-DEPLOY-PRODUCAO.md](GUIA-DEPLOY-PRODUCAO.md)** - Guia completo de deploy em produção com autenticação corporativa (@enterfix.com.br)
+- **[azure-ad-configuracao.md](azure-ad-configuracao.md)** - ⭐ Checklist rápido para configurar Azure AD/Microsoft 365 SSO
 
 ### ⚙️ Configuração e Setup
 - **[CORRIGIR-API-KEY.md](CORRIGIR-API-KEY.md)** - Como configurar as chaves de API do Supabase
@@ -35,14 +36,19 @@ Se você é novo no projeto, recomendamos começar por:
 
 1. **[GUIA-RAPIDO.md](GUIA-RAPIDO.md)** - Para entender a estrutura do projeto
 2. **[CORRIGIR-API-KEY.md](CORRIGIR-API-KEY.md)** - Para configurar o ambiente local
-3. **[GUIA-DEPLOY-PRODUCAO.md](GUIA-DEPLOY-PRODUCAO.md)** - Para fazer deploy
+3. **[azure-ad-configuracao.md](azure-ad-configuracao.md)** - ⭐ Para configurar SSO com Microsoft 365
+4. **[GUIA-DEPLOY-PRODUCAO.md](GUIA-DEPLOY-PRODUCAO.md)** - Para fazer deploy
 
 ## 🚀 Deploy em Produção
 
 Para publicar a aplicação no domínio da Enterfix com restrição de acesso apenas para emails @enterfix.com.br, siga o **[GUIA-DEPLOY-PRODUCAO.md](GUIA-DEPLOY-PRODUCAO.md)**.
 
+**🔑 Recomendação para Microsoft 365:**
+Como a Enterfix utiliza Microsoft 365, siga o checklist rápido **[azure-ad-configuracao.md](azure-ad-configuracao.md)** para configurar Single Sign-On (SSO) com Azure AD.
+
 Este guia inclui:
 - ✅ Autenticação corporativa (@enterfix.com.br)
+- ✅ **SSO com Microsoft 365/Azure AD** (recomendado)
 - ✅ Deploy no Vercel (gratuito, SSL automático)
 - ✅ Configuração do Supabase com RLS
 - ✅ Domínio customizado (sistema.enterfix.com.br)
