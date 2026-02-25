@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Home, FileText, History, Settings, Wrench, LogOut } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { useIsMobile } from '../hooks/useMediaQuery';
 
-const Sidebar = ({ currentPage, onNavigate }) => {
+const Sidebar = ({ currentPage, onNavigate, isOpen, onClose }) => {
   const [userEmail, setUserEmail] = useState('');
   const [loggingOut, setLoggingOut] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Obter e-mail do usuário
@@ -31,8 +33,32 @@ const Sidebar = ({ currentPage, onNavigate }) => {
     { id: 'configuracoes', icon: Settings, label: 'Configurações' },
   ];
 
+  const handleNavigation = (page) => {
+    onNavigate(page);
+    // Fechar menu mobile após navegação
+    if (isMobile && onClose) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="w-64 bg-industrial-800 text-white h-screen fixed left-0 top-0 flex flex-col shadow-xl">
+    <>
+      {/* Backdrop Mobile */}
+      {isMobile && isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden animate-fadeIn"
+          onClick={onClose}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Sidebar */}
+      <div className={`
+        w-64 bg-industrial-800 text-white h-screen fixed left-0 top-0 flex flex-col shadow-xl
+        transition-transform duration-300 ease-in-out z-40
+        ${isMobile && !isOpen ? '-translate-x-full' : 'translate-x-0'}
+        lg:translate-x-0
+      `}>
       {/* Header */}
       <div className="p-6 border-b border-industrial-700">
         <img 
@@ -52,11 +78,11 @@ const Sidebar = ({ currentPage, onNavigate }) => {
             return (
               <li key={item.id}>
                 <button
-                  onClick={() => onNavigate(item.id)}
-                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                  onClick={() => handleNavigation(item.id)}
+                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 touch-manipulation min-h-[48px] ${
                     isActive
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'text-industrial-300 hover:bg-industrial-700 hover:text-white'
+                      : 'text-industrial-300 hover:bg-industrial-700 hover:text-white active:bg-industrial-600'
                   }`}
                 >
                   <Icon size={20} />
@@ -82,7 +108,7 @@ const Sidebar = ({ currentPage, onNavigate }) => {
         <button
           onClick={handleLogout}
           disabled={loggingOut}
-          className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation min-h-[44px]"
         >
           {loggingOut ? (
             <>
@@ -101,7 +127,8 @@ const Sidebar = ({ currentPage, onNavigate }) => {
           © 2026 Enterfix Metrologia
         </p>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

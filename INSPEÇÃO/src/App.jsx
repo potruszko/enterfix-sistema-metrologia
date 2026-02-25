@@ -2,18 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from './lib/supabase';
 import Auth from './components/Auth';
 import Sidebar from './components/Sidebar';
+import MobileMenuButton from './components/MobileMenuButton';
 import Dashboard from './components/Dashboard';
 import RelatorioForm from './components/RelatorioForm';
 import Historico from './components/Historico';
 import Configuracoes from './components/Configuracoes';
 import GestaoEquipamentos from './components/GestaoEquipamentos';
 import { AlertProvider } from './components/AlertSystem';
+import { useMobileMenu } from './hooks/useMobileMenu';
 
 function App() {
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState('dashboard');
   const [editingRelatorioId, setEditingRelatorioId] = useState(null);
+  const { isOpen, toggle, close, isMobile } = useMobileMenu();
 
   useEffect(() => {
     // Verificar sessão existente
@@ -88,9 +91,25 @@ function App() {
   return (
     <AlertProvider>
       <div className="min-h-screen bg-industrial-50">
-        <Sidebar currentPage={currentPage} onNavigate={handleNavigate} />
-        <div className="ml-64">
-          <main className="min-h-screen">
+        {/* Botão do Menu Mobile */}
+        {isMobile && (
+          <MobileMenuButton 
+            isOpen={isOpen} 
+            onClick={toggle}
+          />
+        )}
+        
+        {/* Sidebar */}
+        <Sidebar 
+          currentPage={currentPage} 
+          onNavigate={handleNavigate}
+          isOpen={isOpen}
+          onClose={close}
+        />
+        
+        {/* Conteúdo Principal */}
+        <div className="lg:ml-64 transition-all duration-300">
+          <main className="min-h-screen p-4 lg:p-6">
             {renderPage()}
           </main>
         </div>
