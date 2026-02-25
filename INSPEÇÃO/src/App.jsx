@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { supabase } from './lib/supabase';
+import Auth from './components/Auth';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import RelatorioForm from './components/RelatorioForm';
@@ -8,8 +10,28 @@ import GestaoEquipamentos from './components/GestaoEquipamentos';
 import { AlertProvider } from './components/AlertSystem';
 
 function App() {
+  const [session, setSession] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState('dashboard');
   const [editingRelatorioId, setEditingRelatorioId] = useState(null);
+
+  useEffect(() => {
+    // Verificar sessão existente
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setLoading(false);
+    });
+
+    // Escutar mudanças de autenticação
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      setLoading(false);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   const handleEditRelatorio = (relatorioId) => {
     setEditingRelatorioId(relatorioId);
@@ -45,6 +67,24 @@ function App() {
     }
   };
 
+  // Loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent mx-auto mb-4"></div>
+          <p className="text-gray-600 font-medium">Carregando sistema...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Se não está autenticado, mostrar tela de login
+  if (!session) {
+    return <Auth />;
+  }
+
+  // Usuário autenticado - mostrar aplicação
   return (
     <AlertProvider>
       <div className="min-h-screen bg-industrial-50">
