@@ -30,15 +30,14 @@ import {
     getLarguraUtil,
     getLimiteInferior,
     temEspacoNaPagina,
-    ESTILOS // Legacy compatibility
+    getCentro,
+    getMargemDireita
 } from './shared/estilosPDF.js';
 
 /**
  * Adiciona cabeçalho em todas as páginas
  */
 function adicionarCabecalho(doc, numeroContrato, statusContrato) {
-    const larguraUtil = ESTILOS.larguraPagina - ESTILOS.margemEsquerda - ESTILOS.margemDireita;
-
     // Logo da Enterfix (proporção de marca registrada)
     try {
         doc.addImage(
@@ -53,38 +52,39 @@ function adicionarCabecalho(doc, numeroContrato, statusContrato) {
         // Fallback: usar texto se logo não carregar
         console.warn('Logo não carregou, usando texto:', error);
         doc.setFontSize(14);
-        doc.setFont(ESTILOS.fontePrincipal, 'bold');
+        doc.setFont(TIPOGRAFIA.fontePrincipal, 'bold');
         doc.setTextColor(...CORES.primaria);
         doc.text('ENTERFIX', LAYOUT.margens.esquerda, 15);
         doc.setFontSize(8);
-        doc.setFont(ESTILOS.fontePrincipal, 'normal');
+        doc.setFont(TIPOGRAFIA.fontePrincipal, 'normal');
         doc.text('Metrologia e Calibração', LAYOUT.margens.esquerda, 19);
     }
 
-    // Número do contrato
-    doc.setFontSize(10);
-    doc.setTextColor(...ESTILOS.corTexto);
-    doc.text(`Contrato: ${numeroContrato}`, ESTILOS.larguraPagina - ESTILOS.margemDireita, 15, {
+    // Número do contrato (canto superior direito)
+    doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+    doc.setTextColor(...CORES.texto);
+    doc.text(`Contrato: ${numeroContrato}`, getMargemDireita(), 15, {
         align: 'right'
     });
 
-    // Linha separadora
-    doc.setDrawColor(...ESTILOS.corPrimaria);
-    doc.setLineWidth(0.5);
-    doc.line(ESTILOS.margemEsquerda, 22, ESTILOS.larguraPagina - ESTILOS.margemDireita, 22);
+    // Linha separadora ABAIXO do logo (corrige bug da linha passando sobre o logo)
+    const linhaSeparadoraY = LOGO_ENTERFIX.posicaoY + LOGO_ENTERFIX.altura + 3;
+    doc.setDrawColor(...CORES.primaria);
+    doc.setLineWidth(LAYOUT.elementos.espessuraLinha);
+    doc.line(LAYOUT.margens.esquerda, linhaSeparadoraY, getMargemDireita(), linhaSeparadoraY);
 
     // Marca d'água se for minuta
     if (statusContrato === 'minuta') {
         doc.setFontSize(60);
-        doc.setTextColor(200, 200, 200);
-        doc.setFont(ESTILOS.fontePrincipal, 'bold');
-        doc.text('MINUTA', ESTILOS.larguraPagina / 2, ESTILOS.alturaPagina / 2, {
+        doc.setTextColor(...CORES.textoClaro);
+        doc.setFont(TIPOGRAFIA.fontePrincipal, 'bold');
+        doc.text('MINUTA', getCentro(), LAYOUT.pagina.altura / 2, {
             angle: 45,
             align: 'center',
             baseline: 'middle'
         });
-        doc.setTextColor(...ESTILOS.corTexto);
-        doc.setFont(ESTILOS.fontePrincipal, 'normal');
+        doc.setTextColor(...CORES.texto);
+        doc.setFont(TIPOGRAFIA.fontePrincipal, 'normal');
     }
 }
 
@@ -92,31 +92,31 @@ function adicionarCabecalho(doc, numeroContrato, statusContrato) {
  * Adiciona rodapé em todas as páginas
  */
 function adicionarRodape(doc, numeroPagina, totalPaginas, dadosEmpresa) {
-    const y = ESTILOS.alturaPagina - 15;
+    const y = LAYOUT.pagina.altura - 15;
 
     // Linha separadora
-    doc.setDrawColor(...ESTILOS.corSecundaria);
+    doc.setDrawColor(...CORES.textoSecundario);
     doc.setLineWidth(0.3);
-    doc.line(ESTILOS.margemEsquerda, y - 3, ESTILOS.larguraPagina - ESTILOS.margemDireita, y - 3);
+    doc.line(LAYOUT.margens.esquerda, y - 3, getMargemDireita(), y - 3);
 
     // Informações da empresa
-    doc.setFontSize(ESTILOS.tamanhoRodape);
-    doc.setTextColor(...ESTILOS.corSecundaria);
-    doc.setFont(ESTILOS.fontePrincipal, 'normal');
+    doc.setFontSize(TIPOGRAFIA.tamanhos.pequeno);
+    doc.setTextColor(...CORES.textoSecundario);
+    doc.setFont(TIPOGRAFIA.fontePrincipal, 'normal');
 
     const textoRodape = `${dadosEmpresa.razaoSocial} - CNPJ: ${dadosEmpresa.cnpj} - ${dadosEmpresa.cidade}/${dadosEmpresa.estado}`;
-    doc.text(textoRodape, ESTILOS.larguraPagina / 2, y, {
+    doc.text(textoRodape, getCentro(), y, {
         align: 'center'
     });
 
     const contatoRodape = `Tel: ${dadosEmpresa.telefone} - Email: ${dadosEmpresa.email} - ${dadosEmpresa.website}`;
-    doc.text(contatoRodape, ESTILOS.larguraPagina / 2, y + 4, {
+    doc.text(contatoRodape, getCentro(), y + 4, {
         align: 'center'
     });
 
     // Número da página
-    doc.setFontSize(ESTILOS.tamanhoRodape);
-    doc.text(`Página ${numeroPagina} de ${totalPaginas}`, ESTILOS.larguraPagina - ESTILOS.margemDireita, y, {
+    doc.setFontSize(TIPOGRAFIA.tamanhos.pequeno);
+    doc.text(`Página ${numeroPagina} de ${totalPaginas}`, getMargemDireita(), y, {
         align: 'right'
     });
 }
@@ -126,32 +126,32 @@ function adicionarRodape(doc, numeroPagina, totalPaginas, dadosEmpresa) {
  */
 function adicionarParagrafo(doc, texto, y, opcoes = {}) {
     const {
-        tamanhoFonte = ESTILOS.tamanhoTexto,
+        tamanhoFonte = TIPOGRAFIA.tamanhos.corpo,
             estilo = 'normal',
-            cor = ESTILOS.corTexto,
+            cor = CORES.texto,
             alinhamento = 'justify',
             recuo = 0
     } = opcoes;
 
     doc.setFontSize(tamanhoFonte);
-    doc.setFont(ESTILOS.fontePrincipal, estilo);
+    doc.setFont(PRESET_CONTRATO.fonte, estilo);
     doc.setTextColor(...cor);
 
-    const larguraUtil = ESTILOS.larguraPagina - ESTILOS.margemEsquerda - ESTILOS.margemDireita - recuo;
+    const larguraUtil = getLarguraUtil() - recuo;
     const linhas = doc.splitTextToSize(texto, larguraUtil);
 
     let yAtual = y;
     linhas.forEach((linha, index) => {
         // Verifica se precisa de nova página
-        if (yAtual > ESTILOS.alturaPagina - ESTILOS.margemInferior - 20) {
+        if (!temEspacoNaPagina(yAtual, 20)) {
             doc.addPage();
-            yAtual = ESTILOS.margemSuperior + 30; // Espaço para cabeçalho
+            yAtual = LAYOUT.margens.superior + LAYOUT.elementos.alturaCabecalho;
         }
 
-        doc.text(linha, ESTILOS.margemEsquerda + recuo, yAtual, {
+        doc.text(linha, LAYOUT.margens.esquerda + recuo, yAtual, {
             align: alinhamento === 'justify' && index < linhas.length - 1 ? 'left' : alinhamento
         });
-        yAtual += ESTILOS.espacamentoLinha;
+        yAtual += LAYOUT.espacamentos.entreLinhas;
     });
 
     return yAtual + 3; // Retorna próxima posição Y
@@ -161,26 +161,26 @@ function adicionarParagrafo(doc, texto, y, opcoes = {}) {
  * Adiciona título de seção
  */
 function adicionarTituloSecao(doc, titulo, y) {
-    doc.setFontSize(ESTILOS.tamanhoSubtitulo);
-    doc.setFont(ESTILOS.fontePrincipal, 'bold');
-    doc.setTextColor(...ESTILOS.corPrimaria);
+    doc.setFontSize(TIPOGRAFIA.tamanhos.h2);
+    doc.setFont(PRESET_CONTRATO.fonte, 'bold');
+    doc.setTextColor(...CORES.primaria);
 
     // Verifica se precisa de nova página
-    if (y > ESTILOS.alturaPagina - ESTILOS.margemInferior - 30) {
+    if (!temEspacoNaPagina(y, 30)) {
         doc.addPage();
-        y = ESTILOS.margemSuperior + 30;
+        y = LAYOUT.margens.superior + LAYOUT.elementos.alturaCabecalho;
     }
 
-    doc.text(titulo, ESTILOS.margemEsquerda, y);
+    doc.text(titulo, LAYOUT.margens.esquerda, y);
 
     // Linha decorativa
     const larguraTexto = doc.getTextWidth(titulo);
-    doc.setDrawColor(...ESTILOS.corPrimaria);
-    doc.setLineWidth(0.5);
-    doc.line(ESTILOS.margemEsquerda, y + 2, ESTILOS.margemEsquerda + larguraTexto, y + 2);
+    doc.setDrawColor(...CORES.primaria);
+    doc.setLineWidth(LAYOUT.elementos.espessuraLinha);
+    doc.line(LAYOUT.margens.esquerda, y + 2, LAYOUT.margens.esquerda + larguraTexto, y + 2);
 
-    doc.setTextColor(...ESTILOS.corTexto);
-    doc.setFont(ESTILOS.fontePrincipal, 'normal');
+    doc.setTextColor(...CORES.texto);
+    doc.setFont(PRESET_CONTRATO.fonte, 'normal');
 
     return y + 10;
 }
@@ -228,15 +228,15 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                     format: 'a4'
                 });
 
-                let y = ESTILOS.margemSuperior + 30; // Após cabeçalho
+                let y = LAYOUT.margens.superior + LAYOUT.elementos.alturaCabecalho;
 
                 // Adicionar cabeçalho
                 adicionarCabecalho(doc, dadosContrato.numero_contrato, dadosContrato.status);
 
                 // ═══════════ TÍTULO PRINCIPAL ═══════════
-                doc.setFontSize(ESTILOS.tamanhoTitulo);
-                doc.setFont(ESTILOS.fontePrincipal, 'bold');
-                doc.setTextColor(...ESTILOS.corPrimaria);
+                doc.setFontSize(TIPOGRAFIA.tamanhos.h1);
+                doc.setFont(PRESET_CONTRATO.fonte, 'bold');
+                doc.setTextColor(...CORES.primaria);
 
                 const tipoContrato = {
                     'prestacao_servico': 'PRESTAÇÃO DE SERVIÇOS DE CALIBRAÇÃO',
@@ -251,25 +251,25 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                 };
 
                 const titulo = `CONTRATO DE ${tipoContrato[dadosContrato.tipo_contrato] || 'SERVIÇOS'}`;
-                doc.text(titulo, ESTILOS.larguraPagina / 2, y, {
+                doc.text(titulo, getCentro(), y, {
                     align: 'center'
                 });
 
                 y += 8;
-                doc.setFontSize(14);
-                doc.text(`Nº ${dadosContrato.numero_contrato}`, ESTILOS.larguraPagina / 2, y, {
+                doc.setFontSize(TIPOGRAFIA.tamanhos.h2);
+                doc.text(`Nº ${dadosContrato.numero_contrato}`, getCentro(), y, {
                     align: 'center'
                 });
 
                 y += 10;
-                doc.setDrawColor(...ESTILOS.corPrimaria);
+                doc.setDrawColor(...CORES.primaria);
                 doc.setLineWidth(0.7);
-                doc.line(ESTILOS.margemEsquerda, y, ESTILOS.larguraPagina - ESTILOS.margemDireita, y);
+                doc.line(LAYOUT.margens.esquerda, y, getMargemDireita(), y);
 
                 y += 10;
-                doc.setFontSize(ESTILOS.tamanhoTexto);
-                doc.setFont(ESTILOS.fontePrincipal, 'normal');
-                doc.setTextColor(...ESTILOS.corTexto);
+                doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+                doc.setFont(PRESET_CONTRATO.fonte, 'normal');
+                doc.setTextColor(...CORES.texto);
 
                 // ═══════════ QUALIFICAÇÃO DAS PARTES ═══════════
                 const preambulo = `Pelo presente instrumento particular de contrato, as partes abaixo qualificadas:`;
@@ -375,19 +375,19 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
 
                     // Nova página para cláusulas específicas (melhor organização)
                     doc.addPage();
-                    y = ESTILOS.margemSuperior + 30;
+                    y = LAYOUT.margens.superior + LAYOUT.elementos.alturaCabecalho;
 
                     // Título destacado
-                    doc.setFontSize(14);
-                    doc.setFont(ESTILOS.fontePrincipal, 'bold');
-                    doc.setTextColor(...ESTILOS.corPrimaria);
-                    doc.text('CLÁUSULAS ESPECÍFICAS', ESTILOS.larguraPagina / 2, y, {
+                    doc.setFontSize(TIPOGRAFIA.tamanhos.h2);
+                    doc.setFont(PRESET_CONTRATO.fonte, 'bold');
+                    doc.setTextColor(...CORES.primaria);
+                    doc.text('CLÁUSULAS ESPECÍFICAS', getCentro(), y, {
                         align: 'center'
                     });
                     y += 8;
 
                     // Subtítulo com tipo de contrato
-                    doc.setFontSize(12);
+                    doc.setFontSize(TIPOGRAFIA.tamanhos.h3);
                     const titulosContratos = {
                         'prestacao_servico': 'Prestação de Serviços de Calibração',
                         'comodato': 'Comodato de Equipamentos',
@@ -399,17 +399,17 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                         'validacao': 'Validação de Equipamentos',
                         'nda': 'Confidencialidade (NDA)'
                     };
-                    doc.text(titulosContratos[dadosContrato.tipo_contrato] || 'Disposições Específicas', ESTILOS.larguraPagina / 2, y, {
+                    doc.text(titulosContratos[dadosContrato.tipo_contrato] || 'Disposições Específicas', getCentro(), y, {
                         align: 'center'
                     });
 
-                    doc.setDrawColor(...ESTILOS.corPrimaria);
-                    doc.setLineWidth(0.5);
-                    doc.line(ESTILOS.margemEsquerda, y + 2, ESTILOS.larguraPagina - ESTILOS.margemDireita, y + 2);
+                    doc.setDrawColor(...CORES.primaria);
+                    doc.setLineWidth(LAYOUT.elementos.espessuraLinha);
+                    doc.line(LAYOUT.margens.esquerda, y + 2, getMargemDireita(), y + 2);
 
                     y += 10;
-                    doc.setTextColor(...ESTILOS.corTexto);
-                    doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                    doc.setTextColor(...CORES.texto);
+                    doc.setFont(PRESET_CONTRATO.fonte, 'normal');
 
                     y = adicionarParagrafo(doc, clausulaEspecifica, y);
                     y += 5;
@@ -430,16 +430,16 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                 // ═══════════ ASSINATURAS ═══════════
                 // Nova página para assinaturas
                 doc.addPage();
-                y = ESTILOS.margemSuperior + 30;
+                y = LAYOUT.margens.superior + LAYOUT.elementos.alturaCabecalho;
 
-                const limiteInferior = ESTILOS.alturaPagina - ESTILOS.margemInferior - 30; // Reservar espaço para rodapé
+                const limiteInferior = getLimiteInferior();
 
                 const encerramento = `E por estarem assim justas e contratadas, as partes assinam o presente contrato em 2 (duas) vias de igual teor e forma, na presença das testemunhas abaixo.`;
-                const linhasEncerramento = doc.splitTextToSize(encerramento, ESTILOS.larguraPagina - 40);
-                doc.setFontSize(10);
-                doc.setFont(ESTILOS.fontePrincipal, 'italic');
+                const linhasEncerramento = doc.splitTextToSize(encerramento, getLarguraUtil());
+                doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+                doc.setFont(PRESET_CONTRATO.fonte, 'italic');
                 linhasEncerramento.forEach(linha => {
-                    doc.text(linha, ESTILOS.larguraPagina / 2, y, {
+                    doc.text(linha, getCentro(), y, {
                         align: 'center'
                     });
                     y += 5;
@@ -447,64 +447,64 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                 y += 5;
 
                 const dataAssinatura = `${dadosEmpresa.cidade}/${dadosEmpresa.estado}, ${dataExtenso(new Date().toISOString().split('T')[0])}.`;
-                doc.setFont(ESTILOS.fontePrincipal, 'normal');
-                doc.text(dataAssinatura, ESTILOS.larguraPagina / 2, y, {
+                doc.setFont(PRESET_CONTRATO.fonte, 'normal');
+                doc.text(dataAssinatura, getCentro(), y, {
                     align: 'center'
                 });
                 y += 15;
 
                 // Verificar espaço disponível
                 const espacoNecessario = 80; // Espaço para assinaturas
-                if (y + espacoNecessario > limiteInferior) {
+                if (!temEspacoNaPagina(y, espacoNecessario)) {
                     doc.addPage();
-                    y = ESTILOS.margemSuperior + 30;
+                    y = LAYOUT.margens.superior + LAYOUT.elementos.alturaCabecalho;
                 }
 
                 // Bloco CONTRATADA
-                doc.setDrawColor(...ESTILOS.corTexto);
+                doc.setDrawColor(...CORES.texto);
                 doc.setLineWidth(0.3);
                 const larguraAssinatura = 70;
-                const centroX = ESTILOS.larguraPagina / 2;
+                const centroX = getCentro();
 
                 doc.line(centroX - larguraAssinatura / 2, y, centroX + larguraAssinatura / 2, y);
                 y += 4;
-                doc.setFontSize(10);
-                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+                doc.setFont(PRESET_CONTRATO.fonte, 'bold');
                 doc.text(dadosEmpresa.razaoSocial, centroX, y, {
                     align: 'center'
                 });
                 y += 4;
-                doc.setFontSize(9);
-                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.setFontSize(TIPOGRAFIA.tamanhos.pequeno);
+                doc.setFont(PRESET_CONTRATO.fonte, 'normal');
                 doc.text(`CNPJ: ${dadosEmpresa.cnpj}`, centroX, y, {
                     align: 'center'
                 });
                 y += 4;
-                doc.setFontSize(10);
-                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+                doc.setFont(PRESET_CONTRATO.fonte, 'bold');
                 doc.text('CONTRATADA', centroX, y, {
                     align: 'center'
                 });
                 y += 15;
 
                 // Bloco CONTRATANTE
-                doc.setDrawColor(...ESTILOS.corTexto);
+                doc.setDrawColor(...CORES.texto);
                 doc.line(centroX - larguraAssinatura / 2, y, centroX + larguraAssinatura / 2, y);
                 y += 4;
-                doc.setFontSize(10);
-                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+                doc.setFont(PRESET_CONTRATO.fonte, 'bold');
                 doc.text(cliente.razao_social, centroX, y, {
                     align: 'center'
                 });
                 y += 4;
-                doc.setFontSize(9);
-                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.setFontSize(TIPOGRAFIA.tamanhos.pequeno);
+                doc.setFont(PRESET_CONTRATO.fonte, 'normal');
                 doc.text(cliente.tipo_pessoa === 'juridica' ? `CNPJ: ${cliente.cnpj}` : `CPF: ${cliente.cpf}`, centroX, y, {
                     align: 'center'
                 });
                 y += 4;
-                doc.setFontSize(10);
-                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+                doc.setFont(PRESET_CONTRATO.fonte, 'bold');
                 doc.text('CONTRATANTE', centroX, y, {
                     align: 'center'
                 });
@@ -512,14 +512,14 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
 
                 // TESTEMUNHAS (verificar espaço novamente)
                 const espacoTestemunhas = 25;
-                if (y + espacoTestemunhas > limiteInferior) {
+                if (!temEspacoNaPagina(y, espacoTestemunhas)) {
                     doc.addPage();
-                    y = ESTILOS.margemSuperior + 30;
+                    y = LAYOUT.margens.superior + LAYOUT.elementos.alturaCabecalho;
                 }
 
-                doc.setFontSize(10);
-                doc.setFont(ESTILOS.fontePrincipal, 'bold');
-                doc.text('TESTEMUNHAS:', ESTILOS.margemEsquerda, y);
+                doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
+                doc.setFont(PRESET_CONTRATO.fonte, 'bold');
+                doc.text('TESTEMUNHAS:', LAYOUT.margens.esquerda, y);
                 y += 8;
 
                 const larguraTeste = 65;
@@ -528,14 +528,14 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                 const testemunha2X = centroX + espacoEntreTestemunhas / 2;
 
                 // Testemunha 1
-                doc.setDrawColor(...ESTILOS.corTexto);
+                doc.setDrawColor(...CORES.texto);
                 doc.line(testemunha1X, y, testemunha1X + larguraTeste, y);
                 // Testemunha 2
                 doc.line(testemunha2X, y, testemunha2X + larguraTeste, y);
 
                 y += 4;
-                doc.setFontSize(9);
-                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.setFontSize(TIPOGRAFIA.tamanhos.pequeno);
+                doc.setFont(PRESET_CONTRATO.fonte, 'normal');
                 doc.text('Nome:', testemunha1X, y);
                 doc.text('Nome:', testemunha2X, y);
                 y += 4;
