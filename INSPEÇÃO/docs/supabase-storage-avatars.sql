@@ -23,10 +23,7 @@ CREATE POLICY "avatars_upload"
 ON storage.objects
 FOR INSERT
 TO authenticated
-WITH CHECK (
-  bucket_id = 'avatars' 
-  AND auth.uid()::text = (storage.foldername(name))[1]
-);
+WITH CHECK (bucket_id = 'avatars');
 
 -- Política 2: Leitura - Qualquer pessoa pode visualizar avatars (bucket público)
 CREATE POLICY "avatars_select"
@@ -42,11 +39,11 @@ FOR UPDATE
 TO authenticated
 USING (
   bucket_id = 'avatars' 
-  AND auth.uid()::text = (storage.foldername(name))[1]
+  AND name LIKE 'profiles/' || auth.uid()::text || '%'
 )
 WITH CHECK (
   bucket_id = 'avatars' 
-  AND auth.uid()::text = (storage.foldername(name))[1]
+  AND name LIKE 'profiles/' || auth.uid()::text || '%'
 );
 
 -- Política 4: Deleção - Usuários podem deletar seus próprios avatars
@@ -56,7 +53,7 @@ FOR DELETE
 TO authenticated
 USING (
   bucket_id = 'avatars' 
-  AND auth.uid()::text = (storage.foldername(name))[1]
+  AND name LIKE 'profiles/' || auth.uid()::text || '%'
 );
 
 -- ============================================
