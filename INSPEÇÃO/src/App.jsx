@@ -8,6 +8,7 @@ import RelatorioForm from './components/RelatorioForm';
 import Historico from './components/Historico';
 import Configuracoes from './components/Configuracoes';
 import GestaoEquipamentos from './components/GestaoEquipamentos';
+import PerfilUsuario from './components/PerfilUsuario';
 import { AlertProvider } from './components/AlertSystem';
 import { useMobileMenu } from './hooks/useMobileMenu';
 
@@ -63,6 +64,8 @@ function App() {
         return <Historico onEditRelatorio={handleEditRelatorio} onDuplicarRelatorio={handleDuplicarRelatorio} />;
       case 'equipamentos':
         return <GestaoEquipamentos />;
+      case 'perfil':
+        return <PerfilUsuario />;
       case 'configuracoes':
         return <Configuracoes />;
       default:

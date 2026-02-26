@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react';
+import {
+    useState,
+    useEffect
+} from 'react';
 
 /**
  * Hook customizado para detectar tamanho de tela
@@ -6,31 +9,31 @@ import { useState, useEffect } from 'react';
  * @returns {boolean} - true se a query for correspondida
  */
 export const useMediaQuery = (query) => {
-  const [matches, setMatches] = useState(false);
+    const [matches, setMatches] = useState(false);
 
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    
-    // Atualizar estado inicial
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
+    useEffect(() => {
+        const media = window.matchMedia(query);
 
-    // Listener para mudanças
-    const listener = () => setMatches(media.matches);
-    
-    // Modern API
-    if (media.addEventListener) {
-      media.addEventListener('change', listener);
-      return () => media.removeEventListener('change', listener);
-    } else {
-      // Fallback para navegadores antigos
-      media.addListener(listener);
-      return () => media.removeListener(listener);
-    }
-  }, [matches, query]);
+        // Atualizar estado inicial
+        if (media.matches !== matches) {
+            setMatches(media.matches);
+        }
 
-  return matches;
+        // Listener para mudanças
+        const listener = () => setMatches(media.matches);
+
+        // Modern API
+        if (media.addEventListener) {
+            media.addEventListener('change', listener);
+            return () => media.removeEventListener('change', listener);
+        } else {
+            // Fallback para navegadores antigos
+            media.addListener(listener);
+            return () => media.removeListener(listener);
+        }
+    }, [matches, query]);
+
+    return matches;
 };
 
 /**
@@ -38,7 +41,7 @@ export const useMediaQuery = (query) => {
  * @returns {boolean} - true se for mobile (< 768px)
  */
 export const useIsMobile = () => {
-  return useMediaQuery('(max-width: 768px)');
+    return useMediaQuery('(max-width: 768px)');
 };
 
 /**
@@ -46,5 +49,5 @@ export const useIsMobile = () => {
  * @returns {boolean} - true se for tablet (768px - 1024px)
  */
 export const useIsTablet = () => {
-  return useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
+    return useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, FileText, History, Settings, Wrench, LogOut } from 'lucide-react';
+import { Home, FileText, History, Settings, Wrench, LogOut, UserCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useIsMobile } from '../hooks/useMediaQuery';
 
@@ -30,6 +30,7 @@ const Sidebar = ({ currentPage, onNavigate, isOpen, onClose }) => {
     { id: 'novo-relatorio', icon: FileText, label: 'Novo Relatório' },
     { id: 'historico', icon: History, label: 'Histórico' },
     { id: 'equipamentos', icon: Wrench, label: 'Equipamentos' },
+    { id: 'perfil', icon: UserCircle, label: 'Meu Perfil' },
     { id: 'configuracoes', icon: Settings, label: 'Configurações' },
   ];
 
@@ -62,7 +63,7 @@ const Sidebar = ({ currentPage, onNavigate, isOpen, onClose }) => {
       {/* Header */}
       <div className="p-6 border-b border-industrial-700">
         <img 
-          src="/src/assets/images/Enterfix_ Dark_registered.png" 
+          src="/assets/images/Enterfix_ Dark_registered.png" 
           alt="Enterfix" 
           className="w-full max-w-[180px] h-auto"
         />
