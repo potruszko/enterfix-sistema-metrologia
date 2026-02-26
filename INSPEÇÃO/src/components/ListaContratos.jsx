@@ -81,8 +81,8 @@ const ListaContratos = ({ onNovoContrato, onEditarContrato }) => {
         cliente: clienteData
       };
 
-      // Gerar PDF
-      const { blob, filename } = await gerarPDFContrato(dadosCompletos);
+      // Gerar PDF (busca dados da empresa do Supabase automaticamente)
+      const { blob, filename } = await gerarPDFContrato(dadosCompletos, null, supabase);
 
       // Fazer download no navegador
       const url = window.URL.createObjectURL(blob);

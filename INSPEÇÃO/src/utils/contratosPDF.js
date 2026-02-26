@@ -8,12 +8,12 @@
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import {
-    DADOS_ENTERFIX,
     FORO_COMPETENTE,
     CLAUSULAS_GERAIS,
     CLAUSULAS_ESPECIFICAS,
     gerarContratoCompleto
 } from './clausulasContratuais';
+import { buscarConfiguracoesEmpresa, getDadosEmpresaPadrao } from './configuracoesEmpresa';
 
 /**
  * Configurações de estilo do PDF
@@ -90,7 +90,7 @@ function adicionarCabecalho(doc, numeroContrato, statusContrato) {
 /**
  * Adiciona rodapé em todas as páginas
  */
-function adicionarRodape(doc, numeroPagina, totalPaginas) {
+function adicionarRodape(doc, numeroPagina, totalPaginas, dadosEmpresa) {
     const y = ESTILOS.alturaPagina - 15;
 
     // Linha separadora
@@ -103,12 +103,12 @@ function adicionarRodape(doc, numeroPagina, totalPaginas) {
     doc.setTextColor(...ESTILOS.corSecundaria);
     doc.setFont(ESTILOS.fontePrincipal, 'normal');
 
-    const textoRodape = `${DADOS_ENTERFIX.razaoSocial} - CNPJ: ${DADOS_ENTERFIX.cnpj} - ${DADOS_ENTERFIX.cidade}/${DADOS_ENTERFIX.estado}`;
+    const textoRodape = `${dadosEmpresa.razaoSocial} - CNPJ: ${dadosEmpresa.cnpj} - ${dadosEmpresa.cidade}/${dadosEmpresa.estado}`;
     doc.text(textoRodape, ESTILOS.larguraPagina / 2, y, {
         align: 'center'
     });
 
-    const contatoRodape = `Tel: ${DADOS_ENTERFIX.telefone} - Email: ${DADOS_ENTERFIX.email} - ${DADOS_ENTERFIX.website}`;
+    const contatoRodape = `Tel: ${dadosEmpresa.telefone} - Email: ${dadosEmpresa.email} - ${dadosEmpresa.website}`;
     doc.text(contatoRodape, ESTILOS.larguraPagina / 2, y + 4, {
         align: 'center'
     });
@@ -203,80 +203,93 @@ function dataExtenso(data) {
 
 /**
  * Gera PDF completo do contrato
+ * @param {Object} dadosContrato - Dados do contrato
+ * @param {Object} dadosEmpresa - Dados da empresa (opcional, busca do Supabase se não fornecido)
+ * @param {Object} supabase - Cliente Supabase (opcional, necessário se dadosEmpresa não fornecido)
  */
-export async function gerarPDFContrato(dadosContrato) {
-    return new Promise((resolve, reject) => {
-        try {
-            // Criar documento
-            const doc = new jsPDF({
-                orientation: 'portrait',
-                unit: 'mm',
-                format: 'a4'
-            });
+export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supabase = null) {
+    try {
+        // Buscar dados da empresa se não fornecidos
+        if (!dadosEmpresa) {
+            if (supabase) {
+                dadosEmpresa = await buscarConfiguracoesEmpresa(supabase);
+            } else {
+                dadosEmpresa = getDadosEmpresaPadrao();
+            }
+        }
 
-            let y = ESTILOS.margemSuperior + 30; // Após cabeçalho
+        return new Promise((resolve, reject) => {
+            try {
+                // Criar documento
+                const doc = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'mm',
+                    format: 'a4'
+                });
 
-            // Adicionar cabeçalho
-            adicionarCabecalho(doc, dadosContrato.numero_contrato, dadosContrato.status);
+                let y = ESTILOS.margemSuperior + 30; // Após cabeçalho
 
-            // ═══════════ TÍTULO PRINCIPAL ═══════════
-            doc.setFontSize(ESTILOS.tamanhoTitulo);
-            doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.setTextColor(...ESTILOS.corPrimaria);
+                // Adicionar cabeçalho
+                adicionarCabecalho(doc, dadosContrato.numero_contrato, dadosContrato.status);
 
-            const tipoContrato = {
-                'prestacao_servico': 'PRESTAÇÃO DE SERVIÇOS DE CALIBRAÇÃO',
-                'comodato': 'COMODATO DE EQUIPAMENTOS',
-                'manutencao': 'MANUTENÇÃO DE INSTRUMENTOS',
-                'sla': 'ACORDO DE NÍVEL DE SERVIÇO (SLA)',
-                'consultoria': 'CONSULTORIA EM METROLOGIA',
-                'gestao_parque': 'GESTÃO DE PARQUE DE INSTRUMENTOS',
-                'suporte': 'SUPORTE TÉCNICO ESPECIALIZADO',
-                'validacao': 'VALIDAÇÃO DE EQUIPAMENTOS',
-                'nda': 'ACORDO DE CONFIDENCIALIDADE (NDA)',
-            };
+                // ═══════════ TÍTULO PRINCIPAL ═══════════
+                doc.setFontSize(ESTILOS.tamanhoTitulo);
+                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.setTextColor(...ESTILOS.corPrimaria);
 
-            const titulo = `CONTRATO DE ${tipoContrato[dadosContrato.tipo_contrato] || 'SERVIÇOS'}`;
-            doc.text(titulo, ESTILOS.larguraPagina / 2, y, {
-                align: 'center'
-            });
+                const tipoContrato = {
+                    'prestacao_servico': 'PRESTAÇÃO DE SERVIÇOS DE CALIBRAÇÃO',
+                    'comodato': 'COMODATO DE EQUIPAMENTOS',
+                    'manutencao': 'MANUTENÇÃO DE INSTRUMENTOS',
+                    'sla': 'ACORDO DE NÍVEL DE SERVIÇO (SLA)',
+                    'consultoria': 'CONSULTORIA EM METROLOGIA',
+                    'gestao_parque': 'GESTÃO DE PARQUE DE INSTRUMENTOS',
+                    'suporte': 'SUPORTE TÉCNICO ESPECIALIZADO',
+                    'validacao': 'VALIDAÇÃO DE EQUIPAMENTOS',
+                    'nda': 'ACORDO DE CONFIDENCIALIDADE (NDA)',
+                };
 
-            y += 8;
-            doc.setFontSize(14);
-            doc.text(`Nº ${dadosContrato.numero_contrato}`, ESTILOS.larguraPagina / 2, y, {
-                align: 'center'
-            });
+                const titulo = `CONTRATO DE ${tipoContrato[dadosContrato.tipo_contrato] || 'SERVIÇOS'}`;
+                doc.text(titulo, ESTILOS.larguraPagina / 2, y, {
+                    align: 'center'
+                });
 
-            y += 10;
-            doc.setDrawColor(...ESTILOS.corPrimaria);
-            doc.setLineWidth(0.7);
-            doc.line(ESTILOS.margemEsquerda, y, ESTILOS.larguraPagina - ESTILOS.margemDireita, y);
+                y += 8;
+                doc.setFontSize(14);
+                doc.text(`Nº ${dadosContrato.numero_contrato}`, ESTILOS.larguraPagina / 2, y, {
+                    align: 'center'
+                });
 
-            y += 10;
-            doc.setFontSize(ESTILOS.tamanhoTexto);
-            doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.setTextColor(...ESTILOS.corTexto);
+                y += 10;
+                doc.setDrawColor(...ESTILOS.corPrimaria);
+                doc.setLineWidth(0.7);
+                doc.line(ESTILOS.margemEsquerda, y, ESTILOS.larguraPagina - ESTILOS.margemDireita, y);
 
-            // ═══════════ QUALIFICAÇÃO DAS PARTES ═══════════
-            const preambulo = `Pelo presente instrumento particular de contrato, as partes abaixo qualificadas:`;
-            y = adicionarParagrafo(doc, preambulo, y, {
-                estilo: 'italic'
-            });
-            y += 3;
+                y += 10;
+                doc.setFontSize(ESTILOS.tamanhoTexto);
+                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.setTextColor(...ESTILOS.corTexto);
 
-            // CONTRATADA
-            y = adicionarParagrafo(doc, 'CONTRATADA:', y, {
-                estilo: 'bold'
-            });
-            const dadosContratada = `${DADOS_ENTERFIX.razaoSocial}, pessoa jurídica de direito privado, inscrita no CNPJ sob nº ${DADOS_ENTERFIX.cnpj}, com sede em ${DADOS_ENTERFIX.endereco}, ${DADOS_ENTERFIX.cidade}/${DADOS_ENTERFIX.estado}, CEP ${DADOS_ENTERFIX.cep}, Inscrição Estadual nº ${DADOS_ENTERFIX.inscricaoEstadual}, neste ato representada na forma de seu contrato social.`;
-            y = adicionarParagrafo(doc, dadosContratada, y);
-            y += 3;
+                // ═══════════ QUALIFICAÇÃO DAS PARTES ═══════════
+                const preambulo = `Pelo presente instrumento particular de contrato, as partes abaixo qualificadas:`;
+                y = adicionarParagrafo(doc, preambulo, y, {
+                    estilo: 'italic'
+                });
+                y += 3;
 
-            // CONTRATANTE
-            y = adicionarParagrafo(doc, 'CONTRATANTE:', y, {
-                estilo: 'bold'
-            });
-            const cliente = dadosContrato.cliente;
+                // CONTRATADA
+                y = adicionarParagrafo(doc, 'CONTRATADA:', y, {
+                    estilo: 'bold'
+                });
+                const dadosContratada = `${dadosEmpresa.razaoSocial}, pessoa jurídica de direito privado, inscrita no CNPJ sob nº ${dadosEmpresa.cnpj}, com sede em ${dadosEmpresa.endereco}, ${dadosEmpresa.cidade}/${dadosEmpresa.estado}, CEP ${dadosEmpresa.cep}, Inscrição Estadual nº ${dadosEmpresa.inscricaoEstadual}, neste ato representada na forma de seu contrato social.`;
+                y = adicionarParagrafo(doc, dadosContratada, y);
+                y += 3;
+
+                // CONTRATANTE
+                y = adicionarParagrafo(doc, 'CONTRATANTE:', y, {
+                    estilo: 'bold'
+                });
+                const cliente = dadosContrato.cliente;
             const dadosContratante = cliente.tipo_pessoa === 'juridica' ?
                 `${cliente.razao_social}, pessoa jurídica de direito privado, inscrita no CNPJ sob nº ${cliente.cnpj}${cliente.inscricao_estadual ? `, Inscrição Estadual nº ${cliente.inscricao_estadual}` : ''}, com endereço em ${cliente.logradouro || ''} ${cliente.numero ? ', ' + cliente.numero : ''}${cliente.complemento ? ' - ' + cliente.complemento : ''}, ${cliente.bairro || ''}, ${cliente.cidade || ''}/${cliente.estado || ''}, CEP ${cliente.cep || ''}.` :
                 `${cliente.razao_social}, pessoa física, portadora do CPF nº ${cliente.cpf}, residente e domiciliada em ${cliente.logradouro || ''} ${cliente.numero ? ', ' + cliente.numero : ''}${cliente.complemento ? ' - ' + cliente.complemento : ''}, ${cliente.bairro || ''}, ${cliente.cidade || ''}/${cliente.estado || ''}, CEP ${cliente.cep || ''}.`;
@@ -432,7 +445,7 @@ export async function gerarPDFContrato(dadosContrato) {
             });
             y += 5;
 
-            const dataAssinatura = `${DADOS_ENTERFIX.cidade}/${DADOS_ENTERFIX.estado}, ${dataExtenso(new Date().toISOString().split('T')[0])}.`;
+            const dataAssinatura = `${dadosEmpresa.cidade}/${dadosEmpresa.estado}, ${dataExtenso(new Date().toISOString().split('T')[0])}.`;
             doc.setFont(ESTILOS.fontePrincipal, 'normal');
             doc.text(dataAssinatura, ESTILOS.larguraPagina / 2, y, {
                 align: 'center'
@@ -456,13 +469,13 @@ export async function gerarPDFContrato(dadosContrato) {
             y += 4;
             doc.setFontSize(10);
             doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text(DADOS_ENTERFIX.razaoSocial, centroX, y, {
+            doc.text(dadosEmpresa.razaoSocial, centroX, y, {
                 align: 'center'
             });
             y += 4;
             doc.setFontSize(9);
             doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text(`CNPJ: ${DADOS_ENTERFIX.cnpj}`, centroX, y, {
+            doc.text(`CNPJ: ${dadosEmpresa.cnpj}`, centroX, y, {
                 align: 'center'
             });
             y += 4;
@@ -532,7 +545,7 @@ export async function gerarPDFContrato(dadosContrato) {
             const totalPaginas = doc.getNumberOfPages();
             for (let i = 1; i <= totalPaginas; i++) {
                 doc.setPage(i);
-                adicionarRodape(doc, i, totalPaginas);
+                adicionarRodape(doc, i, totalPaginas, dadosEmpresa);
                 if (i > 1) { // Cabeçalho em todas exceto primeira
                     adicionarCabecalho(doc, dadosContrato.numero_contrato, dadosContrato.status);
                 }
@@ -553,6 +566,10 @@ export async function gerarPDFContrato(dadosContrato) {
             reject(error);
         }
     });
+    } catch (error) {
+        console.error('Erro ao buscar configurações ou gerar PDF:', error);
+        throw error;
+    }
 }
 
 /**
@@ -599,13 +616,16 @@ export async function uploadPDFContrato(supabase, pdfBlob, filename, contratoId)
  */
 export async function gerarEUploadPDFContrato(supabase, dadosContrato) {
     try {
-        // 1. Gerar PDF
+        // 1. Buscar dados da empresa
+        const dadosEmpresa = await buscarConfiguracoesEmpresa(supabase);
+        
+        // 2. Gerar PDF
         const {
             blob,
             filename
-        } = await gerarPDFContrato(dadosContrato);
+        } = await gerarPDFContrato(dadosContrato, dadosEmpresa, supabase);
 
-        // 2. Upload para Supabase
+        // 3. Upload para Supabase
         const {
             path,
             publicUrl
@@ -616,7 +636,7 @@ export async function gerarEUploadPDFContrato(supabase, dadosContrato) {
             dadosContrato.id
         );
 
-        // 3. Atualizar registro do contrato com URL do PDF
+        // 4. Atualizar registro do contrato com URL do PDF
         const {
             error: updateError
         } = await supabase

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Settings as SettingsIcon, Building, User, Wrench, FileText, Plus, Trash2, Save } from 'lucide-react';
+import { supabase } from '../lib/supabase';
+import { buscarConfiguracoesEmpresa, atualizarConfiguracoesEmpresa } from '../utils/configuracoesEmpresa';
 
 const Configuracoes = () => {
   const [config, setConfig] = useState({
@@ -16,31 +18,60 @@ const Configuracoes = () => {
   const [novoTecnico, setNovoTecnico] = useState({ nome: '', registro: '' });
   const [novoEquipamento, setNovoEquipamento] = useState({ nome: '', identificacao: '' });
   const [saved, setSaved] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  // Carregar configurações do localStorage ao montar
+  // Carregar configurações do Supabase ao montar
   useEffect(() => {
-    const savedConfig = localStorage.getItem('enterfix_config');
-    const savedTecnicos = localStorage.getItem('enterfix_tecnicos');
-    const savedEquipamentos = localStorage.getItem('enterfix_equipamentos');
-
-    if (savedConfig) {
-      const parsedConfig = JSON.parse(savedConfig);
-      setConfig({
-        nomeEmpresa: parsedConfig.nomeEmpresa || 'Enterfix Metrologia',
-        cnpj: parsedConfig.cnpj || '',
-        endereco: parsedConfig.endereco || '',
-        telefone: parsedConfig.telefone || '',
-        email: parsedConfig.email || 'contato@enterfix.com.br',
-        website: parsedConfig.website || 'www.enterfix.com.br',
-      });
-    }
-    if (savedTecnicos) {
-      setTecnicos(JSON.parse(savedTecnicos));
-    }
-    if (savedEquipamentos) {
-      setEquipamentos(JSON.parse(savedEquipamentos));
-    }
+    carregarConfiguracoes();
   }, []);
+
+  const carregarConfiguracoes = async () => {
+    try {
+      setLoading(true);
+      
+      // Buscar configurações da empresa do Supabase
+      const dadosEmpresa = await buscarConfiguracoesEmpresa(supabase);
+      
+      if (dadosEmpresa) {
+        setConfig({
+          nomeEmpresa: dadosEmpresa.razaoSocial || 'Enterfix Metrologia',
+          cnpj: dadosEmpresa.cnpj || '',
+          endereco: dadosEmpresa.endereco || '',
+          telefone: dadosEmpresa.telefone || '',
+          email: dadosEmpresa.email || 'contato@enterfix.com.br',
+          website: dadosEmpresa.website || 'www.enterfix.com.br',
+        });
+      }
+
+      // Tecnicos e equipamentos ainda no localStorage (por enquanto)
+      const savedTecnicos = localStorage.getItem('enterfix_tecnicos');
+      const savedEquipamentos = localStorage.getItem('enterfix_equipamentos');
+      
+      if (savedTecnicos) {
+        setTecnicos(JSON.parse(savedTecnicos));
+      }
+      if (savedEquipamentos) {
+        setEquipamentos(JSON.parse(savedEquipamentos));
+      }
+    } catch (error) {
+      console.error('Erro ao carregar configurações:', error);
+      // Fallback para localStorage se houver erro
+      const savedConfig = localStorage.getItem('enterfix_config');
+      if (savedConfig) {
+        const parsedConfig = JSON.parse(savedConfig);
+        setConfig({
+          nomeEmpresa: parsedConfig.nomeEmpresa || 'Enterfix Metrologia',
+          cnpj: parsedConfig.cnpj || '',
+          endereco: parsedConfig.endereco || '',
+          telefone: parsedConfig.telefone || '',
+          email: parsedConfig.email || 'contato@enterfix.com.br',
+          website: parsedConfig.website || 'www.enterfix.com.br',
+        });
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -75,13 +106,35 @@ const Configuracoes = () => {
     setEquipamentos(prev => prev.filter(e => e.id !== id));
   };
 
-  const saveConfig = () => {
-    localStorage.setItem('enterfix_config', JSON.stringify(config));
-    localStorage.setItem('enterfix_tecnicos', JSON.stringify(tecnicos));
-    localStorage.setItem('enterfix_equipamentos', JSON.stringify(equipamentos));
-    
-    setSaved(true);
-    setTimeout(() => setSaved(false), 3000);
+  const saveConfig = async () => {
+    try {
+      // Salvar configurações da empresa no Supabase
+      const resultado = await atualizarConfiguracoesEmpresa(supabase, {
+        nomeEmpresa: config.nomeEmpresa,
+        cnpj: config.cnpj,
+        endereco: config.endereco,
+        telefone: config.telefone,
+        email: config.email,
+        website: config.website,
+      });
+
+      if (!resultado.success) {
+        throw new Error(resultado.error);
+      }
+
+      // Tecnicos e equipamentos ainda no localStorage
+      localStorage.setItem('enterfix_tecnicos', JSON.stringify(tecnicos));
+      localStorage.setItem('enterfix_equipamentos', JSON.stringify(equipamentos));
+      
+      // Também manter backup no localStorage
+      localStorage.setItem('enterfix_config', JSON.stringify(config));
+      
+      setSaved(true);
+      setTimeout(() => setSaved(false), 3000);
+    } catch (error) {
+      console.error('Erro ao salvar configurações:', error);
+      alert('Erro ao salvar configurações. Verifique sua conexão e tente novamente.');
+    }
   };
 
   return (
