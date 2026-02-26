@@ -4,6 +4,11 @@ import { supabase } from '../lib/supabase';
 import { useAlert } from './AlertSystem';
 import ClienteSelector from './ClienteSelector';
 import { gerarEUploadPDFContrato } from '../utils/contratosPDF';
+import InfoField from './forms/InfoField';
+
+// Importar configurações dos contratos
+import { CONFIG_PLANOS } from '../utils/contratos/clausulas/plano_manutencao';
+import { CONFIG_PACOTES_SUPORTE } from '../utils/contratos/clausulas/suporte';
 
 const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
   const alert = useAlert();
@@ -88,6 +93,11 @@ const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
       value: 'gestao_parque', 
       label: 'Gestão de Parque de Instrumentos',
       descricao: 'Gestão completa do parque de instrumentos do cliente'
+    },
+    { 
+      value: 'plano_manutencao', 
+      label: 'Plano de Manutenção Recorrente',
+      descricao: 'Bronze/Prata/Ouro - Manutenção + Calibração + Benefícios Escalonados'
     },
     { 
       value: 'suporte', 
@@ -578,46 +588,128 @@ const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
       case 'suporte':
         return (
           <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Nível de Suporte
-                </label>
-                <select
-                  value={dadosEspecificos.nivel_suporte || ''}
-                  onChange={(e) => handleDadosEspecificosChange('nivel_suporte', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Selecione...</option>
-                  <option value="basico">Básico (horário comercial)</option>
-                  <option value="intermediario">Intermediário (8x5)</option>
-                  <option value="avancado">Avançado (24x7)</option>
-                </select>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                📦 Pacote de Suporte
+              </label>
+              <select
+                value={dadosEspecificos.pacote || ''}
+                onChange={(e) => {
+                  const pacote = e.target.value;
+                  handleDadosEspecificosChange('pacote', pacote);
+                  // Auto-popular campos do CONFIG
+                  if (pacote && CONFIG_PACOTES_SUPORTE[pacote]) {
+                    const config = CONFIG_PACOTES_SUPORTE[pacote];
+                    handleDadosEspecificosChange('horas_mensais', config.horasMensais);
+                    handleDadosEspecificosChange('sla_p1', config.slaRespostaP1);
+                    handleDadosEspecificosChange('taxa_p1', config.taxaAcionamentoIndevidoP1);
+                  }
+                }}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="">Selecione o pacote...</option>
+                <option value="basico">Básico - Demanda Ocasional</option>
+                <option value="padrao">Padrão - ISO 9001 Regular</option>
+                <option value="premium">Premium - 24/7 Crítico</option>
+              </select>
+            </div>
+
+            {dadosEspecificos.pacote && CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote] && (
+              <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg space-y-2">
+                <h4 className="font-semibold text-blue-900 mb-3">📊 Características do Pacote</h4>
+                <InfoField 
+                  label="Horas/mês" 
+                  value={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].horasMensais === 999 ? 'Ilimitadas' : `${CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].horasMensais}h`}
+                  highlight={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].horasMensais === 999}
+                />
+                <InfoField 
+                  label="SLA Resposta P1" 
+                  value={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].slaRespostaP1 ? `${CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].slaRespostaP1} hora(s)` : 'Não atende P1'}
+                  highlight={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].slaRespostaP1 === 1}
+                />
+                <InfoField 
+                  label="Taxa Acionamento Indevido P1" 
+                  value={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].taxaAcionamentoIndevidoP1 === 0 ? 'SEM TAXA' : `R$ ${CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].taxaAcionamentoIndevidoP1}`}
+                  highlight={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].taxaAcionamentoIndevidoP1 === 0}
+                />
+                <InfoField 
+                  label="Suporte 24/7" 
+                  value={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].suporte24x7 ? '✅ Sim' : '❌ Não'}
+                  highlight={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].suporte24x7}
+                />
+                <InfoField 
+                  label="Acesso Remoto" 
+                  value={CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].acessoRemoto ? '✅ Sim' : '❌ Não'}
+                />
+                {CONFIG_PACOTES_SUPORTE[dadosEspecificos.pacote].engenheiroDedicado && (
+                  <div className="text-sm text-green-600 font-medium pt-2 border-t">
+                    ✅ Engenheiro dedicado que conhece seu parque
+                  </div>
+                )}
               </div>
+            )}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Canais de Atendimento
                 </label>
                 <input
                   type="text"
-                  value={dadosEspecificos.canais_atendimento || ''}
+                  value={dadosEspecificos.canais_atendimento || 'E-mail, Telefone, WhatsApp'}
                   onChange={(e) => handleDadosEspecificosChange('canais_atendimento', e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                  placeholder="Ex: E-mail, Telefone, WhatsApp"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Escopo do Suporte
+                </label>
+                <textarea
+                  value={dadosEspecificos.escopo_suporte || ''}
+                  onChange={(e) => handleDadosEspecificosChange('escopo_suporte', e.target.value)}
+                  rows="2"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  placeholder="Descrição do escopo..."
                 />
               </div>
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Escopo do Suporte
+
+            <div className="mt-4 space-y-3 border-t pt-4">
+              <h4 className="font-semibold text-gray-700">🛡️ Proteções e Automações</h4>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.log_lgpd || false}
+                  onChange={(e) => handleDadosEspecificosChange('log_lgpd', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Log Auditoria LGPD</strong> - Rastreabilidade sessões remotas (25 campos Supabase, screenshots, termo autorização)
+                </span>
               </label>
-              <textarea
-                value={dadosEspecificos.escopo_suporte || ''}
-                onChange={(e) => handleDadosEspecificosChange('escopo_suporte', e.target.value)}
-                rows="3"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                placeholder="Descreva o que está coberto pelo suporte técnico..."
-              />
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.termo_meio || false}
+                  onChange={(e) => handleDadosEspecificosChange('termo_meio', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Termo Atividade de Meio</strong> - Classificação risco procedimentos orientados (🟢🟡🔴🚫)
+                </span>
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.upsell_automatico || false}
+                  onChange={(e) => handleDadosEspecificosChange('upsell_automatico', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Sistema Upsell Automático</strong> - 6 gatilhos detecção, e-mail personalizado (meta conversão 15%)
+                </span>
+              </label>
             </div>
           </div>
         );
@@ -676,22 +768,351 @@ const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
           </div>
         );
 
+      case 'plano_manutencao':
+        return (
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                🎯 Plano de Manutenção
+              </label>
+              <select
+                value={dadosEspecificos.plano || ''}
+                onChange={(e) => {
+                  const plano = e.target.value;
+                  handleDadosEspecificosChange('plano', plano);
+                  // Auto-popular campos do CONFIG
+                  if (plano && CONFIG_PLANOS[plano]) {
+                    const config = CONFIG_PLANOS[plano];
+                    handleDadosEspecificosChange('visitas_ano', config.visitas);
+                    handleDadosEspecificosChange('carencia_meses', config.carencia);
+                    handleDadosEspecificosChange('multa_rescisao', config.multa);
+                    handleDadosEspecificosChange('equipamento_substituto', config.equipamentoSubstituto);
+                  }
+                }}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="">Selecione o plano...</option>
+                <option value="bronze">🥉 Bronze - Preventivo Básico (Orçamento Restrito)</option>
+                <option value="prata">🥈 Prata - Prioritário (ISO 9001/17025)</option>
+                <option value="ouro">🥇 Ouro - Full Service Premium (24/7 Crítico)</option>
+              </select>
+            </div>
+
+            {dadosEspecificos.plano && CONFIG_PLANOS[dadosEspecificos.plano] && (
+              <div className="mt-4 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-lg space-y-2">
+                <h4 className="font-bold text-blue-900 mb-3 text-lg flex items-center gap-2">
+                  {dadosEspecificos.plano === 'bronze' && '🥉'}
+                  {dadosEspecificos.plano === 'prata' && '🥈'}
+                  {dadosEspecificos.plano === 'ouro' && '🥇'}
+                  Características do Plano {CONFIG_PLANOS[dadosEspecificos.plano].nome}
+                </h4>
+                
+                <div className="grid grid-cols-2 gap-3">
+                  <InfoField 
+                    label="Visitas/ano" 
+                    value={`${CONFIG_PLANOS[dadosEspecificos.plano].visitas}x`}
+                    icon="📅"
+                  />
+                  <InfoField 
+                    label="Periodicidade" 
+                    value={CONFIG_PLANOS[dadosEspecificos.plano].periodicidade}
+                    icon="🔄"
+                  />
+                  <InfoField 
+                    label="Calibração" 
+                    value={CONFIG_PLANOS[dadosEspecificos.plano].calibracaoTipo}
+                    highlight={dadosEspecificos.plano === 'ouro'}
+                  />
+                  <InfoField 
+                    label="Prioridade SLA" 
+                    value={CONFIG_PLANOS[dadosEspecificos.plano].prioridadeSLA}
+                    highlight={CONFIG_PLANOS[dadosEspecificos.plano].prioridadeSLA === '24h'}
+                  />
+                  <InfoField 
+                    label="Emergências Inclusas" 
+                    value={CONFIG_PLANOS[dadosEspecificos.plano].emergenciasInclusas === 999 ? 'Ilimitadas' : CONFIG_PLANOS[dadosEspecificos.plano].emergenciasInclusas}
+                    highlight={CONFIG_PLANOS[dadosEspecificos.plano].emergenciasInclusas === 999}
+                  />
+                  <InfoField 
+                    label="Desconto Fabricação" 
+                    value={`${CONFIG_PLANOS[dadosEspecificos.plano].descontoFabricacao}%`}
+                    highlight={CONFIG_PLANOS[dadosEspecificos.plano].descontoFabricacao >= 20}
+                  />
+                  <InfoField 
+                    label="Desconto Eng. Reversa" 
+                    value={`${CONFIG_PLANOS[dadosEspecificos.plano].descontoEngenhariaReversa}%`}
+                    highlight={CONFIG_PLANOS[dadosEspecificos.plano].descontoEngenhariaReversa >= 20}
+                  />
+                  <InfoField 
+                    label="Técnico Exclusivo" 
+                    value={CONFIG_PLANOS[dadosEspecificos.plano].tecnicoExclusivo ? '✅ Sim' : '❌ Não'}
+                    highlight={CONFIG_PLANOS[dadosEspecificos.plano].tecnicoExclusivo}
+                  />
+                </div>
+
+                {CONFIG_PLANOS[dadosEspecificos.plano].equipamentoSubstituto && (
+                  <div className="mt-3 p-3 bg-green-100 border-2 border-green-300 rounded text-sm">
+                    <strong className="text-green-800 flex items-center gap-2">
+                      ⭐ DIFERENCIAL OURO: Equipamento Substituto
+                    </strong>
+                    <p className="text-gray-700 mt-1">
+                      Se o reparo demorar mais de 5 dias, fornecemos equipamento equivalente/superior 
+                      calibrado RBC em até <strong>48h</strong>, sem custo adicional.
+                    </p>
+                  </div>
+                )}
+
+                <div className="mt-3 grid grid-cols-2 gap-3 pt-3 border-t border-blue-300">
+                  <InfoField 
+                    label="Carência" 
+                    value={`${CONFIG_PLANOS[dadosEspecificos.plano].carencia} meses`}
+                    icon="⏰"
+                  />
+                  <InfoField 
+                    label="Multa Rescisão" 
+                    value={`${CONFIG_PLANOS[dadosEspecificos.plano].multa * 100}% saldo`}
+                    icon="⚖️"
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Equipamentos Cobertos
+                </label>
+                <textarea
+                  value={dadosEspecificos.equipamentos_cobertos || ''}
+                  onChange={(e) => handleDadosEspecificosChange('equipamentos_cobertos', e.target.value)}
+                  rows="3"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  placeholder="Ex: MMC Zeiss, Paquímetros digitais, Micrômetros, Blocos padrão..."
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Observações Específicas
+                </label>
+                <textarea
+                  value={dadosEspecificos.observacoes || ''}
+                  onChange={(e) => handleDadosEspecificosChange('observacoes', e.target.value)}
+                  rows="3"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  placeholder="Particularidades deste contrato..."
+                />
+              </div>
+            </div>
+
+            <div className="mt-4 space-y-3 border-t pt-4">
+              <h4 className="font-semibold text-gray-700">📊 Inteligência de Negócio</h4>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.dashboard_upgrade || false}
+                  onChange={(e) => handleDadosEspecificosChange('dashboard_upgrade', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Dashboard de Upgrade</strong> - Mostrar benefícios que faltam no plano atual (gerar desejo)
+                </span>
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.calculo_mtbf || false}
+                  onChange={(e) => handleDadosEspecificosChange('calculo_mtbf', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Cálculo Automático MTBF/MTTR</strong> - Queries Supabase mensais + alertas confiabilidade
+                </span>
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.relatorio_capex || false}
+                  onChange={(e) => handleDadosEspecificosChange('relatorio_capex', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Relatório CAPEX Estratégico</strong> - {
+                    dadosEspecificos.plano === 'bronze' ? 'Anual simples' :
+                    dadosEspecificos.plano === 'prata' ? 'Semestral detalhado' :
+                    dadosEspecificos.plano === 'ouro' ? 'Trimestral + reunião presencial' :
+                    'Periodicidade conforme plano'
+                  }
+                </span>
+              </label>
+            </div>
+
+            {/* Comparação de planos (se não for Ouro) */}
+            {dadosEspecificos.plano && dadosEspecificos.plano !== 'ouro' && (
+              <div className="mt-4 p-4 bg-yellow-50 border-2 border-yellow-300 rounded-lg">
+                <h4 className="font-semibold text-yellow-800 mb-2">
+                  💡 Benefícios que faltam neste plano
+                </h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  {dadosEspecificos.plano === 'bronze' && (
+                    <>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Calibração completa RBC inclusa (disponível no Prata)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Emergências inclusas (1x no Prata, ilimitadas no Ouro)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Equipamento substituto em 48h (exclusivo Ouro)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Técnico exclusivo (exclusivo Ouro)</span>
+                      </li>
+                    </>
+                  )}
+                  {dadosEspecificos.plano === 'prata' && (
+                    <>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Equipamento substituto em 48h (exclusivo Ouro) - Evita paradas longas</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Técnico exclusivo que conhece seu parque (exclusivo Ouro)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Emergências ilimitadas (Prata tem 1x/ano, Ouro ilimitadas)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gray-400">❌</span>
+                        <span>Descontos maiores: 25% fabricação/ER vs. 15% atual</span>
+                      </li>
+                    </>
+                  )}
+                </ul>
+              </div>
+            )}
+          </div>
+        );
+
       case 'nda':
         return (
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Tipo de Informação Confidencial
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                🔒 Tipo de Parte (Quem receberá informação confidencial)
               </label>
-              <textarea
-                value={dadosEspecificos.tipo_informacao || ''}
-                onChange={(e) => handleDadosEspecificosChange('tipo_informacao', e.target.value)}
-                rows="3"
+              <select
+                value={dadosEspecificos.tipo_parte || ''}
+                onChange={(e) => handleDadosEspecificosChange('tipo_parte', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                placeholder="Descreva o tipo de informação protegida..."
-              />
+              >
+                <option value="">Selecione...</option>
+                <option value="terceiro_fabricante">🏭 Terceiro Fabricante (Usinagem, Tratamento, Caldeiraria)</option>
+                <option value="cliente_final">👤 Cliente Final (Contratante do serviço)</option>
+                <option value="parceiro_comercial">🤝 Parceiro Comercial (Representante, Consultor)</option>
+                <option value="ex_colaborador">👔 Ex-Colaborador (Acordo pós-desligamento)</option>
+              </select>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            {/* CONDICIONAL: Blindagens especiais para Terceiro Fabricante */}
+            {dadosEspecificos.tipo_parte === 'terceiro_fabricante' && (
+              <div className="mt-4 p-4 border-2 border-orange-300 rounded-lg bg-orange-50">
+                <h4 className="font-semibold text-orange-700 mb-3 flex items-center gap-2">
+                  ⚠️ Blindagens Especiais para Terceiro Fabricante
+                </h4>
+                
+                <div className="space-y-3">
+                  <div>
+                    <label className="block text-sm font-medium text-orange-800 mb-1">
+                      CNPJ do Fornecedor *
+                    </label>
+                    <input
+                      type="text"
+                      value={dadosEspecificos.cnpj_fornecedor || ''}
+                      onChange={(e) => handleDadosEspecificosChange('cnpj_fornecedor', e.target.value)}
+                      className="w-full px-3 py-2 border-2 border-orange-300 rounded-md focus:ring-2 focus:ring-orange-500"
+                      placeholder="00.000.000/0001-00"
+                      required
+                    />
+                  </div>
+
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={dadosEspecificos.sistema_enterfix_tracking || false}
+                      onChange={(e) => handleDadosEspecificosChange('sistema_enterfix_tracking', e.target.checked)}
+                      className="w-4 h-4 text-orange-600"
+                    />
+                    <span className="text-sm text-gray-700">
+                      Registrar em Módulo Fornecedores (rastreabilidade arquivos STEP/DXF)
+                    </span>
+                  </label>
+
+                  <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded text-sm">
+                    <strong className="text-red-800">Multas Automáticas:</strong>
+                    <ul className="list-disc ml-5 mt-2 space-y-1 text-gray-700">
+                      <li>Vazamento arquivo técnico: <strong className="text-red-600">R$ 50.000</strong> OU 100% valor pedido (o maior)</li>
+                      <li>Fabricação não autorizada: <strong className="text-red-600">R$ 100.000</strong> OU 200% lucro obtido (o maior)</li>
+                      <li>Engenharia reversa: <strong className="text-red-600">R$ 80.000</strong> + indenização danos</li>
+                    </ul>
+                  </div>
+
+                  <label className="flex items-center gap-2 mt-3">
+                    <input
+                      type="checkbox"
+                      checked={true}
+                      disabled
+                      className="w-4 h-4 text-orange-600"
+                    />
+                    <span className="text-sm text-gray-700">
+                      <strong>Certificado de Destruição Obrigatório</strong> (15 dias após conclusão - DOD 5220.22-M)
+                    </span>
+                  </label>
+                </div>
+              </div>
+            )}
+
+            {/* Avisos para outros tipos */}
+            {dadosEspecificos.tipo_parte === 'cliente_final' && (
+              <div className="mt-4 p-4 border-2 border-blue-300 rounded-lg bg-blue-50">
+                <strong className="text-blue-800">Multas Cliente Final:</strong>
+                <ul className="list-disc ml-5 mt-2 space-y-1 text-sm text-gray-700">
+                  <li>Uso projeto sem licença: <strong>200%</strong> valor Engenharia Reversa</li>
+                  <li>Replicação filiais não autorizadas: <strong>R$ 50.000</strong> por unidade</li>
+                  <li>Compartilhamento com terceiros: <strong>R$ 100.000</strong> + regresso</li>
+                </ul>
+              </div>
+            )}
+
+            {dadosEspecificos.tipo_parte === 'parceiro_comercial' && (
+              <div className="mt-4 p-4 border-2 border-purple-300 rounded-lg bg-purple-50">
+                <strong className="text-purple-800">Multas Parceiro Comercial:</strong>
+                <ul className="list-disc ml-5 mt-2 space-y-1 text-sm text-gray-700">
+                  <li>Vazamento lista clientes: <strong>R$ 80.000</strong></li>
+                  <li>Concorrência desleal (oferecer serviço diretamente): <strong>R$ 200.000</strong></li>
+                  <li>Uso marca sem autorização: <strong>R$ 50.000</strong></li>
+                </ul>
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Tipo de Informação Confidencial
+                </label>
+                <textarea
+                  value={dadosEspecificos.tipo_informacao || ''}
+                  onChange={(e) => handleDadosEspecificosChange('tipo_informacao', e.target.value)}
+                  rows="3"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  placeholder="Descreva o tipo de informação protegida..."
+                />
+              </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Finalidade
@@ -701,21 +1122,73 @@ const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
                   value={dadosEspecificos.finalidade || ''}
                   onChange={(e) => handleDadosEspecificosChange('finalidade', e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                  placeholder="Ex: Prestação de serviços"
+                  placeholder="Ex: Prestação de serviços, Fabricação de peças"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Prazo de Sigilo (anos)
+                </label>
+                <input
+                  type="number"
+                  value={dadosEspecificos.prazo_sigilo || '5'}
+                  onChange={(e) => handleDadosEspecificosChange('prazo_sigilo', e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Multa por Descumprimento (R$)
+                  Multa Adicional Customizada (R$)
                 </label>
                 <input
                   type="number"
                   step="0.01"
-                  value={dadosEspecificos.multa_descumprimento || ''}
-                  onChange={(e) => handleDadosEspecificosChange('multa_descumprimento', e.target.value)}
+                  value={dadosEspecificos.multa_customizada || ''}
+                  onChange={(e) => handleDadosEspecificosChange('multa_customizada', e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  placeholder="Opcional"
                 />
               </div>
+            </div>
+
+            <div className="mt-4 space-y-3 border-t pt-4">
+              <h4 className="font-semibold text-gray-700">🔐 Rastreabilidade Digital</h4>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.rastreabilidade_digital || false}
+                  onChange={(e) => handleDadosEspecificosChange('rastreabilidade_digital', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Rastreabilidade Digital</strong> - Marca d'água XML + hash SHA-256 + logs Supabase 10 anos
+                </span>
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.alertas_vencimento || false}
+                  onChange={(e) => handleDadosEspecificosChange('alertas_vencimento', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>Alertas Automáticos Vencimento</strong> - 15 dias antes, dia vencimento, 7 dias atraso
+                </span>
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={dadosEspecificos.qr_code_pecas || false}
+                  onChange={(e) => handleDadosEspecificosChange('qr_code_pecas', e.target.checked)}
+                  className="w-4 h-4 text-blue-600"
+                />
+                <span className="text-sm text-gray-700">
+                  <strong>QR Code em Peças Físicas</strong> - Rastreabilidade cadeia de custódia
+                </span>
+              </label>
             </div>
           </div>
         );

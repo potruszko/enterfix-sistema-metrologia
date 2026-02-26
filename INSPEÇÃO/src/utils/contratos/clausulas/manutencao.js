@@ -1,8 +1,26 @@
 /**
  * CLÁUSULAS ESPECÍFICAS - Manutenção Preventiva e Corretiva
  * 
- * Cláusulas aplicáveis a contratos de manutenção de equipamentos de medição.
- * Base normativa: ISO/IEC 17025, ABNT NBR 5462 (Confiabilidade e Mantenabilidade)
+ * Finalidade: Manutenção preventiva e corretiva de instrumentos e equipamentos de medição
+ * Aplicável a: Empresas que necessitam manter equipamentos em condições operacionais
+ * 
+ * Base legal/normativa:
+ * - ABNT NBR 5462:1994 - Confiabilidade e Mantenabilidade
+ * - ABNT NBR 15467:2007 - Sistemas de gestão da manutenção
+ * - ISO 55000:2014 - Gestão de ativos
+ * - NR-12 - Segurança no Trabalho em Máquinas e Equipamentos
+ * 
+ * Serviços complementares (contratos separados):
+ * - calibracao.js: Calibração dimensional e metrológica pós-manutenção
+ * - fabricacao.js: Fabricação de peças de reposição sob medida
+ * - consultoria.js: Consultoria em otimização de manutenção
+ * - plano_manutencao.js: Planos recorrentes (Bronze/Prata/Ouro) com descontos
+ * 
+ * @module contratos/clausulas/manutencao
+ * @category Atômico  
+ * @version 2.0.0
+ * @lastUpdate 26/02/2026
+ * @author Paulo Enterfix
  */
 
 export const CLAUSULAS_MANUTENCAO = {
@@ -11,26 +29,35 @@ export const CLAUSULAS_MANUTENCAO = {
      */
     escopo: () => `
 CLÁUSULA ESPECÍFICA 1 - DO ESCOPO DOS SERVIÇOS DE MANUTENÇÃO
-1.1. Os serviços de manutenção compreendem:
+1.1. O presente contrato tem por objeto a manutenção de instrumentos e equipamentos de medição:
     a) Manutenção preventiva programada conforme plano estabelecido;
     b) Manutenção corretiva para restauração de funcionalidade;
-    c) Limpeza técnica e lubrificação de componentes;
-    d) Substituição de peças desgastadas ou defeituosas;
-    e) Ajustes e regulagens conforme especificações do fabricante;
-    f) Testes de funcionalidade e verificação de desempenho;
-    g) Emissão de relatório técnico detalhado.
+    c) Limpeza técnica e lubrificação de componentes móveis;
+    d) Substituição de peças desgastadas ou defeituosas (consumíveis);
+    e) Ajustes mecânicos e regulagens conforme especificações do fabricante;
+    f) Testes de funcionalidade e verificação de desempenho operacional;
+    g) Emissão de relatório técnico de manutenção detalhado.
 
-1.2. Modalidades de manutenção:
-    a) PREVENTIVA: Intervenções programadas para evitar falhas;
-    b) CORRETIVA: Reparos após identificação de defeito;
-    c) PREDITIVA: Monitoramento para antecipar necessidades;
-    d) EMERGENCIAL: Atendimento em até 24h para equipamentos críticos.
+1.2. Modalidades de manutenção atendidas:
+    a) PREVENTIVA: Intervenções programadas para evitar falhas e prolongar vida útil;
+    b) CORRETIVA: Reparos após identificação de defeito ou mau funcionamento;
+    c) PREDITIVA: Monitoramento de condições para antecipar necessidades de intervenção;
+    d) EMERGENCIAL: Atendimento prioritário em até 24h para equipamentos críticos.
 
-1.3. NÃO estão inclusos:
-    a) Calibração dos equipamentos (contratação separada);
-    b) Peças danificadas por mau uso ou acidentes;
-    c) Modificações ou upgrades não previstos;
-    d) Equipamentos fora da garantia ou sem histórico de manutenção.
+1.3. NÃO estão inclusos no escopo de manutenção:
+    a) Calibração dimensional ou metrológica (vide "Contrato de Calibração");
+    b) Peças eletrônicas principais (placas, sensores, displays);
+    c) Peças danificadas por mau uso, acidentes ou negligência;
+    d) Modificações, upgrades ou customizações não previstas;
+    e) Equipamentos obsoletos sem peças de reposição no mercado;
+    f) Equipamentos fora da garantia do fabricante (sem histórico de manutenção).
+
+1.4. Serviços complementares disponíveis mediante contratação adicional:
+    a) Calibração completa pós-manutenção → "Contrato de Calibração";
+    b) Fabricação de peças descontinuadas ou especiais → "Contrato de Fabricação";
+    c) Engenharia reversa para peças sem documentação → "Contrato de Engenharia Reversa";
+    d) Planos recorrentes com descontos (Bronze/Prata/Ouro) → "Contrato de Plano de Manutenção";
+    e) Consultoria em otimização de manutenção → "Contrato de Consultoria".
 `,
 
     /**
@@ -229,7 +256,7 @@ CLÁUSULA ESPECÍFICA 9 - DA SUSPENSÃO E RETOMADA DOS SERVIÇOS
     c) Por força maior ou caso fortuito.
 
 9.2. Durante suspensão a pedido da CONTRATANTE:
-    a) Mensalidade reduzida a 30% para manter vínculo contratual;
+    a) Serviços suspensos sem cobrança durante período acordado (contratos pontuais);
     b) Atendimentos emergenciais conforme disponibilidade (cobrança à parte);
     c) Prazo máximo de suspensão: 90 dias corridos.
 
@@ -237,5 +264,9 @@ CLÁUSULA ESPECÍFICA 9 - DA SUSPENSÃO E RETOMADA DOS SERVIÇOS
     a) Aviso prévio de 15 dias;
     b) Inspeção geral dos equipamentos (incluso);
     c) Atualização do Plano de Manutenção Preventiva.
+
+9.4. Suspensão em contratos recorrentes:
+    a) Vide "Contrato de Plano de Manutenção" para condições específicas;
+    b) Mensalidade reduzida a 30% para manter vínculo contratual durante suspensão (apenas planos recorrentes).
 `,
 };

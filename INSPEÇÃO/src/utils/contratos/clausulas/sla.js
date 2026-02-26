@@ -1,8 +1,25 @@
 /**
  * CLÁUSULAS ESPECÍFICAS - SLA (Service Level Agreement)
  * 
- * Acordo de Nível de Serviço com métricas mensuráveis e penalidades.
+ * Tipo: LEGAL / META-ORGANIZACIONAL
+ * Finalidade: Estabelecer métricas, prazos e penalidades SOBRE serviços já contratados
+ * 
+ * IMPORTANTE: Este contrato NÃO oferece serviços diretamente.
+ * Ele estabelece níveis de serviço (SLA) para contratos de serviços existentes.
+ * 
+ * Contratos que podem ser regidos por este SLA:
+ * - calibracao.js: Calibração de Instrumentos
+ * - manutencao.js: Manutenção Preventiva e Corretiva
+ * - plano_manutencao.js: Planos Recorrentes (Bronze/Prata/Ouro)
+ * - suporte.js: Suporte Técnico Continuado
+ * - gestaoParque.js: Gestão de Parque de Instrumentos
+ * 
  * Base: ITIL v4, ISO/IEC 20000 (Gestão de Serviços)
+ * 
+ * @module contratos/clausulas/sla
+ * @category Legal
+ * @version 2.0.0 (atualizado para referenciar contratos atômicos)
+ * @lastUpdate 26/02/2026
  */
 
 export const CLAUSULAS_SLA = {
@@ -24,11 +41,50 @@ CLÁUSULA ESPECÍFICA 1 - DA DEFINIÇÃO E OBJETIVOS DO SLA
     c) Criar mecanismo de melhoria contínua;
     d) Proteger interesses comerciais de ambas as partes.
 
-1.3. Escopo do SLA:
-    a) Serviços de calibração e manutenção de equipamentos;
-    b) Suporte técnico e atendimento ao cliente;
-    c) Disponibilidade de sistemas e documentação;
-    d) Prazos de entrega e qualidade dos entregáveis.
+1.3. Escopo do SLA - Contratos Regidos:
+    Este SLA aplica-se aos seguintes contratos de serviços (conforme Anexo A - Contratos Vinculados):
+    
+    a) **Contrato de Calibração** (calibracao.js):
+       → Prazos de execução (padrão: 10 dias úteis);
+       → Qualidade dos certificados (meta: ≥ 98% sem erros);
+       → Rastreabilidade RBC (meta: 100%);
+       → Tempo de resposta a não conformidades.
+    
+    b) **Contrato de Manutenção** (manutencao.js):
+       → SLA de atendimento corretivo (24h/48h/5dias conforme prioridade);
+       → Disponibilidade de equipamentos (meta: ≥ 95%);
+       → Indicadores MTBF e MTTR;
+       → Taxa de reincidência de falhas.
+    
+    c) **Plano de Manutenção Recorrente** (plano_manutencao.js) - SE APLICÁVEL:
+       → Cumprimento de cronograma de visitas (semestral/trimestral/mensal);
+       → Prioridade de atendimento conforme plano (Bronze/Prata/Ouro);
+       → Descontos garantidos em serviços adicionais.
+    
+    d) **Suporte Técnico** (suporte.js) - SE APLICÁVEL:
+       → Tempo de resposta (2h/4h/8h/24h conforme prioridade);
+       → Taxa de resolução no primeiro contato (meta: ≥ 60%);
+       → Disponibilidade de canais (telefone, e-mail, WhatsApp).
+    
+    e) **Gestão de Parque** (gestaoParque.js) - SE APLICÁVEL:
+       → Atualização de cadastros (prazo: 5 dias úteis);
+       → Alertas de vencimento (30 dias de antecedência);
+       → Acurácia de indicadores (meta: ≥ 99%).
+
+1.4. Hierarquia contratual:
+    a) Este SLA estabelece: Métricas, prazos, penalidades, bonificações;
+    b) Contratos vinculados estabelecem: Condições técnicas, escopo, preços;
+    c) Em caso de conflito de prazos: Prevalece o SLA (mais restritivo);
+    d) Em caso de conflito de escopo: Prevalece o contrato de serviço;
+    e) Aspectos não cobertos pelo SLA: Regidos pelos contratos vinculados.
+
+1.5. Documentação que compõe este SLA:
+    a) Contrato Principal: SLA (este documento);
+    b) ANEXO A: Lista de Contratos Vinculados e Escopos;
+    c) ANEXO B: Tabela de Métricas e Metas Acordadas;
+    d) ANEXO C: Contatos de Escalação (N1, N2, N3, N4);
+    e) ANEXO D: Dashboard de Indicadores (acesso web);
+    f) Contratos Referenciados: Calibração, Manutenção, Planos, Suporte, Gestão de Parque.
 `,
 
     /**

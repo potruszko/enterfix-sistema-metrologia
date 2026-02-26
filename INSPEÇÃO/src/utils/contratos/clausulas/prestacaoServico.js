@@ -1,8 +1,31 @@
 /**
  * CLÁUSULAS ESPECÍFICAS - Prestação de Serviços de Calibração
  * 
- * Cláusulas aplicáveis exclusivamente a contratos de calibração.
- * Base normativa: ISO/IEC 17025:2017, Portaria Inmetro 694/2022
+ * ⚠️ **CONTRATO DESCONTINUADO** ⚠️
+ * 
+ * Este contrato foi SUBSTITUÍDO por: calibracao.js (v1.0.0)
+ * Motivo: Redundância - ambos tratavam de calibração RBC
+ * Data de descontinuação: 26/02/2026
+ * 
+ * AÇÃO RECOMENDADA:
+ * - Novos contratos: Utilizar calibracao.js (mais completo, 10 cláusulas)
+ * - Contratos existentes: Podem continuar usando este arquivo (compatibilidade mantida)
+ * - Migração: Substituir referências de prestacao_servico → calibracao no código
+ * 
+ * DIFERENÇAS: calibracao.js possui 3 cláusulas adicionais:
+ * - Não Conformidades e Tratamento (etiquetagem, classificação)
+ * - Sistema de Gestão da Qualidade (auditorias, ISO/IEC 17025)
+ * - Certificado Digital (assinatura eletrônica, QR code, LGPD)
+ * 
+ * @deprecated Use calibracao.js em vez deste arquivo
+ * @see calibracao.js - Contrato de Calibração completo e atualizado
+ * @version 1.0.0 (FINAL - sem atualizações futuras)
+ * @lastUpdate 26/02/2026 (marcado como descontinuado)
+ */
+
+/**
+ * MANTIDO APENAS PARA COMPATIBILIDADE RETROATIVA
+ * NÃO ADICIONAR NOVAS FUNCIONALIDADES AQUI
  */
 
 export const CLAUSULAS_PRESTACAO_SERVICO = {

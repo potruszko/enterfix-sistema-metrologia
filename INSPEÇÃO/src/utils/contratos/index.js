@@ -51,15 +51,45 @@ export {
 from './clausulas/gerais.js';
 
 // ============= CLÁUSULAS ESPECÍFICAS =============
-import { CLAUSULAS_PRESTACAO_SERVICO } from './clausulas/prestacaoServico.js';
-import { CLAUSULAS_COMODATO } from './clausulas/comodato.js';
-import { CLAUSULAS_MANUTENCAO } from './clausulas/manutencao.js';
-import { CLAUSULAS_SLA } from './clausulas/sla.js';
-import { CLAUSULAS_CONSULTORIA } from './clausulas/consultoria.js';
-import { CLAUSULAS_GESTAO_PARQUE } from './clausulas/gestaoParque.js';
-import { CLAUSULAS_SUPORTE } from './clausulas/suporte.js';
-import { CLAUSULAS_VALIDACAO } from './clausulas/validacao.js';
-import { CLAUSULAS_NDA } from './clausulas/nda.js';
+import {
+    CLAUSULAS_PRESTACAO_SERVICO
+} from './clausulas/prestacaoServico.js';
+import {
+    CLAUSULAS_COMODATO
+} from './clausulas/comodato.js';
+import {
+    CLAUSULAS_MANUTENCAO
+} from './clausulas/manutencao.js';
+import {
+    CLAUSULAS_SLA
+} from './clausulas/sla.js';
+import {
+    CLAUSULAS_CONSULTORIA
+} from './clausulas/consultoria.js';
+import {
+    CLAUSULAS_GESTAO_PARQUE
+} from './clausulas/gestaoParque.js';
+import {
+    CLAUSULAS_SUPORTE
+} from './clausulas/suporte.js';
+import {
+    CLAUSULAS_VALIDACAO
+} from './clausulas/validacao.js';
+import {
+    CLAUSULAS_NDA
+} from './clausulas/nda.js';
+import {
+    CLAUSULAS_CALIBRACAO
+} from './clausulas/calibracao.js';
+import {
+    CLAUSULAS_FABRICACAO
+} from './clausulas/fabricacao.js';
+import {
+    CLAUSULAS_ENGENHARIA_REVERSA
+} from './clausulas/engenharia_reversa.js';
+import {
+    CLAUSULAS_PLANO_MANUTENCAO
+} from './clausulas/plano_manutencao.js';
 
 /**
  * Mapa de cláusulas específicas por tipo de contrato
@@ -75,6 +105,10 @@ export const CLAUSULAS_ESPECIFICAS_MAP = {
     suporte: CLAUSULAS_SUPORTE,
     validacao: CLAUSULAS_VALIDACAO,
     nda: CLAUSULAS_NDA,
+    calibracao: CLAUSULAS_CALIBRACAO,
+    fabricacao: CLAUSULAS_FABRICACAO,
+    engenharia_reversa: CLAUSULAS_ENGENHARIA_REVERSA,
+    plano_manutencao: CLAUSULAS_PLANO_MANUTENCAO,
 };
 
 /**

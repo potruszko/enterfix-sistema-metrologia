@@ -251,7 +251,7 @@ CLÁUSULA NONA - DA PROPRIEDADE INTELECTUAL E ENGENHARIA REVERSA
     b) A licença de uso NÃO confere direito de reprodução ou fabricação por terceiros.
   `,
 
-  naoAliciamento: () => `
+    naoAliciamento: () => `
 CLÁUSULA DÉCIMA - DO NÃO ALICIAMENTO DE COLABORADORES (NON-SOLICITATION)
 10.1. VEDAÇÃO DE ALICIAMENTO:
     a) A CONTRATANTE fica expressamente PROIBIDA de, durante a vigência deste contrato e por 2 (dois) anos após o seu término:
@@ -285,7 +285,7 @@ CLÁUSULA DÉCIMA - DO NÃO ALICIAMENTO DE COLABORADORES (NON-SOLICITATION)
     b) Ambas as partes comprometem-se a manter ambiente de colaboração profissional e ética comercial.
   `,
 
-  disposicoesGerais: () => `
+    disposicoesGerais: () => `
 CLÁUSULA DÉCIMA PRIMEIRA - DAS DISPOSIÇÕES GERAIS
 11.1. Este contrato é regido pelas leis da República Federativa do Brasil.
 

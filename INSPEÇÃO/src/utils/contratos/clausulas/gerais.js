@@ -29,6 +29,10 @@ export const TITULOS_CONTRATOS = {
     suporte: 'SUPORTE TÉCNICO ESPECIALIZADO',
     validacao: 'VALIDAÇÃO DE EQUIPAMENTOS',
     nda: 'ACORDO DE CONFIDENCIALIDADE (NDA)',
+    calibracao: 'CALIBRAÇÃO DE INSTRUMENTOS DE MEDIÇÃO',
+    fabricacao: 'FABRICAÇÃO DE COMPONENTES SOB MEDIDA',
+    engenharia_reversa: 'ENGENHARIA REVERSA E DOCUMENTAÇÃO TÉCNICA',
+    plano_manutencao: 'PLANO DE MANUTENÇÃO RECORRENTE',
 };
 
 /**
@@ -75,9 +79,20 @@ CLÁUSULA TERCEIRA - DO PREÇO E CONDIÇÕES DE PAGAMENTO
 
 3.2. Forma de pagamento: ${formaPagamento || 'conforme acordado entre as partes'}.
 
-3.3. ${condicoesPagamento || 'O pagamento será efetuado mediante apresentação de nota fiscal, em até 30 (trinta) dias após a prestação dos serviços.'}</ 3.4. Os valores serão reajustados anualmente pelo IPCA/IBGE ou outro índice que venha a substituí-lo, na data de aniversário do contrato.
+3.3. ${condicoesPagamento || 'O pagamento será efetuado mediante apresentação de nota fiscal, em até 30 (trinta) dias após a prestação dos serviços.'}
 
-3.5. O atraso no pagamento ensejará a incidência de multa de 2% (dois por cento) sobre o valor devido, acrescida de juros de mora de 1% (um por cento) ao mês, calculados pro rata die.
+3.4. Os valores serão reajustados anualmente pelo IPCA/IBGE ou outro índice que venha a substituí-lo, na data de aniversário do contrato.
+
+3.5. INADIMPLÊNCIA E SUSPENSÃO DE SERVIÇOS:
+    a) O atraso no pagamento ensejará a incidência de multa de 2% (dois por cento) sobre o valor devido, acrescida de juros de mora de 1% (um por cento) ao mês, calculados pro rata die;
+    
+    b) Além da multa e juros, a CONTRATADA reserva-se o direito de SUSPENDER a prestação de serviços e o acesso ao Sistema de Relatórios Enterfix (portal digital) até a regularização do débito, sem que isso configure rescisão contratual ou ensejem direito a indenização;
+    
+    c) Inadimplência superior a 30 (trinta) dias corridos: CONTRATADA poderá rescindir o contrato por justa causa (Cláusula 8.2-a), sem prejuízo da cobrança dos valores vencidos e vincendos;
+    
+    d) Durante período de suspensão por inadimplência: Certificados não serão emitidos, calibrações agendadas serão canceladas, e acesso ao histórico digital (QR Codes, relatórios) será bloqueado temporariamente;
+    
+    e) Regularização: Mediante pagamento integral do débito (principal + multa + juros), serviços serão restabelecidos em até 2 (dois) dias úteis.
 `,
 
     /**
@@ -127,8 +142,14 @@ CLÁUSULA SEXTA - DA CONFIDENCIALIDADE E PROTEÇÃO DE DADOS
     a) As partes tratarão dados pessoais apenas para as finalidades previstas neste contrato;
     b) Serão adotadas medidas técnicas e administrativas de segurança da informação;
     c) O titular dos dados pode exercer seus direitos (acesso, correção, eliminação) mediante solicitação formal;
-    d) Eventual vazamento ou incidente de segurança será comunicado em até 72 (setenta e duas) horas;
-    e) Ao término do contrato, os dados pessoais serão eliminados ou devolvidos, exceto quando houver obrigação legal de retenção.
+    d) Eventual vazamento ou incidente de segurança será comunicado em até 72 (setenta e duas) horas (conforme ANPD - Autoridade Nacional de Proteção de Dados);
+    e) Ao término do contrato, os dados pessoais serão eliminados ou devolvidos, exceto quando houver obrigação legal de retenção (certificados de calibração: 10 anos conforme ISO 17025);
+    
+    f) RASTREABILIDADE DE ACEITAÇÃO (Prova de Consentimento LGPD):
+       → O Sistema Enterfix registra automaticamente: Data/hora de aceitação dos termos, endereço IP, User Agent (navegador), timestamp RFC 3161;
+       → Log armazenado no Supabase com retenção de 5 anos (base legal para comprovação de consentimento);
+       → Titular pode solicitar cópia do log de aceitação via portal do cliente;
+       → Em caso de auditoria ANPD ou litígio: Enterfix apresenta evidência digital de que cliente concordou voluntariamente com termos LGPD.
 
 6.4. A violação da confidencialidade sujeitará a parte infratora ao pagamento de indenização por perdas e danos, sem prejuízo de outras sanções legais.
 `,
@@ -145,7 +166,14 @@ CLÁUSULA SÉTIMA - DAS GARANTIAS E RESPONSABILIDADES
     b) Emitir novo certificado corrigido, cancelando o anterior;
     c) Comunicar formalmente todos os clientes que possam ter sido afetados.
 
-7.3. A responsabilidade da CONTRATADA está limitada ao valor dos serviços prestados, exceto em casos de dolo ou culpa grave.
+7.3. LIMITAÇÃO DE RESPONSABILIDADE (Código Civil Art. 944):
+    a) A responsabilidade da CONTRATADA está LIMITADA ao valor dos serviços prestados que geraram o dano, exceto em casos de DOLO (intenção) ou CULPA GRAVE (negligência grosseira);
+    
+    b) EXEMPLO PRÁTICO: Calibração de R$ 500,00 com erro técnico que causa parada de linha de produção → Indenização limitada a R$ 500,00 (valor do serviço), EXCETO se comprovado dolo ou culpa grave da Enterfix;
+    
+    c) PROTEÇÃO CONTRA LUCROS CESSANTES: A CONTRATADA NÃO responde por danos indiretos, lucros cessantes, perdas de produção, danos morais ou qualquer dano que exceda o valor do serviço prestado, salvo se COMPROVADO dolo ou culpa grave;
+    
+    d) Conformidade com CDC: Esta limitação é válida conforme Código de Defesa do Consumidor (Art. 51, I) por não afastar totalmente a responsabilidade (dolo/culpa grave permanecem), apenas limitando quantum indenizatório a valores razoáveis e proporcionais.
 
 7.4. A CONTRATADA não se responsabiliza por:
     a) Danos pré-existentes nos equipamentos recebidos para calibração;

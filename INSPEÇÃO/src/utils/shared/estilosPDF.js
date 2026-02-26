@@ -24,10 +24,10 @@
  */
 export const LOGO_ENTERFIX = {
     path: '/assets/images/LOGO_ENTERFIX_LIGHT.png',
-    largura: 40,        // mm
-    altura: 19.5,       // mm (proporção 2.05:1 = MARCA REGISTRADA)
-    posicaoX: 20,       // Alinhado à margem esquerda
-    posicaoY: 10,       // Topo da página
+    largura: 40, // mm
+    altura: 19.5, // mm (proporção 2.05:1 = MARCA REGISTRADA)
+    posicaoX: 20, // Alinhado à margem esquerda
+    posicaoY: 10, // Topo da página
 };
 
 /**
@@ -38,30 +38,30 @@ export const LOGO_ENTERFIX = {
  */
 export const CORES = {
     // Cores principais da marca
-    primaria: [0, 51, 102],         // Azul escuro Enterfix #003366
-    secundaria: [41, 128, 185],     // Azul claro #2980B9
-    
+    primaria: [0, 51, 102], // Azul escuro Enterfix #003366
+    secundaria: [41, 128, 185], // Azul claro #2980B9
+
     // Cores de texto
-    texto: [0, 0, 0],               // Preto puro #000000
+    texto: [0, 0, 0], // Preto puro #000000
     textoSecundario: [128, 128, 128], // Cinza médio #808080
-    textoClaro: [200, 200, 200],    // Cinza claro #C8C8C8
-    
+    textoClaro: [200, 200, 200], // Cinza claro #C8C8C8
+
     // Cores de status
-    sucesso: [22, 101, 52],         // Verde escuro #166534
-    sucessoClaro: [220, 255, 220],  // Verde claro #DCFFDC
-    alerta: [202, 138, 4],          // Amarelo/laranja #CA8A04
-    alertaClaro: [255, 250, 220],   // Amarelo claro #FFFADC
-    erro: [153, 27, 27],            // Vermelho escuro #991B1B
-    erroClaro: [255, 220, 220],     // Vermelho claro #FFDCDC
-    
+    sucesso: [22, 101, 52], // Verde escuro #166534
+    sucessoClaro: [220, 255, 220], // Verde claro #DCFFDC
+    alerta: [202, 138, 4], // Amarelo/laranja #CA8A04
+    alertaClaro: [255, 250, 220], // Amarelo claro #FFFADC
+    erro: [153, 27, 27], // Vermelho escuro #991B1B
+    erroClaro: [255, 220, 220], // Vermelho claro #FFDCDC
+
     // Cores de fundo
-    fundoBranco: [255, 255, 255],   // Branco puro
-    fundoCinza: [245, 245, 245],    // Cinza muito claro #F5F5F5
-    fundoAzul: [240, 248, 255],     // Azul muito claro #F0F8FF
-    
+    fundoBranco: [255, 255, 255], // Branco puro
+    fundoCinza: [245, 245, 245], // Cinza muito claro #F5F5F5
+    fundoAzul: [240, 248, 255], // Azul muito claro #F0F8FF
+
     // Cores de linhas e bordas
-    linha: [200, 200, 200],         // Cinza para linhas
-    borda: [128, 128, 128],         // Cinza para bordas
+    linha: [200, 200, 200], // Cinza para linhas
+    borda: [128, 128, 128], // Cinza para bordas
 };
 
 /**
@@ -71,20 +71,20 @@ export const CORES = {
  */
 export const TIPOGRAFIA = {
     // Fonte principal (jsPDF suporta: 'helvetica', 'times', 'courier')
-    fontePrincipal: 'helvetica',    // Moderna e legível
-    fonteSecundaria: 'times',       // Para contratos/documentos formais
-    fonteMono: 'courier',           // Para códigos/dados técnicos
-    
+    fontePrincipal: 'helvetica', // Moderna e legível
+    fonteSecundaria: 'times', // Para contratos/documentos formais
+    fonteMono: 'courier', // Para códigos/dados técnicos
+
     // Tamanhos de fonte (em pontos)
     tamanhos: {
-        h1: 18,                     // Título principal
-        h2: 14,                     // Subtítulo
-        h3: 12,                     // Seção
-        corpo: 10,                  // Texto padrão
-        pequeno: 8,                 // Rodapé, observações
-        muitoPequeno: 7,            // Legendas muito pequenas
+        h1: 18, // Título principal
+        h2: 14, // Subtítulo
+        h3: 12, // Seção
+        corpo: 10, // Texto padrão
+        pequeno: 8, // Rodapé, observações
+        muitoPequeno: 7, // Legendas muito pequenas
     },
-    
+
     // Pesos (estilos jsPDF)
     pesos: {
         normal: 'normal',
@@ -102,10 +102,10 @@ export const TIPOGRAFIA = {
 export const LAYOUT = {
     // Dimensões da página A4 (mm)
     pagina: {
-        largura: 210,               // Largura A4
-        altura: 297,                // Altura A4
+        largura: 210, // Largura A4
+        altura: 297, // Altura A4
     },
-    
+
     // Margens padrão (mm)
     margens: {
         esquerda: 20,
@@ -113,21 +113,21 @@ export const LAYOUT = {
         superior: 20,
         inferior: 20,
     },
-    
+
     // Espaçamentos (mm)
     espacamentos: {
-        entreLinhas: 5,             // Espaço entre linhas de texto
-        entreParagrafos: 8,         // Espaço entre parágrafos
-        entreSecoes: 12,            // Espaço entre seções
-        recuo: 10,                  // Recuo de parágrafo
+        entreLinhas: 5, // Espaço entre linhas de texto
+        entreParagrafos: 8, // Espaço entre parágrafos
+        entreSecoes: 12, // Espaço entre seções
+        recuo: 10, // Recuo de parágrafo
     },
-    
+
     // Tamanhos de elementos (mm)
     elementos: {
-        alturaCabecalho: 35,        // Altura reservada para cabeçalho
-        alturaRodape: 25,           // Altura reservada para rodapé
-        espessuraLinha: 0.5,        // Espessura padrão de linhas
-        espessuraLinhaGrossa: 1.0,  // Espessura de linhas destacadas
+        alturaCabecalho: 35, // Altura reservada para cabeçalho
+        alturaRodape: 25, // Altura reservada para rodapé
+        espessuraLinha: 0.5, // Espessura padrão de linhas
+        espessuraLinhaGrossa: 1.0, // Espessura de linhas destacadas
     },
 };
 
@@ -139,14 +139,14 @@ export const LAYOUT = {
 export const ESTILOS_TABELA = {
     // Estilo do cabeçalho da tabela
     cabecalho: {
-        fillColor: CORES.primaria,          // Fundo azul Enterfix
-        textColor: [255, 255, 255],         // Texto branco
+        fillColor: CORES.primaria, // Fundo azul Enterfix
+        textColor: [255, 255, 255], // Texto branco
         fontStyle: 'bold',
         fontSize: TIPOGRAFIA.tamanhos.corpo,
-        halign: 'center',                   // Alinhamento horizontal
-        valign: 'middle',                   // Alinhamento vertical
+        halign: 'center', // Alinhamento horizontal
+        valign: 'middle', // Alinhamento vertical
     },
-    
+
     // Estilo do corpo da tabela
     corpo: {
         fontSize: TIPOGRAFIA.tamanhos.pequeno,
@@ -154,12 +154,12 @@ export const ESTILOS_TABELA = {
         lineColor: CORES.linha,
         lineWidth: 0.1,
     },
-    
+
     // Estilo alternado (zebrado)
     alternado: {
         fillColor: CORES.fundoCinza,
     },
-    
+
     // Estilo para células de destaque
     destaque: {
         fillColor: CORES.fundoAzul,
@@ -186,11 +186,11 @@ export function getLarguraUtil() {
  * @returns {number} Altura em mm
  */
 export function getAlturaUtil() {
-    return LAYOUT.pagina.altura 
-        - LAYOUT.margens.superior 
-        - LAYOUT.margens.inferior
-        - LAYOUT.elementos.alturaCabecalho
-        - LAYOUT.elementos.alturaRodape;
+    return LAYOUT.pagina.altura -
+        LAYOUT.margens.superior -
+        LAYOUT.margens.inferior -
+        LAYOUT.elementos.alturaCabecalho -
+        LAYOUT.elementos.alturaRodape;
 }
 
 /**
@@ -247,7 +247,7 @@ export function temEspacoNaPagina(yAtual, espacoNecessario) {
  * Preset para CONTRATOS (formal, elegante)
  */
 export const PRESET_CONTRATO = {
-    fonte: TIPOGRAFIA.fonteSecundaria,  // Times (mais formal)
+    fonte: TIPOGRAFIA.fonteSecundaria, // Times (mais formal)
     corPrimaria: CORES.primaria,
     corTexto: CORES.texto,
     margens: LAYOUT.margens,
@@ -258,7 +258,7 @@ export const PRESET_CONTRATO = {
  * Preset para RELATÓRIOS TÉCNICOS (moderno, legível)
  */
 export const PRESET_RELATORIO = {
-    fonte: TIPOGRAFIA.fontePrincipal,   // Helvetica (mais moderna)
+    fonte: TIPOGRAFIA.fontePrincipal, // Helvetica (mais moderna)
     corPrimaria: CORES.primaria,
     corDestaque: CORES.secundaria,
     corTexto: CORES.texto,
@@ -271,9 +271,13 @@ export const PRESET_RELATORIO = {
  */
 export const PRESET_CERTIFICADO = {
     fonte: TIPOGRAFIA.fontePrincipal,
-    corPrimaria: CORES.secundaria,      // Azul claro mais destacado
+    corPrimaria: CORES.secundaria, // Azul claro mais destacado
     corTexto: CORES.texto,
-    margens: { ...LAYOUT.margens, esquerda: 25, direita: 25 }, // Margens maiores
+    margens: {
+        ...LAYOUT.margens,
+        esquerda: 25,
+        direita: 25
+    }, // Margens maiores
     espacamento: LAYOUT.espacamentos.entreParagrafos,
 };
 
@@ -293,23 +297,23 @@ export const ESTILOS = {
     tamanhoSubtitulo: TIPOGRAFIA.tamanhos.h2,
     tamanhoTexto: TIPOGRAFIA.tamanhos.corpo,
     tamanhoRodape: TIPOGRAFIA.tamanhos.pequeno,
-    
+
     // Margens
     margemEsquerda: LAYOUT.margens.esquerda,
     margemDireita: LAYOUT.margens.direita,
     margemSuperior: LAYOUT.margens.superior,
     margemInferior: LAYOUT.margens.inferior,
     espacamentoLinha: LAYOUT.espacamentos.entreLinhas,
-    
+
     // Dimensões
     larguraPagina: LAYOUT.pagina.largura,
     alturaPagina: LAYOUT.pagina.altura,
-    
+
     // Cores
     corPrimaria: CORES.primaria,
     corSecundaria: CORES.textoSecundario,
     corTexto: CORES.texto,
-    
+
     // Logo
     logo: LOGO_ENTERFIX,
 };

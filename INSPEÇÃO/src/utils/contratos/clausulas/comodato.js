@@ -17,13 +17,16 @@ CLÁUSULA ESPECÍFICA 1 - DO OBJETO DO COMODATO
     a) Medições e ensaios metrológicos;
     b) Calibrações internas;
     c) Controle de qualidade de processos produtivos;
-    d) Atividades correlatas previamente autorizadas.
+    d) Atividades correlatas previamente autorizadas;
+    e) **Equipamento de backup (reserva técnica)** durante período de manutenção do ativo fixo da COMODATÁRIA nas dependências da COMODANTE.
 
 1.3. A COMODATÁRIA NÃO poderá:
     a) Ceder, transferir, emprestar ou sublocar os equipamentos a terceiros;
     b) Alterar as características ou configurações originais;
     c) Utilizar os equipamentos para finalidade diversa da acordada;
-    d) Transportar os equipamentos para fora das instalações sem autorização prévia.
+    d) Transportar os equipamentos para fora das instalações sem autorização prévia;
+    e) **Realizar qualquer tipo de engenharia reversa, desmontagem técnica ou cópia de componentes e softwares integrados ao equipamento**;
+    f) Abrir lacres de garantia, acessar componentes internos ou firmware sem autorização expressa por escrito da COMODANTE.
 
 1.4. Os equipamentos permanecem como propriedade exclusiva da COMODANTE, devendo ser devolvidos ao término do contrato.
 `,
@@ -38,7 +41,7 @@ CLÁUSULA ESPECÍFICA 2 - DO PRAZO E RENOVAÇÃO
 2.2. O contrato poderá ser renovado automaticamente por períodos sucessivos de 12 (doze) meses, salvo manifestação contrária de qualquer das partes com 60 (sessenta) dias de antecedência.
 
 2.3. A COMODANTE reserva-se o direito de:
-    a) Solicitar a devolução antecipada mediante aviso prévio de 30 (trinta) dias;
+    a) **Solicitar a devolução antecipada por conveniência ou necessidade da COMODANTE (inclusive para venda, locação a terceiros ou projeto prioritário), mediante aviso prévio de 30 (trinta) dias, independentemente de justificativa técnica**;
     b) Substituir equipamentos por modelos equivalentes ou superiores;
     c) Realizar visitas técnicas para inspeção do estado dos equipamentos.
 
@@ -65,7 +68,12 @@ CLÁUSULA ESPECÍFICA 3 - DAS RESPONSABILIDADES DA COMODATÁRIA
     d) Seguro dos equipamentos;
     e) Transporte e logística.
 
-3.3. Em caso de dano ou perda, a COMODATÁRIA ressarcirá a COMODANTE pelo valor de mercado atual do equipamento.
+3.3. Em caso de dano ou perda:
+    a) A COMODATÁRIA ressarcirá a COMODANTE pelo **Valor de Reposição Novo** indicado no Anexo I (lista de equipamentos);
+    b) Na ausência de valor pré-acordado no Anexo I: valor de mercado de um equipamento equivalente **zero quilômetro** (novo);
+    c) **NÃO será aplicada depreciação** sobre o valor de reposição, pois o comodato pressupõe devolução em perfeito estado;
+    d) Ressarcimento deve ser efetuado em até 30 (trinta) dias após notificação formal;
+    e) A COMODANTE pode exigir garantia (caucão ou seguro-garantia) para equipamentos de valor superior a R$ 100.000,00.
 `,
 
     /**
@@ -77,7 +85,8 @@ CLÁUSULA ESPECÍFICA 4 - DA MANUTENÇÃO E CALIBRAÇÃO
     a) Realizar manutenções preventivas conforme recomendações do fabricante;
     b) Calibrar os equipamentos anualmente ou conforme periodicidade especificada;
     c) Manter registro atualizado de manutenções e calibrações;
-    d) Utilizar apenas laboratórios acreditados pela RBC para calibração.
+    d) **Utilizar apenas laboratórios acreditados pela RBC para calibração, sendo OBRIGATÓRIA a aprovação prévia da COMODANTE (Enterfix) sobre o laboratório escolhido, visando garantir a integridade técnica do ativo**;
+    e) Enviar cópia de todos os certificados de calibração à COMODANTE em até 5 (cinco) dias após emissão.
 
 4.2. A COMODANTE poderá:
     a) Realizar as calibrações diretamente (com custo para COMODATÁRIA);
@@ -194,5 +203,69 @@ CLÁUSULA ESPECÍFICA 9 - DAS DISPOSIÇÕES ESPECIAIS
 9.4. Equipamentos obsoletos ou em desuso poderão ser substituídos pela COMODANTE por modelos superiores, sem ônus adicional.
 
 9.5. A COMODANTE reserva-se o direito de promover a marca da empresa em visitas técnicas e materiais promocionais, respeitando segredos da COMODATÁRIA.
+`,
+
+    /**
+     * Regras de Ouro para Proteção do Ativo
+     */
+    goldRules: () => `
+CLÁUSULA ESPECÍFICA 10 - DAS REGRAS DE OURO DE PROTEÇÃO AO ATIVO
+10.1. **Lacres e Componentes Internos**:
+    a) É VEDADA a abertura de lacres de garantia ou acesso a componentes internos sem autorização expressa por escrito da ENTERFIX;
+    b) Qualquer violação de lacre será considerada quebra contratual grave;
+    c) Custos de reparo ou substituição decorrentes de abertura não autorizada: 100% da COMODATÁRIA;
+    d) Multa adicional de 30% do valor do equipamento por violação de lacre.
+
+10.2. **Fiel Depositário (Código Penal, Art. 168)**:
+    a) A COMODATÁRIA é **FIEL DEPOSITÁRIA** do bem, respondendo civil e criminalmente por qualquer embaraço à sua retomada;
+    b) A não devolução após notificação extrajudicial caracteriza:
+       → Apropriação indébita (se superior a 30 dias sem justificativa);
+       → Crime de Depositário Infiel (Código Penal, Art. 168);
+       → Registro em Cartório de Títulos e Documentos para efeitos legais.
+    
+    c) A COMODANTE poderá solicitar busca e apreensão liminar em caso de recusa de devolução;
+    d) A COMODATÁRIA autoriza expressamente a entrada da COMODANTE em suas instalações para retomada do bem em caso de urgência (sempre acompanhada de oficial de justiça ou autoridade policial).
+
+10.3. **Falência, Recuperação Judicial ou Extinção da COMODATÁRIA**:
+    a) Em caso de falência, recuperação judicial, extinção, liquidação ou dissolução da COMODATÁRIA:
+       → Os bens em comodato deverão ser IMEDIATAMENTE segregados e devolvidos;
+       → **NÃO compõem a massa falida** (Lei 11.101/2005, Art. 49, § 3º);
+       → Administrador judicial ou síndico será notificado para devolução em até 5 (cinco) dias;
+       → A retenção indevida gera multa diária de 2% do valor do equipamento.
+    
+    b) A COMODATÁRIA compromete-se a comunicar à COMODANTE, em até 24 (vinte e quatro) horas:
+       → Pedido de recuperação judicial ou extrajudicial;
+       → Penhora, arrest ou qualquer constrição judicial sobre o patrimônio;
+       → Mudança de controle acionário ou fusão/cisão da empresa.
+
+10.4. **Propriedade Intelectual e Engenharia Reversa**:
+    a) Equipamentos podem conter tecnologia proprietária, software embarcado e design mecânico exclusivo da ENTERFIX;
+    b) **PROIBIDO**:
+       → Desmontar, escanear (3D scanning) ou fotografar componentes internos;
+       → Extrair firmware, software ou parâmetros de programação;
+       → Copiar desenhos técnicos, códigos-fonte ou algoritmos;
+       → Utilizar equipamento como referência para fabricação de similar.
+    
+    c) Violação de propriedade intelectual:
+       → Multa de 200% do valor do equipamento;
+       → Ação de indenização por danos morais e materiais;
+       → Comunicação ao INPI e órgãos de defesa da propriedade industrial.
+
+10.5. **Anexo I - Lista de Equipamentos (campos obrigatórios)**:
+    a) Descrição completa: marca, modelo, número de série;
+    b) **Valor de Reposição Novo (acordado entre as partes)**;
+    c) Estado de conservação no momento da entrega (vistoria fotográfica);
+    d) Acessórios inclusos (cabos, software, manuais, maletas);
+    e) Número de lacres de garantia aplicados;
+    f) Data de entrega e assinatura de ambas as partes (termo de recebimento).
+
+10.6. **Cláusula Penal (Código Civil, Art. 408 a 416)**:
+    a) O descumprimento de qualquer obrigação deste contrato enseja cláusula penal de **20% do valor total dos equipamentos em comodato**;
+    b) A cláusula penal é CUMULATIVA com perdas e danos comprovados;
+    c) Em caso de dolo ou culpa grave: cláusula penal elevada a 50%.
+
+10.7. **Jurisdição e Competência**:
+    a) Fica eleito o foro da comarca de São Bernardo do Campo/SP para dirimir questões deste contrato;
+    b) A COMODATÁRIA renuncia expressamente a qualquer outro foro, por mais privilegiado que seja.
 `,
 };

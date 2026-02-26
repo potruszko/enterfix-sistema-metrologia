@@ -129,10 +129,127 @@ CLÁUSULA ESPECÍFICA 4 - DA DIVULGAÇÃO A TERCEIROS
        - Obter ordem de confidencialidade (protective order) sempre que viável;
        - Divulgar apenas o estritamente necessário para cumprir a obrigação legal.
 
-4.4. Subcontratados e parceiros:
-    a) Divulgação permitida apenas com aprovação prévia;
-    b) Contrato de subcontratação deve incluir cláusulas de confidencialidade back-to-back;
-    c) Parte receptora permanece integralmente responsável.
+4.4. TERCEIROS FABRICANTES (Usinagens, Tratamentos, Caldeirarias):
+    ⚠️ CENÁRIO CRÍTICO: ENTERFIX contrata terceiro para executar projeto confidencial de Cliente Final.
+    
+    a) NDA BACK-TO-BACK OBRIGATÓRIO:
+       - Terceiro fabricante DEVE assinar NDA com regras equivalentes ANTES de receber qualquer arquivo técnico;
+       - Modelo fornecido pela ENTERFIX (disponível no Sistema Enterfix - Módulo Fornecedores);
+       - Sistema BLOQUEIA envio de arquivos STEP/DXF sem NDA assinado registrado;
+       - Prazo: NDA assinado em até 48h ou pedido cancelado.
+    
+    b) RESPONSABILIDADE DUAL (Proteção da ENTERFIX):
+       - PERANTE O CLIENTE FINAL: ENTERFIX é integralmente responsável por vazamento (Art. 932, III do CC);
+       - DIREITO DE REGRESSO: ENTERFIX pode processar terceiro fabricante por TODOS os danos pagos ao cliente final + custos legais + multa contratual;
+       - Exemplo prático: Cliente processa Enterfix por R$ 200.000 → Enterfix paga → Enterfix processa terceiro por R$ 200.000 + multa NDA R$ 50.000 = R$ 250.000.
+    
+    c) RASTREABILIDADE DE ARQUIVOS TÉCNICOS:
+       - Arquivos STEP/IGES/DXF enviados COM marca d'água digital (metadata: ID pedido, data, destinatário);
+       - E-mail de envio SEMPRE menciona: "Arquivo enviado sob condições NDA nº [X] assinado em [DATA]";
+       - Portal Enterfix registra: Data/hora download, IP, nome arquivo, hash SHA-256;
+       - Log mantido 10 anos (prova em litígio).
+    
+    d) PROIBIÇÕES ESPECÍFICAS PARA TERCEIRO FABRICANTE:
+       - VEDADO subcontratar sem autorização escrita prévia da ENTERFIX;
+       - VEDADO usar máquinas de medir (MMC, escâner 3D) para mapear geometria além do necessário para inspeção de qualidade;
+       - VEDADO manter arquivo técnico após conclusão do trabalho (prazo destruição: 30 dias após entrega ou cancelamento);
+       - VEDADO fabricar peça similar para outro cliente (mesmo que geometria seja ligeiramente diferente).
+    
+    e) AUDITORIA DE SEGURANÇA:
+       - ENTERFIX pode visitar instalações do terceiro fabricante com aviso prévio de 5 dias úteis;
+       - Verificação: Armazenamento de arquivos, controle de acesso, cópias não autorizadas, treinamento de equipe;
+       - Custo auditoria: ENTERFIX (auditoria preventiva) ou TERCEIRO (se motivada por suspeita de violação).
+    
+    f) CERTIFICADO DE DESTRUIÇÃO:
+       - Após conclusão do trabalho, terceiro emite Certificado de Destruição em até 15 dias;
+       - Conteúdo: Lista arquivos recebidos, data destruição, método (exclusão segura com 7 passagens DOD 5220.22-M), declaração inexistência de cópias;
+       - Ausência do certificado = presunção de uso indevido (inversão ônus da prova).
+    
+    g) MULTA ESPECÍFICA PARA TERCEIROS FABRICANTES:
+       - Vazamento de arquivo técnico: R$ 50.000,00 (cinquenta mil reais) OU 100% do valor do pedido (o que for MAIOR);
+       - Fabricação não autorizada para terceiro: R$ 100.000,00 (cem mil reais) OU 200% do lucro obtido (o que for MAIOR);
+       - Recusa de auditoria ou Certificado de Destruição: R$ 10.000,00 + R$ 500,00/dia de atraso.
+    
+    h) INTEGRAÇÃO COM SISTEMA ENTERFIX:
+       - Módulo "Fornecedores" exibe status NDA: ✅ Assinado | ⚠️ Vencido | ❌ Não assinado;
+       - Botão "Enviar Arquivo Técnico" só ativa se NDA válido (verde);
+       - Ao clicar, sistema gera e-mail automático com texto: "Arquivo [NOME] enviado sob NDA nº [X]. Destruição obrigatória em 30 dias após conclusão trabalho. Violação sujeita a multa R$ 50.000 ou 100% pedido.";
+       - Dashboard: Relatório de arquivos enviados, status Certificados de Destruição (pendente/recebido), alertas vencimento.
+    
+    i) EXEMPLO PRÁTICO (Caso Real):
+       📧 E-mail da Enterfix para Usinagem XYZ Ltda:
+       "Assunto: Envio de arquivo STEP - Pedido #2347 - NDA vigente
+       
+       Prezados,
+       
+       Segue arquivo STEP 'flange_medicao_cliente_ABC.step' para usinagem conforme Pedido #2347.
+       
+       ⚠️ INFORMAÇÃO CONFIDENCIAL protegida por NDA assinado em 15/01/2026 (válido até 15/01/2031).
+       
+       Obrigações:
+       - Uso EXCLUSIVO para fabricação Pedido #2347;
+       - PROIBIDO subcontratar, copiar ou usar para outros clientes;
+       - DESTRUIÇÃO OBRIGATÓRIA em até 30 dias após entrega da peça (prazo: até 15/03/2026);
+       - Certificado de Destruição deve ser enviado para contratos@enterfix.com.br;
+       - Violação sujeita a multa de R$ 50.000,00 + indenização por danos comprovados.
+       
+       Arquivo rastreado sob ID: STEP-2347-20260215-XYZLTDA (hash SHA-256: a3f5...).
+       
+       Att,
+       Sistema Enterfix - Gestão de Fornecedores"
+    
+    j) CLÁUSULA DE SOBREVIVÊNCIA:
+       - Obrigações desta Cláusula 4.4 sobrevivem INDEFINIDAMENTE (enquanto informação mantiver caráter confidencial);
+       - Término de relação comercial NÃO encerra obrigação de sigilo do terceiro fabricante;
+       - Segredos industriais (geometrias, tolerâncias, materiais específicos) protegidos PERPETUAMENTE.
+
+4.5. RASTREABILIDADE DE DIVULGAÇÃO A TERCEIROS (Integração Digital):
+    a) REGISTRO AUTOMÁTICO NO SISTEMA ENTERFIX:
+       - Toda divulgação de arquivo técnico a terceiro gera log automático em Supabase:
+         • Data/hora envio (timestamp RFC 3161);
+         • Destinatário (CNPJ, razão social, e-mail, responsável técnico);
+         • Arquivo(s) enviado(s) (nome, tamanho, hash SHA-256);
+         • NDA vinculado (número, data assinatura, data vencimento);
+         • Usuário Enterfix que autorizou envio;
+         • IP origem, User Agent.
+       - Retenção: 10 anos (ISO/IEC 17025 + Código Civil Art. 205).
+    
+    b) MARCA D'ÁGUA DIGITAL EM ARQUIVOS CAD:
+       - Arquivos STEP/IGES/DXF/DWG incluem metadata XML invisível:
+         <?xml version="1.0"?>
+         <EnterFixConfidential>
+           <PedidoID>2347</PedidoID>
+           <ClienteFinal>ABC Indústrias Ltda</ClienteFinal>
+           <DestinatarioAutorizado>Usinagem XYZ Ltda - CNPJ 12.345.678/0001-99</DestinatarioAutorizado>
+           <DataEnvio>2026-02-15T14:32:11Z</DataEnvio>
+           <ValidadeUso>2026-03-15</ValidadeUso>
+           <HashRastreamento>a3f5d8c2...</HashRastreamento>
+           <Aviso>USO NÃO AUTORIZADO SUJEITO A MULTA R$ 50.000 + INDENIZAÇÃO</Aviso>
+         </EnterFixConfidential>
+       - Metadata preservada mesmo após conversão de formato (ferramenta proprietária Enterfix);
+       - Em caso de vazamento: Perícia técnica extrai metadata = PROVA IRREFUTÁVEL da origem.
+    
+    c) QR CODE EM PEÇAS FÍSICAS (quando aplicável):
+       - Peças fabricadas por terceiros podem receber QR Code gravado a laser (se especificação permitir);
+       - QR Code leva a portal Enterfix (público) mostrando:
+         • "Peça fabricada sob licença Enterfix - Projeto confidencial";
+         • Data fabricação, lote, certificado material;
+         • ⚠️ NÃO exibe geometria, cliente final ou tolerâncias (proteção IP);
+       - Objetivo: Se peça aparecer no mercado, QR Code comprova que veio de terceiro autorizado (rastreia cadeia).
+    
+    d) ALERTAS AUTOMÁTICOS DE VENCIMENTO:
+       - Sistema Enterfix envia e-mail automático:
+         • 15 dias antes prazo destruição: "Lembrete: Arquivo STEP #2347 deve ser destruído em 15 dias";
+         • No dia do vencimento: "PRAZO CRÍTICO: Arquivo deve ser destruído HOJE. Envie Certificado";
+         • 7 dias após vencimento: "ATRASO: Certificado de Destruição não recebido. Multa R$ 500/dia iniciada";
+       - Cópia automaticamente para Jurídico Enterfix (construção de prova em caso de litígio).
+    
+    e) DASHBOARD DE CONFORMIDADE:
+       - Gestão de Fornecedores > Aba "Sigilo e Confidencialidade":
+         • Gráfico: NDAs por Status (✅ Vigente | ⚠️ Vence 30 dias | ❌ Vencido);
+         • Tabela: Arquivos enviados aguardando Certificado de Destruição (ordenado por prazo);
+         • KPI: Conformidade de Destruição (meta: 100% Certificados recebidos no prazo);
+         • Alerta vermelho: Fornecedor com >3 Certificados atrasados = BLOQUEIO automático para novos pedidos.
 `,
 
     /**
@@ -226,6 +343,54 @@ CLÁUSULA ESPECÍFICA 8 - DAS PENALIDADES E INDENIZAÇÕES
        - Indenização por perdas e danos comprovados;
        - Indenização por danos morais (se aplicável);
        - Lucros cessantes decorrentes da violação.
+    
+    d) MULTAS ESPECÍFICAS POR TIPO DE VIOLAÇÃO:
+       
+       📌 TERCEIRO FABRICANTE (Usinagem, Tratamento, Caldeiraria):
+          → Vazamento de arquivo técnico (STEP/DXF): R$ 50.000 OU 100% valor do pedido (o que for MAIOR);
+          → Fabricação não autorizada para outro cliente: R$ 100.000 OU 200% do lucro obtido (o que for MAIOR);
+          → Recusa de Certificado de Destruição: R$ 10.000 + R$ 500/dia de atraso;
+          → Subcontratação não autorizada: R$ 30.000 + responsabilidade solidária por danos;
+          → Engenharia reversa além do necessário: R$ 80.000 + sequestro de arquivos mapeados.
+       
+       📌 CLIENTE FINAL (que contratou serviço da Enterfix):
+          → Uso de projeto para fabricação própria sem licença: 200% do valor da Engenharia Reversa;
+          → Repasse de arquivo a terceiro não autorizado: R$ 100.000 + licença exclusiva cancelada;
+          → Replicação para outras unidades/filiais: R$ 50.000 por unidade não licenciada.
+       
+       📌 PARCEIRO COMERCIAL (Representante, Consultor):
+          → Divulgação de lista de clientes: R$ 80.000 + perda de comissões futuras;
+          → Vazamento de estratégia comercial/preços: R$ 50.000;
+          → Concorrência desleal usando informações: R$ 200.000 + lucros cessantes.
+       
+       📌 EX-COLABORADOR:
+          → Uso de informações em nova empresa: R$ 100.000 + lucros cessantes + medida cautelar;
+          → Vazamento de segredo industrial: Crime (Lei 9.279/96 Art. 195) + indenização ilimitada.
+       
+       📋 EXEMPLO PRÁTICO (Caso Terceiro Fabricante):
+       Situação: Usinagem XYZ recebeu arquivo STEP de flange de medição (Pedido #2347, valor R$ 8.500).
+       XYZ fabricou peça idêntica para Concorrente ABC sem autorização (lucro: R$ 12.000).
+       
+       Cálculo da Multa:
+       • Vazamento de arquivo:
+         - Opção 1: R$ 50.000 (multa base)
+         - Opção 2: 100% do pedido = R$ 8.500
+         - Regra: O QUE FOR MAIOR → R$ 50.000 ✓
+       
+       • Fabricação não autorizada:
+         - Opção 1: R$ 100.000 (multa base)
+         - Opção 2: 200% do lucro = R$ 12.000 × 2 = R$ 24.000
+         - Regra: O QUE FOR MAIOR → R$ 100.000 ✓
+       
+       MULTA TOTAL = R$ 50.000 (vazamento) + R$ 100.000 (fabricação) = R$ 150.000
+       
+       + Indenização para Cliente Final ABC Indústrias (se processou Enterfix): valor integral pago pela Enterfix
+       + Custos legais (honorários advocatícios: 20% sobre condenação)
+       + Lucros cessantes (perda de vantagem competitiva da Enterfix no mercado)
+       
+       💡 EFEITO DISSUASÓRIO: Multa R$ 150.000 >> Lucro R$ 12.000 → Violação NÃO COMPENSA financeiramente.
+       
+       🎯 ESTRATÉGIA ENTERFIX: Multa alta = barreira econômica contra vazamento (terceiro pensa 10x antes de arriscar).
 
 8.2. Cálculo de danos:
     a) Danos materiais: Custos de desenvolvimento da informação + prejuízos decorrentes da divulgação;

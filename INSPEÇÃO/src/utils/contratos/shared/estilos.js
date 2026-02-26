@@ -15,7 +15,7 @@ export {
     TIPOGRAFIA,
     LAYOUT,
     ESTILOS_TABELA,
-    
+
     // Funções utilitárias
     getLarguraUtil,
     getAlturaUtil,
@@ -24,15 +24,19 @@ export {
     getMargemDireita,
     getLimiteInferior,
     temEspacoNaPagina,
-    
+
     // Presets
     PRESET_CONTRATO,
     PRESET_RELATORIO,
     PRESET_CERTIFICADO,
-    
+
     // Compatibilidade legada
     ESTILOS,
-} from '../../shared/estilosPDF.js';
+}
+from '../../shared/estilosPDF.js';
 
 // Alias para compatibilidade
-export { LOGO_ENTERFIX as logo } from '../../shared/estilosPDF.js';
+export {
+    LOGO_ENTERFIX as logo
+}
+from '../../shared/estilosPDF.js';

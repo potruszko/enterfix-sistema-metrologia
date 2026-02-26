@@ -16,25 +16,25 @@ import 'jspdf-autotable';
 import {
     // Logo da marca
     LOGO_ENTERFIX,
-    
+
     // Paleta de cores
     CORES,
-    
+
     // Tipografia
     TIPOGRAFIA,
-    
+
     // Layout e espaçamentos
     LAYOUT,
-    
+
     // Estilos de tabela
     ESTILOS_TABELA,
-    
+
     // Funções utilitárias
     getLarguraUtil,
     getCentro,
     getLimiteInferior,
     temEspacoNaPagina,
-    
+
     // Presets prontos
     PRESET_CONTRATO,
     PRESET_RELATORIO,
@@ -67,7 +67,9 @@ export function gerarRelatorioSimples(dados) {
     doc.setFont(PRESET_RELATORIO.fonte, TIPOGRAFIA.pesos.negrito);
     doc.setFontSize(TIPOGRAFIA.tamanhos.h1);
     doc.setTextColor(...CORES.primaria);
-    doc.text('RELATÓRIO TÉCNICO', getCentro(), y, { align: 'center' });
+    doc.text('RELATÓRIO TÉCNICO', getCentro(), y, {
+        align: 'center'
+    });
 
     // ─────────────────────────────────────────────────────────────────
     // LINHA SEPARADORA
@@ -86,20 +88,20 @@ export function gerarRelatorioSimples(dados) {
     // CONTEÚDO
     // ─────────────────────────────────────────────────────────────────
     y += LAYOUT.espacamentos.entreSecoes;
-    
+
     // Título de seção
     doc.setFont(TIPOGRAFIA.fontePrincipal, TIPOGRAFIA.pesos.negrito);
     doc.setFontSize(TIPOGRAFIA.tamanhos.h2);
     doc.setTextColor(...CORES.secundaria);
     doc.text('1. Identificação', LAYOUT.margens.esquerda, y);
-    
+
     y += LAYOUT.espacamentos.entreParagrafos;
 
     // Texto normal
     doc.setFont(TIPOGRAFIA.fontePrincipal, TIPOGRAFIA.pesos.normal);
     doc.setFontSize(TIPOGRAFIA.tamanhos.corpo);
     doc.setTextColor(...CORES.texto);
-    
+
     const texto = `Cliente: ${dados.cliente}\nEquipamento: ${dados.equipamento}\nData: ${dados.data}`;
     const linhas = doc.splitTextToSize(texto, getLarguraUtil());
     doc.text(linhas, LAYOUT.margens.esquerda, y);
@@ -109,10 +111,12 @@ export function gerarRelatorioSimples(dados) {
     // TABELA com estilos padrão Enterfix
     // ─────────────────────────────────────────────────────────────────
     y += LAYOUT.espacamentos.entreSecoes;
-    
+
     doc.autoTable({
         startY: y,
-        head: [['Item', 'Descrição', 'Status']],
+        head: [
+            ['Item', 'Descrição', 'Status']
+        ],
         body: [
             ['1', 'Calibração realizada', 'APROVADO'],
             ['2', 'Ensaio de conformidade', 'APROVADO'],
@@ -139,7 +143,7 @@ export function gerarRelatorioSimples(dados) {
     // RODAPÉ
     // ─────────────────────────────────────────────────────────────────
     const yRodape = LAYOUT.pagina.altura - LAYOUT.margens.inferior - 10;
-    
+
     // Linha separadora
     doc.setDrawColor(...CORES.linha);
     doc.setLineWidth(LAYOUT.elementos.espessuraLinha);
@@ -149,15 +153,16 @@ export function gerarRelatorioSimples(dados) {
         LAYOUT.pagina.largura - LAYOUT.margens.direita,
         yRodape - 5
     );
-    
+
     // Texto do rodapé (cores Enterfix)
     doc.setFontSize(TIPOGRAFIA.tamanhos.pequeno);
     doc.setTextColor(...CORES.textoSecundario);
     doc.text(
         'Enterfix Metrologia - www.enterfix.com.br - Tel: (11) 4942-2222',
         getCentro(),
-        yRodape,
-        { align: 'center' }
+        yRodape, {
+            align: 'center'
+        }
     );
 
     return doc;
@@ -170,7 +175,7 @@ export function gerarRelatorioSimples(dados) {
  */
 export function gerarCertificadoCalibracao(dados) {
     const doc = new jsPDF();
-    
+
     // Usar preset de certificado (margens maiores)
     let y = PRESET_CERTIFICADO.margens.superior + 20;
 
@@ -202,18 +207,22 @@ export function gerarCertificadoCalibracao(dados) {
     doc.setFont(PRESET_CERTIFICADO.fonte, TIPOGRAFIA.pesos.negrito);
     doc.setFontSize(20);
     doc.setTextColor(...CORES.secundaria);
-    doc.text('CERTIFICADO DE CALIBRAÇÃO', getCentro(), y, { align: 'center' });
+    doc.text('CERTIFICADO DE CALIBRAÇÃO', getCentro(), y, {
+        align: 'center'
+    });
 
     // Número do certificado
     y += 10;
     doc.setFontSize(TIPOGRAFIA.tamanhos.h3);
     doc.setTextColor(...CORES.texto);
-    doc.text(`Nº ${dados.numeroCertificado}`, getCentro(), y, { align: 'center' });
+    doc.text(`Nº ${dados.numeroCertificado}`, getCentro(), y, {
+        align: 'center'
+    });
 
     // ─────────────────────────────────────────────────────────────────
     // Resto do certificado...
     // ─────────────────────────────────────────────────────────────────
-    
+
     return doc;
 }
 
@@ -242,11 +251,13 @@ export function gerarContratoExemplo(dados) {
     doc.setFont(PRESET_CONTRATO.fonte, TIPOGRAFIA.pesos.negrito);
     doc.setFontSize(TIPOGRAFIA.tamanhos.h1);
     doc.setTextColor(...PRESET_CONTRATO.corPrimaria);
-    doc.text('CONTRATO DE PRESTAÇÃO DE SERVIÇOS', getCentro(), y, { align: 'center' });
+    doc.text('CONTRATO DE PRESTAÇÃO DE SERVIÇOS', getCentro(), y, {
+        align: 'center'
+    });
 
     // Conteúdo formal...
     // (resto do contrato)
-    
+
     return doc;
 }
 
@@ -257,10 +268,26 @@ export function gerarContratoExemplo(dados) {
  */
 function adicionarCaixaDestaque(doc, texto, y, tipo = 'info') {
     const cores = {
-        info: { fundo: CORES.fundoAzul, borda: CORES.secundaria, texto: CORES.primaria },
-        sucesso: { fundo: CORES.sucessoClaro, borda: CORES.sucesso, texto: CORES.sucesso },
-        alerta: { fundo: CORES.alertaClaro, borda: CORES.alerta, texto: CORES.alerta },
-        erro: { fundo: CORES.erroClaro, borda: CORES.erro, texto: CORES.erro },
+        info: {
+            fundo: CORES.fundoAzul,
+            borda: CORES.secundaria,
+            texto: CORES.primaria
+        },
+        sucesso: {
+            fundo: CORES.sucessoClaro,
+            borda: CORES.sucesso,
+            texto: CORES.sucesso
+        },
+        alerta: {
+            fundo: CORES.alertaClaro,
+            borda: CORES.alerta,
+            texto: CORES.alerta
+        },
+        erro: {
+            fundo: CORES.erroClaro,
+            borda: CORES.erro,
+            texto: CORES.erro
+        },
     };
 
     const cor = cores[tipo];

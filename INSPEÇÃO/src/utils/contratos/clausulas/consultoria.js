@@ -95,13 +95,15 @@ CLÁUSULA ESPECÍFICA 3 - DAS OBRIGAÇÕES DA CONSULTORA
     b) Planilhas de cálculo de incerteza;
     c) Checklists de auditoria;
     d) Material didático para treinamentos;
-    e) Acesso a biblioteca técnica de normas (quando aplicável).
+    e) Acesso a biblioteca técnica de normas (quando aplicável);
+    f) Acesso temporário ao Sistema de Gestão de Relatórios Enterfix durante o período de implementação para centralização de dados metrológicos.
 
 3.3. A Consultora NÃO se responsabiliza por:
     a) Aprovação em auditorias externas de terceiros;
     b) Implementação executada incorretamente pela CONTRATANTE;
     c) Mudanças normativas posteriores à conclusão do projeto;
-    d) Resultados dependentes exclusivamente da atuação da CONTRATANTE.
+    d) Resultados dependentes exclusivamente da atuação da CONTRATANTE;
+    e) A CONTRATADA não garante o êxito em processos de acreditação ou certificação, uma vez que tais resultados dependem de variáveis fora do controle da Consultora, como a cultura organizacional, investimentos em infraestrutura pelo cliente e a subjetividade do auditor externo. A consultoria caracteriza-se como obrigação de meio, e não de resultado.
 `,
 
     /**
@@ -153,7 +155,8 @@ CLÁUSULA ESPECÍFICA 5 - DOS ENTREGÁVEIS E PROPRIEDADE INTELECTUAL
     b) Templates, metodologias e ferramentas genéricas: Propriedade da CONTRATADA;
     c) A CONTRATANTE pode usar e adaptar documentos internamente;
     d) A CONTRATANTE NÃO pode comercializar ou distribuir externamente;
-    e) A CONTRATADA pode usar o projeto como referência (anonimizada).
+    e) A CONTRATADA pode usar o projeto como referência (anonimizada);
+    f) A licença de uso das ferramentas e planilhas é restrita à unidade da CONTRATANTE especificada no preâmbulo, sendo vedada a replicação para outras filiais ou empresas do mesmo grupo econômico sem autorização por escrito e sem a devida compensação comercial.
 
 5.4. Revisões de entregáveis:
     a) 1ª revisão: Incluída no escopo;
@@ -215,7 +218,8 @@ CLÁUSULA ESPECÍFICA 7 - DA REMUNERAÇÃO E FORMA DE COBRANÇA
     a) Viagens superiores a 100 km: Passagens e hospedagem reembolsáveis;
     b) Materiais específicos solicitados: Custo + 15%;
     c) Horas extras além do acordado: Valor da hora técnica;
-    d) Treinamentos adicionais: Conforme tabela específica.
+    d) Treinamentos adicionais: Conforme tabela específica;
+    e) Itens fora do escopo do Diagnóstico Inicial (Fase 1): Qualquer demanda, análise ou entregável não previsto no relatório de diagnóstico aprovado pela CONTRATANTE gerará automaticamente um Termo Aditivo ou cobrança proporcional de hora técnica excedente, devendo ser formalmente autorizado antes da execução.
 
 7.4. Faturamento:
     a) Projetos curtos (< 30 dias): 50% início + 50% entrega;
