@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useAlert } from '../components/AlertSystem';
+import { gerarPDFContrato } from '../utils/contratosPDF';
 
 const ListaContratos = ({ onNovoContrato, onEditarContrato }) => {
   const [contratos, setContratos] = useState([]);
@@ -58,6 +59,45 @@ const ListaContratos = ({ onNovoContrato, onEditarContrato }) => {
       alert.error('Erro ao carregar contratos: ' + error.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDownloadPDF = async (contrato) => {
+    try {
+      alert.info('Gerando PDF do contrato...', 'Processando');
+      
+      // Buscar dados completos do cliente
+      const { data: clienteData, error: clienteError } = await supabase
+        .from('clientes')
+        .select('*')
+        .eq('id', contrato.cliente_id)
+        .single();
+
+      if (clienteError) throw clienteError;
+
+      // Preparar dados completos para o PDF
+      const dadosCompletos = {
+        ...contrato,
+        cliente: clienteData
+      };
+
+      // Gerar PDF
+      const { blob, filename } = await gerarPDFContrato(dadosCompletos);
+
+      // Fazer download no navegador
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+
+      alert.success('PDF baixado com sucesso!', 'Documento');
+    } catch (error) {
+      console.error('Erro ao gerar PDF:', error);
+      alert.error('Erro ao gerar PDF do contrato: ' + error.message, 'Erro');
     }
   };
 
@@ -409,6 +449,7 @@ const ListaContratos = ({ onNovoContrato, onEditarContrato }) => {
                     <Edit size={20} />
                   </button>
                   <button
+                    onClick={() => handleDownloadPDF(contrato)}
                     className="p-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition"
                     title="Baixar PDF"
                   >

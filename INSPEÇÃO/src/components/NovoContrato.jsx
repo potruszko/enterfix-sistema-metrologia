@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Save, FileSignature, Building2, Calendar, Dollar
 import { supabase } from '../lib/supabase';
 import { useAlert } from './AlertSystem';
 import ClienteSelector from './ClienteSelector';
+import { gerarEUploadPDFContrato } from '../utils/contratosPDF';
 
 const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
   const alert = useAlert();
@@ -155,10 +156,12 @@ const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
       // Validações finais
       if (!clienteSelecionado) {
         alert.warning('Selecione um cliente', 'Validação');
+        setSaving(false);
         return;
       }
       if (!tipoContrato) {
         alert.warning('Selecione o tipo de contrato', 'Validação');
+        setSaving(false);
         return;
       }
 
@@ -182,6 +185,7 @@ const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
         versao: 1,
       };
 
+      // 1. Inserir contrato no banco
       const { data, error } = await supabase
         .from('contratos')
         .insert([contrato])
@@ -191,6 +195,28 @@ const NovoContrato = ({ contratoId = null, onSaveComplete, onCancel }) => {
       if (error) throw error;
 
       alert.success(`Contrato ${numeroContrato} criado com sucesso!`, 'Contrato Salvo');
+
+      // 2. Gerar PDF automaticamente (não esperamos, continua em background)
+      try {
+        const dadosCompletosContrato = {
+          ...data,
+          cliente: clienteSelecionado
+        };
+        
+        alert.info('Gerando PDF do contrato...', 'Processando');
+        const pdfResult = await gerarEUploadPDFContrato(supabase, dadosCompletosContrato);
+        
+        if (pdfResult.success) {
+          alert.success('PDF gerado com sucesso!', 'Documento');
+        } else {
+          console.warn('PDF não foi gerado:', pdfResult.error);
+          alert.warning('Contrato salvo, mas PDF não foi gerado. Você pode gerar depois.', 'Aviso');
+        }
+      } catch (pdfError) {
+        console.error('Erro ao gerar PDF:', pdfError);
+        // Não bloqueamos o fluxo se PDF falhar
+        alert.warning('Contrato salvo, mas houve erro ao gerar PDF.', 'Aviso');
+      }
       
       if (onSaveComplete) {
         onSaveComplete(data);
