@@ -15,11 +15,12 @@ const PerfilUsuario = () => {
   
   const [perfil, setPerfil] = useState({
     nome_completo: '',
+    cpf: '',
     cargo: '',
     telefone: '',
     foto_url: '',
     registro_profissional: '',
-    tipo_registro: 'CREA',
+    tipo_registro: 'Não se aplica',
     empresa: 'Enterfix Metrologia',
     departamento: '',
     especializacao: '',
@@ -29,8 +30,16 @@ const PerfilUsuario = () => {
   });
 
   const tiposRegistro = [
-    'CREA', 'CRM', 'CRQ', 'CRF', 'CRMV', 'CRO', 
-    'CRT', 'CONFEA', 'Outro', 'Não se aplica'
+    'Não se aplica',
+    'CREA', 
+    'CRM', 
+    'CRQ', 
+    'CRF', 
+    'CRMV', 
+    'CRO', 
+    'CRT', 
+    'CONFEA', 
+    'Outro'
   ];
 
   const roles = [
@@ -72,11 +81,12 @@ const PerfilUsuario = () => {
       if (perfilData) {
         setPerfil({
           nome_completo: perfilData.nome_completo || '',
+          cpf: perfilData.cpf || '',
           cargo: perfilData.cargo || '',
           telefone: perfilData.telefone || '',
           foto_url: perfilData.foto_url || '',
           registro_profissional: perfilData.registro_profissional || '',
-          tipo_registro: perfilData.tipo_registro || 'CREA',
+          tipo_registro: perfilData.tipo_registro || 'Não se aplica',
           empresa: perfilData.empresa || 'Enterfix Metrologia',
           departamento: perfilData.departamento || '',
           especializacao: perfilData.especializacao || '',
@@ -271,18 +281,19 @@ const PerfilUsuario = () => {
                 />
               </div>
 
-              {/* Cargo */}
+              {/* CPF - Documento Principal */}
               <div>
                 <label className="flex items-center gap-2 text-sm font-medium text-industrial-700 mb-2">
-                  <Briefcase size={18} />
-                  Cargo / Função
+                  <FileSignature size={18} />
+                  CPF * <span className="text-xs text-gray-500">(Documento Principal)</span>
                 </label>
                 <input
                   type="text"
-                  name="cargo"
-                  value={perfil.cargo}
+                  name="cpf"
+                  value={perfil.cpf}
                   onChange={handleInputChange}
-                  placeholder="Técnico em Metrologia"
+                  placeholder="000.000.000-00"
+                  maxLength={14}
                   className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 />
               </div>
@@ -301,6 +312,70 @@ const PerfilUsuario = () => {
                   placeholder="(11) 99999-9999"
                   className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 />
+              </div>
+
+              {/* Cargo */}
+              <div className="md:col-span-2">
+                <label className="flex items-center gap-2 text-sm font-medium text-industrial-700 mb-2">
+                  <Briefcase size={18} />
+                  Cargo / Função
+                </label>
+                <input
+                  type="text"
+                  name="cargo"
+                  value={perfil.cargo}
+                  onChange={handleInputChange}
+                  placeholder="Técnico em Metrologia"
+                  className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                />
+              </div>
+
+              {/* DIVIDER: Empresa e Departamento */}
+              <div className="md:col-span-2 pt-2 border-t border-industrial-200">
+                <h3 className="text-base font-semibold text-industrial-800 mb-3">Informações da Empresa</h3>
+              </div>
+
+              {/* Empresa */}
+              <div>
+                <label className="flex items-center gap-2 text-sm font-medium text-industrial-700 mb-2">
+                  <Building2 size={18} />
+                   Empresa
+                </label>
+                <input
+                  type="text"
+                  name="empresa"
+                  value={perfil.empresa}
+                  onChange={handleInputChange}
+                  placeholder="Enterfix Metrologia"
+                  className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                />
+              </div>
+
+              {/* Departamento */}
+              <div>
+                <label className="flex items-center gap-2 text-sm font-medium text-industrial-700 mb-2">
+                  <Building2 size={18} />
+                  Departamento / Setor
+                </label>
+                <input
+                  type="text"
+                  name="departamento"
+                  value={perfil.departamento}
+                  onChange={handleInputChange}
+                  placeholder="Laboratório de Metrologia"
+                  className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                />
+              </div>
+
+              {/* DIVIDER: Registro Profissional (Opcional) */}
+              <div className="md:col-span-2 pt-4 border-t border-industrial-200">
+                <h3 className="text-base font-semibold text-industrial-800 mb-1 flex items-center gap-2">
+                  <Award size={20} />
+                  Registro Profissional (Opcional)
+                </h3>
+                <p className="text-sm text-industrial-600">
+                  Preencha apenas se possuir CREA, CRM, CRQ ou outro registro
+                </p>
               </div>
 
               {/* Tipo de Registro */}
@@ -325,46 +400,14 @@ const PerfilUsuario = () => {
               <div>
                 <label className="flex items-center gap-2 text-sm font-medium text-industrial-700 mb-2">
                   <FileSignature size={18} />
-                  Nº Registro Profissional
+                  Nº Registro
                 </label>
                 <input
                   type="text"
                   name="registro_profissional"
                   value={perfil.registro_profissional}
                   onChange={handleInputChange}
-                  placeholder="Ex: 123456/SP"
-                  className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                />
-              </div>
-
-              {/* Empresa */}
-              <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-industrial-700 mb-2">
-                  <Building2 size={18} />
-                  Empresa
-                </label>
-                <input
-                  type="text"
-                  name="empresa"
-                  value={perfil.empresa}
-                  onChange={handleInputChange}
-                  placeholder="Enterfix Metrologia"
-                  className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                />
-              </div>
-
-              {/* Departamento */}
-              <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-industrial-700 mb-2">
-                  <Building2 size={18} />
-                  Departamento / Setor
-                </label>
-                <input
-                  type="text"
-                  name="departamento"
-                  value={perfil.departamento}
-                  onChange={handleInputChange}
-                  placeholder="Laboratório de Metrologia"
+                  placeholder="Ex: 123456/SP (deixe vazio se não tiver)"
                   className="w-full px-4 py-3 border border-industrial-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 />
               </div>
