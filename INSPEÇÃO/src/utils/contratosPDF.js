@@ -42,11 +42,12 @@ const ESTILOS = {
 function adicionarCabecalho(doc, numeroContrato, statusContrato) {
     const larguraUtil = ESTILOS.larguraPagina - ESTILOS.margemEsquerda - ESTILOS.margemDireita;
 
-    // Logo da Enterfix
+    // Logo da Enterfix (horizontal)
     try {
-        // Usar logo do projeto (base64 inline para funcionar no PDF)
-        const logoPath = '/assets/images/Enterfix-Symbol.png';
-        doc.addImage(logoPath, 'PNG', ESTILOS.margemEsquerda, 8, 25, 12);
+        // Usar logo horizontal completo (LOGO_ENTERFIX_LIGHT.png)
+        const logoPath = '/assets/images/LOGO_ENTERFIX_LIGHT.png';
+        // Dimensões proporcionais: largura 45mm × altura 9mm (proporção 5:1)
+        doc.addImage(logoPath, 'PNG', ESTILOS.margemEsquerda, 10, 45, 9);
     } catch (error) {
         // Fallback: usar texto se logo não carregar
         console.warn('Logo não carregou, usando texto:', error);
@@ -357,18 +358,20 @@ export async function gerarPDFContrato(dadosContrato) {
             // CLÁUSULAS ESPECÍFICAS DO TIPO DE CONTRATO (DESTACADAS)
             if (CLAUSULAS_ESPECIFICAS[dadosContrato.tipo_contrato]) {
                 const clausulaEspecifica = CLAUSULAS_ESPECIFICAS[dadosContrato.tipo_contrato](dadosContrato.dados_especificos || {});
-                
+
                 // Nova página para cláusulas específicas (melhor organização)
                 doc.addPage();
                 y = ESTILOS.margemSuperior + 30;
-                
+
                 // Título destacado
                 doc.setFontSize(14);
                 doc.setFont(ESTILOS.fontePrincipal, 'bold');
                 doc.setTextColor(...ESTILOS.corPrimaria);
-                doc.text('CLÁUSULAS ESPECÍFICAS', ESTILOS.larguraPagina / 2, y, { align: 'center' });
+                doc.text('CLÁUSULAS ESPECÍFICAS', ESTILOS.larguraPagina / 2, y, {
+                    align: 'center'
+                });
                 y += 8;
-                
+
                 // Subtítulo com tipo de contrato
                 doc.setFontSize(12);
                 const titulosContratos = {
@@ -382,16 +385,18 @@ export async function gerarPDFContrato(dadosContrato) {
                     'validacao': 'Validação de Equipamentos',
                     'nda': 'Confidencialidade (NDA)'
                 };
-                doc.text(titulosContratos[dadosContrato.tipo_contrato] || 'Disposições Específicas', ESTILOS.larguraPagina / 2, y, { align: 'center' });
-                
+                doc.text(titulosContratos[dadosContrato.tipo_contrato] || 'Disposições Específicas', ESTILOS.larguraPagina / 2, y, {
+                    align: 'center'
+                });
+
                 doc.setDrawColor(...ESTILOS.corPrimaria);
                 doc.setLineWidth(0.5);
                 doc.line(ESTILOS.margemEsquerda, y + 2, ESTILOS.larguraPagina - ESTILOS.margemDireita, y + 2);
-                
+
                 y += 10;
                 doc.setTextColor(...ESTILOS.corTexto);
                 doc.setFont(ESTILOS.fontePrincipal, 'normal');
-                
+
                 y = adicionarParagrafo(doc, clausulaEspecifica, y);
                 y += 5;
             }
@@ -420,14 +425,18 @@ export async function gerarPDFContrato(dadosContrato) {
             doc.setFontSize(10);
             doc.setFont(ESTILOS.fontePrincipal, 'italic');
             linhasEncerramento.forEach(linha => {
-                doc.text(linha, ESTILOS.larguraPagina / 2, y, { align: 'center' });
+                doc.text(linha, ESTILOS.larguraPagina / 2, y, {
+                    align: 'center'
+                });
                 y += 5;
             });
             y += 5;
 
             const dataAssinatura = `${DADOS_ENTERFIX.cidade}/${DADOS_ENTERFIX.estado}, ${dataExtenso(new Date().toISOString().split('T')[0])}.`;
             doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text(dataAssinatura, ESTILOS.larguraPagina / 2, y, { align: 'center' });
+            doc.text(dataAssinatura, ESTILOS.larguraPagina / 2, y, {
+                align: 'center'
+            });
             y += 15;
 
             // Verificar espaço disponível
@@ -447,15 +456,21 @@ export async function gerarPDFContrato(dadosContrato) {
             y += 4;
             doc.setFontSize(10);
             doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text(DADOS_ENTERFIX.razaoSocial, centroX, y, { align: 'center' });
+            doc.text(DADOS_ENTERFIX.razaoSocial, centroX, y, {
+                align: 'center'
+            });
             y += 4;
             doc.setFontSize(9);
             doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text(`CNPJ: ${DADOS_ENTERFIX.cnpj}`, centroX, y, { align: 'center' });
+            doc.text(`CNPJ: ${DADOS_ENTERFIX.cnpj}`, centroX, y, {
+                align: 'center'
+            });
             y += 4;
             doc.setFontSize(10);
             doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text('CONTRATADA', centroX, y, { align: 'center' });
+            doc.text('CONTRATADA', centroX, y, {
+                align: 'center'
+            });
             y += 15;
 
             // Bloco CONTRATANTE
@@ -464,15 +479,21 @@ export async function gerarPDFContrato(dadosContrato) {
             y += 4;
             doc.setFontSize(10);
             doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text(cliente.razao_social, centroX, y, { align: 'center' });
+            doc.text(cliente.razao_social, centroX, y, {
+                align: 'center'
+            });
             y += 4;
             doc.setFontSize(9);
             doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text(cliente.tipo_pessoa === 'juridica' ? `CNPJ: ${cliente.cnpj}` : `CPF: ${cliente.cpf}`, centroX, y, { align: 'center' });
+            doc.text(cliente.tipo_pessoa === 'juridica' ? `CNPJ: ${cliente.cnpj}` : `CPF: ${cliente.cpf}`, centroX, y, {
+                align: 'center'
+            });
             y += 4;
             doc.setFontSize(10);
             doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text('CONTRATANTE', centroX, y, { align: 'center' });
+            doc.text('CONTRATANTE', centroX, y, {
+                align: 'center'
+            });
             y += 15;
 
             // TESTEMUNHAS (verificar espaço novamente)
