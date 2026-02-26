@@ -14,6 +14,7 @@ DROP POLICY IF EXISTS "Avatars são públicos para visualização" ON storage.ob
 DROP POLICY IF EXISTS "Usuários podem deletar seus próprios avatars" ON storage.objects;
 DROP POLICY IF EXISTS "avatars_upload" ON storage.objects;
 DROP POLICY IF EXISTS "avatars_select" ON storage.objects;
+DROP POLICY IF EXISTS "avatars_update" ON storage.objects;
 DROP POLICY IF EXISTS "avatars_delete" ON storage.objects;
 
 -- PASSO 3: Criar políticas de acesso ao bucket 'avatars'
