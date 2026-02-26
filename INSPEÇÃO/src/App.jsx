@@ -11,6 +11,7 @@ import GestaoEquipamentos from './components/GestaoEquipamentos';
 import PerfilUsuario from './components/PerfilUsuario';
 import ListaContratos from './components/ListaContratos';
 import GerenciarClientes from './components/GerenciarClientes';
+import NovoContrato from './components/NovoContrato';
 import { AlertProvider } from './components/AlertSystem';
 import { useMobileMenu } from './hooks/useMobileMenu';
 
@@ -19,6 +20,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState('dashboard');
   const [editingRelatorioId, setEditingRelatorioId] = useState(null);
+  const [editingContratoId, setEditingContratoId] = useState(null);
   const { isOpen, toggle, close, isMobile } = useMobileMenu();
 
   useEffect(() => {
@@ -53,6 +55,9 @@ function App() {
     if (page === 'novo-relatorio') {
       setEditingRelatorioId(null); // Resetar ao criar novo
     }
+    if (page === 'novo-contrato') {
+      setEditingContratoId(null); // Resetar ao criar novo
+    }
     setCurrentPage(page);
   };
 
@@ -69,8 +74,19 @@ function App() {
       case 'contratos':
         return (
           <ListaContratos 
-            onNovoContrato={() => alert('Formulário de novo contrato em desenvolvimento')}
-            onEditarContrato={(contrato) => alert(`Editar contrato: ${contrato.numero_contrato}`)}
+            onNovoContrato={() => handleNavigate('novo-contrato')}
+            onEditarContrato={(contrato) => {
+              setEditingContratoId(contrato.id);
+              handleNavigate('novo-contrato');
+            }}
+          />
+        );
+      case 'novo-contrato':
+        return (
+          <NovoContrato
+            contratoId={editingContratoId}
+            onSaveComplete={() => handleNavigate('contratos')}
+            onCancel={() => handleNavigate('contratos')}
           />
         );
       case 'equipamentos':

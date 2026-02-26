@@ -92,6 +92,8 @@ BEGIN
   IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'clientes' AND column_name = 'ultima_sincronizacao_bling') THEN
     ALTER TABLE public.clientes ADD COLUMN ultima_sincronizacao_bling TIMESTAMPTZ;
   END IF;
+  
+  RAISE NOTICE 'Campos do Bling ERP adicionados com sucesso!';
 END $$;
 
 -- Criar índices para performance
@@ -110,5 +112,3 @@ COMMENT ON COLUMN public.clientes.email_nfe IS 'E-mail específico para envio de
 COMMENT ON COLUMN public.clientes.situacao IS 'Status do cliente: ativo, inativo, bloqueado, prospect';
 COMMENT ON COLUMN public.clientes.bling_id IS 'ID do cliente no Bling ERP para sincronização';
 COMMENT ON COLUMN public.clientes.limite_credito IS 'Limite de crédito aprovado para o cliente';
-
-RAISE NOTICE 'Campos do Bling ERP adicionados com sucesso!';
