@@ -9,6 +9,7 @@ import Historico from './components/Historico';
 import Configuracoes from './components/Configuracoes';
 import GestaoEquipamentos from './components/GestaoEquipamentos';
 import PerfilUsuario from './components/PerfilUsuario';
+import ListaContratos from './components/ListaContratos';
 import { AlertProvider } from './components/AlertSystem';
 import { useMobileMenu } from './hooks/useMobileMenu';
 
@@ -62,6 +63,13 @@ function App() {
         return <RelatorioForm relatorioId={editingRelatorioId} onSaveComplete={() => handleNavigate('historico')} />;
       case 'historico':
         return <Historico onEditRelatorio={handleEditRelatorio} onDuplicarRelatorio={handleDuplicarRelatorio} />;
+      case 'contratos':
+        return (
+          <ListaContratos 
+            onNovoContrato={() => alert('Formulário de novo contrato em desenvolvimento')}
+            onEditarContrato={(contrato) => alert(`Editar contrato: ${contrato.numero_contrato}`)}
+          />
+        );
       case 'equipamentos':
         return <GestaoEquipamentos />;
       case 'perfil':

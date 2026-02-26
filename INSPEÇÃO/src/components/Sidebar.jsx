@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, FileText, History, Settings, Wrench, LogOut, UserCircle } from 'lucide-react';
+import { Home, FileText, History, Settings, Wrench, LogOut, UserCircle, FileSignature } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useIsMobile } from '../hooks/useMediaQuery';
 
@@ -29,6 +29,7 @@ const Sidebar = ({ currentPage, onNavigate, isOpen, onClose }) => {
     { id: 'dashboard', icon: Home, label: 'Dashboard' },
     { id: 'novo-relatorio', icon: FileText, label: 'Novo Relatório' },
     { id: 'historico', icon: History, label: 'Histórico' },
+    { id: 'contratos', icon: FileSignature, label: 'Contratos' },
     { id: 'equipamentos', icon: Wrench, label: 'Equipamentos' },
     { id: 'perfil', icon: UserCircle, label: 'Meu Perfil' },
     { id: 'configuracoes', icon: Settings, label: 'Configurações' },
