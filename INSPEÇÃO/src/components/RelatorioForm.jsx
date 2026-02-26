@@ -9,6 +9,7 @@ import {
 import { generatePDF } from '../utils/pdfGenerator';
 import { useAlert } from './AlertSystem';
 import { PECAS_DISPONIVEIS, gerarTextoObservacoes } from '../utils/pecasSubstituidas';
+import ClienteSelector from './ClienteSelector';
 
 const RelatorioForm = ({ relatorioId = null, onSaveComplete }) => {
   const alert = useAlert();
@@ -37,6 +38,9 @@ const RelatorioForm = ({ relatorioId = null, onSaveComplete }) => {
   const [fotos, setFotos] = useState([]);
   const [saving, setSaving] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+
+  // Estado para cliente selecionado
+  const [clienteSelecionado, setClienteSelecionado] = useState(null);
 
   // Estado para peças substituídas
   const [pecasSelecionadas, setPecasSelecionadas] = useState([]);
@@ -147,6 +151,20 @@ const RelatorioForm = ({ relatorioId = null, onSaveComplete }) => {
         setOriginalNumeroRelatorio(data.dados.numeroRelatorio);
         setOriginalStatusRelatorio(data.status_relatorio || 'emitido');
         setTipoRelatorio(data.tipo);
+        
+        // Carregar cliente se houver cliente_id
+        if (data.cliente_id) {
+          const { data: clienteData } = await supabase
+            .from('clientes')
+            .select('*')
+            .eq('id', data.cliente_id)
+            .single();
+          
+          if (clienteData) {
+            setClienteSelecionado(clienteData);
+          }
+        }
+        
         setFormData({
           cliente: data.cliente,
           projetoOS: data.projeto_os,
@@ -469,7 +487,8 @@ const RelatorioForm = ({ relatorioId = null, onSaveComplete }) => {
       
       const relatorio = {
         tipo: tipoRelatorio,
-        cliente: formData.cliente,
+        cliente: clienteSelecionado?.razao_social || formData.cliente,
+        cliente_id: clienteSelecionado?.id || null,
         projeto_os: formData.projetoOS,
         dados: dadosRelatorio,
         status_final: parecerFinal,
@@ -580,6 +599,7 @@ const RelatorioForm = ({ relatorioId = null, onSaveComplete }) => {
     ]);
     setFotos([]);
     setPecasSelecionadas([]);
+    setClienteSelecionado(null);
     setIsEditing(false);
     setOriginalNumeroRelatorio(null);
     setOriginalRelatorioId(null);
@@ -651,16 +671,14 @@ const RelatorioForm = ({ relatorioId = null, onSaveComplete }) => {
         {/* Identificação */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium text-industrial-700 mb-1">
-              Cliente *
-            </label>
-            <input
-              type="text"
-              name="cliente"
-              value={formData.cliente}
-              onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-industrial-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              required
+            <ClienteSelector
+              clienteSelecionado={clienteSelecionado}
+              onClienteChange={(cliente) => {
+                setClienteSelecionado(cliente);
+                setFormData({ ...formData, cliente: cliente?.razao_social || '' });
+              }}
+              obrigatorio={true}
+              label="Cliente"
             />
           </div>
 
