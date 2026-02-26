@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   FileSignature, Plus, Search, Filter, Calendar, AlertCircle, 
-  CheckCircle, Clock, XCircle, Eye, Edit, Download, FileText 
+  CheckCircle, Clock, XCircle, Eye, Edit, Download, FileText, Trash2 
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useAlert } from '../components/AlertSystem';
@@ -98,6 +98,38 @@ const ListaContratos = ({ onNovoContrato, onEditarContrato }) => {
     } catch (error) {
       console.error('Erro ao gerar PDF:', error);
       alert.error('Erro ao gerar PDF do contrato: ' + error.message, 'Erro');
+    }
+  };
+
+  const handleDeletar = async (contrato) => {
+    // Confirmação antes de deletar
+    const confirmar = window.confirm(
+      `Tem certeza que deseja DELETAR o contrato?\n\n` +
+      `Número: ${contrato.numero_contrato}\n` +
+      `Cliente: ${contrato.razao_social || contrato.nome_fantasia}\n\n` +
+      `⚠️ Esta ação NÃO pode ser desfeita!`
+    );
+
+    if (!confirmar) return;
+
+    try {
+      alert.info('Deletando contrato...', 'Processando');
+
+      // Deletar do Supabase
+      const { error } = await supabase
+        .from('contratos')
+        .delete()
+        .eq('id', contrato.id);
+
+      if (error) throw error;
+
+      // Remover da lista local
+      setContratos(contratos.filter(c => c.id !== contrato.id));
+
+      alert.success('Contrato deletado com sucesso!', 'Sucesso');
+    } catch (error) {
+      console.error('Erro ao deletar contrato:', error);
+      alert.error('Erro ao deletar contrato: ' + error.message, 'Erro');
     }
   };
 
@@ -454,6 +486,13 @@ const ListaContratos = ({ onNovoContrato, onEditarContrato }) => {
                     title="Baixar PDF"
                   >
                     <Download size={20} />
+                  </button>
+                  <button
+                    onClick={() => handleDeletar(contrato)}
+                    className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition"
+                    title="Deletar Contrato"
+                  >
+                    <Trash2 size={20} />
                   </button>
                 </div>
               </div>
