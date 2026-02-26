@@ -63,16 +63,39 @@ const ClienteSelector = ({
     try {
       const { data: { user } } = await supabase.auth.getUser();
 
+      // Função para limpar valores vazios
+      const cleanValue = (value) => {
+        if (value === null || value === undefined) return null;
+        if (typeof value === 'string' && value.trim() === '') return null;
+        return value;
+      };
+
+      // Preparar dados limpando strings vazias
+      const dadosCliente = {
+        razao_social: cleanValue(novoCliente.razao_social),
+        nome_fantasia: cleanValue(novoCliente.nome_fantasia),
+        cnpj: novoCliente.cnpj ? novoCliente.cnpj.replace(/\D/g, '') : null,
+        cpf: novoCliente.cpf ? novoCliente.cpf.replace(/\D/g, '') : null,
+        email: cleanValue(novoCliente.email),
+        telefone: novoCliente.telefone ? novoCliente.telefone.replace(/\D/g, '') : null,
+        cidade: cleanValue(novoCliente.cidade),
+        estado: cleanValue(novoCliente.estado),
+        tipo_pessoa: novoCliente.cnpj ? 'juridica' : 'fisica',
+        situacao: 'ativo',
+        ativo: true,
+        created_by: user?.id
+      };
+
       const { data, error } = await supabase
         .from('clientes')
-        .insert([{
-          ...novoCliente,
-          created_by: user?.id
-        }])
+        .insert([dadosCliente])
         .select()
         .single();
 
-      if (error) throw error;
+      if (error) {
+        console.error('Erro detalhado do Supabase:', error);
+        throw error;
+      }
 
       alert.success('Cliente cadastrado com sucesso!');
       setClientes(prev => [...prev, data]);

@@ -176,17 +176,65 @@ const GerenciarClientes = () => {
         return;
       }
 
-      // Preparar dados (remover formatação)
+      // Função auxiliar para converter strings vazias em null
+      const cleanValue = (value) => {
+        if (value === null || value === undefined) return null;
+        if (typeof value === 'string' && value.trim() === '') return null;
+        return value;
+      };
+
+      // Preparar dados (remover formatação e limpar valores vazios)
       const dadosCliente = {
-        ...formData,
-        cnpj: formData.cnpj?.replace(/\D/g, '') || null,
-        cpf: formData.cpf?.replace(/\D/g, '') || null,
-        telefone: formData.telefone?.replace(/\D/g, '') || null,
-        celular: formData.celular?.replace(/\D/g, '') || null,
-        whatsapp: formData.whatsapp?.replace(/\D/g, '') || null,
-        fax: formData.fax?.replace(/\D/g, '') || null,
-        cep: formData.cep?.replace(/\D/g, '') || null,
+        codigo: cleanValue(formData.codigo),
+        tipo_pessoa: formData.tipo_pessoa || 'juridica',
+        razao_social: cleanValue(formData.razao_social),
+        nome_fantasia: cleanValue(formData.nome_fantasia),
+        cnpj: formData.cnpj ? formData.cnpj.replace(/\D/g, '') : null,
+        cpf: formData.cpf ? formData.cpf.replace(/\D/g, '') : null,
+        inscricao_estadual: cleanValue(formData.inscricao_estadual),
+        inscricao_municipal: cleanValue(formData.inscricao_municipal),
+        regime_tributario: cleanValue(formData.regime_tributario),
+        contribuinte_icms: formData.contribuinte_icms || false,
+        
+        // Endereço
+        cep: formData.cep ? formData.cep.replace(/\D/g, '') : null,
+        logradouro: cleanValue(formData.logradouro),
+        numero: cleanValue(formData.numero),
+        complemento: cleanValue(formData.complemento),
+        bairro: cleanValue(formData.bairro),
+        cidade: cleanValue(formData.cidade),
+        estado: cleanValue(formData.estado),
+        
+        // Contatos
+        contato_responsavel: cleanValue(formData.contato_responsavel),
+        telefone: formData.telefone ? formData.telefone.replace(/\D/g, '') : null,
+        fax: formData.fax ? formData.fax.replace(/\D/g, '') : null,
+        celular: formData.celular ? formData.celular.replace(/\D/g, '') : null,
+        whatsapp: formData.whatsapp ? formData.whatsapp.replace(/\D/g, '') : null,
+        email: cleanValue(formData.email),
+        email_nfe: cleanValue(formData.email_nfe),
+        skype: cleanValue(formData.skype),
+        site: cleanValue(formData.site),
+        
+        // Dados comerciais
+        ramo_atividade: cleanValue(formData.ramo_atividade),
+        porte_empresa: cleanValue(formData.porte_empresa),
+        primeira_visita: cleanValue(formData.primeira_visita),
+        tipo_contato: cleanValue(formData.tipo_contato) || 'cliente',
+        situacao: cleanValue(formData.situacao) || 'ativo',
+        vendedor_responsavel: cleanValue(formData.vendedor_responsavel),
+        natureza_operacao: cleanValue(formData.natureza_operacao),
+        
+        // Dados financeiros
         limite_credito: formData.limite_credito ? parseFloat(formData.limite_credito) : null,
+        condicao_pagamento: cleanValue(formData.condicao_pagamento),
+        categoria_financeira: cleanValue(formData.categoria_financeira),
+        
+        // Observações
+        observacoes_gerais: cleanValue(formData.observacoes_gerais),
+        
+        // Status
+        ativo: formData.ativo !== false,
       };
 
       let error;
@@ -199,14 +247,23 @@ const GerenciarClientes = () => {
           .eq('id', clienteEditando.id);
         error = result.error;
       } else {
-        // Criar novo cliente
+        // Criar novo cliente - adicionar created_by
+        const { data: { user } } = await supabase.auth.getUser();
+        const dadosComCriador = {
+          ...dadosCliente,
+          created_by: user?.id || null,
+        };
+        
         const result = await supabase
           .from('clientes')
-          .insert([dadosCliente]);
+          .insert([dadosComCriador]);
         error = result.error;
       }
 
-      if (error) throw error;
+      if (error) {
+        console.error('Erro detalhado do Supabase:', error);
+        throw error;
+      }
 
       alert.success(
         modoEdicao ? 'Cliente atualizado com sucesso!' : 'Cliente cadastrado com sucesso!',
