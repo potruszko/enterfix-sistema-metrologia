@@ -364,8 +364,18 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                 y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.garantia('90 dias'), y);
                 y += 5;
 
-                // CLÁUSULA 9 - RESCISÃO
-                y = adicionarTituloSecao(doc, 'CLÁUSULA NONA - DA RESCISÃO', y);
+                // CLÁUSULA 9 - PROPRIEDADE INTELECTUAL E ENGENHARIA REVERSA
+                y = adicionarTituloSecao(doc, 'CLÁUSULA NONA - DA PROPRIEDADE INTELECTUAL E ENGENHARIA REVERSA', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.propriedadeIntelectual(), y);
+                y += 5;
+
+                // CLÁUSULA 10 - NÃO ALICIAMENTO DE COLABORADORES
+                y = adicionarTituloSecao(doc, 'CLÁUSULA DÉCIMA - DO NÃO ALICIAMENTO DE COLABORADORES', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.naoAliciamento(), y);
+                y += 5;
+
+                // CLÁUSULA 11 - RESCISÃO (renumerada)
+                y = adicionarTituloSecao(doc, 'CLÁUSULA DÉCIMA PRIMEIRA - DA RESCISÃO', y);
                 y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.rescisao(), y);
                 y += 5;
 
@@ -423,7 +433,7 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                 }
 
                 // CLÁUSULA FINAL - DISPOSIÇÕES GERAIS
-                y = adicionarTituloSecao(doc, 'CLÁUSULA DÉCIMA - DAS DISPOSIÇÕES GERAIS', y);
+                y = adicionarTituloSecao(doc, 'CLÁUSULA DÉCIMA SEGUNDA - DAS DISPOSIÇÕES GERAIS', y);
                 y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.disposicoesGerais(), y);
                 y += 10;
 

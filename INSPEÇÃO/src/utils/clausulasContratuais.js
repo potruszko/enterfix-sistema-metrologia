@@ -36,7 +36,7 @@ export const FORO_COMPETENTE = 'São Bernardo do Campo/SP';
 export const CLAUSULAS_GERAIS = {
     objeto: (tipoServico) => `
 CLÁUSULA PRIMEIRA - DO OBJETO
-1.1. O presente contrato tem por objeto a ${tipoServico} pela CONTRATADA à CONTRATANTE, nas condições, prazos e especificações técnicas previstas neste instrumento e seus anexos.
+1.1. O presente contrato tem por objeto a ${tipoServico} pela CONTRATADA à CONTRATANTE, incluindo, quando aplicável, serviços de metrologia, engenharia reversa e fabricação de componentes, nas condições, prazos e especificações técnicas previstas neste instrumento e seus anexos.
 
 1.2. Os serviços serão executados em estrita conformidade com as normas técnicas aplicáveis, especialmente:
     a) ISO/IEC 17025:2017 - Requisitos gerais para competência de laboratórios de ensaio e calibração;
@@ -145,9 +145,17 @@ CLÁUSULA SÉTIMA - DA CONFIDENCIALIDADE E PROTEÇÃO DE DADOS
     b) Resultados de calibrações e medições;
     c) Informações comerciais e estratégicas;
     d) Documentos, relatórios e registros técnicos;
-    e) Dados pessoais de funcionários e colaboradores.
+    e) Dados pessoais de funcionários e colaboradores;
+    f) Desenhos técnicos, modelos 2D/3D e arquivos CAD;
+    g) Especificações de tolerância e métodos de usinagem;
+    h) Processos de fabricação e procedimentos operacionais;
+    i) Know-how e metodologias de engenharia reversa;
+    j) Especificações de materiais e tratamentos térmicos.
 
-7.3. O dever de confidencialidade permanecerá válido por 5 (cinco) anos após o término do contrato.
+7.3. O dever de confidencialidade permanecerá válido por 5 (cinco) anos após o término do contrato, EXCETO para:
+    a) Processos de Fabricação: sigilo PERMANENTE;
+    b) Projetos e Engenharia Reversa: sigilo PERMANENTE;
+    c) Know-how técnico da CONTRATADA: sigilo PERMANENTE.
 
 7.4. As partes comprometem-se a observar a Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018) no tratamento de dados pessoais.
 
@@ -165,13 +173,15 @@ CLÁUSULA OITAVA - DA GARANTIA
 8.2. A garantia cobre:
     a) Correção de erros nos certificados de calibração;
     b) Refazer serviços executados inadequadamente;
-    c) Atendimento a dúvidas técnicas sobre os resultados apresentados.
+    c) Atendimento a dúvidas técnicas sobre os resultados apresentados;
+    d) Para FABRICAÇÃO: defeitos de fabricação comprovados, dentro das especificações técnicas fornecidas.
 
 8.3. A garantia não cobre:
     a) Alterações nas características dos equipamentos após a calibração;
     b) Danos causados por manuseio inadequado;
     c) Desgaste natural dos equipamentos;
-    d) Modificações ou ajustes realizados por terceiros.
+    d) Modificações ou ajustes realizados por terceiros;
+    e) Para FABRICAÇÃO: uso das peças em condições fora das especificações técnicas, ambientes inadequados ou aplicações não previstas.
 
 8.4. Para acionamento da garantia, a CONTRATANTE deverá comunicar por escrito no prazo máximo de 15 (quinze) dias após a identificação do problema.
   `,
@@ -205,25 +215,95 @@ CLÁUSULA NONA - DA RESCISÃO
 9.6. Em caso de rescisão, a CONTRATADA deverá entregar à CONTRATANTE todos os documentos, registros e materiais relacionados aos serviços, no prazo de 10 (dez) dias.
   `,
 
-    disposicoesGerais: () => `
-CLÁUSULA DÉCIMA - DAS DISPOSIÇÕES GERAIS
-10.1. Este contrato é regido pelas leis da República Federativa do Brasil.
+    propriedadeIntelectual: () => `
+CLÁUSULA NONA - DA PROPRIEDADE INTELECTUAL E ENGENHARIA REVERSA
+9.1. TITULARIDADE DA PROPRIEDADE INTELECTUAL:
+    a) Toda propriedade intelectual resultante de engenharia reversa (desenhos 2D/3D, modelos CAD, especificações de materiais, processos de fabricação) é de titularidade EXCLUSIVA da CONTRATADA;
+    b) A CONTRATANTE adquire apenas o direito de uso das peças fabricadas, não dos projetos;
+    c) A transferência da propriedade intelectual para a CONTRATANTE somente ocorrerá mediante acordo específico e pagamento adicional, em valor a ser negociado separadamente.
 
-10.2. Qualquer alteração deste contrato somente será válida se formalizada por meio de termo aditivo assinado por ambas as partes.
+9.2. RECONHECIMENTO DE KNOW-HOW:
+    a) A CONTRATANTE reconhece expressamente que o know-how, métodos, processos e técnicas utilizados pela CONTRATADA na engenharia reversa e fabricação são ativos exclusivos e confidenciais da CONTRATADA;
+    b) É vedado à CONTRATANTE tentar reproduzir, copiar ou desenvolver processos similares com base no conhecimento adquirido durante a execução do contrato.
 
-10.3. A tolerância de qualquer das partes quanto ao descumprimento de cláusulas não constituirá novação ou renúncia de direitos.
+9.3. PROIBIÇÃO DE CÓPIA E REPRODUÇÃO:
+    a) A CONTRATANTE fica expressamente PROIBIDA de:
+       i) Usar as peças fabricadas pela CONTRATADA como molde para terceiros;
+       ii) Realizar engenharia reversa das peças fornecidas pela CONTRATADA;
+       iii) Reproduzir, copiar ou mandar copiar as peças por terceiros;
+       iv) Fornecer as peças a concorrentes da CONTRATADA para análise ou reprodução.
+    b) A violação desta cláusula sujeitará a CONTRATANTE a:
+       i) Multa de 50% (cinquenta por cento) do valor total do contrato;
+       ii) Perdas e danos comprovados;
+       iii) Rescisão imediata do contrato;
+       iv) Medidas judiciais cabíveis para proteção da propriedade intelectual.
 
-10.4. As comunicações entre as partes serão realizadas por escrito (e-mail ou carta registrada) nos endereços constantes no preâmbulo do contrato.
+9.4. GESTÃO DE PROTÓTIPOS E AMOSTRAS:
+    a) Amostras, protótipos ou peças fornecidas pela CONTRATANTE para análise, medição ou engenharia reversa poderão sofrer:
+       i) Desgaste natural decorrente do processo de medição;
+       ii) Cortes, perfurações ou modificações necessárias para análise de material, dureza ou estrutura interna;
+       iii) Danos inerentes ao processo de desmontagem para análise dimensional.
+    b) A CONTRATADA não se responsabiliza por tais alterações, desde que tecnicamente necessárias e previamente autorizadas pela CONTRATANTE;
+    c) É de responsabilidade da CONTRATANTE informar se a amostra pode ser danificada; caso contrário, presume-se a autorização para análise destrutiva quando tecnicamente necessária.
 
-10.5. As partes declaram estar cientes das normas técnicas e regulamentares aplicáveis aos serviços contratados.
+9.5. LICENÇA DE USO:
+    a) Caso a CONTRATANTE necessite dos desenhos técnicos ou modelos CAD para fins de manutenção ou reparos futuros, poderá firmar contrato de licença de uso com a CONTRATADA, mediante pagamento de royalties;
+    b) A licença de uso NÃO confere direito de reprodução ou fabricação por terceiros.
+  `,
 
-10.6. Este contrato vincula as partes e seus sucessores a qualquer título.
+  naoAliciamento: () => `
+CLÁUSULA DÉCIMA - DO NÃO ALICIAMENTO DE COLABORADORES (NON-SOLICITATION)
+10.1. VEDAÇÃO DE ALICIAMENTO:
+    a) A CONTRATANTE fica expressamente PROIBIDA de, durante a vigência deste contrato e por 2 (dois) anos após o seu término:
+       i) Contratar, direta ou indiretamente, empregados, prestadores de serviço, consultores ou colaboradores da CONTRATADA;
+       ii) Oferecer propostas de trabalho, sociedade ou qualquer forma de vínculo profissional aos profissionais da CONTRATADA;
+       iii) Intermediar a contratação dos profissionais da CONTRATADA por terceiros;
+       iv) Estimular ou induzir profissionais da CONTRATADA a romper vínculo com a empresa.
 
-10.7. A invalidade ou ineficácia de qualquer cláusula não prejudicará a validade e eficácia das demais.
+10.2. PROTEÇÃO DO CAPITAL HUMANO:
+    a) A CONTRATANTE reconhece que a CONTRATADA investe recursos significativos na capacitação técnica de sua equipe (engenheiros, técnicos, metrologistas);
+    b) A equipe técnica da CONTRATADA é especializada e sua perda causaria prejuízo significativo à operação;
+    c) Este reconhecimento justifica a proteção contratual contra aliciamento.
 
-10.8. Os casos omissos serão resolvidos de comum acordo entre as partes ou, na impossibilidade, conforme legislação aplicável.
+10.3. MULTA POR ALICIAMENTO:
+    a) A violação da cláusula de não aliciamento sujeitará a CONTRATANTE ao pagamento de:
+       i) Multa de 12 (doze) vezes o último salário bruto do profissional aliciado;
+       ii) Custos de recrutamento e treinamento de substituto (estimados em R$ 50.000,00 por profissional de nível técnico/superior);
+       iii) Perdas e danos comprovados pela CONTRATADA;
+       iv) Lucros cessantes durante o período de substituição.
+    b) A multa é devida POR PROFISSIONAL aliciado, sendo cumulativa em caso de múltiplas violações.
 
-10.9. Fica eleito o Foro da Comarca de ${FORO_COMPETENTE} para dirimir quaisquer controvérsias oriundas deste contrato, com renúncia expressa a qualquer outro, por mais privilegiado que seja.
+10.4. EXCEÇÕES:
+    a) Não se considera aliciamento a contratação de profissionais que:
+       i) Respondam a anúncios públicos de vagas (desde que não direcionados);
+       ii) Se candidatem espontaneamente, sem qualquer estímulo da CONTRATANTE;
+       iii) Tenham deixado a CONTRATADA há mais de 6 (seis) meses.
+    b) Em caso de dúvida, a CONTRATANTE deverá consultar previamente a CONTRATADA.
+
+10.5. COLABORAÇÃO MÚTUA:
+    a) Caso a CONTRATANTE identifique tentativas de aliciamento por terceiros, deverá comunicar imediatamente à CONTRATADA;
+    b) Ambas as partes comprometem-se a manter ambiente de colaboração profissional e ética comercial.
+  `,
+
+  disposicoesGerais: () => `
+CLÁUSULA DÉCIMA PRIMEIRA - DAS DISPOSIÇÕES GERAIS
+11.1. Este contrato é regido pelas leis da República Federativa do Brasil.
+
+11.2. Qualquer alteração deste contrato somente será válida se formalizada por meio de termo aditivo assinado por ambas as partes.
+
+11.3. A tolerância de qualquer das partes quanto ao descumprimento de cláusulas não constituirá novação ou renúncia de direitos.
+
+11.4. As comunicações entre as partes serão realizadas por escrito (e-mail ou carta registrada) nos endereços constantes no preâmbulo do contrato.
+
+11.5. As partes declaram estar cientes das normas técnicas e regulamentares aplicáveis aos serviços contratados.
+
+11.6. Este contrato vincula as partes e seus sucessores a qualquer título.
+
+11.7. A invalidade ou ineficácia de qualquer cláusula não prejudicará a validade e eficácia das demais.
+
+11.8. Os casos omissos serão resolvidos de comum acordo entre as partes ou, na impossibilidade, conforme legislação aplicável.
+
+11.9. Fica eleito o Foro da Comarca de ${FORO_COMPETENTE} para dirimir quaisquer controvérsias oriundas deste contrato, com renúncia expressa a qualquer outro, por mais privilegiado que seja.
   `,
 };
 
@@ -719,6 +799,10 @@ ${CLAUSULAS_GERAIS.limitacaoResponsabilidade()}
 ${CLAUSULAS_GERAIS.confidencialidade()}
 
 ${CLAUSULAS_GERAIS.garantia()}
+
+${CLAUSULAS_GERAIS.propriedadeIntelectual()}
+
+${CLAUSULAS_GERAIS.naoAliciamento()}
 
 ${CLAUSULAS_GERAIS.rescisao()}
 
