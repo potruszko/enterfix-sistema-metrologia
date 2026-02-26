@@ -14,27 +14,27 @@
 
 // Dados da empresa (centralizado para fácil manutenção)
 export const DADOS_ENTERFIX = {
-  razaoSocial: 'ENTERFIX METROLOGIA LTDA',
-  cnpj: '00.000.000/0001-00', // ATUALIZAR COM CNPJ REAL
-  endereco: 'Rua Exemplo, 123, Centro',
-  cidade: 'Caxias do Sul',
-  estado: 'RS',
-  cep: '95000-000',
-  telefone: '(54) 0000-0000',
-  email: 'contato@enterfix.com.br',
-  website: 'www.enterfix.com.br',
-  inscricaoEstadual: '000.0000000',
-  acreditacaoInmetro: 'RBC-XXXX', // Número da acreditação RBC se houver
+    razaoSocial: 'ENTERFIX INDUSTRIA COMERCIO E SERVIÇOS LTDA',
+    cnpj: '13.250.539/0001-40', // ATUALIZAR COM CNPJ REAL
+    endereco: 'Rua WWaldemar Martins Ferreira, 289, Vila Alvinópolis',
+    cidade: 'São Bernardo do Campo',
+    estado: 'SP',
+    cep: '09891-010',
+    telefone: '(11) 4942-2222',
+    email: 'vendas@enterfix.com.br',
+    website: 'www.enterfix.com.br',
+    inscricaoEstadual: '635.379.359.117',
+    acreditacaoInmetro: 'RBC-XXXX', // Número da acreditação RBC se houver
 };
 
 // Foro competente padrão
-export const FORO_COMPETENTE = 'Caxias do Sul/RS';
+export const FORO_COMPETENTE = 'São Bernardo do Campo/SP';
 
 /**
  * CLÁUSULAS GERAIS - Aplicáveis a todos os contratos
  */
 export const CLAUSULAS_GERAIS = {
-  objeto: (tipoServico) => `
+    objeto: (tipoServico) => `
 CLÁUSULA PRIMEIRA - DO OBJETO
 1.1. O presente contrato tem por objeto a ${tipoServico} pela CONTRATADA à CONTRATANTE, nas condições, prazos e especificações técnicas previstas neste instrumento e seus anexos.
 
@@ -47,7 +47,7 @@ CLÁUSULA PRIMEIRA - DO OBJETO
 1.3. A CONTRATADA garante que possui estrutura técnica, equipamentos e profissionais qualificados para a execução dos serviços contratados.
   `,
 
-  vigencia: (dataInicio, dataFim, prazoIndeterminado) => `
+    vigencia: (dataInicio, dataFim, prazoIndeterminado) => `
 CLÁUSULA SEGUNDA - DA VIGÊNCIA
 2.1. O presente contrato terá vigência de ${dataInicio} ${prazoIndeterminado ? 'por prazo indeterminado' : `até ${dataFim}`}, podendo ser prorrogado mediante aditivo, desde que haja interesse mútuo das partes.
 
@@ -59,7 +59,7 @@ CLÁUSULA SEGUNDA - DA VIGÊNCIA
 2.3. A não manifestação das partes quanto à prorrogação implicará no encerramento automático do contrato ao final do prazo estipulado.
   `,
 
-  valorPagamento: (valorTotal, valorMensal, formaPagamento) => `
+    valorPagamento: (valorTotal, valorMensal, formaPagamento) => `
 CLÁUSULA TERCEIRA - DO VALOR E FORMA DE PAGAMENTO
 3.1. Pelos serviços ora contratados, a CONTRATANTE pagará à CONTRATADA o valor ${valorMensal ? `mensal de R$ ${valorMensal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}, totalizando` : 'total de'} R$ ${valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} (${extenso(valorTotal)}).
 
@@ -76,7 +76,7 @@ CLÁUSULA TERCEIRA - DO VALOR E FORMA DE PAGAMENTO
 3.5. A CONTRATADA emitirá Nota Fiscal de Serviços em conformidade com a legislação tributária vigente.
   `,
 
-  obrigacoesContratada: () => `
+    obrigacoesContratada: () => `
 CLÁUSULA QUARTA - DAS OBRIGAÇÕES DA CONTRATADA
 4.1. Executar os serviços com qualidade, pontualidade e em conformidade com as normas técnicas aplicáveis.
 
@@ -99,7 +99,7 @@ CLÁUSULA QUARTA - DAS OBRIGAÇÕES DA CONTRATADA
 4.10. Manter apólice de seguro de responsabilidade civil profissional em valor compatível com os serviços prestados.
   `,
 
-  obrigacoesContratante: () => `
+    obrigacoesContratante: () => `
 CLÁUSULA QUINTA - DAS OBRIGAÇÕES DA CONTRATANTE
 5.1. Efetuar o pagamento nos prazos e condições estabelecidos neste contrato.
 
@@ -118,7 +118,7 @@ CLÁUSULA QUINTA - DAS OBRIGAÇÕES DA CONTRATANTE
 5.8. Utilizar os certificados de calibração exclusivamente para fins técnicos e metrológicos, não os alterando ou reproduzindo sem autorização.
   `,
 
-  limitacaoResponsabilidade: () => `
+    limitacaoResponsabilidade: () => `
 CLÁUSULA SEXTA - DA LIMITAÇÃO DE RESPONSABILIDADE
 6.1. A CONTRATADA responde pelos serviços executados nos limites das incertezas de medição declaradas nos certificados, em conformidade com as normas técnicas aplicáveis.
 
@@ -136,7 +136,7 @@ CLÁUSULA SEXTA - DA LIMITAÇÃO DE RESPONSABILIDADE
 6.5. A CONTRATANTE é responsável por determinar os critérios de aceitação dos equipamentos com base nas tolerâncias dos processos onde são utilizados.
   `,
 
-  confidencialidade: () => `
+    confidencialidade: () => `
 CLÁUSULA SÉTIMA - DA CONFIDENCIALIDADE E PROTEÇÃO DE DADOS
 7.1. As partes obrigam-se a manter sigilo sobre todas as informações confidenciais obtidas em decorrência deste contrato.
 
@@ -158,7 +158,7 @@ CLÁUSULA SÉTIMA - DA CONFIDENCIALIDADE E PROTEÇÃO DE DADOS
 7.7. Em caso de incidente de segurança envolvendo dados pessoais, a parte responsável deverá comunicar imediatamente a outra parte e à ANPD, quando aplicável.
   `,
 
-  garantia: (periodoGarantia = '90 dias') => `
+    garantia: (periodoGarantia = '90 dias') => `
 CLÁUSULA OITAVA - DA GARANTIA
 8.1. A CONTRATADA garante a qualidade dos serviços prestados pelo período de ${periodoGarantia} a partir da emissão do certificado.
 
@@ -176,7 +176,7 @@ CLÁUSULA OITAVA - DA GARANTIA
 8.4. Para acionamento da garantia, a CONTRATANTE deverá comunicar por escrito no prazo máximo de 15 (quinze) dias após a identificação do problema.
   `,
 
-  rescisao: () => `
+    rescisao: () => `
 CLÁUSULA NONA - DA RESCISÃO
 9.1. O presente contrato poderá ser rescindido nas seguintes hipóteses:
 
@@ -205,7 +205,7 @@ CLÁUSULA NONA - DA RESCISÃO
 9.6. Em caso de rescisão, a CONTRATADA deverá entregar à CONTRATANTE todos os documentos, registros e materiais relacionados aos serviços, no prazo de 10 (dez) dias.
   `,
 
-  disposicoesGerais: () => `
+    disposicoesGerais: () => `
 CLÁUSULA DÉCIMA - DAS DISPOSIÇÕES GERAIS
 10.1. Este contrato é regido pelas leis da República Federativa do Brasil.
 
@@ -231,7 +231,7 @@ CLÁUSULA DÉCIMA - DAS DISPOSIÇÕES GERAIS
  * CLÁUSULAS ESPECÍFICAS POR TIPO DE CONTRATO
  */
 export const CLAUSULAS_ESPECIFICAS = {
-  prestacao_servico: (dados) => `
+    prestacao_servico: (dados) => `
 CLÁUSULA ESPECIAL - PRESTAÇÃO DE SERVIÇOS DE CALIBRAÇÃO
 A. DOS SERVIÇOS:
 A.1. Os serviços de calibração incluem:
@@ -263,7 +263,7 @@ D.1. Todos os padrões utilizados são rastreados à Rede Brasileira de Calibra�
 D.2. Os certificados de calibração dos padrões estarão disponíveis para consulta mediante solicitação.
   `,
 
-  comodato: (dados) => `
+    comodato: (dados) => `
 CLÁUSULA ESPECIAL - COMODATO DE EQUIPAMENTOS
 A. DOS EQUIPAMENTOS:
 A.1. Equipamentos em comodato: ${dados.equipamentos || 'conforme relação anexa'}
@@ -290,7 +290,7 @@ C.2. Equipamentos danificados ou perdidos serão cobrados pelo valor de mercado 
 C.3. A COMODATÁRIA responde por danos causados aos equipamentos por uso inadequado, negligência ou imperícia.
   `,
 
-  manutencao: (dados) => `
+    manutencao: (dados) => `
 CLÁUSULA ESPECIAL - CONTRATO DE MANUTENÇÃO
 A. ESCOPO DA MANUTENÇÃO:
 A.1. Tipo de manutenção: ${dados.tipo_manutencao || 'Preventiva e Corretiva'}
@@ -330,7 +330,7 @@ D.1. Não estão cobertas:
     - Casos de força maior.
   `,
 
-  sla: (dados) => `
+    sla: (dados) => `
 CLÁUSULA ESPECIAL - ACORDO DE NÍVEL DE SERVIÇO (SLA)
 A. NÍVEIS DE SERVIÇO GARANTIDOS:
 A.1. Tempo de Resposta: ${dados.tempo_resposta_horas || '4'} horas
@@ -398,7 +398,7 @@ F.1. Relatórios mensais de desempenho serão fornecidos, incluindo:
     - Incidentes críticos e ações corretivas.
   `,
 
-  consultoria: (dados) => `
+    consultoria: (dados) => `
 CLÁUSULA ESPECIAL - CONSULTORIA EM METROLOGIA
 A. OBJETIVOS DO PROJETO:
 ${dados.objetivos || 'Conforme definido em proposta técnica'}
@@ -441,7 +441,7 @@ G.1. A CONSULTORIA não se responsabiliza por:
     - Ações de terceiros ou órgãos reguladores.
   `,
 
-  gestao_parque: (dados) => `
+    gestao_parque: (dados) => `
 CLÁUSULA ESPECIAL - GESTÃO DE PARQUE DE INSTRUMENTOS
 A. ESCOPO DA GESTÃO:
 A.1. Quantidade estimada de instrumentos: ${dados.quantidade_instrumentos || 'Conforme levantamento inicial'}
@@ -495,7 +495,7 @@ F.3. Disponibilizar instrumentos conforme cronograma;
 F.4. Aprovar planos e procedimentos propostos.
   `,
 
-  suporte: (dados) => `
+    suporte: (dados) => `
 CLÁUSULA ESPECIAL - SUPORTE TÉCNICO
 A. NÍVEL DE SUPORTE: ${dados.nivel_suporte || 'Básico (horário comercial)'}
 
@@ -538,7 +538,7 @@ F.1. Atendimentos seguem ordem de chegada, exceto emergências técnicas.
 F.2. Clientes sob contrato de manutenção têm prioridade.
   `,
 
-  validacao: (dados) => `
+    validacao: (dados) => `
 CLÁUSULA ESPECIAL - VALIDAÇÃO DE EQUIPAMENTOS/PROCESSOS
 A. OBJETO DA VALIDAÇÃO:
 A.1. Item a validar: ${dados.item_validacao || 'Conforme anexo técnico'}
@@ -592,7 +592,7 @@ F.2. CONTRATANTE:
     - Manter documentação conforme BPF/GMP.
   `,
 
-  nda: (dados) => `
+    nda: (dados) => `
 CLÁUSULA ESPECIAL - ACORDO DE NÃO DIVULGAÇÃO (NDA)
 A. INFORMAÇÕES CONFIDENCIAIS:
 A.1. São consideradas informações confidenciais:
@@ -651,43 +651,43 @@ G.3. Violações à LGPD sujeitam-se às penalidades previstas na Lei 13.709/201
  * Função auxiliar para converter número em extenso (simplificada)
  */
 function extenso(valor) {
-  // Implementação simplificada - em produção, usar biblioteca especializada
-  return `${Math.floor(valor / 1000)} mil e ${(valor % 1000).toFixed(2)} reais`;
+    // Implementação simplificada - em produção, usar biblioteca especializada
+    return `${Math.floor(valor / 1000)} mil e ${(valor % 1000).toFixed(2)} reais`;
 }
 
 /**
  * Gerador de contrato completo
  */
 export function gerarContratoCompleto(dadosContrato) {
-  const {
-    tipo_contrato,
-    numero_contrato,
-    cliente,
-    data_inicio,
-    data_fim,
-    prazo_indeterminado,
-    valor_total,
-    valor_mensal,
-    forma_pagamento,
-    dados_especificos,
-    clausulas_adicionais,
-  } = dadosContrato;
+    const {
+        tipo_contrato,
+        numero_contrato,
+        cliente,
+        data_inicio,
+        data_fim,
+        prazo_indeterminado,
+        valor_total,
+        valor_mensal,
+        forma_pagamento,
+        dados_especificos,
+        clausulas_adicionais,
+    } = dadosContrato;
 
-  // Descrição do tipo de contrato
-  const descricaoTipo = {
-    'prestacao_servico': 'prestação de serviços de calibração e ensaios metrológicos',
-    'comodato': 'comodato de equipamentos de medição',
-    'manutencao': 'manutenção preventiva e corretiva de instrumentos',
-    'sla': 'acordo de nível de serviço (SLA)',
-    'consultoria': 'consultoria técnica em metrologia',
-    'gestao_parque': 'gestão de parque de instrumentos de medição',
-    'suporte': 'suporte técnico especializado',
-    'validacao': 'validação de equipamentos e processos metrológicos',
-    'nda': 'confidencialidade e não divulgação de informações',
-  };
+    // Descrição do tipo de contrato
+    const descricaoTipo = {
+        'prestacao_servico': 'prestação de serviços de calibração e ensaios metrológicos',
+        'comodato': 'comodato de equipamentos de medição',
+        'manutencao': 'manutenção preventiva e corretiva de instrumentos',
+        'sla': 'acordo de nível de serviço (SLA)',
+        'consultoria': 'consultoria técnica em metrologia',
+        'gestao_parque': 'gestão de parque de instrumentos de medição',
+        'suporte': 'suporte técnico especializado',
+        'validacao': 'validação de equipamentos e processos metrológicos',
+        'nda': 'confidencialidade e não divulgação de informações',
+    };
 
-  // Montar o contrato
-  let contrato = `
+    // Montar o contrato
+    let contrato = `
 ═══════════════════════════════════════════════════════════════════
                         CONTRATO DE ${descricaoTipo[tipo_contrato]?.toUpperCase()}
                              Nº ${numero_contrato}
@@ -752,13 +752,13 @@ Nome:                                       Nome:
 CPF:                                        CPF:
 `;
 
-  return contrato;
+    return contrato;
 }
 
 export default {
-  DADOS_ENTERFIX,
-  FORO_COMPETENTE,
-  CLAUSULAS_GERAIS,
-  CLAUSULAS_ESPECIFICAS,
-  gerarContratoCompleto,
+    DADOS_ENTERFIX,
+    FORO_COMPETENTE,
+    CLAUSULAS_GERAIS,
+    CLAUSULAS_ESPECIFICAS,
+    gerarContratoCompleto,
 };

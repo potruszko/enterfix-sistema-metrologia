@@ -88,4 +88,8 @@ WHERE table_name = 'contratos'
 
 -- Deve retornar: pdf_url | text | YES | null
 
-RAISE NOTICE '✅ Preparação concluída! Agora crie o bucket "contratos" no Storage se ainda não existir.';
+-- Mensagem final
+DO $$ 
+BEGIN
+  RAISE NOTICE '✅ Preparação concluída! Agora crie o bucket "contratos" no Storage se ainda não existir.';
+END $$;
