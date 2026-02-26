@@ -184,7 +184,7 @@ const Historico = ({ onEditRelatorio, onDuplicarRelatorio }) => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-industrial-800 mb-2">Histórico de Relatórios</h1>
+        <h1 className="text-3xl font-bold text-industrial-800 mb-2">Relatórios</h1>
         <p className="text-industrial-600">Busque e gerencie relatórios anteriores</p>
       </div>
 

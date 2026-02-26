@@ -164,10 +164,10 @@ export const calcularSugestaoUpgrade = (pacoteAtual, dadosUso) => {
 };
 
 export const CLAUSULAS_SUPORTE = {
-/**
- * Escopo do Suporte
- */
-escopo: () => `
+    /**
+     * Escopo do Suporte
+     */
+    escopo: () => `
 CLÁUSULA ESPECÍFICA 1 - DO ESCOPO DO SUPORTE TÉCNICO
 1.1. O suporte técnico compreende:
     a) Atendimento a dúvidas técnicas sobre instrumentos;
@@ -192,10 +192,10 @@ CLÁUSULA ESPECÍFICA 1 - DO ESCOPO DO SUPORTE TÉCNICO
     c) 24/7: Disponibilidade contínua para casos críticos (P1).
 `,
 
-/**
- * Níveis de Suporte
- */
-niveis: () => `
+    /**
+     * Níveis de Suporte
+     */
+    niveis: () => `
 CLÁUSULA ESPECÍFICA 2 - DOS NÍVEIS DE SUPORTE
 2.1. NÍVEL 1 - Suporte Básico (Help Desk):
     a) Atendimento de primeiro nível;
@@ -227,10 +227,10 @@ CLÁUSULA ESPECÍFICA 2 - DOS NÍVEIS DE SUPORTE
     c) Cliente solicita escalação direta: Avaliação imediata.
 `,
 
-/**
- * Classificação de Prioridades
- */
-prioridadesSuporte: () => `
+    /**
+     * Classificação de Prioridades
+     */
+    prioridadesSuporte: () => `
 CLÁUSULA ESPECÍFICA 3 - DA CLASSIFICAÇÃO DE PRIORIDADES
 3.1. CRÍTICO (P1) - Impacto Alto + Urgência Alta:
     a) Definição: Equipamento crítico parado, produção comprometida;
@@ -333,10 +333,10 @@ CLÁUSULA ESPECÍFICA 3 - DA CLASSIFICAÇÃO DE PRIORIDADES
        └───────────────────────────────────────────────────────────────┘
 `,
 
-/**
- * Pacotes de Suporte
- */
-pacotes: () => `
+    /**
+     * Pacotes de Suporte
+     */
+    pacotes: () => `
 CLÁUSULA ESPECÍFICA 4 - DOS PACOTES DE SUPORTE
 4.1. PACOTE BÁSICO:
     a) Horário: Seg-Sex, 8h às 18h;
@@ -375,10 +375,10 @@ CLÁUSULA ESPECÍFICA 4 - DOS PACOTES DE SUPORTE
     c) Faturamento no mês seguinte.
 `,
 
-/**
- * Garantias de Atendimento (SLA)
- */
-garantiasSla: () => `
+    /**
+     * Garantias de Atendimento (SLA)
+     */
+    garantiasSla: () => `
 CLÁUSULA ESPECÍFICA 5 - DAS GARANTIAS DE ATENDIMENTO (SLA)
 5.1. Tempo de Resposta garantido:
     a) P1: 1 hora (Premium) ou 2 horas (Padrão) - 95% dos casos;
@@ -409,10 +409,10 @@ CLÁUSULA ESPECÍFICA 5 - DAS GARANTIAS DE ATENDIMENTO (SLA)
     d) Teto de créditos: 30% do valor mensal.
 `,
 
-/**
- * Documentação e Base de Conhecimento
- */
-documentacao: () => `
+    /**
+     * Documentação e Base de Conhecimento
+     */
+    documentacao: () => `
 CLÁUSULA ESPECÍFICA 6 - DA DOCUMENTAÇÃO E BASE DE CONHECIMENTO
 6.1. Portal de suporte online com:
     a) Base de conhecimento: Artigos, FAQs, tutoriais;
@@ -440,10 +440,10 @@ CLÁUSULA ESPECÍFICA 6 - DA DOCUMENTAÇÃO E BASE DE CONHECIMENTO
     d) Casos de sucesso e soluções criativas.
 `,
 
-/**
- * Suporte Remoto
- */
-suporteRemoto: () => `
+    /**
+     * Suporte Remoto
+     */
+    suporteRemoto: () => `
 CLÁUSULA ESPECÍFICA 7 - DO SUPORTE REMOTO
 7.1. Ferramentas de acesso remoto:
     a) TeamViewer, AnyDesk ou similar (seguro e criptografado);

@@ -28,7 +28,7 @@ const Sidebar = ({ currentPage, onNavigate, isOpen, onClose }) => {
   const menuItems = [
     { id: 'dashboard', icon: Home, label: 'Dashboard' },
     { id: 'novo-relatorio', icon: FileText, label: 'Novo Relatório' },
-    { id: 'historico', icon: History, label: 'Histórico' },
+    { id: 'historico', icon: History, label: 'Relatórios' },
     { id: 'clientes', icon: Building2, label: 'Clientes' },
     { id: 'contratos', icon: FileSignature, label: 'Contratos' },
     { id: 'equipamentos', icon: Wrench, label: 'Equipamentos' },
