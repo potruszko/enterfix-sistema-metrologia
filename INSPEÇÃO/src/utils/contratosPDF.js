@@ -13,7 +13,10 @@ import {
     CLAUSULAS_ESPECIFICAS,
     gerarContratoCompleto
 } from './clausulasContratuais';
-import { buscarConfiguracoesEmpresa, getDadosEmpresaPadrao } from './configuracoesEmpresa';
+import {
+    buscarConfiguracoesEmpresa,
+    getDadosEmpresaPadrao
+} from './configuracoesEmpresa';
 
 /**
  * Configurações de estilo do PDF
@@ -46,8 +49,10 @@ function adicionarCabecalho(doc, numeroContrato, statusContrato) {
     try {
         // Usar logo horizontal completo (LOGO_ENTERFIX_LIGHT.png)
         const logoPath = '/assets/images/LOGO_ENTERFIX_LIGHT.png';
-        // Dimensões proporcionais: largura 45mm × altura 9mm (proporção 5:1)
-        doc.addImage(logoPath, 'PNG', ESTILOS.margemEsquerda, 10, 45, 9);
+        // Dimensões CORRETAS da marca registrada: 
+        // Imagem real: 684px × 334px = proporção 2.05:1
+        // PDF: largura 40mm × altura 19.5mm (mantém proporção 2.05:1)
+        doc.addImage(logoPath, 'PNG', ESTILOS.margemEsquerda, 10, 40, 19.5);
     } catch (error) {
         // Fallback: usar texto se logo não carregar
         console.warn('Logo não carregou, usando texto:', error);
@@ -290,282 +295,282 @@ export async function gerarPDFContrato(dadosContrato, dadosEmpresa = null, supab
                     estilo: 'bold'
                 });
                 const cliente = dadosContrato.cliente;
-            const dadosContratante = cliente.tipo_pessoa === 'juridica' ?
-                `${cliente.razao_social}, pessoa jurídica de direito privado, inscrita no CNPJ sob nº ${cliente.cnpj}${cliente.inscricao_estadual ? `, Inscrição Estadual nº ${cliente.inscricao_estadual}` : ''}, com endereço em ${cliente.logradouro || ''} ${cliente.numero ? ', ' + cliente.numero : ''}${cliente.complemento ? ' - ' + cliente.complemento : ''}, ${cliente.bairro || ''}, ${cliente.cidade || ''}/${cliente.estado || ''}, CEP ${cliente.cep || ''}.` :
-                `${cliente.razao_social}, pessoa física, portadora do CPF nº ${cliente.cpf}, residente e domiciliada em ${cliente.logradouro || ''} ${cliente.numero ? ', ' + cliente.numero : ''}${cliente.complemento ? ' - ' + cliente.complemento : ''}, ${cliente.bairro || ''}, ${cliente.cidade || ''}/${cliente.estado || ''}, CEP ${cliente.cep || ''}.`;
-            y = adicionarParagrafo(doc, dadosContratante, y);
-            y += 5;
+                const dadosContratante = cliente.tipo_pessoa === 'juridica' ?
+                    `${cliente.razao_social}, pessoa jurídica de direito privado, inscrita no CNPJ sob nº ${cliente.cnpj}${cliente.inscricao_estadual ? `, Inscrição Estadual nº ${cliente.inscricao_estadual}` : ''}, com endereço em ${cliente.logradouro || ''} ${cliente.numero ? ', ' + cliente.numero : ''}${cliente.complemento ? ' - ' + cliente.complemento : ''}, ${cliente.bairro || ''}, ${cliente.cidade || ''}/${cliente.estado || ''}, CEP ${cliente.cep || ''}.` :
+                    `${cliente.razao_social}, pessoa física, portadora do CPF nº ${cliente.cpf}, residente e domiciliada em ${cliente.logradouro || ''} ${cliente.numero ? ', ' + cliente.numero : ''}${cliente.complemento ? ' - ' + cliente.complemento : ''}, ${cliente.bairro || ''}, ${cliente.cidade || ''}/${cliente.estado || ''}, CEP ${cliente.cep || ''}.`;
+                y = adicionarParagrafo(doc, dadosContratante, y);
+                y += 5;
 
-            const introducao = `Têm entre si justo e contratado o seguinte:`;
-            y = adicionarParagrafo(doc, introducao, y, {
-                estilo: 'italic'
-            });
-            y += 8;
-
-            // ═══════════ CLÁUSULAS ═══════════
-
-            // CLÁUSULA 1 - OBJETO
-            y = adicionarTituloSecao(doc, 'CLÁUSULA PRIMEIRA - DO OBJETO', y);
-            const descricaoServico = {
-                'prestacao_servico': 'prestação de serviços de calibração e ensaios metrológicos',
-                'comodato': 'comodato de equipamentos de medição',
-                'manutencao': 'manutenção preventiva e corretiva de instrumentos de medição',
-                'sla': 'prestação de serviços com acordo de nível de serviço (SLA)',
-                'consultoria': 'consultoria técnica em metrologia',
-                'gestao_parque': 'gestão de parque de instrumentos de medição',
-                'suporte': 'suporte técnico especializado em metrologia',
-                'validacao': 'validação de equipamentos e processos metrológicos',
-                'nda': 'prestação de serviços com acordo de confidencialidade',
-            };
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.objeto(descricaoServico[dadosContrato.tipo_contrato]), y);
-            y += 5;
-
-            // CLÁUSULA 2 - VIGÊNCIA
-            y = adicionarTituloSecao(doc, 'CLÁUSULA SEGUNDA - DA VIGÊNCIA', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.vigencia(
-                dataExtenso(dadosContrato.data_inicio),
-                dadosContrato.data_fim ? dataExtenso(dadosContrato.data_fim) : null,
-                dadosContrato.prazo_indeterminado
-            ), y);
-            y += 5;
-
-            // CLÁUSULA 3 - VALOR E PAGAMENTO
-            y = adicionarTituloSecao(doc, 'CLÁUSULA TERCEIRA - DO VALOR E FORMA DE PAGAMENTO', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.valorPagamento(
-                dadosContrato.valor_total || 0,
-                dadosContrato.valor_mensal || null,
-                dadosContrato.forma_pagamento
-            ), y);
-            y += 5;
-
-            // CLÁUSULA 4 - OBRIGAÇÕES DA CONTRATADA
-            y = adicionarTituloSecao(doc, 'CLÁUSULA QUARTA - DAS OBRIGAÇÕES DA CONTRATADA', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.obrigacoesContratada(), y);
-            y += 5;
-
-            // CLÁUSULA 5 - OBRIGAÇÕES DA CONTRATANTE
-            y = adicionarTituloSecao(doc, 'CLÁUSULA QUINTA - DAS OBRIGAÇÕES DA CONTRATANTE', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.obrigacoesContratante(), y);
-            y += 5;
-
-            // CLÁUSULA 6 - LIMITAÇÃO DE RESPONSABILIDADE
-            y = adicionarTituloSecao(doc, 'CLÁUSULA SEXTA - DA LIMITAÇÃO DE RESPONSABILIDADE', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.limitacaoResponsabilidade(), y);
-            y += 5;
-
-            // CLÁUSULA 7 - CONFIDENCIALIDADE E LGPD
-            y = adicionarTituloSecao(doc, 'CLÁUSULA SÉTIMA - DA CONFIDENCIALIDADE E PROTEÇÃO DE DADOS', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.confidencialidade(), y);
-            y += 5;
-
-            // CLÁUSULA 8 - GARANTIA
-            y = adicionarTituloSecao(doc, 'CLÁUSULA OITAVA - DA GARANTIA', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.garantia('90 dias'), y);
-            y += 5;
-
-            // CLÁUSULA 9 - RESCISÃO
-            y = adicionarTituloSecao(doc, 'CLÁUSULA NONA - DA RESCISÃO', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.rescisao(), y);
-            y += 5;
-
-            // CLÁUSULAS ESPECÍFICAS DO TIPO DE CONTRATO (DESTACADAS)
-            if (CLAUSULAS_ESPECIFICAS[dadosContrato.tipo_contrato]) {
-                const clausulaEspecifica = CLAUSULAS_ESPECIFICAS[dadosContrato.tipo_contrato](dadosContrato.dados_especificos || {});
-
-                // Nova página para cláusulas específicas (melhor organização)
-                doc.addPage();
-                y = ESTILOS.margemSuperior + 30;
-
-                // Título destacado
-                doc.setFontSize(14);
-                doc.setFont(ESTILOS.fontePrincipal, 'bold');
-                doc.setTextColor(...ESTILOS.corPrimaria);
-                doc.text('CLÁUSULAS ESPECÍFICAS', ESTILOS.larguraPagina / 2, y, {
-                    align: 'center'
+                const introducao = `Têm entre si justo e contratado o seguinte:`;
+                y = adicionarParagrafo(doc, introducao, y, {
+                    estilo: 'italic'
                 });
                 y += 8;
 
-                // Subtítulo com tipo de contrato
-                doc.setFontSize(12);
-                const titulosContratos = {
-                    'prestacao_servico': 'Prestação de Serviços de Calibração',
-                    'comodato': 'Comodato de Equipamentos',
-                    'manutencao': 'Manutenção de Instrumentos',
-                    'sla': 'Acordo de Nível de Serviço (SLA)',
-                    'consultoria': 'Consultoria em Metrologia',
-                    'gestao_parque': 'Gestão de Parque de Instrumentos',
-                    'suporte': 'Suporte Técnico Especializado',
-                    'validacao': 'Validação de Equipamentos',
-                    'nda': 'Confidencialidade (NDA)'
+                // ═══════════ CLÁUSULAS ═══════════
+
+                // CLÁUSULA 1 - OBJETO
+                y = adicionarTituloSecao(doc, 'CLÁUSULA PRIMEIRA - DO OBJETO', y);
+                const descricaoServico = {
+                    'prestacao_servico': 'prestação de serviços de calibração e ensaios metrológicos',
+                    'comodato': 'comodato de equipamentos de medição',
+                    'manutencao': 'manutenção preventiva e corretiva de instrumentos de medição',
+                    'sla': 'prestação de serviços com acordo de nível de serviço (SLA)',
+                    'consultoria': 'consultoria técnica em metrologia',
+                    'gestao_parque': 'gestão de parque de instrumentos de medição',
+                    'suporte': 'suporte técnico especializado em metrologia',
+                    'validacao': 'validação de equipamentos e processos metrológicos',
+                    'nda': 'prestação de serviços com acordo de confidencialidade',
                 };
-                doc.text(titulosContratos[dadosContrato.tipo_contrato] || 'Disposições Específicas', ESTILOS.larguraPagina / 2, y, {
-                    align: 'center'
-                });
-
-                doc.setDrawColor(...ESTILOS.corPrimaria);
-                doc.setLineWidth(0.5);
-                doc.line(ESTILOS.margemEsquerda, y + 2, ESTILOS.larguraPagina - ESTILOS.margemDireita, y + 2);
-
-                y += 10;
-                doc.setTextColor(...ESTILOS.corTexto);
-                doc.setFont(ESTILOS.fontePrincipal, 'normal');
-
-                y = adicionarParagrafo(doc, clausulaEspecifica, y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.objeto(descricaoServico[dadosContrato.tipo_contrato]), y);
                 y += 5;
-            }
 
-            // CLÁUSULAS ADICIONAIS (se houver)
-            if (dadosContrato.clausulas_adicionais && dadosContrato.clausulas_adicionais.trim()) {
-                y = adicionarTituloSecao(doc, 'CLÁUSULA ADICIONAL', y);
-                y = adicionarParagrafo(doc, dadosContrato.clausulas_adicionais, y);
+                // CLÁUSULA 2 - VIGÊNCIA
+                y = adicionarTituloSecao(doc, 'CLÁUSULA SEGUNDA - DA VIGÊNCIA', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.vigencia(
+                    dataExtenso(dadosContrato.data_inicio),
+                    dadosContrato.data_fim ? dataExtenso(dadosContrato.data_fim) : null,
+                    dadosContrato.prazo_indeterminado
+                ), y);
                 y += 5;
-            }
 
-            // CLÁUSULA FINAL - DISPOSIÇÕES GERAIS
-            y = adicionarTituloSecao(doc, 'CLÁUSULA DÉCIMA - DAS DISPOSIÇÕES GERAIS', y);
-            y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.disposicoesGerais(), y);
-            y += 10;
-
-            // ═══════════ ASSINATURAS ═══════════
-            // Nova página para assinaturas
-            doc.addPage();
-            y = ESTILOS.margemSuperior + 30;
-
-            const limiteInferior = ESTILOS.alturaPagina - ESTILOS.margemInferior - 30; // Reservar espaço para rodapé
-
-            const encerramento = `E por estarem assim justas e contratadas, as partes assinam o presente contrato em 2 (duas) vias de igual teor e forma, na presença das testemunhas abaixo.`;
-            const linhasEncerramento = doc.splitTextToSize(encerramento, ESTILOS.larguraPagina - 40);
-            doc.setFontSize(10);
-            doc.setFont(ESTILOS.fontePrincipal, 'italic');
-            linhasEncerramento.forEach(linha => {
-                doc.text(linha, ESTILOS.larguraPagina / 2, y, {
-                    align: 'center'
-                });
+                // CLÁUSULA 3 - VALOR E PAGAMENTO
+                y = adicionarTituloSecao(doc, 'CLÁUSULA TERCEIRA - DO VALOR E FORMA DE PAGAMENTO', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.valorPagamento(
+                    dadosContrato.valor_total || 0,
+                    dadosContrato.valor_mensal || null,
+                    dadosContrato.forma_pagamento
+                ), y);
                 y += 5;
-            });
-            y += 5;
 
-            const dataAssinatura = `${dadosEmpresa.cidade}/${dadosEmpresa.estado}, ${dataExtenso(new Date().toISOString().split('T')[0])}.`;
-            doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text(dataAssinatura, ESTILOS.larguraPagina / 2, y, {
-                align: 'center'
-            });
-            y += 15;
+                // CLÁUSULA 4 - OBRIGAÇÕES DA CONTRATADA
+                y = adicionarTituloSecao(doc, 'CLÁUSULA QUARTA - DAS OBRIGAÇÕES DA CONTRATADA', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.obrigacoesContratada(), y);
+                y += 5;
 
-            // Verificar espaço disponível
-            const espacoNecessario = 80; // Espaço para assinaturas
-            if (y + espacoNecessario > limiteInferior) {
-                doc.addPage();
-                y = ESTILOS.margemSuperior + 30;
-            }
+                // CLÁUSULA 5 - OBRIGAÇÕES DA CONTRATANTE
+                y = adicionarTituloSecao(doc, 'CLÁUSULA QUINTA - DAS OBRIGAÇÕES DA CONTRATANTE', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.obrigacoesContratante(), y);
+                y += 5;
 
-            // Bloco CONTRATADA
-            doc.setDrawColor(...ESTILOS.corTexto);
-            doc.setLineWidth(0.3);
-            const larguraAssinatura = 70;
-            const centroX = ESTILOS.larguraPagina / 2;
+                // CLÁUSULA 6 - LIMITAÇÃO DE RESPONSABILIDADE
+                y = adicionarTituloSecao(doc, 'CLÁUSULA SEXTA - DA LIMITAÇÃO DE RESPONSABILIDADE', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.limitacaoResponsabilidade(), y);
+                y += 5;
 
-            doc.line(centroX - larguraAssinatura / 2, y, centroX + larguraAssinatura / 2, y);
-            y += 4;
-            doc.setFontSize(10);
-            doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text(dadosEmpresa.razaoSocial, centroX, y, {
-                align: 'center'
-            });
-            y += 4;
-            doc.setFontSize(9);
-            doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text(`CNPJ: ${dadosEmpresa.cnpj}`, centroX, y, {
-                align: 'center'
-            });
-            y += 4;
-            doc.setFontSize(10);
-            doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text('CONTRATADA', centroX, y, {
-                align: 'center'
-            });
-            y += 15;
+                // CLÁUSULA 7 - CONFIDENCIALIDADE E LGPD
+                y = adicionarTituloSecao(doc, 'CLÁUSULA SÉTIMA - DA CONFIDENCIALIDADE E PROTEÇÃO DE DADOS', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.confidencialidade(), y);
+                y += 5;
 
-            // Bloco CONTRATANTE
-            doc.setDrawColor(...ESTILOS.corTexto);
-            doc.line(centroX - larguraAssinatura / 2, y, centroX + larguraAssinatura / 2, y);
-            y += 4;
-            doc.setFontSize(10);
-            doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text(cliente.razao_social, centroX, y, {
-                align: 'center'
-            });
-            y += 4;
-            doc.setFontSize(9);
-            doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text(cliente.tipo_pessoa === 'juridica' ? `CNPJ: ${cliente.cnpj}` : `CPF: ${cliente.cpf}`, centroX, y, {
-                align: 'center'
-            });
-            y += 4;
-            doc.setFontSize(10);
-            doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text('CONTRATANTE', centroX, y, {
-                align: 'center'
-            });
-            y += 15;
+                // CLÁUSULA 8 - GARANTIA
+                y = adicionarTituloSecao(doc, 'CLÁUSULA OITAVA - DA GARANTIA', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.garantia('90 dias'), y);
+                y += 5;
 
-            // TESTEMUNHAS (verificar espaço novamente)
-            const espacoTestemunhas = 25;
-            if (y + espacoTestemunhas > limiteInferior) {
-                doc.addPage();
-                y = ESTILOS.margemSuperior + 30;
-            }
+                // CLÁUSULA 9 - RESCISÃO
+                y = adicionarTituloSecao(doc, 'CLÁUSULA NONA - DA RESCISÃO', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.rescisao(), y);
+                y += 5;
 
-            doc.setFontSize(10);
-            doc.setFont(ESTILOS.fontePrincipal, 'bold');
-            doc.text('TESTEMUNHAS:', ESTILOS.margemEsquerda, y);
-            y += 8;
+                // CLÁUSULAS ESPECÍFICAS DO TIPO DE CONTRATO (DESTACADAS)
+                if (CLAUSULAS_ESPECIFICAS[dadosContrato.tipo_contrato]) {
+                    const clausulaEspecifica = CLAUSULAS_ESPECIFICAS[dadosContrato.tipo_contrato](dadosContrato.dados_especificos || {});
 
-            const larguraTeste = 65;
-            const espacoEntreTestemunhas = 10;
-            const testemunha1X = centroX - larguraTeste - espacoEntreTestemunhas / 2;
-            const testemunha2X = centroX + espacoEntreTestemunhas / 2;
+                    // Nova página para cláusulas específicas (melhor organização)
+                    doc.addPage();
+                    y = ESTILOS.margemSuperior + 30;
 
-            // Testemunha 1
-            doc.setDrawColor(...ESTILOS.corTexto);
-            doc.line(testemunha1X, y, testemunha1X + larguraTeste, y);
-            // Testemunha 2
-            doc.line(testemunha2X, y, testemunha2X + larguraTeste, y);
+                    // Título destacado
+                    doc.setFontSize(14);
+                    doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                    doc.setTextColor(...ESTILOS.corPrimaria);
+                    doc.text('CLÁUSULAS ESPECÍFICAS', ESTILOS.larguraPagina / 2, y, {
+                        align: 'center'
+                    });
+                    y += 8;
 
-            y += 4;
-            doc.setFontSize(9);
-            doc.setFont(ESTILOS.fontePrincipal, 'normal');
-            doc.text('Nome:', testemunha1X, y);
-            doc.text('Nome:', testemunha2X, y);
-            y += 4;
-            doc.text('CPF:', testemunha1X, y);
-            doc.text('CPF:', testemunha2X, y);
+                    // Subtítulo com tipo de contrato
+                    doc.setFontSize(12);
+                    const titulosContratos = {
+                        'prestacao_servico': 'Prestação de Serviços de Calibração',
+                        'comodato': 'Comodato de Equipamentos',
+                        'manutencao': 'Manutenção de Instrumentos',
+                        'sla': 'Acordo de Nível de Serviço (SLA)',
+                        'consultoria': 'Consultoria em Metrologia',
+                        'gestao_parque': 'Gestão de Parque de Instrumentos',
+                        'suporte': 'Suporte Técnico Especializado',
+                        'validacao': 'Validação de Equipamentos',
+                        'nda': 'Confidencialidade (NDA)'
+                    };
+                    doc.text(titulosContratos[dadosContrato.tipo_contrato] || 'Disposições Específicas', ESTILOS.larguraPagina / 2, y, {
+                        align: 'center'
+                    });
 
-            // ═══════════ RODAPÉS ═══════════
-            const totalPaginas = doc.getNumberOfPages();
-            for (let i = 1; i <= totalPaginas; i++) {
-                doc.setPage(i);
-                adicionarRodape(doc, i, totalPaginas, dadosEmpresa);
-                if (i > 1) { // Cabeçalho em todas exceto primeira
-                    adicionarCabecalho(doc, dadosContrato.numero_contrato, dadosContrato.status);
+                    doc.setDrawColor(...ESTILOS.corPrimaria);
+                    doc.setLineWidth(0.5);
+                    doc.line(ESTILOS.margemEsquerda, y + 2, ESTILOS.larguraPagina - ESTILOS.margemDireita, y + 2);
+
+                    y += 10;
+                    doc.setTextColor(...ESTILOS.corTexto);
+                    doc.setFont(ESTILOS.fontePrincipal, 'normal');
+
+                    y = adicionarParagrafo(doc, clausulaEspecifica, y);
+                    y += 5;
                 }
+
+                // CLÁUSULAS ADICIONAIS (se houver)
+                if (dadosContrato.clausulas_adicionais && dadosContrato.clausulas_adicionais.trim()) {
+                    y = adicionarTituloSecao(doc, 'CLÁUSULA ADICIONAL', y);
+                    y = adicionarParagrafo(doc, dadosContrato.clausulas_adicionais, y);
+                    y += 5;
+                }
+
+                // CLÁUSULA FINAL - DISPOSIÇÕES GERAIS
+                y = adicionarTituloSecao(doc, 'CLÁUSULA DÉCIMA - DAS DISPOSIÇÕES GERAIS', y);
+                y = adicionarParagrafo(doc, CLAUSULAS_GERAIS.disposicoesGerais(), y);
+                y += 10;
+
+                // ═══════════ ASSINATURAS ═══════════
+                // Nova página para assinaturas
+                doc.addPage();
+                y = ESTILOS.margemSuperior + 30;
+
+                const limiteInferior = ESTILOS.alturaPagina - ESTILOS.margemInferior - 30; // Reservar espaço para rodapé
+
+                const encerramento = `E por estarem assim justas e contratadas, as partes assinam o presente contrato em 2 (duas) vias de igual teor e forma, na presença das testemunhas abaixo.`;
+                const linhasEncerramento = doc.splitTextToSize(encerramento, ESTILOS.larguraPagina - 40);
+                doc.setFontSize(10);
+                doc.setFont(ESTILOS.fontePrincipal, 'italic');
+                linhasEncerramento.forEach(linha => {
+                    doc.text(linha, ESTILOS.larguraPagina / 2, y, {
+                        align: 'center'
+                    });
+                    y += 5;
+                });
+                y += 5;
+
+                const dataAssinatura = `${dadosEmpresa.cidade}/${dadosEmpresa.estado}, ${dataExtenso(new Date().toISOString().split('T')[0])}.`;
+                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.text(dataAssinatura, ESTILOS.larguraPagina / 2, y, {
+                    align: 'center'
+                });
+                y += 15;
+
+                // Verificar espaço disponível
+                const espacoNecessario = 80; // Espaço para assinaturas
+                if (y + espacoNecessario > limiteInferior) {
+                    doc.addPage();
+                    y = ESTILOS.margemSuperior + 30;
+                }
+
+                // Bloco CONTRATADA
+                doc.setDrawColor(...ESTILOS.corTexto);
+                doc.setLineWidth(0.3);
+                const larguraAssinatura = 70;
+                const centroX = ESTILOS.larguraPagina / 2;
+
+                doc.line(centroX - larguraAssinatura / 2, y, centroX + larguraAssinatura / 2, y);
+                y += 4;
+                doc.setFontSize(10);
+                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.text(dadosEmpresa.razaoSocial, centroX, y, {
+                    align: 'center'
+                });
+                y += 4;
+                doc.setFontSize(9);
+                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.text(`CNPJ: ${dadosEmpresa.cnpj}`, centroX, y, {
+                    align: 'center'
+                });
+                y += 4;
+                doc.setFontSize(10);
+                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.text('CONTRATADA', centroX, y, {
+                    align: 'center'
+                });
+                y += 15;
+
+                // Bloco CONTRATANTE
+                doc.setDrawColor(...ESTILOS.corTexto);
+                doc.line(centroX - larguraAssinatura / 2, y, centroX + larguraAssinatura / 2, y);
+                y += 4;
+                doc.setFontSize(10);
+                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.text(cliente.razao_social, centroX, y, {
+                    align: 'center'
+                });
+                y += 4;
+                doc.setFontSize(9);
+                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.text(cliente.tipo_pessoa === 'juridica' ? `CNPJ: ${cliente.cnpj}` : `CPF: ${cliente.cpf}`, centroX, y, {
+                    align: 'center'
+                });
+                y += 4;
+                doc.setFontSize(10);
+                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.text('CONTRATANTE', centroX, y, {
+                    align: 'center'
+                });
+                y += 15;
+
+                // TESTEMUNHAS (verificar espaço novamente)
+                const espacoTestemunhas = 25;
+                if (y + espacoTestemunhas > limiteInferior) {
+                    doc.addPage();
+                    y = ESTILOS.margemSuperior + 30;
+                }
+
+                doc.setFontSize(10);
+                doc.setFont(ESTILOS.fontePrincipal, 'bold');
+                doc.text('TESTEMUNHAS:', ESTILOS.margemEsquerda, y);
+                y += 8;
+
+                const larguraTeste = 65;
+                const espacoEntreTestemunhas = 10;
+                const testemunha1X = centroX - larguraTeste - espacoEntreTestemunhas / 2;
+                const testemunha2X = centroX + espacoEntreTestemunhas / 2;
+
+                // Testemunha 1
+                doc.setDrawColor(...ESTILOS.corTexto);
+                doc.line(testemunha1X, y, testemunha1X + larguraTeste, y);
+                // Testemunha 2
+                doc.line(testemunha2X, y, testemunha2X + larguraTeste, y);
+
+                y += 4;
+                doc.setFontSize(9);
+                doc.setFont(ESTILOS.fontePrincipal, 'normal');
+                doc.text('Nome:', testemunha1X, y);
+                doc.text('Nome:', testemunha2X, y);
+                y += 4;
+                doc.text('CPF:', testemunha1X, y);
+                doc.text('CPF:', testemunha2X, y);
+
+                // ═══════════ RODAPÉS ═══════════
+                const totalPaginas = doc.getNumberOfPages();
+                for (let i = 1; i <= totalPaginas; i++) {
+                    doc.setPage(i);
+                    adicionarRodape(doc, i, totalPaginas, dadosEmpresa);
+                    if (i > 1) { // Cabeçalho em todas exceto primeira
+                        adicionarCabecalho(doc, dadosContrato.numero_contrato, dadosContrato.status);
+                    }
+                }
+
+                // ═══════════ FINALIZAR ═══════════
+                const pdfBlob = doc.output('blob');
+                const pdfBase64 = doc.output('dataurlstring');
+
+                resolve({
+                    blob: pdfBlob,
+                    base64: pdfBase64,
+                    filename: `Contrato_${dadosContrato.numero_contrato}_${dadosContrato.cliente.razao_social.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`
+                });
+
+            } catch (error) {
+                console.error('Erro ao gerar PDF do contrato:', error);
+                reject(error);
             }
-
-            // ═══════════ FINALIZAR ═══════════
-            const pdfBlob = doc.output('blob');
-            const pdfBase64 = doc.output('dataurlstring');
-
-            resolve({
-                blob: pdfBlob,
-                base64: pdfBase64,
-                filename: `Contrato_${dadosContrato.numero_contrato}_${dadosContrato.cliente.razao_social.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`
-            });
-
-        } catch (error) {
-            console.error('Erro ao gerar PDF do contrato:', error);
-            reject(error);
-        }
-    });
+        });
     } catch (error) {
         console.error('Erro ao buscar configurações ou gerar PDF:', error);
         throw error;
@@ -618,7 +623,7 @@ export async function gerarEUploadPDFContrato(supabase, dadosContrato) {
     try {
         // 1. Buscar dados da empresa
         const dadosEmpresa = await buscarConfiguracoesEmpresa(supabase);
-        
+
         // 2. Gerar PDF
         const {
             blob,
