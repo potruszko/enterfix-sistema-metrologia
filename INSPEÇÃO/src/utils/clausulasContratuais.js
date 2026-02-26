@@ -16,7 +16,7 @@
 export const DADOS_ENTERFIX = {
     razaoSocial: 'ENTERFIX INDUSTRIA COMERCIO E SERVIÇOS LTDA',
     cnpj: '13.250.539/0001-40', // ATUALIZAR COM CNPJ REAL
-    endereco: 'Rua WWaldemar Martins Ferreira, 289, Vila Alvinópolis',
+    endereco: 'Rua Waldemar Martins Ferreira, 289, Vila Alvinópolis',
     cidade: 'São Bernardo do Campo',
     estado: 'SP',
     cep: '09891-010',
