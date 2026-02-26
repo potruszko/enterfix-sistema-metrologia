@@ -5,6 +5,20 @@ import {
     formatDate
 } from './metrologyUtils';
 
+// ═══════════════════════════════════════════════════════════════════
+// ESTILOS GLOBAIS - PADRÃO ENTERFIX
+// ═══════════════════════════════════════════════════════════════════
+import {
+    LOGO_ENTERFIX,
+    CORES,
+    TIPOGRAFIA,
+    LAYOUT,
+    ESTILOS_TABELA,
+    PRESET_RELATORIO,
+    getLarguraUtil,
+    getCentro,
+} from './shared/estilosPDF.js';
+
 // Logo Enterfix em Base64 (cache)
 let enterfixLogoBase64 = null;
 let enterfixLogoAspectRatio = 3.5; // Proporção padrão (largura/altura)
@@ -390,24 +404,23 @@ const generateReparoApalpadorPDF = async (dados) => {
         ],
         body: desvioData,
         theme: 'grid',
+        // Estilos padrão Enterfix
         headStyles: {
-            fillColor: [245, 245, 245],
-            textColor: [0, 0, 0],
-            fontStyle: 'bold',
+            ...ESTILOS_TABELA.cabecalho,
             fontSize: 9,
             halign: 'center',
             cellPadding: 4
         },
         bodyStyles: {
+            ...ESTILOS_TABELA.corpo,
             fontSize: 9,
-            textColor: [0, 0, 0],
             cellPadding: 3
         },
         columnStyles: {
             0: {
                 halign: 'center',
                 cellWidth: 20,
-                fillColor: [250, 250, 250]
+                fillColor: CORES.fundoCinza
             },
             1: {
                 halign: 'center',
@@ -471,17 +484,16 @@ const generateReparoApalpadorPDF = async (dados) => {
         ],
         body: repetibilidadeTableData,
         theme: 'grid',
+        // Estilos padrão Enterfix
         headStyles: {
-            fillColor: [245, 245, 245],
-            textColor: [0, 0, 0],
-            fontStyle: 'bold',
+            ...ESTILOS_TABELA.cabecalho,
             fontSize: 8,
             halign: 'center',
             cellPadding: 2
         },
         bodyStyles: {
+            ...ESTILOS_TABELA.corpo,
             fontSize: 7,
-            textColor: [0, 0, 0],
             cellPadding: 2,
             halign: 'center'
         },
@@ -629,14 +641,14 @@ const generateReparoApalpadorPDF = async (dados) => {
                 const cellText = data.cell.text[0];
 
                 if (cellText.startsWith('OK')) {
-                    // Estilo para OK: fundo verde claro, texto verde escuro, negrito
-                    data.cell.styles.fillColor = [220, 255, 220];
-                    data.cell.styles.textColor = [0, 128, 0];
+                    // Estilo Enterfix: OK (sucesso)
+                    data.cell.styles.fillColor = CORES.sucessoClaro;
+                    data.cell.styles.textColor = CORES.sucesso;
                     data.cell.styles.fontStyle = 'bold';
                 } else if (cellText === 'NOK') {
-                    // Estilo para NOK: fundo vermelho claro, texto vermelho escuro, negrito
-                    data.cell.styles.fillColor = [255, 220, 220];
-                    data.cell.styles.textColor = [200, 0, 0];
+                    // Estilo Enterfix: NOK (erro)
+                    data.cell.styles.fillColor = CORES.erroClaro;
+                    data.cell.styles.textColor = CORES.erro;
                     data.cell.styles.fontStyle = 'bold';
                 }
             }
@@ -756,8 +768,9 @@ const generateReparoApalpadorPDF = async (dados) => {
     }
 
     const parecerFinal = dados.status_final || 'APROVADO';
-    const parecerColor = parecerFinal === 'APROVADO' ? [220, 255, 220] : [255, 220, 220];
-    const parecerTextColor = parecerFinal === 'APROVADO' ? [0, 128, 0] : [200, 0, 0];
+    // Cores padrão Enterfix
+    const parecerColor = parecerFinal === 'APROVADO' ? CORES.sucessoClaro : CORES.erroClaro;
+    const parecerTextColor = parecerFinal === 'APROVADO' ? CORES.sucesso : CORES.erro;
 
     doc.setFillColor(...parecerColor);
     doc.rect(14, yPosition, pageWidth - 28, 20, 'F');
@@ -921,19 +934,18 @@ export const generatePDF = async (dados) => {
         ],
         body: tableData,
         theme: 'grid', // Grid clean para impressão
+        // Estilos padrão Enterfix
         headStyles: {
-            fillColor: [245, 245, 245], // Cinza muito claro
-            textColor: [0, 0, 0], // Preto
-            fontStyle: 'bold',
+            ...ESTILOS_TABELA.cabecalho,
             fontSize: 9,
             halign: 'center',
             cellPadding: 4,
             lineWidth: 0.1,
-            lineColor: [200, 200, 200]
+            lineColor: CORES.linha
         },
         bodyStyles: {
+            ...ESTILOS_TABELA.corpo,
             fontSize: 8,
-            textColor: [0, 0, 0], // Preto
             cellPadding: 3,
             lineWidth: 0.1,
             lineColor: [200, 200, 200] // Linhas finas cinza
@@ -1007,10 +1019,10 @@ export const generatePDF = async (dados) => {
             if (data.column.index === statusColumnIndex && data.section === 'body') {
                 const status = data.cell.raw;
                 if (status === 'OK') {
-                    data.cell.styles.textColor = [22, 101, 52]; // Verde escuro
+                    data.cell.styles.textColor = CORES.sucesso; // Verde Enterfix
                     data.cell.styles.fontStyle = 'bold';
                 } else if (status === 'NOK') {
-                    data.cell.styles.textColor = [153, 27, 27]; // Vermelho escuro
+                    data.cell.styles.textColor = CORES.erro; // Vermelho Enterfix
                     data.cell.styles.fontStyle = 'bold';
                 }
             }

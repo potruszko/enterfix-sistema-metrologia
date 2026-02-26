@@ -5,7 +5,10 @@
  * nos documentos PDF.
  */
 
-import { ESTILOS, getLarguraUtil } from './estilos.js';
+import {
+    ESTILOS,
+    getLarguraUtil
+} from './estilos.js';
 
 /**
  * Formata data para formato extenso em português
@@ -35,10 +38,10 @@ export function dataExtenso(data) {
 export function adicionarParagrafo(doc, texto, y, opcoes = {}) {
     const {
         tamanhoFonte = ESTILOS.tamanhoTexto,
-        estilo = 'normal',
-        cor = ESTILOS.corTexto,
-        alinhamento = 'justify',
-        recuo = 0
+            estilo = 'normal',
+            cor = ESTILOS.corTexto,
+            alinhamento = 'justify',
+            recuo = 0
     } = opcoes;
 
     doc.setFontSize(tamanhoFonte);
@@ -108,8 +111,8 @@ export function adicionarTituloSecao(doc, titulo, y) {
 export function adicionarLinhaSeparadora(doc, y, opcoes = {}) {
     const {
         cor = ESTILOS.corPrimaria,
-        espessura = 0.5,
-        largura = getLarguraUtil()
+            espessura = 0.5,
+            largura = getLarguraUtil()
     } = opcoes;
 
     doc.setDrawColor(...cor);

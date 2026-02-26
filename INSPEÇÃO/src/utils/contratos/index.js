@@ -16,7 +16,13 @@
  */
 
 // ============= SHARED =============
-export { ESTILOS, getLarguraUtil, getAlturaUtil, getCentroX } from './shared/estilos.js';
+export {
+    ESTILOS,
+    getLarguraUtil,
+    getAlturaUtil,
+    getCentroX
+}
+from './shared/estilos.js';
 export {
     dataExtenso,
     adicionarParagrafo,
@@ -27,18 +33,27 @@ export {
     formatarValorBRL,
     formatarCPF,
     formatarCNPJ
-} from './shared/helpers.js';
+}
+from './shared/helpers.js';
 export {
     adicionarCabecalho,
     adicionarRodape,
     aplicarCabecalhoRodapeEmTodasPaginas
-} from './shared/cabecalhoRodape.js';
+}
+from './shared/cabecalhoRodape.js';
 
 // ============= CLÁUSULAS GERAIS =============
-export { CLAUSULAS_GERAIS, FORO_COMPETENTE, TITULOS_CONTRATOS } from './clausulas/gerais.js';
+export {
+    CLAUSULAS_GERAIS,
+    FORO_COMPETENTE,
+    TITULOS_CONTRATOS
+}
+from './clausulas/gerais.js';
 
 // ============= CLÁUSULAS ESPECÍFICAS =============
-import { CLAUSULAS_PRESTACAO_SERVICO } from './clausulas/prestacaoServico.js';
+import {
+    CLAUSULAS_PRESTACAO_SERVICO
+} from './clausulas/prestacaoServico.js';
 
 // TODO: Criar arquivos para os demais tipos
 // import { CLAUSULAS_COMODATO } from './clausulas/comodato.js';
@@ -98,6 +113,8 @@ export function getTiposImplementados() {
  * @returns {string} Título formatado
  */
 export function getTituloContrato(tipoContrato) {
-    const { TITULOS_CONTRATOS } = require('./clausulas/gerais.js');
+    const {
+        TITULOS_CONTRATOS
+    } = require('./clausulas/gerais.js');
     return TITULOS_CONTRATOS[tipoContrato] || 'CONTRATO DE SERVIÇOS';
 }

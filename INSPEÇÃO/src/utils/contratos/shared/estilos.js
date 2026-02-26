@@ -1,66 +1,38 @@
 /**
- * ESTILOS COMPARTILHADOS - PDFs de Contratos
+ * RE-EXPORTAÇÕES - Compatibilidade com código de contratos
  * 
- * Configurações visuais padronizadas para todos os tipos de contrato.
- * Mantém identidade visual consistente da marca Enterfix.
+ * Este arquivo mantém compatibilidade com código existente.
+ * Os estilos reais estão em: src/utils/shared/estilosPDF.js
+ * 
+ * @deprecated Importe diretamente de '../../shared/estilosPDF.js'
  */
 
-/**
- * Configurações de estilo do PDF
- */
-export const ESTILOS = {
-    // Fontes
-    fontePrincipal: 'times',
-    tamanhoTitulo: 16,
-    tamanhoSubtitulo: 12,
-    tamanhoTexto: 10,
-    tamanhoRodape: 8,
+// Re-exportar tudo do arquivo global
+export {
+    // Elementos principais
+    LOGO_ENTERFIX,
+    CORES,
+    TIPOGRAFIA,
+    LAYOUT,
+    ESTILOS_TABELA,
     
-    // Margens (mm)
-    margemEsquerda: 20,
-    margemDireita: 20,
-    margemSuperior: 20,
-    margemInferior: 20,
-    espacamentoLinha: 5,
+    // Funções utilitárias
+    getLarguraUtil,
+    getAlturaUtil,
+    getCentroX,
+    getCentro,
+    getMargemDireita,
+    getLimiteInferior,
+    temEspacoNaPagina,
     
-    // Dimensões da página A4 (mm)
-    larguraPagina: 210,
-    alturaPagina: 297,
+    // Presets
+    PRESET_CONTRATO,
+    PRESET_RELATORIO,
+    PRESET_CERTIFICADO,
     
-    // Cores (RGB)
-    corPrimaria: [0, 51, 102],      // Azul escuro Enterfix
-    corSecundaria: [128, 128, 128], // Cinza
-    corTexto: [0, 0, 0],            // Preto
-    corDestaque: [41, 128, 185],    // Azul claro
-    
-    // Logo da marca registrada
-    logo: {
-        path: '/assets/images/LOGO_ENTERFIX_LIGHT.png',
-        // Dimensões baseadas na proporção real da imagem (684px × 334px = 2.05:1)
-        largura: 40,    // mm
-        altura: 19.5,   // mm (mantém proporção 2.05:1)
-        posX: 20,       // Alinhado à margem esquerda
-        posY: 10,       // Topo da página
-    },
-};
+    // Compatibilidade legada
+    ESTILOS,
+} from '../../shared/estilosPDF.js';
 
-/**
- * Calcula largura útil da página (descontando margens)
- */
-export function getLarguraUtil() {
-    return ESTILOS.larguraPagina - ESTILOS.margemEsquerda - ESTILOS.margemDireita;
-}
-
-/**
- * Calcula altura útil da página (descontando margens)
- */
-export function getAlturaUtil() {
-    return ESTILOS.alturaPagina - ESTILOS.margemSuperior - ESTILOS.margemInferior;
-}
-
-/**
- * Retorna posição X centralizada para um elemento de largura específica
- */
-export function getCentroX(larguraElemento = 0) {
-    return (ESTILOS.larguraPagina - larguraElemento) / 2;
-}
+// Alias para compatibilidade
+export { LOGO_ENTERFIX as logo } from '../../shared/estilosPDF.js';

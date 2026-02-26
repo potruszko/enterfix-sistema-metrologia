@@ -18,26 +18,20 @@ import {
     getDadosEmpresaPadrao
 } from './configuracoesEmpresa';
 
-/**
- * Configurações de estilo do PDF
- */
-const ESTILOS = {
-    fontePrincipal: 'times',
-    tamanhoTitulo: 16,
-    tamanhoSubtitulo: 12,
-    tamanhoTexto: 10,
-    tamanhoRodape: 8,
-    margemEsquerda: 20,
-    margemDireita: 20,
-    margemSuperior: 20,
-    margemInferior: 20,
-    espacamentoLinha: 5,
-    larguraPagina: 210, // A4
-    alturaPagina: 297,
-    corPrimaria: [0, 51, 102], // Azul escuro
-    corSecundaria: [128, 128, 128], // Cinza
-    corTexto: [0, 0, 0], // Preto
-};
+// ═══════════════════════════════════════════════════════════════════
+// ESTILOS GLOBAIS - IMPORTADOS DO PADRÃO ENTERFIX
+// ═══════════════════════════════════════════════════════════════════
+import {
+    LOGO_ENTERFIX,
+    CORES,
+    TIPOGRAFIA,
+    LAYOUT,
+    PRESET_CONTRATO,
+    getLarguraUtil,
+    getLimiteInferior,
+    temEspacoNaPagina,
+    ESTILOS // Legacy compatibility
+} from './shared/estilosPDF.js';
 
 /**
  * Adiciona cabeçalho em todas as páginas
@@ -45,24 +39,26 @@ const ESTILOS = {
 function adicionarCabecalho(doc, numeroContrato, statusContrato) {
     const larguraUtil = ESTILOS.larguraPagina - ESTILOS.margemEsquerda - ESTILOS.margemDireita;
 
-    // Logo da Enterfix (horizontal)
+    // Logo da Enterfix (proporção de marca registrada)
     try {
-        // Usar logo horizontal completo (LOGO_ENTERFIX_LIGHT.png)
-        const logoPath = '/assets/images/LOGO_ENTERFIX_LIGHT.png';
-        // Dimensões CORRETAS da marca registrada: 
-        // Imagem real: 684px × 334px = proporção 2.05:1
-        // PDF: largura 40mm × altura 19.5mm (mantém proporção 2.05:1)
-        doc.addImage(logoPath, 'PNG', ESTILOS.margemEsquerda, 10, 40, 19.5);
+        doc.addImage(
+            LOGO_ENTERFIX.path,
+            'PNG',
+            LOGO_ENTERFIX.posicaoX,
+            LOGO_ENTERFIX.posicaoY,
+            LOGO_ENTERFIX.largura,
+            LOGO_ENTERFIX.altura
+        );
     } catch (error) {
         // Fallback: usar texto se logo não carregar
         console.warn('Logo não carregou, usando texto:', error);
         doc.setFontSize(14);
         doc.setFont(ESTILOS.fontePrincipal, 'bold');
-        doc.setTextColor(...ESTILOS.corPrimaria);
-        doc.text('ENTERFIX', ESTILOS.margemEsquerda, 15);
+        doc.setTextColor(...CORES.primaria);
+        doc.text('ENTERFIX', LAYOUT.margens.esquerda, 15);
         doc.setFontSize(8);
         doc.setFont(ESTILOS.fontePrincipal, 'normal');
-        doc.text('Metrologia e Calibração', ESTILOS.margemEsquerda, 19);
+        doc.text('Metrologia e Calibração', LAYOUT.margens.esquerda, 19);
     }
 
     // Número do contrato

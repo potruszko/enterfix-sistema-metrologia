@@ -5,7 +5,10 @@
  * em todas as páginas dos contratos.
  */
 
-import { ESTILOS, getLarguraUtil } from './estilos.js';
+import {
+    ESTILOS,
+    getLarguraUtil
+} from './estilos.js';
 
 /**
  * Adiciona cabeçalho padrão em todas as páginas
@@ -44,8 +47,9 @@ export function adicionarCabecalho(doc, numeroContrato, statusContrato) {
     doc.text(
         `Contrato: ${numeroContrato}`,
         ESTILOS.larguraPagina - ESTILOS.margemDireita,
-        15,
-        { align: 'right' }
+        15, {
+            align: 'right'
+        }
     );
 
     // Marca d'água MINUTA (se aplicável)
@@ -56,8 +60,7 @@ export function adicionarCabecalho(doc, numeroContrato, statusContrato) {
         doc.text(
             'MINUTA',
             ESTILOS.larguraPagina / 2,
-            ESTILOS.alturaPagina / 2,
-            {
+            ESTILOS.alturaPagina / 2, {
                 align: 'center',
                 angle: 45
             }
@@ -118,8 +121,9 @@ export function adicionarRodape(doc, numeroPagina, totalPaginas, dadosEmpresa) {
     doc.text(
         `Página ${numeroPagina} de ${totalPaginas}`,
         ESTILOS.larguraPagina - ESTILOS.margemDireita,
-        y,
-        { align: 'right' }
+        y, {
+            align: 'right'
+        }
     );
 }
 
@@ -132,13 +136,13 @@ export function adicionarRodape(doc, numeroPagina, totalPaginas, dadosEmpresa) {
  */
 export function aplicarCabecalhoRodapeEmTodasPaginas(doc, numeroContrato, statusContrato, dadosEmpresa) {
     const totalPaginas = doc.getNumberOfPages();
-    
+
     for (let i = 1; i <= totalPaginas; i++) {
         doc.setPage(i);
-        
+
         // Rodapé em todas as páginas
         adicionarRodape(doc, i, totalPaginas, dadosEmpresa);
-        
+
         // Cabeçalho em todas exceto a primeira (primeira já tem logo no início)
         if (i > 1) {
             adicionarCabecalho(doc, numeroContrato, statusContrato);
