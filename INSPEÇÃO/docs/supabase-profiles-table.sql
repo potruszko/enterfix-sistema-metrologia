@@ -3,7 +3,17 @@
 -- Execute este SQL no Supabase SQL Editor
 -- ============================================
 
--- 1. Criar tabela de perfis profissionais
+-- PASSO 1: Remover políticas antigas (se existirem)
+DROP POLICY IF EXISTS "profiles_select_all" ON public.profiles;
+DROP POLICY IF EXISTS "profiles_insert_own" ON public.profiles;
+DROP POLICY IF EXISTS "profiles_update_own" ON public.profiles;
+DROP POLICY IF EXISTS "profiles_delete_none" ON public.profiles;
+DROP POLICY IF EXISTS "Usuários podem ver todos os perfis" ON public.profiles;
+DROP POLICY IF EXISTS "Usuários podem inserir seu próprio perfil" ON public.profiles;
+DROP POLICY IF EXISTS "Usuários podem atualizar seu próprio perfil" ON public.profiles;
+DROP POLICY IF EXISTS "Admins podem atualizar qualquer perfil" ON public.profiles;
+
+-- PASSO 2: Criar ou atualizar tabela de perfis profissionais
 CREATE TABLE IF NOT EXISTS public.profiles (
   id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   
@@ -36,42 +46,56 @@ CREATE TABLE IF NOT EXISTS public.profiles (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- 2. Habilitar Row Level Security (RLS)
+-- PASSO 3: Adicionar coluna CPF se a tabela já existia (sem essa coluna)
+DO $$ 
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM information_schema.columns 
+    WHERE table_schema = 'public' 
+    AND table_name = 'profiles' 
+    AND column_name = 'cpf'
+  ) THEN
+    ALTER TABLE public.profiles ADD COLUMN cpf TEXT UNIQUE;
+  END IF;
+END $$;
+
+-- PASSO 4: Habilitar Row Level Security (RLS)
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
-OLÍTICA: Todos podem ver todos os perfis (necessário para listar técnicos)
+
+-- PASSO 5: Criar políticas RLS (Row Level Security)
+
+-- Todos podem ver todos os perfis (necessário para listar técnicos)
 CREATE POLICY "profiles_select_all"
   ON public.profiles
   FOR SELECT
   TO authenticated
   USING (true);
 
--- 4. POLÍTICA: Usuários podem inserir seu próprio perfil
+-- Usuários podem inserir seu próprio perfil
 CREATE POLICY "profiles_insert_own"
   ON public.profiles
   FOR INSERT
   TO authenticated
   WITH CHECK (auth.uid() = id);
 
--- 5. POLÍTICA: Usuários podem atualizar seu próprio perfil (exceto role)
+-- Usuários podem atualizar seu próprio perfil
 CREATE POLICY "profiles_update_own"
   ON public.profiles
   FOR UPDATE
   TO authenticated
   USING (auth.uid() = id)
-  WITH CHECK (
-    auth.uid() = id 
-    AND (OLD.role = NEW.role OR NEW.role IS NULL) -- Não pode mudar próprio role
-  );
+  WITH CHECK (auth.uid() = id);
 
--- 6. POLÍTICA: Ninguém pode deletar perfis diretamente (apenas cascade do auth.users)
+-- Ninguém pode deletar perfis diretamente (apenas cascade do auth.users)
 CREATE POLICY "profiles_delete_none"
   ON public.profiles
   FOR DELETE
   TO authenticated
-  USING (false
-  WITH CHECK (auth.uid() = id);
+  USING (false);
 
--- 7. Função para criar perfil automaticamente ao registrar
+-- PASSO 6: Triggers para automação
+
+-- Função para criar perfil automaticamente ao registrar
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -84,14 +108,14 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
--- 8. Trigger para executar a função
+-- Trigger para executar a função
 DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW
   EXECUTE FUNCTION public.handle_new_user();
 
--- 9. Função para atualizar updated_at automaticamente
+-- Função para atualizar updated_at automaticamente
 CREATE OR REPLACE FUNCTION public.handle_updated_at()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -100,24 +124,20 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- 10. Trigger para updated_at
+-- Trigger para updated_at
+DROP TRIGGER IF EXISTS set_updated_at ON public.profiles;
 CREATE TRIGGER set_updated_at
   BEFORE UPDATE ON public.profiles
   FOR EACH ROW
   EXECUTE FUNCTION public.handle_updated_at();
 
--- ============================================
--- ÍNDICES PARA PERFORMANCE
--- ============================================
+-- PASSO 7: Índices para performance
 CREATE INDEX IF NOT EXISTS idx_profiles_role ON public.profiles(role);
 CREATE INDEX IF NOT EXISTS idx_profiles_ativo ON public.profiles(ativo);
 CREATE INDEX IF NOT EXISTS idx_profiles_empresa ON public.profiles(empresa);
 
--- ============================================
--- SEED: Criar perfil para usuários existentes
--- ============================================
-INSERT INTO public.profiles (id, nome_completo)
-SELECT , role)
+-- PASSO 8: Seed - Criar perfil para usuários existentes
+INSERT INTO public.profiles (id, nome_completo, role)
 SELECT 
   id,
   COALESCE(raw_user_meta_data->>'full_name', split_part(email, '@', 1)),
@@ -129,9 +149,7 @@ FROM auth.users
 WHERE id NOT IN (SELECT id FROM public.profiles)
 ON CONFLICT (id) DO NOTHING;
 
--- ============================================
--- GARANTIR QUE PAULO.OTAVIO É ADMIN
--- ============================================
+-- PASSO 9: Garantir que Paulo.otavio é admin
 UPDATE public.profiles
 SET role = 'admin'
 WHERE id IN (
