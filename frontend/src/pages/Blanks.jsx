@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { Plus, Pencil, Trash2, Search, RefreshCw, CloudDownload } from 'lucide-react'
+import { Plus, Pencil, Trash2, Search, RefreshCw, DownloadCloud } from 'lucide-react'
 import { getBlanks, createBlank, updateBlank, deleteBlank, getBlingProdutos, importarBlankDoBling, sincronizarBlankBling } from '../lib/api'
 import { ROSCAS, brl, num } from '../lib/utils'
 import Modal from '../components/Modal'
@@ -176,7 +176,7 @@ export default function Blanks() {
         action={
           <div className="flex gap-2">
             <button className="btn-secondary flex items-center gap-1.5" onClick={() => { setBlingModal(true); setBlingResultados([]); setBlingSearch(''); setBlingErro('') }}>
-              <CloudDownload size={16} /> Bling
+              <DownloadCloud size={16} /> Bling
             </button>
             <button className="btn-primary" onClick={openNew}>
               <Plus size={16} /> Novo Blank
