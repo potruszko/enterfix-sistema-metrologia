@@ -5,20 +5,18 @@ export default function Auth() {
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [isSignUp, setIsSignUp] = useState(false)
   const [error, setError] = useState('')
-  const [message, setMessage] = useState('')
 
   useEffect(() => {
-    if (error || message) {
-      const t = setTimeout(() => { setError(''); setMessage('') }, 5000)
+    if (error) {
+      const t = setTimeout(() => setError(''), 6000)
       return () => clearTimeout(t)
     }
-  }, [error, message])
+  }, [error])
 
   async function handleSubmit(e) {
     e.preventDefault()
-    setError(''); setMessage('')
+    setError('')
 
     if (!email.endsWith('@enterfix.com.br')) {
       setError('Apenas e-mails @enterfix.com.br têm acesso a este sistema.')
@@ -27,20 +25,15 @@ export default function Auth() {
 
     setLoading(true)
     try {
-      if (isSignUp) {
-        const { error } = await supabase.auth.signUp({
-          email, password,
-          options: { emailRedirectTo: window.location.origin }
-        })
-        if (error) throw error
-        setMessage('Cadastro realizado! Verifique seu e-mail para confirmar.')
-        setEmail(''); setPassword('')
-      } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password })
-        if (error) throw error
-      }
+      const { error } = await supabase.auth.signInWithPassword({ email, password })
+      if (error) throw error
     } catch (err) {
-      setError(err.message || 'Erro ao autenticar. Tente novamente.')
+      const msg = err.message || ''
+      if (msg.toLowerCase().includes('invalid login')) {
+        setError('E-mail ou senha incorretos.')
+      } else {
+        setError(msg || 'Erro ao autenticar. Tente novamente.')
+      }
     } finally {
       setLoading(false)
     }
@@ -73,11 +66,6 @@ export default function Auth() {
               {error}
             </div>
           )}
-          {message && (
-            <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-3 text-sm text-green-700">
-              {message}
-            </div>
-          )}
 
           {/* Formulário */}
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -108,19 +96,12 @@ export default function Auth() {
               disabled={loading}
               className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-semibold rounded-lg py-2.5 text-sm transition-colors"
             >
-              {loading ? 'Aguarde...' : isSignUp ? 'Criar conta' : 'Entrar'}
+              {loading ? 'Aguarde...' : 'Entrar'}
             </button>
           </form>
 
-          <p className="text-center text-xs text-gray-500">
-            {isSignUp ? 'Já tem conta?' : 'Ainda não tem conta?'}{' '}
-            <button
-              type="button"
-              onClick={() => { setIsSignUp(!isSignUp); setError(''); setMessage('') }}
-              className="text-blue-600 hover:underline font-medium"
-            >
-              {isSignUp ? 'Entrar' : 'Criar conta'}
-            </button>
+          <p className="text-center text-xs text-gray-400">
+            Acesso concedido pelo administrador do sistema.
           </p>
         </div>
       </div>
