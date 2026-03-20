@@ -16,6 +16,7 @@ import Importar         from './pages/Importar'
 import CentrosTrabalho  from './pages/CentrosTrabalho'
 import OrdensProducao   from './pages/OrdensProducao'
 import Operador         from './pages/Operador'
+import BOM              from './pages/BOM'
 
 export default function App() {
   const [session, setSession] = useState(undefined)
@@ -47,6 +48,7 @@ export default function App() {
           <Route path="mao-de-obra" element={<MaoDeObra />} />
           <Route path="produtos"  element={<Produtos />} />
           <Route path="construir" element={<ConstruirProduto />} />
+          <Route path="bom"       element={<BOM />} />
           <Route path="bling"     element={<Bling />} />
           <Route path="configuracoes" element={<Configuracoes />} />
           <Route path="importar"      element={<Importar />} />

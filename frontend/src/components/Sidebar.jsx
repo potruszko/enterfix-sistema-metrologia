@@ -2,7 +2,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import {
   LayoutDashboard, Layers, Wrench, Circle,
   UserCog, Package, Wand2, RefreshCw, Settings, Upload,
-  Factory, ClipboardList, MonitorPlay, Cpu, LogOut
+  Factory, ClipboardList, MonitorPlay, Cpu, LogOut, GitBranch
 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 
@@ -16,6 +16,7 @@ const nav = [
   { to: '/mao-de-obra',   icon: UserCog,         label: 'Mão de Obra' },
   { label: 'PRODUTOS', divider: true },
   { to: '/produtos',      icon: Package,         label: 'Todos os Produtos' },
+  { to: '/bom',           icon: GitBranch,       label: 'Árvore BOM' },
   { label: 'PRODUÇÃO (MES)', divider: true },
   { to: '/ordens',        icon: ClipboardList,   label: 'Ordens de Produção' },
   { to: '/operador',      icon: MonitorPlay,     label: 'Operador / Apontamento' },

@@ -13,7 +13,7 @@ import {
     obterAccessToken,
     blingClient,
     BLING_API
-} from './bling/_bling.js';
+} from './_bling.js';
 import axios from 'axios';
 
 // Disable body parser so we can handle both JSON and CSV manually
@@ -195,7 +195,10 @@ async function route(req, res, slug, rawBody) {
 
     // GET /api/health
     if (s0 === 'health' || !s0) {
-        return res.json({ status: 'ok', version: '2.0.0' });
+        return res.json({
+            status: 'ok',
+            version: '2.0.0'
+        });
     }
 
     // ═══════════════════════════════════════════════════════ BLANKS ══════════
@@ -596,10 +599,49 @@ async function route(req, res, slug, rawBody) {
             }
         } else {
             const id = s1;
+
+            // GET /api/produtos/:id/bom — arvore BOM recursiva (ate 4 niveis)
+            if (s2 === 'bom' && method === 'GET') {
+                const produto = await queryOne('SELECT * FROM produtos WHERE id=$1', [id]);
+                if (!produto) return res.status(404).json({
+                    erro: 'Produto nao encontrado'
+                });
+                async function buildBom(prodId, nivel) {
+                    if (nivel > 4) return [];
+                    const comps = await query(
+                        `SELECT pc.*, p.nome AS filho_nome, p.custo_total AS filho_custo_total, p.categoria AS filho_categoria
+                         FROM produto_componentes pc
+                         LEFT JOIN produtos p ON p.id = pc.ref_id AND pc.tipo_componente = 'produto'
+                         WHERE pc.produto_id = $1 ORDER BY pc.id`,
+                        [prodId]
+                    );
+                    const result = [];
+                    for (const c of comps) {
+                        const node = {
+                            ...c,
+                            custo_linha: parseFloat(c.quantidade) * parseFloat(c.custo_unitario),
+                            filhos: []
+                        };
+                        if (c.tipo_componente === 'produto' && c.ref_id) {
+                            node.filhos = await buildBom(c.ref_id, nivel + 1);
+                        }
+                        result.push(node);
+                    }
+                    return result;
+                }
+                const arvore = await buildBom(id, 1);
+                const custoTotal = arvore.reduce((acc, n) => acc + n.custo_linha, 0);
+                return res.json({
+                    ...produto,
+                    arvore,
+                    custo_arvore: custoTotal
+                });
+            }
+
             if (method === 'GET') {
                 const produto = await queryOne('SELECT * FROM produtos WHERE id=$1', [id]);
                 if (!produto) return res.status(404).json({
-                    erro: 'Produto não encontrado'
+                    erro: 'Produto nao encontrado'
                 });
                 const componentes = await query('SELECT * FROM produto_componentes WHERE produto_id=$1 ORDER BY id', [id]);
                 return res.json({
@@ -624,9 +666,12 @@ async function route(req, res, slug, rawBody) {
                 const client = await getPool2().connect();
                 try {
                     await client.query('BEGIN');
+                    const {
+                        categoria
+                    } = req.body;
                     await client.query(
-                        `UPDATE produtos SET codigo=$1, nome=$2, tipo=$3, rosca=$4, comprimento_total=$5, diametro_esfera=$6, preco_venda=$7, margem=$8, status=$9, observacoes=$10, updated_at=NOW() WHERE id=$11`,
-                        [codigo, nome, tipo, rosca || null, comprimento_total || null, diametro_esfera || null, preco_venda || 0, margem || 0, status || 'ativo', observacoes || null, id]
+                        `UPDATE produtos SET codigo=$1, nome=$2, tipo=$3, rosca=$4, comprimento_total=$5, diametro_esfera=$6, preco_venda=$7, margem=$8, status=$9, observacoes=$10, categoria=COALESCE($12,'acabado'), updated_at=NOW() WHERE id=$11`,
+                        [codigo, nome, tipo, rosca || null, comprimento_total || null, diametro_esfera || null, preco_venda || 0, margem || 0, status || 'ativo', observacoes || null, id, categoria || null]
                     );
                     await client.query('DELETE FROM produto_componentes WHERE produto_id=$1', [id]);
                     for (const c of componentes) {
@@ -747,9 +792,12 @@ async function route(req, res, slug, rawBody) {
     // ══════════════════════════════════════════════════ CONFIGURACOES ══════════
     if (s0 === 'configuracoes' && !s1) {
         if (method === 'GET') {
-            const rows = await query('SELECT chave, valor FROM configuracoes ORDER BY chave');
-            const config = Object.fromEntries(rows.map(r => [r.chave, r.valor]));
-            return res.json(config);
+            try {
+                const rows = await query('SELECT chave, valor FROM configuracoes ORDER BY chave');
+                return res.json(Object.fromEntries(rows.map(r => [r.chave, r.valor])));
+            } catch {
+                return res.json({});
+            }
         }
         if (method === 'PUT') {
             const configs = req.body;
@@ -806,7 +854,7 @@ async function route(req, res, slug, rawBody) {
                comprimento=EXCLUDED.comprimento, material=EXCLUDED.material,
                custo=CASE WHEN EXCLUDED.custo > 0 THEN EXCLUDED.custo ELSE blanks.custo END,
                bling_id=EXCLUDED.bling_id, bling_codigo=EXCLUDED.bling_codigo`,
-                        [codigo, descricao, specs.rosca, specs.diametro_corpo ?? 0, specs.diametro_furo ?? 0, specs.comprimento ?? 0, specs.material, custoBling, blingId, codigo]
+                        [codigo, descricao, specs.rosca, specs.diametro_corpo ? ? 0, specs.diametro_furo ? ? 0, specs.comprimento ? ? 0, specs.material, custoBling, blingId, codigo]
                     );
                     resultados.importados++;
                 } catch (err) {
@@ -1195,7 +1243,7 @@ async function route(req, res, slug, rawBody) {
                 } catch (err) {
                     return res.status(500).json({
                         erro: 'Falha na autenticação Bling',
-                        detalhe: err.response ?.data || err.message
+                        detalhe: err.response ? .data || err.message
                     });
                 }
             }
@@ -1284,7 +1332,7 @@ async function route(req, res, slug, rawBody) {
             } else {
                 const resp = await client.post('/produtos', payload);
                 respData = resp.data;
-                blingId = respData ?.data ?.id;
+                blingId = respData ? .data ? .id;
                 if (blingId) await query('UPDATE produtos SET bling_id=$1, status=$2 WHERE id=$3', [String(blingId), 'sincronizado', produtoId]);
             }
             await query('UPDATE produtos SET status=$1, updated_at=NOW() WHERE id=$2', ['sincronizado', produtoId]);
@@ -1299,7 +1347,7 @@ async function route(req, res, slug, rawBody) {
         if (s1 === 'importar' && s2 && method === 'POST') {
             const token = await obterAccessToken();
             const resp = await blingClient(token).get(`/produtos/${s2}`);
-            const p = resp.data ?.data;
+            const p = resp.data ? .data;
             if (!p) return res.status(404).json({
                 erro: 'Produto não encontrado no Bling'
             });
@@ -1309,12 +1357,85 @@ async function route(req, res, slug, rawBody) {
                 id: existente.id
             });
             const prefixos = ['PM', 'EM', 'AM', 'SM', 'DM', 'BM', 'CM'];
-            const tipo = prefixos.find(k => p.codigo ?.toUpperCase().startsWith(k)) || 'PM';
+            const tipo = prefixos.find(k => p.codigo ? .toUpperCase().startsWith(k)) || 'PM';
             const row = await queryOne(`INSERT INTO produtos (codigo, nome, tipo, bling_id, status) VALUES ($1,$2,$3,$4,'sincronizado') RETURNING id`, [p.codigo, p.nome, tipo, String(p.id)]);
             return res.status(201).json({
                 mensagem: 'Importado com sucesso',
                 id: row.id
             });
+        }
+
+        // ── Sync Completo → Bling (todos os produtos ativos com estrutura BOM) ──
+        if (s1 === 'sync-full' && method === 'POST') {
+            const token = await obterAccessToken();
+            const client = blingClient(token);
+            const produtos = await query(
+                `SELECT * FROM produtos WHERE status != 'inativo'
+                 ORDER BY CASE categoria
+                    WHEN 'materia_prima' THEN 1
+                    WHEN 'componente' THEN 2
+                    WHEN 'semiacabado' THEN 3
+                    ELSE 4
+                 END, codigo`
+            );
+            const result = {
+                sincronizados: 0,
+                atualizados: 0,
+                estruturas: 0,
+                erros: []
+            };
+            for (const p of produtos) {
+                try {
+                    const payload = {
+                        nome: p.nome,
+                        codigo: p.codigo,
+                        situacao: 'A',
+                        tipo: 'P',
+                        precoCusto: parseFloat(p.custo_total) || 0,
+                        preco: parseFloat(p.preco_venda) || 0
+                    };
+                    let blingId = p.bling_id;
+                    if (blingId) {
+                        await client.put(`/produtos/${blingId}`, payload);
+                        result.atualizados++;
+                    } else {
+                        const resp = await client.post('/produtos', payload);
+                        blingId = resp.data && resp.data.data && resp.data.data.id;
+                        if (blingId) {
+                            await query('UPDATE produtos SET bling_id=$1, updated_at=NOW() WHERE id=$2', [String(blingId), p.id]);
+                        }
+                        result.sincronizados++;
+                    }
+                    // Sincronizar estrutura BOM
+                    if (blingId) {
+                        const comps = await query(
+                            'SELECT * FROM produto_componentes WHERE produto_id=$1 AND bling_id IS NOT NULL AND bling_id != \'\'',
+                            [p.id]
+                        );
+                        if (comps.length > 0) {
+                            try {
+                                await client.put(`/produtos/${blingId}/estruturas`, {
+                                    tipoEstutura: 'P',
+                                    componentes: comps.map(c => ({
+                                        produto: {
+                                            id: parseInt(c.bling_id)
+                                        },
+                                        quantidade: parseFloat(c.quantidade)
+                                    }))
+                                });
+                                result.estruturas++;
+                            } catch {
+                                /* estrutura opcional */ }
+                        }
+                    }
+                } catch (err) {
+                    result.erros.push({
+                        codigo: p.codigo,
+                        erro: (err.response && err.response.data) || err.message
+                    });
+                }
+            }
+            return res.json(result);
         }
 
         // ── Pedidos ───────────────────────────────────────────────────────────
@@ -1346,7 +1467,7 @@ async function route(req, res, slug, rawBody) {
             if (s2 === 'importar' && s3 && method === 'POST') {
                 const token = await obterAccessToken();
                 const resp = await blingClient(token).get(`/produtos/${s3}`);
-                const p = resp.data ?.data;
+                const p = resp.data ? .data;
                 if (!p) return res.status(404).json({
                     erro: 'Produto não encontrado no Bling'
                 });
@@ -1393,7 +1514,7 @@ async function route(req, res, slug, rawBody) {
                     await client.put(`/produtos/${blingId}`, payload);
                 } else {
                     const resp = await client.post('/produtos', payload);
-                    blingId = resp.data ?.data ?.id;
+                    blingId = resp.data ? .data ? .id;
                     if (blingId) await query('UPDATE blanks SET bling_id=$1, bling_codigo=$2 WHERE id=$3', [String(blingId), blank.codigo, s2]);
                 }
                 return res.json({
@@ -1405,5 +1526,7 @@ async function route(req, res, slug, rawBody) {
 
     }
 
-    return res.status(404).json({ erro: 'Rota não encontrada' });
+    return res.status(404).json({
+        erro: 'Rota não encontrada'
+    });
 }
