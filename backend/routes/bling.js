@@ -114,7 +114,8 @@ router.get('/auth/url', (_req, res) => {
         });
     }
 
-    const redirectUri = encodeURIComponent('http://localhost:3001/api/bling/auth/callback');
+    const backendUrl = process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 3001}`;
+    const redirectUri = encodeURIComponent(`${backendUrl}/api/bling/auth/callback`);
     const url = `https://www.bling.com.br/Api/v3/oauth/authorize?response_type=code&client_id=${clientId}&state=composicao&redirect_uri=${redirectUri}`;
     res.json({
         url,
@@ -149,7 +150,7 @@ router.get('/auth/callback', async (req, res) => {
             new URLSearchParams({
                 grant_type: 'authorization_code',
                 code,
-                redirect_uri: 'http://localhost:3001/api/bling/auth/callback'
+                redirect_uri: `${process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 3001}`}/api/bling/auth/callback`
             }), {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -159,7 +160,8 @@ router.get('/auth/callback', async (req, res) => {
         );
         saveTokens(resp.data);
         // Redireciona para o frontend com sucesso
-        res.redirect('http://localhost:5173/configuracoes?bling=ok');
+        const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+        res.redirect(`${frontendUrl}/configuracoes?bling=ok`);
     } catch (err) {
         const msg = err.response ?.data || err.message;
         res.status(500).json({

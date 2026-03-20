@@ -82,13 +82,21 @@ export default function Configuracoes() {
             Opção 1 — Autenticação OAuth (recomendado)
           </h3>
           <p className="text-xs text-gray-500 mb-3">
-            Clique no botão abaixo para abrir a janela de autorização do Bling. Após autorizar,
-            o sistema receberá o token automaticamente.
+            Clique no botão abaixo para autorizar o acesso ao Bling. Você será redirecionado
+            de volta automaticamente após autorizar.
           </p>
           {authUrl ? (
-            <a href={authUrl} target="_blank" rel="noreferrer" className="btn-primary inline-flex">
-              <ExternalLink size={15} /> Autorizar no Bling
-            </a>
+            <div className="flex flex-wrap gap-2">
+              <a href={authUrl} className="btn-primary inline-flex items-center gap-1.5">
+                <ExternalLink size={15} />
+                {blingStatus?.valido ? 'Reconectar Bling' : 'Conectar com Bling'}
+              </a>
+              {blingStatus?.valido && (
+                <span className="text-xs text-gray-400 self-center">
+                  Token válido — clique para renovar a conexão se necessário
+                </span>
+              )}
+            </div>
           ) : (
             <p className="text-xs text-red-500">
               Configure BLING_CLIENT_ID e BLING_CLIENT_SECRET no arquivo .env do backend.
