@@ -52,7 +52,8 @@ async function readBody(req) {
 export default async function handler(req, res) {
     setCors(res);
     if (req.method === 'OPTIONS') return res.status(200).end();
-    const slug = Array.isArray(req.query.slug) ? req.query.slug : [req.query.slug].filter(Boolean);
+    const rawSlug = req.query['...slug'] ?? req.query.slug;
+    const slug = Array.isArray(rawSlug) ? rawSlug : (rawSlug ? rawSlug.split('/') : []);
     const {
         json: body,
         raw
