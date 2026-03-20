@@ -2,8 +2,9 @@ import { NavLink, useLocation } from 'react-router-dom'
 import {
   LayoutDashboard, Layers, Wrench, Circle,
   UserCog, Package, Wand2, RefreshCw, Settings, Upload,
-  Factory, ClipboardList, MonitorPlay, Cpu
+  Factory, ClipboardList, MonitorPlay, Cpu, LogOut
 } from 'lucide-react'
+import { supabase } from '../lib/supabase'
 
 const nav = [
   { to: '/',              icon: LayoutDashboard, label: 'Dashboard' },
@@ -25,7 +26,11 @@ const nav = [
   { to: '/configuracoes', icon: Settings,        label: 'Configurações' },
 ]
 
-export default function Sidebar({ open, onClose }) {
+export default function Sidebar({ open, onClose, session }) {
+  async function handleLogout() {
+    await supabase.auth.signOut()
+  }
+
   return (
     <>
       {/* Overlay mobile */}
@@ -45,14 +50,8 @@ export default function Sidebar({ open, onClose }) {
         `}
       >
         {/* Logo */}
-        <div className="flex items-center gap-3 px-5 py-5 border-b border-gray-800">
-          <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center shrink-0">
-            <span className="text-white font-bold text-sm">PM</span>
-          </div>
-          <div className="leading-tight">
-            <p className="font-semibold text-sm">Pontas de Medição</p>
-            <p className="text-xs text-gray-400">Gestão de Composição</p>
-          </div>
+        <div className="flex items-center gap-3 px-5 py-4 border-b border-gray-800">
+          <img src="/logo-dark.png" alt="Enterfix" className="h-7" />
         </div>
 
         {/* Nav */}
@@ -87,8 +86,17 @@ export default function Sidebar({ open, onClose }) {
           })}
         </nav>
 
-        <div className="px-4 py-3 border-t border-gray-800">
-            <p className="text-xs text-gray-500">Enterfix MES © {new Date().getFullYear()}</p>
+        <div className="px-3 py-3 border-t border-gray-800 space-y-1">
+          {session?.user && (
+            <p className="text-xs text-gray-500 px-2 truncate">{session.user.email}</p>
+          )}
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-gray-800 hover:text-white transition-colors"
+          >
+            <LogOut size={16} />
+            <span>Sair</span>
+          </button>
         </div>
       </aside>
     </>

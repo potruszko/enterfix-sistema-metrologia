@@ -3,12 +3,12 @@ import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import { Menu } from 'lucide-react'
 
-export default function Layout() {
+export default function Layout({ session }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <div className="flex h-screen overflow-hidden bg-gray-50">
-      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} session={session} />
 
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Topbar mobile */}
@@ -19,7 +19,7 @@ export default function Layout() {
           >
             <Menu size={20} />
           </button>
-          <span className="font-semibold text-gray-900">Pontas de Medição</span>
+          <img src="/logo-light.png" alt="Enterfix" className="h-6" />
         </header>
 
         {/* Page content */}
