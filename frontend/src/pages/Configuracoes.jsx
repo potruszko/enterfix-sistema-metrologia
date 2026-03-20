@@ -20,12 +20,16 @@ export default function Configuracoes() {
 
   useEffect(() => {
     async function load() {
-      const [c, s, u] = await Promise.all([getConfigs(), getBlingStatus(), getBlingAuthUrl()])
-      setConfigs(c.data)
-      setBlingStatus(s.data)
-      setAuthUrl(u.data.url)
-      setHoraMaquina(c.data.hora_maquina || '150')
-      setLotePadrao(c.data.lote_padrao || '10')
+      try {
+        const [c, s, u] = await Promise.all([getConfigs(), getBlingStatus(), getBlingAuthUrl()])
+        setConfigs(c.data)
+        setBlingStatus(s.data)
+        setAuthUrl(u.data?.url || '')
+        setHoraMaquina(c.data.hora_maquina || '150')
+        setLotePadrao(c.data.lote_padrao || '10')
+      } catch (e) {
+        console.error('Erro ao carregar configurações:', e)
+      }
     }
     load()
 

@@ -2,7 +2,7 @@ import axios from 'axios';
 import {
     query,
     queryOne
-} from '../../_db.js';
+} from '../_db.js';
 
 export const BLING_API = 'https://www.bling.com.br/Api/v3';
 
