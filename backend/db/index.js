@@ -1,22 +1,32 @@
-const {
-  DatabaseSync
-} = require('node:sqlite');
 const path = require('path');
 const fs = require('fs');
 
 const DB_PATH = path.join(__dirname, '..', 'data', 'composicoes.db');
 
-// garante que a pasta data existe
-const dataDir = path.dirname(DB_PATH);
-if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir, {
-    recursive: true
-  });
-}
+let db;
 
-const db = new DatabaseSync(DB_PATH);
-db.exec('PRAGMA journal_mode = WAL');
-db.exec('PRAGMA foreign_keys = ON');
+try {
+  const { DatabaseSync } = require('node:sqlite');
+
+  // garante que a pasta data existe
+  const dataDir = path.dirname(DB_PATH);
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+
+  db = new DatabaseSync(DB_PATH);
+  db.exec('PRAGMA journal_mode = WAL');
+  db.exec('PRAGMA foreign_keys = ON');
+} catch (err) {
+  console.warn('⚠️  SQLite não disponível neste ambiente:', err.message);
+  console.warn('   Rotas SQLite retornarão 503. Rotas PostgreSQL continuam funcionando.');
+  // Stub: permite que o servidor suba, mas falha nas chamadas individuais
+  const unavailable = () => { throw Object.assign(new Error('SQLite não disponível neste ambiente (requer Node.js 22+)'), { code: 'SQLITE_UNAVAILABLE' }); };
+  db = {
+    prepare: () => ({ all: unavailable, get: unavailable, run: unavailable }),
+    exec: () => {},
+  };
+}
 
 function ensureColumn(table, column, definition) {
   const columns = db.prepare(`PRAGMA table_info(${table})`).all();
