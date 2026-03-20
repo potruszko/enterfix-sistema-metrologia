@@ -7,8 +7,8 @@ import {
 export const BLING_API = 'https://www.bling.com.br/Api/v3';
 
 export function getOAuthConfig() {
-    const clientId = process.env.BLING_CLIENT_ID;
-    const clientSecret = process.env.BLING_CLIENT_SECRET;
+    const clientId     = process.env.BLING_CLIENT_ID     || 'fa9f73b7934f56edb9f8c40a3a81b7abc2d4f365';
+    const clientSecret = process.env.BLING_CLIENT_SECRET || '2684d10caffd971a4e8a293b4a9543e1954c23cfcb3b089558263d7d6edd';
     return {
         clientId,
         clientSecret,
@@ -16,16 +16,19 @@ export function getOAuthConfig() {
     };
 }
 
+const PROD_URL = 'https://composicao.enterfix.com.br';
+
 export function getBackendUrl() {
-    // APP_URL tem prioridade (domínio personalizado em produção)
     if (process.env.APP_URL) return process.env.APP_URL;
-    if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+    // VERCEL_URL retorna URL interna do deploy (ex: projeto-abc.vercel.app), não o domínio customizado
+    // Por isso usamos sempre o domínio de produção quando estamos no Vercel
+    if (process.env.VERCEL) return PROD_URL;
     return 'http://localhost:3001';
 }
 
 export function getFrontendUrl() {
     if (process.env.APP_URL) return process.env.APP_URL;
-    if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+    if (process.env.VERCEL) return PROD_URL;
     return 'http://localhost:5173';
 }
 
