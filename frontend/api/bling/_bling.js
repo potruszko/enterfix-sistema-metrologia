@@ -20,16 +20,12 @@ const PROD_URL = 'https://composicao.enterfix.com.br';
 
 export function getBackendUrl() {
     if (process.env.APP_URL) return process.env.APP_URL;
-    // VERCEL_URL retorna URL interna do deploy (ex: projeto-abc.vercel.app), não o domínio customizado
-    // Por isso usamos sempre o domínio de produção quando estamos no Vercel
-    if (process.env.VERCEL) return PROD_URL;
-    return 'http://localhost:3001';
+    return PROD_URL;
 }
 
 export function getFrontendUrl() {
     if (process.env.APP_URL) return process.env.APP_URL;
-    if (process.env.VERCEL) return PROD_URL;
-    return 'http://localhost:5173';
+    return PROD_URL;
 }
 
 export async function getTokens() {
