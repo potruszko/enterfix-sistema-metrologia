@@ -20,15 +20,27 @@ export default function Configuracoes() {
 
   useEffect(() => {
     async function load() {
+      // Chamadas separadas para não quebrar tudo se uma falhar
       try {
-        const [c, s, u] = await Promise.all([getConfigs(), getBlingStatus(), getBlingAuthUrl()])
+        const c = await getConfigs()
         setConfigs(c.data)
-        setBlingStatus(s.data)
-        setAuthUrl(u.data?.url || '')
         setHoraMaquina(c.data.hora_maquina || '150')
         setLotePadrao(c.data.lote_padrao || '10')
       } catch (e) {
-        console.error('Erro ao carregar configurações:', e)
+        console.error('[Configuracoes] getConfigs falhou:', e.response?.status, e.message)
+      }
+      try {
+        const s = await getBlingStatus()
+        setBlingStatus(s.data)
+      } catch (e) {
+        console.error('[Configuracoes] getBlingStatus falhou:', e.response?.status, e.message)
+      }
+      try {
+        const u = await getBlingAuthUrl()
+        setAuthUrl(u.data?.url || '')
+        console.log('[Configuracoes] authUrl:', u.data?.url, '| configurado:', u.data?.configurado)
+      } catch (e) {
+        console.error('[Configuracoes] getBlingAuthUrl falhou:', e.response?.status, e.message)
       }
     }
     load()
