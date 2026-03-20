@@ -17,13 +17,16 @@ export function getOAuthConfig() {
 }
 
 export function getBackendUrl() {
+    // APP_URL tem prioridade (domínio personalizado em produção)
+    if (process.env.APP_URL) return process.env.APP_URL;
     if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-    return process.env.BACKEND_URL || 'http://localhost:3001';
+    return 'http://localhost:3001';
 }
 
 export function getFrontendUrl() {
+    if (process.env.APP_URL) return process.env.APP_URL;
     if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-    return process.env.FRONTEND_URL || 'http://localhost:5173';
+    return 'http://localhost:5173';
 }
 
 export async function getTokens() {
