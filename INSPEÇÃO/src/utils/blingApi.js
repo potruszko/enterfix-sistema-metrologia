@@ -44,12 +44,12 @@ async function getAuthUrl() {
     if (!user) throw new Error('Usuário não autenticado');
 
     const state = encodeURIComponent(btoa(user.id));
-    const redirectUri = `${window.location.origin}/api/bling/callback`;
 
+    // Bling API v3: redirect_uri NÃO vai na URL de autorização.
+    // O Bling usa o callback cadastrado no portal do app.
     const params = new URLSearchParams({
         response_type: 'code',
         client_id: BLING_CLIENT_ID,
-        redirect_uri: redirectUri,
         state,
     });
 
