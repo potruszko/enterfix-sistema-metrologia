@@ -1,6 +1,5 @@
 {
   "routes": [
-    { "handle": "filesystem" },
     { "src": "/api/(.*)", "dest": "/api/[...slug]?slug=$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
