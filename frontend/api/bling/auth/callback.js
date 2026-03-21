@@ -4,7 +4,9 @@
  * avoiding any catch-all routing ambiguity.
  */
 import axios from 'axios';
-import { setCors } from '../../_db.js';
+import {
+    setCors
+} from '../../_db.js';
 import {
     getOAuthConfig,
     getBackendUrl,
@@ -22,9 +24,15 @@ export default async function handler(req, res) {
         return res.status(400).send('Parâmetro "code" não encontrado na resposta do Bling.');
     }
 
-    const { clientId, clientSecret, configured } = getOAuthConfig();
+    const {
+        clientId,
+        clientSecret,
+        configured
+    } = getOAuthConfig();
     if (!configured) {
-        return res.status(500).json({ erro: 'Credenciais Bling não configuradas no servidor.' });
+        return res.status(500).json({
+            erro: 'Credenciais Bling não configuradas no servidor.'
+        });
     }
 
     try {
@@ -35,8 +43,7 @@ export default async function handler(req, res) {
                 grant_type: 'authorization_code',
                 code,
                 redirect_uri: `${getBackendUrl()}/api/bling/auth/callback`
-            }),
-            {
+            }), {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Authorization': `Basic ${credentials}`
