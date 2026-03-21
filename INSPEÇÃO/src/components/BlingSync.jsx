@@ -661,35 +661,45 @@ const BlingSync = () => {
 
         {/* Banner informativo quando não conectado */}
         {conectado === false && (
-          <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-lg">
-            <div className="flex items-start gap-3">
-              <Info size={18} className="text-amber-600 mt-0.5 flex-shrink-0" />
-              <div className="text-sm">
-                <p className="font-medium text-amber-800 mb-1">Como configurar a integração:</p>
-                <ol className="list-decimal list-inside space-y-1 text-amber-700">
-                  <li>
-                    Acesse o{' '}
-                    <a
-                      href="https://developer.bling.com.br/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline font-medium inline-flex items-center gap-1"
-                    >
-                      Portal do Desenvolvedor Bling
-                      <ExternalLink size={12} />
-                    </a>
-                  </li>
-                  <li>Crie uma aplicação e copie o Client ID e Client Secret</li>
-                  <li>
-                    Defina a Redirect URI como:{' '}
-                    <code className="bg-amber-100 px-1 rounded text-xs">
-                      {window.location.origin}/api/bling/callback
-                    </code>
-                  </li>
-                  <li>Adicione as variáveis de ambiente no Vercel (<code className="bg-amber-100 px-1 rounded text-xs">BLING_CLIENT_ID</code>, <code className="bg-amber-100 px-1 rounded text-xs">BLING_CLIENT_SECRET</code>, <code className="bg-amber-100 px-1 rounded text-xs">BLING_REDIRECT_URI</code>, <code className="bg-amber-100 px-1 rounded text-xs">SUPABASE_SERVICE_ROLE_KEY</code>, <code className="bg-amber-100 px-1 rounded text-xs">VITE_APP_URL</code>)</li>
-                  <li>Certifique-se de ter executado o SQL de setup no Supabase</li>
-                  <li>Clique em "Conectar Bling" acima</li>
-                </ol>
+          <div className="mt-4 space-y-3">
+            {/* URI de callback — caixa de destaque */}
+            <div className="p-4 bg-red-50 border border-red-300 rounded-lg">
+              <p className="text-sm font-bold text-red-800 mb-2">
+                ⚠️ Configure esta URI exata no portal Bling (sem barra no final):
+              </p>
+              <div className="flex items-center gap-2">
+                <code className="flex-1 bg-white border border-red-200 px-3 py-2 rounded text-sm font-mono text-red-700 break-all select-all">
+                  {window.location.origin}/api/bling/callback
+                </code>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(`${window.location.origin}/api/bling/callback`);
+                  }}
+                  className="px-3 py-2 bg-red-600 text-white rounded text-xs font-medium hover:bg-red-700 whitespace-nowrap"
+                >
+                  Copiar
+                </button>
+              </div>
+              <p className="text-xs text-red-600 mt-2">
+                Bling → Configurações → API &amp; Integrações → seu app → campo "URL de Retorno / Callback URL"
+              </p>
+            </div>
+
+            {/* Passos gerais */}
+            <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg">
+              <div className="flex items-start gap-3">
+                <Info size={18} className="text-amber-600 mt-0.5 flex-shrink-0" />
+                <div className="text-sm">
+                  <p className="font-medium text-amber-800 mb-1">Variáveis de ambiente no Vercel:</p>
+                  <div className="space-y-1 font-mono text-xs text-amber-800 bg-amber-100 p-2 rounded">
+                    <div>BLING_CLIENT_ID = <span className="text-amber-600">(seu client id)</span></div>
+                    <div>BLING_CLIENT_SECRET = <span className="text-amber-600">(seu client secret)</span></div>
+                    <div>BLING_REDIRECT_URI = <span className="text-amber-900 font-bold">{window.location.origin}/api/bling/callback</span></div>
+                    <div>SUPABASE_SERVICE_ROLE_KEY = <span className="text-amber-600">(service role key)</span></div>
+                    <div>VITE_APP_URL = <span className="text-amber-900 font-bold">{window.location.origin}</span></div>
+                    <div>VITE_BLING_CLIENT_ID = <span className="text-amber-600">(seu client id)</span></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
