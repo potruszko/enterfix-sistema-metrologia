@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de Máquinas de Medição 3D — Guia Completo | Enterfix</title>
+    <meta name="description" content="Guia completo dos tipos de máquinas de medição 3D: CMM de ponte, braço articulado, scanner 3D por luz estruturada, fotogrametria e sistemas ópticos. Saiba como escolher. Enterfix." />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9; color: #1e293b; line-height: 1.75; font-size: 16px;
+        }
+        .mm-page { max-width: 1100px; margin: 40px auto; padding: 0 20px 60px; }
+
+        /* ===== HERO ===== */
+        .mm-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px; padding: 54px 48px; margin-bottom: 32px;
+            color: #fff; position: relative; overflow: hidden;
+        }
+        .mm-hero::before {
+            content: ''; position: absolute; right: -80px; top: -100px;
+            width: 420px; height: 420px; border-radius: 50%;
+            background: rgba(255,255,255,0.04); pointer-events: none;
+        }
+        .mm-hero::after {
+            content: ''; position: absolute; left: -40px; bottom: -120px;
+            width: 260px; height: 260px; border-radius: 50%;
+            background: rgba(255,255,255,0.03); pointer-events: none;
+        }
+        .mm-badge {
+            display: inline-block; background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32); border-radius: 50px;
+            padding: 4px 14px; font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 16px;
+        }
+        .mm-hero h1 { font-size: 29px; font-weight: 800; line-height: 1.2; margin-bottom: 16px; color: #fff; max-width: 760px; }
+        .mm-hero p  { font-size: 15px; opacity: 0.88; line-height: 1.85; max-width: 720px; margin: 0 0 24px; }
+        .mm-hero-nav { display: flex; flex-wrap: wrap; gap: 10px; }
+        .mm-hero-nav a {
+            display: inline-block; background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25); border-radius: 8px;
+            padding: 8px 16px; font-size: 13px; font-weight: 600; color: #fff;
+            text-decoration: none; transition: background 0.15s;
+        }
+        .mm-hero-nav a:hover { background: rgba(255,255,255,0.22); }
+
+        /* ===== KPIs ===== */
+        .mm-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+        .mm-kpi {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 20px 22px; border-top: 4px solid #1F1659;
+        }
+        .mm-kpi-value { font-size: 26px; font-weight: 800; color: #1F1659; line-height: 1.1; }
+        .mm-kpi-label { font-size: 13px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+
+        /* ===== SECTION ===== */
+        .mm-section {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 42px 46px; margin-bottom: 26px;
+        }
+        @media (max-width: 680px) {
+            .mm-section { padding: 26px 20px; }
+            .mm-hero { padding: 34px 24px; }
+            .mm-hero h1 { font-size: 21px; }
+        }
+        .mm-section > h2 {
+            font-size: 21px; font-weight: 800; color: #1F1659;
+            margin-bottom: 6px; padding-bottom: 14px; border-bottom: 2px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .mm-type-label {
+            font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
+            padding: 3px 10px; border-radius: 20px; margin-left: 4px;
+        }
+        .mm-lead { font-size: 14.5px; color: #64748b; margin: 6px 0 24px; line-height: 1.7; }
+        .mm-section p  { font-size: 15px; margin-bottom: 12px; color: #334155; }
+        .mm-section ul { padding-left: 22px; margin-bottom: 14px; }
+        .mm-section li { font-size: 14.5px; margin-bottom: 8px; color: #334155; }
+        .mm-section strong { color: #0f172a; }
+        .mm-section a { color: #1d4ed8; }
+
+        /* ===== TIPO HEADER (cor por categoria) ===== */
+        .mm-sect--cmm    > h2 { border-color: #1F1659; }
+        .mm-sect--braco  > h2 { border-color: #0ea5e9; }
+        .mm-sect--scanner > h2 { border-color: #10b981; }
+        .mm-sect--optica > h2 { border-color: #8b5cf6; }
+        .mm-sect--foto   > h2 { border-color: #f59e0b; }
+
+        .mm-lbl--cmm    { background: #eff6ff; color: #1e40af; }
+        .mm-lbl--braco  { background: #e0f2fe; color: #0369a1; }
+        .mm-lbl--scanner { background: #d1fae5; color: #065f46; }
+        .mm-lbl--optica { background: #f5f3ff; color: #6d28d9; }
+        .mm-lbl--foto   { background: #fef3c7; color: #92400e; }
+
+        /* ===== INTRO DOIS COLS ===== */
+        .mm-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 24px; }
+        @media (max-width: 680px) { .mm-intro { grid-template-columns: 1fr; } }
+        .mm-intro-col h3 {
+            font-size: 15px; font-weight: 700; color: #0f172a;
+            margin-bottom: 10px; padding-left: 12px; border-left: 3px solid #1F1659;
+        }
+        .mm-sect--braco  .mm-intro-col h3 { border-left-color: #0ea5e9; }
+        .mm-sect--scanner .mm-intro-col h3 { border-left-color: #10b981; }
+        .mm-sect--optica .mm-intro-col h3 { border-left-color: #8b5cf6; }
+        .mm-sect--foto   .mm-intro-col h3 { border-left-color: #f59e0b; }
+
+        /* ===== MODELO CARDS ===== */
+        .mm-models { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .mm-model {
+            border: 1px solid #e2e8f0; border-radius: 11px; padding: 18px 20px;
+            transition: box-shadow 0.2s, transform 0.15s; background: #fafbfc;
+        }
+        .mm-model:hover { box-shadow: 0 4px 18px rgba(31,22,89,0.09); transform: translateY(-2px); background: #fff; }
+        .mm-model-name { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+        .mm-model-brand { font-size: 12px; color: #94a3b8; margin-bottom: 10px; font-style: italic; }
+        .mm-model-desc { font-size: 13.5px; color: #475569; line-height: 1.6; margin-bottom: 12px; }
+        .mm-model-specs { display: flex; flex-direction: column; gap: 5px; }
+        .mm-spec-row { display: flex; justify-content: space-between; font-size: 12.5px; }
+        .mm-spec-key { color: #64748b; }
+        .mm-spec-val { font-weight: 600; color: #334155; text-align: right; }
+        .mm-model-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+        .mm-tag {
+            background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 14px;
+            padding: 2px 9px; font-size: 11.5px; color: #475569; font-weight: 500;
+        }
+        .mm-sect--cmm    .mm-model { border-top: 3px solid #1F1659; }
+        .mm-sect--braco  .mm-model { border-top: 3px solid #0ea5e9; }
+        .mm-sect--scanner .mm-model { border-top: 3px solid #10b981; }
+        .mm-sect--optica .mm-model { border-top: 3px solid #8b5cf6; }
+        .mm-sect--foto   .mm-model { border-top: 3px solid #f59e0b; }
+
+        /* ===== VANTAGENS/LIMITAÇÕES grid ===== */
+        .mm-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 20px 0; }
+        @media (max-width: 680px) { .mm-pros-cons { grid-template-columns: 1fr; } }
+        .mm-pros, .mm-cons {
+            border-radius: 10px; padding: 18px 20px;
+        }
+        .mm-pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .mm-cons { background: #fef9ee; border: 1px solid #fde68a; }
+        .mm-pros h4 { font-size: 14px; font-weight: 700; color: #15803d; margin-bottom: 10px; display: flex; gap: 6px; align-items: center; }
+        .mm-cons h4 { font-size: 14px; font-weight: 700; color: #92400e; margin-bottom: 10px; display: flex; gap: 6px; align-items: center; }
+        .mm-pros li, .mm-cons li { font-size: 13.5px; margin-bottom: 6px; padding-left: 0; }
+        .mm-pros ul, .mm-cons ul { padding-left: 18px; margin: 0; }
+
+        /* ===== ALERT ===== */
+        .mm-alert {
+            border-radius: 10px; padding: 14px 18px; margin: 16px 0;
+            font-size: 14.5px; line-height: 1.6;
+        }
+        .mm-alert p { font-size: 14.5px; margin: 0; }
+        .mm-alert--blue   { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .mm-alert--green  { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+        .mm-alert--yellow { background: #fefce8; border: 1px solid #fde047; border-left: 4px solid #ca8a04; }
+        .mm-alert--purple { background: #f5f3ff; border: 1px solid #c4b5fd; border-left: 4px solid #7c3aed; }
+        .mm-alert--cyan   { background: #ecfeff; border: 1px solid #a5f3fc; border-left: 4px solid #0891b2; }
+
+        /* ===== TABELA COMPARATIVA ===== */
+        .mm-tbl-wrap { overflow-x: auto; margin: 20px 0; }
+        .mm-tbl { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 700px; }
+        .mm-tbl th {
+            background: #1F1659; color: #fff; padding: 13px 16px; text-align: left;
+            font-size: 12.5px; font-weight: 700;
+        }
+        .mm-tbl th:first-child { border-radius: 8px 0 0 0; }
+        .mm-tbl th:last-child  { border-radius: 0 8px 0 0; }
+        .mm-tbl td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; color: #334155; vertical-align: top; }
+        .mm-tbl tr:nth-child(even) td { background: #f8fafc; }
+        .mm-tbl tr:last-child td { border-bottom: none; }
+        .mm-tbl .mm-cat {
+            display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px;
+            border-radius: 5px; white-space: nowrap;
+        }
+        .mm-star { color: #1F1659; font-weight: 700; font-size: 13px; }
+        .mm-star--5::after { content: '●●●●●'; letter-spacing: 2px; }
+        .mm-star--4::after { content: '●●●●○'; letter-spacing: 2px; }
+        .mm-star--3::after { content: '●●●○○'; letter-spacing: 2px; }
+        .mm-star--2::after { content: '●●○○○'; letter-spacing: 2px; }
+
+        /* ===== COMO ESCOLHER ===== */
+        .mm-choice { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 10px; }
+        .mm-choice-card {
+            border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 20px;
+        }
+        .mm-choice-icon { font-size: 28px; margin-bottom: 10px; }
+        .mm-choice-q { font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 8px; line-height: 1.35; }
+        .mm-choice-a { font-size: 13px; color: #475569; line-height: 1.55; }
+        .mm-choice-a strong { color: #1F1659; }
+
+        /* ===== CTA FINAL ===== */
+        .mm-cta {
+            background: linear-gradient(135deg, #1e3a8a, #1F1659);
+            border-radius: 12px; padding: 40px 36px; text-align: center; color: #fff;
+        }
+        .mm-cta h2 { color: #fff; font-size: 20px; border: 0; padding: 0; margin-bottom: 12px; }
+        .mm-cta p  { font-size: 14.5px; opacity: 0.9; margin-bottom: 6px; }
+        .mm-cta-btn {
+            display: inline-block; background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.28); border-radius: 8px;
+            padding: 11px 28px; margin: 10px 6px 0; font-size: 14.5px; font-weight: 700;
+            color: #fff; text-decoration: none;
+        }
+        .mm-cta-btn--white { background: #fff; color: #1F1659; border-color: #fff; }
+
+        @media print {
+            body { background: #fff; }
+            .mm-page { margin: 0; max-width: 100%; }
+            .mm-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+<main class="mm-page" role="main">
+
+    <!-- ===== HERO ===== -->
+    <header class="mm-hero">
+        <div class="mm-badge">&#128200; Guia Técnico — Metrologia 3D</div>
+        <h1>Tipos de Máquinas de Medição 3D: Guia Completo para Escolher a Solução Certa</h1>
+        <p>CMM de ponte, braço articulado, scanner 3D por luz estruturada, fotogrametria ou sistema óptico? Cada tecnologia tem suas vantagens, limitações e aplicações ideais. Este guia explica como funciona cada tipo, quais modelos existem no mercado e como decidir qual solução é a certa para o seu processo.</p>
+        <nav class="mm-hero-nav" aria-label="Ir para seção">
+            <a href="#cmm">&#127981; CMM de Ponte</a>
+            <a href="#braco">&#129304; Braço Articulado</a>
+            <a href="#scanner">&#128420; Scanner 3D</a>
+            <a href="#foto">&#128247; Fotogrametria</a>
+            <a href="#optica">&#128247; Sistemas Ópticos</a>
+            <a href="#comparativo">&#128202; Comparativo</a>
+            <a href="#escolha">&#128161; Como Escolher</a>
+        </nav>
+    </header>
+
+    <!-- ===== KPIs ===== -->
+    <div class="mm-kpis">
+        <div class="mm-kpi">
+            <div class="mm-kpi-value">5 tecnologias</div>
+            <div class="mm-kpi-label">de medição 3D cobertas neste guia</div>
+        </div>
+        <div class="mm-kpi">
+            <div class="mm-kpi-value">0,3 μm</div>
+            <div class="mm-kpi-label">precisão máxima possível em CMM de ponte de alta precisão</div>
+        </div>
+        <div class="mm-kpi">
+            <div class="mm-kpi-value">Portátil</div>
+            <div class="mm-kpi-label">até estrutural — aplicações de mm a metros de alcance</div>
+        </div>
+        <div class="mm-kpi">
+            <div class="mm-kpi-value">+500 modelos</div>
+            <div class="mm-kpi-label">disponíveis globalmente, das micro às grande estrutura</div>
+        </div>
+    </div>
+
+    <!-- ===== 1. CMM DE PONTE ===== -->
+    <section class="mm-section mm-sect--cmm" id="cmm">
+        <h2>
+            &#127981; Máquina de Medir por Coordenadas (CMM)
+            <span class="mm-type-label mm-lbl--cmm">CMM / Tridimensional</span>
+        </h2>
+        <p class="mm-lead">A CMM (Coordinate Measuring Machine) é o padrão ouro em metrologia dimensional industrial. Utiliza um apalpador de contato (probe) para coletar pontos 3D com altíssima precisão. Existem diferentes configurações estruturais, cada uma adequada a uma classe de aplicações.</p>
+
+        <div class="mm-intro">
+            <div class="mm-intro-col">
+                <h3>Como funciona</h3>
+                <p>Um apalpador físico (esfera de rubi, cerâmica ou outro material) toca a superfície da peça. O sistema registra as coordenadas X, Y, Z no espaço tridimensional. O software de medição (PC-DMIS, Calypso, Rational DMIS, etc.) calcula features geométricas: planos, círculos, cilindros, cones, perfis, etc.</p>
+                <p>A qualidade do resultado depende da rigidez estrutural da máquina, do ambiente (temperatura, vibrações) e da calibração regular do apalpador no artefato de referência (esfera de calibração).</p>
+            </div>
+            <div class="mm-intro-col">
+                <h3>Quando usar CMM</h3>
+                <ul>
+                    <li>Inspeção dimensional com tolerâncias apertadas (&lt; 0,01 mm)</li>
+                    <li>Conformidade com GD&amp;T (ASME Y14.5 / ISO 1101)</li>
+                    <li>Medição de furos, roscas, rasgos, planos e perfis complexos</li>
+                    <li>Relatórios de inspeção rastreáveis (PPAP, FAIR, FAI)</li>
+                    <li>Laboratório de metrologia ou inspeção no chão de fábrica</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 style="font-size:16px; font-weight:700; color:#1F1659; margin:20px 0 14px; padding-left:12px; border-left:3px solid #1F1659;">Configurações Estruturais</h3>
+
+        <div class="mm-models">
+
+            <div class="mm-model">
+                <div class="mm-model-name">Ponte Fixa (Fixed Bridge)</div>
+                <div class="mm-model-brand">Unimetro, Hexagon, Zeiss, Mitutoyo, DEA</div>
+                <div class="mm-model-desc">A configuração mais comum e precisa. A ponte (eixo Y) se move sobre os trilhos da base enquanto o eixo X percorre a ponte e o Z vai para cima/baixo. Alta rigidez e excelente precisão.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,3 – 3 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume típico</span><span class="mm-spec-val">400×300×300 mm até 3m+</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Laboratório</span>
+                    <span class="mm-tag">Chão de fábrica</span>
+                    <span class="mm-tag">Alta precisão</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Pórtico (Gantry)</div>
+                <div class="mm-model-brand">Unimetro Gantry, Hexagon, Coord3</div>
+                <div class="mm-model-desc">Versão de grande porte onde a ponte se apoia em dois trilhos laterais elevados. Indicada para peças de grande volume — aeroespacial, naval, grandes moldes. A plataforma fica ao nível do chão para facilitar a carga de peças pesadas.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">3 – 15 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume típico</span><span class="mm-spec-val">2m × 2m × 1,5m até 10m+</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Grandes peças</span>
+                    <span class="mm-tag">Aeroespacial</span>
+                    <span class="mm-tag">Naval</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Braço Horizontal (H-CMM)</div>
+                <div class="mm-model-brand">Hexagon Romer H, DEA, FARO</div>
+                <div class="mm-model-desc">O eixo Z é horizontal — o apalpador se move lateralmente e verticalmente a partir de um coluna. Otimal para peças compridas (carrocerias, chassis, tubulações) onde uma ponte convencional seria ineficiente.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">5 – 20 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume típico</span><span class="mm-spec-val">2m × 4m × 1,5m</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Carrocerias</span>
+                    <span class="mm-tag">Tubulações</span>
+                    <span class="mm-tag">Automotivo</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Cantilever</div>
+                <div class="mm-model-brand">Zeiss Contura, Hexagon Global, Mitutoyo</div>
+                <div class="mm-model-desc">A ponte está apoiada apenas de um lado, permitindo acesso total a três faces da peça. Mais flexível para peças irregulares, porém com menor rigidez estrutural que a ponte fixa. Muito usado em laboratórios de médio porte.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,5 – 4 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume típico</span><span class="mm-spec-val">500×800×600 mm</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Laboratório</span>
+                    <span class="mm-tag">Peças médias</span>
+                    <span class="mm-tag">Versátil</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Microperfilômetro / Nano CMM</div>
+                <div class="mm-model-brand">Zeiss F25, Xenos, Pantec</div>
+                <div class="mm-model-desc">CMM de ultra-precisão para peças miniaturizadas — relógios, microeletrônica, implantes médicos e óptica de precisão. Utiliza apalpadores de força extremamente baixa (&lt; 0,5 mN) para não deformar a superfície da peça durante o contato.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,1 – 0,5 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume típico</span><span class="mm-spec-val">até 100×100×100 mm</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Micropeças</span>
+                    <span class="mm-tag">Relógio</span>
+                    <span class="mm-tag">Óptica</span>
+                    <span class="mm-tag">Implantes</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mm-pros-cons">
+            <div class="mm-pros">
+                <h4>&#10003; Vantagens da CMM</h4>
+                <ul>
+                    <li>Maior precisão dimensional disponível no mercado</li>
+                    <li>Resultados rastreáveis a padrões nacionais/internacionais</li>
+                    <li>Aceita pelo PPAP, FAIR, auditorias IATF e AS9102</li>
+                    <li>Ampla variedade de apalpadores para qualquer feature</li>
+                    <li>Software robusto para GD&amp;T, SPC e exportação CAD</li>
+                </ul>
+            </div>
+            <div class="mm-cons">
+                <h4>&#9888; Limitações da CMM</h4>
+                <ul>
+                    <li>Medição por pontos — não captura a forma completa da superfície</li>
+                    <li>Velocidade limitada comparada a scanners 3D</li>
+                    <li>Necessita de temperatura controlada (idealmente 20 °C ± 1 °C)</li>
+                    <li>Peça deve ir até a máquina (não portátil)</li>
+                    <li>Custo inicial e de manutenção elevado</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mm-alert mm-alert--blue">
+            <p>&#8505;&#65039; <strong>Unimetro:</strong> a Enterfix é representante autorizada da Unimetro, fabricante brasileira de CMMs das séries Basic, Ultra, Peak, Ranger, Avant, Gantry e CMM de alta precisão. <a href="https://enterfix.com.br" target="_blank" rel="noopener">Consulte disponibilidade de modelos</a>.</p>
+        </div>
+    </section>
+
+    <!-- ===== 2. BRAÇO ARTICULADO ===== -->
+    <section class="mm-section mm-sect--braco" id="braco">
+        <h2>
+            &#129304; Braço de Medição Articulado (AACMM)
+            <span class="mm-type-label mm-lbl--braco">Portátil</span>
+        </h2>
+        <p class="mm-lead">O braço articulado (Articulated Arm CMM — AACMM) é a solução portátil por excelência. Com 6 ou 7 eixos de rotação e encoders angulares de alta resolução, calcula a posição do apalpador no espaço a partir das leituras angulares articuladas. Pode ser levado até a peça, não o contrário.</p>
+
+        <div class="mm-intro">
+            <div class="mm-intro-col">
+                <h3>Como funciona</h3>
+                <p>Cada junta articulada possui encoders angulares de alta resolução. O software integra as leituras de todos os eixos e calcula a posição 3D absoluta da ponta do apalpador (ou do scanner acoplado ao final do braço) em tempo real. O usuário move o braço manualmente guiando o apalpador sobre a peça.</p>
+            </div>
+            <div class="mm-intro-col">
+                <h3>Quando usar braço articulado</h3>
+                <ul>
+                    <li>Peças grandes demais para caber numa CMM fixa</li>
+                    <li>Medição in loco — máquina, veículo, estrutura</li>
+                    <li>Inspeção de primeira peça em produção flex</li>
+                    <li>Reverse engineering com scanner acoplado</li>
+                    <li>Ambiente de chão de fábrica sem controle de temperatura</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mm-models">
+
+            <div class="mm-model">
+                <div class="mm-model-name">FARO Edge / Quantum</div>
+                <div class="mm-model-brand">FARO Technologies</div>
+                <div class="mm-model-desc">Linha premium de braços articulados com alcance de 1,2 m a 3,7 m. Versão S (scanner integrado) permite digitalização 3D sem mudar de equipamento. Estrutura em fibra de carbono para leveza e estabilidade térmica.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">±20 – ±50 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Alcance</span><span class="mm-spec-val">1,2 m / 1,8 m / 2,4 m / 3,7 m</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Portátil</span>
+                    <span class="mm-tag">Scanner opcional</span>
+                    <span class="mm-tag">7 eixos</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Hexagon Absolute Arm</div>
+                <div class="mm-model-brand">Hexagon Manufacturing Intelligence</div>
+                <div class="mm-model-desc">Braço com encoders absolutos — não requer busca de zero ao ligar. Linha RS (Romer Scanner) integra laser scanner de alta resolução. Ampla compatibilidade com software PC-DMIS e Q-DAS.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">±18 – ±55 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Alcance</span><span class="mm-spec-val">0,9 m / 1,2 m / 1,8 m / 2,5 m / 3,5 m</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Encoders absolutos</span>
+                    <span class="mm-tag">PC-DMIS</span>
+                    <span class="mm-tag">6 / 7 eixos</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Creaform HandyProbe / MaxSHOT</div>
+                <div class="mm-model-brand">Creaform (AMETEK)</div>
+                <div class="mm-model-desc">Sistema portátil sem necessidade de braço físico. Utiliza câmeras de rastreamento (tracker) para localizar o apalpador manual no espaço. Alta flexibilidade para peças de grande porte que limitam o uso de um braço convencional.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">±0,064 mm (HandyProbe)</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume</span><span class="mm-spec-val">até 8 m de diâmetro</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Sem braço físico</span>
+                    <span class="mm-tag">Grandes estruturas</span>
+                    <span class="mm-tag">Aeroespacial</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mm-pros-cons">
+            <div class="mm-pros">
+                <h4>&#10003; Vantagens do Braço Articulado</h4>
+                <ul>
+                    <li>Totalmente portátil — vai até a peça</li>
+                    <li>Funciona sem controle rígido de temperatura</li>
+                    <li>Pode acoplar scanner laser para digitalização 3D</li>
+                    <li>Excelente custo-benefício para peças médias a grandes</li>
+                    <li>Setup rápido — começa a medir em minutos</li>
+                </ul>
+            </div>
+            <div class="mm-cons">
+                <h4>&#9888; Limitações do Braço Articulado</h4>
+                <ul>
+                    <li>Precisão inferior às CMMs fixas de laboratório</li>
+                    <li>Resultado depende da postura do operador</li>
+                    <li>Volume de medição limitado pelo alcance do braço</li>
+                    <li>Fadiga de operação em longas sessões de medição</li>
+                    <li>Calibração periódica obrigatória nas juntas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. SCANNER 3D ===== -->
+    <section class="mm-section mm-sect--scanner" id="scanner">
+        <h2>
+            &#128420; Scanner 3D por Luz Estruturada
+            <span class="mm-type-label mm-lbl--scanner">Alta densidade</span>
+        </h2>
+        <p class="mm-lead">O scanner 3D por luz estruturada projeta padrões de franjas de luz sobre a superfície e utiliza câmeras calibradas para reconstruir a geometria 3D completa. Em segundos, captura milhões de pontos — gerando uma nuvem de pontos densa que representa a superfície real da peça com fidelidade total.</p>
+
+        <div class="mm-intro">
+            <div class="mm-intro-col">
+                <h3>Como funciona</h3>
+                <p>Um projetor emite padrões de franjas de luz (branca, azul ou laser) sobre a peça. Duas ou mais câmeras registram a deformação das franjas gerada pela topografia da superfície. O algoritmo de triangulação calcula a posição 3D de cada pixel — resultando em uma nuvem de pontos com até 5 milhões de pontos por captura.</p>
+            </div>
+            <div class="mm-intro-col">
+                <h3>Quando usar scanner 3D</h3>
+                <ul>
+                    <li>Inspeção de forma livre (superfícies esculturadas, orgânicas, estampados)</li>
+                    <li>Análise de desvio de superfície (color map / mapa de desvios)</li>
+                    <li>Reverse engineering — reconstrução de peças sem CAD</li>
+                    <li>Análise dimensional de plásticos moldados, fundidos e forjados</li>
+                    <li>Controle de qualidade volumétrico rápido</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mm-models">
+
+            <div class="mm-model">
+                <div class="mm-model-name">KSCAN-Magic / KSCAN-X</div>
+                <div class="mm-model-brand">Scantech (via Enterfix)</div>
+                <div class="mm-model-desc">Scanner portátil de alta performance com luz infravermelha. Combina digitalização por franjas e por laser em um único equipamento. Ideal para peças médias e grandes com detalhes finos. Alta velocidade e precisão certificada ISO 10360.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">até 0,020 mm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Resolução</span><span class="mm-spec-val">0,010 mm</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Portátil</span>
+                    <span class="mm-tag">IR + laser</span>
+                    <span class="mm-tag">ISO 10360</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">SIMSCAN / SIMSCAN-E</div>
+                <div class="mm-model-brand">Scantech (via Enterfix)</div>
+                <div class="mm-model-desc">Scanner ultraleve (apenas 495 g) para inspeção de peças compactas e de alta precisão. Perfeito para uso em CMM, braço articulado ou livre. Excelente para peças com detalhes finos como usinados, moldes e eletrônicos.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">até 0,020 mm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Peso</span><span class="mm-spec-val">495 g</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Ultraleve</span>
+                    <span class="mm-tag">Alta precisão</span>
+                    <span class="mm-tag">Moldes</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">AXE-B / KSCAN-E</div>
+                <div class="mm-model-brand">Scantech (via Enterfix)</div>
+                <div class="mm-model-desc">Família de scanners para grandes volumes e estruturas. O AXE-B alcança até 1.700 mm de largura de varredura, tornando-o adequado para aeronaves, veículos, turbinas e produtos de grande porte.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Largura de faixa</span><span class="mm-spec-val">até 1.700 mm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,025 – 0,05 mm</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Grande volume</span>
+                    <span class="mm-tag">Aeroespacial</span>
+                    <span class="mm-tag">Automotivo</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">AutoScan-K / AutoScan-T</div>
+                <div class="mm-model-brand">Scantech (via Enterfix)</div>
+                <div class="mm-model-desc">Sistemas de scanner automatizado em mesa giratória. A peça gira sobre uma plataforma enquanto o scanner captura todas as faces automaticamente, sem intervenção do operador. Ideal para inspeção de produção e reverse engineering semi-automático.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,010 – 0,020 mm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Modo</span><span class="mm-spec-val">Automático / Semi-auto</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Automatizado</span>
+                    <span class="mm-tag">Mesa giratória</span>
+                    <span class="mm-tag">Produção</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">AM-CELL-C / AM-DESK</div>
+                <div class="mm-model-brand">Scantech (via Enterfix)</div>
+                <div class="mm-model-desc">Células de inspeção 3D automatizadas. O AM-CELL-C integra robô colaborativo e scanner para digitalização sem operador, 24/7. O AM-DESK é uma versão compacta para laboratório. Ambos suportam integração com MES e sistemas de qualidade.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Modo</span><span class="mm-spec-val">100% automático</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Int. sistema</span><span class="mm-spec-val">MES / ERP / SPC</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Célula robotizada</span>
+                    <span class="mm-tag">Indústria 4.0</span>
+                    <span class="mm-tag">24/7</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mm-pros-cons">
+            <div class="mm-pros">
+                <h4>&#10003; Vantagens do Scanner 3D</h4>
+                <ul>
+                    <li>Captura milhões de pontos em segundos — inspeção de superfície completa</li>
+                    <li>Ideal para superfícies de forma livre (orgânicas, estampados)</li>
+                    <li>Color maps de desvio facilitam análise visual intuitiva</li>
+                    <li>Sem contato físico — não marca superfícies delicadas</li>
+                    <li>Combina inspeção dimensional e reverse engineering</li>
+                </ul>
+            </div>
+            <div class="mm-cons">
+                <h4>&#9888; Limitações do Scanner 3D</h4>
+                <ul>
+                    <li>Superfícies reflexivas ou muito escuras exigem preparação (spray fosco)</li>
+                    <li>Precisão inferior a CMMs fixas para features específicas (furos, roscas)</li>
+                    <li>Grande volume de dados — exige hardware e software robustos</li>
+                    <li>Área de sombra (undercuts) pode exigir múltiplas capturas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mm-alert mm-alert--green">
+            <p>&#10004; <strong>Scantech via Enterfix:</strong> somos distribuidores da linha completa de scanners Scantech no Brasil — SIMSCAN, KSCAN-Magic, KSCAN-X, AXE-B, AutoScan e células automatizadas AM-CELL.</p>
+        </div>
+    </section>
+
+    <!-- ===== 4. FOTOGRAMETRIA ===== -->
+    <section class="mm-section mm-sect--foto" id="foto">
+        <h2>
+            &#128247; Fotogrametria 3D
+            <span class="mm-type-label mm-lbl--foto">Grande Volume</span>
+        </h2>
+        <p class="mm-lead">A fotogrametria utiliza múltiplas fotografias de uma peça ou estrutura para reconstruir suas coordenadas 3D com alta exatidão global. Enquanto o scanner captura detalhes locais com alta resolução, a fotogrametria resolve o problema do acúmulo de erro em grandes volumes — tornando os dois sistemas complementares.</p>
+
+        <div class="mm-intro">
+            <div class="mm-intro-col">
+                <h3>Como funciona</h3>
+                <p>Marcadores retroreflexivos (targets) são colados na peça. Uma câmera fotogramétrica calibrada captura dezenas a centenas de fotos ao redor da peça. O software calcula as coordenadas 3D de cada marcador por triangulação fotográfica — com erros globais de 0,025 mm em estruturas de 10 metros.</p>
+            </div>
+            <div class="mm-intro-col">
+                <h3>Quando usar fotogrametria</h3>
+                <ul>
+                    <li>Peças de mais de 1,5 m onde o scanner acumula erro global</li>
+                    <li>Digitalização de aeronaves, carrocerias, turbinas, fuselagens</li>
+                    <li>Controle de grandes moldes e gabaritos</li>
+                    <li>Combinado com scanner (fotogrametria define referencial global + scanner captura detalhes)</li>
+                    <li>Documentação de patrimônio cultural, arqueologia e arquitetura</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mm-models">
+
+            <div class="mm-model">
+                <div class="mm-model-name">MSCAN-L15</div>
+                <div class="mm-model-brand">Scantech (via Enterfix)</div>
+                <div class="mm-model-desc">Sistema de fotogrametria portátil que combina câmeras calibradas e projeção de pontos para reconstrução 3D de alta precisão em grandes volumes. Resolução de referência global para guiar o scanner 3D KSCAN em estruturas complexas.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão global</span><span class="mm-spec-val">0,025 mm / 10 m</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume max.</span><span class="mm-spec-val">até 40+ metros</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Grande volume</span>
+                    <span class="mm-tag">Aeroespacial</span>
+                    <span class="mm-tag">Portátil</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">V-STARS (Geodetic)</div>
+                <div class="mm-model-brand">Geodetic Systems</div>
+                <div class="mm-model-desc">Sistema fotogramétrico de referência internacional usado na indústria aeroespacial para verificação de tolerâncias de montagem em aeronaves. Utiliza câmeras de alta resolução e alvos retroreflexivos com precisão de microns em volumes de dezenas de metros.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,010 mm / 5 m</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Aplicação</span><span class="mm-spec-val">Aeroespacial</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Alta precisão</span>
+                    <span class="mm-tag">Grandes estruturas</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Leica T-Probe / T-Scan</div>
+                <div class="mm-model-brand">Leica Geosystems (Hexagon)</div>
+                <div class="mm-model-desc">Rastreador laser (laser tracker) combinado com apalpador fotogramétrico T-Probe. O tracker localiza o apalpador no espaço com precisão de microns em volumes de dezenas de metros — o padrão ouro para montagem e alinhamento estrutural.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">±15 μm até 20 m</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Ambiente</span><span class="mm-spec-val">Industrial/Externo</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Laser tracker</span>
+                    <span class="mm-tag">Alinhamento</span>
+                    <span class="mm-tag">Estrutural</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mm-pros-cons">
+            <div class="mm-pros">
+                <h4>&#10003; Vantagens da Fotogrametria</h4>
+                <ul>
+                    <li>Controle global de erro — ideal para grandes volumes</li>
+                    <li>Sem acúmulo de erro mesmo em peças de 20 m+</li>
+                    <li>Complementa o scanner 3D para trabalho em grande escala</li>
+                    <li>Funciona em ambientes externos e industriais agressivos</li>
+                </ul>
+            </div>
+            <div class="mm-cons">
+                <h4>&#9888; Limitações da Fotogrametria</h4>
+                <ul>
+                    <li>Mede apenas pontos discretos (targets) — não gera superfície</li>
+                    <li>Requer aplicação de marcadores na peça</li>
+                    <li>Processamento de dados mais lento que scanner</li>
+                    <li>Custo e complexidade de operação elevados</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. ÓPTICO ===== -->
+    <section class="mm-section mm-sect--optica" id="optica">
+        <h2>
+            &#128300; Sistemas de Medição Óptica
+            <span class="mm-type-label mm-lbl--optica">Sem contato</span>
+        </h2>
+        <p class="mm-lead">Os sistemas de medição óptica utilizam câmeras, projetos de luz e algoritmos de visão computacional para medir dimensões e formas sem qualquer contato com a peça. São altamente adequados para peças frágeis, flexíveis, pequenas ou em alta cadência de produção.</p>
+
+        <div class="mm-intro">
+            <div class="mm-intro-col">
+                <h3>Como funciona</h3>
+                <p>Dependendo do tipo de sistema óptico: retroprojeção de sombra (silhueta), iluminação coaxial para borda, interferometria para rugosidade/topografia ou confocal para seções transversais micro. O ponto comum é a ausência de contato físico com a superfície — toda medição é feita por fótons.</p>
+            </div>
+            <div class="mm-intro-col">
+                <h3>Quando usar medição óptica</h3>
+                <ul>
+                    <li>Peças flexíveis que deformariam com um apalpador</li>
+                    <li>Peças muito pequenas (micro e nano escala)</li>
+                    <li>Alta cadência — inspeção a 100% na linha de produção</li>
+                    <li>Perfis e silhuetas 2D de precisão (ferramentas de corte, engrenagens)</li>
+                    <li>Rugosidade, topografia e waviness de superfície</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mm-models">
+
+            <div class="mm-model">
+                <div class="mm-model-name">Perfilômetro Óptico 3D (Confocal)</div>
+                <div class="mm-model-brand">Keyence VR, Zeiss Smartzoom, Bruker</div>
+                <div class="mm-model-desc">Utiliza microscopia confocal ou interferometria de coerência para mapear a topografia de superfície com resolução nanométrica. Mede Ra, Rz, Rq e parâmetros 3D (Sa, Sz) conforme ISO 25178. Indispensável para análises de acabamento e funcionalidade de superfície.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Resolução Z</span><span class="mm-spec-val">1 – 10 nm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Norma</span><span class="mm-spec-val">ISO 25178 / ISO 4287</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Rugosidade</span>
+                    <span class="mm-tag">Topografia</span>
+                    <span class="mm-tag">ISO 25178</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Projetor de Perfil / Comparador Óptico</div>
+                <div class="mm-model-brand">Mitutoyo, Starrett, Tesa</div>
+                <div class="mm-model-desc">Projeta a silhueta da peça ampliada em uma tela para comparação com gabarito ou medição direta dos parâmetros 2D (comprimento, ângulo, raio). Clássico no controle de ferramentas de corte, lâminas, brocas, fresas e peças de perfil complexo.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Ampliação</span><span class="mm-spec-val">10× a 100×</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,001 mm</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Silhueta 2D</span>
+                    <span class="mm-tag">Ferramentas de corte</span>
+                    <span class="mm-tag">Perfis</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Microscópio de Medição (VMM)</div>
+                <div class="mm-model-brand">Mitutoyo QV, Keyence IM, Zeiss O-INSPECT</div>
+                <div class="mm-model-desc">Video Measuring Machine (VMM) — combina câmera de alta resolução com mesa de coordenadas precisa. Mede features 2D e 2.5D automaticamente a partir de imagens. Excelente para PCBs, conectores, micropeças e inspeção de estampados finos.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,5 – 2 μm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Modo</span><span class="mm-spec-val">Automático / Programável</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">PCB</span>
+                    <span class="mm-tag">Micropeças</span>
+                    <span class="mm-tag">Automático</span>
+                </div>
+            </div>
+
+            <div class="mm-model">
+                <div class="mm-model-name">Sistemas de Rastreamento de Pose 6D</div>
+                <div class="mm-model-brand">Scantech TrackScan-Sharp / TrackProbe</div>
+                <div class="mm-model-desc">Câmeras de rastreamento óptico 3D localizam em tempo real a posição e orientação de um scanner portátil ou apalpador no espaço. Elimina a necessidade de marcadores na peça — o sistema reconhece a geometria diretamente. Ideal para peças de grande porte em ambiente fabril.</div>
+                <div class="mm-model-specs">
+                    <div class="mm-spec-row"><span class="mm-spec-key">Precisão</span><span class="mm-spec-val">0,025 – 0,060 mm</span></div>
+                    <div class="mm-spec-row"><span class="mm-spec-key">Volume</span><span class="mm-spec-val">até 10+ metros</span></div>
+                </div>
+                <div class="mm-model-tags">
+                    <span class="mm-tag">Rastreamento 6D</span>
+                    <span class="mm-tag">Sem marcadores</span>
+                    <span class="mm-tag">Grande volume</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mm-pros-cons">
+            <div class="mm-pros">
+                <h4>&#10003; Vantagens dos Sistemas Ópticos</h4>
+                <ul>
+                    <li>Sem contato — não deforma peças frágeis ou flexíveis</li>
+                    <li>Alta velocidade — ideal para inspeção 100% em linha</li>
+                    <li>Medição de micro e nanoestrutura de superfície</li>
+                    <li>Automação total possível com robô e sistema de visão</li>
+                </ul>
+            </div>
+            <div class="mm-cons">
+                <h4>&#9888; Limitações dos Sistemas Ópticos</h4>
+                <ul>
+                    <li>Sensíveis a reflexo, sujeira e variação de iluminação</li>
+                    <li>Features internas (furos, roscas) podem ser inacessíveis ópticamente</li>
+                    <li>Calibração mais complexa que sistemas de contato</li>
+                    <li>Rastreabilidade metrológica mais difícil de estabelecer</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TABELA COMPARATIVA ===== -->
+    <section class="mm-section" id="comparativo">
+        <h2>&#128202; Tabela Comparativa — Tecnologias de Medição 3D</h2>
+        <p class="mm-lead">Use esta tabela para comparar rapidamente as tecnologias pelo critério mais relevante ao seu processo.</p>
+
+        <div class="mm-tbl-wrap">
+            <table class="mm-tbl" aria-label="Comparativo entre tecnologias de medição 3D">
+                <thead>
+                    <tr>
+                        <th>Tecnologia</th>
+                        <th>Precisão típica</th>
+                        <th>Velocidade</th>
+                        <th>Portabilidade</th>
+                        <th>Vol. max.</th>
+                        <th>Superfície completa</th>
+                        <th>Custo relativo</th>
+                        <th>Melhor para</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CMM Ponte / Cantilever</strong><br><span style="font-size:12px;color:#64748b">Contato</span></td>
+                        <td>0,3 – 5 μm</td>
+                        <td>&#9679;&#9675;&#9675;&#9675;</td>
+                        <td>Fixa</td>
+                        <td>até 3 m</td>
+                        <td>Não</td>
+                        <td>&#9679;&#9679;&#9679;&#9679;</td>
+                        <td>Tolerâncias apertadas, PPAP, GD&amp;T</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CMM Pórtico (Gantry)</strong><br><span style="font-size:12px;color:#64748b">Contato</span></td>
+                        <td>3 – 15 μm</td>
+                        <td>&#9679;&#9675;&#9675;&#9675;</td>
+                        <td>Fixa</td>
+                        <td>até 10 m+</td>
+                        <td>Não</td>
+                        <td>&#9679;&#9679;&#9679;&#9679;&#9679;</td>
+                        <td>Grandes estruturas, aeroespacial, naval</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Braço Articulado</strong><br><span style="font-size:12px;color:#64748b">Contato / Laser</span></td>
+                        <td>20 – 60 μm</td>
+                        <td>&#9679;&#9679;&#9675;&#9675;</td>
+                        <td>Portátil</td>
+                        <td>até 3,7 m</td>
+                        <td>Com scanner</td>
+                        <td>&#9679;&#9679;&#9679;</td>
+                        <td>Chão de fábrica, peças médias/grandes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scanner 3D Luz Estruturada</strong><br><span style="font-size:12px;color:#64748b">Sem contato</span></td>
+                        <td>0,020 – 0,060 mm</td>
+                        <td>&#9679;&#9679;&#9679;&#9679;</td>
+                        <td>Portátil</td>
+                        <td>até 5 m</td>
+                        <td>Sim</td>
+                        <td>&#9679;&#9679;&#9679;</td>
+                        <td>Forma livre, desvio de superfície, RE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fotogrametria</strong><br><span style="font-size:12px;color:#64748b">Sem contato</span></td>
+                        <td>0,010 – 0,025 mm</td>
+                        <td>&#9679;&#9679;&#9675;&#9675;</td>
+                        <td>Portátil</td>
+                        <td>40 m+</td>
+                        <td>Parcial</td>
+                        <td>&#9679;&#9679;&#9679;&#9679;</td>
+                        <td>Grandes volumes, referencial global</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Óptico / Confocal / VMM</strong><br><span style="font-size:12px;color:#64748b">Sem contato</span></td>
+                        <td>0,001 – 2 μm</td>
+                        <td>&#9679;&#9679;&#9679;&#9679;&#9679;</td>
+                        <td>Semi-fixa</td>
+                        <td>pequeno</td>
+                        <td>Parcial</td>
+                        <td>&#9679;&#9679;&#9679;</td>
+                        <td>Rugosidade, micro, 100% em linha</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="font-size:12px; color:#94a3b8; margin-top: 8px;">&#9679; = mais lento / mais barato &nbsp; &#9679;&#9679;&#9679;&#9679;&#9679; = mais rápido / mais caro</p>
+    </section>
+
+    <!-- ===== COMO ESCOLHER ===== -->
+    <section class="mm-section" id="escolha">
+        <h2>&#128161; Como Escolher a Tecnologia Certa</h2>
+        <p class="mm-lead">Responda às perguntas abaixo para identificar rapidamente qual tecnologia se encaixa melhor na sua necessidade.</p>
+
+        <div class="mm-choice">
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#128207;</div>
+                <div class="mm-choice-q">Tolerância exige &lt; 5 μm e rastreabilidade metrológica formal?</div>
+                <div class="mm-choice-a">&#8594; <strong>CMM de ponte</strong> em ambiente climatizado. É a escolha para PPAP, FAIR e auditorias.</div>
+            </div>
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#128220;</div>
+                <div class="mm-choice-q">Precisa medir feature interna (furo, rosca, rasgo) com precisão?</div>
+                <div class="mm-choice-a">&#8594; <strong>CMM com apalpador</strong> ou braço articulado. Scanners ópticos não acessam cavidades internas.</div>
+            </div>
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#128240;</div>
+                <div class="mm-choice-q">A peça é grande demais para uma CMM fixa?</div>
+                <div class="mm-choice-a">&#8594; <strong>Braço articulado</strong> (até 3,7 m) ou <strong>fotogrametria + scanner</strong> para volumes maiores.</div>
+            </div>
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#127902;</div>
+                <div class="mm-choice-q">Quer capturar a superfície completa — não só pontos discretos?</div>
+                <div class="mm-choice-a">&#8594; <strong>Scanner 3D</strong> por luz estruturada. Gera nuvem de pontos densa e color map de desvios.</div>
+            </div>
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#128736;</div>
+                <div class="mm-choice-q">Precisa de reverse engineering — a peça não tem CAD?</div>
+                <div class="mm-choice-a">&#8594; <strong>Scanner 3D</strong> (SIMSCAN, KSCAN) + software de RE (Geomagic, SpaceClaim). Digitaliza e gera CAD.</div>
+            </div>
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#127970;</div>
+                <div class="mm-choice-q">Inspeção 100% em linha de produção em alta cadência?</div>
+                <div class="mm-choice-a">&#8594; <strong>Sistema óptico automatizado</strong> (VMM, visão de máquina) ou <strong>célula AM-CELL</strong> com scanner robótico.</div>
+            </div>
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#128202;</div>
+                <div class="mm-choice-q">Medir rugosidade e topografia de superfície?</div>
+                <div class="mm-choice-a">&#8594; <strong>Perfilômetro óptico confocal</strong> ou interferométrico (ISO 25178). Não uma CMM ou scanner.</div>
+            </div>
+
+            <div class="mm-choice-card">
+                <div class="mm-choice-icon">&#9992;</div>
+                <div class="mm-choice-q">Grandes estruturas (aviões, navios, turbinas, carrocerias)?</div>
+                <div class="mm-choice-a">&#8594; <strong>Fotogrametria + scanner</strong> ou <strong>laser tracker</strong>. Precisão global em volumes de dezenas de metros.</div>
+            </div>
+
+        </div>
+
+        <div class="mm-alert mm-alert--blue" style="margin-top:18px;">
+            <p>&#8505;&#65039; <strong>Não tem certeza qual tecnologia escolher?</strong> Nossa equipe técnica oferece consultoria gratuita de especificação. Descreva sua peça, tolerâncias e processo — indicamos a solução mais adequada e o melhor custo-benefício.</p>
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <div class="mm-cta">
+        <h2>&#128200; Consultoria Técnica em Metrologia 3D</h2>
+        <p>Especialistas Enterfix prontos para ajudar você a escolher, implantar e calibrar a solução de medição 3D ideal para o seu processo.</p>
+        <p style="font-size:13px; opacity:0.7; margin-top:2px;">Seg–Sex, 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; São Bernardo do Campo/SP</p>
+        <a class="mm-cta-btn mm-cta-btn--white"
+           href="mailto:ecommerce@enterfix.com.br?subject=Consultoria Metrologia 3D&body=Peça / Componente:%0D%0ATolerancias exigidas:%0D%0AVolume da peça (aprox.):%0D%0ASoftware atual:%0D%0AObservação:">
+            &#128140; ecommerce@enterfix.com.br
+        </a>
+        <a class="mm-cta-btn" href="tel:+551149422222">&#128222; (11) 4942-2222 / 2220</a>
+        <p style="margin-top:18px; font-size:12px; opacity:0.65;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40 &nbsp;|&nbsp; enterfix.com.br</p>
+    </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+[vc_row][vc_column][vc_column_text]
+<h1 style="text-align: center; color: #0066cc;">SISTEMAS DE FIXAÇÃO E-FIX E OPTIFIX</h1>
+<p style="text-align: center; font-size: 18px; color: #333;">Máxima estabilidade para medições precisas - Design modular e versátil</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890123{background-color: #f8f9fa !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sobre os Sistemas de Fixação</h2>
+<p>Os Sistemas de Fixação E-FIX e OPTIFIX foram desenvolvidos para garantir máxima estabilidade e versatilidade na fixação de componentes durante processos de medição. Com design modular e componentes versáteis, estes sistemas oferecem soluções completas para diferentes tipos de máquinas de medição, desde CMM até máquinas de medição por visão.</p>
+
+<p>O sistema E-FIX é especialmente projetado para máquinas de medição por coordenadas (CMM), oferecendo kit completo de componentes que garantem fixação segura e repetível. Já o OPTIFIX é otimizado para máquinas de medição por visão (VMM), com componentes modulares que não necessitam ferramentas especiais para montagem.</p>
+
+<p>Ambos os sistemas são fabricados com materiais de alta qualidade e precisão dimensional garantida, proporcionando estabilidade excepcional que é fundamental para a confiabilidade das medições realizadas.</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Características Técnicas</h2>
+<ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Design Modular:</strong> Componentes intercambiáveis para máxima versatilidade</li>
+<li><strong>Materiais Especiais:</strong> Aço temperado e alumínio anodizado</li>
+<li><strong>Precisão Dimensional:</strong> Tolerâncias apertadas para repetibilidade</li>
+<li><strong>Montagem Simplificada:</strong> Sistema sem ferramentas especiais (OPTIFIX)</li>
+<li><strong>Estabilidade Superior:</strong> Eliminação de vibrações e movimentos</li>
+<li><strong>Compatibilidade:</strong> Adaptável a diferentes tipos de máquinas</li>
+<li><strong>Durabilidade:</strong> Construção robusta para uso intensivo</li>
+<li><strong>Flexibilidade:</strong> Configurações para diversos tipos de peças</li>
+<li><strong>Facilidade de Uso:</strong> Interface intuitiva para operadores</li>
+<li><strong>Manutenção Mínima:</strong> Componentes de longa durabilidade</li>
+</ul>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890124{background-color: #e9ecef !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sistemas Disponíveis</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">E-FIX</h3>
+<p><strong>Aplicação:</strong> Máquinas de medição por coordenadas (CMM)</p>
+<p><strong>Componentes:</strong> Kit completo com elementos versáteis</p>
+<p><strong>Características:</strong> Máxima estabilidade e precisão</p>
+<p><strong>Ideal para:</strong> Laboratórios de metrologia e aplicações críticas</p>
+<p><strong>Material:</strong> Aço temperado com tratamentos especiais</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">OPTIFIX</h3>
+<p><strong>Aplicação:</strong> Máquinas de medição por visão (VMM)</p>
+<p><strong>Componentes:</strong> Modulares sem ferramentas especiais</p>
+<p><strong>Características:</strong> Montagem rápida e versatilidade</p>
+<p><strong>Ideal para:</strong> Produção seriada e inspeção rápida</p>
+<p><strong>Material:</strong> Alumínio anodizado e aço inoxidável</p>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]

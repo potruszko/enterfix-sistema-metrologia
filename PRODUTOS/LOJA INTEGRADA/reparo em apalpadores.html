@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reparo em Apalpadores CMM e Máquinas Operatrizes — Enterfix</title>
+    <meta name="description" content="Reparo especializado de apalpadores (probes) para máquinas tridimensionais e operatrizes. Testes de repetitividade, comunicação, força de trigger, estanqueidade e mais. Enterfix." />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9; color: #1e293b; line-height: 1.75; font-size: 16px;
+        }
+        .rp-page { max-width: 1100px; margin: 40px auto; padding: 0 20px 60px; }
+
+        /* HERO */
+        .rp-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px; padding: 50px 44px; margin-bottom: 32px;
+            color: #fff; position: relative; overflow: hidden;
+        }
+        .rp-hero::before {
+            content: ''; position: absolute; right: -60px; top: -80px;
+            width: 340px; height: 340px; border-radius: 50%;
+            background: rgba(255,255,255,0.04); pointer-events: none;
+        }
+        .rp-hero .rp-badge {
+            display: inline-block; background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32); border-radius: 50px;
+            padding: 4px 14px; font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 16px;
+        }
+        .rp-hero h1 { font-size: 27px; font-weight: 800; line-height: 1.25; margin-bottom: 14px; color: #fff; max-width: 700px; }
+        .rp-hero p  { font-size: 14.5px; opacity: 0.88; line-height: 1.85; max-width: 700px; margin: 0; }
+
+        /* KPI */
+        .rp-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-bottom: 24px; }
+        .rp-kpi {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 20px 22px; border-top: 4px solid #1F1659;
+        }
+        .rp-kpi-value { font-size: 26px; font-weight: 800; color: #1F1659; line-height: 1.1; }
+        .rp-kpi-label { font-size: 13px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+
+        /* SECTIONS */
+        .rp-section {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 38px 42px; margin-bottom: 24px;
+        }
+        @media (max-width: 640px) {
+            .rp-section { padding: 24px 18px; }
+            .rp-hero { padding: 32px 22px; }
+            .rp-hero h1 { font-size: 20px; }
+        }
+        .rp-section > h2 {
+            font-size: 20px; font-weight: 700; color: #1F1659;
+            margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .rp-section > .rp-lead { font-size: 14.5px; color: #64748b; margin-bottom: 24px; margin-top: 4px; }
+        .rp-section h3 {
+            font-size: 15.5px; font-weight: 700; color: #334155;
+            margin: 22px 0 8px; padding-left: 12px; border-left: 3px solid #6366f1;
+        }
+        .rp-section p  { font-size: 15px; margin-bottom: 10px; }
+        .rp-section ul { padding-left: 22px; margin-bottom: 12px; }
+        .rp-section li { font-size: 14.5px; margin-bottom: 7px; color: #334155; }
+        .rp-section strong { color: #0f172a; }
+        .rp-section a { color: #1d4ed8; text-decoration: underline; }
+
+        /* CARD GRID */
+        .rp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; margin-top: 6px; }
+        .rp-card {
+            border: 1px solid #e2e8f0; border-radius: 11px; overflow: hidden;
+            display: flex; flex-direction: column; transition: box-shadow 0.2s;
+        }
+        .rp-card:hover { box-shadow: 0 6px 20px rgba(31,22,89,0.1); }
+        .rp-card-head {
+            padding: 18px 20px 14px; display: flex; align-items: flex-start; gap: 14px;
+            background: #f8fafc; border-bottom: 1px solid #e2e8f0;
+        }
+        .rp-card-icon {
+            width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+            background: #1F1659; display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+        }
+        .rp-card-title { font-size: 15.5px; font-weight: 700; color: #0f172a; line-height: 1.2; padding-top: 4px; }
+        .rp-card-body { padding: 14px 20px 18px; font-size: 14px; color: #475569; line-height: 1.6; }
+        .rp-card-body ul { padding-left: 18px; margin: 8px 0 0; }
+        .rp-card-body li { font-size: 13.5px; margin-bottom: 5px; color: #475569; }
+
+        /* PROCESSO (timeline) */
+        .rp-steps { display: flex; flex-direction: column; gap: 0; }
+        .rp-step { display: flex; gap: 20px; position: relative; }
+        .rp-step:not(:last-child)::before {
+            content: ''; position: absolute; left: 19px; top: 44px;
+            width: 2px; height: calc(100% - 8px); background: #e2e8f0;
+        }
+        .rp-step-num {
+            width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+            background: #1F1659; color: #fff; font-weight: 800; font-size: 15px;
+            display: flex; align-items: center; justify-content: center; margin-top: 2px;
+        }
+        .rp-step-body { padding-bottom: 24px; }
+        .rp-step-title { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+        .rp-step-desc  { font-size: 14px; color: #64748b; line-height: 1.6; }
+
+        /* MARCAS */
+        .rp-brands { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .rp-brand-tag {
+            background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px;
+            padding: 8px 16px; font-size: 13.5px; font-weight: 600; color: #334155;
+        }
+
+        /* VIDEO */
+        .rp-video { aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+        .rp-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+        /* ALERT */
+        .rp-alert {
+            border-radius: 10px; padding: 16px 20px; margin: 16px 0;
+            font-size: 14.5px; line-height: 1.6;
+        }
+        .rp-alert p:last-child { margin: 0; }
+        .rp-alert p { font-size: 14.5px; }
+        .rp-alert--blue   { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .rp-alert--yellow { background: #fefce8; border: 1px solid #fde047; border-left: 4px solid #ca8a04; }
+        .rp-alert--green  { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+
+        /* CTA FINAL */
+        .rp-cta {
+            background: linear-gradient(135deg, #1e3a8a, #1F1659);
+            border-radius: 12px; padding: 36px 32px; text-align: center; color: #fff;
+        }
+        .rp-cta h2 { color: #fff; font-size: 19px; border: 0; padding: 0; margin-bottom: 10px; }
+        .rp-cta p  { font-size: 14.5px; opacity: 0.9; margin-bottom: 6px; }
+        .rp-cta-btn {
+            display: inline-block; background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.28); border-radius: 8px;
+            padding: 11px 26px; margin: 10px 6px 0; font-size: 14.5px; font-weight: 700;
+            color: #fff; text-decoration: none;
+        }
+        .rp-cta-btn--white { background: #fff; color: #1F1659; border-color: #fff; }
+
+        @media print {
+            body { background: #fff; }
+            .rp-page { margin: 0; padding: 0; max-width: 100%; }
+            .rp-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+<main class="rp-page" role="main">
+
+    <!-- HERO -->
+    <header class="rp-hero">
+        <div class="rp-badge">&#128295; Serviço Especializado — Reparo de Apalpadores</div>
+        <h1>Reparo em Apalpadores CMM e Máquinas Operatrizes</h1>
+        <p>A Enterfix desenvolveu métodos eficazes de reparo de apalpadores tanto para máquinas tridimensionais quanto para máquinas operatrizes que utilizam apalpadores (<em>probes</em>) de contato nos processos de inspeção. Antes de condenar seu equipamento, consulte nossa equipe.</p>
+    </header>
+
+    <!-- KPIs -->
+    <div class="rp-kpis">
+        <div class="rp-kpi">
+            <div class="rp-kpi-value">+15 anos</div>
+            <div class="rp-kpi-label">de experiência em reparo de apalpadores</div>
+        </div>
+        <div class="rp-kpi">
+            <div class="rp-kpi-value">6 ensaios</div>
+            <div class="rp-kpi-label">de verificação e certificação por apalpador</div>
+        </div>
+        <div class="rp-kpi">
+            <div class="rp-kpi-value">CMM + CNC</div>
+            <div class="rp-kpi-label">atendimento para máquinas tridimensionais e operatrizes</div>
+        </div>
+        <div class="rp-kpi">
+            <div class="rp-kpi-value">Aluguel</div>
+            <div class="rp-kpi-label">disponível durante o período de manutenção</div>
+        </div>
+    </div>
+
+    <!-- IMAGEM -->
+    <div style="border-radius:12px; overflow:hidden; border:1px solid #e2e8f0; margin-bottom:24px;">
+        <img src="https://cdn.awsli.com.br/1707/1707110/arquivos/comp40-4.jpg"
+             alt="Bancada de reparo de apalpadores — Enterfix"
+             loading="lazy" decoding="async"
+             style="width:100%; height:auto; display:block;" />
+    </div>
+
+    <!-- INTRODUÇÃO + ENSAIOS -->
+    <section class="rp-section" id="ensaios">
+        <h2>&#128202; Ensaios e Verificações</h2>
+        <p class="rp-lead">Realizamos teste de bancada eletrônica utilizando interfaces de CMM para apalpadores de contato de máquinas tridimensionais, e interfaces cabo, óptica e rádio para apalpadores de inspeção de máquinas operatrizes. Nos apalpadores de contato, efetuamos a medição da capacitância adequada para cada modelo, utilizando instrumentos eletrônicos de medida e medidores de tensão do probe.</p>
+
+        <div class="rp-grid">
+
+            <div class="rp-card">
+                <div class="rp-card-head">
+                    <div class="rp-card-icon">&#127919;</div>
+                    <div class="rp-card-title">Repetitividade</div>
+                </div>
+                <div class="rp-card-body">
+                    Teste de repetitividade com mínimo de 25 pontos nas direções ±X, ±Y e +Z. O resultado é avaliado com 2σ sobre a precisão especificada pelo fabricante do apalpador.
+                    <ul>
+                        <li>25 pontos por direção</li>
+                        <li>Avaliação por 2σ (2 desvios padrão)</li>
+                        <li>Comparativo com especificação OEM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rp-card">
+                <div class="rp-card-head">
+                    <div class="rp-card-icon">&#128225;</div>
+                    <div class="rp-card-title">Comunicação</div>
+                </div>
+                <div class="rp-card-body">
+                    Teste de comunicação completo para todos os meios de transmissão disponíveis conforme o modelo do apalpador.
+                    <ul>
+                        <li>Cabo (wired)</li>
+                        <li>Óptica — legacy e modulada</li>
+                        <li>Rádio (wireless)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rp-card">
+                <div class="rp-card-head">
+                    <div class="rp-card-icon">&#9881;&#65039;</div>
+                    <div class="rp-card-title">Força de Trigger</div>
+                </div>
+                <div class="rp-card-body">
+                    Medição da força de trigger (em Newtons) para cada direção de contato, verificando conformidade com os valores especificados pelo fabricante para o modelo em questão.
+                    <ul>
+                        <li>Medição em N por direção</li>
+                        <li>Validação conforme modelo OEM</li>
+                        <li>Detecção de molas e lâminas defeituosas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rp-card">
+                <div class="rp-card-head">
+                    <div class="rp-card-icon">&#128167;</div>
+                    <div class="rp-card-title">Estanqueidade</div>
+                </div>
+                <div class="rp-card-body">
+                    Verificação de estanqueidade para apalpadores aplicados em ambientes com líquidos refrigerantes e névoa de óleo — essencial para apalpadores de máquinas operatrizes e centros de usinagem.
+                    <ul>
+                        <li>Teste de pressão positiva</li>
+                        <li>Verificação de vedações e diafragmas</li>
+                        <li>Necessário para ambiente CNC com fluido</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rp-card">
+                <div class="rp-card-head">
+                    <div class="rp-card-icon">&#127895;</div>
+                    <div class="rp-card-title">Módulo Cinemático</div>
+                </div>
+                <div class="rp-card-body">
+                    Verificação de centragem e alinhamento do módulo cinemático (kinematic) do apalpador para garantir a correta repetibilidade de retorno ao ponto de referência após cada disparo.
+                    <ul>
+                        <li>Verificação de esferas e assentos cinemáticos</li>
+                        <li>Alinhamento do eixo central</li>
+                        <li>Substituição de componentes quando necessário</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rp-card">
+                <div class="rp-card-head">
+                    <div class="rp-card-icon">&#128737;&#65039;</div>
+                    <div class="rp-card-title">Danos Estruturais</div>
+                </div>
+                <div class="rp-card-body">
+                    Avaliação completa de danos externos e estruturais do apalpador, incluindo análise pós-colisão para identificar deformações no corpo, módulo de extensão e componentes internos.
+                    <ul>
+                        <li>Inspeção visual e dimensional do corpo</li>
+                        <li>Verificação pós-colisão</li>
+                        <li>Laudo de danos com recomendação de reparo</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="rp-section" id="processo">
+        <h2>&#128200; Como Funciona o Processo de Reparo</h2>
+        <p class="rp-lead">Do recebimento ao retorno do equipamento, cada etapa é documentada para garantir rastreabilidade e transparência.</p>
+
+        <div class="rp-steps">
+            <div class="rp-step">
+                <div class="rp-step-num">1</div>
+                <div class="rp-step-body">
+                    <div class="rp-step-title">Envio e Recebimento</div>
+                    <div class="rp-step-desc">O cliente envia o apalpador para nossa unidade em São Bernardo do Campo/SP, ou realiza entrega pessoal. Ao receber, emitimos confirmação com número de protocolo de atendimento.</div>
+                </div>
+            </div>
+            <div class="rp-step">
+                <div class="rp-step-num">2</div>
+                <div class="rp-step-body">
+                    <div class="rp-step-title">Diagnóstico Técnico</div>
+                    <div class="rp-step-desc">Nossa equipe realiza a análise completa do apalpador: todos os 6 ensaios de verificação são executados para identificar a origem exata da falha — eletrônica, mecânica ou de comunicação.</div>
+                </div>
+            </div>
+            <div class="rp-step">
+                <div class="rp-step-num">3</div>
+                <div class="rp-step-body">
+                    <div class="rp-step-title">Orçamento e Aprovação</div>
+                    <div class="rp-step-desc">Com o diagnóstico em mãos, enviamos um orçamento detalhado com descrição dos serviços e peças necessários. O reparo só é iniciado após aprovação formal do cliente.</div>
+                </div>
+            </div>
+            <div class="rp-step">
+                <div class="rp-step-num">4</div>
+                <div class="rp-step-body">
+                    <div class="rp-step-title">Execução do Reparo</div>
+                    <div class="rp-step-desc">Substituição de componentes defeituosos (diafragmas, molas, PCBs, módulos cinemáticos, LEDs de comunicação) utilizando ferramentas e peças compatíveis com a especificação original do fabricante.</div>
+                </div>
+            </div>
+            <div class="rp-step">
+                <div class="rp-step-num">5</div>
+                <div class="rp-step-body">
+                    <div class="rp-step-title">Certificação e Testes Finais</div>
+                    <div class="rp-step-desc">Após o reparo, todos os 6 ensaios são refeitos e os resultados registrados em relatório técnico. O apalpador só é liberado se todos os parâmetros estiverem dentro da especificação do fabricante.</div>
+                </div>
+            </div>
+            <div class="rp-step">
+                <div class="rp-step-num">6</div>
+                <div class="rp-step-body">
+                    <div class="rp-step-title">Devolução com Relatório</div>
+                    <div class="rp-step-desc">O equipamento é devolvido acompanhado do relatório técnico completo com resultados dos ensaios antes e após o reparo, garantindo rastreabilidade do serviço realizado.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="rp-section" id="marcas">
+        <h2>&#127981; Marcas e Modelos Atendidos</h2>
+        <p class="rp-lead">Atendemos as principais marcas de apalpadores do mercado para máquinas tridimensionais (CMM) e máquinas operatrizes (CNC).</p>
+
+        <h3>Máquinas Tridimensionais (CMM)</h3>
+        <div class="rp-brands">
+            <span class="rp-brand-tag">Renishaw TP / TP1 / TP2 / TP20 / TP200</span>
+            <span class="rp-brand-tag">Renishaw SP</span>
+            <span class="rp-brand-tag">Zeiss</span>
+            <span class="rp-brand-tag">Hexagon / DEA</span>
+            <span class="rp-brand-tag">Marposs</span>
+            <span class="rp-brand-tag">Mitutoyo</span>
+            <span class="rp-brand-tag">Leitz</span>
+            <span class="rp-brand-tag">LK / Perceptron</span>
+        </div>
+
+        <h3>Máquinas Operatrizes (CNC)</h3>
+        <div class="rp-brands">
+            <span class="rp-brand-tag">Renishaw OMP / OTS / RMP</span>
+            <span class="rp-brand-tag">Renishaw MP10 / MP11</span>
+            <span class="rp-brand-tag">Marposs T25 / T35</span>
+            <span class="rp-brand-tag">Blum</span>
+            <span class="rp-brand-tag">Heidenhain TS</span>
+        </div>
+
+        <h3>Cones de Adaptação Disponíveis</h3>
+        <p>Fabricamos e fornecemos cones especiais para apalpadores Renishaw para diversas interfaces de máquinas:</p>
+        <div class="rp-brands">
+            <span class="rp-brand-tag">BT 30 / 40 / 50</span>
+            <span class="rp-brand-tag">CAT 40 / 50</span>
+            <span class="rp-brand-tag">DIN 69871</span>
+            <span class="rp-brand-tag">HSK A63 / A100</span>
+        </div>
+
+        <div class="rp-alert rp-alert--blue" style="margin-top:18px;">
+            <p>&#8505;&#65039; <strong>Modelo não listado?</strong> Entre em contato informando a marca, modelo e sintoma apresentado. Avaliamos a viabilidade do reparo sem custo de diagnóstico inicial.</p>
+        </div>
+    </section>
+
+    <!-- ALUGUEL -->
+    <section class="rp-section" id="aluguel">
+        <h2>&#128197; Aluguel Durante a Manutenção</h2>
+        <p>Para evitar a paralização da sua linha de produção enquanto o apalpador está em reparo, a Enterfix oferece a opção de <strong>aluguel de apalpadores compatíveis</strong> durante o período de manutenção.</p>
+
+        <div class="rp-alert rp-alert--yellow">
+            <p>&#9888;&#65039; <strong>Antes de descartar ou trocar via RBE:</strong> consulte nossa equipe. Na maioria dos casos, o diagnóstico é positivo — gerando economia significativa, agilidade e maior vida útil ao seu equipamento. Um reparo pode custar 10 a 30% do valor de um equipamento novo.</p>
+        </div>
+
+        <p>Dependendo do nível de urgência e do modelo do apalpador, disponibilizamos equipamento em regime de aluguel.
+           <a href="https://www.enterfix.com.br/aluguel-de-apalpadores-maquina-tridimensional" rel="noopener" target="_blank">Saiba mais sobre o aluguel de apalpadores</a>.</p>
+    </section>
+
+    <!-- VÍDEO -->
+    <section class="rp-section" id="video">
+        <h2>&#127909; Veja o Processo de Reparo</h2>
+        <p class="rp-lead">Assista ao vídeo demonstrativo do nosso processo de reparo e ensaios de apalpadores.</p>
+        <div class="rp-video">
+            <iframe src="https://www.youtube.com/embed/MJ0GSPxDK1w?si=aoWOamt7hAJjWq0M&controls=1"
+                    title="Vídeo Enterfix — Reparo em Apalpadores"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- SOLICITAÇÃO -->
+    <section class="rp-section" id="orcamento">
+        <h2>&#128203; Como Solicitar Diagnóstico ou Reparo</h2>
+        <p>Para solicitar orçamento de reparo, informe os dados abaixo para nossa equipe:</p>
+        <ul>
+            <li><strong>Marca e modelo</strong> do apalpador (ex.: Renishaw TP20)</li>
+            <li><strong>Número de série</strong> do equipamento (se disponível)</li>
+            <li><strong>Sintoma ou erro</strong> apresentado (ex.: falha de trigger, erro de comunicação, baixa repetitividade)</li>
+            <li><strong>Tipo de aplicação:</strong> CMM ou máquina operatriz</li>
+            <li><strong>Nível de urgência</strong> (produção parada, manutenção programada)</li>
+        </ul>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+            <a href="https://www.enterfix.com.br/conserto-de-apalpadores-maquinas-tridimensionais"
+               rel="noopener" target="_blank"
+               style="display:inline-block; background:#1F1659; color:#fff; font-weight:700; padding:12px 22px; border-radius:9px; text-decoration:none; font-size:14.5px;">
+                &#128200; Reparo para CMM (Tridimensional)
+            </a>
+            <a href="https://www.enterfix.com.br/servico-de-reparo-em-apalpadores-para-maquinas-operatrizes"
+               rel="noopener" target="_blank"
+               style="display:inline-block; background:#1a4fa0; color:#fff; font-weight:700; padding:12px 22px; border-radius:9px; text-decoration:none; font-size:14.5px;">
+                &#9881;&#65039; Reparo para Máquinas Operatrizes (CNC)
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="rp-cta">
+        <h2>&#128295; Precisa de diagnóstico agora?</h2>
+        <p>Nossa equipe de especialistas está pronta para avaliar seu apalpador e oferecer a solução mais econômica.</p>
+        <p style="font-size:13px; opacity:0.7; margin-top:2px;">Seg–Sex, 08:00–12:00 e 13:00–17:30</p>
+        <a class="rp-cta-btn rp-cta-btn--white"
+           href="mailto:ecommerce@enterfix.com.br?subject=Reparo em apalpadores - Solicita%C3%A7%C3%A3o&body=Modelo do apalpador:%0D%0ASintoma/erro:%0D%0AUrgência:">
+            &#128140; ecommerce@enterfix.com.br
+        </a>
+        <a class="rp-cta-btn" href="tel:+551149422222">&#128222; (11) 4942-2222 / 2220</a>
+        <p style="margin-top:16px; font-size:12px; opacity:0.65;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40</p>
+    </div>
+
+</main>
+</body>
+</html>

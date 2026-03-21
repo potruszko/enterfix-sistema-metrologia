@@ -1,0 +1,540 @@
+<style>
+/* ─────────────────────────────────────────────
+   PREFIX: .devmt  |  3DeVOK MT — Enterfix
+   Replica estrutural da página Scantech
+───────────────────────────────────────────── */
+.devmt{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+.devmt *{box-sizing:border-box}
+
+/* ── ANIMAÇÕES ── */
+@keyframes devmt-fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.devmt-anim{animation:devmt-fadeUp .7s ease both}
+.devmt-anim-d1{animation-delay:.1s}.devmt-anim-d2{animation-delay:.25s}.devmt-anim-d3{animation-delay:.4s}
+.devmt-anim-d4{animation-delay:.55s}.devmt-anim-d5{animation-delay:.7s}.devmt-anim-d6{animation-delay:.85s}
+
+/* ── HERO ── */
+.devmt-hero{position:relative;background:#0a0f2e;border-radius:14px;overflow:hidden;margin-bottom:22px;min-height:420px;display:flex;align-items:flex-end}
+.devmt-hero-video{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;opacity:.38}
+.devmt-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(10,15,46,.92) 0%,transparent 65%);width:100%}
+.devmt-hero-title-img{max-width:500px;width:100%;height:auto;display:block;margin-bottom:10px}
+.devmt-hero-tag{display:inline-block;background:rgba(160,191,48,.2);border:1px solid rgba(160,191,48,.5);border-radius:50px;padding:3px 14px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#c8e05a;margin-bottom:12px}
+.devmt-hero-sub{font-size:13px;color:rgba(255,255,255,.8);margin:6px 0 18px;max-width:640px}
+.devmt-hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.devmt-hero-btn-blue{display:inline-block;padding:10px 22px;border-radius:6px;background:#A0BF30;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none}
+.devmt-hero-btn-outline{display:inline-block;padding:10px 22px;border-radius:6px;background:transparent;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.45)}
+.devmt-hero-product-img{position:absolute;right:24px;bottom:0;max-height:90%;width:auto;max-width:360px;z-index:3;object-fit:contain}
+
+/* ── HIGHLIGHTS ── */
+.devmt-prodes{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.devmt-prodes h1{font-size:17px;font-weight:800;color:#1F1659;text-align:center;margin:0 0 18px}
+.devmt-slides{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.devmt-slide-img{width:100%;border-radius:10px;display:block;object-fit:cover;max-height:240px}
+.devmt-desc-text{font-size:14px;color:#334155;line-height:1.75;margin:0 0 10px}
+.devmt-key-feats{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.devmt-key-feat{background:#f4f8e8;border:1px solid #c8dc82;border-radius:20px;padding:4px 12px;font-size:12.5px;color:#5a7200;font-weight:600}
+
+/* ── SYSTEM OVERVIEW ── */
+.devmt-system{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.devmt-system-inner{display:grid;grid-template-columns:1fr 1fr}
+.devmt-system-photo{width:100%;height:100%;object-fit:cover;display:block;min-height:260px}
+.devmt-system-icons{padding:28px 24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-content:center}
+.devmt-spec-icon{text-align:center}
+.devmt-spec-icon img{width:56px;height:56px;object-fit:contain;display:block;margin:0 auto 7px}
+.devmt-spec-icon p{font-size:11.5px;font-weight:700;color:#1F1659;margin:0;line-height:1.4}
+.devmt-cta-bar{background:linear-gradient(135deg,#161144,#1F1659);color:#fff;text-align:center;padding:20px 24px}
+.devmt-cta-bar h3{font-size:15px;font-weight:800;margin:0 0 10px}
+.devmt-cta-bar-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.devmt-cta-bar a{display:inline-block;padding:9px 20px;border-radius:6px;font-size:13.5px;font-weight:700;text-decoration:none}
+.devmt-cta-bar-primary{background:#fff;color:#1F1659}
+.devmt-cta-bar-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+
+/* ── FEATURE SECTIONS ── */
+.devmt-features-wrap{margin-bottom:16px}
+.devmt-feature{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:12px}
+.devmt-feature.rev{direction:rtl}
+.devmt-feature.rev > *{direction:ltr}
+.devmt-feature-img{width:100%;height:100%;object-fit:cover;min-height:240px;display:block}
+.devmt-feature-body{padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.devmt-feature-body h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 12px}
+.devmt-feature-body h3{font-size:13px;font-weight:700;color:#A0BF30;margin:0 0 10px}
+.devmt-feature-body ul{margin:0;padding-left:18px}
+.devmt-feature-body li{font-size:13.5px;color:#334155;line-height:1.65;margin-bottom:5px}
+.devmt-feature-body li strong{color:#1e293b}
+.devmt-feature-body p{font-size:13px;color:#475569;margin:0 0 6px}
+
+/* ── VÍDEO ── */
+.devmt-video-wrap{background:linear-gradient(135deg,#1F1659,#14263C);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.devmt-video-wrap h2{font-size:16px;font-weight:800;color:#fff;text-align:center;margin:0 0 18px}
+.devmt-iframe-wrap{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.devmt-iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── CARDS ── */
+.devmt-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.devmt-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+
+/* ── TABELA ── */
+.devmt-tbl-wrap{overflow-x:auto}
+.devmt-tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}
+.devmt-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:11.5px;font-weight:700}
+.devmt-tbl th:first-child{border-radius:6px 0 0 0}
+.devmt-tbl th:last-child{border-radius:0 6px 0 0}
+.devmt-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.devmt-tbl tr:nth-child(even) td{background:#f8fafc}
+.devmt-tbl tr:last-child td{border-bottom:none}
+.devmt-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+.devmt-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+.devmt-alert-amber{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #d97706;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#92400e;margin:14px 0 0;line-height:1.6}
+
+/* ── APLICAÇÕES ── */
+.devmt-apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:12px 0}
+.devmt-app{border-radius:10px;overflow:hidden;border:1px solid #e2e8f0}
+.devmt-app img{width:100%;height:160px;object-fit:cover;display:block}
+.devmt-app-body{padding:12px 14px;background:#fff}
+.devmt-app-body h3{font-size:13.5px;font-weight:700;color:#1F1659;margin:0 0 5px}
+.devmt-app-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.55}
+
+/* ── SOFTWARES ── */
+.devmt-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:22px 28px;margin-bottom:16px}
+.devmt-soft h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.devmt-soft-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;margin-top:12px}
+.devmt-soft-logos img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+/* ── CTA FINAL ── */
+.devmt-cta{background:linear-gradient(135deg,#161144,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.devmt-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.devmt-cta strong{color:#fff}
+.devmt-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.devmt-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.devmt-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+
+@media(max-width:700px){
+  .devmt-slides,.devmt-system-inner,.devmt-feature,.devmt-feature.rev{grid-template-columns:1fr;direction:ltr}
+  .devmt-feature.rev>*{direction:ltr}
+  .devmt-hero-product-img{display:none}
+  .devmt-prodes,.devmt-card,.devmt-soft,.devmt-video-wrap,.devmt-cta{padding:20px 16px}
+  .devmt-soft-logos{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:440px){
+  .devmt-system-icons{grid-template-columns:1fr 1fr}
+  .devmt-soft-logos{grid-template-columns:1fr}
+}
+</style>
+
+<div class="devmt">
+
+  <!-- ══════════════════════════════════════════════
+       HERO — vídeo de fundo + imagem do produto
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-hero">
+    <iframe class="devmt-hero-video"
+      src="https://www.youtube.com/embed/pFbamWRfGCw?autoplay=1&mute=1&loop=1&playlist=pFbamWRfGCw&controls=0&showinfo=0&modestbranding=1&rel=0"
+      allow="autoplay;encrypted-media" allowfullscreen loading="lazy" title="3DeVOK MT"></iframe>
+    <img class="devmt-hero-product-img"
+      src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_product.webp"
+      alt="3DeVOK MT Professional 3D Scanner" />
+    <div class="devmt-hero-overlay">
+      <div class="devmt-hero-tag">🔵 Scanner 3D Profissional — 3 Fontes de Luz</div>
+      <img class="devmt-hero-title-img devmt-anim devmt-anim-d1"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_dd84110571a546cc7f09391a42cacd43.webp"
+        alt="3DeVOK MT: Projetado para Produtividade Profissional" />
+      <p class="devmt-hero-sub devmt-anim devmt-anim-d2">
+        Herdando a Excelência Industrial, Criado para Ser a Ferramenta da Nova Era
+      </p>
+      <div class="devmt-hero-btns devmt-anim devmt-anim-d3">
+        <a class="devmt-hero-btn-blue" href="https://www.youtube.com/watch?v=pFbamWRfGCw" target="_blank" rel="noopener">▶ Assistir Vídeo</a>
+        <a class="devmt-hero-btn-outline" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Demo Gratuita</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HIGHLIGHTS — descrição + banners
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-prodes devmt-anim">
+    <h1>3DeVOK MT: Projetado para Produtividade Profissional</h1>
+    <div class="devmt-slides">
+      <img class="devmt-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_a8ae1f3433bdddb37fa2456e8de3e742.jpg"
+        alt="3DeVOK MT — Destaques" />
+      <img class="devmt-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250318_935032a4.jpeg"
+        alt="3DeVOK MT — Produtividade Profissional" />
+    </div>
+    <p class="devmt-desc-text">
+      O <strong>3DeVOK MT</strong> é um scanner 3D profissional e versátil que se destaca pelo desempenho excepcional.
+      Baseado em tecnologia de digitalização 3D de nível industrial, combina <strong>lasers e luz estruturada (speckle)</strong> para oferecer uma ferramenta completa e multifuncional.
+      Com software de digitalização profissional, configurações flexíveis de parâmetros, interação intuitiva e desempenho confiável,
+      ele eleva significativamente a eficiência de trabalho. É a solução ideal para digitalizar objetos dos mais variados tipos —
+      design artístico, engenharia reversa, medição 3D, visualização 3D, impressão 3D, pesquisa, educação e muito mais.
+    </p>
+    <div class="devmt-key-feats">
+      <span class="devmt-key-feat">34 Linhas de Laser Azul</span>
+      <span class="devmt-key-feat">Digitalização sem Marcadores</span>
+      <span class="devmt-key-feat">22 Linhas de Laser IV</span>
+      <span class="devmt-key-feat">Luz Estruturada VCSEL</span>
+      <span class="devmt-key-feat">Alinhamento Híbrido</span>
+      <span class="devmt-key-feat">Luz Invisível</span>
+      <span class="devmt-key-feat">Objetos Pretos e Reflexivos</span>
+      <span class="devmt-key-feat">Digitalização ao Ar Livre</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SYSTEM OVERVIEW — foto + ícones de spec
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-system devmt-anim devmt-anim-d1">
+    <div class="devmt-system-inner">
+      <img class="devmt-system-photo" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_product_photo.jpeg"
+        alt="3DeVOK MT Professional 3D Scanner" />
+      <div class="devmt-system-icons">
+        <div class="devmt-spec-icon devmt-anim devmt-anim-d1">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_f2948ce63b550e80917f2d697df1ccc6.webp" alt="3 Types of Light Sources" loading="lazy"/>
+          <p>3 Fontes de<br>Luz</p>
+        </div>
+        <div class="devmt-spec-icon devmt-anim devmt-anim-d2">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_ffaf4820e09740f752de9c2030e6ae4d.webp" alt="Precisão 0,04mm" loading="lazy"/>
+          <p>Precisão<br>0,04 mm</p>
+        </div>
+        <div class="devmt-spec-icon devmt-anim devmt-anim-d3">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_fe1e2f0549ac3de6afb3f8f71e514dc3.webp" alt="Resolução 0,05mm" loading="lazy"/>
+          <p>Resolução<br>0,05 mm</p>
+        </div>
+        <div class="devmt-spec-icon devmt-anim devmt-anim-d4">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_647263e7cb87d099b55e79319b1f8f02.webp" alt="Velocidade de Digitalização" loading="lazy"/>
+          <p>Velocidade<br>4.500.000 pts/s</p>
+        </div>
+        <div class="devmt-spec-icon devmt-anim devmt-anim-d5">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_c7599e5964146425743716e7c4d11227.webp" alt="Área de Digitalização" loading="lazy"/>
+          <p>Área de Varredura<br>1100×1000 mm</p>
+        </div>
+        <div class="devmt-spec-icon devmt-anim devmt-anim-d6">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_3eb831645a2fbf2c776f498e7a02bd8b.webp" alt="Distância de Digitalização" loading="lazy"/>
+          <p>Distância<br>1500 mm</p>
+        </div>
+      </div>
+    </div>
+    <div class="devmt-cta-bar">
+      <h3>Experimente o Desempenho do 3DeVOK MT</h3>
+      <div class="devmt-cta-bar-btns">
+        <a class="devmt-cta-bar-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Fale Conosco</a>
+        <a class="devmt-cta-bar-secondary" href="https://lp.enterfix.com.br/catalogo-3devok-mt" target="_blank" rel="noopener">📄 Baixar Catálogo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       FEATURES — 6 seções alternadas imagem+texto
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-features-wrap">
+
+    <!-- 1. Industrial & Automotive (imagem à esquerda) -->
+    <div class="devmt-feature devmt-anim devmt-anim-d1">
+      <img class="devmt-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_348476e37d34fb05a1a01aba4ecf088b.webp"
+        alt="Industrial &amp; Automotive Parts / Product Design" />
+      <div class="devmt-feature-body">
+        <h2>Peças Industriais e Automotivas / Design de Produto</h2>
+        <h3>Alinhamento por Marcadores — Laser Azul 34 Linhas &amp; Laser Infravermelho 22 Linhas</h3>
+        <ul>
+          <li><strong>Alta Qualidade de Dados:</strong> Precisão de 0,04 mm e resolução até 0,05 mm</li>
+          <li><strong>Forte Adaptabilidade de Material:</strong> Captura superfícies pretas e reflexivas sem pó preparatório</li>
+          <li><strong>Digitalização Rápida:</strong> Taxa de quadros de até 70 FPS, área por frame de até 490×490 mm</li>
+          <li><strong>Operação Eficiente:</strong> Distância entre marcadores de 10–12 cm, reduzindo o uso de alvos</li>
+          <li><strong>Digitalização em Tempo Real:</strong> Novo algoritmo de exibição de malha em tempo real para monitoramento fácil</li>
+          <li><strong>Tamanho de Objeto Recomendado:</strong> 0,05–5 m</li>
+          <li><strong>Aplicações:</strong> Projeto CAD, engenharia reversa, personalização automotiva, impressão 3D</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Art Sculptures / Cultural Relics (imagem à direita) -->
+    <div class="devmt-feature rev devmt-anim devmt-anim-d2">
+      <img class="devmt-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_d78efc7daa1fbd5d38a34f3a42b6c9b0.webp"
+        alt="Art Sculptures / Movable Cultural Relics" />
+      <div class="devmt-feature-body">
+        <h2>Esculturas de Arte / Relíquias Culturais Móveis</h2>
+        <h3>Alinhamento Híbrido — 34 Linhas de Laser Azul &amp; 22 Linhas Infravermelhas</h3>
+        <ul>
+          <li><strong>Digitalização sem Marcadores:</strong> Captura direta de objetos com texturas ricas ou características geométricas</li>
+          <li><strong>Detalhes Finos:</strong> Resolução até 0,1 mm para resultados precisos e detalhados</li>
+          <li><strong>Forte Adaptabilidade de Material:</strong> Lida facilmente com superfícies escuras, pretas e reflexivas</li>
+          <li><strong>Estabilidade de Iluminação Externa:</strong> Aquisição de dados fluida em baixa luminosidade e luz solar direta</li>
+          <li><strong>Tamanho de Digitalização Recomendado:</strong> 0,1–4 m</li>
+          <li><strong>Aplicações:</strong> Design artístico 3D, design de produtos culturais e criativos, arquivamento digital</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. High-Definition Full-Color Mapping (imagem à esquerda) -->
+    <div class="devmt-feature devmt-anim devmt-anim-d3">
+      <img class="devmt-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_b4b247b2b74e3ec58046367020769984.webp"
+        alt="High-Definition Full-Color Mapping Solution" />
+      <div class="devmt-feature-body">
+        <h2>Solução de Mapeamento Colorido em Alta Definição</h2>
+        <ul>
+          <li><strong>Fluxo de Trabalho Completo:</strong> Digitalização 3D colorida do MT combinada com mapeamento de textura gratuito ou software avançado opcional — dados 3D coloridos precisos e vívidos</li>
+          <li><strong>Objetos Ideais:</strong> Itens com texturas complexas e cores vibrantes</li>
+          <li><strong>Aplicações:</strong> Visualização 3D, impressão 3D colorida, arquivamento de patrimônio cultural</li>
+        </ul>
+        <p style="font-size:12.5px;color:#64748b;margin-top:10px">* Exibição aprimorada de dados 3D com digitalização colorida e mapeamento de textura</p>
+      </div>
+    </div>
+
+    <!-- 4. Medium to Large Objects (imagem à direita) -->
+    <div class="devmt-feature rev devmt-anim devmt-anim-d4">
+      <img class="devmt-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_77fac020219746f2459d951547993825.webp"
+        alt="Medium to Large Objects / Sculptures / Full-Body Scans" />
+      <div class="devmt-feature-body">
+        <h2>Objetos Médios a Grandes / Esculturas / Corpo Inteiro</h2>
+        <h3>VCSEL Infravermelho de Grande Área + Digitalização Parcial Fina</h3>
+        <ul>
+          <li><strong>Cobertura Ultra-Ampla:</strong> Até 1.100×1.000 mm por frame — captura eficiente de objetos grandes sem excesso de scans</li>
+          <li><strong>Digitalização Parcial Fina:</strong> Troca de modo fluida — escaneie grandes áreas e amplie detalhes intrincados (resolução até 0,1 mm)</li>
+          <li><strong>Grande Profundidade de Campo:</strong> Distância de trabalho de 150–1.500 mm</li>
+          <li><strong>Tamanho Máximo de Digitalização:</strong> Até 5 m</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. Full-Body / Body Parts (imagem à esquerda) -->
+    <div class="devmt-feature devmt-anim devmt-anim-d5">
+      <img class="devmt-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_400e79183f5045004a375bccae07d4c0.webp"
+        alt="Full-Body / Body Parts Scanning" />
+      <div class="devmt-feature-body">
+        <h2>Digitalização de Corpo Inteiro / Partes do Corpo</h2>
+        <h3>Speckle VCSEL Infravermelho + Alinhamento Híbrido</h3>
+        <ul>
+          <li><strong>Modo Corpo Humano:</strong> Digitalização sem luz visível, captura de cabelo e correção automática de pequenos movimentos</li>
+          <li><strong>Segurança Ocular:</strong> Laser Classe I — conforme IEC 60825</li>
+          <li><strong>Detalhamento Excepcional:</strong> Resolução até 0,1 mm</li>
+          <li><strong>Operação Fácil:</strong> Área máxima de 1.100×1.000 mm — captura fluida do corpo inteiro</li>
+          <li><strong>Grande Adaptabilidade:</strong> Sem ajustes de exposição — escaneia roupas escuras com facilidade</li>
+          <li><strong>Aplicações:</strong> Reabilitação médica, design artístico, personalização customizada</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. Research / Education (imagem à direita) -->
+    <div class="devmt-feature rev devmt-anim devmt-anim-d6">
+      <img class="devmt-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250314_fb03cac4fddbe61539d32b7950ccd94a.webp"
+        alt="Research / Education" />
+      <div class="devmt-feature-body">
+        <h2>Pesquisa / Educação</h2>
+        <ul>
+          <li><strong>Ampla Faixa de Tamanho:</strong> De 0,05 m a 5 m em um único scanner</li>
+          <li><strong>Versatilidade Ambiental:</strong> Adapta-se perfeitamente a ambientes internos e externos</li>
+          <li><strong>Multidisciplinar:</strong> Design industrial, design mecânico, arte, patrimônio cultural, medicina, perícia forense</li>
+          <li><strong>Ideal para Educação:</strong> Software de digitalização sem limitações de nódulos, além de descontos exclusivos para instituições de ensino</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /devmt-features-wrap -->
+
+  <!-- ══════════════════════════════════════════════
+       VÍDEO
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-video-wrap devmt-anim">
+    <h2>🎬 3DeVOK MT Scanner 3D Profissional — Vídeo</h2>
+    <div class="devmt-iframe-wrap">
+      <iframe allowfullscreen loading="lazy"
+        src="https://www.youtube.com/embed/pFbamWRfGCw"
+        title="3DeVOK MT Scanner 3D Profissional — Enterfix"></iframe>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ESPECIFICAÇÕES TÉCNICAS
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-card devmt-anim">
+    <h2>📊 Especificações Técnicas</h2>
+    <div class="devmt-tbl-wrap">
+      <table class="devmt-tbl" aria-label="Especificações Técnicas 3DeVOK MT">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>34 Linhas Laser Azul</th>
+            <th>22 Linhas Laser Infravermelho</th>
+            <th>Luz Estruturada VCSEL Infravermelha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Classe do Laser</td>
+            <td>Classe II (Olho-seguro)</td>
+            <td colspan="2">Classe I (Olho-seguro)</td>
+          </tr>
+          <tr>
+            <td>Recursos do Modo</td>
+            <td>Sem marcadores</td>
+            <td>Sem marcadores, luz invisível</td>
+            <td>Sem marcadores, invisível, digitaliz. parcial fina, FoV ultra-amplo</td>
+          </tr>
+          <tr>
+            <td>Precisão Básica ✱</td>
+            <td colspan="3">Até <strong>0,04 mm</strong></td>
+          </tr>
+          <tr>
+            <td>Precisão Volumétrica ✱</td>
+            <td colspan="3">Até <strong>0,04 mm + 0,04 mm/m</strong></td>
+          </tr>
+          <tr>
+            <td>Distância entre Pontos</td>
+            <td>0,05–5 mm</td>
+            <td>0,1–5 mm</td>
+            <td>Regular: 0,2–5 mm · Fino: 0,1–5 mm</td>
+          </tr>
+          <tr>
+            <td>Modos de Alinhamento</td>
+            <td colspan="2">Híbrido, Marcadores, Textura, Características Geométricas</td>
+            <td>Híbrido, Textura, Características Geométricas</td>
+          </tr>
+          <tr>
+            <td>Captura de Cor</td>
+            <td colspan="3">Sim — câmera de cor HD integrada com mapeamento de textura</td>
+          </tr>
+          <tr>
+            <td>Distância de Trabalho</td>
+            <td colspan="2">150–1.000 mm</td>
+            <td>150–1.500 mm</td>
+          </tr>
+          <tr>
+            <td>Campo de Visão (FOV)</td>
+            <td colspan="2">140×140 mm – 490×490 mm</td>
+            <td>50×75 mm – 1.100×1.000 mm</td>
+          </tr>
+          <tr>
+            <td>Velocidade de Digitalização</td>
+            <td>Até 3.300.000 pts/s</td>
+            <td>Até 2.450.000 pts/s</td>
+            <td>Até <strong>4.500.000 pts/s</strong></td>
+          </tr>
+          <tr>
+            <td>Taxa de Quadros</td>
+            <td colspan="3">Até 70 FPS</td>
+          </tr>
+          <tr>
+            <td>Formatos de Saída</td>
+            <td colspan="3">.obj · .stl · .ply · .asc · .mk2 · .txt · .epj · .apj · .spj · .map · .sk</td>
+          </tr>
+          <tr>
+            <td>Temperatura Operacional</td>
+            <td colspan="3">0–40 °C</td>
+          </tr>
+          <tr>
+            <td>Umidade Operacional</td>
+            <td colspan="3">10%–90% UR (sem condensação)</td>
+          </tr>
+          <tr>
+            <td>Interface</td>
+            <td colspan="3">USB 3.0</td>
+          </tr>
+          <tr>
+            <td>Dimensões e Peso</td>
+            <td colspan="3">215 × 73 × 53 mm · <strong>640 g</strong></td>
+          </tr>
+          <tr>
+            <td>Alimentação</td>
+            <td colspan="3">DC 12 V · 5,0 A</td>
+          </tr>
+          <tr>
+            <td>Certificações</td>
+            <td colspan="3">CE-EMC · FCC · RoHS · IEC 60825 · IEC 62471 · IEC 60529-IP50 · WEEE · KC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="devmt-fn">✱ Precisão teórica obtida em laboratório — sujeita a incertezas de medição conforme ambiente e superfície do objeto.</p>
+    <div class="devmt-alert-amber">
+      💻 <strong>Configuração de PC Recomendada:</strong> Windows 10/11 (64-bit) · CPU: i7-13650HX ou superior · RAM: 32 GB · GPU: NVIDIA RTX 3060 ou superior com 6 GB VRAM mínimo
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       APLICAÇÕES
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-card devmt-anim">
+    <h2>🏭 Aplicações</h2>
+    <div class="devmt-apps-grid">
+      <div class="devmt-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250313_5ed2a526d502689b11983d963e7136d2.webp" alt="Aeroespacial" />
+        <div class="devmt-app-body">
+          <h3>Aeroespacial</h3>
+          <p>Controle de qualidade, inspeção de defeitos e captura de geometrias complexas para prototipagem rápida — maior eficiência e segurança na fabricação e manutenção aeroespacial.</p>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250313_08caf6f43be2ca211176202f87c4da23.webp" alt="Automotivo" />
+        <div class="devmt-app-body">
+          <h3>Automotivo</h3>
+          <p>Captura precisa de componentes automotivos para prototipagem rápida, controle de qualidade, detecção de defeitos, customização, manutenção e montagem.</p>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250313_43a07f6e0f4c11892e879d6d40c64a38.webp" alt="Energia &amp; Indústria Pesada" />
+        <div class="devmt-app-body">
+          <h3>Energia &amp; Indústria Pesada</h3>
+          <p>Digitalização avançada de turbinas eólicas, sistemas hidráulicos e máquinas de construção para manutenção, detecção de defeitos e otimização de desempenho.</p>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250313_0514d193851e31a28e62ff356bf6033f.webp" alt="Transporte Ferroviário e Naval" />
+        <div class="devmt-app-body">
+          <h3>Transporte Ferroviário &amp; Naval</h3>
+          <p>Digitalização de trilhos, componentes de trens, cascos de navios, hélices e peças de motores para controle de qualidade, manutenção e verificação de montagem.</p>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250313_6541b9bc934ba2a672c5e4b770b11ebb.webp" alt="Moldes" />
+        <div class="devmt-app-body">
+          <h3>Moldes</h3>
+          <p>Agiliza o design, inspeção e reparo de moldes — captura rápida de detalhes intrincados, inspeções precisas, reduzindo retrabalho e prolongando a vida útil dos moldes.</p>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mt_20250313_3aa3dcc2a620d54536791faaf960345e.webp" alt="Não Industrial" />
+        <div class="devmt-app-body">
+          <h3>Não Industrial</h3>
+          <p>Saúde, escultura, educação &amp; pesquisa, entretenimento — planejamento cirúrgico, escultura digital, estudo de artefatos, criação de adereços e modelos para cinema e jogos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SOFTWARE
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-soft devmt-anim">
+    <h2>💻 Software Nativo e Compatibilidade</h2>
+    <p style="font-size:14px;color:#475569;margin:0 0 4px">O 3DeVOK MT opera nativamente com o <strong>3DeVOK Studio</strong> — software all-in-one de digitalização e processamento, com interface intuitiva, parâmetros flexíveis e alinhamento híbrido avançado. Compatível também com os principais softwares de metrologia e engenharia reversa:</p>
+    <div class="devmt-soft-logos">
+      <img alt="Zeiss" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" />
+      <img alt="Verisurf" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" />
+      <img alt="PolyWorks" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" />
+      <img alt="Geomagic" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" />
+    </div>
+    <p style="font-size:13px;color:#64748b;margin:14px 0 0">Compatível ainda com QuickSurface Lite/Pro, SolidWorks, CATIA, Siemens NX e demais plataformas CAD via .stl, .obj, .ply, .asc e outros formatos padrão da indústria.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════════════ -->
+  <div class="devmt-cta devmt-anim">
+    <p><strong>📞 Solicite uma demonstração ou orçamento personalizado</strong></p>
+    <p>Fale com nosso time técnico e descubra como o 3DeVOK MT pode atender sua aplicação — engenharia reversa, inspeção, arte, digitalização corporal ou pesquisa.</p>
+    <div class="devmt-cta-btns">
+      <a class="devmt-btn-green" href="https://enterfix.com.br/produto/3devok-mt/" rel="noopener" target="_blank">🛒 Comprar na Loja</a>
+      <a class="devmt-btn-white" href="https://lp.enterfix.com.br/catalogo-3devok-mt" rel="noopener" target="_blank">📄 Baixar Catálogo</a>
+      <a class="devmt-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" rel="noopener" target="_blank">💬 WhatsApp (11) 96841-6776</a>
+      <a class="devmt-btn-white" href="mailto:vendas@enterfix.com.br">✉️ vendas@enterfix.com.br</a>
+    </div>
+    <p style="font-size:12px;opacity:.65;margin-top:14px">Seg–Sex 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; Enterfix Indústria, Comércio e Serviços Ltda.</p>
+  </div>
+
+</div>

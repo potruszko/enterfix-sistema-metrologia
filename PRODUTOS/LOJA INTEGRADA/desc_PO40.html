@@ -1,0 +1,325 @@
+<style>
+.po40{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+
+/* ── HERO ── */
+.po40-hero{background:#1F1659;border-radius:14px;overflow:hidden;margin-bottom:22px;position:relative;min-height:360px;display:flex;align-items:flex-end}
+.po40-hero-video{position:absolute;inset:-60px -80px;width:calc(100% + 160px);height:calc(100% + 120px);border:0;pointer-events:none;opacity:.50}
+.po40-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(15,10,50,.82) 0%,transparent 70%);width:100%}
+.po40-badge{display:inline-block;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:3px 12px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.po40-hero-overlay h1{font-size:22px;font-weight:800;color:#fff;line-height:1.2;margin:0 0 8px}
+.po40-hero-overlay p{font-size:13.5px;color:rgba(255,255,255,.88);margin:0;max-width:640px;line-height:1.65}
+
+/* ── SPECS RÁPIDAS ── */
+.po40-specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.po40-spec{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;border-top:3px solid #1F1659}
+.po40-spec-val{font-size:17px;font-weight:800;color:#1F1659;line-height:1.1}
+.po40-spec-key{font-size:11.5px;color:#64748b;margin-top:3px}
+
+/* ── CARDS ── */
+.po40-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.po40-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid #e2e8f0;display:flex;align-items:center;gap:8px}
+.po40-card p{font-size:14.5px;color:#334155;margin:0 0 10px;line-height:1.75}
+.po40-card p:last-child{margin:0}
+
+/* ── FEATURES ── */
+.po40-feats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.po40-feats li{font-size:14px;color:#334155;padding:9px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+.po40-feats li::before{content:'✓';color:#16a34a;font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* ── GRID 2 COLUNAS (funções/aplicações) ── */
+.po40-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:4px}
+.po40-col-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px}
+.po40-col-card h3{font-size:14px;font-weight:800;color:#1F1659;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #e2e8f0}
+.po40-col-card ul{list-style:none;padding:0;margin:0}
+.po40-col-card ul li{font-size:13.5px;color:#334155;padding:6px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.po40-col-card ul li:last-child{border-bottom:none}
+.po40-col-card ul li::before{content:'▸';color:#A0BF30;font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* ── TABELA ── */
+.po40-tbl-wrap{overflow-x:auto}
+.po40-tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:380px}
+.po40-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:12px;font-weight:700}
+.po40-tbl th:first-child{border-radius:6px 0 0 0}
+.po40-tbl th:last-child{border-radius:0 6px 0 0}
+.po40-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.po40-tbl tr:nth-child(even) td{background:#f8fafc}
+.po40-tbl tr:last-child td{border-bottom:none}
+.po40-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap;width:48%}
+.po40-tbl-title{font-size:13.5px;font-weight:800;color:#1F1659;margin:18px 0 8px;padding-bottom:6px;border-bottom:1px solid #e2e8f0}
+
+/* ── ALERTAS ── */
+.po40-alert-blue{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#1e40af;margin:12px 0;line-height:1.6}
+.po40-alert-green{background:#f0fdf4;border:1px solid #86efac;border-left:4px solid #16a34a;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#15803d;margin:12px 0;line-height:1.6}
+.po40-alert-amber{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #d97706;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#92400e;margin:12px 0;line-height:1.6}
+
+/* ── PILARES ── */
+.po40-pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:14px 0}
+.po40-pillar{border-radius:10px;padding:18px 16px;text-align:center}
+.po40-pillar-1{background:#eff6ff;border:1px solid #bfdbfe}
+.po40-pillar-2{background:#f0fdf4;border:1px solid #86efac}
+.po40-pillar-3{background:#fefce8;border:1px solid #fde68a}
+.po40-pillar-4{background:#fdf4ff;border:1px solid #e9d5ff}
+.po40-pillar-icon{font-size:26px;margin-bottom:8px}
+.po40-pillar-title{font-size:13px;font-weight:700;color:#1e293b;margin-bottom:4px}
+.po40-pillar-desc{font-size:12px;color:#475569;line-height:1.5}
+
+/* ── VÍDEO ── */
+.po40-video-wrap{background:linear-gradient(135deg,#1F1659,#1a4fa0);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.po40-video-wrap h2{font-size:16px;font-weight:800;color:#fff;margin:0 0 8px;text-align:center}
+.po40-video-wrap p{font-size:14px;color:rgba(255,255,255,.88);margin:0 0 16px;line-height:1.65;text-align:center}
+.po40-iframe{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.po40-iframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── MÍDIA ── */
+.po40-media-wrap{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.po40-media-wrap h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 8px;text-align:center;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+.po40-media-wrap p{font-size:14px;color:#475569;margin:0 0 16px;line-height:1.65;text-align:center}
+
+/* ── CTA ── */
+.po40-cta{background:linear-gradient(135deg,#1e3a8a,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.po40-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.po40-cta strong{color:#fff}
+.po40-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.po40-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.po40-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.po40-btn-green:hover,.po40-btn-white:hover{filter:brightness(.95)}
+
+/* ── FOOTNOTES ── */
+.po40-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+
+@media(max-width:700px){
+  .po40-2col{grid-template-columns:1fr}
+  .po40-hero-overlay h1{font-size:17px}
+  .po40-card,.po40-video-wrap,.po40-media-wrap,.po40-cta{padding:20px 16px}
+}
+</style>
+
+<div class="po40">
+
+  <!-- Resumo para preview -->
+  <p style="margin:0 0 16px 0;display:none">Apalpador PO40 PROBE — sistema de medição sem fio por infravermelho 360° para máquinas CNC. Repetibilidade 1 μm, transmissão até 8 m, trigger ±X/±Y/+Z. Setup automático e inspeção em processo.</p>
+
+  <!-- HERO -->
+  <div class="po40-hero">
+    <iframe class="po40-hero-video" src="https://www.youtube.com/embed/XqLq480bt4I?autoplay=1&mute=1&loop=1&playlist=XqLq480bt4I&controls=0&showinfo=0&modestbranding=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" title="PO40 PROBE"></iframe>
+    <div class="po40-hero-overlay">
+      <div class="po40-badge">📡 Apalpador de Medição CNC — PO40 PROBE</div>
+      <h1>PO40 PROBE — Precisão de 1 μm para Máquinas CNC</h1>
+      <p>Infravermelho 360° &bull; Repetibilidade 1 μm &bull; Trigger ±X/±Y/+Z &bull; Setup automático &bull; 5 m de alcance IV &bull; 260 g</p>
+    </div>
+  </div>
+
+  <!-- SPECS RÁPIDAS -->
+  <div class="po40-specs">
+    <div class="po40-spec">
+      <div class="po40-spec-val">1 μm</div>
+      <div class="po40-spec-key">Repetibilidade</div>
+    </div>
+    <div class="po40-spec">
+      <div class="po40-spec-val">360° IV</div>
+      <div class="po40-spec-key">Transmissão</div>
+    </div>
+    <div class="po40-spec">
+      <div class="po40-spec-val">5 m</div>
+      <div class="po40-spec-key">Alcance apalpador</div>
+    </div>
+    <div class="po40-spec">
+      <div class="po40-spec-val">8 m</div>
+      <div class="po40-spec-key">Alcance receptora</div>
+    </div>
+    <div class="po40-spec">
+      <div class="po40-spec-val">260 g</div>
+      <div class="po40-spec-key">Peso (sem cone)</div>
+    </div>
+    <div class="po40-spec">
+      <div class="po40-spec-val">1000 rpm</div>
+      <div class="po40-spec-key">Rotação máxima</div>
+    </div>
+  </div>
+
+  <!-- DESCRIÇÃO GERAL -->
+  <div class="po40-card">
+    <h2>📋 Sobre o PO40 PROBE</h2>
+    <p>O <strong>Apalpador PO40 PROBE</strong> é um sistema de medição sem fio por infravermelho desenvolvido para integração direta em máquinas CNC — fresadoras, mandriladoras e centros de usinagem. Com transmissão infravermelha omnidirecional de <strong>360°</strong> e repetibilidade de <strong>1 μm</strong>, o PO40 elimina a dependência de medições externas e viabiliza setup automático de ponto zero, inspeção dimensional em processo e verificação de ferramentas sem parar a produção.</p>
+    <p>O corpo compacto de <strong>Ø40 mm × 50 mm</strong> e <strong>260 g</strong> (sem cone) ocupa o espaço de uma ferramenta comum no magazine, e o acionamento por <strong>Código M</strong> permite integração direta com qualquer controlador CNC compatível. A receptora, com alcance de até <strong>8 m</strong>, conecta-se via cabo blindado dedicado de 13 pinos e aceita tensão de entrada de <strong>12 V a 30 V</strong> — compatível com a grande maioria dos padrões industriais.</p>
+    <p>O PO40 suporta trigger nas direções <strong>±X / ±Y / +Z</strong>, com força de acionamento de 0,5 N a 0,9 N em XY e 5,8 N em Z — ideal para peças de médio e grande porte que exigem múltiplas referências de medição automatizados in-process.</p>
+    <div class="po40-alert-green">
+      ✔ <strong>Setup automático e inspeção em processo:</strong> o PO40 PROBE permite definir o ponto zero da peça, detectar desvios dimensionais e corrigir compensações no CNC sem remover a peça da mesa — reduzindo refugos e aumentando a produtividade.
+    </div>
+  </div>
+
+  <!-- IMAGEM DO PRODUTO -->
+  <div style="background-image:url('https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728');background-size:cover;background-position:center;padding:32px 16px;border-radius:12px;margin-bottom:16px">
+    <img alt="Apalpador PO40 PROBE — Sistema de Medição CNC Enterfix" src="https://enterfix.com.br/wp-content/uploads/2024/04/Capa-de-Produtos-Site.png" style="max-width:560px;width:100%;height:auto;display:block;margin:0 auto;border-radius:16px" />
+  </div>
+
+  <!-- 4 PILARES -->
+  <div class="po40-card">
+    <h2>⚡ Quatro Pilares de Performance</h2>
+    <div class="po40-pillars">
+      <div class="po40-pillar po40-pillar-1">
+        <div class="po40-pillar-icon">🎯</div>
+        <div class="po40-pillar-title">Preciso</div>
+        <div class="po40-pillar-desc">Repetibilidade de 1 μm — confiabilidade para inspeções dimensionais críticas no chão de fábrica</div>
+      </div>
+      <div class="po40-pillar po40-pillar-2">
+        <div class="po40-pillar-icon">⚙️</div>
+        <div class="po40-pillar-title">Integrado</div>
+        <div class="po40-pillar-desc">Acionamento por Código M e compatibilidade com os principais controladores CNC do mercado</div>
+      </div>
+      <div class="po40-pillar po40-pillar-3">
+        <div class="po40-pillar-icon">📡</div>
+        <div class="po40-pillar-title">Sem Fio</div>
+        <div class="po40-pillar-desc">Transmissão infravermelha 360° — sem cabos na área de corte, sem interferência na rotação do eixo</div>
+      </div>
+      <div class="po40-pillar po40-pillar-4">
+        <div class="po40-pillar-icon">🏭</div>
+        <div class="po40-pillar-title">Robusto</div>
+        <div class="po40-pillar-desc">Faixa de operação de 5 °C a 55 °C e armazenamento até 70 °C — projetado para o ambiente industrial</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FUNÇÕES E APLICAÇÕES -->
+  <div class="po40-card">
+    <h2>🔧 Funções e Aplicações</h2>
+    <div class="po40-2col">
+      <div class="po40-col-card">
+        <h3>⚙️ Funções</h3>
+        <ul>
+          <li>Setup automático do ponto zero e definição do sistema de coordenadas da peça</li>
+          <li>Inspeção em tempo real de cotas críticas durante a usinagem</li>
+          <li>Medições automáticas após a usinagem para verificar formas, posições e tolerâncias</li>
+          <li>Verificação de desgaste ou quebra da ferramenta com acionamento por Código M</li>
+          <li>Detecção de desvios e correção automática via compensação no controle CNC</li>
+          <li>Redução de refugos com feedback imediato de variações dimensionais</li>
+        </ul>
+      </div>
+      <div class="po40-col-card">
+        <h3>🏭 Aplicações</h3>
+        <ul>
+          <li>Alinhamento e posicionamento preciso da peça de trabalho</li>
+          <li>Medições de altura, largura, profundidade, diâmetros internos e externos</li>
+          <li>Medições de ângulos, perpendicularidade, concentricidade e paralelismo</li>
+          <li>Inspeção de superfícies curvas, moldes e cavidades complexas</li>
+          <li>Checagem de peças com geometria irregular ou com fixação variável</li>
+          <li>Monitoramento de qualidade inline sem necessidade de desmontagem</li>
+          <li>Integração com softwares de medição ou sistemas MES/ERP para rastreabilidade</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIFERENCIAIS -->
+  <div class="po40-card">
+    <h2>✓ Principais Diferenciais</h2>
+    <ul class="po40-feats">
+      <li>Repetibilidade de 1 μm — precisão comparável a equipamentos de laboratório</li>
+      <li>Transmissão infravermelha omnidirecional 360° — sem zonas cegas de comunicação</li>
+      <li>Trigger em ±X, ±Y e +Z — cobertura completa das direções de medição CNC</li>
+      <li>Acionamento por Código M — integração nativa com controladores CNC</li>
+      <li>Corpo Ø40 mm — ocupa posição padrão no magazine de ferramentas</li>
+      <li>Peso leve de 260 g (sem cone) — sem impacto dinâmico no eixo</li>
+      <li>Rotação máxima de 1.000 rpm — operar durante ciclos de posicionamento</li>
+      <li>Alcance de transmissão de 5 m (apalpador) e 8 m (receptora)</li>
+      <li>Bateria 1/2AA 3,6 V de longa vida — substituição simples sem ferramentas especiais</li>
+      <li>Força de trigger calibrada: 0,5–0,9 N em XY e 5,8 N em Z</li>
+      <li>Cabo blindado dedicado de 13 pinos — imunidade a ruídos elétricos industriais</li>
+      <li>Alimentação ampla: 12 V a 30 V — compatível com padrões industriais universais</li>
+      <li>Faixa de trabalho segura entre 5 °C e 55 °C com armazenamento até 70 °C</li>
+      <li>Reduz refugos com detecção imediata de desvios dimensionais in-process</li>
+      <li>Compatível com mandriladoras, fresadoras e centros de usinagem verticais e horizontais</li>
+    </ul>
+  </div>
+
+  <!-- ESPECIFICAÇÕES TÉCNICAS -->
+  <div class="po40-card">
+    <h2>📊 Especificações Técnicas</h2>
+
+    <div class="po40-tbl-title">📟 Apalpador</div>
+    <div class="po40-tbl-wrap">
+      <table class="po40-tbl" aria-label="Especificações técnicas — Apalpador PO40">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Bateria</td><td>2 unidades — 1/2AA 3,6 V Lithium</td></tr>
+          <tr><td>Temperatura de armazenamento</td><td>−25 °C a +70 °C</td></tr>
+          <tr><td>Temperatura de trabalho</td><td>5 °C a 55 °C</td></tr>
+          <tr><td>Dimensões</td><td>Ø40 mm × 50 mm</td></tr>
+          <tr><td>Peso (sem cone)</td><td>260 g</td></tr>
+          <tr><td>Tipo de transmissão</td><td>Infravermelho 360°</td></tr>
+          <tr><td>Distância de transmissão</td><td>5 m</td></tr>
+          <tr><td>Acionamento (Start)</td><td>Código M</td></tr>
+          <tr><td>Velocidade de rotação máxima</td><td>1.000 rpm</td></tr>
+          <tr><td>Direção de trigger</td><td>±X / ±Y / +Z</td></tr>
+          <tr><td>Repetibilidade em um sentido</td><td>1 μm</td></tr>
+          <tr><td>Overtravel máximo</td><td>XY: 12,5 mm &nbsp;/&nbsp; +Z: 6 mm</td></tr>
+          <tr><td>Força de trigger em XY</td><td>0,5 N a 0,9 N</td></tr>
+          <tr><td>Força de trigger em Z</td><td>5,8 N</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="po40-tbl-title" style="margin-top:22px">📻 Receptora</div>
+    <div class="po40-tbl-wrap">
+      <table class="po40-tbl" aria-label="Especificações técnicas — Receptora PO40">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Tipo de transmissão</td><td>Infravermelho 360°</td></tr>
+          <tr><td>Alcance de trabalho</td><td>Máx. 8 m</td></tr>
+          <tr><td>Peso</td><td>926 g</td></tr>
+          <tr><td>Tensão de entrada</td><td>12 V a 30 V</td></tr>
+          <tr><td>Corrente de entrada</td><td>&lt; 100 mA (recepção &lt; 40 mA)</td></tr>
+          <tr><td>Cabo para controladora</td><td>Cabo blindado dedicado de 13 pinos — 8 m ou 15 m</td></tr>
+          <tr><td>Temperatura de armazenamento</td><td>−25 °C a +70 °C</td></tr>
+          <tr><td>Temperatura de trabalho</td><td>5 °C a 55 °C</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="po40-alert-amber" style="margin-top:14px">
+      ⚠️ <strong>Instalação por profissional qualificado:</strong> a integração do PO40 PROBE ao controlador CNC requer parametrização dos macros de Código M e configuração do cabo blindado de 13 pinos. A Enterfix oferece suporte técnico especializado para comissionamento.
+    </div>
+  </div>
+
+  <!-- VÍDEO DO PRODUTO -->
+  <div class="po40-video-wrap">
+    <h2>🎬 PO40 PROBE em Operação</h2>
+    <p>Compatível com diversos comandos CNC, o Apalpador PO40, quando instalado por profissionais qualificados e com o devido treinamento, integra-se perfeitamente à sua fresadora CNC, mandriladora e outros centros de usinagem.</p>
+    <div class="po40-iframe">
+      <iframe allowfullscreen loading="lazy" src="https://www.youtube.com/embed/XqLq480bt4I" title="PO40 PROBE — Vídeo do Produto"></iframe>
+    </div>
+  </div>
+
+  <!-- NA MÍDIA -->
+  <div class="po40-media-wrap">
+    <h2>📺 Na Mídia</h2>
+    <p>Confira o Apalpador PO40 PROBE em destaque na mídia especializada em metrologia e usinagem CNC.</p>
+    <div class="po40-iframe">
+      <iframe allowfullscreen loading="lazy" src="https://www.youtube.com/embed/MCEOaNJN88I?start=1" title="Enterfix na Mídia — Apalpadores PO40"></iframe>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="po40-cta">
+    <p><strong>📞 Solicite uma demonstração ou orçamento personalizado</strong></p>
+    <p>Fale com nosso time técnico e descubra como o PO40 PROBE pode automatizar o setup e a inspeção na sua linha CNC — fresadoras, mandriladoras e centros de usinagem verticais e horizontais.</p>
+    <div class="po40-cta-btns">
+      <a class="po40-btn-green" href="https://enterfix.com.br/produto/po40-probe/" rel="noopener" target="_blank">🛒 Comprar na Loja</a>
+      <a class="po40-btn-white" href="https://lp.enterfix.com.br/catalogo-apalpadores" rel="noopener" target="_blank">📄 Baixar Catálogo</a>
+      <a class="po40-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" rel="noopener" target="_blank">💬 WhatsApp (11) 96841-6776</a>
+      <a class="po40-btn-white" href="mailto:vendas@enterfix.com.br">✉️ vendas@enterfix.com.br</a>
+    </div>
+    <p style="font-size:12px;opacity:.65;margin-top:14px">Seg–Sex 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; Enterfix Indústria, Comércio e Serviços Ltda.</p>
+  </div>
+
+</div>

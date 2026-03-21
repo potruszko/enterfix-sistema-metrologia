@@ -1,0 +1,246 @@
+╔════════════════════════════════════════════════════════════════════╗
+║  RELATÓRIO DE SCRAPING - CHOTEST.COM                              ║
+╚════════════════════════════════════════════════════════════════════╝
+
+Data: 29/12/2025 13:05:47
+Total de Produtos: 54
+Total de Categorias: 9
+
+================================================================================
+RESUMO POR CATEGORIA:
+================================================================================
+
+2D Profilometer: 7 produtos
+--------------------------------------------------------------------------------
+  1. GTS系列激光跟踪仪
+     URL: http://www.chotest.com/detail.aspx?cid=118
+     CID: 118
+
+  2. PLR3000系列光纤激光尺
+     URL: http://www.chotest.com/detail.aspx?cid=1451
+     CID: 1451
+
+  3. SJ6000激光干涉仪
+     URL: http://www.chotest.com/detail.aspx?cid=79
+     CID: 79
+
+  4. SJ6800激光干涉仪
+     URL: http://www.chotest.com/detail.aspx?cid=84
+     CID: 84
+
+  5. MT21无线球杆仪
+     URL: http://www.chotest.com/detail.aspx?cid=936
+     CID: 936
+
+  6. WR50自动精密转台
+     URL: http://www.chotest.com/detail.aspx?cid=1130
+     CID: 1130
+
+  7. MicroD系列高精度激光测距仪
+     URL: http://www.chotest.com/detail.aspx?cid=92
+     CID: 92
+
+Confocal Microscope: 2 produtos
+--------------------------------------------------------------------------------
+  1. WD4000无图晶圆几何量测系统
+     URL: http://www.chotest.com/detail.aspx?cid=1328
+     CID: 1328
+
+  2. 有图晶圆关键尺寸及套刻量测系统
+     URL: http://www.chotest.com/detail.aspx?cid=1329
+     CID: 1329
+
+Contour & Roughness: 1 produtos
+--------------------------------------------------------------------------------
+  1. 
+     URL: http://www.chotest.com/detail.aspx?cid=79
+     CID: 79
+
+Dimensional Calibrators: 1 produtos
+--------------------------------------------------------------------------------
+  1. 
+     URL: http://www.chotest.com/detail.aspx?cid=79
+     CID: 79
+
+Displacement Measurement: 3 produtos
+--------------------------------------------------------------------------------
+  1. SuperView WT3000系列白光干涉共聚焦轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=1427
+     CID: 1427
+
+  2. VT6000系列共聚焦显微镜
+     URL: http://www.chotest.com/detail.aspx?cid=1327
+     CID: 1327
+
+  3. VT-X100共聚焦测量头
+     URL: http://www.chotest.com/detail.aspx?cid=1426
+     CID: 1426
+
+Flash Measuring Machine: 12 produtos
+--------------------------------------------------------------------------------
+  1. Novator系列影像仪
+     URL: http://www.chotest.com/detail.aspx?cid=129
+     CID: 129
+
+  2. CHT系列全自动影像仪
+     URL: http://www.chotest.com/detail.aspx?cid=100
+     CID: 100
+
+  3. Hybrid系列复合式闪测仪
+     URL: http://www.chotest.com/detail.aspx?cid=1128
+     CID: 1128
+
+  4. VX3000系列闪测仪
+     URL: http://www.chotest.com/detail.aspx?cid=926
+     CID: 926
+
+  5. VX3500大行程闪测仪
+     URL: http://www.chotest.com/detail.aspx?cid=62
+     CID: 62
+
+  6. VX4000系列闪测仪
+     URL: http://www.chotest.com/detail.aspx?cid=940
+     CID: 940
+
+  7. VX5000系列闪测仪
+     URL: http://www.chotest.com/detail.aspx?cid=982
+     CID: 982
+
+  8. VX8000系列闪测仪
+     URL: http://www.chotest.com/detail.aspx?cid=109
+     CID: 109
+
+  9. VX9000系列光学扫描成像测量机
+     URL: http://www.chotest.com/detail.aspx?cid=105
+     CID: 105
+
+  10. VJ系列3D轮廓测量仪
+     URL: http://www.chotest.com/detail.aspx?cid=81
+     CID: 81
+
+  11. MX3200显微尺寸测量仪
+     URL: http://www.chotest.com/detail.aspx?cid=107
+     CID: 107
+
+  12. VX1000系列闪测仪
+     URL: http://www.chotest.com/detail.aspx?cid=1127
+     CID: 1127
+
+Microscopic Surface: 4 produtos
+--------------------------------------------------------------------------------
+  1. SJ6000激光干涉仪
+     URL: http://www.chotest.com/detail.aspx?cid=79
+     CID: 79
+
+  2. SJ6800激光干涉仪
+     URL: http://www.chotest.com/detail.aspx?cid=84
+     CID: 84
+
+  3. MT21无线球杆仪
+     URL: http://www.chotest.com/detail.aspx?cid=936
+     CID: 936
+
+  4. WR50自动精密转台
+     URL: http://www.chotest.com/detail.aspx?cid=1130
+     CID: 1130
+
+Nano 3D Optical Surface: 12 produtos
+--------------------------------------------------------------------------------
+  1. CEM3000A台式扫描电镜
+     URL: http://www.chotest.com/detail.aspx?cid=1432
+     CID: 1432
+
+  2. SuperView  W1 光学3D表面轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=686
+     CID: 686
+
+  3. SuperView WM100光学3D表面轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=64
+     CID: 64
+
+  4. SuperView W1-Pro系列光学3D表面轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=63
+     CID: 63
+
+  5. SuperView W3白光干涉仪
+     URL: http://www.chotest.com/detail.aspx?cid=1048
+     CID: 1048
+
+  6. SuperView W5五轴全自动光学3D表面轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=751
+     CID: 751
+
+  7. SuperView WT3000系列白光干涉共聚焦轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=1427
+     CID: 1427
+
+  8. VT6000系列共聚焦显微镜
+     URL: http://www.chotest.com/detail.aspx?cid=1327
+     CID: 1327
+
+  9. Nano Step系列台阶仪
+     URL: http://www.chotest.com/detail.aspx?cid=104
+     CID: 104
+
+  10. VT-X100共聚焦测量头
+     URL: http://www.chotest.com/detail.aspx?cid=1426
+     CID: 1426
+
+  11. SuperView WX系列白光干涉测头
+     URL: http://www.chotest.com/detail.aspx?cid=103
+     CID: 103
+
+  12. MX3200显微尺寸测量仪
+     URL: http://www.chotest.com/detail.aspx?cid=561
+     CID: 561
+
+Video Measuring Machines: 12 produtos
+--------------------------------------------------------------------------------
+  1. Mizar Gold小行程移动桥式三坐标测量机
+     URL: http://www.chotest.com/detail.aspx?cid=1499
+     CID: 1499
+
+  2. Earth固定桥式三坐标测量机
+     URL: http://www.chotest.com/detail.aspx?cid=1439
+     CID: 1439
+
+  3. Mizar Silver小行程移动桥式三坐标测量机
+     URL: http://www.chotest.com/detail.aspx?cid=1400
+     CID: 1400
+
+  4. Mizar Silver大行程移动桥式三坐标测量机
+     URL: http://www.chotest.com/detail.aspx?cid=1401
+     CID: 1401
+
+  5. Mars Classic小行程移动桥式三坐标测量机
+     URL: http://www.chotest.com/detail.aspx?cid=106
+     CID: 106
+
+  6. Mars Classic大行程移动桥式三坐标测量机
+     URL: http://www.chotest.com/detail.aspx?cid=1399
+     CID: 1399
+
+  7. PR40无线电机床测头
+     URL: http://www.chotest.com/detail.aspx?cid=1431
+     CID: 1431
+
+  8. PO系列机床测头
+     URL: http://www.chotest.com/detail.aspx?cid=939
+     CID: 939
+
+  9. SJ5900光学型轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=1330
+     CID: 1330
+
+  10. SJ5800一体型轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=741
+     CID: 741
+
+  11. SJ5700DUAL双向扫描型轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=1244
+     CID: 1244
+
+  12. SJ5700S-PR标准型粗糙度轮廓仪
+     URL: http://www.chotest.com/detail.aspx?cid=1243
+     CID: 1243
+

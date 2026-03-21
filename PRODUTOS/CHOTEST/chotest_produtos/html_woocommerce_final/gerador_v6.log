@@ -1,0 +1,70 @@
+2025-12-29 18:47:37,473 - ============================================================
+2025-12-29 18:47:37,473 - GERADOR v6 - Processando 54 produtos
+2025-12-29 18:47:37,473 - ============================================================
+2025-12-29 18:47:37,473 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:38,474 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:39,474 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:40,475 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:41,476 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:42,479 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:43,480 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:44,481 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:45,482 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:46,483 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:47,484 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:48,485 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:49,486 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:50,487 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:51,487 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:52,488 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:53,489 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:54,490 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:55,491 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:56,491 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:57,492 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:58,493 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:47:59,495 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:00,497 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:01,498 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:02,499 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:03,499 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:04,500 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:05,501 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:06,502 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:07,503 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:08,504 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:09,504 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:10,505 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:11,506 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:12,507 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:13,508 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:14,509 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:15,510 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:16,511 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:17,512 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:18,512 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:19,513 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:20,514 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:21,516 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:22,517 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:23,517 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:24,518 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:25,518 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:26,519 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:27,519 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:28,520 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:29,521 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:30,522 - ERRO: Logger._log() got an unexpected keyword 
+2025-12-29 18:48:31,524 - ============================================================
+2025-12-29 18:48:31,524 - RESULTADO: 0 sucesso | 54 erro
+2025-12-29 18:48:31,524 - Saida: chotest_produtos\html_woocommerce_final
+2025-12-29 18:48:47,372 - ============================================================
+2025-12-29 18:48:47,372 - GERADOR v6 - Processando 54 produtos
+2025-12-29 18:48:47,372 - ============================================================
+2025-12-29 18:48:47,372 - [01/54] ...
+2025-12-29 18:48:51,839 -   OK - 19232 bytes
+2025-12-29 18:48:52,141 - [02/54] SJ6000激光干涉仪...
+2025-12-29 18:48:53,972 -   OK - 19265 bytes
+2025-12-29 18:48:54,273 - [03/54] SJ6800激光干涉仪...
+2025-12-29 18:48:56,107 -   OK - 11623 bytes
+2025-12-29 18:48:56,408 - [04/54] MT21无线球杆仪...

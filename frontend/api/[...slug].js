@@ -195,7 +195,16 @@ async function route(req, res, slug, rawBody) {
 
     // GET /api/debug — diagnóstico de roteamento
     if (s0 === 'debug') {
-        return res.json({ slug, s0, s1, s2, s3, method, url: req.url, query: req.query });
+        return res.json({
+            slug,
+            s0,
+            s1,
+            s2,
+            s3,
+            method,
+            url: req.url,
+            query: req.query
+        });
     }
 
     // GET /api/health
@@ -1361,7 +1370,8 @@ async function route(req, res, slug, rawBody) {
                         const est = respEst.data && respEst.data.data;
                         if (est && est.componentes && est.componentes.length > 0) estruturaBling = est;
                     } catch {
-                        /* estrutura e opcional */ }
+                        /* estrutura e opcional */
+                    }
                 } catch (e) {
                     erroPreview = e.message;
                 }

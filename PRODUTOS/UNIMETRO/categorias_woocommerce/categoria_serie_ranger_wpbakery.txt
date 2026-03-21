@@ -1,0 +1,49 @@
+[vc_row][vc_column][vc_column_text]
+<h1 style="text-align: center; color: #0066cc;">SÉRIE RANGER - MEDIÇÃO DE FERRAMENTAS ROTATIVAS</h1>
+<p style="text-align: center; font-size: 18px; color: #333;">Especializada em fresas, brocas e ferramentas de corte - Software SMARTOOL</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890123{background-color: #f8f9fa !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sobre a Série RANGER</h2>
+<p>A Série RANGER foi desenvolvida especificamente para atender às necessidades de fabricantes de ferramentas rotativas, oferecendo soluções especializadas para medição de fresas, brocas, escareadores e outras ferramentas de corte. Com tecnologia dedicada e software SMARTOOL exclusivo, esta série garante precisão excepcional na inspeção de geometrias complexas.</p>
+
+<p>Projetada para a indústria de ferramentas, a Série RANGER incorpora algoritmos específicos para análise de ângulos de corte, diâmetros variáveis, helicoidais e outras características críticas das ferramentas rotativas. O sistema de fixação especializado permite posicionamento preciso e repetível, essencial para controle de qualidade rigoroso.</p>
+
+<p>Com interface intuitiva e relatórios automatizados, as máquinas RANGER facilitam o trabalho de operadores e engenheiros de qualidade, fornecendo dados precisos para certificação de ferramentas e controle de processo produtivo.</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Características Técnicas</h2>
+<ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Software SMARTOOL:</strong> Dedicado para ferramentas rotativas</li>
+<li><strong>Fixação Especializada:</strong> Sistema específico para ferramentas</li>
+<li><strong>Análise de Ângulos:</strong> Medição precisa de ângulos de corte</li>
+<li><strong>Diâmetros Variáveis:</strong> Detecção automática de perfis complexos</li>
+<li><strong>Helicoidais:</strong> Medição de passo e ângulo helicoidal</li>
+<li><strong>Geometrias Complexas:</strong> Análise de canais e quebra-cavacos</li>
+<li><strong>Relatórios Automáticos:</strong> Certificados de qualidade integrados</li>
+<li><strong>Base de Dados:</strong> Biblioteca de ferramentas padrão</li>
+<li><strong>Calibração Automática:</strong> Padrões integrados para precisão</li>
+<li><strong>Interface Especializada:</strong> Controles otimizados para ferramentas</li>
+</ul>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890124{background-color: #e9ecef !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Modelos Disponíveis</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">RANGER 200</h3>
+<p><strong>Área de Medição:</strong> 200 x 150 x 100mm</p>
+<p><strong>Aplicação:</strong> Ferramentas compactas e médias</p>
+<p><strong>Ideal para:</strong> Fresas, brocas até Ø25mm</p>
+<p><strong>Software:</strong> SMARTOOL básico</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">RANGER 600</h3>
+<p><strong>Área de Medição:</strong> Não especificada - Universal</p>
+<p><strong>Aplicação:</strong> Inspeção universal de ferramentas</p>
+<p><strong>Ideal para:</strong> Brocas, fresas, alargadores</p>
+<p><strong>Software:</strong> SMARTOOL completo</p>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]

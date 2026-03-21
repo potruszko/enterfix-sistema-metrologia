@@ -382,10 +382,18 @@ const generateReparoApalpadorPDF = async (dados) => {
         const limiteMax = parseFloat(teste.limiteMax);
         const limiteMin = parseFloat(teste.limiteMin);
 
+        const desvioPosOK = !isNaN(desvioPos) && !isNaN(limiteMax) ?
+            Math.abs(desvioPos) <= limiteMax :
+            false;
+
+        const desvioNegOK = !isNaN(desvioNeg) && !isNaN(limiteMin) ?
+            Math.abs(desvioNeg) <= Math.abs(limiteMin) :
+            false;
+
         // Z não tem desvio positivo
         const statusOK = teste.eixo === 'Z' ?
-            (!isNaN(desvioNeg) && desvioNeg >= limiteMin) :
-            (!isNaN(desvioPos) && !isNaN(desvioNeg) && desvioPos <= limiteMax && desvioNeg >= limiteMin);
+            desvioNegOK :
+            (desvioPosOK && desvioNegOK);
 
         return [
             teste.eixo,

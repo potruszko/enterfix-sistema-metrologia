@@ -1,0 +1,68 @@
+[vc_row full_width="stretch_row" bg_type="grad" bg_override="full" css=".vc_custom_1743499489559{padding-top: 60px !important;padding-bottom: 80px !important;background-color: #F2F2F2 !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FCFCFC), color-stop(100%, #E3E3E3));background: -moz-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -webkit-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -o-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -ms-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);"][vc_column][ind_custom_heading heading="SISTEMAS DE RASTREAMENTO 3D" position="center" margin_bottom="32"][vc_column_text css_animation="fadeInUp" css=".vc_custom_1743499181401{padding: 32px !important;text-align: center;}"]
+
+<p style="text-align: center;font-size: 18px;line-height: 1.6">
+Os <strong>Sistemas de Rastreamento 3D</strong> da Scanology oferecem <strong>monitoramento de precisão</strong> em tempo real, ideais para aplicações que exigem controle de posição e orientação com máxima exatidão.
+</p>
+
+<p style="text-align: center;font-size: 16px;color: #666;line-height: 1.6">
+Com tecnologia ótica avançada e algoritmos de processamento em tempo real, nossa linha de rastreamento garante <strong>precisão submilimétrica</strong> para robótica, realidade virtual, pesquisa científica e aplicações metrológicas críticas.
+</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1743499551634{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;padding-top: 40px !important;padding-bottom: 80px !important;}"][vc_column]
+
+[ind_custom_heading heading="MODELOS DISPONÍVEIS" heading_color="#000000" position="center" margin_bottom="32"]
+
+[vc_column_text css_animation="fadeInUp"]
+
+<table style="width: 85%;max-width: 1000px;margin: 40px auto;border-collapse: collapse;text-align: center;font-size: 16px;line-height: 1.6;border-radius: 8px;overflow: hidden">
+  <thead style="background-color: #8E44AD;color: #ffffff">
+    <tr>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Modelo</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Aplicação Principal</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Precisão Posicional</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Taxa de Atualização</th>
+    </tr>
+  </thead>
+  <tbody style="color: #333">
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>NimbleTrack-C</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Rastreamento compacto</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,1mm</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">1000Hz</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>NimbleTrack-CR</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Rastreamento com referência</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,05mm</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">1500Hz</td>
+    </tr>
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>TrackScan Sharp</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Rastreamento de precisão</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,08mm</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">800Hz</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>M-Track</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Rastreamento móvel</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,12mm</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">600Hz</td>
+    </tr>
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>Sistema Pose 6D</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Rastreamento 6 graus liberdade</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,03mm</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">2000Hz</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>TrackProbe</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Sondagem 3D inteligente</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,005mm</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">1000 pts/s</td>
+    </tr>
+  </tbody>
+</table>
+
+[/vc_column_text][/vc_column][/vc_row]

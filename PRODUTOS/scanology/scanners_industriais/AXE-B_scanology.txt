@@ -1,0 +1,176 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>AXE-B - Scanner 3D Global de Alto Desempenho</h1>
+
+<p class="produto-breve-descricao">Scanner 3D global de alta capacidade para digitalização de grandes volumes com precisão industrial e tecnologia multi-sensor avançada.</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">Sistema de Digitalização Global de Alto Desempenho</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">O <strong>AXE-B</strong> é um scanner 3D global que oferece capacidades de digitalização em larga escala, ideal para aplicações que requerem captura de grandes volumes e geometrias complexas. Este sistema representa a solução definitiva para digitalização 3D global de alta precisão.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">0,025mm</h3>
+        <p style="font-size: 16px;">Precisão Global</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">500mm</h3>
+        <p style="font-size: 16px;">Volume Máximo</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">1,85M</h3>
+        <p style="font-size: 16px;">Pontos/Segundo</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Multi</h3>
+        <p style="font-size: 16px;">Sensor</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Digitalização Global</h3>
+<p>Veja o AXE-B capturando objetos de grandes dimensões com tecnologia multi-sensor avançada.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Sistema de digitalização global</li>
+<li>Captura de grandes volumes</li>
+<li>Tecnologia multi-sensor</li>
+<li>Rastreamento global avançado</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas Globais</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Volumétrica</strong></td>
+<td>Até 0,025mm</td>
+</tr>
+<tr>
+<td><strong>Resolução de Digitalização</strong></td>
+<td>0,08mm</td>
+</tr>
+<tr>
+<td><strong>Taxa de Medição</strong></td>
+<td>1.850.000 pontos/segundo</td>
+</tr>
+<tr>
+<td><strong>Volume de Digitalização</strong></td>
+<td>500mm × 400mm × 400mm</td>
+</tr>
+<tr>
+<td><strong>Alcance de Trabalho</strong></td>
+<td>400-800mm</td>
+</tr>
+<tr>
+<td><strong>Campo de Visão</strong></td>
+<td>400mm × 300mm</td>
+</tr>
+<tr>
+<td><strong>Tipo de Rastreamento</strong></td>
+<td>Global multi-posição</td>
+</tr>
+<tr>
+<td><strong>Fonte de Luz</strong></td>
+<td>LED azul estruturado</td>
+</tr>
+<tr>
+<td><strong>Peso</strong></td>
+<td>980g</td>
+</tr>
+<tr>
+<td><strong>Certificação</strong></td>
+<td>ISO 17025, CE, FCC</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações de Grande Escala</h3>
+
+<strong>Digitalização Automotiva:</strong>
+• Inspeção dimensional de carrocerias completas
+• Análise de painéis e componentes estruturais
+• Controle de qualidade em linha de montagem
+
+<strong>Aeroespacial e Defesa:</strong>
+• Digitalização de componentes de grande porte
+• Inspeção de fuselagens e asas
+• Verificação dimensional de estruturas críticas
+
+<strong>Patrimônio e Arquitetura:</strong>
+• Documentação digital de monumentos
+• Digitalização de elementos arquitetônicos
+• Preservação digital de patrimônio histórico
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Software de Digitalização Global</h3>
+
+O AXE-B vem acompanhado do software ScanViewer Global, especializado em processamento de dados de grande escala:
+
+<strong>Recursos Especializados:</strong>
+• Processamento otimizado para grandes volumes de dados
+• Algoritmos de fusão multi-sensor avançados
+• Ferramentas de análise dimensional global
+• Exportação para sistemas CAD de grande escala
+• Módulos de inspeção para grandes componentes
+• Relatórios comparativos com modelos CAD
+
+<strong>Gestão de Dados:</strong>
+Sistema avançado de gestão de grandes conjuntos de dados 3D
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens da Digitalização Global</h3>
+
+<strong>Capacidade de Grande Escala:</strong>
+Volume de digitalização de 500×400×400mm permite capturar objetos de grandes dimensões com precisão consistente.
+
+<strong>Eficiência Operacional:</strong>
+Sistema de rastreamento global reduz significativamente o tempo de setup e digitalização.
+
+<strong>Qualidade Garantida:</strong>
+Precisão volumétrica de 0,025mm mantida em todo o volume de trabalho.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Global Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para aplicações de grande escala:
+
+• <strong>Treinamento Avançado:</strong> Programas específicos para digitalização de grande escala
+• <strong>Suporte de Instalação:</strong> Assistência completa para setup e calibração
+• <strong>Consultoria em Aplicações:</strong> Otimização para aplicações específicas de grande porte
+• <strong>Manutenção Especializada:</strong> Serviços de manutenção para equipamentos de alta precisão
+• <strong>Certificação Metrológica:</strong> Certificação rastreável para aplicações críticas
+
+<strong>Agende uma Demonstração e descubra as possibilidades da digitalização 3D global com o AXE-B!</strong>
+[/vc_column_text][/vc_column][/vc_row]

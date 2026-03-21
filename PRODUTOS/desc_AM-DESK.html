@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AM-DESK – Estação de Medição 3D Automatizada | Enterfix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* ============================================================
+   AM-DESK — Enterfix Product Description
+   Prefix: .amdesk
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.amdesk-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- 1. HERO ----- */
+.amdesk-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/7;
+  min-height: 380px;
+  background: #0a0a14;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+.amdesk-hero iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1.18);
+  width: 100%; height: 100%;
+  border: none;
+  pointer-events: none;
+}
+.amdesk-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,5,30,.86) 0%, rgba(0,0,0,.10) 100%);
+  display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: center;
+  padding: 36px 48px;
+}
+.amdesk-hero-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #A0BF30;
+  background: rgba(160,191,48,.12); border: 1px solid rgba(160,191,48,.38);
+  border-radius: 20px; padding: 5px 14px; margin-bottom: 14px;
+}
+.amdesk-hero-model {
+  font-size: clamp(26px, 5vw, 60px); font-weight: 900;
+  color: #fff; line-height: 1.0; letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+.amdesk-hero-sub {
+  font-size: clamp(13px, 1.8vw, 17px); color: rgba(255,255,255,.78);
+  font-weight: 400; margin-bottom: 20px; max-width: 520px; line-height: 1.4;
+}
+.amdesk-hero-badges {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.amdesk-hero-chip {
+  background: rgba(255,255,255,.10); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.18); border-radius: 8px;
+  padding: 9px 16px; text-align: center;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.amdesk-hero-chip-val { font-size: 18px; font-weight: 900; color: #A0BF30; line-height: 1; }
+.amdesk-hero-chip-lbl { font-size: 10px; color: rgba(255,255,255,.65); letter-spacing: 1.2px; }
+
+/* ----- 2. INTRO ----- */
+.amdesk-intro {
+  text-align: center;
+  padding: 52px 24px 16px;
+}
+.amdesk-intro h2 {
+  font-size: clamp(18px, 2.8vw, 26px); font-weight: 800;
+  color: #0e0a2e; line-height: 1.4; margin-bottom: 16px;
+  max-width: 860px; margin-left: auto; margin-right: auto;
+}
+.amdesk-intro p {
+  font-size: 15px; color: #555; line-height: 1.75;
+  max-width: 760px; margin: 0 auto;
+}
+
+/* ----- 3. HERO PRODUCT BANNER ----- */
+.amdesk-hero-banner {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin: 36px 0 10px;
+}
+.amdesk-hero-banner img {
+  width: 100%; height: 520px; object-fit: cover; display: block;
+}
+.amdesk-hero-banner-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,5,40,.90) 44%, transparent 78%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 44px 56px;
+}
+.amdesk-hero-banner-overlay h2 {
+  font-size: clamp(24px, 4vw, 44px); font-weight: 900; color: #fff;
+  max-width: 480px; line-height: 1.05; margin-bottom: 16px;
+}
+.amdesk-hero-banner-overlay p {
+  font-size: 15px; color: rgba(255,255,255,.82); max-width: 440px; line-height: 1.7;
+  margin-bottom: 28px;
+}
+.amdesk-pill-list { display: flex; flex-direction: column; gap: 8px; }
+.amdesk-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; color: #fff; font-weight: 600;
+}
+.amdesk-pill::before {
+  content: '';
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #A0BF30; flex-shrink: 0;
+}
+
+/* ----- 4. PRODUCT SHOWCASE 2-PANEL ----- */
+.amdesk-showcase {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px; margin-bottom: 10px;
+}
+.amdesk-showcase-card {
+  position: relative; border-radius: 14px; overflow: hidden;
+}
+.amdesk-showcase-card img {
+  width: 100%; height: 320px; object-fit: cover; display: block;
+  transition: transform .45s;
+}
+.amdesk-showcase-card:hover img { transform: scale(1.035); }
+.amdesk-showcase-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,5,40,.92) 0%, rgba(10,5,40,.4) 55%, transparent 80%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 26px 26px 28px;
+}
+.amdesk-showcase-overlay h3 {
+  font-size: clamp(16px, 2.2vw, 20px); font-weight: 900; color: #A0BF30;
+  margin-bottom: 8px;
+}
+.amdesk-showcase-overlay p {
+  font-size: 13px; color: rgba(255,255,255,.88); line-height: 1.6;
+}
+
+/* ----- 5. FEATURES TITLE ----- */
+.amdesk-feat-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 36px 0 24px;
+}
+
+/* ----- 6. FEATURES (alternating rows) ----- */
+.amdesk-features { padding: 0 0 20px; }
+.amdesk-feat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 14px; overflow: hidden;
+  margin-bottom: 10px;
+  min-height: 370px;
+}
+.amdesk-feat-row.reverse { direction: rtl; }
+.amdesk-feat-row.reverse > * { direction: ltr; }
+.amdesk-feat-body {
+  padding: 42px 46px;
+  background: #14263C; color: #fff;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.amdesk-feat-body.light {
+  background: #F5F5F5; color: #222;
+}
+.amdesk-feat-body h3 {
+  font-size: clamp(18px, 2.4vw, 24px); font-weight: 800;
+  margin-bottom: 16px; line-height: 1.25; color: #A0BF30;
+}
+.amdesk-feat-body.light h3 { color: #14263C; }
+.amdesk-feat-body p { font-size: 14px; line-height: 1.8; opacity: .9; }
+.amdesk-feat-adv {
+  display: inline-block; margin-top: 18px;
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #A0BF30;
+  padding: 5px 12px; border: 1px solid rgba(160,191,48,.45);
+  border-radius: 20px;
+}
+.amdesk-feat-body.light .amdesk-feat-adv { color: #14263C; border-color: rgba(20,38,60,.3); }
+.amdesk-feat-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block; min-height: 370px;
+}
+
+/* ----- 7. STATS STRIP ----- */
+.amdesk-stats {
+  background: #14263C; border-radius: 14px;
+  padding: 36px 48px; margin: 10px 0 20px;
+  display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 24px;
+}
+.amdesk-stat { text-align: center; }
+.amdesk-stat-val {
+  font-size: clamp(26px, 4vw, 42px); font-weight: 900; color: #A0BF30;
+  line-height: 1;
+}
+.amdesk-stat-lbl {
+  font-size: 12px; color: rgba(255,255,255,.65); letter-spacing: 1px;
+  text-transform: uppercase; margin-top: 6px;
+}
+.amdesk-stat-divider {
+  width: 1px; height: 52px; background: rgba(255,255,255,.15);
+}
+
+/* ----- 8. COMPATIBILITY ----- */
+.amdesk-compat-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 36px 0 10px;
+}
+.amdesk-compat-sub {
+  text-align: center; font-size: 14.5px; color: #666;
+  max-width: 680px; margin: 0 auto 28px; line-height: 1.65;
+}
+.amdesk-compat-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 10px; margin-bottom: 10px;
+}
+.amdesk-compat-card {
+  background: #F5F5F5; border-radius: 12px; padding: 28px 24px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.amdesk-compat-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: #14263C; display: flex; align-items: center; justify-content: center;
+}
+.amdesk-compat-icon i { color: #A0BF30; font-size: 20px; }
+.amdesk-compat-card h4 {
+  font-size: 16px; font-weight: 800; color: #14263C;
+}
+.amdesk-compat-card p {
+  font-size: 13px; color: #666; line-height: 1.65;
+}
+
+/* ----- 9. SAFETY BANNER ----- */
+.amdesk-safety-banner {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin: 10px 0 20px;
+}
+.amdesk-safety-banner img {
+  width: 100%; height: 400px; object-fit: cover; display: block;
+}
+.amdesk-safety-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,5,40,.90) 46%, transparent 82%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 44px 56px;
+}
+.amdesk-safety-overlay h2 {
+  font-size: clamp(22px, 3.6vw, 38px); font-weight: 900; color: #fff;
+  max-width: 440px; line-height: 1.1; margin-bottom: 16px;
+}
+.amdesk-safety-overlay p {
+  font-size: 14px; color: rgba(255,255,255,.82); max-width: 420px; line-height: 1.7;
+}
+.amdesk-safety-chips {
+  margin-top: 20px; display: flex; flex-direction: column; gap: 8px;
+}
+.amdesk-safety-chip { font-size: 13px; color: #fff; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.amdesk-safety-chip::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #A0BF30; flex-shrink: 0; }
+
+/* ----- 10. SPECS ----- */
+.amdesk-specs { padding: 10px 0 20px; }
+.amdesk-specs-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  margin-bottom: 28px;
+}
+.amdesk-specs table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.amdesk-specs table th,
+.amdesk-specs table td {
+  padding: 10px 14px; border: 1px solid #e2e2e2; vertical-align: top;
+  text-align: left; line-height: 1.55;
+}
+.amdesk-specs table thead tr th {
+  background: #14263C; color: #fff; font-weight: 700; font-size: 13px;
+}
+.amdesk-specs table tbody tr:nth-child(even) { background: #f8f8f8; }
+.amdesk-specs table td:first-child { font-weight: 600; color: #333; width: 36%; }
+
+/* ----- 11. APPLICATIONS ----- */
+.amdesk-apps-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 36px 0 24px;
+}
+.amdesk-apps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 10px; margin-bottom: 20px;
+}
+.amdesk-app-card { border-radius: 12px; overflow: hidden; position: relative; }
+.amdesk-app-card img {
+  width: 100%; height: 220px; object-fit: cover; display: block;
+  transition: transform .42s;
+}
+.amdesk-app-card:hover img { transform: scale(1.045); }
+.amdesk-app-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 12px 16px 15px;
+  background: linear-gradient(to top, rgba(0,0,0,.84) 0%, transparent 60%);
+  color: #fff; font-size: 14px; font-weight: 700;
+}
+
+/* ----- 12. SOFTWARE ----- */
+.amdesk-software {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin: 10px 0 10px;
+}
+.amdesk-software img.bg {
+  width: 100%; height: 400px; object-fit: cover; display: block;
+}
+.amdesk-software-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,5,40,.94) 0%, rgba(20,38,60,.70) 55%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 48px 56px;
+}
+.amdesk-flexscan-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(160,191,48,.15); border: 1px solid rgba(160,191,48,.4);
+  border-radius: 8px; padding: 7px 14px; margin-bottom: 20px; width: fit-content;
+}
+.amdesk-flexscan-badge span { font-size: 18px; font-weight: 900; color: #A0BF30; }
+.amdesk-flexscan-badge small { font-size: 10px; color: rgba(255,255,255,.6); letter-spacing: 1.5px; text-transform: uppercase; }
+.amdesk-software-overlay h2 {
+  font-size: clamp(20px, 3vw, 28px); font-weight: 900; color: #fff;
+  margin-bottom: 14px; max-width: 480px; line-height: 1.2;
+}
+.amdesk-software-overlay p {
+  font-size: 14px; color: rgba(255,255,255,.83); max-width: 460px;
+  line-height: 1.75; margin-bottom: 24px;
+}
+.amdesk-software-features {
+  display: flex; flex-direction: column; gap: 7px;
+}
+.amdesk-sw-feat {
+  font-size: 13px; color: #fff; font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+.amdesk-sw-feat i { color: #A0BF30; width: 16px; }
+
+/* ----- 13. CTA ----- */
+.amdesk-cta {
+  position: relative; border-radius: 14px; overflow: hidden; margin: 10px 0 32px;
+  background: #14263C;
+}
+.amdesk-cta-content {
+  padding: 56px 58px;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.amdesk-cta-content h2 {
+  font-size: clamp(22px, 3.4vw, 34px); font-weight: 900; color: #fff;
+  margin-bottom: 12px; max-width: 560px; line-height: 1.15;
+}
+.amdesk-cta-content p {
+  font-size: 14px; color: rgba(255,255,255,.78); max-width: 520px;
+  line-height: 1.7; margin-bottom: 26px;
+}
+.amdesk-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.amdesk-btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #A0BF30; color: #0e0a2e; border: none;
+  padding: 13px 26px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  text-decoration: none; transition: all .25s;
+}
+.amdesk-btn-primary:hover { background: #b8d845; transform: translateY(-2px); }
+.amdesk-btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.55);
+  padding: 13px 26px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  text-decoration: none; transition: all .25s;
+}
+.amdesk-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 900px) {
+  .amdesk-hero-banner img { height: 420px; }
+  .amdesk-safety-banner img { height: 340px; }
+}
+@media (max-width: 768px) {
+  .amdesk-showcase { grid-template-columns: 1fr; }
+  .amdesk-feat-row { grid-template-columns: 1fr; direction: ltr !important; }
+  .amdesk-feat-img img { min-height: 220px; height: 220px; }
+  .amdesk-compat-cards { grid-template-columns: 1fr 1fr; }
+  .amdesk-apps-grid { grid-template-columns: 1fr 1fr; }
+  .amdesk-stats { padding: 28px 24px; }
+  .amdesk-stat-divider { display: none; }
+  .amdesk-hero-overlay { padding: 24px 24px; }
+  .amdesk-hero-banner-overlay { padding: 24px 28px; }
+  .amdesk-safety-overlay { padding: 24px 28px; }
+  .amdesk-software-overlay { padding: 28px 30px; }
+  .amdesk-cta-content { padding: 36px 30px; }
+}
+@media (max-width: 480px) {
+  .amdesk-compat-cards { grid-template-columns: 1fr; }
+  .amdesk-apps-grid { grid-template-columns: 1fr; }
+  .amdesk-hero-banner img { height: 320px; }
+  .amdesk-stats { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+<div class="amdesk-page">
+
+  <!-- ===== 1. HERO ===== -->
+  <div class="amdesk-hero">
+    <iframe
+      src="https://www.youtube.com/embed/els5AwxqDp8?autoplay=1&mute=1&controls=0&loop=1&playlist=els5AwxqDp8&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      title="AM-DESK – Estação de Medição 3D Automatizada"
+    ></iframe>
+    <div class="amdesk-hero-overlay">
+      <span class="amdesk-hero-tag">Automação 3D • Inspeção em Lote</span>
+      <div class="amdesk-hero-model">AM-DESK</div>
+      <div class="amdesk-hero-sub">Estação de Medição 3D Automatizada — inspeção dimensional em lote, sem parar, com total precisão industrial</div>
+      <div class="amdesk-hero-badges">
+        <div class="amdesk-hero-chip">
+          <span class="amdesk-hero-chip-val">75 kg</span>
+          <span class="amdesk-hero-chip-lbl">COMPACTA</span>
+        </div>
+        <div class="amdesk-hero-chip">
+          <span class="amdesk-hero-chip-val">100 kg</span>
+          <span class="amdesk-hero-chip-lbl">PEÇAS</span>
+        </div>
+        <div class="amdesk-hero-chip">
+          <span class="amdesk-hero-chip-val">24/7</span>
+          <span class="amdesk-hero-chip-lbl">OPERAÇÃO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 2. INTRO ===== -->
+  <div class="amdesk-intro">
+    <h2>O AM-DESK é a Estação de Medição 3D Automatizada que une um cobot industrial, os scanners 3D da SCANOLOGY e o software FlexScan para entregar inspeção dimensional em lote — rápida, confiável e totalmente automatizada.</h2>
+    <p>Com tamanho compacto, instalação simplificada e alto grau de escalabilidade, o AM-DESK pode ser implantado em bancadas, plataformas mecânicas e no chão de fábrica sem grandes adaptações de infraestrutura. Ideal para medição contínua de peças pequenas, de fundição, plástico e estamparia em produção em massa.</p>
+  </div>
+
+  <!-- ===== 3. HERO PRODUCT BANNER ===== -->
+  <div class="amdesk-hero-banner">
+    <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_hero.jpg" alt="AM-DESK Estação de Medição 3D Automatizada" loading="lazy"/>
+    <div class="amdesk-hero-banner-overlay">
+      <h2>Medição Industrial Automatizada de Alto Desempenho</h2>
+      <p>O AM-DESK combina robótica colaborativa, visão 3D de alta precisão e software de inspeção inteligente para realizar medições em lote sem intervenção humana constante — acelerando o controle de qualidade e reduzindo tempo de inatividade.</p>
+      <div class="amdesk-pill-list">
+        <span class="amdesk-pill">Inspeção não-contato de campo total</span>
+        <span class="amdesk-pill">Calibração automática contínua</span>
+        <span class="amdesk-pill">Compatível com toda a linha SCANOLOGY</span>
+        <span class="amdesk-pill">Integração com processos de produção em massa</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 4. PRODUCT SHOWCASE (2 panels) ===== -->
+  <div class="amdesk-showcase">
+    <div class="amdesk-showcase-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_parts.jpg" alt="Medição de peças de pequena escala" loading="lazy"/>
+      <div class="amdesk-showcase-overlay">
+        <h3>Peças Pequenas com Máxima Precisão</h3>
+        <p>Ideal para componentes de plástico, fundição e estamparia — o AM-DESK realiza inspeção completa sem marcadores e sem contato.</p>
+      </div>
+    </div>
+    <div class="amdesk-showcase-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_applications.jpg" alt="Diversas aplicações industriais" loading="lazy"/>
+      <div class="amdesk-showcase-overlay">
+        <h3>Adequado a Diversas Aplicações</h3>
+        <p>Do chão de fábrica ao laboratório, o AM-DESK se adapta a diferentes ambientes industriais com facilidade de instalação e operação.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 5. FEATURES ===== -->
+  <div class="amdesk-feat-title">Seis Vantagens que Definem a AM-DESK</div>
+  <div class="amdesk-features">
+
+    <!-- Feature 1 — Instalação Rápida -->
+    <div class="amdesk-feat-row">
+      <div class="amdesk-feat-body">
+        <h3>Instalação Rápida e Fácil</h3>
+        <p>Com apenas 75 kg, a AM-DESK pode ser posicionada diretamente sobre bancadas e plataformas mecânicas sem obras de infraestrutura adicionais. Sua área de ocupação reduzida permite integração imediata em layouts industriais existentes — sem espaço desperdiçado e sem tempo perdido.</p>
+        <span class="amdesk-feat-adv">Vantagem: Integração fácil em qualquer cenário</span>
+      </div>
+      <div class="amdesk-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_product.jpg" alt="Instalação rápida AM-DESK" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 2 — Performance Robusta (reverse) -->
+    <div class="amdesk-feat-row reverse">
+      <div class="amdesk-feat-body light">
+        <h3>Performance Robusta e Contínua</h3>
+        <p>Com captura e processamento de dados ultrarrápidos, a AM-DESK realiza inspeções não-contato de campo total em peças de até 100 kg. Ao medir grandes quantidades em lote, integra-se perfeitamente a processos de controle de qualidade em produção em massa. A calibração automática garante medições ininterruptas mesmo quando as condições ambientais se alteram.</p>
+        <span class="amdesk-feat-adv">Vantagem: Acelere o tempo de medição</span>
+      </div>
+      <div class="amdesk-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_calibration.jpg" alt="Calibração automática AM-DESK" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 3 — Programação Fácil -->
+    <div class="amdesk-feat-row">
+      <div class="amdesk-feat-body">
+        <h3>Programação Simplificada</h3>
+        <p>Equipada com sistema PLC e servo-mecanismos, a AM-DESK executa medições programas com robôs colaborativos integrados. Ao apertar de um botão, realiza tarefas complexas via trajetos de medição pré-planejados. O ensino automático permite que operadores sem experiência em programação robótica configurem e utilizem a estação com facilidade.</p>
+        <span class="amdesk-feat-adv">Vantagem: Medição confiável sem parar</span>
+      </div>
+      <div class="amdesk-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_programming.jpg" alt="Programação fácil AM-DESK" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 4 — Operação Fácil (reverse) -->
+    <div class="amdesk-feat-row reverse">
+      <div class="amdesk-feat-body light">
+        <h3>Operação Intuitiva e Turnkey</h3>
+        <p>O AM-DESK é uma solução completa que não exige configurações rígidas de medição. Os usuários planejam as sequências de medição e as executam de forma automática e eficiente. Perfeito para peças com diversas geometrias, acabamentos e materiais. Suporta análise GD&amp;T, mapas coloridos de desvio e dimensional completa.</p>
+        <span class="amdesk-feat-adv">Vantagem: Medição eficaz sem setup complexo</span>
+      </div>
+      <div class="amdesk-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_software.jpg" alt="Software FlexScan AM-DESK" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 5 — Acessórios Diversos -->
+    <div class="amdesk-feat-row">
+      <div class="amdesk-feat-body">
+        <h3>Acessórios e Compatibilidade Amplos</h3>
+        <p>Compatível com diferentes cobots industriais e com toda a linha de scanners 3D da SCANOLOGY — do KSCAN-Magic ao SIMSCAN compacto. Os posicionadores trabalham em conjunto com o cobot para ampliar suas capacidades: suportam bandejas em tamanhos pequeno, médio e grande com tooling flexível, adaptando-se a peças de diferentes tamanhos e tipos.</p>
+        <span class="amdesk-feat-adv">Vantagem: Uso flexível com posicionadores</span>
+      </div>
+      <div class="amdesk-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_positioners.jpg" alt="Posicionadores AM-DESK" loading="lazy"/>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 6. STATS STRIP ===== -->
+  <div class="amdesk-stats">
+    <div class="amdesk-stat">
+      <div class="amdesk-stat-val">75 kg</div>
+      <div class="amdesk-stat-lbl">Peso da estação</div>
+    </div>
+    <div class="amdesk-stat-divider"></div>
+    <div class="amdesk-stat">
+      <div class="amdesk-stat-val">100 kg</div>
+      <div class="amdesk-stat-lbl">Capacidade de peças</div>
+    </div>
+    <div class="amdesk-stat-divider"></div>
+    <div class="amdesk-stat">
+      <div class="amdesk-stat-val">360°</div>
+      <div class="amdesk-stat-lbl">Cobertura de varredura</div>
+    </div>
+    <div class="amdesk-stat-divider"></div>
+    <div class="amdesk-stat">
+      <div class="amdesk-stat-val">24/7</div>
+      <div class="amdesk-stat-lbl">Disponibilidade operacional</div>
+    </div>
+    <div class="amdesk-stat-divider"></div>
+    <div class="amdesk-stat">
+      <div class="amdesk-stat-val">100%</div>
+      <div class="amdesk-stat-lbl">Inspeção automática</div>
+    </div>
+  </div>
+
+  <!-- ===== 7. SAFETY BANNER ===== -->
+  <div class="amdesk-safety-banner">
+    <img src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_safety.jpg" alt="Segurança e prevenção de colisões AM-DESK" loading="lazy"/>
+    <div class="amdesk-safety-overlay">
+      <h2>Segurança Incorporada em Cada Detalhe</h2>
+      <p>A AM-DESK foi projetada com múltiplos recursos de segurança para garantir que o processo de operação seja sempre controlado e seguro — mesmo em casos de comportamentos inesperados ou emergências.</p>
+      <div class="amdesk-safety-chips">
+        <span class="amdesk-safety-chip">Parada de emergência em série para proteção total</span>
+        <span class="amdesk-safety-chip">Buzzer com indicação sonora e luminosa de perigo</span>
+        <span class="amdesk-safety-chip">Controle de força e distância por servo-mecanismos</span>
+        <span class="amdesk-safety-chip">Prevenção de colisões com detecção inteligente</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 8. COMPATIBILITY ===== -->
+  <div class="amdesk-compat-title">Compatibilidade Total com Seu Ecossistema</div>
+  <div class="amdesk-compat-sub">O AM-DESK foi projetado para integrar-se com facilidade a múltiplos scanners, cobots e sistemas de produção — tornando-se o núcleo do seu processo de controle de qualidade automatizado.</div>
+  <div class="amdesk-compat-cards">
+    <div class="amdesk-compat-card">
+      <div class="amdesk-compat-icon"><i class="fa fa-cubes"></i></div>
+      <h4>Toda a Linha SCANOLOGY</h4>
+      <p>Compatível com KSCAN-Magic, SIMSCAN, KSCAN-E, KSCAN-X e demais scanners 3D da linha SCANOLOGY para máxima flexibilidade de uso.</p>
+    </div>
+    <div class="amdesk-compat-card">
+      <div class="amdesk-compat-icon"><i class="fa fa-robot"></i></div>
+      <h4>Múltiplos Cobots Industriais</h4>
+      <p>Suporte a diferentes fabricantes e modelos de robôs colaborativos, com integração via PLC e protocolos de comunicação industrial.</p>
+    </div>
+    <div class="amdesk-compat-card">
+      <div class="amdesk-compat-icon"><i class="fa fa-layer-group"></i></div>
+      <h4>Posicionadores e Tooling</h4>
+      <p>Bandejas em tamanho P, M e G com tooling flexível para fixação de peças de diferentes geometrias, materiais e dimensões.</p>
+    </div>
+  </div>
+
+  <!-- ===== 9. SPECS ===== -->
+  <div class="amdesk-specs" id="specs">
+    <div class="amdesk-specs-title">Especificações Técnicas</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Parâmetro</th>
+          <th>Especificação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Categoria</td>
+          <td>Estação de Medição 3D Automatizada (Automated 3D Measurement Station)</td>
+        </tr>
+        <tr>
+          <td>Peso da Estação</td>
+          <td>75 kg</td>
+        </tr>
+        <tr>
+          <td>Capacidade de Peças</td>
+          <td>Até 100 kg (inspeção não-contato de campo total)</td>
+        </tr>
+        <tr>
+          <td>Materiais Suportados</td>
+          <td>Plástico, fundição, estamparia, peças pequenas e de escala média</td>
+        </tr>
+        <tr>
+          <td>Modo de Inspeção</td>
+          <td>Não-contato, campo total, lote automatizado</td>
+        </tr>
+        <tr>
+          <td>Calibração</td>
+          <td>Automática — após sessão de varredura ou mudança de condições ambientais</td>
+        </tr>
+        <tr>
+          <td>Scanners Compatíveis</td>
+          <td>Linha completa SCANOLOGY: KSCAN-Magic, SIMSCAN, KSCAN-E, KSCAN-X e outros</td>
+        </tr>
+        <tr>
+          <td>Cobots</td>
+          <td>Compatível com múltiplos fabricantes de robôs colaborativos</td>
+        </tr>
+        <tr>
+          <td>Posicionadores</td>
+          <td>Bandejas P, M e G; tooling flexível para diferentes peças</td>
+        </tr>
+        <tr>
+          <td>Sistema de Controle</td>
+          <td>PLC + servo-mecanismos com ensino automático (automatic teaching)</td>
+        </tr>
+        <tr>
+          <td>Software</td>
+          <td>FlexScan — interface intuitiva com comunicação multi-cobot</td>
+        </tr>
+        <tr>
+          <td>Funções de Análise</td>
+          <td>GD&amp;T, mapas coloridos de desvio, medição dimensional, relatório automático</td>
+        </tr>
+        <tr>
+          <td>Saída de Relatório</td>
+          <td>Automática — comparação de coordenadas 3D reais com dados CAD</td>
+        </tr>
+        <tr>
+          <td>Segurança</td>
+          <td>Parada de emergência em série, buzzer, controle de força/distância servo</td>
+        </tr>
+        <tr>
+          <td>Ambientes de Operação</td>
+          <td>Chão de fábrica, laboratório, condições adversas</td>
+        </tr>
+        <tr>
+          <td>Disponibilidade</td>
+          <td>Operação contínua 24/7 com calibração automática</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== 10. APPLICATIONS ===== -->
+  <div class="amdesk-apps-title" id="applications">Aplicações Industriais</div>
+  <div class="amdesk-apps-grid">
+    <div class="amdesk-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_aeroespacial.png" alt="Aeroespacial" loading="lazy"/>
+      <div class="amdesk-app-label">Aeroespacial</div>
+    </div>
+    <div class="amdesk-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_automotivo.png" alt="Automotivo" loading="lazy"/>
+      <div class="amdesk-app-label">Automotivo</div>
+    </div>
+    <div class="amdesk-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_moldes.png" alt="Moldes e Ferramentaria" loading="lazy"/>
+      <div class="amdesk-app-label">Moldes &amp; Ferramentaria</div>
+    </div>
+    <div class="amdesk-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_energia.png" alt="Energia e Indústria Pesada" loading="lazy"/>
+      <div class="amdesk-app-label">Energia &amp; Ind. Pesada</div>
+    </div>
+    <div class="amdesk-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_ferroviario.png" alt="Ferrovia e Naval" loading="lazy"/>
+      <div class="amdesk-app-label">Ferrovia &amp; Naval</div>
+    </div>
+    <div class="amdesk-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_outros.png" alt="Outros Setores" loading="lazy"/>
+      <div class="amdesk-app-label">Outros Setores</div>
+    </div>
+  </div>
+
+  <!-- ===== 11. SOFTWARE ===== -->
+  <div class="amdesk-software">
+    <img class="bg" src="https://enterfix.com.br/wp-content/uploads/2026/03/amdesk_software.jpg" alt="FlexScan Software" loading="lazy"/>
+    <div class="amdesk-software-overlay">
+      <div class="amdesk-flexscan-badge">
+        <span>FlexScan</span>
+        <small>SOFTWARE METROLÓGICO</small>
+      </div>
+      <h2>Software All-in-One para Automação de Inspeção 3D</h2>
+      <p>O FlexScan oferece interface simples para interação humano-máquina, múltiplos métodos de comunicação para suporte a diferentes cobots e automação de medição com multi-posicionadores. Do planejamento de rotas à geração de relatório — tudo em um só ambiente.</p>
+      <div class="amdesk-software-features">
+        <span class="amdesk-sw-feat"><i class="fa fa-check-circle"></i> Planejamento e execução automática de sequências</span>
+        <span class="amdesk-sw-feat"><i class="fa fa-check-circle"></i> Mapas coloridos de desvio e análise GD&amp;T</span>
+        <span class="amdesk-sw-feat"><i class="fa fa-check-circle"></i> Geração automática de relatórios CAD vs. real</span>
+        <span class="amdesk-sw-feat"><i class="fa fa-check-circle"></i> Suporte a multi-robôs e multi-posicionadores</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 12. CTA ===== -->
+  <div class="amdesk-cta">
+    <div class="amdesk-cta-content">
+      <h2>Automatize o Seu Controle de Qualidade Dimensional</h2>
+      <p>Fale com nossos especialistas e descubra como o AM-DESK pode transformar o processo de inspeção da sua linha de produção — com medição em lote 24/7, sem parar, sem erros operacionais.</p>
+      <div class="amdesk-cta-btns">
+        <a class="amdesk-btn-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Falar com Especialista
+        </a>
+        <a class="amdesk-btn-outline" href="https://lp.enterfix.com.br/catalogo-am-desk" target="_blank" rel="noopener">
+          <i class="fa fa-download"></i> Baixar Catálogo
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

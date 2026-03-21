@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KSCAN-X – Scanner 3D Inteligente Sem Fio para Grandes Peças | Enterfix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* ============================================================
+   KSCAN-X — Enterfix Product Description
+   Prefix: .kscanx
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.kscanx-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- 1. HERO ----- */
+.kscanx-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/7;
+  min-height: 380px;
+  background: #0a0a14;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+.kscanx-hero iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1.18);
+  width: 100%; height: 100%;
+  border: none;
+  pointer-events: none;
+}
+.kscanx-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(15,10,40,.78) 0%, rgba(0,0,0,.15) 100%);
+  display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: center;
+  padding: 36px 48px;
+}
+.kscanx-hero-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #A0BF30;
+  background: rgba(160,191,48,.12); border: 1px solid rgba(160,191,48,.38);
+  border-radius: 20px; padding: 5px 14px; margin-bottom: 14px;
+}
+.kscanx-hero-model {
+  font-size: clamp(32px, 5.5vw, 62px); font-weight: 900;
+  color: #fff; line-height: 1.0; letter-spacing: -1.5px;
+  margin-bottom: 8px;
+}
+.kscanx-hero-sub {
+  font-size: clamp(13px, 1.8vw, 17px); color: rgba(255,255,255,.78);
+  font-weight: 400; margin-bottom: 20px; max-width: 520px; line-height: 1.4;
+}
+.kscanx-hero-logo {
+  height: 38px; max-width: 280px; object-fit: contain; opacity: .92;
+}
+.kscanx-hero-badge {
+  position: absolute; top: 24px; right: 30px;
+  background: rgba(255,255,255,.08); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.2); border-radius: 12px;
+  padding: 12px 18px; text-align: center;
+}
+.kscanx-hero-badge-val { font-size: 24px; font-weight: 900; color: #A0BF30; line-height: 1; }
+.kscanx-hero-badge-lbl { font-size: 10px; color: rgba(255,255,255,.65); letter-spacing: 1.5px; margin-top: 4px; }
+
+/* ----- 2. INTRO ----- */
+.kscanx-intro {
+  text-align: center;
+  padding: 52px 24px 16px;
+}
+.kscanx-intro h2 {
+  font-size: clamp(18px, 2.8vw, 26px); font-weight: 800;
+  color: #0e0a2e; line-height: 1.4; margin-bottom: 16px;
+  max-width: 820px; margin-left: auto; margin-right: auto;
+}
+.kscanx-intro p {
+  font-size: 15px; color: #555; line-height: 1.75;
+  max-width: 760px; margin: 0 auto;
+}
+
+/* ----- 3. WIDE BANNER + HIGHLIGHTS ----- */
+.kscanx-mk1 { padding: 36px 0 20px; }
+.kscanx-wide-banner {
+  position: relative; border-radius: 14px; overflow: hidden; margin-bottom: 10px;
+}
+.kscanx-wide-banner img {
+  width: 100%; height: 480px; object-fit: cover; display: block;
+}
+.kscanx-wide-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,5,40,.84) 42%, transparent 78%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 44px 56px;
+}
+.kscanx-wide-overlay h2 {
+  font-size: clamp(24px, 3.8vw, 42px); font-weight: 900; color: #fff;
+  max-width: 460px; line-height: 1.1; margin-bottom: 16px;
+}
+.kscanx-wide-overlay p {
+  font-size: 15px; color: rgba(255,255,255,.82); max-width: 430px; line-height: 1.7;
+}
+.kscanx-hl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.kscanx-hl-card {
+  position: relative; border-radius: 12px; overflow: hidden;
+}
+.kscanx-hl-card img {
+  width: 100%; height: 390px; object-fit: cover; display: block;
+  transition: transform .45s ease;
+}
+.kscanx-hl-card:hover img { transform: scale(1.035); }
+.kscanx-hl-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 26px 26px 24px;
+  background: linear-gradient(to top, rgba(0,0,0,.80) 0%, transparent 65%);
+}
+.kscanx-hl-caption h3 {
+  font-size: 18px; font-weight: 800; color: #A0BF30; margin-bottom: 6px; line-height: 1.2;
+}
+.kscanx-hl-caption p {
+  font-size: 13px; color: rgba(255,255,255,.85); line-height: 1.55;
+}
+
+/* ----- 4. FEATURES (alternating rows) ----- */
+.kscanx-features { padding: 0 0 20px; }
+.kscanx-feat-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 36px 0 24px;
+}
+.kscanx-feat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 14px; overflow: hidden;
+  margin-bottom: 10px;
+  min-height: 380px;
+}
+.kscanx-feat-row:nth-child(even) { direction: rtl; }
+.kscanx-feat-row:nth-child(even) > * { direction: ltr; }
+.kscanx-feat-body {
+  padding: 42px 46px;
+  background: #14263C; color: #fff;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.kscanx-feat-row:nth-child(even) .kscanx-feat-body {
+  background: #F5F5F5; color: #222;
+}
+.kscanx-feat-body h3 {
+  font-size: clamp(18px, 2.4vw, 24px); font-weight: 800;
+  margin-bottom: 16px; line-height: 1.25;
+}
+.kscanx-feat-row:nth-child(odd) .kscanx-feat-body h3 { color: #A0BF30; }
+.kscanx-feat-row:nth-child(even) .kscanx-feat-body h3 { color: #14263C; }
+.kscanx-feat-body p {
+  font-size: 14px; line-height: 1.8; opacity: .9;
+}
+.kscanx-feat-stats {
+  margin-top: 20px; display: flex; flex-direction: column; gap: 7px;
+}
+.kscanx-feat-stat {
+  font-size: 13px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.45;
+}
+.kscanx-feat-stat::before {
+  content: '—'; color: #A0BF30; font-weight: 700; flex-shrink: 0;
+}
+.kscanx-feat-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  min-height: 380px;
+}
+
+/* ----- 5. SCAN MODES ----- */
+.kscanx-modes-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 900;
+  color: #0e0a2e; padding: 36px 0 22px;
+}
+.kscanx-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.kscanx-mode-card {
+  border-radius: 12px; overflow: hidden; position: relative;
+}
+.kscanx-mode-card img {
+  width: 100%; height: 290px; object-fit: cover; display: block;
+  transition: transform .4s;
+}
+.kscanx-mode-card:hover img { transform: scale(1.05); }
+.kscanx-mode-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 14px 16px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,.84) 0%, transparent 60%);
+  color: #fff; font-size: 13.5px; font-weight: 700;
+}
+
+/* ----- 6. WIRELESS & SPEED ----- */
+.kscanx-wireless-hero {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin-bottom: 10px;
+}
+.kscanx-wireless-hero img {
+  width: 100%; height: 460px; object-fit: cover; display: block;
+}
+.kscanx-wireless-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,5,40,.86) 44%, transparent 80%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 44px 56px;
+}
+.kscanx-wireless-hero-overlay h2 {
+  font-size: clamp(24px, 3.8vw, 42px); font-weight: 900; color: #fff;
+  max-width: 440px; line-height: 1.1; margin-bottom: 16px;
+}
+.kscanx-wireless-hero-overlay p {
+  font-size: 14px; color: rgba(255,255,255,.8); max-width: 400px; line-height: 1.7;
+}
+
+/* Speed stats row */
+.kscanx-speed-section {
+  margin-bottom: 10px;
+}
+.kscanx-speed-banner {
+  position: relative; border-radius: 14px; overflow: hidden; margin-bottom: 10px;
+}
+.kscanx-speed-banner img.bg {
+  width: 100%; height: 380px; object-fit: cover; display: block;
+}
+.kscanx-speed-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,5,40,.90) 46%, transparent 84%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 44px 56px;
+}
+.kscanx-speed-overlay h2 {
+  font-size: clamp(22px, 3.4vw, 36px); font-weight: 900; color: #fff;
+  margin-bottom: 14px; max-width: 440px; line-height: 1.15;
+}
+.kscanx-speed-overlay p {
+  font-size: 14px; color: rgba(255,255,255,.82); max-width: 420px; line-height: 1.7;
+  margin-bottom: 28px;
+}
+.kscanx-stats-row {
+  display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+}
+.kscanx-stat-item {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.kscanx-stat-val {
+  font-size: clamp(18px, 2.6vw, 26px); font-weight: 900; color: #A0BF30; line-height: 1;
+}
+.kscanx-stat-lbl {
+  font-size: 11.5px; color: rgba(255,255,255,.72); letter-spacing: .5px;
+}
+.kscanx-stat-divider {
+  width: 1px; height: 44px; background: rgba(255,255,255,.2);
+}
+
+/* Fewer Markers card */
+.kscanx-fewer-card {
+  display: grid; grid-template-columns: 2fr 1fr;
+  border-radius: 12px; overflow: hidden; min-height: 200px;
+  margin-bottom: 20px;
+}
+.kscanx-fewer-body {
+  background: #14263C; color: #fff;
+  padding: 36px 42px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.kscanx-fewer-body h3 {
+  font-size: clamp(18px, 2.4vw, 24px); font-weight: 800; color: #A0BF30;
+  margin-bottom: 12px;
+}
+.kscanx-fewer-body p {
+  font-size: 14px; line-height: 1.8; opacity: .88;
+}
+.kscanx-fewer-card img {
+  width: 100%; height: 100%; object-fit: cover; display: block; min-height: 200px;
+}
+
+/* ----- 7. INTUITIVE ----- */
+.kscanx-intuitive {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin: 10px 0 20px;
+}
+.kscanx-intuitive img.bg {
+  width: 100%; height: 440px; object-fit: cover; display: block;
+}
+.kscanx-intuitive-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(5,3,20,.62) 0%, rgba(15,10,40,.90) 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 36px;
+  text-align: center;
+}
+.kscanx-intuitive-overlay h2 {
+  font-size: clamp(24px, 3.8vw, 38px); font-weight: 900; color: #fff;
+  margin-bottom: 36px;
+}
+.kscanx-icons-row {
+  display: flex; gap: 42px; align-items: center; justify-content: center;
+}
+.kscanx-icon-item {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.kscanx-icon-item img {
+  width: 58px; height: 58px; object-fit: contain;
+  background: rgba(255,255,255,.14); border-radius: 14px; padding: 12px;
+}
+.kscanx-icon-item span {
+  font-size: 13px; color: rgba(255,255,255,.9); text-align: center; line-height: 1.4;
+}
+
+/* ----- 8. SPECS ----- */
+.kscanx-specs { padding: 40px 0 20px; }
+.kscanx-specs-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  margin-bottom: 28px;
+}
+.kscanx-specs table {
+  width: 100%; border-collapse: collapse; font-size: 13.5px;
+}
+.kscanx-specs table th,
+.kscanx-specs table td {
+  padding: 11px 16px; border: 1px solid #e2e2e2; vertical-align: top;
+  text-align: left; line-height: 1.55;
+}
+.kscanx-specs table tbody tr:nth-child(even) { background: #f8f8f8; }
+.kscanx-specs table tbody tr:first-child td {
+  background: #14263C; color: #fff; font-weight: 700;
+}
+.kscanx-specs table td:first-child { font-weight: 600; color: #333; }
+.kscanx-specs-note {
+  font-size: 12px; color: #888; line-height: 1.65; padding: 16px 4px 0;
+}
+
+/* ----- 9. APPLICATIONS ----- */
+.kscanx-apps-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 36px 0 24px;
+}
+.kscanx-apps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.kscanx-app-card {
+  border-radius: 12px; overflow: hidden; position: relative;
+}
+.kscanx-app-card img {
+  width: 100%; height: 220px; object-fit: cover; display: block;
+  transition: transform .42s;
+}
+.kscanx-app-card:hover img { transform: scale(1.045); }
+.kscanx-app-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 12px 16px 15px;
+  background: linear-gradient(to top, rgba(0,0,0,.84) 0%, transparent 60%);
+  color: #fff; font-size: 14px; font-weight: 700;
+}
+
+/* ----- 10. SOFTWARE ----- */
+.kscanx-software {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin: 10px 0 10px;
+}
+.kscanx-software img.bg {
+  width: 100%; height: 420px; object-fit: cover; display: block;
+}
+.kscanx-software-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,5,40,.92) 0%, rgba(20,38,60,.70) 55%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 48px 56px;
+}
+.kscanx-software-overlay img.icon {
+  height: 44px; max-width: 170px; object-fit: contain; margin-bottom: 20px;
+}
+.kscanx-software-overlay h2 {
+  font-size: clamp(20px, 3vw, 28px); font-weight: 900; color: #fff;
+  margin-bottom: 14px; max-width: 460px; line-height: 1.2;
+}
+.kscanx-software-overlay p {
+  font-size: 14px; color: rgba(255,255,255,.83); max-width: 450px; line-height: 1.75;
+  margin-bottom: 24px;
+}
+.kscanx-software-partners { display: flex; gap: 14px; flex-wrap: wrap; }
+.kscanx-software-partners img {
+  height: 36px; object-fit: contain;
+  background: rgba(255,255,255,.12); border-radius: 6px; padding: 7px 12px;
+}
+
+/* ----- 11. CTA ----- */
+.kscanx-cta {
+  position: relative; border-radius: 14px; overflow: hidden; margin: 10px 0 32px;
+}
+.kscanx-cta img.bg {
+  width: 100%; height: 320px; object-fit: cover; display: block;
+}
+.kscanx-cta-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,5,40,.92) 46%, transparent 86%);
+  display: flex; flex-direction: column; justify-content: center; padding: 46px 58px;
+}
+.kscanx-cta-overlay h2 {
+  font-size: clamp(22px, 3.4vw, 34px); font-weight: 900; color: #fff;
+  margin-bottom: 12px; max-width: 420px; line-height: 1.15;
+}
+.kscanx-cta-overlay p {
+  font-size: 14px; color: rgba(255,255,255,.78); max-width: 380px;
+  line-height: 1.7; margin-bottom: 26px;
+}
+.kscanx-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.kscanx-btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #A0BF30; color: #0e0a2e; border: none;
+  padding: 13px 26px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  text-decoration: none; transition: all .25s;
+}
+.kscanx-btn-primary:hover { background: #b8d845; transform: translateY(-2px); }
+.kscanx-btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.55);
+  padding: 13px 26px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  text-decoration: none; transition: all .25s;
+}
+.kscanx-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 900px) {
+  .kscanx-wide-banner img { height: 380px; }
+  .kscanx-hl-card img { height: 320px; }
+  .kscanx-wireless-hero img,
+  .kscanx-speed-banner img.bg { height: 360px; }
+  .kscanx-software img.bg { height: 360px; }
+}
+@media (max-width: 768px) {
+  .kscanx-hl-grid { grid-template-columns: 1fr; }
+  .kscanx-hl-card img { height: 280px; }
+  .kscanx-wide-banner img { height: 300px; }
+  .kscanx-feat-row { grid-template-columns: 1fr; direction: ltr !important; }
+  .kscanx-feat-img img { min-height: 220px; height: 220px; }
+  .kscanx-modes-grid { grid-template-columns: 1fr 1fr; }
+  .kscanx-fewer-card { grid-template-columns: 1fr; }
+  .kscanx-fewer-card img { min-height: 180px; height: 180px; }
+  .kscanx-icons-row { flex-wrap: wrap; gap: 22px; }
+  .kscanx-apps-grid { grid-template-columns: 1fr 1fr; }
+  .kscanx-hero-overlay { padding: 24px 24px; }
+  .kscanx-wireless-hero-overlay { padding: 24px 28px; }
+  .kscanx-speed-overlay { padding: 24px 28px; }
+  .kscanx-cta-overlay { padding: 28px 30px; }
+  .kscanx-software-overlay { padding: 28px 30px; }
+  .kscanx-wide-overlay { padding: 24px 28px; }
+}
+@media (max-width: 480px) {
+  .kscanx-modes-grid { grid-template-columns: 1fr; }
+  .kscanx-apps-grid { grid-template-columns: 1fr; }
+  .kscanx-hero-badge { display: none; }
+  .kscanx-stats-row { gap: 18px; }
+  .kscanx-stat-divider { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="kscanx-page">
+
+  <!-- ===== 1. HERO ===== -->
+  <div class="kscanx-hero">
+    <iframe
+      src="https://www.youtube.com/embed/mURR71caSeY?autoplay=1&mute=1&controls=0&loop=1&playlist=mURR71caSeY&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      title="KSCAN-X Scanner 3D de Grande Área"
+    ></iframe>
+    <div class="kscanx-hero-overlay">
+      <span class="kscanx-hero-tag">Scanner 3D Grande Área • Sem Fio</span>
+      <div class="kscanx-hero-model">KSCAN-X</div>
+      <div class="kscanx-hero-sub">Visão Ilimitada, Precisão Incomparável — o Scanner 3D Inteligente e Sem Fio para Grandes Peças</div>
+      <img
+        class="kscanx-hero-logo"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_hero_logo.png"
+        alt="Boundless Vision, Unmatched Accuracy"
+      />
+    </div>
+    <div class="kscanx-hero-badge">
+      <div class="kscanx-hero-badge-val">0,030 mm</div>
+      <div class="kscanx-hero-badge-lbl">PRECISÃO</div>
+    </div>
+  </div>
+
+  <!-- ===== 2. INTRO ===== -->
+  <div class="kscanx-intro">
+    <h2>O KSCAN-X é o Scanner 3D Sem Fio para grandes peças — com área de varredura de até 2,6 m × 1,8 m e profundidade de campo de 0,3 a 2,5 m para escaneamento preciso em qualquer escala.</h2>
+    <p>Do automotivo ao aeroespacial, de peças médias a componentes ultragrandes, o KSCAN-X combina tecnologia Quad-Cross, fotogrametria adaptativa e total mobilidade sem fio para elevar a eficiência e a precisão da inspeção 3D industrial.</p>
+  </div>
+
+  <!-- ===== 3. WIDE BANNER + HIGHLIGHT GRID ===== -->
+  <div class="kscanx-mk1" id="highlights">
+
+    <!-- Full-width Wide Area banner -->
+    <div class="kscanx-wide-banner">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_wide_banner.jpg" alt="Varredura de Grande Área com Precisão Excepcional" loading="lazy"/>
+      <div class="kscanx-wide-overlay">
+        <h2>Varredura de Grande Área com Precisão Excepcional</h2>
+        <p>Desenvolvido com algoritmos proprietários de última geração, o KSCAN-X oferece uma área de varredura de até 2,6 m × 1,8 m — ideal para peças ultragrandes que exigem máxima cobertura em uma única passagem.</p>
+      </div>
+    </div>
+
+    <!-- Two highlight cards -->
+    <div class="kscanx-hl-grid">
+      <div class="kscanx-hl-card">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_hl_area.webp" alt="Área de Varredura Ultragrande" loading="lazy"/>
+        <div class="kscanx-hl-caption">
+          <h3>Área de Varredura Ultragrande</h3>
+          <p>Até 2.600 mm × 1.800 mm em uma única captura — cobertura máxima para peças de grande porte.</p>
+        </div>
+      </div>
+      <div class="kscanx-hl-card">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_hl_dof.webp" alt="Profundidade de Campo Ultragrande" loading="lazy"/>
+        <div class="kscanx-hl-caption">
+          <h3>Profundidade de Campo Ultragrande</h3>
+          <p>Distância de trabalho de 0,3 a 2,5 m — escaneia peças médias e ultragrandes com facilidade e eficiência.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 4. FEATURES ===== -->
+  <div class="kscanx-features" id="features">
+    <div class="kscanx-feat-title">Desempenho Projetado para a Grande Escala Industrial</div>
+
+    <!-- Feature 1 — Área Ultragrande -->
+    <div class="kscanx-feat-row">
+      <div class="kscanx-feat-body">
+        <h3>Área de Varredura Ultragrande</h3>
+        <p>Desenvolvido com algoritmos proprietários altamente sofisticados, o KSCAN-X de alta precisão oferece uma área de varredura de até 2,6 m × 1,8 m. Ideal para o escaneamento de peças ultragrandes com alta eficiência e redução do número de passagens necessárias.</p>
+        <div class="kscanx-feat-stats">
+          <span class="kscanx-feat-stat">Área de varredura de até 2.600 mm × 1.800 mm</span>
+          <span class="kscanx-feat-stat">Objetos de 0,5 m até 15 m</span>
+          <span class="kscanx-feat-stat">84 linhas laser azuis no modo Grande FOV</span>
+        </div>
+      </div>
+      <div class="kscanx-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_mode_large.webp" alt="Área de Varredura Ultragrande" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 2 — Profundidade de Campo -->
+    <div class="kscanx-feat-row">
+      <div class="kscanx-feat-body">
+        <h3>Profundidade de Campo Ultragrande</h3>
+        <p>Com uma ampla profundidade de campo de 0,3 a 2,5 m, o KSCAN-X garante medições precisas tanto para peças médias quanto para componentes ultragrandes com qualidade excepcional. A distância de trabalho flexível torna o escaneamento de peças de diferentes tamanhos mais fácil e eficiente.</p>
+        <div class="kscanx-feat-stats">
+          <span class="kscanx-feat-stat">Distância de trabalho de 0,30 m a 2,50 m</span>
+          <span class="kscanx-feat-stat">54 linhas laser azuis no modo Média Distância</span>
+          <span class="kscanx-feat-stat">Precisão de até 0,030 mm (modo média distância)</span>
+        </div>
+      </div>
+      <div class="kscanx-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_hl_dof.webp" alt="Profundidade de Campo Ultragrande" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 3 — Fotogrametria Adaptativa -->
+    <div class="kscanx-feat-row">
+      <div class="kscanx-feat-body">
+        <h3>Fotogrametria Adaptativa</h3>
+        <p>Com um sistema avançado de fotogrametria adaptativa, o KSCAN-X assegura precisão excepcional em longas distâncias. Elimina erros acumulativos e garante precisão volumétrica consistente, entregando resultados de alta precisão tanto em grandes superfícies quanto em detalhes finos — mesmo em ambientes desafiadores.</p>
+        <div class="kscanx-feat-stats">
+          <span class="kscanx-feat-stat">Precisão volumétrica: 0,075 mm + 0,010 mm/m</span>
+          <span class="kscanx-feat-stat">Elimina erros acumulativos em objetos longos</span>
+          <span class="kscanx-feat-stat">Ideal para inspeção de fuselagem, carrocerias e estruturas</span>
+        </div>
+      </div>
+      <div class="kscanx-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_mode_photo.webp" alt="Fotogrametria Adaptativa" loading="lazy"/>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 5. SCAN MODES ===== -->
+  <div class="kscanx-modes-title">Modos de Varredura para Qualquer Cenário</div>
+  <div class="kscanx-modes-grid">
+    <div class="kscanx-mode-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_mode_large.webp" alt="Peças Ultragrandes" loading="lazy"/>
+      <div class="kscanx-mode-label">Peças Ultragrandes (Grande FOV)</div>
+    </div>
+    <div class="kscanx-mode-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_mode_photo.webp" alt="Fotogrametria Adaptativa" loading="lazy"/>
+      <div class="kscanx-mode-label">Fotogrametria Adaptativa</div>
+    </div>
+    <div class="kscanx-mode-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_mode_medium.webp" alt="Peças Médias a Grandes" loading="lazy"/>
+      <div class="kscanx-mode-label">Peças Médias a Grandes</div>
+    </div>
+    <div class="kscanx-mode-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_mode_hole.webp" alt="Furos Profundos" loading="lazy"/>
+      <div class="kscanx-mode-label">Furos Profundos</div>
+    </div>
+  </div>
+
+  <!-- ===== 6. FULLY WIRELESS ===== -->
+  <div class="kscanx-wireless-hero">
+    <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_wireless_bg.webp" alt="Totalmente Sem Fio" loading="lazy"/>
+    <div class="kscanx-wireless-hero-overlay">
+      <h2>Totalmente Sem Fio</h2>
+      <p>Experimente total liberdade na medição 3D. No laboratório, na oficina ou em campo aberto, o KSCAN-X oferece mobilidade completa — sem cabos, sem restrições, com a mesma precisão de sempre.</p>
+    </div>
+  </div>
+
+  <!-- Speed section -->
+  <div class="kscanx-speed-section">
+    <div class="kscanx-speed-banner">
+      <img class="bg" src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_faster_bg.webp" alt="Mais Rápido e Mais Fluido" loading="lazy"/>
+      <div class="kscanx-speed-overlay">
+        <h2>Mais Rápido &amp; Mais Fluido</h2>
+        <p>Impulsionado pela inovadora tecnologia Quad-Cross de laser azul e um chip de processamento de alta taxa de quadros, o KSCAN-X representa um grande salto em eficiência de medição. Entrega resultados rápidos e precisos para grandes peças mesmo em ambientes exigentes.</p>
+        <div class="kscanx-stats-row">
+          <div class="kscanx-stat-item">
+            <span class="kscanx-stat-val">6.450.000</span>
+            <span class="kscanx-stat-lbl">Medições/segundo (máx.)</span>
+          </div>
+          <div class="kscanx-stat-divider"></div>
+          <div class="kscanx-stat-item">
+            <span class="kscanx-stat-val">180 FPS</span>
+            <span class="kscanx-stat-lbl">Alta taxa de quadros</span>
+          </div>
+          <div class="kscanx-stat-divider"></div>
+          <div class="kscanx-stat-item">
+            <span class="kscanx-stat-val">4×21</span>
+            <span class="kscanx-stat-lbl">Linhas laser azuis Quad-Cross</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fewer markers card -->
+    <div class="kscanx-fewer-card">
+      <div class="kscanx-fewer-body">
+        <h3>Menos Marcadores, Mais Eficiência</h3>
+        <p>A tecnologia Quad-Cross de alta densidade permite reduzir significativamente a quantidade de marcadores necessários durante o escaneamento. Isso resulta em um fluxo de trabalho mais suave, rápido e econômico — sem comprometer a precisão dos resultados finais.</p>
+      </div>
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_fewer_markers.webp" alt="Menos Marcadores" loading="lazy"/>
+    </div>
+  </div>
+
+  <!-- ===== 7. INTUITIVE & ADAPTIVE ===== -->
+  <div class="kscanx-intuitive">
+    <img class="bg" src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_intuitive_bg.webp" alt="Intuitivo e Adaptável" loading="lazy"/>
+    <div class="kscanx-intuitive-overlay">
+      <h2>Intuitivo &amp; Adaptável</h2>
+      <div class="kscanx-icons-row">
+        <div class="kscanx-icon-item">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_icon_touchscreen.webp" alt="Touchscreen Integrado"/>
+          <span>Touchscreen<br/>Integrado</span>
+        </div>
+        <div class="kscanx-icon-item">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_icon_smartguidance.webp" alt="Guia Inteligente"/>
+          <span>Guia<br/>Inteligente</span>
+        </div>
+        <div class="kscanx-icon-item">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_icon_phoneholder.webp" alt="Suporte para Celular"/>
+          <span>Suporte para<br/>Celular</span>
+        </div>
+        <div class="kscanx-icon-item">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_icon_c1button.webp" alt="Botão C1 Personalizável"/>
+          <span>Botão C1<br/>Personalizável</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 8. SPECIFICATIONS ===== -->
+  <div class="kscanx-specs" id="specs">
+    <div class="kscanx-specs-title">Especificações Técnicas</div>
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="2"><strong>Modelo</strong></td>
+          <td><strong>KSCAN-X</strong></td>
+        </tr>
+        <tr>
+          <td rowspan="4">Modos de Varredura</td>
+          <td>Grande FOV</td>
+          <td>84 linhas laser azuis</td>
+        </tr>
+        <tr>
+          <td>Média Distância</td>
+          <td>54 linhas laser azuis</td>
+        </tr>
+        <tr>
+          <td>Furos Profundos</td>
+          <td>1 linha laser azul extra</td>
+        </tr>
+        <tr>
+          <td>Fotogrametria</td>
+          <td>Fotogrametria adaptativa</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Precisão <sup>(1)</sup></td>
+          <td>Modo Média Distância</td>
+          <td>0,030 mm</td>
+        </tr>
+        <tr>
+          <td>Modo Grande FOV</td>
+          <td>0,075 mm</td>
+        </tr>
+        <tr>
+          <td colspan="2">Precisão Volumétrica <sup>(1)(2)</sup></td>
+          <td>0,075 mm + 0,010 mm/m</td>
+        </tr>
+        <tr>
+          <td colspan="2">Velocidade de Medição (máx.)</td>
+          <td>6.450.000 pontos/s</td>
+        </tr>
+        <tr>
+          <td colspan="2">Área de Varredura (máx.)</td>
+          <td>2.600 mm × 1.800 mm</td>
+        </tr>
+        <tr>
+          <td colspan="2">Distância de Trabalho</td>
+          <td>0,30 m – 2,50 m</td>
+        </tr>
+        <tr>
+          <td colspan="2">Tamanho do Objeto</td>
+          <td>0,5 m – 15 m</td>
+        </tr>
+        <tr>
+          <td colspan="2">Classe de Laser</td>
+          <td>Classe II (seguro para os olhos)</td>
+        </tr>
+        <tr>
+          <td colspan="2">Resolução (máx.)</td>
+          <td>0,1 mm</td>
+        </tr>
+        <tr>
+          <td colspan="2">Dimensões</td>
+          <td>344 mm × 124 mm × 99 mm</td>
+        </tr>
+        <tr>
+          <td colspan="2">Distância Inter-câmeras</td>
+          <td>235 mm</td>
+        </tr>
+        <tr>
+          <td rowspan="5">Conectividade</td>
+          <td>Interface</td>
+          <td>USB 3.0 Tipo-B</td>
+        </tr>
+        <tr>
+          <td>Padrão Wireless</td>
+          <td>Wi-Fi 6 (802.11a/b/g/n/ac)</td>
+        </tr>
+        <tr>
+          <td>Conexão Sem Fio</td>
+          <td>Suporte Dual WNIC</td>
+        </tr>
+        <tr>
+          <td>Modo Inteligente Sem Fio</td>
+          <td>Suportado</td>
+        </tr>
+        <tr>
+          <td>Alimentação Ininterrupta</td>
+          <td>Suportado</td>
+        </tr>
+        <tr>
+          <td rowspan="4">Adaptabilidade Ambiental</td>
+          <td>Ambiente de Operação</td>
+          <td>Sem ventilador, adequado para chão de fábrica</td>
+        </tr>
+        <tr>
+          <td>Temperatura de Operação</td>
+          <td>-10°C – 40°C</td>
+        </tr>
+        <tr>
+          <td>Umidade de Operação</td>
+          <td>10–90% UR</td>
+        </tr>
+        <tr>
+          <td>Grau de Proteção</td>
+          <td>IP50</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="kscanx-specs-note">
+      (1) Homologado pela ISO 17025: Desempenho avaliado com base na especificação JJF1951 e na norma VDI/VDE 2634 Parte 3.<br>
+      (2) Pareado com barra de escala de alta precisão de 800 mm.<br>
+      * A empresa reserva o direito de interpretar e modificar os parâmetros e imagens deste manual dentro dos limites legais.
+    </div>
+  </div>
+
+  <!-- ===== 9. APPLICATIONS ===== -->
+  <div class="kscanx-apps-title" id="applications">Aplicações Diversas</div>
+  <div class="kscanx-apps-grid">
+    <div class="kscanx-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_aeroespacial.png" alt="Aeroespacial" loading="lazy"/>
+      <div class="kscanx-app-label">Aeroespacial</div>
+    </div>
+    <div class="kscanx-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_automotivo.png" alt="Automotivo" loading="lazy"/>
+      <div class="kscanx-app-label">Automotivo</div>
+    </div>
+    <div class="kscanx-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_moldes.png" alt="Moldes e Ferramentaria" loading="lazy"/>
+      <div class="kscanx-app-label">Moldes &amp; Ferramentaria</div>
+    </div>
+    <div class="kscanx-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_energia.png" alt="Energia e Indústria Pesada" loading="lazy"/>
+      <div class="kscanx-app-label">Energia &amp; Ind. Pesada</div>
+    </div>
+    <div class="kscanx-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_ferroviario.png" alt="Ferrovia e Naval" loading="lazy"/>
+      <div class="kscanx-app-label">Ferrovia &amp; Naval</div>
+    </div>
+    <div class="kscanx-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_outros.png" alt="Outros Setores" loading="lazy"/>
+      <div class="kscanx-app-label">Outros Setores</div>
+    </div>
+  </div>
+
+  <!-- ===== 10. SOFTWARE ===== -->
+  <div class="kscanx-software">
+    <img class="bg" src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_software_bg.webp" alt="DefinSight Software" loading="lazy"/>
+    <div class="kscanx-software-overlay">
+      <img class="icon" src="https://enterfix.com.br/wp-content/uploads/2026/03/kscane_definsight_icon.webp" alt="DefinSight"/>
+      <h2>Obtenha o Máximo da Digitalização 3D</h2>
+      <p>O DefinSight potencializa o KSCAN-X com sua plataforma metrológica all-in-one, habilitando digitalização 3D avançada e inspeção completa. Interface intuitiva, alta compatibilidade e processamento de dados eficiente trabalham em perfeita harmonia com o scanner para capturas mais rápidas, precisas e detalhadas.</p>
+      <div class="kscanx-software-partners">
+        <img src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" alt="Zeiss"/>
+        <img src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" alt="Geomagic"/>
+        <img src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" alt="PolyWorks"/>
+        <img src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" alt="Verisurf"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 11. CTA ===== -->
+  <div class="kscanx-cta">
+    <img class="bg" src="https://enterfix.com.br/wp-content/uploads/2026/03/kscanx_racecar_thumb.webp" alt="Solicite uma Demonstração do KSCAN-X" loading="lazy"/>
+    <div class="kscanx-cta-overlay">
+      <h2>Pronto para Escanear na Grande Escala?</h2>
+      <p>Fale com nossos especialistas e descubra como o KSCAN-X pode transformar a inspeção de peças grandes e ultragrandes na sua operação.</p>
+      <div class="kscanx-cta-btns">
+        <a class="kscanx-btn-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Falar com Especialista
+        </a>
+        <a class="kscanx-btn-outline" href="https://lp.enterfix.com.br/catalogo-kscan-x" target="_blank" rel="noopener">
+          <i class="fa fa-download"></i> Baixar Catálogo
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<style>
+/* ─────────────────────────────────────────────
+   PREFIX: .simsg2  |  SIMSCAN-S Gen2 — Enterfix
+   Replica estrutural da página 3d-scantech.com
+   Estrutura idêntica ao SIMSCAN-E (.simse)
+───────────────────────────────────────────── */
+.simsg2{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+.simsg2 *{box-sizing:border-box}
+
+/* ── ANIMAÇÕES ── */
+@keyframes simsg2-fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.simsg2-anim{animation:simsg2-fadeUp .7s ease both}
+.simsg2-anim-d1{animation-delay:.1s}.simsg2-anim-d2{animation-delay:.25s}.simsg2-anim-d3{animation-delay:.4s}
+.simsg2-anim-d4{animation-delay:.55s}.simsg2-anim-d5{animation-delay:.7s}.simsg2-anim-d6{animation-delay:.85s}
+
+/* ── HERO ── */
+.simsg2-hero{position:relative;background:#0a0f2e;border-radius:14px;overflow:hidden;margin-bottom:22px;min-height:420px;display:flex;align-items:flex-end}
+.simsg2-hero-video{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;opacity:.38}
+.simsg2-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(10,15,46,.92) 0%,transparent 65%);width:100%}
+.simsg2-hero-tag{display:inline-block;background:rgba(160,191,48,.2);border:1px solid rgba(160,191,48,.5);border-radius:50px;padding:3px 14px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#c8e05a;margin-bottom:12px}
+.simsg2-hero-title{font-size:26px;font-weight:900;color:#fff;margin:0 0 8px;line-height:1.25;max-width:600px}
+.simsg2-hero-sub{font-size:13px;color:rgba(255,255,255,.8);margin:6px 0 18px;max-width:640px}
+.simsg2-hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.simsg2-hero-btn-blue{display:inline-block;padding:10px 22px;border-radius:6px;background:#A0BF30;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none}
+.simsg2-hero-btn-outline{display:inline-block;padding:10px 22px;border-radius:6px;background:transparent;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.45)}
+.simsg2-hero-product-img{position:absolute;right:24px;bottom:0;max-height:90%;width:auto;max-width:320px;z-index:3;object-fit:contain}
+
+/* ── HIGHLIGHTS ── */
+.simsg2-prodes{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.simsg2-prodes h1{font-size:17px;font-weight:800;color:#1F1659;text-align:center;margin:0 0 18px}
+.simsg2-slides{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.simsg2-slide-img{width:100%;border-radius:10px;display:block;object-fit:cover;max-height:240px}
+.simsg2-desc-text{font-size:14px;color:#334155;line-height:1.75;margin:0 0 10px}
+.simsg2-key-feats{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.simsg2-key-feat{background:#f4f8e8;border:1px solid #c8dc82;border-radius:20px;padding:4px 12px;font-size:12.5px;color:#5a7200;font-weight:600}
+
+/* ── SYSTEM OVERVIEW ── */
+.simsg2-system{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.simsg2-system-inner{display:grid;grid-template-columns:1fr 1fr}
+.simsg2-system-photo{width:100%;height:100%;object-fit:cover;display:block;min-height:260px}
+.simsg2-system-icons{padding:28px 24px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-content:center}
+.simsg2-spec-icon{text-align:center}
+.simsg2-spec-icon img{width:56px;height:56px;object-fit:contain;display:block;margin:0 auto 7px}
+.simsg2-spec-icon p{font-size:11.5px;font-weight:700;color:#1F1659;margin:0;line-height:1.4}
+.simsg2-cta-bar{background:linear-gradient(135deg,#161144,#1F1659);color:#fff;text-align:center;padding:20px 24px}
+.simsg2-cta-bar h3{font-size:15px;font-weight:800;margin:0 0 10px}
+.simsg2-cta-bar-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.simsg2-cta-bar a{display:inline-block;padding:9px 20px;border-radius:6px;font-size:13.5px;font-weight:700;text-decoration:none}
+.simsg2-cta-bar-primary{background:#fff;color:#1F1659}
+.simsg2-cta-bar-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+
+/* ── FEATURE SECTIONS ── */
+.simsg2-features-wrap{margin-bottom:16px}
+.simsg2-feature{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:12px}
+.simsg2-feature.rev{direction:rtl}
+.simsg2-feature.rev > *{direction:ltr}
+.simsg2-feature-img{width:100%;height:100%;object-fit:cover;min-height:240px;display:block}
+.simsg2-feature-body{padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.simsg2-feature-body h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 12px}
+.simsg2-feature-body h3{font-size:13px;font-weight:700;color:#A0BF30;margin:0 0 10px}
+.simsg2-feature-body ul{margin:0;padding-left:18px}
+.simsg2-feature-body li{font-size:13.5px;color:#334155;line-height:1.65;margin-bottom:5px}
+.simsg2-feature-body li strong{color:#1e293b}
+.simsg2-feature-body p{font-size:13px;color:#475569;margin:0 0 6px}
+
+/* ── MODOS DE OPERAÇÃO ── */
+.simsg2-modes{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.simsg2-modes-header{background:linear-gradient(135deg,#1F1659,#14263C);color:#fff;padding:20px 28px;text-align:center}
+.simsg2-modes-header h2{font-size:16px;font-weight:800;margin:0 0 4px;color:#fff}
+.simsg2-modes-header p{font-size:13px;opacity:.8;margin:0}
+.simsg2-modes-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.simsg2-mode-card{border-right:1px solid #e2e8f0;overflow:hidden}
+.simsg2-mode-card:last-child{border-right:none}
+.simsg2-mode-card img{width:100%;height:180px;object-fit:cover;display:block}
+.simsg2-mode-card-body{padding:16px}
+.simsg2-mode-card-body h3{font-size:13.5px;font-weight:800;color:#1F1659;margin:0 0 6px}
+.simsg2-mode-card-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.55}
+.simsg2-mode-badge{display:inline-block;background:#A0BF30;color:#fff;font-size:11px;font-weight:700;border-radius:20px;padding:2px 10px;margin-bottom:6px}
+
+/* ── VÍDEO ── */
+.simsg2-video-wrap{background:linear-gradient(135deg,#1F1659,#14263C);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.simsg2-video-wrap h2{font-size:16px;font-weight:800;color:#fff;text-align:center;margin:0 0 18px}
+.simsg2-iframe-wrap{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.simsg2-iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── CARDS ── */
+.simsg2-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.simsg2-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+
+/* ── TABELA ── */
+.simsg2-tbl-wrap{overflow-x:auto}
+.simsg2-tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}
+.simsg2-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:11.5px;font-weight:700}
+.simsg2-tbl th:first-child{border-radius:6px 0 0 0}
+.simsg2-tbl th:last-child{border-radius:0 6px 0 0}
+.simsg2-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.simsg2-tbl tr:nth-child(even) td{background:#f8fafc}
+.simsg2-tbl tr:last-child td{border-bottom:none}
+.simsg2-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+.simsg2-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+.simsg2-alert-amber{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #d97706;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#92400e;margin:14px 0 0;line-height:1.6}
+
+/* ── APLICAÇÕES ── */
+.simsg2-apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:12px 0}
+.simsg2-app{border-radius:10px;overflow:hidden;border:1px solid #e2e8f0}
+.simsg2-app img{width:100%;height:160px;object-fit:cover;display:block}
+.simsg2-app-body{padding:12px 14px;background:#fff}
+.simsg2-app-body h3{font-size:13.5px;font-weight:700;color:#1F1659;margin:0 0 5px}
+.simsg2-app-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.55}
+
+/* ── SOFTWARES ── */
+.simsg2-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:22px 28px;margin-bottom:16px}
+.simsg2-soft h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.simsg2-soft-definsight{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin-bottom:18px;background:#fff;border-radius:10px;border:1px solid #e2e8f0;padding:18px 20px}
+.simsg2-soft-definsight img.icon{width:56px;height:56px;object-fit:contain}
+.simsg2-soft-definsight-body h3{font-size:14px;font-weight:800;color:#1F1659;margin:0 0 5px}
+.simsg2-soft-definsight-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.5}
+.simsg2-soft-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;margin-top:12px}
+.simsg2-soft-logos img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+/* ── CTA FINAL ── */
+.simsg2-cta{background:linear-gradient(135deg,#161144,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.simsg2-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.simsg2-cta strong{color:#fff}
+.simsg2-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.simsg2-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.simsg2-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+
+@media(max-width:700px){
+  .simsg2-slides,.simsg2-system-inner,.simsg2-feature,.simsg2-feature.rev,.simsg2-modes-grid{grid-template-columns:1fr;direction:ltr}
+  .simsg2-feature.rev>*{direction:ltr}
+  .simsg2-mode-card{border-right:none;border-bottom:1px solid #e2e8f0}
+  .simsg2-mode-card:last-child{border-bottom:none}
+  .simsg2-hero-product-img{display:none}
+  .simsg2-prodes,.simsg2-card,.simsg2-soft,.simsg2-video-wrap,.simsg2-cta{padding:20px 16px}
+  .simsg2-soft-logos{grid-template-columns:repeat(2,1fr)}
+  .simsg2-soft-definsight{grid-template-columns:1fr}
+}
+@media(max-width:440px){
+  .simsg2-system-icons{grid-template-columns:1fr 1fr}
+  .simsg2-soft-logos{grid-template-columns:1fr}
+  .simsg2-soft-definsight img.icon{display:none}
+}
+</style>
+
+<div class="simsg2">
+
+  <!-- ══════════════════════════════════════════════
+       HERO — vídeo de fundo + imagem do produto
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-hero">
+    <iframe class="simsg2-hero-video"
+      src="https://www.youtube.com/embed/lFoIb0y2LTs?autoplay=1&mute=1&loop=1&playlist=lFoIb0y2LTs&controls=0&showinfo=0&modestbranding=1&rel=0"
+      allow="autoplay;encrypted-media" allowfullscreen loading="lazy" title="SIMSCAN-S Gen2 Scanner 3D Super Alta Precisão"></iframe>
+    <img class="simsg2-hero-product-img"
+      src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_produto.png"
+      alt="SIMSCAN-S Gen2 Scanner 3D" />
+    <div class="simsg2-hero-overlay">
+      <div class="simsg2-hero-tag">🔵 Scanner 3D Compacto — Super Alta Precisão</div>
+      <h1 class="simsg2-hero-title simsg2-anim simsg2-anim-d1">SIMSCAN-S Gen2<br>Super Alta Precisão na Palma da Mão</h1>
+      <p class="simsg2-hero-sub simsg2-anim simsg2-anim-d2">
+        Precisão de 0,015 mm · 126 linhas de laser azul · 8,1 milhões de medições por segundo · 560 g · Wi-Fi 6 nativo com edge computing
+      </p>
+      <div class="simsg2-hero-btns simsg2-anim simsg2-anim-d3">
+        <a class="simsg2-hero-btn-blue" href="https://www.youtube.com/watch?v=lFoIb0y2LTs" target="_blank" rel="noopener">▶ Assistir Vídeo</a>
+        <a class="simsg2-hero-btn-outline" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Demo Gratuita</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HIGHLIGHTS — descrição + banners
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-prodes simsg2-anim">
+    <h1>SIMSCAN-S Gen2: Confiança em Cada Superfície Crítica</h1>
+    <div class="simsg2-slides">
+      <img class="simsg2-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_accuracy.jpg"
+        alt="SIMSCAN-S Gen2 — Precisão 0,015 mm" />
+      <img class="simsg2-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_speed.png"
+        alt="SIMSCAN-S Gen2 — 126 Linhas de Laser e Alta Velocidade" />
+    </div>
+    <p class="simsg2-desc-text">
+      O <strong>SIMSCAN-S Gen2</strong> é um scanner 3D compacto de bolso com super alta precisão que eleva o padrão de digitalização industrial.
+      Com <strong>126 linhas de laser azul</strong> distribuídas em três modos de operação, <strong>Wi-Fi 6 nativo</strong> e computação de borda embarcada,
+      entrega precisão de até <strong>0,015 mm</strong> e taxa de digitalização de até <strong>8,1 milhões de medições por segundo</strong> —
+      tudo em apenas <strong>560 g</strong>. O controle de esfericidade (0,025 mm) e planeza (0,035 mm) em conformidade com ISO 10360-13
+      confere resultados verificáveis para fabricação de alta tolerância em aeronáutica, automotiva e usinagem de precisão.
+    </p>
+    <div class="simsg2-key-feats">
+      <span class="simsg2-key-feat">0,015 mm de Precisão</span>
+      <span class="simsg2-key-feat">126 Linhas Laser Azul</span>
+      <span class="simsg2-key-feat">8,1M Medições/s</span>
+      <span class="simsg2-key-feat">180 FPS</span>
+      <span class="simsg2-key-feat">Wi-Fi 6 Nativo</span>
+      <span class="simsg2-key-feat">560 g</span>
+      <span class="simsg2-key-feat">3 Modos de Operação</span>
+      <span class="simsg2-key-feat">ISO 10360-13</span>
+      <span class="simsg2-key-feat">Fotogrametria Adaptativa</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SYSTEM OVERVIEW — foto + ícones de spec
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-system simsg2-anim simsg2-anim-d1">
+    <div class="simsg2-system-inner">
+      <img class="simsg2-system-photo" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_compact.jpg"
+        alt="SIMSCAN-S Gen2 — Design Compacto e Ergonômico" />
+      <div class="simsg2-system-icons">
+        <div class="simsg2-spec-icon simsg2-anim simsg2-anim-d1">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_icon_accuracy.webp" alt="Precisão 0,015 mm" loading="lazy"/>
+          <p>0,015 mm<br>Precisão</p>
+        </div>
+        <div class="simsg2-spec-icon simsg2-anim simsg2-anim-d2">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_icon_iso.webp" alt="ISO 10360-13" loading="lazy"/>
+          <p>ISO 10360-13<br>Certificado</p>
+        </div>
+        <div class="simsg2-spec-icon simsg2-anim simsg2-anim-d3">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_icon_sphericity.webp" alt="Esfericidade 0,025 mm" loading="lazy"/>
+          <p>0,025 mm<br>Esfericidade</p>
+        </div>
+        <div class="simsg2-spec-icon simsg2-anim simsg2-anim-d4">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_icon_flatness.webp" alt="Planeza 0,035 mm" loading="lazy"/>
+          <p>0,035 mm<br>Planeza</p>
+        </div>
+      </div>
+    </div>
+    <div class="simsg2-cta-bar">
+      <h3>Experimente o Desempenho do SIMSCAN-S Gen2</h3>
+      <div class="simsg2-cta-bar-btns">
+        <a class="simsg2-cta-bar-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Fale Conosco</a>
+        <a class="simsg2-cta-bar-secondary" href="https://lp.enterfix.com.br/catalogo-simscan-s-gen2" target="_blank" rel="noopener">📄 Baixar Catálogo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       FEATURES — 6 seções alternadas imagem+texto
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-features-wrap">
+
+    <!-- 1. Precisão Superior (imagem à esquerda) -->
+    <div class="simsg2-feature simsg2-anim simsg2-anim-d1">
+      <img class="simsg2-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_accuracy.jpg"
+        alt="Da Medição Precisa à Geometria Garantida" />
+      <div class="simsg2-feature-body">
+        <h2>Da Medição Precisa à Geometria Garantida</h2>
+        <h3>Precisão Básica de 0,015 mm</h3>
+        <ul>
+          <li><strong>Precisão de 0,015 mm:</strong> Óptica aprimorada e algoritmos avançados garantem captura dimensional de altíssima exatidão</li>
+          <li><strong>Controle de Esfericidade:</strong> 0,025 mm — medição confiável de raios, furos e superfícies esféricas</li>
+          <li><strong>Controle de Planeza:</strong> 0,035 mm — verificação de superfícies planas críticas para montagem e ajuste</li>
+          <li><strong>ISO 10360-13:</strong> Conformidade com a norma internacional de metrologia 3D óptica para resultados comparáveis mundialmente</li>
+          <li><strong>Certificações:</strong> ISO 17025, VDI/VDE 2634 Parte 3 e JJF1951 — resultados auditáveis e rastreáveis</li>
+          <li><strong>Resolução até 0,020 mm:</strong> Captura de bordas finas, chanfros e texturas superficiais com fidelidade máxima</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Captura Ultra-Rápida (imagem à direita) -->
+    <div class="simsg2-feature rev simsg2-anim simsg2-anim-d2">
+      <img class="simsg2-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_speed.png"
+        alt="Capture Mais. Escaneie Mais Rápido" />
+      <div class="simsg2-feature-body">
+        <h2>Capture Mais. Escaneie Mais Rápido</h2>
+        <h3>8.100.000 Medições por Segundo</h3>
+        <ul>
+          <li><strong>126 Linhas de Laser Azul:</strong> 108 em modo ultrarrápido (Quad Cross) + 17 em modo hiperfino + 1 em modo furo profundo</li>
+          <li><strong>8,1 Milhões de Medições/s:</strong> Taxa de medição máxima para digitalização fluida de peças complexas</li>
+          <li><strong>180 FPS:</strong> Rastreamento suave de superfícies dinâmicas e geometrias desafiadoras</li>
+          <li><strong>Área de Varredura:</strong> Até 700×600 mm por quadro — cobertura ampla sem comprometer precisão</li>
+          <li><strong>Quad Cross Technology:</strong> Configuração de 108 linhas cruzadas para máxima densidade de pontos por varredura</li>
+          <li><strong>Laser Classe II (olho-seguro):</strong> Uso contínuo sem equipamento de proteção ocular especial</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Design Compacto e Ergonômico (imagem à esquerda) -->
+    <div class="simsg2-feature simsg2-anim simsg2-anim-d3">
+      <img class="simsg2-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_compact.jpg"
+        alt="Compacto e Fácil de Usar" />
+      <div class="simsg2-feature-body">
+        <h2>Compacto e Fácil de Usar</h2>
+        <h3>Design Ergonômico com Display Integrado</h3>
+        <ul>
+          <li><strong>Peso de 560 g:</strong> Carcaça em liga de magnésio — extremamente leve para operação prolongada sem fadiga</li>
+          <li><strong>Dimensões compactas:</strong> 203×80×44 mm — cabe na palma da mão e alcança peças em espaços restritos</li>
+          <li><strong>Display Integrado:</strong> Visualize e monitore os dados em tempo real diretamente no scanner, acelerando o processo</li>
+          <li><strong>Base de Carregamento Removível:</strong> Design modular que facilita transporte, recarga e armazenamento</li>
+          <li><strong>Ergonomia Avançada:</strong> Equilíbrio e empunhadura otimizados para escaneamento em qualquer posição e altitude</li>
+          <li><strong>Temperatura de Operação:</strong> −10°C a +40°C — uso em ambientes industriais exigentes</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Sem Fio Total com Edge Computing (imagem à direita) -->
+    <div class="simsg2-feature rev simsg2-anim simsg2-anim-d4">
+      <img class="simsg2-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_wireless.jpg"
+        alt="Mais Leve. Total Sem Fio." />
+      <div class="simsg2-feature-body">
+        <h2>Mais Leve. Total Sem Fio.</h2>
+        <h3>Wi-Fi 6 Nativo + Edge Computing Embarcado</h3>
+        <ul>
+          <li><strong>Wi-Fi 6 (802.11 a/b/g/n/ac):</strong> Transmissão de dados sem fio de alta velocidade sem latência perceptível</li>
+          <li><strong>Edge Computing:</strong> Processamento de dados embarcado no dispositivo — sem necessidade de computador conectado ao escanear</li>
+          <li><strong>Liberdade Total de Movimento:</strong> Escaneie peças em altura, espaços confinados ou locais sem infraestrutura de TI</li>
+          <li><strong>Interface USB 3.0:</strong> Conexão com fio de alta velocidade também disponível quando necessário</li>
+          <li><strong>Formatos de Exportação:</strong> .stl, .obj, .ply, .asc, .igs, .txt, .mk2, .umk e mais — compatibilidade universal</li>
+          <li><strong>Umidade 10~90% RH:</strong> Operação confiável em ambientes industriais com variação de umidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. Precisão Volumétrica com Fotogrametria Adaptativa (imagem à esquerda) -->
+    <div class="simsg2-feature simsg2-anim simsg2-anim-d5">
+      <img class="simsg2-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_volumetric.jpg"
+        alt="Precisão Volumétrica com Fotogrametria Adaptativa" />
+      <div class="simsg2-feature-body">
+        <h2>Precisão Volumétrica com Fotogrametria Adaptativa</h2>
+        <h3>0,015 mm + 0,012 mm/m com Fotogrametria</h3>
+        <ul>
+          <li><strong>Precisão Volumétrica Padrão:</strong> 0,015 mm + 0,030 mm/m — excelente para peças de médio porte</li>
+          <li><strong>Fotogrametria Adaptativa:</strong> 0,015 mm + 0,012 mm/m — máxima exatidão em peças de grande escala com barra de escala</li>
+          <li><strong>Controle GD&T:</strong> Verificação confiável de superfícies funcionais, furos de precisão e geometrias de montagem</li>
+          <li><strong>Fabricação de Alta Tolerância:</strong> Ideal para aeronáutica e usinagem CNC onde a integridade dimensional é crítica</li>
+          <li><strong>Resultados Confiáveis:</strong> Conformidade comprovada com ISO 10360-13 e VDI/VDE 2634 para auditoria e rastreabilidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. Onde Outros Não Chegam (imagem à direita) -->
+    <div class="simsg2-feature rev simsg2-anim simsg2-anim-d6">
+      <img class="simsg2-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_feat_hardreach.jpg"
+        alt="Escaneie Onde Outros Não Chegam" />
+      <div class="simsg2-feature-body">
+        <h2>Escaneie Onde Outros Não Chegam</h2>
+        <h3>Câmera de Linha de Base Curta para Furos e Recessos</h3>
+        <ul>
+          <li><strong>Design Short-Baseline:</strong> Ângulo de visão íngreme para captura em furos profundos, ranhuras, rasgos e canais</li>
+          <li><strong>Modo Furo Profundo:</strong> 1 linha laser de profundidade extra para geometrias de difícil acesso</li>
+          <li><strong>Dados 3D Completos:</strong> Resultados confiáveis para inspeção, design e engenharia reversa mesmo nas peças mais complexas</li>
+          <li><strong>Múltiplos Formatos de Parte:</strong> Funciona perfeitamente em peças usinadas, fundidas, estampadas e componentes montados</li>
+          <li><strong>Precisão em Qualquer Posição:</strong> Sem perda de acurácia ao escanear em posições não convencionais ou em altura</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /features-wrap -->
+
+  <!-- ══════════════════════════════════════════════
+       MODOS DE OPERAÇÃO — 3 cards com imagens
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-modes simsg2-anim">
+    <div class="simsg2-modes-header">
+      <h2>Um Scanner. Qualquer Trabalho.</h2>
+      <p>Três modos de escaneamento para máxima flexibilidade em qualquer aplicação industrial</p>
+    </div>
+    <div class="simsg2-modes-grid">
+      <div class="simsg2-mode-card">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_modo_ultrafast.jpg"
+          alt="Modo Ultra-Rápido — 108 Linhas Quad Cross" />
+        <div class="simsg2-mode-card-body">
+          <div class="simsg2-mode-badge">Ultra-Rápido</div>
+          <h3>108 Linhas Quad Cross</h3>
+          <p>108 linhas de laser azul em configuração cruzada quádrupla para digitalização de alta velocidade e densidade de pontos máxima. Ideal para peças com geometrias amplas e superfícies regulares.</p>
+        </div>
+      </div>
+      <div class="simsg2-mode-card">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_modo_hyperfine.jpg"
+          alt="Modo Hiperfino — 17 Linhas Paralelas" />
+        <div class="simsg2-mode-card-body">
+          <div class="simsg2-mode-badge">Hiperfino</div>
+          <h3>17 Linhas Paralelas Azul</h3>
+          <p>17 linhas de laser azul paralelas para captura de detalhes finos e superfícies com microgeometria complexa. Máxima resolução para inspeção de componentes críticos e engenharia reversa de alta fidelidade.</p>
+        </div>
+      </div>
+      <div class="simsg2-mode-card">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_modo_deephole.jpg"
+          alt="Modo Furo Profundo — Linha Extra Short-Baseline" />
+        <div class="simsg2-mode-card-body">
+          <div class="simsg2-mode-badge">Furo Profundo</div>
+          <h3>1 Linha Extra Short-Baseline</h3>
+          <p>Linha de laser dedicada com câmera de linha de base curta para captura confiável em furos profundos, ranhuras, cavidades e regiões de difícil acesso em qualquer ângulo de abordagem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       VÍDEO DEMONSTRAÇÃO
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-video-wrap simsg2-anim">
+    <h2>▶ SIMSCAN-S Gen2 em Ação</h2>
+    <div class="simsg2-iframe-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/lFoIb0y2LTs?rel=0&modestbranding=1"
+        allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+        allowfullscreen loading="lazy" title="SIMSCAN-S Gen2 — Demonstração de Escaneamento 3D"></iframe>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ESPECIFICAÇÕES TÉCNICAS
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-card simsg2-anim">
+    <h2>Especificações Técnicas — SIMSCAN-S Gen2</h2>
+    <div class="simsg2-tbl-wrap">
+      <table class="simsg2-tbl">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>SIMSCAN-S Gen2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Modo Ultra-Rápido</td><td>108 linhas azul (Quad Cross Technology)</td></tr>
+          <tr><td>Modo Hiperfino</td><td>17 linhas azul paralelas</td></tr>
+          <tr><td>Modo Furo Profundo</td><td>1 linha azul extra (short-baseline)</td></tr>
+          <tr><td>Taxa de Medição Máx.</td><td>8.100.000 medições/s</td></tr>
+          <tr><td>Taxa de Quadros Máx.</td><td>180 FPS</td></tr>
+          <tr><td>Precisão</td><td>0,015 mm</td></tr>
+          <tr><td>Precisão Volumétrica — Padrão</td><td>0,015 mm + 0,030 mm/m <sup>(1)</sup></td></tr>
+          <tr><td>Precisão Volumétrica — Fotogrametria Adaptativa</td><td>0,015 mm + 0,012 mm/m <sup>(2)</sup></td></tr>
+          <tr><td>Esfericidade</td><td>0,025 mm</td></tr>
+          <tr><td>Planeza</td><td>0,035 mm</td></tr>
+          <tr><td>Resolução Máxima</td><td>0,020 mm</td></tr>
+          <tr><td>Distância de Trabalho</td><td>300 mm</td></tr>
+          <tr><td>Profundidade de Campo</td><td>550 mm</td></tr>
+          <tr><td>Dimensões</td><td>203 mm × 80 mm × 44 mm</td></tr>
+          <tr><td>Peso</td><td>560 g</td></tr>
+          <tr><td>Carcaça</td><td>Liga de magnésio</td></tr>
+          <tr><td>Interface</td><td>USB 3.0</td></tr>
+          <tr><td>Sem Fio</td><td>Wi-Fi 6 — 802.11 a/b/g/n/ac</td></tr>
+          <tr><td>Display</td><td>Integrado</td></tr>
+          <tr><td>Base de Carregamento</td><td>Removível</td></tr>
+          <tr><td>Classe de Laser</td><td>Classe II (olho-seguro)</td></tr>
+          <tr><td>Temperatura de Operação</td><td>−10°C a +40°C</td></tr>
+          <tr><td>Umidade de Operação</td><td>10~90% RH (sem condensação)</td></tr>
+          <tr><td>Formatos de Saída</td><td>.stl, .obj, .ply, .asc, .igs, .txt, .mk2, .umk e outros</td></tr>
+          <tr><td>Software</td><td>DefinSight (SCANOLOGY)</td></tr>
+          <tr><td>Certificações</td><td>ISO 17025 · ISO 10360-13 · VDI/VDE 2634 · JJF1951</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="simsg2-fn">
+      <sup>(1)</sup> Acreditado ISO 17025. Desempenho avaliado conforme ISO 10360-13, VDI/VDE 2634 Parte 3 e especificação JJF1951.<br>
+      <sup>(2)</sup> Requer pareamento com barra de escala de alta precisão para ativar Fotogrametria Adaptativa.
+    </p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       APLICAÇÕES
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-card simsg2-anim">
+    <h2>Aplicações Diversas</h2>
+    <div class="simsg2-apps-grid">
+      <div class="simsg2-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_aeroespacial.png"
+          alt="Aeroespacial — Inspeção 3D de Componentes Críticos" />
+        <div class="simsg2-app-body">
+          <h3>Aeroespacial</h3>
+          <p>Inspeção dimensional certificada de turbinas, fuselagem, dutos e componentes estruturais com tolerâncias extremas e rastreabilidade ISO.</p>
+        </div>
+      </div>
+      <div class="simsg2-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_automotivo.png"
+          alt="Automotiva — Controle de Qualidade e Engenharia Reversa" />
+        <div class="simsg2-app-body">
+          <h3>Automotiva</h3>
+          <p>Controle de qualidade de carroceria, inspeção de matrizes de estampagem, engenharia reversa de peças e verificação de montagem em linha de produção.</p>
+        </div>
+      </div>
+      <div class="simsg2-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_moldes.png"
+          alt="Moldes — Digitalização 3D de Alta Precisão" />
+        <div class="simsg2-app-body">
+          <h3>Moldes e Ferramentaria</h3>
+          <p>Inspeção e digitalização de moldes de injeção, fundição e estampagem para controle dimensional, ajuste de cavidades e manutenção preventiva.</p>
+        </div>
+      </div>
+      <div class="simsg2-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_energia.png"
+          alt="Energia e Indústria Pesada" />
+        <div class="simsg2-app-body">
+          <h3>Energia e Indústria Pesada</h3>
+          <p>Inspeção de turbinas eólicas, equipamentos de usinas, válvulas industriais e estruturas offshore com operação em campo sem infraestrutura dedicada.</p>
+        </div>
+      </div>
+      <div class="simsg2-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_ferroviario.png"
+          alt="Ferroviário e Naval" />
+        <div class="simsg2-app-body">
+          <h3>Ferroviário e Naval</h3>
+          <p>Verificação de trilhos, rodeiros, cascos e componentes estruturais de embarcações e vagões para manutenção preditiva e homologação regulatória.</p>
+        </div>
+      </div>
+      <div class="simsg2-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_outros.png"
+          alt="Outras Aplicações — Digitalização 3D Versátil" />
+        <div class="simsg2-app-body">
+          <h3>Outras Aplicações</h3>
+          <p>Medicina, arqueologia, patrimônio cultural, educação e pesquisa — alta precisão acessível para qualquer aplicação que exija digitalização 3D fiel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SOFTWARE — DefinSight + parceiros
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-soft simsg2-anim">
+    <h2>Software Incluído &amp; Compatibilidade</h2>
+    <div class="simsg2-soft-definsight">
+      <img class="icon" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_definsight_icon.webp"
+        alt="DefinSight — Software 3D All-in-One da SCANOLOGY" />
+      <div class="simsg2-soft-definsight-body">
+        <h3>DefinSight — Plataforma 3D All-in-One da SCANOLOGY</h3>
+        <p>Do escaneamento à análise, tudo em um único ambiente. O DefinSight, software 3D integrado da SCANOLOGY, mantém o fluxo de trabalho simples, rápido e intuitivo — reduzindo o tempo de processamento e acelerando as decisões. Compatível com os principais softwares de metrologia e CAD do mercado.</p>
+      </div>
+    </div>
+    <div class="simsg2-soft-logos">
+      <img loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp"
+        alt="ZEISS" />
+      <img loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp"
+        alt="Verisurf" />
+      <img loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp"
+        alt="PolyWorks" />
+      <img loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp"
+        alt="Geomagic" />
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════════════ -->
+  <div class="simsg2-cta simsg2-anim">
+    <p><strong>SIMSCAN-S Gen2 — Super Alta Precisão na Palma da Mão</strong></p>
+    <p>0,015 mm de precisão · 126 linhas de laser azul · 8,1M medições/s · Wi-Fi 6 · ISO 10360-13</p>
+    <div class="simsg2-cta-btns">
+      <a class="simsg2-btn-green" href="https://enterfix.com.br/produto/simscan-s-gen2/" target="_blank" rel="noopener">🛒 Comprar Agora</a>
+      <a class="simsg2-btn-white" href="https://lp.enterfix.com.br/catalogo-simscan-s-gen2" target="_blank" rel="noopener">📄 Catálogo PDF</a>
+      <a class="simsg2-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="simsg2-btn-white" href="https://www.youtube.com/watch?v=lFoIb0y2LTs" target="_blank" rel="noopener">▶ Ver Vídeo</a>
+    </div>
+  </div>
+
+</div><!-- /simsg2 -->

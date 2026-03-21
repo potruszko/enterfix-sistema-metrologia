@@ -1,0 +1,319 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos de Rastreamento 6D</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PRECISION]" alt="Alta Precisão" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Alta Precisão</h4>
+<p style="font-size: 14px; line-height: 1.5;">Precisão excepcional para aplicações industriais críticas e pesquisa avançada.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_AUTOMATION]" alt="Automação" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Automação Total</h4>
+<p style="font-size: 14px; line-height: 1.5;">Processamento automatizado com algoritmos inteligentes para máxima eficiência.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_REALTIME]" alt="Tempo Real" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Tempo Real</h4>
+<p style="font-size: 14px; line-height: 1.5;">Processamento e análise em tempo real para aplicações dinâmicas.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_INTEGRATION]" alt="Integração" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Integração Total</h4>
+<p style="font-size: 14px; line-height: 1.5;">Compatibilidade completa com ecossistema de digitalização 3D.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Applications Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>Sistema de Rastreamento de Pose 6D - Tecnologia Avançada</h1>
+
+<p class="produto-breve-descricao">Sistema especializado de rastreamento de pose 6D com tecnologia avançada para monitoramento e análise de movimento em tempo real.</p>
+
+O <strong>Sistema de Rastreamento de Pose 6D</strong> representa o estado da arte em rastreamento tridimensional, oferecendo monitoramento completo de posição e orientação com seis graus de liberdade. Este sistema estabelece novos padrões de precisão para aplicações críticas.
+
+<strong>Características Principais:</strong>
+• Rastreamento completo 6DOF (6 graus de liberdade)
+• Precisão angular excepcional de ±0,008°
+• Sistema de fusão sensorial multi-modal
+• Compensação dinâmica de distorções
+• Tecnologia de predição de movimento
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">Sistema de Rastreamento de Pose 6D - Tecnologia Avançada - Sistema de Rastreamento Pose 6D</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Sistema especializado de rastreamento de pose 6D com tecnologia avançada para monitoramento e análise de movimento em tempo real.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">6DOF</h3>
+        <p style="font-size: 16px;">Liberdades</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Pose</h3>
+        <p style="font-size: 16px;">Rastreamento</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Real-Time</h3>
+        <p style="font-size: 16px;">Tempo Real</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Advanced</h3>
+        <p style="font-size: 16px;">Sistema</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração Técnica</h3>
+<p>Veja o Sistema de Rastreamento de Pose 6D demonstrando suas capacidades de rastreamento de pose em 6 graus de liberdade.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Tecnologia de ponta</li>
+<li>Precisão excepcional</li>
+<li>Processamento avançado</li>
+<li>Interface profissional</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas</h3>
+
+[vc_row]<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Software Profissional Integrado</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Soluções de software especializadas para processamento e análise de dados avançados</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🔧 Recursos Avançados</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Interface profissional otimizada</li>
+            <li>Algoritmos de processamento IA</li>
+            <li>Análise automática de dados</li>
+            <li>Relatórios detalhados</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">📊 Compatibilidade Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Formatos industriais padrão</li>
+            <li>Integração CAD/CAM</li>
+            <li>Sistemas de metrologia</li>
+            <li>APIs para desenvolvimento</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Tecnologia de Rastreamento 6D Avançada</h3>
+
+O Sistema de Pose 6D utiliza algoritmos avançados de fusão sensorial que combinam múltiplas tecnologias de rastreamento para fornecer dados precisos de posição (X,Y,Z) e orientação (Roll, Pitch, Yaw) simultaneamente.
+
+<strong>Especificações Técnicas 6D:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Posicional (XYZ)</strong></td>
+<td>±0,03mm</td>
+</tr>
+<tr>
+<td><strong>Precisão Angular (RPY)</strong></td>
+<td>±0,008°</td>
+</tr>
+<tr>
+<td><strong>Taxa de Atualização</strong></td>
+<td>2000Hz</td>
+</tr>
+<tr>
+<td><strong>Latência Total</strong></td>
+<td>< 0,5ms</td>
+</tr>
+<tr>
+<td><strong>Volume de Rastreamento</strong></td>
+<td>5m × 4m × 3m</td>
+</tr>
+<tr>
+<td><strong>Graus de Liberdade</strong></td>
+<td>6DOF completos</td>
+</tr>
+<tr>
+<td><strong>Fusão Sensorial</strong></td>
+<td>Ótico + Inercial + Magnético</td>
+</tr>
+<tr>
+<td><strong>Predição de Movimento</strong></td>
+<td>Até 10ms à frente</td>
+</tr>
+<tr>
+<td><strong>Objetos Simultâneos</strong></td>
+<td>Até 32 objetos</td>
+</tr>
+<tr>
+<td><strong>Certificação</strong></td>
+<td>ISO 17025, NIST, PTB</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações de Pose 6D Críticas</h3>
+
+<strong>Robótica Avançada:</strong>
+• Controle de manipuladores de alta precisão
+• Navegação autônoma de robôs móveis
+• Calibração dinâmica de sistemas multi-eixo
+
+<strong>Realidade Virtual/Aumentada:</strong>
+• Rastreamento de headsets de alta precisão
+• Sistemas hápticos avançados
+• Simulação de treinamento crítico
+
+<strong>Pesquisa Científica:</strong>
+• Experimentos de mecânica de precisão
+• Estudos de dinâmica de corpos rígidos
+• Validação de modelos matemáticos
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos de Rastreamento 6D</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PRECISION]" alt="Alta Precisão" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Alta Precisão</h4>
+<p style="font-size: 14px; line-height: 1.5;">Precisão excepcional para aplicações industriais críticas e pesquisa avançada.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_AUTOMATION]" alt="Automação" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Automação Total</h4>
+<p style="font-size: 14px; line-height: 1.5;">Processamento automatizado com algoritmos inteligentes para máxima eficiência.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_REALTIME]" alt="Tempo Real" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Tempo Real</h4>
+<p style="font-size: 14px; line-height: 1.5;">Processamento e análise em tempo real para aplicações dinâmicas.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_INTEGRATION]" alt="Integração" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Integração Total</h4>
+<p style="font-size: 14px; line-height: 1.5;">Compatibilidade completa com ecossistema de digitalização 3D.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Applications Section -->
+[vc_row][vc_column][vc_column_text]
+<h3>Software 6D Pro Suite</h3>
+
+O Sistema de Pose 6D vem acompanhado do software 6D Pro Suite, especializado em rastreamento de pose completa:
+
+<strong>Recursos Avançados 6D:</strong>
+• Visualização em tempo real de pose completa
+• Análise cinemática e dinâmica avançada
+• Ferramentas de calibração multi-sensor
+• Compensação automática de distorções
+• APIs para desenvolvimento de aplicações críticas
+• Relatórios de análise de movimento completos
+
+<strong>Integração Avançada:</strong>
+SDKs para integração com sistemas de controle, simulação e análise
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens do Rastreamento 6D</h3>
+
+<strong>Precisão Completa:</strong>
+Rastreamento simultâneo de posição e orientação com precisão excepcional em todos os eixos.
+
+<strong>Fusão Sensorial:</strong>
+Combinação de múltiplas tecnologias garante robustez e confiabilidade.
+
+<strong>Performance Ultrarrápida:</strong>
+2000Hz de taxa de atualização com latência submilissegundo.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico 6D Enterfix</h3>
+
+A Enterfix oferece suporte técnico de elite para sistemas de rastreamento 6D:
+
+• <strong>Certificação 6D:</strong> Treinamento especializado em tecnologias de pose completa
+• <strong>Consultoria Avançada:</strong> Otimização para aplicações de alta complexidade
+• <strong>Integração de Sistemas:</strong> Suporte para integração com sistemas críticos
+• <strong>Calibração Certificada:</strong> Certificação metrológica com rastreabilidade internacional
+• <strong>Suporte Premium 24/7:</strong> Assistência prioritária para aplicações críticas
+
+<strong>Agende uma Demonstração e experimente o futuro do rastreamento 6D de precisão!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Download CTA Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 80px !important;padding-bottom: 80px !important;}" el_class="cta-download-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Revolucione seus Processos de Digitalização</h3>
+<p style="font-size: 1.3em; line-height: 1.6; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Descubra como nossa tecnologia avançada pode transformar seus projetos com precisão e eficiência incomparáveis.</p>
+
+<div style="margin-bottom: 40px;">
+<a href="[LINK_ORCAMENTO]" style="display: inline-block; background-color: #ffd700; color: #2c3e50; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+📞 SOLICITAR ORÇAMENTO
+</a>
+<a href="[LINK_DEMONSTRACAO]" style="display: inline-block; background-color: transparent; color: white; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; border: 2px solid white; transition: all 0.3s ease;">
+🎯 AGENDAR DEMONSTRAÇÃO
+</a>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📧</div>
+    <div style="font-size: 1.1em;">contato@enterfix.com.br</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📱</div>
+    <div style="font-size: 1.1em;">+55 11 5555-5555</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">⚡</div>
+    <div style="font-size: 1.1em;">Suporte Especializado</div>
+</div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: rastreamento pose 6d, sistema rastreamento pose 6d, rastreamento 3d, pose tracking, metrologia 3d, scanology, enterfix -->

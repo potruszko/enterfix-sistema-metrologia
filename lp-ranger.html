@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENTERFIX RANGER 600 — Catálogo Técnico</title>
+  <meta name="description" content="Aumente a precisão e produtividade da sua ferramentaria com a ENTERFIX RANGER 600. Baixe o catálogo técnico." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand-blue:#0b5fa5; /* Enterfix azul */
+      --brand-green:#79c23d; /* Enterfix verde */
+      --dark:#0f1720;
+      --muted:#6b7280;
+      --bg:#f6f8fa;
+      --card:#ffffff;
+      --shadow: 0 8px 24px rgba(12,18,28,0.08);
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{background:linear-gradient(90deg, rgba(11,95,165,0.95), rgba(121,194,61,0.95));padding:18px 0;color:#fff}
+    .header-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand-logo{width:44px;height:44px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center}
+    .brand-logo strong{color:var(--brand-blue);font-size:20px}
+    .brand-title{font-weight:700}
+    .header-phone{background:rgba(255,255,255,0.15);padding:8px 12px;border-radius:8px;font-weight:600}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));padding:48px 0}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero-left{padding:24px;background:transparent}
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.08);color:#e7f3ff;font-weight:700;margin-bottom:14px}
+    h1{font-size:32px;line-height:1.05;color:#fff;margin:0 0 12px}
+    .hero-sub{color:#e7f3ff;margin-bottom:18px}
+    .hero-bullets{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+    .chip{background:rgba(255,255,255,0.08);padding:8px 12px;border-radius:8px;font-weight:600;color:#fff}
+    .cta-primary{display:inline-block;background:var(--dark);color:#fff;padding:14px 20px;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:var(--shadow)}
+    .cta-ghost{display:inline-block;margin-left:12px;padding:12px 16px;border-radius:12px;background:transparent;border:1px solid rgba(255,255,255,0.14);color:#fff;text-decoration:none}
+    .hero-note{font-size:13px;color:rgba(255,255,255,0.85);margin-top:10px}
+
+    /* Hero image */
+    .hero-right{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    .form-title{font-weight:700;margin:0 0 6px}
+    .form-sub{font-size:13px;color:var(--muted);margin-bottom:12px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input,select,textarea{padding:12px;border-radius:8px;border:1px solid #e6e9ee;font-size:14px}
+    .btn-cta{background:var(--brand-green);border:none;color:#06311a;padding:12px;border-radius:10px;font-weight:800;cursor:pointer}
+    .form-legal{font-size:12px;color:#68707a}
+
+    /* Main content */
+    main{max-width:1120px;margin:28px auto;padding:0 24px}
+    .section{background:var(--card);border-radius:12px;padding:24px;box-shadow:var(--shadow);margin-bottom:18px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:18px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(11,95,165,0.04)}
+    .card h3{margin:0 0 8px}
+    .how{display:flex;gap:18px;align-items:flex-start}
+    .how-step{flex:1}
+    .logos{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+    /* Specs & visuals */
+    .hero-image{display:block;max-width:100%;height:auto;border-radius:8px;box-shadow:0 12px 30px rgba(2,6,23,0.12)}
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+
+    /* Testimonials */
+    .testimonial{padding:16px;border-radius:10px;border-left:4px solid var(--brand-blue);background:#fbfdff}
+
+    /* Footer */
+    footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:620px){
+      h1{font-size:24px}
+      .cards{grid-template-columns:1fr}
+      .header-inner{padding:0 12px}
+      .brand-title{font-size:15px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <!-- LOGO PLACEHOLDER: insira aqui a imagem PNG da Enterfix -->
+          <img src="PLACEHOLDER-LOGO-ENTERFIX.png" alt="Logo Enterfix" style="height:48px; width:auto;" />
+        </div>
+        <div>
+          <div class="brand-title">ENTERFIX</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.95);margin-top:2px;">RANGER 600 — Máquina de Medição de Ferramentas</div>
+        </div>
+      </div>
+      <div class="header-phone">WhatsApp: <a href="https://wa.me/5511968416776" style="color:#fff;font-weight:700;text-decoration:none;margin-left:8px">(11) 9 6841-6776</a></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">CATÁLOGO TÉCNICO</span>
+          <h1>Aumente a Precisão e a Produtividade da Sua Ferramentaria com a ENTERFIX RANGER 600</h1>
+          <p class="hero-sub">Medições ultrarrápidas, relatórios CAD/Excel automáticos e estabilidade dimensional para brocas, fresas, alargadores e escareadores.</p>
+
+          <div class="hero-bullets">
+            <div class="chip">Alta precisão repetível</div>
+            <div class="chip">Software SMARTOOL incluso</div>
+            <div class="chip">Relatórios prontos para CAD</div>
+            <div class="chip">Instalação rápida</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a href="#formulario" class="cta-primary">BAIXAR CATÁLOGO (PDF)</a>
+            <a href="#como-funciona" class="cta-ghost">Saiba como funciona</a>
+            <div class="hero-note">PDF técnico oficial • Leitura ~3 minutos • Seus dados estão protegidos</div>
+          </div>
+
+        </div>
+
+        <aside class="hero-right" id="formulario" aria-label="Formulário de download">
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:6px">
+            <div style="width:42px;height:42px;border-radius:8px;background:linear-gradient(180deg,var(--brand-blue),var(--brand-green));display:flex;align-items:center;justify-content:center;color:white;font-weight:800">EF</div>
+            <div>
+              <div class="form-title">Receba o catálogo técnico</div>
+              <div class="form-sub">Preencha os dados e receba o PDF em seu e-mail</div>
+            </div>
+          </div>
+
+          <!-- IMPORTANTE: Ajuste action/atributos para integração com RD Station conforme necessário -->
+          <form action="#" method="post" novalidate>
+            <input type="text" name="nome" placeholder="Nome*" required>
+            <input type="email" name="email" placeholder="Email corporativo*" required>
+            <input type="text" name="empresa" placeholder="Empresa*" required>
+            <input type="tel" name="whatsapp" placeholder="WhatsApp*" required>
+            <select name="interesse">
+              <option value="download">Baixar catálogo</option>
+              <option value="demo">Solicitar demonstração</option>
+              <option value="orçamento">Solicitar orçamento</option>
+            </select>
+
+            <button class="btn-cta" type="submit">Receber Catálogo</button>
+
+            <div class="form-legal">Ao enviar, você concorda em receber comunicações da Enterfix. Consulte nossa <a href="#">Política de Privacidade</a>.</div>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="section">
+      <div class="two-col">
+        <div>
+          <h2 style="margin-top:0">Uma Máquina Robusta, Estável e Desenvolvida para Alta Performance</h2>
+          <p style="color:var(--muted);line-height:1.5">A ENTERFIX RANGER 600 foi criada para empresas que exigem resultados consistentes. Estrutura rígida, conjunto óptico de alta definição e o software SMARTOOL permitem medir perfis complexos com precisão, reduzir retrabalhos e aumentar a produtividade.</p>
+
+          <div style="margin-top:18px" class="cards">
+            <div class="card">
+              <h3>Alta Precisão</h3>
+              <p style="color:var(--muted);font-size:14px">Medições detalhadas de contornos externos, ângulos e geometrias especiais. Ideal para aplicações críticas.</p>
+            </div>
+            <div class="card">
+              <h3>Relatórios Avançados</h3>
+              <p style="color:var(--muted);font-size:14px">Exportação para Excel, DXF e arquivos CAD para uso direto em engenharia e controle de qualidade.</p>
+            </div>
+            <div class="card">
+              <h3>Software SMARTOOL</h3>
+              <p style="color:var(--muted);font-size:14px">Interface intuitiva, rotinas de medição pré-configuradas e análises automáticas.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:18px">
+            <h3>Aplicações</h3>
+            <p style="color:var(--muted);">Afiadores, fabricantes de ferramentas, ferramentarias de precisão, indústrias automotivas, aeroespaciais e metalmecânicas — onde quer que exista necessidade de controle dimensional preciso.</p>
+          </div>
+        </div>
+
+        <aside style="text-align:center">
+          <img src="https://via.placeholder.com/360x260.png?text=RANGER+600" alt="ENTERFIX RANGER 600" class="hero-image" />
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Imagem ilustrativa — equip. real pode variar. (trocar pela foto do produto)</div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="section" id="como-funciona">
+      <h2>Como Funciona</h2>
+      <div class="how" style="margin-top:12px">
+        <div class="how-step">
+          <h4>1. Posicione</h4>
+          <p style="color:var(--muted)">Encaixe a ferramenta com rapidez e segurança no suporte.</p>
+        </div>
+        <div class="how-step">
+          <h4>2. Meça</h4>
+          <p style="color:var(--muted)">Sistema óptico captura o perfil e o SMARTOOL realiza a análise automaticamente.</p>
+        </div>
+        <div class="how-step">
+          <h4>3. Exporte</h4>
+          <p style="color:var(--muted)">Relatórios prontos em Excel ou DXF para integração com engenharia.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Especificações Técnicas Principais</h2>
+      <p style="color:var(--muted);font-size:14px">Observação: substitua os valores com as especificações oficiais do equipamento.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
+        <div class="card"><strong>Faixa de Medição</strong><div style="color:var(--muted);margin-top:8px">até <strong>X mm</strong></div></div>
+        <div class="card"><strong>Precisão</strong><div style="color:var(--muted);margin-top:8px">até <strong>X µm</strong></div></div>
+        <div class="card"><strong>Resolução</strong><div style="color:var(--muted);margin-top:8px">X µm</div></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
+        <div class="card"><strong>Sistema Óptico</strong><div style="color:var(--muted);margin-top:8px">Iluminação e captura HD</div></div>
+        <div class="card"><strong>Software</strong><div style="color:var(--muted);margin-top:8px">SMARTOOL com relatórios automáticos</div></div>
+        <div class="card"><strong>Exportação</strong><div style="color:var(--muted);margin-top:8px">Excel, DXF, CAD</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Depoimentos & Clientes</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+        <div class="testimonial">
+          <strong>Dirceu — DSDDrill</strong>
+          <p style="color:var(--muted);margin:10px 0">"O RANGER600 melhorou significativamente nossa precisão de medição e eficiência de produção."</p>
+        </div>
+        <div class="testimonial">
+          <strong>Rodrigo — Indçap</strong>
+          <p style="color:var(--muted);margin:10px 0">"Graças ao RANGER600, nossas operações de controle de qualidade nunca foram tão rápidas e precisas."</p>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap" class="logos">
+        <!-- Substitua por logos reais -->
+        <img src="https://via.placeholder.com/140x48?text=Logo+1" alt="Cliente 1" style="height:48px;object-fit:contain">
+        <img src="https://via.placeholder.com/140x48?text=Logo+2" alt="Cliente 2" style="height:48px;object-fit:contain">
+        <img src="https://via.placeholder.com/140x48?text=Logo+3" alt="Cliente 3" style="height:48px;object-fit:contain">
+      </div>
+    </div>
+
+    <div class="section" style="text-align:center">
+      <h2>Pronto para ver como a RANGER 600 pode ajudar sua operação?</h2>
+      <p style="color:var(--muted);margin-bottom:18px">Baixe o catálogo técnico agora ou solicite uma demonstração personalizada.</p>
+      <a href="#formulario" class="cta-primary">BAIXAR CATÁLOGO AGORA</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(180deg,var(--brand-blue),var(--brand-green));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">EF</div>
+          <div style="text-align:left">
+            <div style="font-weight:700">ENTERFIX</div>
+            <div style="font-size:13px;color:var(--muted)">Soluções de medição de alta precisão</div>
+          </div>
+        </div>
+
+        <div style="text-align:right;color:var(--muted)">
+          <div>© Todos os direitos reservados — Enterfix</div>
+          <div style="font-size:13px;margin-top:6px">WhatsApp: <a href="https://wa.me/5511968416776">(11) 9 6841-6776</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

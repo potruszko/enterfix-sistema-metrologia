@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrackProbe – Sistema de Sondagem 3D Rastreada | Enterfix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* ============================================================
+   TrackProbe — Enterfix Product Description
+   Prefix: .trackprobe
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.trackprobe-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- 1. HERO ----- */
+.trackprobe-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/7;
+  min-height: 380px;
+  background: #0a0a14;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+.trackprobe-hero iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1.18);
+  width: 100%; height: 100%;
+  border: none;
+  pointer-events: none;
+}
+.trackprobe-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,5,30,.88) 0%, rgba(0,0,0,.10) 100%);
+  display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: center;
+  padding: 36px 48px;
+}
+.trackprobe-hero-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #A0BF30;
+  background: rgba(160,191,48,.12); border: 1px solid rgba(160,191,48,.38);
+  border-radius: 20px; padding: 5px 14px; margin-bottom: 14px;
+}
+.trackprobe-hero-model {
+  font-size: clamp(26px, 5vw, 60px); font-weight: 900;
+  color: #fff; line-height: 1.0; letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+.trackprobe-hero-sub {
+  font-size: clamp(13px, 1.8vw, 17px); color: rgba(255,255,255,.78);
+  font-weight: 400; margin-bottom: 20px; max-width: 540px; line-height: 1.4;
+}
+.trackprobe-hero-badges {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+.trackprobe-hero-chip {
+  background: rgba(255,255,255,.10); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.18); border-radius: 8px;
+  padding: 9px 16px; text-align: center;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.trackprobe-hero-chip-val { font-size: 18px; font-weight: 900; color: #A0BF30; line-height: 1; }
+.trackprobe-hero-chip-lbl { font-size: 10px; color: rgba(255,255,255,.65); letter-spacing: 1.2px; }
+
+/* ----- 2. INTRO ----- */
+.trackprobe-intro {
+  text-align: center;
+  padding: 52px 24px 16px;
+}
+.trackprobe-intro h2 {
+  font-size: clamp(18px, 2.8vw, 26px); font-weight: 800;
+  color: #0e0a2e; line-height: 1.4; margin-bottom: 16px;
+  max-width: 860px; margin-left: auto; margin-right: auto;
+}
+.trackprobe-intro p {
+  font-size: 15px; color: #555; line-height: 1.75;
+  max-width: 760px; margin: 0 auto;
+}
+
+/* ----- 3. HERO PRODUCT BANNER ----- */
+.trackprobe-product-banner {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin: 36px 0 10px;
+}
+.trackprobe-product-banner img {
+  width: 100%; height: 520px; object-fit: cover; display: block;
+}
+.trackprobe-product-banner-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,5,40,.92) 44%, transparent 80%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 44px 56px;
+}
+.trackprobe-product-banner-overlay h2 {
+  font-size: clamp(24px, 4vw, 44px); font-weight: 900; color: #fff;
+  max-width: 500px; line-height: 1.05; margin-bottom: 16px;
+}
+.trackprobe-product-banner-overlay p {
+  font-size: 15px; color: rgba(255,255,255,.82); max-width: 460px; line-height: 1.7;
+  margin-bottom: 28px;
+}
+.trackprobe-pill-list { display: flex; flex-direction: column; gap: 8px; }
+.trackprobe-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; color: #fff; font-weight: 600;
+}
+.trackprobe-pill::before {
+  content: '';
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #A0BF30; flex-shrink: 0;
+}
+
+/* ----- 4. HIGHLIGHT CARDS ----- */
+.trackprobe-hl-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 44px 0 24px;
+}
+.trackprobe-hl-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 10px; margin-bottom: 10px;
+}
+.trackprobe-hl-card {
+  background: #14263C; border-radius: 14px;
+  padding: 32px 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
+}
+.trackprobe-hl-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(160,191,48,.15); border: 1px solid rgba(160,191,48,.3);
+  display: flex; align-items: center; justify-content: center;
+}
+.trackprobe-hl-icon i { color: #A0BF30; font-size: 20px; }
+.trackprobe-hl-card h3 {
+  font-size: 16px; font-weight: 800; color: #fff; line-height: 1.3;
+}
+.trackprobe-hl-card p {
+  font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.65;
+}
+.trackprobe-hl-val {
+  font-size: clamp(22px, 3vw, 32px); font-weight: 900; color: #A0BF30; line-height: 1;
+}
+.trackprobe-hl-unit {
+  font-size: 11px; color: rgba(255,255,255,.55); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px;
+}
+
+/* ----- 5. FEATURES ----- */
+.trackprobe-feat-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 36px 0 24px;
+}
+.trackprobe-features { padding: 0 0 20px; }
+.trackprobe-feat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 14px; overflow: hidden;
+  margin-bottom: 10px;
+  min-height: 380px;
+}
+.trackprobe-feat-row.reverse { direction: rtl; }
+.trackprobe-feat-row.reverse > * { direction: ltr; }
+.trackprobe-feat-body {
+  padding: 44px 48px;
+  background: #14263C; color: #fff;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.trackprobe-feat-body.light {
+  background: #F5F5F5; color: #222;
+}
+.trackprobe-feat-body h3 {
+  font-size: clamp(18px, 2.4vw, 24px); font-weight: 800;
+  margin-bottom: 16px; line-height: 1.25; color: #A0BF30;
+}
+.trackprobe-feat-body.light h3 { color: #14263C; }
+.trackprobe-feat-body p { font-size: 14px; line-height: 1.8; opacity: .9; }
+.trackprobe-feat-list {
+  margin-top: 16px; display: flex; flex-direction: column; gap: 8px;
+  list-style: none;
+}
+.trackprobe-feat-list li {
+  font-size: 13px; line-height: 1.6;
+  display: flex; align-items: flex-start; gap: 9px;
+}
+.trackprobe-feat-list li::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #A0BF30; flex-shrink: 0; margin-top: 6px;
+}
+.trackprobe-feat-body.light .trackprobe-feat-list li::before { background: #14263C; }
+.trackprobe-feat-adv {
+  display: inline-block; margin-top: 18px;
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #A0BF30;
+  padding: 5px 12px; border: 1px solid rgba(160,191,48,.45);
+  border-radius: 20px;
+}
+.trackprobe-feat-body.light .trackprobe-feat-adv { color: #14263C; border-color: rgba(20,38,60,.3); }
+.trackprobe-feat-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block; min-height: 380px;
+}
+/* Feature rows with CSS-only bg (no image) */
+.trackprobe-feat-body-solid {
+  background: #14263C; color: #fff;
+  padding: 44px 48px; display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.trackprobe-feat-body-solid::before {
+  content: '';
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: rgba(160,191,48,.07);
+  pointer-events: none;
+}
+.trackprobe-feat-body-solid h3 {
+  font-size: clamp(18px, 2.4vw, 24px); font-weight: 800;
+  margin-bottom: 16px; line-height: 1.25; color: #A0BF30;
+}
+.trackprobe-feat-body-solid p { font-size: 14px; line-height: 1.8; opacity: .9; }
+.trackprobe-feat-body-solid ul {
+  margin-top: 16px; display: flex; flex-direction: column; gap: 8px;
+  list-style: none;
+}
+.trackprobe-feat-body-solid ul li {
+  font-size: 13px; line-height: 1.6;
+  display: flex; align-items: flex-start; gap: 9px; color: rgba(255,255,255,.88);
+}
+.trackprobe-feat-body-solid ul li::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #A0BF30; flex-shrink: 0; margin-top: 6px;
+}
+
+/* ----- 6. STATS STRIP ----- */
+.trackprobe-stats {
+  background: #14263C; border-radius: 14px;
+  padding: 36px 48px; margin: 10px 0 20px;
+  display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 24px;
+}
+.trackprobe-stat { text-align: center; }
+.trackprobe-stat-val {
+  font-size: clamp(26px, 4vw, 40px); font-weight: 900; color: #A0BF30; line-height: 1;
+}
+.trackprobe-stat-lbl {
+  font-size: 12px; color: rgba(255,255,255,.65); letter-spacing: 1px;
+  text-transform: uppercase; margin-top: 6px;
+}
+.trackprobe-stat-divider {
+  width: 1px; height: 52px; background: rgba(255,255,255,.15);
+}
+
+/* ----- 7. INTEGRATION SECTION ----- */
+.trackprobe-integration {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px; margin-bottom: 10px;
+}
+.trackprobe-integration-card {
+  background: #F5F5F5; border-radius: 14px; padding: 36px 32px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.trackprobe-integration-card.dark {
+  background: #14263C; color: #fff;
+}
+.trackprobe-int-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: #A0BF30; display: flex; align-items: center; justify-content: center;
+}
+.trackprobe-int-icon i { color: #fff; font-size: 22px; }
+.trackprobe-integration-card.dark .trackprobe-int-icon {
+  background: rgba(160,191,48,.15); border: 1px solid rgba(160,191,48,.3);
+}
+.trackprobe-integration-card.dark .trackprobe-int-icon i { color: #A0BF30; }
+.trackprobe-integration-card h3 {
+  font-size: 20px; font-weight: 800; color: #14263C;
+}
+.trackprobe-integration-card.dark h3 { color: #A0BF30; }
+.trackprobe-integration-card p {
+  font-size: 14px; color: #555; line-height: 1.75;
+}
+.trackprobe-integration-card.dark p { color: rgba(255,255,255,.8); }
+.trackprobe-integration-card ul {
+  list-style: none; display: flex; flex-direction: column; gap: 7px; margin-top: 4px;
+}
+.trackprobe-integration-card ul li {
+  font-size: 13px; color: #444; display: flex; align-items: flex-start; gap: 8px;
+}
+.trackprobe-integration-card.dark ul li { color: rgba(255,255,255,.82); }
+.trackprobe-integration-card ul li::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #A0BF30; flex-shrink: 0; margin-top: 5px;
+}
+
+/* ----- 8. SPECS ----- */
+.trackprobe-specs { padding: 10px 0 20px; }
+.trackprobe-specs-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  margin-bottom: 28px;
+}
+.trackprobe-specs table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.trackprobe-specs table th,
+.trackprobe-specs table td {
+  padding: 10px 14px; border: 1px solid #e2e2e2; vertical-align: top;
+  text-align: left; line-height: 1.55;
+}
+.trackprobe-specs table thead tr th {
+  background: #14263C; color: #fff; font-weight: 700; font-size: 13px;
+}
+.trackprobe-specs table tbody tr:nth-child(even) { background: #f8f8f8; }
+.trackprobe-specs table td:first-child { font-weight: 600; color: #333; width: 38%; }
+
+/* ----- 9. APPLICATIONS ----- */
+.trackprobe-apps-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); font-weight: 800; color: #0e0a2e;
+  padding: 36px 0 24px;
+}
+.trackprobe-apps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 10px; margin-bottom: 20px;
+}
+.trackprobe-app-card { border-radius: 12px; overflow: hidden; position: relative; }
+.trackprobe-app-card img {
+  width: 100%; height: 220px; object-fit: cover; display: block;
+  transition: transform .42s;
+}
+.trackprobe-app-card:hover img { transform: scale(1.045); }
+.trackprobe-app-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 12px 16px 15px;
+  background: linear-gradient(to top, rgba(0,0,0,.84) 0%, transparent 60%);
+  color: #fff; font-size: 14px; font-weight: 700;
+}
+
+/* ----- 10. SOFTWARE ----- */
+.trackprobe-software {
+  position: relative; border-radius: 14px; overflow: hidden;
+  margin: 10px 0 10px;
+}
+.trackprobe-software img.bg {
+  width: 100%; height: 420px; object-fit: cover; display: block;
+}
+.trackprobe-software-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10,5,40,.95) 0%, rgba(20,38,60,.72) 55%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 48px 56px;
+}
+.trackprobe-definsight-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(160,191,48,.15); border: 1px solid rgba(160,191,48,.4);
+  border-radius: 8px; padding: 7px 14px; margin-bottom: 20px; width: fit-content;
+}
+.trackprobe-definsight-badge span { font-size: 20px; font-weight: 900; color: #A0BF30; }
+.trackprobe-definsight-badge small { font-size: 10px; color: rgba(255,255,255,.6); letter-spacing: 1.5px; text-transform: uppercase; }
+.trackprobe-software-overlay h2 {
+  font-size: clamp(20px, 3vw, 30px); font-weight: 900; color: #fff;
+  margin-bottom: 14px; max-width: 500px; line-height: 1.2;
+}
+.trackprobe-software-overlay p {
+  font-size: 14px; color: rgba(255,255,255,.83); max-width: 480px;
+  line-height: 1.75; margin-bottom: 24px;
+}
+.trackprobe-sw-features {
+  display: flex; flex-direction: column; gap: 7px;
+}
+.trackprobe-sw-feat {
+  font-size: 13px; color: #fff; font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+.trackprobe-sw-feat i { color: #A0BF30; width: 16px; }
+
+/* ----- PARTNER LOGOS ----- */
+.trackprobe-partners {
+  padding: 28px 0 14px;
+}
+.trackprobe-partners-title {
+  text-align: center; font-size: 13px; letter-spacing: 2px;
+  text-transform: uppercase; color: #aaa; font-weight: 600;
+  margin-bottom: 20px;
+}
+.trackprobe-partners-logos {
+  display: flex; align-items: center; justify-content: center;
+  gap: 36px; flex-wrap: wrap;
+}
+.trackprobe-partners-logos img {
+  height: 32px; width: auto; opacity: .55;
+  filter: grayscale(100%); transition: opacity .25s, filter .25s;
+}
+.trackprobe-partners-logos img:hover {
+  opacity: 1; filter: grayscale(0%);
+}
+
+/* ----- 11. CTA ----- */
+.trackprobe-cta {
+  position: relative; border-radius: 14px; overflow: hidden; margin: 10px 0 32px;
+  background: #14263C;
+}
+.trackprobe-cta-content {
+  padding: 56px 58px;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.trackprobe-cta-content h2 {
+  font-size: clamp(22px, 3.4vw, 34px); font-weight: 900; color: #fff;
+  margin-bottom: 12px; max-width: 560px; line-height: 1.15;
+}
+.trackprobe-cta-content p {
+  font-size: 14px; color: rgba(255,255,255,.78); max-width: 520px;
+  line-height: 1.7; margin-bottom: 26px;
+}
+.trackprobe-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.trackprobe-btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #A0BF30; color: #0e0a2e; border: none;
+  padding: 13px 26px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  text-decoration: none; transition: all .25s;
+}
+.trackprobe-btn-primary:hover { background: #b8d845; transform: translateY(-2px); }
+.trackprobe-btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.55);
+  padding: 13px 26px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  text-decoration: none; transition: all .25s;
+}
+.trackprobe-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 900px) {
+  .trackprobe-product-banner img { height: 420px; }
+  .trackprobe-hl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .trackprobe-feat-row { grid-template-columns: 1fr; direction: ltr !important; }
+  .trackprobe-feat-img img { min-height: 220px; height: 220px; }
+  .trackprobe-integration { grid-template-columns: 1fr; }
+  .trackprobe-apps-grid { grid-template-columns: 1fr 1fr; }
+  .trackprobe-stats { padding: 28px 24px; }
+  .trackprobe-stat-divider { display: none; }
+  .trackprobe-hero-overlay { padding: 24px 24px; }
+  .trackprobe-product-banner-overlay { padding: 24px 28px; }
+  .trackprobe-software-overlay { padding: 28px 30px; }
+  .trackprobe-cta-content { padding: 36px 30px; }
+}
+@media (max-width: 480px) {
+  .trackprobe-hl-grid { grid-template-columns: 1fr; }
+  .trackprobe-apps-grid { grid-template-columns: 1fr; }
+  .trackprobe-product-banner img { height: 320px; }
+  .trackprobe-stats { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+<div class="trackprobe-page">
+
+  <!-- ===== 1. HERO ===== -->
+  <div class="trackprobe-hero">
+    <iframe
+      src="https://www.youtube.com/embed/MbwvSEXWvas?autoplay=1&mute=1&controls=0&loop=1&playlist=MbwvSEXWvas&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      title="TrackProbe – Sistema de Sondagem 3D Rastreada"
+    ></iframe>
+    <div class="trackprobe-hero-overlay">
+      <span class="trackprobe-hero-tag">Sondagem 3D • Rastreamento Ótico • CMM-Free</span>
+      <div class="trackprobe-hero-model">TrackProbe</div>
+      <div class="trackprobe-hero-sub">Sistema de Sondagem 3D Rastreada — metrologia tátil com rastreamento ótico para acesso total a qualquer feature geométrica</div>
+      <div class="trackprobe-hero-badges">
+        <div class="trackprobe-hero-chip">
+          <span class="trackprobe-hero-chip-val">0,005 mm</span>
+          <span class="trackprobe-hero-chip-lbl">REPETIBILIDADE</span>
+        </div>
+        <div class="trackprobe-hero-chip">
+          <span class="trackprobe-hero-chip-val">6DOF</span>
+          <span class="trackprobe-hero-chip-lbl">RASTREAMENTO</span>
+        </div>
+        <div class="trackprobe-hero-chip">
+          <span class="trackprobe-hero-chip-val">Wireless</span>
+          <span class="trackprobe-hero-chip-lbl">OPERAÇÃO</span>
+        </div>
+        <div class="trackprobe-hero-chip">
+          <span class="trackprobe-hero-chip-val">1000</span>
+          <span class="trackprobe-hero-chip-lbl">PTS/SEG</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 2. INTRO ===== -->
+  <div class="trackprobe-intro">
+    <h2>O TrackProbe combina rastreamento ótico 6DOF com sondagem tátil de alta precisão — permitindo medir qualquer feature geométrica, inclusive furos profundos, cavidades e superfícies internas inacessíveis ao escaneamento convencional.</h2>
+    <p>Funcionando como um CMM sem fio e sem mesa fixa, o TrackProbe pode ser utilizado diretamente no chão de fábrica, em peças de grande porte ou em aplicações in-situ — substituindo as limitações dos bancos de medição tradicionais com total flexibilidade e mobilidade.</p>
+  </div>
+
+  <!-- ===== 3. HERO PRODUCT BANNER ===== -->
+  <div class="trackprobe-product-banner">
+    <img src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_field_wide.webp" alt="TrackProbe – Sistema de Sondagem 3D em campo" loading="lazy"/>
+    <div class="trackprobe-product-banner-overlay">
+      <h2>Sondagem Tátil com Liberdade Total de Movimento</h2>
+      <p>O TrackProbe rastreia a posição e orientação da sonda em 6 graus de liberdade, em tempo real, dentro do volume do sistema de rastreamento — eliminando a necessidade de fixtures rígidas e ampliando as possibilidades de medição em campo.</p>
+      <div class="trackprobe-pill-list">
+        <span class="trackprobe-pill">Rastreamento ótico 6DOF em tempo real</span>
+        <span class="trackprobe-pill">Sondas intercambiáveis para diversas aplicações</span>
+        <span class="trackprobe-pill">Compatível com toda a linha TrackScan</span>
+        <span class="trackprobe-pill">Operação sem fio — sem limitação de cabo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 4. HIGHLIGHT CARDS ===== -->
+  <div class="trackprobe-hl-title">Quatro Razões para Escolher o TrackProbe</div>
+  <div class="trackprobe-hl-grid">
+    <div class="trackprobe-hl-card">
+      <div class="trackprobe-hl-icon"><i class="fa fa-crosshairs"></i></div>
+      <div class="trackprobe-hl-val">0,005 mm</div>
+      <div class="trackprobe-hl-unit">Repetibilidade</div>
+      <h3>Precisão Submilimétrica</h3>
+      <p>Metrologia tátil com repetibilidade de 0,005 mm — resultados confiáveis mesmo em features críticas e de difícil acesso.</p>
+    </div>
+    <div class="trackprobe-hl-card">
+      <div class="trackprobe-hl-icon"><i class="fa fa-arrows-rotate"></i></div>
+      <div class="trackprobe-hl-val">6DOF</div>
+      <div class="trackprobe-hl-unit">Graus de Liberdade</div>
+      <h3>Rastreamento Completo</h3>
+      <p>A posição e orientação da sonda são rastreadas em 6 eixos simultaneamente — qualquer geometria, qualquer ângulo de abordagem.</p>
+    </div>
+    <div class="trackprobe-hl-card">
+      <div class="trackprobe-hl-icon"><i class="fa fa-wifi"></i></div>
+      <div class="trackprobe-hl-val">100%</div>
+      <div class="trackprobe-hl-unit">Wireless</div>
+      <h3>Mobilidade Sem Fios</h3>
+      <p>Sem cabos conectados à base — o operador move a sonda livremente por toda a extensão da peça, sem restrições de alcance.</p>
+    </div>
+    <div class="trackprobe-hl-card">
+      <div class="trackprobe-hl-icon"><i class="fa fa-layer-group"></i></div>
+      <div class="trackprobe-hl-val">CMM</div>
+      <div class="trackprobe-hl-unit">Substituto Portátil</div>
+      <h3>Metrologia In-Situ</h3>
+      <p>Leva a medição até a peça — ferramentas em campo, grandes estruturas e peças em produção, sem transportar para uma sala de metrologia.</p>
+    </div>
+  </div>
+
+  <!-- ===== 5. FEATURES ===== -->
+  <div class="trackprobe-feat-title">O Que o TrackProbe Torna Possível</div>
+  <div class="trackprobe-features">
+
+    <!-- Feature 1 — Sondagem + Escaneamento (com imagem) -->
+    <div class="trackprobe-feat-row">
+      <div class="trackprobe-feat-body">
+        <h3>Escaneamento e Sondagem na Mesma Plataforma</h3>
+        <p>O TrackProbe opera em conjunto com o sistema de rastreamento ótico TrackScan — os mesmos marcadores, o mesmo tracker, a mesma sessão de medição. Escaneia a geometria geral com o scanner 3D e vai além com a sonda para medir furos, rasgos, chanfros e cavidades inacessíveis ao laser.</p>
+        <ul class="trackprobe-feat-list">
+          <li>Combine escaneamento de superfície com sondagem de features internas</li>
+          <li>Mesmos marcadores retroreflexivos para scanner e sonda</li>
+          <li>Sem necessidade de re-referenciar entre modos</li>
+          <li>Dados integrados em um único sistema de coordenadas</li>
+        </ul>
+        <span class="trackprobe-feat-adv">Vantagem: Solução completa em uma plataforma</span>
+      </div>
+      <div class="trackprobe-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_demo.webp" alt="Sondagem e escaneamento 3D integrados" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 2 — Acesso a Features (reverse, imagem) -->
+    <div class="trackprobe-feat-row reverse">
+      <div class="trackprobe-feat-body light">
+        <h3>Acesso Total a Geometrias Complexas</h3>
+        <p>Furos profundos, cavidades internas, rosqueados, chanfros e superfícies com obstruções são desafios para qualquer scanner 3D. O TrackProbe elimina essas limitações ao acessar fisicamente cada feature — registrando coordenadas precisas onde a câmera não chega.</p>
+        <ul class="trackprobe-feat-list">
+          <li>Medição de furos com diâmetros a partir de 0,5 mm</li>
+          <li>Profundidade sem limitação de acesso óptico</li>
+          <li>Sondas esféricas, cilíndricas, disco e ponta em estrela</li>
+          <li>Compensação automática de deflexão da haste</li>
+        </ul>
+        <span class="trackprobe-feat-adv">Vantagem: Nenhuma feature fica sem medir</span>
+      </div>
+      <div class="trackprobe-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_position.webp" alt="Acesso a furos profundos e cavidades internas" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- Feature 3 — CMM Portátil (sem imagem - solid bg) -->
+    <div class="trackprobe-feat-row">
+      <div class="trackprobe-feat-body-solid" style="grid-column: 1; grid-row: 1;">
+        <h3>Substituição do CMM Convencional</h3>
+        <p>Máquinas de Medição por Coordenadas (CMMs) tradicionais exigem laboratório climatizado, fixação rígida da peça e longos tempos de setup. O TrackProbe entrega a mesma precisão tátil diretamente no chão de fábrica — sem mesa de granito, sem clima controlado, sem limitação de tamanho de peça.</p>
+        <ul>
+          <li>Medição in-situ — a sonda vai até a peça, não o contrário</li>
+          <li>Peças de grande porte sem limite de volume de trabalho da CMM</li>
+          <li>Redução de tempo de ciclo de inspeção</li>
+          <li>ROI comprovado frente ao investimento em CMM de grande porte</li>
+        </ul>
+      </div>
+      <div class="trackprobe-feat-body-solid" style="background: #A0BF30; grid-column: 2; grid-row: 1; padding: 44px 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="width: 56px; height: 56px; border-radius: 14px; background: rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <i class="fa fa-ruler-combined" style="font-size: 24px; color: #fff;"></i>
+          </div>
+          <div>
+            <div style="font-size: 28px; font-weight: 900; color: #fff; line-height: 1;">CMM Portátil</div>
+            <div style="font-size: 12px; color: rgba(255,255,255,.8); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px;">Sem Sala de Metrologia</div>
+          </div>
+        </div>
+        <p style="font-size: 14px; color: rgba(255,255,255,.92); line-height: 1.7;">Precisão metrológica onde você precisar — chão de fábrica, campo ou linha de montagem. Medição rastreada sem limitações físicas.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 4px;">
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.9); font-weight: 600;">
+            <i class="fa fa-check" style="color: rgba(255,255,255,.8);"></i> Inspeção GD&amp;T completa
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.9); font-weight: 600;">
+            <i class="fa fa-check" style="color: rgba(255,255,255,.8);"></i> Relatórios automáticos CAD vs. real
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.9); font-weight: 600;">
+            <i class="fa fa-check" style="color: rgba(255,255,255,.8);"></i> Volume de trabalho ilimitado
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.9); font-weight: 600;">
+            <i class="fa fa-check" style="color: rgba(255,255,255,.8);"></i> Setup em minutos
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 4 — Calibração Automática (reverse, com imagem) -->
+    <div class="trackprobe-feat-row reverse">
+      <div class="trackprobe-feat-body light">
+        <h3>Calibração Automática da Ponta</h3>
+        <p>O sistema detecta automaticamente a geometria e o desvio da ponta de sondagem ativa — sem procedimentos manuais demorados entre trocas de sonda. A compensação dinâmica de deflexão corrige em tempo real o desvio da haste, garantindo que cada ponto coletado seja absolutamente preciso independentemente do ângulo de medição.</p>
+        <ul class="trackprobe-feat-list">
+          <li>Detecção automática da ponta ativa</li>
+          <li>Compensação de deflexão via modelo FEA em tempo real</li>
+          <li>Calibração rápida sem interrupção do processo</li>
+          <li>Certificação ISO 10360 e VDI 2617</li>
+        </ul>
+        <span class="trackprobe-feat-adv">Vantagem: Medição contínua sem pausas</span>
+      </div>
+      <div class="trackprobe-feat-img">
+        <img src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_in_use.webp" alt="Calibração automática de ponta TrackProbe" loading="lazy"/>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 5b. SHOWCASE BANNERS ===== -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+    <div style="position:relative;border-radius:14px;overflow:hidden;">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_factory.jpg" alt="TrackProbe em linha de produção automotiva" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block;"/>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,5,40,.88) 0%,rgba(10,5,40,.3) 55%,transparent 80%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;">
+        <div style="font-size:12px;color:#A0BF30;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">Indústria Automotiva</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.3;">Inspeção de linha de produção com sondagem rastreada</div>
+      </div>
+    </div>
+    <div style="position:relative;border-radius:14px;overflow:hidden;">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_largescale.jpg" alt="TrackProbe medição em grande escala" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block;"/>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,5,40,.88) 0%,rgba(10,5,40,.3) 55%,transparent 80%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;">
+        <div style="font-size:12px;color:#A0BF30;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">Grandes Estruturas</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.3;">Sondagem em campo com cobertura a longa distância</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 6. STATS STRIP ===== -->
+  <div class="trackprobe-stats">
+    <div class="trackprobe-stat">
+      <div class="trackprobe-stat-val">0,005 mm</div>
+      <div class="trackprobe-stat-lbl">Repetibilidade</div>
+    </div>
+    <div class="trackprobe-stat-divider"></div>
+    <div class="trackprobe-stat">
+      <div class="trackprobe-stat-val">6DOF</div>
+      <div class="trackprobe-stat-lbl">Rastreamento</div>
+    </div>
+    <div class="trackprobe-stat-divider"></div>
+    <div class="trackprobe-stat">
+      <div class="trackprobe-stat-val">1000</div>
+      <div class="trackprobe-stat-lbl">Pontos/segundo</div>
+    </div>
+    <div class="trackprobe-stat-divider"></div>
+    <div class="trackprobe-stat">
+      <div class="trackprobe-stat-val">0,5 mm</div>
+      <div class="trackprobe-stat-lbl">Diâmetro mínimo de sonda</div>
+    </div>
+    <div class="trackprobe-stat-divider"></div>
+    <div class="trackprobe-stat">
+      <div class="trackprobe-stat-val">Wireless</div>
+      <div class="trackprobe-stat-lbl">Operação sem fio</div>
+    </div>
+  </div>
+
+  <!-- ===== 7. INTEGRATION CARDS ===== -->
+  <div class="trackprobe-integration">
+    <div class="trackprobe-integration-card">
+      <div class="trackprobe-int-icon"><i class="fa fa-diagram-project"></i></div>
+      <h3>Integração com o Ecossistema SCANOLOGY</h3>
+      <p>O TrackProbe foi projetado para trabalhar em perfeita harmonia com os sistemas de rastreamento ópticos da SCANOLOGY — usando os mesmos marcadores retrorreflexivos e o mesmo software DefinSight para uma experiência de medição unificada.</p>
+      <ul>
+        <li>TrackScan-Sharp — rastreamento de grande volume</li>
+        <li>NimbleTrack-C / E Gen2 — rastreamento compacto</li>
+        <li>M-Track — rastreamento portátil em campo</li>
+        <li>Dados de sondagem e escaneamento no mesmo arquivo</li>
+      </ul>
+    </div>
+    <div class="trackprobe-integration-card dark">
+      <div class="trackprobe-int-icon"><i class="fa fa-cogs"></i></div>
+      <h3>Compatibilidade com Software de Metrologia</h3>
+      <p>Os dados coletados pelo TrackProbe são compatíveis com os principais softwares de metrologia industriais — permitindo integração total com workflows já existentes sem mudanças de plataforma.</p>
+      <ul>
+        <li>DefinSight — software nativo SCANOLOGY</li>
+        <li>PolyWorks Inspector — análise e GD&amp;T completos</li>
+        <li>Geomagic Control X — comparação CAD</li>
+        <li>Exportação para IGES, STEP, ASCII, CSV</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 8. SPECS ===== -->
+  <div class="trackprobe-specs" id="specs">
+    <div class="trackprobe-specs-title">Especificações Técnicas</div>
+    <div style="text-align:center;margin-bottom:28px;">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_diagram.jpg" alt="Diagrama técnico TrackProbe" loading="lazy" style="max-width:100%;border-radius:12px;"/>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Parâmetro</th>
+          <th>Especificação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Categoria</td>
+          <td>Sistema de Sondagem 3D Rastreada (3D Probing System)</td>
+        </tr>
+        <tr>
+          <td>Repetibilidade de Medição</td>
+          <td>±0,005 mm</td>
+        </tr>
+        <tr>
+          <td>Precisão de Medição (sistema)</td>
+          <td>Depende do sistema de rastreamento utilizado (TrackScan-Sharp, NimbleTrack, M-Track)</td>
+        </tr>
+        <tr>
+          <td>Taxa de Aquisição</td>
+          <td>1.000 pontos/segundo</td>
+        </tr>
+        <tr>
+          <td>Rastreamento da Sonda</td>
+          <td>6DOF (6 graus de liberdade) em tempo real</td>
+        </tr>
+        <tr>
+          <td>Tipos de Sonda</td>
+          <td>Esférica, cilíndrica, disco, estrela</td>
+        </tr>
+        <tr>
+          <td>Diâmetros de Sonda</td>
+          <td>0,5 mm – 20 mm</td>
+        </tr>
+        <tr>
+          <td>Força de Sondagem</td>
+          <td>0,1 – 2,0 N (ajustável conforme aplicação)</td>
+        </tr>
+        <tr>
+          <td>Compensação de Deflexão</td>
+          <td>Automática via modelo FEA em tempo real</td>
+        </tr>
+        <tr>
+          <td>Calibração de Ponta</td>
+          <td>Automática — detecção e calibração ao inserir a sonda</td>
+        </tr>
+        <tr>
+          <td>Operação</td>
+          <td>Sem fio (Wireless) — sem cabo entre sonda e tracker</td>
+        </tr>
+        <tr>
+          <td>Volume de Trabalho</td>
+          <td>Definido pelo sistema de rastreamento integrado</td>
+        </tr>
+        <tr>
+          <td>Compatibilidade</td>
+          <td>TrackScan-Sharp, NimbleTrack Gen2, M-Track e demais sistemas SCANOLOGY</td>
+        </tr>
+        <tr>
+          <td>Software</td>
+          <td>DefinSight, PolyWorks Inspector, Geomagic Control X</td>
+        </tr>
+        <tr>
+          <td>Análise</td>
+          <td>GD&amp;T, mapa colorido de desvio, relatório CAD vs. real, ISO 10360 / VDI 2617</td>
+        </tr>
+        <tr>
+          <td>Certificação</td>
+          <td>ISO 10360, VDI 2617</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== 9. APPLICATIONS ===== -->
+  <div class="trackprobe-apps-title" id="applications">Aplicações Industriais</div>
+  <div class="trackprobe-apps-grid">
+    <div class="trackprobe-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_aeroespacial.png" alt="Aeroespacial" loading="lazy"/>
+      <div class="trackprobe-app-label">Aeroespacial</div>
+    </div>
+    <div class="trackprobe-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_automotivo.png" alt="Automotivo" loading="lazy"/>
+      <div class="trackprobe-app-label">Automotivo</div>
+    </div>
+    <div class="trackprobe-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_moldes.png" alt="Moldes e Ferramentaria" loading="lazy"/>
+      <div class="trackprobe-app-label">Moldes &amp; Ferramentaria</div>
+    </div>
+    <div class="trackprobe-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_energia.png" alt="Energia e Indústria Pesada" loading="lazy"/>
+      <div class="trackprobe-app-label">Energia &amp; Ind. Pesada</div>
+    </div>
+    <div class="trackprobe-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_ferroviario.png" alt="Ferrovia e Naval" loading="lazy"/>
+      <div class="trackprobe-app-label">Ferrovia &amp; Naval</div>
+    </div>
+    <div class="trackprobe-app-card">
+      <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_outros.png" alt="Outros Setores" loading="lazy"/>
+      <div class="trackprobe-app-label">Outros Setores</div>
+    </div>
+  </div>
+
+  <!-- ===== 10. SOFTWARE ===== -->
+  <div class="trackprobe-software">
+    <img class="bg" src="https://enterfix.com.br/wp-content/uploads/2026/03/trackprobe_closeup.jpg" alt="DefinSight Software" loading="lazy"/>
+    <div class="trackprobe-software-overlay">
+      <div class="trackprobe-definsight-badge">
+        <span>DefinSight</span>
+        <small>SOFTWARE METROLÓGICO</small>
+      </div>
+      <h2>Software Profissional para Medição e Inspeção 3D</h2>
+      <p>O DefinSight é o software nativo da SCANOLOGY para metrologia 3D de precisão — integra dados do TrackProbe e do TrackScan em um único ambiente para inspeção dimensional completa, análise GD&amp;T e geração automática de relatórios.</p>
+      <div class="trackprobe-sw-features">
+        <span class="trackprobe-sw-feat"><i class="fa fa-check-circle"></i> Dados de sondagem e escaneamento em um único arquivo</span>
+        <span class="trackprobe-sw-feat"><i class="fa fa-check-circle"></i> Análise GD&amp;T e mapa colorido de desvios</span>
+        <span class="trackprobe-sw-feat"><i class="fa fa-check-circle"></i> Relatório automático com comparação CAD vs. real</span>
+        <span class="trackprobe-sw-feat"><i class="fa fa-check-circle"></i> Compatível com PolyWorks, Geomagic e outros</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PARTNER LOGOS ===== -->
+  <div class="trackprobe-partners">
+    <div class="trackprobe-partners-title">Software Partners</div>
+    <div class="trackprobe-partners-logos">
+      <img src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" alt="Zeiss" loading="lazy"/>
+      <img src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" alt="Geomagic" loading="lazy"/>
+      <img src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" alt="PolyWorks" loading="lazy"/>
+      <img src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" alt="Verisurf" loading="lazy"/>
+    </div>
+  </div>
+
+  <!-- ===== 11. CTA ===== -->
+  <div class="trackprobe-cta">
+    <div class="trackprobe-cta-content">
+      <h2>Leve a Precisão da Metrologia Tátil para o Chão de Fábrica</h2>
+      <p>Fale com nossos especialistas em metrologia 3D e descubra como o TrackProbe pode substituir ou complementar sua CMM, com total liberdade de movimento, precisão certificada e integração perfeita ao ecossistema SCANOLOGY.</p>
+      <div class="trackprobe-cta-btns">
+        <a class="trackprobe-btn-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Falar com Especialista
+        </a>
+        <a class="trackprobe-btn-outline" href="https://lp.enterfix.com.br/catalogo-trackprobe" target="_blank" rel="noopener">
+          <i class="fa fa-download"></i> Baixar Catálogo
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

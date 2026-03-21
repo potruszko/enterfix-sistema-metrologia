@@ -1,0 +1,194 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>AutoScan-T - Sistema de Digitalização Industrial Turbo</h1>
+
+<p class="produto-breve-descricao">Sistema avançado de digitalização 3D com tecnologia de ponta para aplicações industriais profissionais.</p>
+
+O <strong>AutoScan-T</strong> é um sistema de digitalização 3D industrial de alta velocidade, projetado para máxima produtividade em ambientes de produção exigentes. Este sistema estabelece novos padrões de velocidade e precisão para digitalização industrial.
+
+<strong>Características Principais:</strong>
+• Sistema de digitalização de alta velocidade
+• Tecnologia Turbo de processamento acelerado
+• Precisão industrial mantida em alta velocidade
+• Sistema de fixação rápida de peças
+• Integração com sistemas de produção
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">AutoScan-T - Sistema de Digitalização Industrial Turbo - Tecnologia Avançada de Digitalização 3D</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Sistema avançado de digitalização 3D com tecnologia de ponta para aplicações industriais que exigem máxima precisão e eficiência operacional.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Mesa</h3>
+        <p style="font-size: 16px;">Automática</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">360°</h3>
+        <p style="font-size: 16px;">Rotação</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Batch</h3>
+        <p style="font-size: 16px;">Processamento</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Pro</h3>
+        <p style="font-size: 16px;">Sistema</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração Técnica</h3>
+<p>Veja o AutoScan-T demonstrando suas capacidades avançadas de digitalização 3D.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Tecnologia de digitalização avançada</li>
+<li>Captura de alta precisão</li>
+<li>Processamento otimizado</li>
+<li>Interface profissional</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas</h3>
+
+[vc_row][vc_row][vc_column][vc_column_text]
+<h3>Tecnologia Turbo de Alta Velocidade</h3>
+
+O AutoScan-T utiliza tecnologia proprietária Turbo que combina scanners de alta velocidade com processamento acelerado por GPU, permitindo digitalização industrial com throughput excepcional.
+
+<strong>Especificações Técnicas Turbo:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Industrial</strong></td>
+<td>±0,02mm</td>
+</tr>
+<tr>
+<td><strong>Velocidade de Digitalização</strong></td>
+<td>5.000.000 pontos/segundo</td>
+</tr>
+<tr>
+<td><strong>Tempo de Ciclo</strong></td>
+<td>30-90 segundos/peça</td>
+</tr>
+<tr>
+<td><strong>Volume de Trabalho</strong></td>
+<td>600mm × 400mm × 300mm</td>
+</tr>
+<tr>
+<td><strong>Sistema de Fixação</strong></td>
+<td>Pneumático rápido</td>
+</tr>
+<tr>
+<td><strong>Processamento</strong></td>
+<td>GPU dedicada 32GB</td>
+</tr>
+<tr>
+<td><strong>Interface Industrial</strong></td>
+<td>PLC compatível</td>
+</tr>
+<tr>
+<td><strong>Throughput</strong></td>
+<td>40-120 peças/hora</td>
+</tr>
+<tr>
+<td><strong>Certificação Industrial</strong></td>
+<td>IP54, CE industrial</td>
+</tr>
+<tr>
+<td><strong>Disponibilidade</strong></td>
+<td>24/7 operação contínua</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações de Alta Produtividade</h3>
+
+<strong>Produção Automotiva:</strong>
+• Inspeção rápida de componentes em série
+• Controle de qualidade in-line
+• Verificação dimensional de alta velocidade
+
+<strong>Eletrônicos e Dispositivos:</strong>
+• Inspeção de placas e componentes
+• Controle dimensional de conectores
+• Verificação de soldas e montagens
+
+<strong>Manufatura de Precisão:</strong>
+• Inspeção de componentes usinados
+• Verificação de tolerâncias críticas
+• Controle de processo em tempo real
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Software AutoScan Turbo</h3>
+
+O AutoScan-T utiliza o software AutoScan Turbo, otimizado para máxima velocidade de processamento:
+
+<strong>Recursos Turbo:</strong>
+• Processamento paralelo em GPU dedicada
+• Algoritmos otimizados para velocidade
+• Interface industrial simplificada
+• Relatórios instantâneos de qualidade
+• Integração com sistemas MES
+• Análise estatística em tempo real
+
+<strong>Performance Extrema:</strong>
+Processamento de dados em tempo real para máxima produtividade
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens da Tecnologia Turbo</h3>
+
+<strong>Velocidade Extrema:</strong>
+5 milhões de pontos por segundo com processamento em tempo real.
+
+<strong>Produtividade Máxima:</strong>
+Até 120 peças por hora mantendo precisão industrial.
+
+<strong>Eficiência Operacional:</strong>
+Sistema de fixação rápida minimiza tempo de setup.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Turbo Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para sistemas de alta velocidade:
+
+• <strong>Otimização de Performance:</strong> Consultoria para maximizar throughput
+• <strong>Manutenção Preditiva:</strong> Monitoramento contínuo de performance
+• <strong>Treinamento Avançado:</strong> Especialização em sistemas de alta velocidade
+• <strong>Suporte 24/7:</strong> Assistência prioritária para produção contínua
+• <strong>Upgrades de Performance:</strong> Melhorias contínuas de velocidade
+
+<strong>Agende uma Demonstração e experimente a velocidade turbo da digitalização industrial!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: scanner 3d, autoscan t, digitalização 3d, metrologia 3d, controle qualidade, scanology, enterfix, precisão industrial -->

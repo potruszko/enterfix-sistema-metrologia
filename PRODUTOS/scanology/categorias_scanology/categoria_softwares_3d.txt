@@ -1,0 +1,78 @@
+[vc_row full_width="stretch_row" bg_type="grad" bg_override="full" css=".vc_custom_1743499489559{padding-top: 60px !important;padding-bottom: 80px !important;background-color: #F2F2F2 !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FCFCFC), color-stop(100%, #E3E3E3));background: -moz-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -webkit-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -o-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -ms-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);"][vc_column][ind_custom_heading heading="SOFTWARES 3D PROFISSIONAIS" position="center" margin_bottom="32"][vc_column_text css_animation="fadeInUp" css=".vc_custom_1743499181401{padding: 32px !important;text-align: center;}"]
+
+<p style="text-align: center;font-size: 18px;line-height: 1.6">
+A linha de <strong>Softwares 3D Profissionais</strong> da Scanology oferece <strong>ferramentas completas</strong> para processamento, análise e visualização de dados 3D com recursos de nível industrial.
+</p>
+
+<p style="text-align: center;font-size: 16px;color: #666;line-height: 1.6">
+Desde análise dimensional avançada até visualização em realidade virtual, nossa suíte de softwares garante <strong>workflow completo</strong> para todas as necessidades de digitalização 3D profissional.
+</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1743499551634{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;padding-top: 40px !important;padding-bottom: 80px !important;}"][vc_column]
+
+[ind_custom_heading heading="SOFTWARES DISPONÍVEIS" heading_color="#000000" position="center" margin_bottom="32"]
+
+[vc_column_text css_animation="fadeInUp"]
+
+<table style="width: 85%;max-width: 1000px;margin: 40px auto;border-collapse: collapse;text-align: center;font-size: 16px;line-height: 1.6;border-radius: 8px;overflow: hidden">
+  <thead style="background-color: #34495E;color: #ffffff">
+    <tr>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Software</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Especialidade</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Recursos Principais</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Aplicação</th>
+    </tr>
+  </thead>
+  <tbody style="color: #333">
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>3DeVOK Studio</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Plataforma completa</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Suíte integrada 50+ formatos</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Workflow profissional</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>DefiniSight</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Análise dimensional</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">GD&T, comparação CAD</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Metrologia industrial</td>
+    </tr>
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>ScanViewer</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Visualização 3D</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Processamento, edição</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Uso geral profissional</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>TViewer</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Realidade virtual</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">VR/AR, colaboração</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Visualização imersiva</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin: 40px auto;max-width: 800px;text-align: center">
+  <h3 style="color: #333;margin-bottom: 20px">Características dos Softwares</h3>
+  <div style="display: flex;justify-content: space-around;flex-wrap: wrap;gap: 20px">
+    <div style="flex: 1;min-width: 180px;background: #f9f9f9;padding: 20px;border-radius: 8px">
+      <h4 style="color: #34495E">Interface Profissional</h4>
+      <p>Otimizada para produtividade</p>
+    </div>
+    <div style="flex: 1;min-width: 180px;background: #f9f9f9;padding: 20px;border-radius: 8px">
+      <h4 style="color: #34495E">Integração Total</h4>
+      <p>Compatibilidade ampla</p>
+    </div>
+    <div style="flex: 1;min-width: 180px;background: #f9f9f9;padding: 20px;border-radius: 8px">
+      <h4 style="color: #34495E">APIs Abertas</h4>
+      <p>Extensibilidade completa</p>
+    </div>
+    <div style="flex: 1;min-width: 180px;background: #f9f9f9;padding: 20px;border-radius: 8px">
+      <h4 style="color: #34495E">Cloud Ready</h4>
+      <p>Sincronização automática</p>
+    </div>
+  </div>
+</div>
+
+[/vc_column_text][/vc_column][/vc_row]

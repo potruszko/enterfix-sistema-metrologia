@@ -163,7 +163,7 @@ router.get('/auth/callback', async (req, res) => {
         const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
         res.redirect(`${frontendUrl}/configuracoes?bling=ok`);
     } catch (err) {
-        const msg = err.response ?.data || err.message;
+        const msg = err.response ? .data || err.message;
         res.status(500).json({
             erro: 'Falha na autenticaÃ§Ã£o Bling',
             detalhe: msg
@@ -221,10 +221,10 @@ router.get('/produtos', async (req, res) => {
         });
         res.json(resp.data);
     } catch (err) {
-        const status = err.response ?.status || 500;
+        const status = err.response ? .status || 500;
         res.status(status).json({
             erro: err.message,
-            detalhe: err.response ?.data
+            detalhe: err.response ? .data
         });
     }
 });
@@ -236,10 +236,10 @@ router.get('/produtos/:id', async (req, res) => {
         const resp = await blingClient(token).get(`/produtos/${req.params.id}`);
         res.json(resp.data);
     } catch (err) {
-        const status = err.response ?.status || 500;
+        const status = err.response ? .status || 500;
         res.status(status).json({
             erro: err.message,
-            detalhe: err.response ?.data
+            detalhe: err.response ? .data
         });
     }
 });
@@ -289,7 +289,7 @@ router.post('/sincronizar/:produtoId', async (req, res) => {
             // Cria novo produto no Bling
             const resp = await client.post('/produtos', payload);
             respData = resp.data;
-            blingId = respData ?.data ?.id;
+            blingId = respData ? .data ? .id;
 
             if (blingId) {
                 db.prepare('UPDATE produtos SET bling_id = ?, status = ? WHERE id = ?')
@@ -307,10 +307,10 @@ router.post('/sincronizar/:produtoId', async (req, res) => {
             resposta: respData
         });
     } catch (err) {
-        const status = err.response ?.status || 500;
+        const status = err.response ? .status || 500;
         res.status(status).json({
             erro: 'Falha ao sincronizar com Bling',
-            detalhe: err.response ?.data || err.message
+            detalhe: err.response ? .data || err.message
         });
     }
 });
@@ -320,7 +320,7 @@ router.post('/importar/:blingId', async (req, res) => {
     try {
         const token = await obterAccessToken();
         const resp = await blingClient(token).get(`/produtos/${req.params.blingId}`);
-        const p = resp.data ?.data;
+        const p = resp.data ? .data;
         if (!p) return res.status(404).json({
             erro: 'Produto nÃ£o encontrado no Bling'
         });
@@ -344,7 +344,7 @@ router.post('/importar/:blingId', async (req, res) => {
             BM: 'BM',
             CM: 'CM'
         };
-        const tipo = Object.keys(prefixos).find(k => p.codigo ?.toUpperCase().startsWith(k)) || 'PM';
+        const tipo = Object.keys(prefixos).find(k => p.codigo ? .toUpperCase().startsWith(k)) || 'PM';
 
         const result = db.prepare(`
       INSERT INTO produtos (codigo, nome, tipo, bling_id, status)
@@ -356,10 +356,10 @@ router.post('/importar/:blingId', async (req, res) => {
             id: result.lastInsertRowid
         });
     } catch (err) {
-        const status = err.response ?.status || 500;
+        const status = err.response ? .status || 500;
         res.status(status).json({
             erro: err.message,
-            detalhe: err.response ?.data
+            detalhe: err.response ? .data
         });
     }
 });
@@ -380,10 +380,10 @@ router.get('/pedidos', async (req, res) => {
         });
         res.json(resp.data);
     } catch (err) {
-        const status = err.response ?.status || 500;
+        const status = err.response ? .status || 500;
         res.status(status).json({
             erro: err.message,
-            detalhe: err.response ?.data
+            detalhe: err.response ? .data
         });
     }
 });
@@ -395,10 +395,10 @@ router.get('/pedidos/:id', async (req, res) => {
         const resp = await blingClient(token).get(`/pedidos/vendas/${req.params.id}`);
         res.json(resp.data);
     } catch (err) {
-        const status = err.response ?.status || 500;
+        const status = err.response ? .status || 500;
         res.status(status).json({
             erro: err.message,
-            detalhe: err.response ?.data
+            detalhe: err.response ? .data
         });
     }
 });

@@ -1,0 +1,353 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos Principais do Software</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PROCESSING]" alt="Processamento Avançado" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Processamento IA</h4>
+<p style="font-size: 14px; line-height: 1.5;">Algoritmos inteligentes para processamento automático e otimizado de dados 3D.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_ANALYSIS]" alt="Análise Avançada" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Análise Completa</h4>
+<p style="font-size: 14px; line-height: 1.5;">Ferramentas avançadas de medição, comparação e análise dimensional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_VISUALIZATION]" alt="Visualização 3D" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Visualização 3D</h4>
+<p style="font-size: 14px; line-height: 1.5;">Renderização em tempo real com qualidade fotorrealística e interação intuitiva.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_EXPORT]" alt="Exportação Múltipla" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Exportação Flex</h4>
+<p style="font-size: 14px; line-height: 1.5;">Suporte nativo para múltiplos formatos industriais e CAD.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Resources Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>3DeVOK Studio - Plataforma de Software 3D Avançada</h1>
+
+<p class="produto-breve-descricao">Software profissional de digitalização 3D com recursos avançados para processamento, análise e visualização de dados tridimensionais.</p>
+
+O <strong>3DeVOK Studio</strong> é uma plataforma de software completa para processamento, análise e edição de dados 3D. Esta suíte profissional integra todas as ferramentas necessárias para workflows completos de digitalização 3D.
+
+<strong>Características Principais:</strong>
+• Suíte completa de software 3D profissional
+• Processamento avançado de nuvens de pontos
+• Ferramentas de edição e análise integradas
+• Suporte para múltiplos formatos 3D
+• Interface unificada para todos os scanners
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">3DeVOK Studio - Plataforma de Software 3D Avançada - Software Profissional de Digitalização 3D</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Software profissional de digitalização 3D com recursos avançados para processamento, análise e visualização de dados tridimensionais.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Studio</h3>
+        <p style="font-size: 16px;">Profissional</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">CAD</h3>
+        <p style="font-size: 16px;">Integração</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Render</h3>
+        <p style="font-size: 16px;">Renderização</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Suite</h3>
+        <p style="font-size: 16px;">Completa</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração do Software</h3>
+<p>Veja o 3DeVOK Studio em ação demonstrando seus recursos avançados de processamento 3D.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Interface intuitiva e profissional</li>
+<li>Processamento automático</li>
+<li>Recursos de análise avançados</li>
+<li>Exportação para múltiplos formatos</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações e Recursos do Software</h3>
+
+[vc_row]<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos Principais do Software</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PROCESSING]" alt="Processamento Avançado" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Processamento IA</h4>
+<p style="font-size: 14px; line-height: 1.5;">Algoritmos inteligentes para processamento automático e otimizado de dados 3D.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_ANALYSIS]" alt="Análise Avançada" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Análise Completa</h4>
+<p style="font-size: 14px; line-height: 1.5;">Ferramentas avançadas de medição, comparação e análise dimensional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_VISUALIZATION]" alt="Visualização 3D" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Visualização 3D</h4>
+<p style="font-size: 14px; line-height: 1.5;">Renderização em tempo real com qualidade fotorrealística e interação intuitiva.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_EXPORT]" alt="Exportação Múltipla" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Exportação Flex</h4>
+<p style="font-size: 14px; line-height: 1.5;">Suporte nativo para múltiplos formatos industriais e CAD.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Resources Section -->
+<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Integração e Compatibilidade</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Integração perfeita com ecossistema completo de digitalização 3D</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🔗 Conectividade Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Todos os scanners Scanology</li>
+            <li>Sistemas de rastreamento</li>
+            <li>Equipamentos de terceiros</li>
+            <li>APIs para desenvolvimento</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">💾 Formatos Suportados</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>STL, OBJ, PLY, ASC</li>
+            <li>IGES, STEP, CAD nativo</li>
+            <li>Formatos de metrologia</li>
+            <li>Exportação customizada</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Plataforma Software Integrada</h3>
+
+O 3DeVOK Studio oferece ambiente integrado que combina aquisição, processamento, análise e exportação de dados 3D em uma única plataforma profissional, compatível com todos os scanners da linha Scanology.
+
+<strong>Recursos da Plataforma:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Módulo</th>
+<th>Funcionalidades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aquisição</strong></td>
+<td>Controle unificado de todos scanners</td>
+</tr>
+<tr>
+<td><strong>Processamento</strong></td>
+<td>Algoritmos avançados de reconstrução</td>
+</tr>
+<tr>
+<td><strong>Edição</strong></td>
+<td>Ferramentas profissionais de edição 3D</td>
+</tr>
+<tr>
+<td><strong>Análise</strong></td>
+<td>Módulos de metrologia e inspeção</td>
+</tr>
+<tr>
+<td><strong>Visualização</strong></td>
+<td>Renderização em tempo real avançada</td>
+</tr>
+<tr>
+<td><strong>Exportação</strong></td>
+<td>50+ formatos de saída</td>
+</tr>
+<tr>
+<td><strong>Colaboração</strong></td>
+<td>Ferramentas de trabalho em equipe</td>
+</tr>
+<tr>
+<td><strong>Automação</strong></td>
+<td>Scripts e macros personalizáveis</td>
+</tr>
+<tr>
+<td><strong>Plugins</strong></td>
+<td>Extensibilidade via API</td>
+</tr>
+<tr>
+<td><strong>Cloud</strong></td>
+<td>Sincronização e backup automático</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações da Plataforma Studio</h3>
+
+<strong>Workflows Industriais:</strong>
+• Controle de qualidade automatizado
+• Inspeção dimensional completa
+• Relatórios de conformidade
+
+<strong>Design e Engenharia:</strong>
+• Engenharia reversa avançada
+• Prototipagem digital
+• Validação de design
+
+<strong>Pesquisa e Desenvolvimento:</strong>
+• Análise de dados científicos
+• Processamento de dados experimentais
+• Visualização de resultados
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Módulos Especializados</h3>
+
+O 3DeVOK Studio inclui módulos especializados para diferentes aplicações:
+
+<strong>Módulo de Metrologia:</strong>
+• Ferramentas de análise dimensional avançada
+• Comparação com modelos CAD
+• Relatórios de desvios automáticos
+• Certificação metrológica integrada
+
+<strong>Módulo de Renderização:</strong>
+• Engine de renderização fotorrealística
+• Suporte para materiais PBR
+• Iluminação avançada e ambientes HDR
+
+<strong>Módulo de Colaboração:</strong>
+• Compartilhamento de projetos em tempo real
+• Controle de versão integrado
+• Comentários e anotações 3D
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens da Plataforma</h3>
+
+<strong>Integração Completa:</strong>
+Uma única plataforma para todo o workflow de digitalização 3D.
+
+<strong>Profissionalidade:</strong>
+Ferramentas de nível industrial para aplicações críticas.
+
+<strong>Extensibilidade:</strong>
+APIs abertas permitem personalização e integração com sistemas existentes.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Integração e Compatibilidade</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Integração perfeita com ecossistema completo de digitalização 3D</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🔗 Conectividade Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Todos os scanners Scanology</li>
+            <li>Sistemas de rastreamento</li>
+            <li>Equipamentos de terceiros</li>
+            <li>APIs para desenvolvimento</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">💾 Formatos Suportados</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>STL, OBJ, PLY, ASC</li>
+            <li>IGES, STEP, CAD nativo</li>
+            <li>Formatos de metrologia</li>
+            <li>Exportação customizada</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Software Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para a plataforma 3DeVOK Studio:
+
+• <strong>Treinamento Completo:</strong> Cursos abrangentes em todos os módulos
+• <strong>Customização:</strong> Desenvolvimento de workflows personalizados
+• <strong>Suporte API:</strong> Assistência para desenvolvimento de plugins
+• <strong>Atualizações Regulares:</strong> Melhorias contínuas e novos recursos
+• <strong>Suporte Prioritário:</strong> Assistência técnica especializada
+
+<strong>Agende uma Demonstração e descubra o poder da plataforma 3DeVOK Studio!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Download CTA Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 80px !important;padding-bottom: 80px !important;}" el_class="cta-download-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Potencialize sua Digitalização 3D</h3>
+<p style="font-size: 1.3em; line-height: 1.6; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Descubra como nosso software pode maximizar o potencial dos seus dados 3D com recursos profissionais avançados.</p>
+
+<div style="margin-bottom: 40px;">
+<a href="[LINK_DOWNLOAD]" style="display: inline-block; background-color: #ffd700; color: #2c3e50; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+💾 DOWNLOAD GRATUITO
+</a>
+<a href="[LINK_DEMONSTRACAO]" style="display: inline-block; background-color: transparent; color: white; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; border: 2px solid white; transition: all 0.3s ease;">
+🎯 DEMO ONLINE
+</a>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📧</div>
+    <div style="font-size: 1.1em;">contato@enterfix.com.br</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">💬</div>
+    <div style="font-size: 1.1em;">Suporte Técnico</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">🚀</div>
+    <div style="font-size: 1.1em;">Treinamento Gratuito</div>
+</div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: software 3d, 3devok studio, digitalização 3d, processamento 3d, visualização 3d, análise 3d, scanology, enterfix -->

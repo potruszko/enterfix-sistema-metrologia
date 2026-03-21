@@ -1,0 +1,528 @@
+<style>
+/* ─────────────────────────────────────────────
+   PREFIX: .devmq  |  3DeVOK MQ — Enterfix
+   Replica estrutural da página 3devok.com
+───────────────────────────────────────────── */
+.devmq{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+.devmq *{box-sizing:border-box}
+
+/* ── ANIMAÇÕES ── */
+@keyframes devmq-fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.devmq-anim{animation:devmq-fadeUp .7s ease both}
+.devmq-anim-d1{animation-delay:.1s}.devmq-anim-d2{animation-delay:.25s}.devmq-anim-d3{animation-delay:.4s}
+.devmq-anim-d4{animation-delay:.55s}.devmq-anim-d5{animation-delay:.7s}.devmq-anim-d6{animation-delay:.85s}
+
+/* ── HERO ── */
+.devmq-hero{position:relative;background:#0a0f2e;border-radius:14px;overflow:hidden;margin-bottom:22px;min-height:420px;display:flex;align-items:flex-end}
+.devmq-hero-video{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;opacity:.38}
+.devmq-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(10,15,46,.92) 0%,transparent 65%);width:100%}
+.devmq-hero-tag{display:inline-block;background:rgba(160,191,48,.2);border:1px solid rgba(160,191,48,.5);border-radius:50px;padding:3px 14px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#c8e05a;margin-bottom:12px}
+.devmq-hero-title{font-size:26px;font-weight:900;color:#fff;margin:0 0 8px;line-height:1.25;max-width:600px}
+.devmq-hero-sub{font-size:13px;color:rgba(255,255,255,.8);margin:6px 0 18px;max-width:640px}
+.devmq-hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.devmq-hero-btn-blue{display:inline-block;padding:10px 22px;border-radius:6px;background:#A0BF30;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none}
+.devmq-hero-btn-outline{display:inline-block;padding:10px 22px;border-radius:6px;background:transparent;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.45)}
+.devmq-hero-product-img{position:absolute;right:24px;bottom:0;max-height:90%;width:auto;max-width:340px;z-index:3;object-fit:contain}
+
+/* ── HIGHLIGHTS ── */
+.devmq-prodes{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.devmq-prodes h1{font-size:17px;font-weight:800;color:#1F1659;text-align:center;margin:0 0 18px}
+.devmq-slides{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.devmq-slide-img{width:100%;border-radius:10px;display:block;object-fit:cover;max-height:240px}
+.devmq-desc-text{font-size:14px;color:#334155;line-height:1.75;margin:0 0 10px}
+.devmq-key-feats{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.devmq-key-feat{background:#f4f8e8;border:1px solid #c8dc82;border-radius:20px;padding:4px 12px;font-size:12.5px;color:#5a7200;font-weight:600}
+
+/* ── SYSTEM OVERVIEW ── */
+.devmq-system{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.devmq-system-inner{display:grid;grid-template-columns:1fr 1fr}
+.devmq-system-photo{width:100%;height:100%;object-fit:cover;display:block;min-height:260px}
+.devmq-system-icons{padding:28px 24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-content:center}
+.devmq-spec-icon{text-align:center}
+.devmq-spec-icon img{width:56px;height:56px;object-fit:contain;display:block;margin:0 auto 7px}
+.devmq-spec-icon p{font-size:11.5px;font-weight:700;color:#1F1659;margin:0;line-height:1.4}
+.devmq-cta-bar{background:linear-gradient(135deg,#161144,#1F1659);color:#fff;text-align:center;padding:20px 24px}
+.devmq-cta-bar h3{font-size:15px;font-weight:800;margin:0 0 10px}
+.devmq-cta-bar-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.devmq-cta-bar a{display:inline-block;padding:9px 20px;border-radius:6px;font-size:13.5px;font-weight:700;text-decoration:none}
+.devmq-cta-bar-primary{background:#fff;color:#1F1659}
+.devmq-cta-bar-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+
+/* ── FEATURE SECTIONS ── */
+.devmq-features-wrap{margin-bottom:16px}
+.devmq-feature{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:12px}
+.devmq-feature.rev{direction:rtl}
+.devmq-feature.rev > *{direction:ltr}
+.devmq-feature-img{width:100%;height:100%;object-fit:cover;min-height:240px;display:block}
+.devmq-feature-body{padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.devmq-feature-body h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 12px}
+.devmq-feature-body h3{font-size:13px;font-weight:700;color:#A0BF30;margin:0 0 10px}
+.devmq-feature-body ul{margin:0;padding-left:18px}
+.devmq-feature-body li{font-size:13.5px;color:#334155;line-height:1.65;margin-bottom:5px}
+.devmq-feature-body li strong{color:#1e293b}
+.devmq-feature-body p{font-size:13px;color:#475569;margin:0 0 6px}
+
+/* ── VÍDEO ── */
+.devmq-video-wrap{background:linear-gradient(135deg,#1F1659,#14263C);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.devmq-video-wrap h2{font-size:16px;font-weight:800;color:#fff;text-align:center;margin:0 0 18px}
+.devmq-iframe-wrap{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.devmq-iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── CARDS ── */
+.devmq-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.devmq-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+
+/* ── TABELA ── */
+.devmq-tbl-wrap{overflow-x:auto}
+.devmq-tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}
+.devmq-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:11.5px;font-weight:700}
+.devmq-tbl th:first-child{border-radius:6px 0 0 0}
+.devmq-tbl th:last-child{border-radius:0 6px 0 0}
+.devmq-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.devmq-tbl tr:nth-child(even) td{background:#f8fafc}
+.devmq-tbl tr:last-child td{border-bottom:none}
+.devmq-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+.devmq-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+.devmq-alert-amber{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #d97706;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#92400e;margin:14px 0 0;line-height:1.6}
+
+/* ── APLICAÇÕES ── */
+.devmq-apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:12px 0}
+.devmq-app{border-radius:10px;overflow:hidden;border:1px solid #e2e8f0}
+.devmq-app img{width:100%;height:160px;object-fit:cover;display:block}
+.devmq-app-body{padding:12px 14px;background:#fff}
+.devmq-app-body h3{font-size:13.5px;font-weight:700;color:#1F1659;margin:0 0 5px}
+.devmq-app-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.55}
+
+/* ── SOFTWARES ── */
+.devmq-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:22px 28px;margin-bottom:16px}
+.devmq-soft h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.devmq-soft-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;margin-top:12px}
+.devmq-soft-logos img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+/* ── CTA FINAL ── */
+.devmq-cta{background:linear-gradient(135deg,#161144,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.devmq-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.devmq-cta strong{color:#fff}
+.devmq-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.devmq-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.devmq-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+
+@media(max-width:700px){
+  .devmq-slides,.devmq-system-inner,.devmq-feature,.devmq-feature.rev{grid-template-columns:1fr;direction:ltr}
+  .devmq-feature.rev>*{direction:ltr}
+  .devmq-hero-product-img{display:none}
+  .devmq-prodes,.devmq-card,.devmq-soft,.devmq-video-wrap,.devmq-cta{padding:20px 16px}
+  .devmq-soft-logos{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:440px){
+  .devmq-system-icons{grid-template-columns:1fr 1fr}
+  .devmq-soft-logos{grid-template-columns:1fr}
+}
+</style>
+
+<div class="devmq">
+
+  <!-- ══════════════════════════════════════════════
+       HERO — vídeo de fundo + imagem do produto
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-hero">
+    <iframe class="devmq-hero-video"
+      src="https://www.youtube.com/embed/AwhwQ6hOgA8?autoplay=1&mute=1&loop=1&playlist=AwhwQ6hOgA8&controls=0&showinfo=0&modestbranding=1&rel=0"
+      allow="autoplay;encrypted-media" allowfullscreen loading="lazy" title="3DeVOK MQ"></iframe>
+    <img class="devmq-hero-product-img"
+      src="https://enterfix.com.br/wp-content/uploads/2025/11/6-scaled.png.webp"
+      alt="3DeVOK MQ Scanner 3D Colorido" />
+    <div class="devmq-hero-overlay">
+      <div class="devmq-hero-tag">📷 Scanner 3D Colorido — Laser IV + VCSEL</div>
+      <h1 class="devmq-hero-title devmq-anim devmq-anim-d1">3DeVOK MQ<br>Digitalização 3D Colorida Avançada</h1>
+      <p class="devmq-hero-sub devmq-anim devmq-anim-d2">
+        Precisão quasi-industrial com 22 linhas de laser infravermelho e luz estruturada VCSEL — para criadores, educadores e profissionais de saúde
+      </p>
+      <div class="devmq-hero-btns devmq-anim devmq-anim-d3">
+        <a class="devmq-hero-btn-blue" href="https://www.youtube.com/watch?v=AwhwQ6hOgA8" target="_blank" rel="noopener">▶ Assistir Vídeo</a>
+        <a class="devmq-hero-btn-outline" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Demo Gratuita</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HIGHLIGHTS — descrição + banners
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-prodes devmq-anim">
+    <h1>3DeVOK MQ: Digitalização 3D Colorida para Todos</h1>
+    <div class="devmq-slides">
+      <img class="devmq-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu11.jpg"
+        alt="3DeVOK MQ — 22 Linhas de Laser Infravermelho" />
+      <img class="devmq-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu12.jpg"
+        alt="3DeVOK MQ — Luz Estruturada IV com 2 Campos de Visão" />
+    </div>
+    <p class="devmq-desc-text">
+      O <strong>3DeVOK MQ</strong> é um scanner 3D colorido versátil que democratiza a tecnologia de digitalização 3D avançada.
+      Combina <strong>22 linhas de laser infravermelho</strong> com <strong>luz estruturada VCSEL infravermelha</strong> para oferecer
+      precisão de até 0,08 mm e velocidade de até 4,5 milhões de pontos por segundo — tudo com captura de cor em 24 bits.
+      Ideal para impressão 3D, reabilitação médica, educação, pesquisa e criação digital, com digitalização sem marcadores
+      e suporte a ambientes internos, externos e até em luz solar direta.
+    </p>
+    <div class="devmq-key-feats">
+      <span class="devmq-key-feat">22 Linhas de Laser IV</span>
+      <span class="devmq-key-feat">VCSEL Luz Estruturada</span>
+      <span class="devmq-key-feat">Sem Marcadores</span>
+      <span class="devmq-key-feat">Cor 24 Bits</span>
+      <span class="devmq-key-feat">Precisão 0,08 mm</span>
+      <span class="devmq-key-feat">4,5M pts/s</span>
+      <span class="devmq-key-feat">Handle Sem Fio</span>
+      <span class="devmq-key-feat">Uso Externo</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SYSTEM OVERVIEW — foto + ícones de spec
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-system devmq-anim devmq-anim-d1">
+    <div class="devmq-system-inner">
+      <img class="devmq-system-photo" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_equipment_structure.png"
+        alt="3DeVOK MQ — Estrutura do Equipamento" />
+      <div class="devmq-system-icons">
+        <div class="devmq-spec-icon devmq-anim devmq-anim-d1">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu4.png" alt="Preciso — 0,08mm" loading="lazy"/>
+          <p>Preciso<br>0,08 mm</p>
+        </div>
+        <div class="devmq-spec-icon devmq-anim devmq-anim-d2">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu5.png" alt="Detalhado — 0,1mm" loading="lazy"/>
+          <p>Detalhado<br>0,1 mm</p>
+        </div>
+        <div class="devmq-spec-icon devmq-anim devmq-anim-d3">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu6.png" alt="Rápido — 4,5M pts/s" loading="lazy"/>
+          <p>Rápido<br>4,5M pts/s</p>
+        </div>
+        <div class="devmq-spec-icon devmq-anim devmq-anim-d4">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu7.png" alt="Sem Marcadores" loading="lazy"/>
+          <p>Sem<br>Marcadores</p>
+        </div>
+        <div class="devmq-spec-icon devmq-anim devmq-anim-d5">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu8.png" alt="Colorido 24 bits" loading="lazy"/>
+          <p>Colorido<br>24 bits</p>
+        </div>
+        <div class="devmq-spec-icon devmq-anim devmq-anim-d6">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu9.png" alt="Sem Fio" loading="lazy"/>
+          <p>Handle<br>Sem Fio</p>
+        </div>
+      </div>
+    </div>
+    <div class="devmq-cta-bar">
+      <h3>Experimente o Desempenho do 3DeVOK MQ</h3>
+      <div class="devmq-cta-bar-btns">
+        <a class="devmq-cta-bar-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Fale Conosco</a>
+        <a class="devmq-cta-bar-secondary" href="https://lp.enterfix.com.br/catalogo-3devok-mq" target="_blank" rel="noopener">📄 Baixar Catálogo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       FEATURES — 6 seções alternadas imagem+texto
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-features-wrap">
+
+    <!-- 1. 22 Linhas de Laser IV (imagem à esquerda) -->
+    <div class="devmq-feature devmq-anim devmq-anim-d1">
+      <img class="devmq-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu11.jpg"
+        alt="22 Linhas de Laser Infravermelho" />
+      <div class="devmq-feature-body">
+        <h2>22 Linhas de Laser Infravermelho</h2>
+        <h3>Precisão Quasi-Industrial para Objetos de 5 cm a 5 m</h3>
+        <ul>
+          <li><strong>Alta Precisão:</strong> Até 0,08 mm — atende demandas quasi-industriais de aquisição de dados 3D</li>
+          <li><strong>Objetos Pequenos:</strong> Digitalização de objetos tão pequenos quanto 5 cm sem perda de detalhe</li>
+          <li><strong>Versatilidade de Material:</strong> Funciona em plásticos, metais, tecidos e superfícies multicoloridas</li>
+          <li><strong>Modo Invisível:</strong> Laser infravermelho sem emissão de luz visível — confortável para digitalização de pessoas</li>
+          <li><strong>Alta Velocidade:</strong> Até 2.450.000 pts/s com taxa de 80 FPS em modo marcadores</li>
+          <li><strong>Tamanho Recomendado:</strong> 0,05–5 m</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Luz Estruturada IV com 2 Campos de Visão (imagem à direita) -->
+    <div class="devmq-feature rev devmq-anim devmq-anim-d2">
+      <img class="devmq-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu12.jpg"
+        alt="Luz Estruturada Infravermelha com 2 Campos de Visão" />
+      <div class="devmq-feature-body">
+        <h2>Luz Estruturada IV com 2 Campos de Visão</h2>
+        <h3>Varredura Fina e Ultra-Ampla para Objetos Grandes</h3>
+        <ul>
+          <li><strong>FoV Ultra-Amplo:</strong> Área de varredura de até 1.100×1.000 mm por frame — ideal para objetos grandes</li>
+          <li><strong>Digitalização Fina:</strong> Modo parcial fino com resolução até 0,1 mm para detalhes intrincados</li>
+          <li><strong>Retratos e Corpo:</strong> Projetado para digitalização de rostos, partes do corpo e objetos médios a grandes (30 cm e acima)</li>
+          <li><strong>Distância de Trabalho Ampla:</strong> 150–1.500 mm — grande flexibilidade de posicionamento</li>
+          <li><strong>Velocidade VCSEL:</strong> Até 4.500.000 pts/s em área ultra-ampla</li>
+          <li><strong>Luz Segura:</strong> VCSEL Classe I — conforme IEC 60825, seguro para olhos</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Captura Sem Marcadores (imagem à esquerda) -->
+    <div class="devmq-feature devmq-anim devmq-anim-d3">
+      <img class="devmq-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu13.jpg"
+        alt="Captura de Dados Sem Marcadores" />
+      <div class="devmq-feature-body">
+        <h2>Captura de Dados Sem Marcadores</h2>
+        <h3>Laser Duplo IV — Laser Infravermelho &amp; Speckle IV</h3>
+        <ul>
+          <li><strong>Digitalização Direta:</strong> Sem necessidade de colar marcadores físicos no objeto — processo mais rápido e conveniente</li>
+          <li><strong>Alinhamento Inteligente:</strong> Modos híbrido, por textura e por características geométricas — adapta-se a qualquer objeto</li>
+          <li><strong>Eficiência Máxima:</strong> Laser dual (IV + Speckle IV) garante rastreamento estável mesmo em superfícies lisas</li>
+          <li><strong>Captura Colorida:</strong> Câmera HD integrada com mapeamento de textura em 24 bits — modelos 3D ricos em cor</li>
+          <li><strong>Preparação Zero:</strong> Dispense etapas de preparação — ideal para fluxos de trabalho ágeis</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Digitalização Multi-Tamanho / Sem Fio (imagem à direita) -->
+    <div class="devmq-feature rev devmq-anim devmq-anim-d4">
+      <img class="devmq-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu16.jpg"
+        alt="Digitalização Multi-Tamanho e Handle Sem Fio" />
+      <div class="devmq-feature-body">
+        <h2>Digitalização Multi-Tamanho / Handle Sem Fio</h2>
+        <h3>Do Minúsculo ao Grande — Total Liberdade de Movimento</h3>
+        <ul>
+          <li><strong>Ampla Faixa de Tamanho:</strong> Objetos de 0,05 m a 5 m — um único scanner para toda a sua aplicação</li>
+          <li><strong>Handle Sem Fio (Opcional):</strong> Movimentação livre sem cabo preso — ideal para ambientes amplos e digitalização corporal</li>
+          <li><strong>Leve e Ergonômico:</strong> 620 g, 215×73×53 mm — compacto para uso prolongado sem fadiga</li>
+          <li><strong>Interface USB 3.0:</strong> Conexão rápida e estável com notebook ou workstation</li>
+          <li><strong>Impressão 3D:</strong> Suporte nativo a .stl e .obj — fluxo direto do scan para a impressora</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. Versatilidade de Materiais (imagem à esquerda) -->
+    <div class="devmq-feature devmq-anim devmq-anim-d5">
+      <img class="devmq-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu17.jpg"
+        alt="Versatilidade de Materiais" />
+      <div class="devmq-feature-body">
+        <h2>Versatilidade de Materiais</h2>
+        <h3>Sem Pó Preparatório para Superfícies Desafiadoras</h3>
+        <ul>
+          <li><strong>Superfícies Pretas:</strong> Captura objetos totalmente negros sem nenhum spray ou preparação</li>
+          <li><strong>Superfícies Reflexivas:</strong> Metais polidos, plásticos brilhantes — sem artefatos de reflexo</li>
+          <li><strong>Cabelo Preto:</strong> Modo corpo humano captura cabelos escuros com precisão incomum</li>
+          <li><strong>Multicolorido:</strong> Objetos com padrões e cores contrastantes digitalizados sem perda de detalhe</li>
+          <li><strong>Tecidos e Flexíveis:</strong> Vestuário, roupas e materiais moles — aplicações de moda e saúde</li>
+          <li><strong>Resultado:</strong> Menos etapas de preparação, mais velocidade no fluxo de trabalho</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. Adaptável a Qualquer Ambiente (imagem à direita) -->
+    <div class="devmq-feature rev devmq-anim devmq-anim-d6">
+      <img class="devmq-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu18.jpg"
+        alt="Adaptável a Qualquer Ambiente" />
+      <div class="devmq-feature-body">
+        <h2>Adaptável a Qualquer Ambiente</h2>
+        <h3>Interno, Externo, Pouca Luz ou Luz Solar Direta</h3>
+        <ul>
+          <li><strong>Ambiente Externo:</strong> Funciona eficientemente em campo aberto — digitalização de esculturas, veículos e estruturas</li>
+          <li><strong>Luz Solar Direta:</strong> Laser IV supera a interferência da luz ambiente — resultados confiáveis ao ar livre</li>
+          <li><strong>Baixa Luminosidade:</strong> Desempenho excelente em ambientes com pouca iluminação</li>
+          <li><strong>Temperatura de Operação:</strong> 0–40 °C — estúdios, galpões industriais ou campo</li>
+          <li><strong>Portabilidade:</strong> Setup rápido e transporte fácil em maleta compacta</li>
+          <li><strong>Certificação IP50:</strong> Proteção contra partículas finas — ambiente de trabalho real</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /devmq-features-wrap -->
+
+  <!-- ══════════════════════════════════════════════
+       VÍDEO
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-video-wrap devmq-anim">
+    <h2>🎬 3DeVOK MQ Scanner 3D Colorido — Vídeo</h2>
+    <div class="devmq-iframe-wrap">
+      <iframe allowfullscreen loading="lazy"
+        src="https://www.youtube.com/embed/AwhwQ6hOgA8"
+        title="3DeVOK MQ Scanner 3D Colorido — Enterfix"></iframe>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ESPECIFICAÇÕES TÉCNICAS
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-card devmq-anim">
+    <h2>📊 Especificações Técnicas</h2>
+    <div class="devmq-tbl-wrap">
+      <table class="devmq-tbl" aria-label="Especificações Técnicas 3DeVOK MQ">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Laser IV — 22 Linhas</th>
+            <th>VCSEL Luz Estruturada IV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Classe do Laser</td>
+            <td colspan="2">Classe I (Olho-seguro)</td>
+          </tr>
+          <tr>
+            <td>Recursos do Modo</td>
+            <td>Sem marcadores, luz invisível</td>
+            <td>Sem marcadores, invisível, digitaliz. parcial fina, FoV ultra-amplo</td>
+          </tr>
+          <tr>
+            <td>Precisão Básica ✱</td>
+            <td colspan="2">Até <strong>0,08 mm</strong></td>
+          </tr>
+          <tr>
+            <td>Distância entre Pontos</td>
+            <td colspan="2">0,1–5 mm</td>
+          </tr>
+          <tr>
+            <td>Modos de Alinhamento</td>
+            <td>Híbrido, Marcadores, Textura, Características Geométricas</td>
+            <td>Híbrido, Textura, Características Geométricas</td>
+          </tr>
+          <tr>
+            <td>Captura de Cor</td>
+            <td colspan="2">Sim — câmera de cor HD integrada, 24 bits, com mapeamento de textura</td>
+          </tr>
+          <tr>
+            <td>Distância de Trabalho</td>
+            <td>150–1.000 mm</td>
+            <td>150–1.500 mm</td>
+          </tr>
+          <tr>
+            <td>Campo de Visão (FOV)</td>
+            <td>140×140 mm – 490×490 mm</td>
+            <td>50×75 mm – 1.100×1.000 mm</td>
+          </tr>
+          <tr>
+            <td>Taxa de Quadros</td>
+            <td>Até 80 FPS (alinhamento marcadores)</td>
+            <td>Até 30 FPS</td>
+          </tr>
+          <tr>
+            <td>Velocidade de Digitalização</td>
+            <td>Até 2.450.000 pts/s</td>
+            <td>Até <strong>4.500.000 pts/s</strong></td>
+          </tr>
+          <tr>
+            <td>Formatos de Saída</td>
+            <td colspan="2">.obj · .stl · .ply · .asc · .mk2 · .txt · .epj · .apj · .spj · .map · .sk</td>
+          </tr>
+          <tr>
+            <td>Impressão 3D</td>
+            <td colspan="2">Suporta .stl e .obj</td>
+          </tr>
+          <tr>
+            <td>Conectividade Sem Fio</td>
+            <td colspan="2">Suportado (handle sem fio opcional)</td>
+          </tr>
+          <tr>
+            <td>Temperatura Operacional</td>
+            <td colspan="2">0–40 °C</td>
+          </tr>
+          <tr>
+            <td>Umidade Operacional</td>
+            <td colspan="2">10%–90% UR (sem condensação)</td>
+          </tr>
+          <tr>
+            <td>Interface</td>
+            <td colspan="2">USB 3.0</td>
+          </tr>
+          <tr>
+            <td>Dimensões e Peso</td>
+            <td colspan="2">215 × 73 × 53 mm · <strong>620 g</strong></td>
+          </tr>
+          <tr>
+            <td>Alimentação</td>
+            <td colspan="2">DC 12 V · 5,0 A</td>
+          </tr>
+          <tr>
+            <td>Certificações</td>
+            <td colspan="2">CE-EMC · FCC · RoHS · IEC 60825 · IEC 62471 · IEC 60529-IP50 · WEEE · KC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="devmq-fn">✱ Precisão teórica obtida em laboratório — sujeita a incertezas de medição conforme ambiente e superfície do objeto.</p>
+    <div class="devmq-alert-amber">
+      💻 <strong>Configuração de PC Recomendada:</strong> Windows 10/11 (64-bit) · CPU: i7-13650HX ou superior · RAM: 32 GB · GPU: NVIDIA RTX 3060 ou superior com 6 GB VRAM mínimo
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       APLICAÇÕES
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-card devmq-anim">
+    <h2>🏭 Aplicações</h2>
+    <div class="devmq-apps-grid">
+      <div class="devmq-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu19.jpg" alt="Impressão 3D" />
+        <div class="devmq-app-body">
+          <h3>Impressão 3D</h3>
+          <p>Dando Vida a Ideias Criativas — do scan ao modelo impresso com precisão, suporte nativo a .stl e .obj para integração direta com impressoras 3D.</p>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu20.jpg" alt="Reabilitação Médica" />
+        <div class="devmq-app-body">
+          <h3>Reabilitação Médica</h3>
+          <p>Tecnologia que Transforma Vidas — digitalização segura de membros e corpo para confecção de órteses, próteses e dispositivos personalizados.</p>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu21.jpg" alt="Educação &amp; Pesquisa" />
+        <div class="devmq-app-body">
+          <h3>Educação &amp; Pesquisa</h3>
+          <p>Tornando Novas Tecnologias Acessíveis — laboratórios, universidades e escolas técnicas que buscam introduzir digitalização 3D no currículo.</p>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/mq_peitu22.jpg" alt="Tecnologia para Todos" />
+        <div class="devmq-app-body">
+          <h3>Tecnologia para Todos</h3>
+          <p>Desbloqueando o Futuro Digital de Tudo — criação de avatares, arte digital, metaverso, entretenimento e digitalização do patrimônio cultural.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SOFTWARE
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-soft devmq-anim">
+    <h2>💻 Software Nativo e Compatibilidade</h2>
+    <p style="font-size:14px;color:#475569;margin:0 0 4px">O 3DeVOK MQ opera nativamente com o <strong>3DeVOK Studio</strong> — software all-in-one de digitalização e processamento, com interface intuitiva, parâmetros flexíveis e alinhamento híbrido avançado. Compatível também com os principais softwares de metrologia e engenharia reversa:</p>
+    <div class="devmq-soft-logos">
+      <img alt="Zeiss" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" />
+      <img alt="Verisurf" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" />
+      <img alt="PolyWorks" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" />
+      <img alt="Geomagic" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" />
+    </div>
+    <p style="font-size:13px;color:#64748b;margin:14px 0 0">Compatível ainda com QuickSurface Lite/Pro, SolidWorks, CATIA, Siemens NX e demais plataformas CAD via .stl, .obj, .ply, .asc e outros formatos padrão da indústria.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════════════ -->
+  <div class="devmq-cta devmq-anim">
+    <p><strong>📞 Solicite uma demonstração ou orçamento personalizado</strong></p>
+    <p>Fale com nosso time técnico e descubra como o 3DeVOK MQ pode atender sua aplicação — impressão 3D, reabilitação médica, educação, pesquisa ou criação digital.</p>
+    <div class="devmq-cta-btns">
+      <a class="devmq-btn-green" href="https://enterfix.com.br/produto/3devok-mq/" rel="noopener" target="_blank">🛒 Comprar na Loja</a>
+      <a class="devmq-btn-white" href="https://lp.enterfix.com.br/catalogo-3devok-mq" rel="noopener" target="_blank">📄 Baixar Catálogo</a>
+      <a class="devmq-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" rel="noopener" target="_blank">💬 WhatsApp (11) 96841-6776</a>
+      <a class="devmq-btn-white" href="mailto:vendas@enterfix.com.br">✉️ vendas@enterfix.com.br</a>
+    </div>
+    <p style="font-size:12px;opacity:.65;margin-top:14px">Seg–Sex 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; Enterfix Indústria, Comércio e Serviços Ltda.</p>
+  </div>
+
+</div>

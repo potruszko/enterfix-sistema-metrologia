@@ -1,0 +1,211 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>KSCAN-X - Scanner 3D Composto Premium</h1>
+
+<p class="produto-breve-descricao">Scanner 3D premium com tecnologia composta de última geração, oferecendo precisão superior e velocidade ultrarrápida para aplicações industriais críticas.</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">Tecnologia de Digitalização Premium de Última Geração</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">O <strong>KSCAN-X</strong> representa a evolução da tecnologia de digitalização 3D, oferecendo performance superior e recursos avançados para aplicações industriais de alta demanda. Este scanner composto estabelece novos padrões de precisão e velocidade no mercado.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">0,015mm</h3>
+        <p style="font-size: 16px;">Precisão Premium</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">3,2M</h3>
+        <p style="font-size: 16px;">Pontos/Segundo</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">400mm</h3>
+        <p style="font-size: 16px;">Área Máxima</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">IA</h3>
+        <p style="font-size: 16px;">Rastreamento Inteligente</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração Premium</h3>
+<p>Veja o KSCAN-X demonstrando suas capacidades premium em digitalização de alta velocidade e precisão superior.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Performance premium em tempo real</li>
+<li>Rastreamento inteligente adaptativo</li>
+<li>Múltiplos modos otimizados</li>
+<li>Processamento ultrarrápido</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas Premium</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Volumétrica</strong></td>
+<td>Até 0,015mm</td>
+</tr>
+<tr>
+<td><strong>Resolução de Digitalização</strong></td>
+<td>0,03mm</td>
+</tr>
+<tr>
+<td><strong>Taxa de Medição</strong></td>
+<td>3.200.000 pontos/segundo</td>
+</tr>
+<tr>
+<td><strong>Área de Digitalização (Modo Amplo)</strong></td>
+<td>400mm × 300mm</td>
+</tr>
+<tr>
+<td><strong>Área de Digitalização (Modo Preciso)</strong></td>
+<td>200mm × 150mm</td>
+</tr>
+<tr>
+<td><strong>Distância de Trabalho</strong></td>
+<td>250-400mm</td>
+</tr>
+<tr>
+<td><strong>Profundidade de Campo</strong></td>
+<td>300mm</td>
+</tr>
+<tr>
+<td><strong>Fonte de Luz</strong></td>
+<td>LED azul premium (classe 1)</td>
+</tr>
+<tr>
+<td><strong>Peso</strong></td>
+<td>720g</td>
+</tr>
+<tr>
+<td><strong>Interface</strong></td>
+<td>USB 3.1 Gen 2</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações Industriais Especializadas</h3>
+
+<strong>Metrologia Industrial Avançada:</strong>
+• Inspeção dimensional de componentes aeroespaciais
+• Verificação de conformidade em peças automotivas
+• Controle de qualidade em dispositivos médicos
+
+<strong>Manufatura Aditiva:</strong>
+• Validação de peças impressas em 3D
+• Análise de deformações pós-processamento
+• Otimização de parâmetros de impressão
+
+<strong>Pesquisa e Desenvolvimento:</strong>
+• Digitalização de protótipos experimentais
+• Análise de comportamento estrutural
+• Validação de simulações numéricas
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Software de Digitalização Avançado</h3>
+
+O KSCAN-X vem equipado com o software ScanViewer X-Pro, desenvolvido especificamente para aplicações industriais de alta precisão:
+
+<strong>Recursos Especializados:</strong>
+• Algoritmos de processamento otimizados para velocidade
+• Ferramentas de análise dimensional automatizadas
+• Integração nativa com sistemas PLM/PDM
+• Módulos de inspeção dimensional avançados
+• Relatórios de conformidade automatizados
+• Suporte para fluxos de trabalho personalizados
+
+<strong>Conectividade Industrial:</strong>
+Integração direta com sistemas CAD/CAM, softwares de metrologia e plataformas de qualidade
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Diferenciais Tecnológicos</h3>
+
+<strong>Performance Excepcional:</strong>
+Taxa de medição de 3,2 milhões de pontos por segundo combinada com precisão de 0,015mm estabelece novos padrões de performance.
+
+<strong>Adaptabilidade Inteligente:</strong>
+Sistema de rastreamento adaptativo ajusta automaticamente os parâmetros de digitalização para otimizar resultados.
+
+<strong>Robustez Industrial:</strong>
+Projeto robusto desenvolvido para operação contínua em ambientes industriais exigentes.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Premium Enterfix</h3>
+
+A Enterfix oferece suporte técnico premium e serviços especializados para o KSCAN-X:
+
+• <strong>Treinamento Premium:</strong> Programas de treinamento avançado para aplicações específicas
+• <strong>Suporte Prioritário:</strong> Acesso prioritário ao suporte técnico especializado
+• <strong>Consultoria Técnica:</strong> Consultoria especializada em otimização de processos
+• <strong>Atualizações Premium:</strong> Acesso antecipado a novos recursos e melhorias
+• <strong>Calibração Certificada:</strong> Serviços de calibração com certificado rastreável
+
+<strong>Agende uma Demonstração e experimente a próxima geração de digitalização 3D com o KSCAN-X!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Download CTA Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 80px !important;padding-bottom: 80px !important;}" el_class="cta-download-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Experimente a Próxima Geração de Digitalização 3D</h3>
+<p style="font-size: 1.3em; line-height: 1.6; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Descubra como o KSCAN-X pode revolucionar seus processos de digitalização com tecnologia premium e performance excepcional.</p>
+
+<div style="margin-bottom: 40px;">
+<a href="[LINK_ORCAMENTO]" style="display: inline-block; background-color: #ffd700; color: #2c3e50; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+📞 SOLICITAR ORÇAMENTO
+</a>
+<a href="[LINK_DEMONSTRACAO]" style="display: inline-block; background-color: transparent; color: white; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; border: 2px solid white; transition: all 0.3s ease;">
+🎯 AGENDAR DEMONSTRAÇÃO
+</a>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📧</div>
+    <div style="font-size: 1.1em;">contato@enterfix.com.br</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📱</div>
+    <div style="font-size: 1.1em;">+55 11 5555-5555</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">⚡</div>
+    <div style="font-size: 1.1em;">Atendimento Especializado</div>
+</div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- SEO Tags -->
+<!-- Tags: scanner 3d, kscan x, digitalização 3d, scanner premium, metrologia 3d, controle qualidade, engenharia reversa, scanner composto, scanology, enterfix, precisão industrial -->

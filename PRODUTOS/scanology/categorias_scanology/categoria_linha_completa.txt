@@ -1,0 +1,84 @@
+[vc_row full_width="stretch_row" bg_type="grad" bg_override="full" css=".vc_custom_1743499489559{padding-top: 60px !important;padding-bottom: 80px !important;background-color: #F2F2F2 !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FCFCFC), color-stop(100%, #E3E3E3));background: -moz-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -webkit-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -o-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -ms-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);"][vc_column][ind_custom_heading heading="LINHA COMPLETA SCANOLOGY" position="center" margin_bottom="32"][vc_column_text css_animation="fadeInUp" css=".vc_custom_1743499181401{padding: 32px !important;text-align: center;}"]
+
+<p style="text-align: center;font-size: 18px;line-height: 1.6">
+A <strong>Linha Completa Scanology</strong> oferece <strong>soluções integradas</strong> de digitalização 3D para todas as necessidades industriais, desde scanners portáteis até sistemas automatizados de alta produção.
+</p>
+
+<p style="text-align: center;font-size: 16px;color: #666;line-height: 1.6">
+Com tecnologia de ponta e suporte técnico especializado da Enterfix, nossa linha completa garante <strong>máxima eficiência</strong> para controle de qualidade, engenharia reversa, pesquisa e desenvolvimento industrial.
+</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1743499551634{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;padding-top: 40px !important;padding-bottom: 80px !important;}"][vc_column]
+
+[ind_custom_heading heading="CATEGORIAS DE PRODUTOS" heading_color="#000000" position="center" margin_bottom="32"]
+
+[vc_column_text css_animation="fadeInUp"]
+
+<table style="width: 90%;max-width: 1200px;margin: 40px auto;border-collapse: collapse;text-align: center;font-size: 16px;line-height: 1.6;border-radius: 8px;overflow: hidden">
+  <thead style="background-color: #2C3E50;color: #ffffff">
+    <tr>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Categoria</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Produtos</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Aplicação Principal</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Faixa de Precisão</th>
+    </tr>
+  </thead>
+  <tbody style="color: #333">
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>Scanners Portáteis</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">8 modelos</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Digitalização móvel de precisão</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,015-0,1mm</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>Sistemas de Rastreamento</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">6 sistemas</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Monitoramento em tempo real</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,005-0,12mm</td>
+    </tr>
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>Sistemas Automatizados</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">4 sistemas</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Produção automatizada</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,015-0,025mm</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>Fotogrametria 3D</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">1 sistema</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Objetos de grande porte</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">±0,01mm</td>
+    </tr>
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>Softwares 3D</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">4 softwares</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Processamento completo</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Análise profissional</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin: 40px auto;max-width: 1000px;text-align: center">
+  <h3 style="color: #333;margin-bottom: 30px">Vantagens da Linha Scanology</h3>
+  <div style="display: flex;justify-content: space-around;flex-wrap: wrap;gap: 20px">
+    <div style="flex: 1;min-width: 200px;background: #f9f9f9;padding: 25px;border-radius: 8px">
+      <h4 style="color: #2C3E50">22 Produtos</h4>
+      <p>Linha completa para todas necessidades</p>
+    </div>
+    <div style="flex: 1;min-width: 200px;background: #f9f9f9;padding: 25px;border-radius: 8px">
+      <h4 style="color: #2C3E50">Tecnologia Avançada</h4>
+      <p>IA, automação e precisão excepcional</p>
+    </div>
+    <div style="flex: 1;min-width: 200px;background: #f9f9f9;padding: 25px;border-radius: 8px">
+      <h4 style="color: #2C3E50">Suporte Enterfix</h4>
+      <p>Treinamento e assistência especializada</p>
+    </div>
+    <div style="flex: 1;min-width: 200px;background: #f9f9f9;padding: 25px;border-radius: 8px">
+      <h4 style="color: #2C3E50">Integração Total</h4>
+      <p>Workflow completo de digitalização</p>
+    </div>
+  </div>
+</div>
+
+[/vc_column_text][/vc_column][/vc_row]

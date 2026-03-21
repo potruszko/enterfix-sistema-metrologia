@@ -1,0 +1,197 @@
+# YOAST SEO - CATEGORIAS WOOCOMMERCE
+
+## CATEGORIA: SÉRIE BASIC
+**Frase-chave de foco:** máquinas medição visão manual
+**Título SEO:** Série BASIC - Máquinas de Medição por Visão Manual | Enterfix
+**Slug:** maquinas-medicao-visao-serie-basic
+**Metadescrição:** Série BASIC da Enterfix: máquinas de medição por visão manuais de alta precisão. Controle de qualidade confiável com excelente custo-benefício. 4 modelos disponíveis.
+
+## CATEGORIA: SÉRIE EXTRA  
+**Frase-chave de foco:** máquinas semi automáticas medição
+**Título SEO:** Série EXTRA - Máquinas Semi-Automáticas de Medição | Enterfix
+**Slug:** maquinas-semi-automaticas-serie-extra
+**Metadescrição:** Série EXTRA: máquinas semi-automáticas com zoom motorizado. Equilíbrio perfeito entre produtividade e controle manual. Tecnologia Enterfix.
+
+## CATEGORIA: SÉRIE PEAK
+**Frase-chave de foco:** máquinas CNC compactas medição
+**Título SEO:** Série PEAK - Máquinas CNC Compactas de Medição | Enterfix
+**Slug:** maquinas-cnc-compactas-serie-peak
+**Metadescrição:** Série PEAK: máquinas CNC compactas com automação total e footprint reduzido. Solução perfeita para espaços limitados. Enterfix Brasil.
+
+## CATEGORIA: SÉRIE ULTRA
+**Frase-chave de foco:** máquinas medição automáticas precisão
+**Título SEO:** Série ULTRA - Máquinas Automáticas Máxima Precisão | Enterfix
+**Slug:** maquinas-automaticas-maxima-precisao-ultra
+**Metadescrição:** Série ULTRA: topo de linha em máquinas de medição automáticas CNC. Máxima precisão e produtividade excepcional. 5 modelos Enterfix.
+
+## CATEGORIA: SÉRIE RANGER
+**Frase-chave de foco:** máquinas medição ferramentas rotativas
+**Título SEO:** Série RANGER - Medição de Ferramentas Rotativas | Enterfix
+**Slug:** medicao-ferramentas-rotativas-serie-ranger
+**Metadescrição:** Série RANGER: especializada em medição de ferramentas rotativas, fresas e brocas. Software SMARTOOL dedicado. Fabricantes de ferramentas.
+
+## CATEGORIA: SÉRIE AVANT
+**Frase-chave de foco:** máquinas medição especializadas
+**Título SEO:** Série AVANT - Máquinas de Medição Especializadas | Enterfix
+**Slug:** maquinas-medicao-especializadas-avant
+**Metadescrição:** Série AVANT: soluções especializadas para aplicações específicas. Tecnologia diferenciada e recursos expandidos. Enterfix Brasil.
+
+## CATEGORIA: SÉRIE CMM
+**Frase-chave de foco:** máquinas medição coordenadas CMM
+**Título SEO:** Série CMM - Máquinas de Medição por Coordenadas | Enterfix
+**Slug:** maquinas-medicao-coordenadas-cmm
+**Metadescrição:** Série CMM: medição por coordenadas tridimensional. Estrutura granito e máxima precisão para aplicações metrológicas críticas.
+
+## CATEGORIA: SÉRIE GANTRY
+**Frase-chave de foco:** máquinas medição grandes componentes
+**Título SEO:** Série GANTRY - Medição de Grandes Componentes | Enterfix
+**Slug:** medicao-grandes-componentes-gantry
+**Metadescrição:** Série GANTRY: estrutura pórtico para medição de grandes componentes. HP Series com capacidade excepcional e precisão superior.
+
+## CATEGORIA: SISTEMAS DE FIXAÇÃO
+**Frase-chave de foco:** sistemas fixação medição CMM
+**Título SEO:** Sistemas de Fixação E-FIX e OPTIFIX | Enterfix
+**Slug:** sistemas-fixacao-efix-optifix
+**Metadescrição:** Sistemas de fixação E-FIX e OPTIFIX: máxima estabilidade para medições precisas. Design modular e componentes versáteis Enterfix.
+
+---
+
+# YOAST SEO - PRODUTOS INDIVIDUAIS
+
+## BASIC 200
+**Frase-chave de foco:** BASIC 200 máquina medição manual
+**Título SEO:** BASIC 200 - Máquina de Medição Manual | Enterfix
+**Slug:** basic-200-maquina-medicao-manual
+**Metadescrição:** BASIC 200: máquina de medição manual 200x100x150mm. Precisão 3+L/200μm, operação intuitiva, excelente custo-benefício Enterfix.
+
+## BASIC 300
+**Frase-chave de foco:** BASIC 300 máquina medição manual
+**Título SEO:** BASIC 300 - Máquina de Medição Manual | Enterfix
+**Slug:** basic-300-maquina-medicao-manual
+**Metadescrição:** BASIC 300: máquina de medição manual 300x200x150mm. Área expandida, controle dimensional preciso para peças médias Enterfix.
+
+## BASIC 400
+**Frase-chave de foco:** BASIC 400 máquina medição manual
+**Título SEO:** BASIC 400 - Máquina de Medição Manual | Enterfix
+**Slug:** basic-400-maquina-medicao-manual
+**Metadescrição:** BASIC 400: máquina de medição manual 400x300x200mm. Sistema robusto, precisão garantida, operação intuitiva Enterfix Brasil.
+
+## BASIC 500
+**Frase-chave de foco:** BASIC 500 máquina medição manual
+**Título SEO:** BASIC 500 - Máquina de Medição Manual | Enterfix
+**Slug:** basic-500-maquina-medicao-manual
+**Metadescrição:** BASIC 500: máquina de medição manual 500x400x200mm. Grande área trabalho, precisão dimensional, tecnologia robusta Enterfix.
+
+## EXTRA 200
+**Frase-chave de foco:** EXTRA 200 máquina semi automática
+**Título SEO:** EXTRA 200 - Máquina Semi-Automática | Enterfix
+**Slug:** extra-200-maquina-semi-automatica
+**Metadescrição:** EXTRA 200: máquina semi-automática 200x100x150mm com zoom motorizado. Produtividade superior, controle X/Y manual Enterfix.
+
+## EXTRA 300
+**Frase-chave de foco:** EXTRA 300 máquina semi automática
+**Título SEO:** EXTRA 300 - Máquina Semi-Automática | Enterfix
+**Slug:** extra-300-maquina-semi-automatica
+**Metadescrição:** EXTRA 300: máquina semi-automática 300x200x150mm. Lente motorizada, movimento manual X/Y, equilíbrio produtividade-controle Enterfix.
+
+## EXTRA 400
+**Frase-chave de foco:** EXTRA 400 máquina semi automática
+**Título SEO:** EXTRA 400 - Máquina Semi-Automática | Enterfix
+**Slug:** extra-400-maquina-semi-automatica
+**Metadescrição:** EXTRA 400: máquina semi-automática 400x300x200mm. Zoom motorizado, precisão 2.5+L/200μm, tecnologia Enterfix.
+
+## EXTRA 500
+**Frase-chave de foco:** EXTRA 500 máquina semi automática
+**Título SEO:** EXTRA 500 - Máquina Semi-Automática | Enterfix
+**Slug:** extra-500-maquina-semi-automatica
+**Metadescrição:** EXTRA 500: máquina semi-automática 500x400x200mm. Zoom motorizado, produtividade excepcional Enterfix Brasil.
+
+## PEAK 300
+**Frase-chave de foco:** PEAK 300 máquina CNC compacta
+**Título SEO:** PEAK 300 - Máquina CNC Compacta | Enterfix
+**Slug:** peak-300-maquina-cnc-compacta
+**Metadescrição:** PEAK 300: máquina CNC compacta 300x200x200mm com automação total. Footprint reduzido, design econômico, precisão garantida Enterfix.
+
+## PEAK 400
+**Frase-chave de foco:** PEAK 400 máquina CNC compacta
+**Título SEO:** PEAK 400 - Máquina CNC Compacta | Enterfix
+**Slug:** peak-400-maquina-cnc-compacta
+**Metadescrição:** PEAK 400: máquina CNC compacta 400x300x200mm automação total em design compacto. Perfeita para espaços limitados Enterfix.
+
+## ULTRA 200
+**Frase-chave de foco:** ULTRA 200 máquina medição avançada
+**Título SEO:** ULTRA 200 - Máquina de Medição Avançada | Enterfix
+**Slug:** ultra-200-maquina-medicao-avancada
+**Metadescrição:** ULTRA 200: máquina de medição avançada 200x100x150mm. CNC totalmente automática, precisão 2+L/200μm, repetibilidade 1.5μm Enterfix.
+
+## ULTRA 300
+**Frase-chave de foco:** ULTRA 300 máquina medição avançada
+**Título SEO:** ULTRA 300 - Máquina de Medição Avançada | Enterfix
+**Slug:** ultra-300-maquina-medicao-avancada
+**Metadescrição:** ULTRA 300: máquina de medição avançada 300x200x200mm. Zoom automático, precisão 2.5+L/200μm, produtividade excepcional Enterfix.
+
+## ULTRA 400
+**Frase-chave de foco:** ULTRA 400 máquina medição avançada
+**Título SEO:** ULTRA 400 - Máquina de Medição Avançada | Enterfix
+**Slug:** ultra-400-maquina-medicao-avancada
+**Metadescrição:** ULTRA 400: máquina de medição avançada 400x300x200mm. Automação completa, tecnologia patenteada, estrutura ultra-rígida Enterfix Brasil.
+
+## ULTRA 500
+**Frase-chave de foco:** ULTRA 500 máquina medição avançada
+**Título SEO:** ULTRA 500 - Máquina de Medição Avançada | Enterfix
+**Slug:** ultra-500-maquina-medicao-avancada
+**Metadescrição:** ULTRA 500: máquina de medição avançada 500x400x200mm. Servomotores AC, zoom automático, precisão 2.5+L/200μm Enterfix.
+
+## ULTRA 600
+**Frase-chave de foco:** ULTRA 600 máquina medição avançada
+**Título SEO:** ULTRA 600 - Máquina de Medição Avançada | Enterfix
+**Slug:** ultra-600-maquina-medicao-avancada
+**Metadescrição:** ULTRA 600: máquina de medição avançada 600x500x200mm. Estrutura ultra-rígida, componentes grandes Enterfix Brasil.
+
+## RANGER 200
+**Frase-chave de foco:** RANGER 200 medição ferramentas rotativas
+**Título SEO:** RANGER 200 - Medição Ferramentas Rotativas | Enterfix
+**Slug:** ranger-200-medicao-ferramentas-rotativas
+**Metadescrição:** RANGER 200: especializada ferramentas rotativas 200x150x100mm. Fresas, brocas, escareadores. Fabricantes ferramentas Enterfix.
+
+## RANGER 600
+**Frase-chave de foco:** RANGER 600 inspeção ferramentas corte
+**Título SEO:** RANGER 600 - Inspeção Ferramentas Corte SMARTOOL | Enterfix
+**Slug:** ranger-600-inspecao-ferramentas-smartool
+**Metadescrição:** RANGER 600: inspeção universal ferramentas corte com software SMARTOOL. Brocas, fresas, alargadores. Precision Enterfix.
+
+## AVANT 100
+**Frase-chave de foco:** AVANT 100 medição especializada compacta
+**Título SEO:** AVANT 100 - Medição Especializada Compacta | Enterfix
+**Slug:** avant-100-medicao-especializada-compacta
+**Metadescrição:** AVANT 100: medição especializada 100x80x80mm. Design compacto, tecnologia avançada, aplicações específicas Enterfix Brasil.
+
+## AVANT 190
+**Frase-chave de foco:** AVANT 190 medição especializada avançada
+**Título SEO:** AVANT 190 - Medição Especializada Avançada | Enterfix
+**Slug:** avant-190-medicao-especializada-avancada
+**Metadescrição:** AVANT 190: especializada avançada 190x140x120mm. Recursos expandidos, precisão 2.5+L/200μm, aplicações complexas Enterfix.
+
+## CMM STANDARD
+**Frase-chave de foco:** CMM medição coordenadas tridimensional
+**Título SEO:** CMM STANDARD - Medição Coordenadas Tridimensional | Enterfix
+**Slug:** cmm-medicao-coordenadas-tridimensional
+**Metadescrição:** CMM STANDARD: medição coordenadas 500x400x400mm. Estrutura granito, cabeçote Renishaw, precisão 1.5+L/300μm Enterfix.
+
+## GANTRY HP SERIES
+**Frase-chave de foco:** GANTRY grandes componentes pórtico
+**Título SEO:** GANTRY HP SERIES - Medição Grandes Componentes | Enterfix
+**Slug:** gantry-hp-medicao-grandes-componentes
+**Metadescrição:** GANTRY HP SERIES: pórtico fixo 1500x1000x800mm. Grandes componentes industriais, precisão 2+L/300μm, capacidade 2000kg Enterfix.
+
+## E-FIX
+**Frase-chave de foco:** E-FIX sistema fixação CMM
+**Título SEO:** E-FIX - Sistema Fixação para CMM | Enterfix
+**Slug:** efix-sistema-fixacao-cmm
+**Metadescrição:** E-FIX: sistema fixação completo para CMM. Kit componentes versáteis, máxima estabilidade, precisão medições Enterfix Brasil.
+
+## OPTIFIX
+**Frase-chave de foco:** OPTIFIX fixação máquinas medição
+**Título SEO:** OPTIFIX - Fixação Máquinas Medição Visão | Enterfix
+**Slug:** optifix-fixacao-maquinas-medicao-visao
+**Metadescrição:** OPTIFIX: kit completo fixação VMM. Componentes modulares, sem ferramentas especiais, máxima versatilidade Enterfix.

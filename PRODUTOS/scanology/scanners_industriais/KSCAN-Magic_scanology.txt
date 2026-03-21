@@ -1,0 +1,116 @@
+[vc_row full_width="stretch_row" bg_type="video" video_url="https://enterfix.com.br/wp-content/uploads/2025/04/f34ca26801b756a7b4c31606f94d1549.mp4" video_opts="muted" bg_override="browser_size"][vc_column][vc_empty_space][/vc_column][/vc_row][vc_row bg_type="grad" bg_override="full" css=".vc_custom_1748609639608{padding-top: 80px !important;padding-bottom: 100px !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E3E3E3));background: -moz-linear-gradient(top,#E3E3E3 0%);background: -webkit-linear-gradient(top,#E3E3E3 0%);background: -o-linear-gradient(top,#E3E3E3 0%);background: -ms-linear-gradient(top,#E3E3E3 0%);background: linear-gradient(top,#E3E3E3 0%);"][vc_column][ind_custom_heading heading="Inteligência Artificial em Digitalização 3D" position="center"][vc_column_text css_animation="none" css=".vc_custom_1748607762970{margin-top: 60px !important;margin-bottom: 60px !important;margin-left: 0px !important;padding-top: 32px !important;padding-right: 32px !important;padding-bottom: 32px !important;padding-left: 32px !important;}"]
+<p class="" data-start="84" data-end="418">O <strong data-start="152" data-end="165">KSCAN-Magic</strong> representa a evolução da digitalização 3D com <strong data-start="212" data-end="251">inteligência artificial integrada</strong> que otimiza automaticamente os parâmetros de scanning. Com <strong data-start="267" data-end="294">precisão de até 0,02mm</strong> e uma taxa de <strong data-start="309" data-end="342" data-is-only-node="">2,05 milhões de pontos por segundo</strong>, este scanner define novos padrões de automação e eficiência.</p>
+<p class="" data-start="420" data-end="827">A IA proprietária analisa as características da peça em tempo real, ajustando automaticamente iluminação, foco e parâmetros de captura para garantir resultados ótimos. Este sistema elimina a necessidade de expertise técnica avançada, permitindo que operadores de qualquer nível obtenham resultados profissionais consistentes.</p>
+[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1742770225154{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][vc_single_image image="5437" img_size="full" alignment="center" style="vc_box_rounded" css_animation="none" css=".vc_custom_1748607776571{padding-top: 32px !important;padding-bottom: 32px !important;border-radius: 20px !important;}"][ultimate_carousel][vc_single_image image="5580" css=""][/ultimate_carousel][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" css=".vc_custom_1742774265064{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_041.jpg?id=4732) !important;}"][vc_column][ind_custom_heading heading="VÍDEO KSCAN-Magic" heading_color="#FFFFFF" position="center"][vc_column_text css=""]
+<p style="text-align: center;"><span style="color: #ffffff;">Conheça o primeiro scanner 3D com inteligência artificial integrada. O KSCAN-Magic revoluciona a digitalização 3D com automação total e precisão excepcional. Assista como a IA otimiza automaticamente cada digitalização, garantindo resultados profissionais mesmo para operadores iniciantes.</span></p>
+[/vc_column_text][ultimate_video u_video_url="https://www.youtube.com/watch?v=6X6wg9Kkjw0&amp;t=97s" yt_autoplay="" yt_sugg_video="" yt_play_control="" yt_mute_control="" yt_modest_branding="" yt_privacy_mode="" thumbnail="custom" custom_thumb="id^5435|url^https://enterfix.com.br/wp-content/uploads/2025/03/SIMSCAN-E.png|caption^null|alt^null|title^SIMSCAN-E|description^null" play_source="image" play_image="id^5159|url^https://enterfix.com.br/wp-content/uploads/2025/03/Enterfix-Symbol.png|caption^null|alt^null|title^Enterfix-Symbol|description^null" play_size="75" enable_sub_bar="" overlay_color="#1E73BE33"][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1742774273231{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_051.jpg?id=4759) !important;}"][vc_column][ind_custom_heading heading="Informação Técnica" position="center"][vc_column_text css=""]
+<div class="table-enterfix-wrapper">
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th colspan="2">MODELO</th>
+<th>KSCAN-Magic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="4">Modos de IA</td>
+<td>Smart Mode</td>
+<td>Otimização automática completa</td>
+</tr>
+<tr>
+<td>Precision Mode</td>
+<td>Máxima precisão para aplicações críticas</td>
+</tr>
+<tr>
+<td>Speed Mode</td>
+<td>Digitalização rápida otimizada</td>
+</tr>
+<tr>
+<td>Adaptive Mode</td>
+<td>Adaptação contínua às condições</td>
+</tr>
+<tr>
+<td colspan="2">Precisão de medição<sup>(1)</sup></td>
+<td>0,020 mm</td>
+</tr>
+<tr>
+<td colspan="2">Taxa de digitalização</td>
+<td>Até 2.050.000 medições por segundo</td>
+</tr>
+<tr>
+<td colspan="2">Área de digitalização</td>
+<td>100 mm × 350 mm (auto-ajustável)</td>
+</tr>
+<tr>
+<td colspan="2">Classe do laser</td>
+<td>Classe I (seguro para os olhos)</td>
+</tr>
+<tr>
+<td colspan="2">Resolução</td>
+<td>Até 0,018 mm</td>
+</tr>
+<tr>
+<td rowspan="2">Precisão volumétrica<sup>(2)</sup></td>
+<td>Com IA</td>
+<td>0,018 mm + 0,030 mm/m</td>
+</tr>
+<tr>
+<td>Modo Precision</td>
+<td>0,015 mm + 0,020 mm/m</td>
+</tr>
+<tr>
+<td colspan="2">Distância de afastamento</td>
+<td>200-500 mm (auto-otimizada)</td>
+</tr>
+<tr>
+<td colspan="2">Profundidade de campo</td>
+<td>300 mm (adaptativa)</td>
+</tr>
+<tr>
+<td colspan="2">Processamento IA</td>
+<td>GPU dedicada NVIDIA integrada</td>
+</tr>
+<tr>
+<td colspan="2">Formatos de saída</td>
+<td>.stl, .obj, .ply, .asc, .igs, .txt, .mk2, .umk, entre outros</td>
+</tr>
+<tr>
+<td colspan="2">Dimensões</td>
+<td>210 mm × 85 mm × 50 mm</td>
+</tr>
+<tr>
+<td colspan="2">Peso</td>
+<td>650 g</td>
+</tr>
+<tr>
+<td colspan="2">Conectividade</td>
+<td>USB 3.1, Wi-Fi 6, Bluetooth 5.0</td>
+</tr>
+<tr>
+<td colspan="2">Autonomia</td>
+<td>Bateria integrada - 4 horas</td>
+</tr>
+</tbody>
+</table>
+<p style="margin-top: 12px; font-size: 14px; color: #444; text-align: center;"><sup>(1)</sup> Certificado ISO 17025: baseado na norma VDI/VDE 2634 Parte 3 — erro de apalpamento (PS).
+<sup>(2)</sup> Certificado ISO 17025: baseado na norma VDI/VDE 2634 Parte 3 — erro de espaçamento de esferas (SD).
+<em>*A Enterfix reserva-se o direito de alterar os parâmetros e imagens conforme a legislação vigente.</em></p>
+
+</div>
+[/vc_column_text][vc_empty_space][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" parallax_style="vcpb-default" css=".vc_custom_1744324989368{padding-top: 40px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2025/03/sinscan-e2.webp?id=5438) !important;}"][vc_column][vc_row_inner css=".vc_custom_1743284203558{padding-top: 64px !important;padding-bottom: 64px !important;}"][vc_column_inner width="1/4" css=".vc_custom_1744324572317{padding-top: 0px !important;padding-right: 12px !important;padding-bottom: 0px !important;padding-left: 12px !important;background-color: #17191B !important;border-radius: 10px !important;}"][vc_single_image image="5445" img_size="120x120" add_caption="yes" alignment="center" style="vc_box_rounded" css_animation="none" css=".vc_custom_1745108759443{padding-top: 32px !important;padding-right: 32px !important;padding-left: 32px !important;border-radius: 20px !important;border-color: #FFFFFF !important;}"][vc_column_text css=".vc_custom_1744324921787{padding-bottom: 32px !important;}"]
+<p style="text-align: center;"><span style="color: #ffffff;">Inteligência Artificial Integrada</span></p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4" css=".vc_custom_1744324586732{padding-right: 12px !important;padding-left: 12px !important;background-color: #17191B !important;border-radius: 10px !important;}"][vc_single_image image="5446" img_size="120x120" alignment="center" style="vc_box_rounded" css_animation="none" css=".vc_custom_1745108769730{padding-top: 32px !important;padding-right: 32px !important;padding-left: 32px !important;}"][vc_column_text css=".vc_custom_1744324930955{padding-bottom: 32px !important;}"]
+<p style="text-align: center;"><span style="color: #ffffff;">2.050.000 medições p/s</span></p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4" css=".vc_custom_1744324597584{padding-right: 12px !important;padding-left: 12px !important;background-color: #17191B !important;border-radius: 20px !important;}"][vc_single_image image="5447" img_size="120x120" alignment="center" style="vc_box_rounded" css_animation="none" css=".vc_custom_1745108778283{padding-top: 32px !important;}"][vc_column_text css=".vc_custom_1744324937600{padding-bottom: 32px !important;}"]
+<p style="text-align: center;"><span style="color: #ffffff;">4 Modos Inteligentes</span></p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4" css=".vc_custom_1744324606507{padding-right: 12px !important;padding-left: 12px !important;background-color: #17191B !important;border-radius: 20px !important;}"][vc_single_image image="5444" img_size="120x120" alignment="center" style="vc_box_rounded" css_animation="none" css=".vc_custom_1745108785322{padding-top: 32px !important;}"][vc_column_text css=".vc_custom_1744324944534{padding-bottom: 32px !important;}"]
+<p style="text-align: center;"><span style="color: #ffffff;">Bateria 4h Integrada</span></p>
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_empty_space][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="bg_color" css=".vc_custom_1743286431423{padding-top: 40px !important;}" bg_color_value="#FFFFFF"][vc_column][ind_custom_heading heading="Softwares Compatíveis" position="center"][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="bg_color" css=".vc_custom_1743286423643{padding-top: 40px !important;}" bg_color_value="#FFFFFF"][vc_column width="1/4"][vc_single_image image="5448" img_size="full" css=""][/vc_column][vc_column width="1/4"][vc_single_image image="5449" img_size="full" css=""][/vc_column][vc_column width="1/4"][vc_single_image image="5450" img_size="full" css=""][/vc_column][vc_column width="1/4"][vc_single_image image="5451" img_size="full" css=""][/vc_column][/vc_row][vc_row bg_type="image" bg_override="full" css=".vc_custom_1742774292621{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][ind_custom_heading heading="Download do Catálogo" position="center"][vc_column_text css=".vc_custom_1743285288736{padding-top: 16px !important;padding-bottom: 16px !important;}"]
+<p style="text-align: center;">Faça o download do catálogo completo do <strong>KSCAN-Magic</strong> e descubra todos os recursos de inteligência artificial e especificações desta revolução em digitalização 3D.</p>
+[/vc_column_text][ult_buttons btn_title="DOWNLOAD" btn_link="url:https%3A%2F%2Flp.enterfix.com.br%2Fcatalogo-kscan-magic|title:Contato" btn_align="ubtn-center" btn_size="ubtn-large" btn_title_color="#FFFFFF" btn_bg_color="#A0BF30" btn_bg_color_hover="#1E73BE" btn_title_color_hover="#FFFFFF" icon="none" icon_size="24" icon_color="#FFFFFF" btn_icon_pos="ubtn-sep-icon-at-left" btn_border_style="solid" btn_border_size="1" btn_radius="10" btn_font_family="font_family:Poppins|font_call:Poppins|variant:700" btn_font_style="font-weight:700;" btn_font_size="desktop:16px;"][/vc_column][/vc_row]
+
+<!-- Tags do Produto KSCAN-Magic -->
+<!-- scanner-3d-inteligente, inteligencia-artificial-3d, digitalizacao-automatizada, scanner-ai, tecnologia-ia, automacao-4.0, controle-qualidade-inteligente, otimizacao-automatica, reconhecimento-geometria, processamento-ia, gpu-integrada, scanner-autonomo, medicao-adaptativa, inspecao-inteligente -->

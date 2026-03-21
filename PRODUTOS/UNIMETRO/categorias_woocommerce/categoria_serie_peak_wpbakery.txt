@@ -1,0 +1,47 @@
+[vc_row][vc_column][vc_column_text]
+<h1 style="text-align: center; color: #0066cc;">SÉRIE PEAK - MÁQUINAS CNC COMPACTAS</h1>
+<p style="text-align: center; font-size: 18px; color: #333;">Automação total em design compacto - Perfeita para espaços limitados</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890123{background-color: #f8f9fa !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sobre a Série PEAK</h2>
+<p>A Série PEAK representa a evolução perfeita entre automação CNC e design compacto. Desenvolvida especificamente para ambientes com limitação de espaço, esta linha combina toda a eficiência de um sistema totalmente automatizado com um footprint reduzido que se adapta a qualquer linha de produção.</p>
+
+<p>Com estrutura otimizada e componentes de alta qualidade, as máquinas PEAK oferecem automação completa sem comprometer a precisão. O sistema CNC integrado garante repetibilidade excepcional e produtividade superior, tornando esta série ideal para empresas que buscam modernizar seus processos de controle de qualidade sem grandes modificações no layout fabril.</p>
+
+<p>Cada máquina da Série PEAK é equipada com software avançado, sistema de iluminação LED otimizado e interface intuitiva que reduz significativamente o tempo de setup e operação.</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Características Técnicas</h2>
+<ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Sistema CNC:</strong> Controle numérico computerizado com automação total</li>
+<li><strong>Design Compacto:</strong> Footprint otimizado para espaços limitados</li>
+<li><strong>Estrutura:</strong> Base rígida com componentes de alta qualidade</li>
+<li><strong>Automação:</strong> Movimentação automática em todos os eixos (X, Y, Z)</li>
+<li><strong>Zoom:</strong> Sistema automático com magnificação variável</li>
+<li><strong>Iluminação:</strong> LED programável com controle automático</li>
+<li><strong>Software:</strong> Interface CNC intuitiva com programação simplificada</li>
+<li><strong>Precisão:</strong> Repetibilidade excepcional para produção seriada</li>
+<li><strong>Conectividade:</strong> Integração com sistemas de produção</li>
+<li><strong>Economia:</strong> Consumo energético reduzido e baixa manutenção</li>
+</ul>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890124{background-color: #e9ecef !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Modelos Disponíveis</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">PEAK 300</h3>
+<p><strong>Área de Medição:</strong> 300 x 200 x 200mm</p>
+<p><strong>Aplicação:</strong> Componentes compactos com automação CNC</p>
+<p><strong>Ideal para:</strong> Pequenas séries e peças de precisão</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">PEAK 400</h3>
+<p><strong>Área de Medição:</strong> 400 x 300 x 200mm</p>
+<p><strong>Aplicação:</strong> Componentes médios com automação total</p>
+<p><strong>Ideal para:</strong> Produção seriada e controle de qualidade</p>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]

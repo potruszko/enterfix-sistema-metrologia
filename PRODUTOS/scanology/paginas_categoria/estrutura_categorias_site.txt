@@ -1,0 +1,203 @@
+# PÁGINA PRINCIPAL - SCANOLOGY
+
+**URL:** /scanology  
+**Template:** Página principal de marca
+
+## SEO Configuration
+```
+Title: Scanology - Linha Completa Digitalização 3D | Enterfix
+Meta Description: Linha completa Scanology com 22 produtos para digitalização 3D profissional. Scanners portáteis, sistemas automatizados, softwares. Tecnologia avançada!
+Focus Keyphrase: scanology digitalizacao 3d linha completa
+Canonical URL: https://enterfix.com.br/scanology
+```
+
+## Breadcrumb
+```
+Home > Produtos > Scanology
+```
+
+## Conteúdo da Página
+
+### Hero Section
+```html
+<div class="hero-scanology">
+  <h1>Scanology - Linha Completa de Digitalização 3D</h1>
+  <p>22 produtos de tecnologia avançada para todas as necessidades de digitalização 3D profissional</p>
+  <button>Ver Linha Completa</button>
+</div>
+```
+
+### Grid de Categorias
+```html
+<section class="categorias-grid">
+  <div class="categoria-card">
+    <h3>Scanners 3D Portáteis</h3>
+    <p>8 modelos com precisão 0,015-0,1mm</p>
+    <a href="/scanners-3d-portateis-scanology">Ver Produtos</a>
+  </div>
+  
+  <div class="categoria-card">
+    <h3>Sistemas de Rastreamento</h3>
+    <p>6 sistemas de monitoramento de precisão</p>
+    <a href="/sistemas-rastreamento-3d-scanology">Ver Produtos</a>
+  </div>
+  
+  <div class="categoria-card">
+    <h3>Sistemas Automatizados</h3>
+    <p>4 soluções para produção industrial</p>
+    <a href="/sistemas-automatizados-scanology">Ver Produtos</a>
+  </div>
+  
+  <div class="categoria-card">
+    <h3>Fotogrametria 3D</h3>
+    <p>Sistema multi-câmera para objetos grandes</p>
+    <a href="/sistema-fotogrametria-3d-scanology">Ver Produtos</a>
+  </div>
+  
+  <div class="categoria-card">
+    <h3>Softwares 3D</h3>
+    <p>Suíte completa de análise e visualização</p>
+    <a href="/softwares-3d-profissionais-scanology">Ver Produtos</a>
+  </div>
+</section>
+```
+
+---
+
+# CATEGORIAS DE PRODUTOS
+
+## 1. SCANNERS 3D PORTÁTEIS
+
+**URL:** /scanners-3d-portateis-scanology  
+**Template:** Categoria de produtos
+
+### SEO Configuration
+```
+Title: Scanners 3D Portáteis - Linha Completa Scanology | Enterfix  
+Meta Description: Scanners 3D portáteis Scanology com precisão 0,015-0,1mm. 8 modelos SIMSCAN, KSCAN, AXE-B. Mobilidade e precisão profissional!
+Focus Keyphrase: scanners 3d portateis scanology
+Canonical URL: https://enterfix.com.br/scanners-3d-portateis-scanology
+```
+
+### Breadcrumb
+```
+Home > Produtos > Scanology > Scanners 3D Portáteis
+```
+
+### Filtros de Categoria
+```
+- Por Precisão: ±0,015mm | ±0,02mm | ±0,04mm | ±0,1mm
+- Por Aplicação: Profissional | Premium | IA | Global | Colorido
+- Por Taxa de Medição: 1-2M pts/s | 2-3M pts/s | 3M+ pts/s
+```
+
+### Lista de Produtos
+```
+1. SIMSCAN-E - Scanner 3D Portátil Profissional
+2. KSCAN-E - Scanner 3D Composto Alta Precisão  
+3. KSCAN-X - Scanner 3D Composto Premium
+4. KSCAN-Magic - Scanner 3D com Inteligência Artificial
+5. SIMSCAN 42/30/22 - Série Professional
+6. AXE-B - Scanner 3D Global Alto Desempenho
+7. 3DeVOK MQ - Scanner 3D de Cor Qualidade Máxima
+8. 3DeVOK MT - Scanner 3D Multi-Textura
+```
+
+---
+
+## 2. SISTEMAS DE RASTREAMENTO 3D
+
+**URL:** /sistemas-rastreamento-3d-scanology  
+**Template:** Categoria de produtos
+
+### SEO Configuration
+```
+Title: Sistemas Rastreamento 3D - Monitoramento Precisão | Enterfix
+Meta Description: Sistemas rastreamento 3D Scanology com precisão submilimétrica. 6 soluções NimbleTrack, TrackScan, M-Track. Monitoramento 6DOF tempo real!
+Focus Keyphrase: sistemas rastreamento 3d precisao
+```
+
+### Filtros de Categoria
+```
+- Por Precisão: ±0,005mm | ±0,05mm | ±0,1mm | ±0,12mm
+- Por Aplicação: Compacto | Referência | Mobile | 6DOF | Sondagem
+- Por Taxa: 600Hz | 800Hz | 1000Hz | 1500Hz | 2000Hz
+```
+
+---
+
+## 3. SISTEMAS AUTOMATIZADOS
+
+**URL:** /sistemas-automatizados-scanology  
+**Template:** Categoria de produtos
+
+### SEO Configuration
+```
+Title: Sistemas Automatizados 3D - Digitalização Industrial | Enterfix
+Meta Description: Sistemas automatizados Scanology para linha de produção. 4 soluções AM-CELL, AutoScan. Controle qualidade 24/7 robótica integrada!
+Focus Keyphrase: sistemas automatizados digitalizacao industrial
+```
+
+### Filtros de Categoria
+```
+- Por Tipo: Célula Industrial | Desktop | Turbo | Kompakt
+- Por Capacidade: 5kg | 15kg | 50kg
+- Por Velocidade: 30-90s | 2-5min | 5-15min | 2-8min
+```
+
+---
+
+## 4. SISTEMA FOTOGRAMETRIA 3D
+
+**URL:** /sistema-fotogrametria-3d-scanology  
+**Template:** Produto individual (único produto)
+
+### SEO Configuration
+```
+Title: Fotogrametria 3D MSCAN-L15 - Sistema Multi-câmera | Enterfix
+Meta Description: Sistema fotogrametria 3D MSCAN-L15 com 15MP e precisão 0,01mm. 8-24 câmeras para objetos grandes. Captura < 1 segundo!
+Focus Keyphrase: sistema fotogrametria 3d multicamera
+```
+
+---
+
+## 5. SOFTWARES 3D PROFISSIONAIS
+
+**URL:** /softwares-3d-profissionais-scanology  
+**Template:** Categoria de produtos
+
+### SEO Configuration
+```
+Title: Softwares 3D Profissionais - Suíte Completa Scanology | Enterfix
+Meta Description: Softwares 3D Scanology para workflow completo. 4 soluções DefiniSight, ScanViewer, TViewer, 3DeVOK Studio. Análise e visualização!
+Focus Keyphrase: softwares 3d profissionais suite
+```
+
+### Filtros de Categoria
+```
+- Por Tipo: Plataforma Completa | Análise Dimensional | Visualização | Realidade Virtual
+- Por Aplicação: Industrial | Geral | Metrologia | Imersivo
+```
+
+## ESTRUTURA DE NAVEGAÇÃO
+
+### Menu Principal
+```
+Produtos > Scanology
+├── Scanners 3D Portáteis (8)
+├── Sistemas de Rastreamento (6)  
+├── Sistemas Automatizados (4)
+├── Fotogrametria 3D (1)
+├── Softwares 3D (4)
+└── Linha Completa
+```
+
+### Footer Links
+```
+Scanology
+├── Sobre a Scanology
+├── Suporte Técnico
+├── Treinamentos
+├── Documentação
+└── Contato Especializado
+```

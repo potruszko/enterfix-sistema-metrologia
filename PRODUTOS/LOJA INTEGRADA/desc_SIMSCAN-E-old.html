@@ -1,0 +1,429 @@
+<style>
+.sse{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+
+/* ── HERO ── */
+.sse-hero{background:linear-gradient(135deg,#1F1659 0%,#2d2580 45%,#1a4fa0 100%);border-radius:14px;overflow:hidden;margin-bottom:22px;position:relative}
+.sse-hero video{width:100%;height:auto;display:block;opacity:.82}
+.sse-hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 32px;background:linear-gradient(to top,rgba(15,10,50,.75) 0%,transparent 60%)}
+.sse-badge{display:inline-block;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:3px 12px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.sse-hero-overlay h1{font-size:22px;font-weight:800;color:#fff;line-height:1.2;margin:0 0 8px}
+.sse-hero-overlay p{font-size:13.5px;color:rgba(255,255,255,.88);margin:0;max-width:640px;line-height:1.65}
+
+/* ── SPECS RÁPIDAS ── */
+.sse-specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.sse-spec{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;border-top:3px solid #1F1659}
+.sse-spec-val{font-size:17px;font-weight:800;color:#1F1659;line-height:1.1}
+.sse-spec-key{font-size:11.5px;color:#64748b;margin-top:3px}
+
+/* ── CARDS ── */
+.sse-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.sse-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid #e2e8f0;display:flex;align-items:center;gap:8px}
+.sse-card p{font-size:14.5px;color:#334155;margin:0 0 10px;line-height:1.75}
+.sse-card p:last-child{margin:0}
+
+/* ── FEATURES ── */
+.sse-feats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.sse-feats li{font-size:14px;color:#334155;padding:9px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+.sse-feats li::before{content:'✓';color:#16a34a;font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* ── MODOS ── */
+.sse-modes{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:10px 0}
+.sse-mode{border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;background:#f8fafc;border-left:4px solid #1F1659}
+.sse-mode-title{font-size:13.5px;font-weight:700;color:#1F1659;margin-bottom:5px}
+.sse-mode-desc{font-size:13px;color:#475569;line-height:1.55}
+.sse-mode-tag{display:inline-block;background:#1F1659;color:#fff;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-bottom:7px}
+
+/* ── TABELA ── */
+.sse-tbl-wrap{overflow-x:auto}
+.sse-tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:420px}
+.sse-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:12px;font-weight:700}
+.sse-tbl th:first-child{border-radius:6px 0 0 0}
+.sse-tbl th:last-child{border-radius:0 6px 0 0}
+.sse-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.sse-tbl tr:nth-child(even) td{background:#f8fafc}
+.sse-tbl tr:last-child td{border-bottom:none}
+.sse-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+
+/* ── APLICAÇÕES ── */
+.sse-apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:12px 0}
+.sse-app{border:1px solid #e2e8f0;border-radius:9px;padding:13px 15px;background:#fafbfc;display:flex;gap:10px;align-items:flex-start}
+.sse-app-icon{font-size:22px;flex-shrink:0}
+.sse-app-title{font-size:13.5px;font-weight:700;color:#0f172a;margin-bottom:3px}
+.sse-app-desc{font-size:12.5px;color:#64748b;line-height:1.5}
+
+/* ── ICONS GRID ── */
+.sse-icons{background:#17191B;border-radius:12px;padding:28px;margin-bottom:16px}
+.sse-icons h2{color:#fff;font-size:16px;font-weight:800;text-align:center;margin:0 0 20px}
+.sse-icon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sse-icard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px 12px;text-align:center}
+.sse-icard img{max-width:100px;height:auto;margin:0 auto 10px;display:block}
+.sse-icard p{color:#e2e8f0;margin:0;font-size:12.5px;line-height:1.5}
+
+/* ── SOFTWARES ── */
+.sse-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px 28px;margin-bottom:16px}
+.sse-soft h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+.sse-soft-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center}
+.sse-soft-logos img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+/* ── VÍDEO ── */
+.sse-video-wrap{background:linear-gradient(135deg,#1F1659,#1a4fa0);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.sse-video-wrap h2{font-size:16px;font-weight:800;color:#fff;margin:0 0 8px;text-align:center}
+.sse-video-wrap p{font-size:14px;color:rgba(255,255,255,.88);margin:0 0 16px;line-height:1.65;text-align:center}
+.sse-iframe{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.sse-iframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── ALERTAS ── */
+.sse-alert-blue{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#1e40af;margin:12px 0;line-height:1.6}
+.sse-alert-green{background:#f0fdf4;border:1px solid #86efac;border-left:4px solid #16a34a;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#15803d;margin:12px 0;line-height:1.6}
+
+/* ── CTA ── */
+.sse-cta{background:linear-gradient(135deg,#1e3a8a,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.sse-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.sse-cta strong{color:#fff}
+.sse-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.sse-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.sse-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.sse-btn-green:hover,.sse-btn-white:hover{filter:brightness(.95)}
+
+/* ── FOOTNOTES ── */
+.sse-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+
+@media(max-width:700px){
+  .sse-icon-grid,.sse-soft-logos{grid-template-columns:repeat(2,1fr)}
+  .sse-hero-overlay h1{font-size:17px}
+  .sse-card,.sse-icons,.sse-soft,.sse-video-wrap,.sse-cta{padding:20px 16px}
+}
+@media(max-width:440px){
+  .sse-icon-grid,.sse-soft-logos{grid-template-columns:1fr}
+}
+</style>
+
+<div class="sse">
+
+  <!-- Resumo para preview (WhatsApp/LinkedIn) -->
+  <p style="margin:0 0 16px 0;display:none">Scanner 3D portátil SIMSCAN-E — 81 linhas de laser azul, 6,3 milhões de medições por segundo, precisão de 0,020 mm, Wi-Fi 6 integrado, 600 g.</p>
+
+  <!-- HERO COM VÍDEO -->
+  <div class="sse-hero">
+    <video autoplay loop muted playsinline poster="https://enterfix.com.br/wp-content/uploads/2025/04/SIMSCAN-E1.png" src="https://enterfix.com.br/wp-content/uploads/2025/04/f34ca26801b756a7b4c31606f94d1549.mp4"></video>
+    <div class="sse-hero-overlay">
+      <div class="sse-badge">&#128247; Scanner 3D Portátil — SIMSCAN-E</div>
+      <h1>SIMSCAN-E — Scanner 3D Inteligente, Sem Fio e Compacto</h1>
+      <p>81 linhas de laser azul &bull; 6,3 milhões de medições/s &bull; Precisão de 0,020 mm &bull; Wi-Fi 6 integrado &bull; 600 g</p>
+    </div>
+  </div>
+
+  <!-- SPECS RÁPIDAS -->
+  <div class="sse-specs">
+    <div class="sse-spec">
+      <div class="sse-spec-val">0,020 mm</div>
+      <div class="sse-spec-key">Precisão de medição</div>
+    </div>
+    <div class="sse-spec">
+      <div class="sse-spec-val">6,3 M/s</div>
+      <div class="sse-spec-key">Medições por segundo</div>
+    </div>
+    <div class="sse-spec">
+      <div class="sse-spec-val">81 linhas</div>
+      <div class="sse-spec-key">Laser azul</div>
+    </div>
+    <div class="sse-spec">
+      <div class="sse-spec-val">180 FPS</div>
+      <div class="sse-spec-key">Taxa de quadros</div>
+    </div>
+    <div class="sse-spec">
+      <div class="sse-spec-val">600 g</div>
+      <div class="sse-spec-key">Peso</div>
+    </div>
+    <div class="sse-spec">
+      <div class="sse-spec-val">Wi-Fi 6</div>
+      <div class="sse-spec-key">Conectividade</div>
+    </div>
+  </div>
+
+  <!-- DESCRIÇÃO GERAL -->
+  <div class="sse-card">
+    <h2>&#128221; Sobre o SIMSCAN-E</h2>
+    <p>O <strong>SIMSCAN-E</strong> é um scanner 3D portátil de última geração desenvolvido pela Scantech, que reúne alta precisão, mobilidade total e tecnologia Wi-Fi 6 em um corpo compacto de apenas <strong>203 × 80 × 44 mm</strong> e <strong>600 g</strong>. Projetado para uso profissional em campo ou laboratório, permite digitalização totalmente sem fio com qualidade de nível industrial.</p>
+    <p>Com <strong>81 linhas de laser azul</strong>, incluindo a tecnologia exclusiva <strong>Triple Cross</strong>, o SIMSCAN-E atinge até <strong>6,3 milhões de medições por segundo</strong> e <strong>180 quadros por segundo</strong>, garantindo aquisição rápida e fluida mesmo em superfícies complexas. A precisão de <strong>0,020 mm</strong> e resolução de até <strong>0,020 mm</strong> atendem às exigências de inspeção dimensional industrial e desenvolvimento de produto.</p>
+    <p>Equipado com câmeras industriais de alta performance, algoritmo de aprimoramento de imagem e extração de características sub-pixel — os mesmos recursos de equipamentos aeroespaciais de referência — o SIMSCAN-E entrega dados 3D completos, precisos e rastreáveis em todo o ciclo de vida do produto.</p>
+    <div class="sse-alert-green">
+      &#10004; <strong>Sem fio de verdade:</strong> Wi-Fi 6 (802.11a/b/g/n/ac) integrado para digitalização completamente sem cabos em campo. Conexão USB 3.0 tipo B também disponível para uso em bancada.
+    </div>
+  </div>
+
+  <!-- IMAGENS DO PRODUTO -->
+  <div style="background-image:url('https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg');background-size:cover;background-position:center;padding:32px 16px;border-radius:12px;margin-bottom:16px">
+    <img alt="SIMSCAN-E Scanner 3D" src="https://enterfix.com.br/wp-content/uploads/2025/04/SIMSCAN-E1.png" style="max-width:100%;height:auto;display:block;margin:0 auto;border-radius:16px" />
+    <div style="height:14px"></div>
+    <img alt="SIMSCAN-E vista técnica" src="https://enterfix.com.br/wp-content/uploads/2025/04/SIMSCAN-E2-1.png" style="max-width:100%;height:auto;display:block;margin:0 auto;border-radius:16px" />
+    <div style="height:14px"></div>
+    <img alt="SIMSCAN-E em campo" src="https://enterfix.com.br/wp-content/uploads/2025/04/SIMSCAN-E175.png" style="max-width:100%;height:auto;display:block;margin:0 auto;border-radius:16px" />
+    <div style="height:14px"></div>
+    <img alt="SIMSCAN-E aplicação industrial" src="https://enterfix.com.br/wp-content/uploads/2025/04/SIMSCAN-E10-1.png" style="max-width:100%;height:auto;display:block;margin:0 auto;border-radius:16px" />
+  </div>
+
+  <!-- DIFERENCIAIS -->
+  <div class="sse-card">
+    <h2>&#10003; Principais Diferenciais</h2>
+    <ul class="sse-feats">
+      <li>81 linhas de laser azul com tecnologia Triple Cross para cobertura máxima</li>
+      <li>6,3 milhões de medições por segundo — aquisição ultrarrápida de dados</li>
+      <li>180 FPS para digitalização fluida mesmo em geometrias complexas</li>
+      <li>Precisão de 0,020 mm — certificado ISO 17025 (VDI/VDE 2634 Parte 3)</li>
+      <li>Wi-Fi 6 integrado (802.11a/b/g/n/ac) — sem fio nativo, sem adaptadores</li>
+      <li>Peso de 600 g e dimensões 203 × 80 × 44 mm — uso com uma só mão</li>
+      <li>3 modos de digitalização: Ultrarrápido, Detalhado e Furos Profundos</li>
+      <li>Câmeras industriais + algoritmo de extração sub-pixel de alta precisão</li>
+      <li>Laser Classe II — seguro para os olhos, homologado para uso profissional</li>
+      <li>Profundidade de campo de 550 mm — maior flexibilidade de distância</li>
+      <li>Área de digitalização de até 700 × 600 mm por passagem</li>
+      <li>Design full-metal compacto — robusto para campo e chão de fábrica</li>
+      <li>Software DefinSight nativo — plataforma moderna com algoritmos avançados</li>
+      <li>Compatível com os principais softwares CAD/CAM e metrologia do mercado</li>
+      <li>Operação de -10 °C a 40 °C — apto para ambientes industriais variados</li>
+    </ul>
+  </div>
+
+  <!-- MODOS DE DIGITALIZAÇÃO -->
+  <div class="sse-card">
+    <h2>&#128247; Modos de Digitalização</h2>
+    <p>O SIMSCAN-E opera em três modos distintos, permitindo ao operador escolher o melhor equilíbrio entre velocidade, detalhe e acesso a geometrias difíceis:</p>
+    <div class="sse-modes">
+      <div class="sse-mode">
+        <div class="sse-mode-tag">ULTRARRÁPIDO</div>
+        <div class="sse-mode-title">&#9889; Digitalização Ultrarrápida</div>
+        <div class="sse-mode-desc"><strong>63 linhas de laser azul</strong> com tecnologia <strong>Triple Cross</strong>. Máxima taxa de captura para objetos de médio e grande porte. Ideal quando velocidade de aquisição é prioridade.</div>
+      </div>
+      <div class="sse-mode">
+        <div class="sse-mode-tag">DETALHADO</div>
+        <div class="sse-mode-title">&#128301; Digitalização Detalhada (Hyperfine)</div>
+        <div class="sse-mode-desc"><strong>17 linhas de laser azul paralelas</strong> para captura precisa de detalhes finos, características intricadas e estruturas complexas com alta fidelidade.</div>
+      </div>
+      <div class="sse-mode">
+        <div class="sse-mode-tag">FUROS PROFUNDOS</div>
+        <div class="sse-mode-title">&#128330; Digitalização de Furos Profundos</div>
+        <div class="sse-mode-desc"><strong>1 linha de laser azul dedicada</strong> com ângulo de visão otimizado para acessar frestas, rasgos, canais e cavidades profundas onde scanners convencionais não alcançam.</div>
+      </div>
+    </div>
+    <div class="sse-alert-blue" style="margin-top:14px">
+      &#8505;&#65039; <strong>Câmera de curta distância:</strong> o design com ângulo de visão acentuado melhora significativamente a capacidade de digitalizar áreas ocultas — frestas, rasgos, furos profundos e canais — resultando em dados 3D mais completos e íntegros.
+    </div>
+  </div>
+
+  <!-- ESPECIFICAÇÕES TÉCNICAS -->
+  <div class="sse-card">
+    <h2>&#128202; Especificações Técnicas</h2>
+    <div class="sse-tbl-wrap">
+      <table class="sse-tbl" aria-label="Especificações técnicas SIMSCAN-E">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>SIMSCAN-E</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modo Ultrarrápido</td>
+            <td>63 linhas de laser azul (tecnologia Triple Cross)</td>
+          </tr>
+          <tr>
+            <td>Modo Detalhado (Hyperfine)</td>
+            <td>17 linhas de laser azul paralelas</td>
+          </tr>
+          <tr>
+            <td>Modo Furos Profundos</td>
+            <td>1 linha de laser azul dedicada</td>
+          </tr>
+          <tr>
+            <td>Precisão de medição <sup>(1)</sup></td>
+            <td>Até 0,020 mm</td>
+          </tr>
+          <tr>
+            <td>Taxa de digitalização</td>
+            <td>Até 6.300.000 medições/s</td>
+          </tr>
+          <tr>
+            <td>Taxa de quadros</td>
+            <td>180 FPS</td>
+          </tr>
+          <tr>
+            <td>Área de digitalização</td>
+            <td>Até 700 mm × 600 mm</td>
+          </tr>
+          <tr>
+            <td>Classe do laser</td>
+            <td>Classe II — seguro para os olhos</td>
+          </tr>
+          <tr>
+            <td>Resolução</td>
+            <td>Até 0,020 mm</td>
+          </tr>
+          <tr>
+            <td>Precisão volumétrica — Padrão <sup>(2)</sup></td>
+            <td>0,015 mm + 0,035 mm/m</td>
+          </tr>
+          <tr>
+            <td>Precisão volumétrica — com MSCAN-L15 <sup>(2)</sup></td>
+            <td>0,015 mm + 0,012 mm/m</td>
+          </tr>
+          <tr>
+            <td>Distância de afastamento</td>
+            <td>300 mm</td>
+          </tr>
+          <tr>
+            <td>Profundidade de campo</td>
+            <td>550 mm</td>
+          </tr>
+          <tr>
+            <td>Formatos de saída</td>
+            <td>.stl, .obj, .ply, .asc, .igs, .txt, .mk2, .umk, entre outros</td>
+          </tr>
+          <tr>
+            <td>Dimensões</td>
+            <td>203 mm × 80 mm × 44 mm</td>
+          </tr>
+          <tr>
+            <td>Peso</td>
+            <td>600 g</td>
+          </tr>
+          <tr>
+            <td>Temperatura operacional</td>
+            <td>-10 °C a 40 °C</td>
+          </tr>
+          <tr>
+            <td>Umidade operacional (sem condensação)</td>
+            <td>10% a 90% UR</td>
+          </tr>
+          <tr>
+            <td>Interface cabeada</td>
+            <td>USB 3.0 tipo B (USB3-B)</td>
+          </tr>
+          <tr>
+            <td>Padrão sem fio</td>
+            <td>Wi-Fi 6 — 802.11a/b/g/n/ac</td>
+          </tr>
+          <tr>
+            <td>Software nativo</td>
+            <td>DefinSight</td>
+          </tr>
+          <tr>
+            <td>Patentes</td>
+            <td style="font-size:12px">CN204329903U, CN104501740B, CN204854633U, CN204944431U, CN204902788U, CN105068384B, CN105049664B, CN204902784U, CN204902785U, CN106403845B, CN110030946B, CN212300269U, CN211904059U, CN211696268U, CN306053019S, CN212606697U, CN306321502S</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sse-fn">
+      <sup>(1)</sup> Certificado ISO 17025: baseado na norma VDI/VDE 2634 Parte 3 e JJF 1951 — erro de apalpamento (PS).<br>
+      <sup>(2)</sup> Certificado ISO 17025: baseado na norma VDI/VDE 2634 Parte 3 e JJF 1951 — erro de espaçamento de esferas (SD).<br>
+      <em>* A Enterfix reserva-se o direito de alterar os parâmetros e imagens conforme a legislação vigente.</em>
+    </p>
+  </div>
+
+  <!-- APLICAÇÕES -->
+  <div class="sse-card">
+    <h2>&#127981; Aplicações Típicas</h2>
+    <div class="sse-apps">
+      <div class="sse-app">
+        <div class="sse-app-icon">&#128663;</div>
+        <div>
+          <div class="sse-app-title">Inspeção Automotiva</div>
+          <div class="sse-app-desc">Inspeção de painéis, matrizes de estampagem e carrocerias — digitalização sem fio on-site com 0,020 mm de precisão.</div>
+        </div>
+      </div>
+      <div class="sse-app">
+        <div class="sse-app-icon">&#9992;&#65039;</div>
+        <div>
+          <div class="sse-app-title">Aeroespacial e Defesa</div>
+          <div class="sse-app-desc">Controle dimensional de peças estruturais com exigência de alta rastreabilidade e precisão volumétrica.</div>
+        </div>
+      </div>
+      <div class="sse-app">
+        <div class="sse-app-icon">&#128295;</div>
+        <div>
+          <div class="sse-app-title">Engenharia Reversa</div>
+          <div class="sse-app-desc">Geração de nuvem de pontos e malha para recriação de modelos CAD de peças sem documentação original.</div>
+        </div>
+      </div>
+      <div class="sse-app">
+        <div class="sse-app-icon">&#128202;</div>
+        <div>
+          <div class="sse-app-title">Controle de Qualidade</div>
+          <div class="sse-app-desc">Comparação CAD vs. peça real, inspeção de tolerâncias GD&T e geração de relatórios de cor de desvio.</div>
+        </div>
+      </div>
+      <div class="sse-app">
+        <div class="sse-app-icon">&#9881;&#65039;</div>
+        <div>
+          <div class="sse-app-title">Moldes e Ferramentaria</div>
+          <div class="sse-app-desc">Digitalização de moldes de injeção, ferramental de conformação e matrizes para inspeção e reparo rápido.</div>
+        </div>
+      </div>
+      <div class="sse-app">
+        <div class="sse-app-icon">&#128421;</div>
+        <div>
+          <div class="sse-app-title">Geometrias e Cavidades Internas</div>
+          <div class="sse-app-desc">Modo furos profundos para acessar cavidades, rasgos e canais — dados íntegros e completos sem reposicionamento.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÍCONES DE DESTAQUE -->
+  <div class="sse-icons">
+    <h2>&#9889; Destaques Técnicos</h2>
+    <div class="sse-icon-grid">
+      <div class="sse-icard">
+        <img alt="Transferência de Dados Sem Fio" src="https://enterfix.com.br/wp-content/uploads/2025/03/Transferencia-de-Dados-Sem-Fio.png" />
+        <p>Wi-Fi 6 — Dados Sem Fio Nativos</p>
+      </div>
+      <div class="sse-icard">
+        <img alt="6.300.000 medições por segundo" src="https://enterfix.com.br/wp-content/uploads/2025/03/6300000-medicoes.png" />
+        <p>6.300.000 medições/s</p>
+      </div>
+      <div class="sse-icard">
+        <img alt="81 Linhas de Laser Azul" src="https://enterfix.com.br/wp-content/uploads/2025/03/81-linhas-laser-azul.png" />
+        <p>81 Linhas de Laser Azul</p>
+      </div>
+      <div class="sse-icard">
+        <img alt="Dimensões 203×80×44 mm" src="https://enterfix.com.br/wp-content/uploads/2025/03/Dimensoes-203-80-44.png" />
+        <p>203 × 80 × 44 mm &bull; 600 g</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOFTWARES COMPATÍVEIS -->
+  <div class="sse-soft">
+    <h2>&#128187; Softwares Compatíveis</h2>
+    <p style="font-size:14px;color:#475569;margin:0 0 16px">O SIMSCAN-E opera nativamente com o <strong>DefinSight</strong> — plataforma de nova geração com interface moderna e algoritmos de ponta para digitalização e inspeção 3D. Compatível também com os principais softwares CAD/CAM e metrologia do mercado:</p>
+    <div class="sse-soft-logos">
+      <img alt="Zeiss" src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" />
+      <img alt="Verisurf" src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" />
+      <img alt="PolyWorks" src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" />
+      <img alt="Geomagic" src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" />
+    </div>
+  </div>
+
+  <!-- VÍDEO YOUTUBE -->
+  <div class="sse-video-wrap">
+    <h2>&#127916; SIMSCAN-E em Ação</h2>
+    <p>Assista ao SIMSCAN-E em operação — veja a agilidade das 81 linhas de laser azul, a liberdade do uso sem fio e a qualidade dos dados 3D gerados em aplicações reais de inspeção e digitalização industrial.</p>
+    <div class="sse-iframe">
+      <iframe allowfullscreen loading="lazy" src="https://www.youtube.com/embed/IYWhwlMGYx0" title="SIMSCAN-E Scanner 3D Portátil"></iframe>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="sse-cta">
+    <p><strong>&#128222; Solicite uma demonstração ou orçamento personalizado</strong></p>
+    <p>Fale com nosso time técnico e descubra como o SIMSCAN-E pode atender sua aplicação de digitalização e inspeção 3D.</p>
+    <div class="sse-cta-btns">
+      <a class="sse-btn-green" href="https://lp.enterfix.com.br/catalogo-simscan-e" rel="noopener" target="_blank">&#128196; Download do Catálogo</a>
+      <a class="sse-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" rel="noopener" target="_blank">&#128172; WhatsApp (11) 96841-6776</a>
+      <a class="sse-btn-white" href="mailto:vendas@enterfix.com.br">&#9993;&#65039; vendas@enterfix.com.br</a>
+    </div>
+    <p style="font-size:12px;opacity:.65;margin-top:14px">Seg–Sex 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; Enterfix Indústria, Comércio e Serviços Ltda.</p>
+  </div>
+
+</div>

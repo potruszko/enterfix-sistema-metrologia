@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, FileText, History, Settings, Wrench, LogOut, UserCircle, FileSignature, Building2 } from 'lucide-react';
+import { Home, FileText, History, Settings, Wrench, LogOut, UserCircle, FileSignature, Building2, RefreshCw } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useIsMobile } from '../hooks/useMediaQuery';
 
@@ -32,6 +32,7 @@ const Sidebar = ({ currentPage, onNavigate, isOpen, onClose }) => {
     { id: 'clientes', icon: Building2, label: 'Clientes' },
     { id: 'contratos', icon: FileSignature, label: 'Contratos' },
     { id: 'equipamentos', icon: Wrench, label: 'Equipamentos' },
+    { id: 'bling-sync', icon: RefreshCw, label: 'Bling ERP' },
     { id: 'perfil', icon: UserCircle, label: 'Meu Perfil' },
     { id: 'configuracoes', icon: Settings, label: 'Configurações' },
   ];

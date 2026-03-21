@@ -1,0 +1,266 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>KSCAN-E - Scanner 3D Composto de Alta Precisão</h1>
+
+<p class="produto-breve-descricao">Scanner 3D composto de precisão industrial com tecnologia híbrida de digitalização e alta taxa de medição para aplicações industriais críticas.</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">Tecnologia de Digitalização Composta de Nova Geração</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">O <strong>KSCAN-E</strong> é um scanner 3D composto que combina tecnologia avançada de digitalização com versatilidade incomparável. Este equipamento representa o estado da arte em digitalização 3D, oferecendo precisão excepcional e facilidade de uso para aplicações industriais exigentes.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">0,02mm</h3>
+        <p style="font-size: 16px;">Precisão Volumétrica</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">2,5M</h3>
+        <p style="font-size: 16px;">Pontos/Segundo</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">670g</h3>
+        <p style="font-size: 16px;">Peso Ultraleve</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Dual</h3>
+        <p style="font-size: 16px;">Modos de Digitalização</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração da Tecnologia Composta</h3>
+<p>Veja o KSCAN-E em ação demonstrando sua capacidade única de digitalização composta em diferentes tipos de superfícies e geometrias complexas.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Digitalização híbrida com adaptação automática</li>
+<li>Captura precisa de detalhes finos</li>
+<li>Rastreamento robusto sem marcadores</li>
+<li>Processamento em tempo real</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas Avançadas</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Volumétrica</strong></td>
+<td>Até 0,02mm</td>
+</tr>
+<tr>
+<td><strong>Resolução de Digitalização</strong></td>
+<td>0,05mm</td>
+</tr>
+<tr>
+<td><strong>Taxa de Medição</strong></td>
+<td>2.500.000 pontos/segundo</td>
+</tr>
+<tr>
+<td><strong>Área de Digitalização (Modo Normal)</strong></td>
+<td>170mm × 130mm</td>
+</tr>
+<tr>
+<td><strong>Área de Digitalização (Modo Fino)</strong></td>
+<td>85mm × 65mm</td>
+</tr>
+<tr>
+<td><strong>Distância de Trabalho</strong></td>
+<td>300mm</td>
+</tr>
+<tr>
+<td><strong>Profundidade de Campo</strong></td>
+<td>200mm</td>
+</tr>
+<tr>
+<td><strong>Fonte de Luz</strong></td>
+<td>LED azul (classe 1)</td>
+</tr>
+<tr>
+<td><strong>Peso</strong></td>
+<td>670g</td>
+</tr>
+<tr>
+<td><strong>Certificação</strong></td>
+<td>CE, FCC, IC</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos e Benefícios Principais</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PRECISION]" alt="Precisão Industrial" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Precisão Industrial</h4>
+<p style="font-size: 14px; line-height: 1.5;">Precisão volumétrica de 0,02mm para aplicações críticas de controle de qualidade industrial.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_SPEED]" alt="Alta Velocidade" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Velocidade Extrema</h4>
+<p style="font-size: 14px; line-height: 1.5;">2,5 milhões de pontos por segundo garantem digitalização rápida e eficiente.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_VERSATILITY]" alt="Versatilidade" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Versatilidade Total</h4>
+<p style="font-size: 14px; line-height: 1.5;">Tecnologia composta adaptável para diferentes superfícies e geometrias complexas.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PORTABILITY]" alt="Portabilidade" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Ultra Portátil</h4>
+<p style="font-size: 14px; line-height: 1.5;">Apenas 670g de peso para digitalização móvel sem comprometer a precisão.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Applications Section -->
+[vc_row css=".vc_custom_1508859733758{background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações Industriais Avançadas</h3>
+
+<div style="margin-bottom: 30px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;"><strong>🎯 Controle de Qualidade Industrial:</strong></h4>
+<ul style="margin-left: 20px; line-height: 1.6;">
+<li>Inspeção dimensional de componentes críticos</li>
+<li>Verificação de tolerâncias geométricas</li>
+<li>Análise de deformações em tempo real</li>
+</ul>
+</div>
+
+<div style="margin-bottom: 30px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;"><strong>🔄 Engenharia Reversa Profissional:</strong></h4>
+<ul style="margin-left: 20px; line-height: 1.6;">
+<li>Digitalização de componentes complexos</li>
+<li>Reconstrução CAD de alta fidelidade</li>
+<li>Documentação digital de produtos legados</li>
+</ul>
+</div>
+
+<div>
+<h4 style="color: #2c3e50; margin-bottom: 15px;"><strong>⚙️ Desenvolvimento de Produtos:</strong></h4>
+<ul style="margin-left: 20px; line-height: 1.6;">
+<li>Validação de protótipos avançados</li>
+<li>Análise comparativa com modelos CAD</li>
+<li>Otimização de processos de fabricação</li>
+</ul>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_APLICACOES]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Software de Digitalização Profissional</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">O KSCAN-E é acompanhado pelo software ScanViewer Professional, uma solução abrangente para processamento avançado de dados 3D</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🔧 Recursos Avançados</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Interface otimizada para fluxo industrial</li>
+            <li>Processamento automático de malhas</li>
+            <li>Ferramentas de análise dimensional</li>
+            <li>Exportação CAD/CAM integrada</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">📊 Compatibilidade</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Softwares de metrologia</li>
+            <li>Relatórios automáticos</li>
+            <li>Formatos STL, OBJ, PLY, ASC</li>
+            <li>IGES, STEP e CAD nativos</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Download CTA Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 80px !important;padding-bottom: 80px !important;}" el_class="cta-download-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Transforme seus Processos de Digitalização 3D</h3>
+<p style="font-size: 1.3em; line-height: 1.6; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Descubra como o KSCAN-E pode revolucionar seus processos de controle de qualidade e engenharia reversa com precisão industrial incomparável.</p>
+
+<div style="margin-bottom: 40px;">
+<a href="[LINK_ORCAMENTO]" style="display: inline-block; background-color: #ffd700; color: #2c3e50; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+📞 SOLICITAR ORÇAMENTO
+</a>
+<a href="[LINK_DEMONSTRACAO]" style="display: inline-block; background-color: transparent; color: white; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; border: 2px solid white; transition: all 0.3s ease;">
+🎯 AGENDAR DEMONSTRAÇÃO
+</a>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📧</div>
+    <div style="font-size: 1.1em;">contato@enterfix.com.br</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📱</div>
+    <div style="font-size: 1.1em;">+55 11 5555-5555</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">⚡</div>
+    <div style="font-size: 1.1em;">Atendimento Especializado</div>
+</div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- SEO Tags -->
+<!-- Tags: scanner 3d, kscan-e, digitalização 3d, scanner industrial, metrologia 3d, controle qualidade, engenharia reversa, scanner composto, scanology, enterfix, precisão industrial -->
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens Competitivas</h3>
+
+<strong>Precisão Industrial:</strong>
+Com precisão volumétrica de até 0,02mm, o KSCAN-E atende aos mais rigorosos padrões de qualidade industrial.
+
+<strong>Versatilidade de Aplicação:</strong>
+Modos de digitalização adaptativos permitem trabalhar com geometrias simples e complexas com igual eficiência.
+
+<strong>Produtividade Elevada:</strong>
+Taxa de medição de 2,5 milhões de pontos por segundo garante digitalização rápida sem comprometer a qualidade.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Especializado Enterfix</h3>
+
+A Enterfix oferece suporte técnico completo e programas de treinamento especializados:
+
+• <strong>Treinamento Técnico Avançado:</strong> Cursos especializados para operadores industriais
+• <strong>Suporte Técnico 24/7:</strong> Assistência técnica especializada via remote
+• <strong>Consultoria em Aplicações:</strong> Otimização de processos específicos
+• <strong>Atualizações de Software:</strong> Melhorias contínuas e novos recursos
+• <strong>Certificação de Operadores:</strong> Programas de certificação profissional
+
+<strong>Agende uma Demonstração e descubra como o KSCAN-E pode transformar seus processos de digitalização 3D!</strong>
+[/vc_column_text][/vc_column][/vc_row]

@@ -1,0 +1,56 @@
+[vc_row full_width="stretch_row" bg_type="grad" bg_override="full" css=".vc_custom_1743499489559{padding-top: 60px !important;padding-bottom: 80px !important;background-color: #F2F2F2 !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FCFCFC), color-stop(100%, #E3E3E3));background: -moz-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -webkit-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -o-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -ms-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);"][vc_column][ind_custom_heading heading="SISTEMA DE FOTOGRAMETRIA 3D" position="center" margin_bottom="32"][vc_column_text css_animation="fadeInUp" css=".vc_custom_1743499181401{padding: 32px !important;text-align: center;}"]
+
+<p style="text-align: center;font-size: 18px;line-height: 1.6">
+O <strong>Sistema de Fotogrametria 3D</strong> da Scanology oferece <strong>digitalização de alta precisão</strong> para objetos de grande porte através de tecnologia multi-câmera avançada.
+</p>
+
+<p style="text-align: center;font-size: 16px;color: #666;line-height: 1.6">
+Com captura simultânea e processamento automático, nosso sistema de fotogrametria garante <strong>precisão excepcional</strong> para patrimônio cultural, componentes industriais e aplicações de pesquisa científica.
+</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1743499551634{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;padding-top: 40px !important;padding-bottom: 80px !important;}"][vc_column]
+
+[ind_custom_heading heading="SISTEMA DISPONÍVEL" heading_color="#000000" position="center" margin_bottom="32"]
+
+[vc_column_text css_animation="fadeInUp"]
+
+<table style="width: 85%;max-width: 900px;margin: 40px auto;border-collapse: collapse;text-align: center;font-size: 16px;line-height: 1.6;border-radius: 8px;overflow: hidden">
+  <thead style="background-color: #27AE60;color: #ffffff">
+    <tr>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Modelo</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Resolução</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Volume de Medição</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Tempo de Captura</th>
+    </tr>
+  </thead>
+  <tbody style="color: #333">
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>MSCAN-L15</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">15 Megapixels por câmera</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">100mm - 5000mm</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">< 1 segundo</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin: 40px auto;max-width: 800px;text-align: center">
+  <h3 style="color: #333;margin-bottom: 20px">Características Principais</h3>
+  <div style="display: flex;justify-content: space-around;flex-wrap: wrap;gap: 20px">
+    <div style="flex: 1;min-width: 200px;background: #f9f9f9;padding: 20px;border-radius: 8px">
+      <h4 style="color: #27AE60">Precisão Excepcional</h4>
+      <p>Até 0,01mm em objetos grandes</p>
+    </div>
+    <div style="flex: 1;min-width: 200px;background: #f9f9f9;padding: 20px;border-radius: 8px">
+      <h4 style="color: #27AE60">Multi-câmera</h4>
+      <p>8-24 câmeras configuráveis</p>
+    </div>
+    <div style="flex: 1;min-width: 200px;background: #f9f9f9;padding: 20px;border-radius: 8px">
+      <h4 style="color: #27AE60">Processamento</h4>
+      <p>5-50 milhões pts/captura</p>
+    </div>
+  </div>
+</div>
+
+[/vc_column_text][/vc_column][/vc_row]

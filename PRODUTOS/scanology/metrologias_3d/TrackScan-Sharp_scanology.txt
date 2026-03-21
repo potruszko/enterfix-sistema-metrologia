@@ -1,0 +1,348 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos de Rastreamento Avançado</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_TRACKING]" alt="Rastreamento Real-Time" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Tempo Real</h4>
+<p style="font-size: 14px; line-height: 1.5;">Rastreamento contínuo com atualização em tempo real para máxima precisão operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PRECISION]" alt="Alta Precisão" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Alta Precisão</h4>
+<p style="font-size: 14px; line-height: 1.5;">Precisão submilimétrica para aplicações de metrologia e controle de qualidade.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_WIRELESS]" alt="Sistema Sem Fio" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Sem Fio</h4>
+<p style="font-size: 14px; line-height: 1.5;">Comunicação wireless para máxima mobilidade e flexibilidade operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_CALIBRATION]" alt="Auto Calibração" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Auto Calibração</h4>
+<p style="font-size: 14px; line-height: 1.5;">Sistema de calibração automática para manutenção contínua da precisão.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Applications Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>TrackScan Sharp - Sistema de Rastreamento de Precisão</h1>
+
+<p class="produto-breve-descricao">Sistema avançado de rastreamento 3D com tecnologia de ponta para aplicações de metrologia e posicionamento de alta precisão.</p>
+
+O <strong>TrackScan Sharp</strong> é um sistema de rastreamento ótico de alta definição que combina precisão excepcional com facilidade de uso. Este sistema oferece performance superior para aplicações que exigem rastreamento preciso e confiável.
+
+<strong>Características Principais:</strong>
+• Sistema de rastreamento ótico de alta definição
+• Algoritmos avançados de processamento Sharp-Vision
+• Precisão posicional de ±0,08mm
+• Interface intuitiva para operadores
+• Compatibilidade com múltiplos tipos de marcadores
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">TrackScan Sharp - Sistema de Rastreamento de Precisão - Sistema de Rastreamento 3D Avançado</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Sistema avançado de rastreamento 3D com tecnologia de ponta para aplicações de metrologia e posicionamento de alta precisão.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Track</h3>
+        <p style="font-size: 16px;">Rastreamento</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Sharp</h3>
+        <p style="font-size: 16px;">Precisão</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Auto</h3>
+        <p style="font-size: 16px;">Calibração</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Multi</h3>
+        <p style="font-size: 16px;">Objeto</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração de Rastreamento</h3>
+<p>Veja o TrackScan Sharp demonstrando suas capacidades avançadas de rastreamento 3D em tempo real.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Rastreamento em tempo real</li>
+<li>Precisão de posicionamento</li>
+<li>Calibração automática</li>
+<li>Interface intuitiva</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas de Rastreamento</h3>
+
+[vc_row]<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Software de Rastreamento Profissional</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Soluções de software especializadas para rastreamento 3D e análise de movimento</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🎯 Rastreamento Avançado</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Rastreamento multi-objeto simultâneo</li>
+            <li>Compensação de vibração automática</li>
+            <li>Análise de trajetória em tempo real</li>
+            <li>Relatórios de movimento detalhados</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">📊 Integração Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>CMMs e braços articulados</li>
+            <li>Softwares de metrologia</li>
+            <li>Sistemas de automação industrial</li>
+            <li>APIs para desenvolvimento customizado</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Tecnologia Sharp-Vision</h3>
+
+O TrackScan Sharp utiliza tecnologia proprietária Sharp-Vision que combina algoritmos avançados de processamento de imagem com sistemas óticos de alta qualidade para garantir rastreamento preciso e confiável.
+
+<strong>Especificações Técnicas Sharp:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão de Posição</strong></td>
+<td>±0,08mm</td>
+</tr>
+<tr>
+<td><strong>Precisão Angular</strong></td>
+<td>±0,03°</td>
+</tr>
+<tr>
+<td><strong>Taxa de Atualização</strong></td>
+<td>800Hz</td>
+</tr>
+<tr>
+<td><strong>Latência</strong></td>
+<td>< 3ms</td>
+</tr>
+<tr>
+<td><strong>Volume de Rastreamento</strong></td>
+<td>3m × 2,5m × 2m</td>
+</tr>
+<tr>
+<td><strong>Resolução das Câmeras</strong></td>
+<td>1920 × 1080 pixels</td>
+</tr>
+<tr>
+<td><strong>Tecnologia Sharp-Vision</strong></td>
+<td>Processamento otimizado</td>
+</tr>
+<tr>
+<td><strong>Tipos de Marcadores</strong></td>
+<td>Reflexivos, ativos, híbridos</td>
+</tr>
+<tr>
+<td><strong>Interface</strong></td>
+<td>USB 3.1, Ethernet</td>
+</tr>
+<tr>
+<td><strong>Certificação</strong></td>
+<td>CE, FCC, ISO 9001</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações de Rastreamento Sharp</h3>
+
+<strong>Análise de Movimento:</strong>
+• Estudos biomecânicos avançados
+• Análise de performance esportiva
+• Pesquisa em ergonomia
+
+<strong>Controle de Qualidade:</strong>
+• Rastreamento de processos de montagem
+• Verificação de trajetórias robóticas
+• Análise de movimentos de máquinas
+
+<strong>Entretenimento e Mídia:</strong>
+• Captura de movimento para animação
+• Sistemas de realidade virtual
+• Produção cinematográfica
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos de Rastreamento Avançado</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_TRACKING]" alt="Rastreamento Real-Time" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Tempo Real</h4>
+<p style="font-size: 14px; line-height: 1.5;">Rastreamento contínuo com atualização em tempo real para máxima precisão operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PRECISION]" alt="Alta Precisão" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Alta Precisão</h4>
+<p style="font-size: 14px; line-height: 1.5;">Precisão submilimétrica para aplicações de metrologia e controle de qualidade.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_WIRELESS]" alt="Sistema Sem Fio" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Sem Fio</h4>
+<p style="font-size: 14px; line-height: 1.5;">Comunicação wireless para máxima mobilidade e flexibilidade operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_CALIBRATION]" alt="Auto Calibração" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Auto Calibração</h4>
+<p style="font-size: 14px; line-height: 1.5;">Sistema de calibração automática para manutenção contínua da precisão.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Applications Section -->
+[vc_row][vc_column][vc_column_text]
+<h3>Software Sharp-Track Pro</h3>
+
+O TrackScan Sharp vem acompanhado do software Sharp-Track Pro, otimizado para facilidade de uso e performance:
+
+<strong>Recursos do Sharp-Track:</strong>
+• Interface intuitiva com assistente de setup
+• Calibração automática simplificada
+• Visualização em tempo real de alta qualidade
+• Ferramentas de análise de dados integradas
+• Exportação para formatos padrão da indústria
+• Suporte para aplicações personalizadas
+
+<strong>Facilidade de Uso:</strong>
+Design focado na experiência do usuário para máxima produtividade
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens do Sistema Sharp</h3>
+
+<strong>Tecnologia Proprietária:</strong>
+Algoritmos Sharp-Vision garantem rastreamento estável mesmo em condições desafiadoras.
+
+<strong>Versatilidade de Marcadores:</strong>
+Compatibilidade com múltiplos tipos de marcadores oferece flexibilidade máxima.
+
+<strong>Facilidade de Operação:</strong>
+Interface intuitiva reduz curva de aprendizado e aumenta produtividade.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Software de Rastreamento Profissional</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Soluções de software especializadas para rastreamento 3D e análise de movimento</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🎯 Rastreamento Avançado</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Rastreamento multi-objeto simultâneo</li>
+            <li>Compensação de vibração automática</li>
+            <li>Análise de trajetória em tempo real</li>
+            <li>Relatórios de movimento detalhados</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">📊 Integração Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>CMMs e braços articulados</li>
+            <li>Softwares de metrologia</li>
+            <li>Sistemas de automação industrial</li>
+            <li>APIs para desenvolvimento customizado</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Sharp Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para o sistema TrackScan Sharp:
+
+• <strong>Treinamento Simplificado:</strong> Cursos focados na facilidade de uso do sistema
+• <strong>Setup Assistido:</strong> Assistência completa para configuração inicial
+• <strong>Suporte de Aplicações:</strong> Consultoria para otimização de aplicações específicas
+• <strong>Atualizações Sharp:</strong> Updates regulares do software Sharp-Track Pro
+• <strong>Suporte Técnico Dedicado:</strong> Equipe especializada no sistema Sharp
+
+<strong>Agende uma Demonstração e experimente a precisão e facilidade do TrackScan Sharp!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Download CTA Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 80px !important;padding-bottom: 80px !important;}" el_class="cta-download-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Revolucione seus Processos de Rastreamento 3D</h3>
+<p style="font-size: 1.3em; line-height: 1.6; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Descubra como nossa tecnologia de rastreamento pode otimizar seus processos de metrologia e controle de qualidade.</p>
+
+<div style="margin-bottom: 40px;">
+<a href="[LINK_ORCAMENTO]" style="display: inline-block; background-color: #ffd700; color: #2c3e50; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+📞 SOLICITAR ORÇAMENTO
+</a>
+<a href="[LINK_DEMONSTRACAO]" style="display: inline-block; background-color: transparent; color: white; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; border: 2px solid white; transition: all 0.3s ease;">
+🎯 AGENDAR DEMONSTRAÇÃO
+</a>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📧</div>
+    <div style="font-size: 1.1em;">contato@enterfix.com.br</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📱</div>
+    <div style="font-size: 1.1em;">+55 11 5555-5555</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">⚡</div>
+    <div style="font-size: 1.1em;">Suporte Especializado</div>
+</div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: rastreamento 3d, trackscan sharp, sistema rastreamento, metrologia 3d, posicionamento, tracking, scanology, enterfix -->

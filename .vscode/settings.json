@@ -1,0 +1,9 @@
+{
+    "cmake.sourceDirectory": "C:/Users/paulo/OneDrive/Documentos/CODIGUINHO/CUSTO",
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "files.associations": {
+        "frontend/api/**/*.js": "javascript"
+    }
+}

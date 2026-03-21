@@ -6,12 +6,16 @@ const DB_PATH = path.join(__dirname, '..', 'data', 'composicoes.db');
 let db;
 
 try {
-  const { DatabaseSync } = require('node:sqlite');
+  const {
+    DatabaseSync
+  } = require('node:sqlite');
 
   // garante que a pasta data existe
   const dataDir = path.dirname(DB_PATH);
   if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
+    fs.mkdirSync(dataDir, {
+      recursive: true
+    });
   }
 
   db = new DatabaseSync(DB_PATH);
@@ -21,9 +25,17 @@ try {
   console.warn('⚠️  SQLite não disponível neste ambiente:', err.message);
   console.warn('   Rotas SQLite retornarão 503. Rotas PostgreSQL continuam funcionando.');
   // Stub: permite que o servidor suba, mas falha nas chamadas individuais
-  const unavailable = () => { throw Object.assign(new Error('SQLite não disponível neste ambiente (requer Node.js 22+)'), { code: 'SQLITE_UNAVAILABLE' }); };
+  const unavailable = () => {
+    throw Object.assign(new Error('SQLite não disponível neste ambiente (requer Node.js 22+)'), {
+      code: 'SQLITE_UNAVAILABLE'
+    });
+  };
   db = {
-    prepare: () => ({ all: unavailable, get: unavailable, run: unavailable }),
+    prepare: () => ({
+      all: unavailable,
+      get: unavailable,
+      run: unavailable
+    }),
     exec: () => {},
   };
 }

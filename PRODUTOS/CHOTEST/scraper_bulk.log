@@ -1,0 +1,145 @@
+2025-12-29 12:40:04,000 - INFO - Descobrindo categorias do site...
+2025-12-29 12:40:05,078 - ERROR - Erro ao descobrir categorias: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'chotest.com'. (_ssl.c:1007)")))
+2025-12-29 12:40:05,079 - INFO - 
+======================================================================
+2025-12-29 12:40:05,079 - INFO - INICIANDO EXTRA플O EM BULK DE TODAS AS CATEGORIAS
+2025-12-29 12:40:05,079 - INFO - ======================================================================
+
+2025-12-29 12:40:05,079 - INFO - Descobrindo categorias do site...
+2025-12-29 12:40:06,202 - ERROR - Erro ao descobrir categorias: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'chotest.com'. (_ssl.c:1007)")))
+2025-12-29 12:40:06,204 - INFO - 
+[*] Salvando arquivos em: chotest_produtos
+2025-12-29 12:41:02,878 - INFO - Descobrindo categorias do site...
+2025-12-29 12:41:06,835 - INFO - 
+======================================================================
+2025-12-29 12:41:06,835 - INFO - INICIANDO EXTRA플O EM BULK DE TODAS AS CATEGORIAS
+2025-12-29 12:41:06,835 - INFO - ======================================================================
+
+2025-12-29 12:42:12,016 - INFO - 
+[*] Salvando arquivos em: chotest_produtos
+2025-12-29 12:42:41,030 - INFO - Descobrindo categorias do site...
+2025-12-29 12:42:45,397 - INFO - [OK] Encontradas 34 categorias
+2025-12-29 12:42:45,399 - INFO - 
+======================================================================
+2025-12-29 12:42:45,400 - INFO - INICIANDO EXTRA플O EM BULK DE TODAS AS CATEGORIAS
+2025-12-29 12:42:45,400 - INFO - ======================================================================
+
+2025-12-29 12:42:47,197 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:42:48,994 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:42:50,739 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:42:52,566 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:42:54,426 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:42:56,246 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:42:58,057 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:42:59,793 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:00,659 - INFO - Descobrindo categorias do site...
+2025-12-29 12:43:01,582 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:03,401 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:04,299 - INFO - [OK] Encontradas 34 categorias
+2025-12-29 12:43:04,302 - INFO - 
+======================================================================
+2025-12-29 12:43:04,302 - INFO - INICIANDO EXTRA플O EM BULK DE TODAS AS CATEGORIAS
+2025-12-29 12:43:04,302 - INFO - ======================================================================
+
+2025-12-29 12:43:05,233 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:06,317 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:07,041 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:08,117 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:08,894 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:10,052 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:10,705 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:11,875 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:12,502 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:13,800 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:14,485 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:15,779 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:16,286 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:17,731 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:18,070 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:19,686 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:19,827 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:21,463 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:21,653 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:23,490 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:24,001 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:25,300 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:25,751 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:27,284 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:28,251 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:29,452 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:30,281 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:31,227 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:32,270 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:33,015 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:34,035 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:34,821 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:35,798 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:36,636 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:37,576 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:39,387 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:39,443 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:41,203 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:41,492 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:43,184 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:43,480 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:45,228 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:45,540 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:47,088 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:47,320 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:48,899 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:49,498 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:49,499 - INFO - 
+[*] Salvando arquivos em: chotest_produtos
+2025-12-29 12:43:50,925 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:52,947 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:54,733 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:56,727 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:43:58,474 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:44:08,486 - ERROR - Erro ao extrair produtos: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: /category.aspx?nid=23 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000027062E0ACE0>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:44:18,494 - ERROR - Erro ao extrair produtos: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: /category.aspx?nid=27 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000027063CE3EE0>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:44:28,512 - ERROR - Erro ao extrair produtos: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: /category.aspx?nid=30 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000027063DE26E0>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:44:38,521 - ERROR - Erro ao extrair produtos: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: /category.aspx?nid=33 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000027063DE2AA0>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:44:48,527 - ERROR - Erro ao extrair produtos: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: /category.aspx?nid=89 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000027063DE2E60>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:44:58,544 - ERROR - Erro ao extrair produtos: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: /category.aspx?nid=49 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000027063DE3220>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:44:58,546 - INFO - 
+[*] Salvando arquivos em: chotest_produtos
+2025-12-29 12:48:40,726 - INFO - Descobrindo categorias do site...
+2025-12-29 12:48:50,735 - ERROR - Erro ao descobrir categorias: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001C882D8E470>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:48:50,738 - INFO - 
+======================================================================
+2025-12-29 12:48:50,739 - INFO - INICIANDO EXTRA플O EM BULK DE TODAS AS CATEGORIAS
+2025-12-29 12:48:50,740 - INFO - ======================================================================
+
+2025-12-29 12:48:50,740 - INFO - Descobrindo categorias do site...
+2025-12-29 12:49:00,747 - ERROR - Erro ao descobrir categorias: HTTPSConnectionPool(host='chotest.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001C882D8E890>, 'Connection to chotest.com timed out. (connect timeout=10)'))
+2025-12-29 12:49:00,749 - INFO - 
+[*] Salvando arquivos em: chotest_produtos
+2025-12-29 12:52:52,695 - INFO - Descobrindo categorias do site...
+2025-12-29 12:52:53,558 - INFO - [OK] Encontradas 28 categorias
+2025-12-29 12:52:53,560 - INFO - 
+======================================================================
+2025-12-29 12:52:53,561 - INFO - INICIANDO EXTRA플O EM BULK DE TODAS AS CATEGORIAS
+2025-12-29 12:52:53,561 - INFO - ======================================================================
+
+2025-12-29 12:52:53,789 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:54,010 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:54,255 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:54,474 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:54,696 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:54,922 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:55,144 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:55,381 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:55,603 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:55,829 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:56,051 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:56,274 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:56,494 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:56,719 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:56,945 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:57,165 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:57,386 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:57,623 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:57,849 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:58,078 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:58,303 - INFO -   [OK] 0 produtos encontrados
+2025-12-29 12:52:58,521 - INFO -   [OK] 0 produtos encontrados

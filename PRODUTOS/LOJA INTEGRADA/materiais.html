@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materiais para Pontas de Medição — Enterfix</title>
+    <meta name="description" content="Guia técnico completo de materiais para hastes e esferas de pontas de medição CMM. Escolha o material certo para cada aplicação de metrologia." />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9; color: #1e293b; line-height: 1.75; font-size: 16px;
+        }
+        .mat-page { max-width: 1100px; margin: 40px auto; padding: 0 20px 60px; }
+        .mat-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px; padding: 50px 44px; margin-bottom: 32px;
+            color: #fff; position: relative; overflow: hidden;
+        }
+        .mat-hero::before {
+            content: ''; position: absolute; right: -40px; top: -60px;
+            width: 300px; height: 300px; border-radius: 50%;
+            background: rgba(255,255,255,0.04); pointer-events: none;
+        }
+        .mat-hero .mat-badge {
+            display: inline-block; background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32); border-radius: 50px;
+            padding: 4px 14px; font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 16px;
+        }
+        .mat-hero h1 { font-size: 27px; font-weight: 800; line-height: 1.25; margin-bottom: 14px; color: #fff; max-width: 700px; }
+        .mat-hero p  { font-size: 14.5px; opacity: 0.88; line-height: 1.85; max-width: 680px; margin: 0; }
+        .mat-nav { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px; }
+        .mat-nav a {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;
+            padding: 10px 18px; font-size: 14px; font-weight: 600;
+            color: #1F1659; text-decoration: none; transition: all 0.15s;
+        }
+        .mat-nav a:hover { background: #1F1659; color: #fff; border-color: #1F1659; }
+        .mat-section {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 38px 42px; margin-bottom: 24px;
+        }
+        @media (max-width: 640px) {
+            .mat-section { padding: 24px 18px; }
+            .mat-hero { padding: 32px 22px; }
+            .mat-hero h1 { font-size: 20px; }
+        }
+        .mat-section > h2 {
+            font-size: 20px; font-weight: 700; color: #1F1659;
+            margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .mat-section > .mat-section-lead { font-size: 14.5px; color: #64748b; margin-bottom: 24px; margin-top: 4px; }
+        .mat-section h3 {
+            font-size: 15.5px; font-weight: 700; color: #334155;
+            margin: 22px 0 8px; padding-left: 12px; border-left: 3px solid #6366f1;
+        }
+        .mat-section p  { font-size: 15px; margin-bottom: 10px; }
+        .mat-section ul { padding-left: 22px; margin-bottom: 12px; }
+        .mat-section li { font-size: 14.5px; margin-bottom: 7px; color: #334155; }
+        .mat-section strong { color: #0f172a; }
+        .mat-section a { color: #1d4ed8; text-decoration: underline; }
+        .mat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 6px; }
+        .mat-card { border: 1px solid #e2e8f0; border-radius: 11px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.2s; }
+        .mat-card:hover { box-shadow: 0 6px 20px rgba(31,22,89,0.1); }
+        .mat-card-header { padding: 16px 20px; display: flex; align-items: center; gap: 14px; }
+        .mat-card-icon { font-size: 30px; flex-shrink: 0; }
+        .mat-card-title { font-size: 16px; font-weight: 800; color: #0f172a; line-height: 1.2; }
+        .mat-card-subtitle { font-size: 12px; color: #64748b; margin-top: 2px; }
+        .mat-card-body { padding: 0 20px 18px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+        .mat-card-desc { font-size: 14px; color: #475569; line-height: 1.6; margin: 0; }
+        .mat-props { display: flex; flex-wrap: wrap; gap: 6px; }
+        .mat-prop {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-size: 12px; font-weight: 600; padding: 3px 9px;
+            border-radius: 50px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0;
+        }
+        .mat-specs { border-top: 1px solid #f1f5f9; padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+        .mat-spec-row { display: flex; justify-content: space-between; font-size: 13px; gap: 8px; }
+        .mat-spec-label { color: #64748b; }
+        .mat-spec-value { font-weight: 700; color: #0f172a; text-align: right; }
+        .mat-use-tag { display: inline-block; font-size: 11.5px; font-weight: 700; padding: 3px 10px; border-radius: 50px; }
+        .mat-use-tag--green  { background: #dcfce7; color: #166534; }
+        .mat-use-tag--blue   { background: #dbeafe; color: #1e40af; }
+        .mat-use-tag--orange { background: #ffedd5; color: #9a3412; }
+        .mat-use-tag--purple { background: #ede9fe; color: #5b21b6; }
+        .mat-use-tag--red    { background: #fee2e2; color: #991b1b; }
+        .mat-use-tag--cyan   { background: #cffafe; color: #155e75; }
+        .mat-card--carbide  .mat-card-header { background: #1e293b; }
+        .mat-card--carbide  .mat-card-title, .mat-card--carbide .mat-card-subtitle { color: #e2e8f0; }
+        .mat-card--ceramic  .mat-card-header { background: #fafaf9; border-bottom: 1px solid #e2e8f0; }
+        .mat-card--steel    .mat-card-header { background: #f1f5f9; border-bottom: 1px solid #e2e8f0; }
+        .mat-card--aluminum .mat-card-header { background: #f0f9ff; border-bottom: 1px solid #e2e8f0; }
+        .mat-card--carbon   .mat-card-header { background: #18181b; }
+        .mat-card--carbon   .mat-card-title, .mat-card--carbon .mat-card-subtitle { color: #e4e4e7; }
+        .mat-card--titanium .mat-card-header { background: #f0fdf4; border-bottom: 1px solid #e2e8f0; }
+        .mat-card--ruby     .mat-card-header { background: #fff1f2; border-bottom: 1px solid #fecdd3; }
+        .mat-card--ruby     .mat-card-title  { color: #9f1239; }
+        .mat-card--sinitride .mat-card-header { background: #f5f3ff; border-bottom: 1px solid #ddd6fe; }
+        .mat-card--sinitride .mat-card-title  { color: #4c1d95; }
+        .mat-card--zirconia .mat-card-header { background: #fefce8; border-bottom: 1px solid #fde047; }
+        .mat-card--zirconia .mat-card-title  { color: #713f12; }
+        .mat-card--glass    .mat-card-header { background: #f0fdfa; border-bottom: 1px solid #99f6e4; }
+        .mat-card--glass    .mat-card-title  { color: #134e4a; }
+        .mat-card--steel-s  .mat-card-header { background: #f1f5f9; border-bottom: 1px solid #e2e8f0; }
+        .mat-card--carbide-s .mat-card-header { background: #1e293b; }
+        .mat-card--carbide-s .mat-card-title, .mat-card--carbide-s .mat-card-subtitle { color: #e2e8f0; }
+        .mat-table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .mat-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px; }
+        .mat-table thead tr { background: #1F1659; }
+        .mat-table th { color: #fff; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 12.5px; white-space: nowrap; }
+        .mat-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; font-size: 13.5px; vertical-align: middle; }
+        .mat-table tbody tr:last-child td { border-bottom: 0; }
+        .mat-table tbody tr:nth-child(even) td { background: #f8fafc; }
+        .mat-alert { border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: 14.5px; line-height: 1.6; }
+        .mat-alert p:last-child { margin: 0; }
+        .mat-alert p { font-size: 14.5px; }
+        .mat-alert--blue   { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .mat-alert--yellow { background: #fefce8; border: 1px solid #fde047; border-left: 4px solid #ca8a04; }
+        .mat-alert--green  { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+        .mat-cta { background: linear-gradient(135deg, #1e3a8a, #1F1659); border-radius: 12px; padding: 36px 32px; text-align: center; color: #fff; }
+        .mat-cta h2 { color: #fff; font-size: 19px; border: 0; padding: 0; margin-bottom: 10px; }
+        .mat-cta p  { font-size: 14.5px; opacity: 0.9; margin-bottom: 6px; }
+        .mat-cta-btn {
+            display: inline-block; background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.28); border-radius: 8px;
+            padding: 11px 26px; margin: 10px 6px 0; font-size: 14.5px; font-weight: 700;
+            color: #fff; text-decoration: none;
+        }
+        .mat-cta-btn--white { background: #fff; color: #1F1659; border-color: #fff; }
+        @media print {
+            body { background: #fff; }
+            .mat-page { margin: 0; padding: 0; max-width: 100%; }
+            .mat-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+<main class="mat-page" role="main">
+
+    <header class="mat-hero">
+        <div class="mat-badge">&#128200; Guia Técnico de Materiais — Pontas de Medição M2</div>
+        <h1>Materiais para Hastes e Esferas de Pontas de Medição CMM</h1>
+        <p>A escolha correta do material da haste e da esfera é essencial para a precisão, durabilidade e confiabilidade das medições. Este guia técnico apresenta as características, propriedades e aplicações ideais de cada material disponível em nosso catálogo.</p>
+    </header>
+
+    <nav class="mat-nav" aria-label="Navegação por seção">
+        <a href="#hastes">&#128296; Materiais de Hastes</a>
+        <a href="#esferas">&#9899; Materiais de Esferas</a>
+        <a href="#comparativo">&#128202; Tabela Comparativa</a>
+        <a href="#como-escolher">&#128270; Como Escolher</a>
+    </nav>
+
+    <!-- HASTES -->
+    <section class="mat-section" id="hastes">
+        <h2>&#128296; Materiais de Hastes (Styli Shafts)</h2>
+        <p class="mat-section-lead">A haste conecta a esfera ao módulo do apalpador. Sua rigidez, peso e estabilidade térmica afetam diretamente a deflexão durante a medição e, consequentemente, a incerteza do resultado.</p>
+        <div class="mat-grid">
+
+            <div class="mat-card mat-card--carbide">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#11036;</div>
+                    <div>
+                        <div class="mat-card-title">Metal Duro (Carbeto de Tungstênio)</div>
+                        <div class="mat-card-subtitle">Tungsten Carbide — WC-Co</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">O material mais utilizado no mercado de pontas de medição. Apresenta altíssima rigidez e resistência à deflexão, sendo a escolha ideal para medições de alta precisão com esferas muito pequenas.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">&#9889; Alta rigidez</span>
+                        <span class="mat-prop">Resistente a deflexão</span>
+                        <span class="mat-prop">Alta densidade</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Esfera mínima compatível</span><span class="mat-spec-value">Ø &lt; 1,0 mm</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Módulo de Elasticidade</span><span class="mat-spec-value">~600 GPa</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Ambiente recomendado</span><span class="mat-spec-value">Laboratório climatizado</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Esferas Ø &lt; 1,0 mm</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Temperatura estável</span>
+                        <span class="mat-use-tag mat-use-tag--purple">&#9989; Precisão máxima</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--ceramic">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#127866;</div>
+                    <div>
+                        <div class="mat-card-title">Cerâmica (Alumina)</div>
+                        <div class="mat-card-subtitle">Al₂O₃ — Óxido de Alumínio</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Rigidez comparável ao aço inoxidável com excelente estabilidade térmica. Indicada para hastes longas (acima de 30 mm) e ambientes de produção, pois age como dispositivo fusível em caso de colisão — protegendo o apalpador de danos graves.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">&#127777; Estável termicamente</span>
+                        <span class="mat-prop">Proteção contra colisão</span>
+                        <span class="mat-prop">Leve</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Esfera mínima compatível</span><span class="mat-spec-value">Ø ≥ 3,0 mm</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Comprimento recomendado</span><span class="mat-spec-value">&gt; 30 mm</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Ambiente recomendado</span><span class="mat-spec-value">Produção / Lab.</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Pontas longas</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Ambiente de produção</span>
+                        <span class="mat-use-tag mat-use-tag--orange">&#9989; Anti-colisão</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--steel">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#128297;</div>
+                    <div>
+                        <div class="mat-card-title">Aço Inoxidável</div>
+                        <div class="mat-card-subtitle">Stainless Steel — AISI 303/304, não magnético</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Hastes de aço inox não magnético oferecem boa relação rigidez/peso para comprimentos de até 30 mm. Opção econômica e versátil para aplicações de uso geral em laboratório climatizado.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Custo-benefício</span>
+                        <span class="mat-prop">&#128683; Não magnético</span>
+                        <span class="mat-prop">Versátil</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Esfera mínima compatível</span><span class="mat-spec-value">Ø ≥ 2,0 mm</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Comprimento máximo recomendado</span><span class="mat-spec-value">até 30 mm</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Ambiente recomendado</span><span class="mat-spec-value">Laboratório climatizado</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Uso geral</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Esferas Ø ≥ 2 mm</span>
+                        <span class="mat-use-tag mat-use-tag--cyan">&#9989; Econômico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--aluminum">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#129704;</div>
+                    <div>
+                        <div class="mat-card-title">Alumínio</div>
+                        <div class="mat-card-subtitle">Aluminum Alloy — Al 6061-T6</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Material muito leve, utilizado principalmente em extensões e configurações onde o peso total da ponta precisa ser minimizado. A dilatação térmica é mais elevada, exigindo ambiente com temperatura rigorosamente controlada.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Muito leve</span>
+                        <span class="mat-prop">Boa condução térmica</span>
+                        <span class="mat-prop">Baixo peso</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Coeficiente de Dilatação</span><span class="mat-spec-value">~23 × 10⁻⁶ /°C</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Aplicação típica</span><span class="mat-spec-value">Extensões longas</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Ambiente obrigatório</span><span class="mat-spec-value">Temp. controlada (20°C ±0,5)</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Extensões longas</span>
+                        <span class="mat-use-tag mat-use-tag--orange">&#9888; Temp. controlada obrigatória</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--carbon">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#128420;</div>
+                    <div>
+                        <div class="mat-card-title">Fibra de Carbono</div>
+                        <div class="mat-card-subtitle">Carbon Fiber Reinforced Polymer — CFRP</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Ideal para pontas muito longas: combina leveza extrema com excelente estabilidade térmica (coeficiente de dilatação próximo a zero). Indicado para ambientes de produção e aplicações onde minimizar a deflexão em grandes comprimentos é crítico.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Extremamente leve</span>
+                        <span class="mat-prop">&#127777; Quase zero dilatação</span>
+                        <span class="mat-prop">Alta rigidez específica</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Coeficiente de Dilatação</span><span class="mat-spec-value">~0 × 10⁻⁶ /°C</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Aplicação típica</span><span class="mat-spec-value">Extensões &gt; 50 mm</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Ambiente recomendado</span><span class="mat-spec-value">Produção / Lab.</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Pontas muito longas</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Produção e Lab.</span>
+                        <span class="mat-use-tag mat-use-tag--purple">&#9989; Zero drift térmico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--titanium">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#129689;</div>
+                    <div>
+                        <div class="mat-card-title">Titânio</div>
+                        <div class="mat-card-subtitle">Titanium Alloy — Ti-6Al-4V</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Excelente combinação de rigidez, leveza e estabilidade térmica. É uma alternativa premium ao aço inox para extensões e pontas longas quando se necessita de menor peso sem perda significativa de rigidez.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Alta rigidez específica</span>
+                        <span class="mat-prop">Leve</span>
+                        <span class="mat-prop">&#127777; Estável termicamente</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Coeficiente de Dilatação</span><span class="mat-spec-value">~8,6 × 10⁻⁶ /°C</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Módulo de Elasticidade</span><span class="mat-spec-value">~114 GPa</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Aplicação típica</span><span class="mat-spec-value">Extensões premium</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Extensões longas</span>
+                        <span class="mat-use-tag mat-use-tag--purple">&#9989; Alta precisão</span>
+                        <span class="mat-use-tag mat-use-tag--cyan">&#9989; Leve e rígido</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ESFERAS -->
+    <section class="mat-section" id="esferas">
+        <h2>&#9899; Materiais de Esferas (Probe Balls)</h2>
+        <p class="mat-section-lead">A esfera é o elemento de contato com a peça. Sua dureza, rugosidade superficial, comportamento magnético e resistência ao desgaste determinam a aplicação ideal e a vida útil da ponta de medição.</p>
+        <div class="mat-grid">
+
+            <div class="mat-card mat-card--ruby">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#128142;</div>
+                    <div>
+                        <div class="mat-card-title">Rubi (Coríndon — Al₂O₃)</div>
+                        <div class="mat-card-subtitle">Ruby — Synthetic Corundum</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">O material de esfera mais utilizado no mundo. O rubi sintético apresenta altíssima dureza (Mohs 9), excelente acabamento superficial e não magnetiza — garantindo repetibilidade excepcional na medição de peças de aço, alumínio, plástico, cerâmica e a grande maioria dos materiais.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Dureza: Mohs 9</span>
+                        <span class="mat-prop">&#128683; Não magnético</span>
+                        <span class="mat-prop">Baixa rugosidade</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Dureza Vickers</span><span class="mat-spec-value">~2.000 HV</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Densidade</span><span class="mat-spec-value">3,98 g/cm³</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Rugosidade Ra típica</span><span class="mat-spec-value">&lt; 0,025 µm</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Uso geral (recomendado)</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Aço, Al, plástico, cerâmica</span>
+                        <span class="mat-use-tag mat-use-tag--red">&#10060; Evitar em ferro fundido</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--sinitride">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#128302;</div>
+                    <div>
+                        <div class="mat-card-title">Nitreto de Silício (Si₃N₄)</div>
+                        <div class="mat-card-subtitle">Silicon Nitride — Si₃N₄</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Indicado especialmente para medição de peças ferrosas (ferro fundido, aço fundido). A composição química do Si₃N₄ reduz drasticamente o acúmulo de partículas de ferro sobre a esfera durante a medição, mantendo a esferidade e o desempenho ao longo do tempo.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Baixa aderência</span>
+                        <span class="mat-prop">Resistência ao acúmulo de Fe</span>
+                        <span class="mat-prop">Leve</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Dureza Vickers</span><span class="mat-spec-value">~1.600 HV</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Densidade</span><span class="mat-spec-value">3,19 g/cm³</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Cor típica</span><span class="mat-spec-value">Cinza escuro / Preto</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Ferro fundido</span>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Aço fundido</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Peças ferrosas em geral</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--zirconia">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#127937;</div>
+                    <div>
+                        <div class="mat-card-title">Zircônia (ZrO₂)</div>
+                        <div class="mat-card-subtitle">Zirconia — Zirconium Dioxide</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Indicada para medição de materiais moles ou que são facilmente riscados pelo rubi. A zircônia apresenta dureza ligeiramente inferior, o que reduz o risco de marcar a superfície da peça durante o contato, sendo ideal para peças de alumínio polido, cobre e materiais não ferrosos.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Menos abrasiva</span>
+                        <span class="mat-prop">Não risca superfícies macias</span>
+                        <span class="mat-prop">Branca / Marfim</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Dureza Vickers</span><span class="mat-spec-value">~1.200 HV</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Densidade</span><span class="mat-spec-value">5,95 g/cm³</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Cor típica</span><span class="mat-spec-value">Branca / Marfim</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Alumínio polido</span>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Cobre e bronze</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Plásticos macios</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--glass">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#128309;</div>
+                    <div>
+                        <div class="mat-card-title">Vidro / Cristal (SiO₂)</div>
+                        <div class="mat-card-subtitle">Borosilicate / Soda-Lime Glass</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Utilizada principalmente em aplicações de calibração de apalpadores e como esfera de referência (reference ball) em sistemas de qualificação de pontas. Também empregada em medições de peças de vidro ou superfícies translúcidas, onde o contraste visual é necessário.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Calibração</span>
+                        <span class="mat-prop">Precisa / Referência</span>
+                        <span class="mat-prop">Translúcida</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Aplicação principal</span><span class="mat-spec-value">Calibração / Referência</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Dureza Vickers</span><span class="mat-spec-value">~600 HV</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Cor típica</span><span class="mat-spec-value">Translúcida / Azul</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--purple">&#9989; Calibração de apalpadores</span>
+                        <span class="mat-use-tag mat-use-tag--cyan">&#9989; Esfera de referência</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--steel-s">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#9881;&#65039;</div>
+                    <div>
+                        <div class="mat-card-title">Aço Inoxidável (Esfera)</div>
+                        <div class="mat-card-subtitle">Stainless Steel Ball — AISI 440C</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Esferas de aço inox são utilizadas principalmente para medições de peças não ferrosas (alumínio, latão, plástico) e também em configurações de pontas especiais de baixo custo. Atenção: pode magnetizar com o tempo de uso, o que compromete a repetibilidade em peças ferrosas.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Econômica</span>
+                        <span class="mat-prop">Durável</span>
+                        <span class="mat-prop">&#9888; Pode magnetizar</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Dureza Vickers</span><span class="mat-spec-value">~700 HV</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Densidade</span><span class="mat-spec-value">7,75 g/cm³</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Comportamento magnético</span><span class="mat-spec-value">Levemente magnético</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--green">&#9989; Alumínio, latão, plástico</span>
+                        <span class="mat-use-tag mat-use-tag--orange">&#9888; Evitar em peças ferrosas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mat-card mat-card--carbide-s">
+                <div class="mat-card-header">
+                    <div class="mat-card-icon">&#11036;</div>
+                    <div>
+                        <div class="mat-card-title">Metal Duro (Esfera)</div>
+                        <div class="mat-card-subtitle">Tungsten Carbide Ball — WC-Co</div>
+                    </div>
+                </div>
+                <div class="mat-card-body">
+                    <p class="mat-card-desc">Esferas de metal duro são indicadas para medições em superfícies abrasivas ou de alta dureza, como peças retificadas, cerâmicas técnicas e materiais de corte. Extremamente resistentes ao desgaste, com vida útil muito mais elevada que o rubi nessas condições específicas.</p>
+                    <div class="mat-props">
+                        <span class="mat-prop">Extrema dureza</span>
+                        <span class="mat-prop">Resistente ao desgaste</span>
+                        <span class="mat-prop">Superfícies abrasivas</span>
+                    </div>
+                    <div class="mat-specs">
+                        <div class="mat-spec-row"><span class="mat-spec-label">Dureza Vickers</span><span class="mat-spec-value">~1.800 HV</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Densidade</span><span class="mat-spec-value">14,9 g/cm³</span></div>
+                        <div class="mat-spec-row"><span class="mat-spec-label">Cor típica</span><span class="mat-spec-value">Cinza metálico escuro</span></div>
+                    </div>
+                    <div>
+                        <span class="mat-use-tag mat-use-tag--red">&#9989; Superfícies abrasivas</span>
+                        <span class="mat-use-tag mat-use-tag--purple">&#9989; Cerâmicas técnicas</span>
+                        <span class="mat-use-tag mat-use-tag--blue">&#9989; Peças retificadas duras</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMPARATIVO -->
+    <section class="mat-section" id="comparativo">
+        <h2>&#128202; Tabela Comparativa — Esferas</h2>
+        <p class="mat-section-lead">Comparativo técnico resumido dos materiais de esferas disponíveis para auxiliar na seleção da ponta ideal para cada aplicação.</p>
+        <div class="mat-table-wrap">
+            <table class="mat-table">
+                <thead>
+                    <tr>
+                        <th>Material da Esfera</th>
+                        <th>Dureza (HV)</th>
+                        <th>Peso (g/cm³)</th>
+                        <th>Magnético</th>
+                        <th>Aplicação Principal</th>
+                        <th>Evitar em</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Rubi (Al₂O₃)</strong></td><td>~2.000</td><td>3,98</td><td>Não</td><td>Uso geral — aço, Al, plástico</td><td>Ferro fundido</td></tr>
+                    <tr><td><strong>Nitreto de Silício (Si₃N₄)</strong></td><td>~1.600</td><td>3,19</td><td>Não</td><td>Ferro fundido, aço fundido</td><td>—</td></tr>
+                    <tr><td><strong>Zircônia (ZrO₂)</strong></td><td>~1.200</td><td>5,95</td><td>Não</td><td>Al polido, cobre, plásticos macios</td><td>Superfícies abrasivas</td></tr>
+                    <tr><td><strong>Vidro / SiO₂</strong></td><td>~600</td><td>2,50</td><td>Não</td><td>Calibração, esfera de referência</td><td>Uso em produção</td></tr>
+                    <tr><td><strong>Aço Inox (AISI 440C)</strong></td><td>~700</td><td>7,75</td><td>Levemente</td><td>Al, latão, plástico rígido</td><td>Peças ferrosas</td></tr>
+                    <tr><td><strong>Metal Duro (WC)</strong></td><td>~1.800</td><td>14,9</td><td>Não</td><td>Superfícies abrasivas, cerâmica</td><td>Pontas longas (pesado)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mat-alert mat-alert--yellow">
+            <p>&#9888;&#65039; <strong>Atenção ao peso:</strong> Esferas de metal duro (14,9 g/cm³) e zircônia (5,95 g/cm³) são significativamente mais pesadas que rubi (3,98 g/cm³) e nitreto de silício (3,19 g/cm³). Em pontas longas, o peso da esfera contribui para a deflexão da haste — considere associar esferas mais leves a hastes em fibra de carbono ou titânio.</p>
+        </div>
+    </section>
+
+    <!-- COMO ESCOLHER -->
+    <section class="mat-section" id="como-escolher">
+        <h2>&#128270; Como Escolher o Material Certo</h2>
+        <h3>Para a haste, considere:</h3>
+        <ul>
+            <li><strong>Comprimento necessário:</strong> &lt; 30 mm → Metal Duro ou Aço Inox; 30–100 mm → Cerâmica ou Titânio; &gt; 100 mm → Fibra de Carbono.</li>
+            <li><strong>Diâmetro da esfera:</strong> Esferas Ø &lt; 1,0 mm exigem haste de Metal Duro pela alta rigidez.</li>
+            <li><strong>Ambiente de uso:</strong> produção sem controle de temperatura → Cerâmica ou Fibra de Carbono.</li>
+            <li><strong>Peso total:</strong> para configurações com múltiplas pontas ou cabeçotes rotativos, prefira materiais leves (Fibra de Carbono, Titânio, Cerâmica).</li>
+        </ul>
+        <h3>Para a esfera, considere:</h3>
+        <ul>
+            <li><strong>Material da peça:</strong> ferro fundido → Si₃N₄; alumínio polido → Zircônia; uso geral → Rubi.</li>
+            <li><strong>Superfície abrasiva:</strong> Metal Duro para desgastes extremos.</li>
+            <li><strong>Calibração:</strong> esfera de Vidro para referências de qualificação.</li>
+            <li><strong>Peças ferrosas + campo magnético:</strong> evite esferas de aço inox; prefira Rubi ou Si₃N₄.</li>
+        </ul>
+        <div class="mat-alert mat-alert--green">
+            <p>&#9989; <strong>Dúvida na escolha?</strong> Nossa equipe técnica realiza a especificação da ponta de medição gratuitamente — basta informar o material da peça, a geometria a medir, o diâmetro mínimo de furo ou raio de saída, e o apalpador utilizado. Fale conosco pelo e-mail ou telefone abaixo.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="mat-cta">
+        <h2>&#128200; Precisa de auxílio técnico na especificação?</h2>
+        <p>Nossa equipe de especialistas em metrologia dimensional está pronta para recomendar a ponta de medição ideal para a sua aplicação.</p>
+        <a class="mat-cta-btn mat-cta-btn--white" href="https://www.enterfix.com.br" target="_blank" rel="noopener">&#127981; Ver catálogo completo</a>
+        <a class="mat-cta-btn" href="mailto:ecommerce@enterfix.com.br">&#128140; ecommerce@enterfix.com.br</a>
+        <a class="mat-cta-btn" href="tel:+551149422222">&#128222; (11) 4942-2222</a>
+        <p style="margin-top:16px; font-size:12px; opacity:0.65;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40</p>
+    </div>
+
+</main>
+</body>
+</html>

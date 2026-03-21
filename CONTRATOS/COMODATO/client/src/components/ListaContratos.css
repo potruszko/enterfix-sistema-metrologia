@@ -1,0 +1,164 @@
+.lista-contratos {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.lista-header h2 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.empty-hint {
+  font-size: 14px !important;
+  color: var(--text-secondary);
+}
+
+.contratos-stats {
+  margin-bottom: 20px;
+}
+
+.stat-badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contratos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contrato-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  background-color: #fafafa;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contrato-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.contrato-acoes {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-editar {
+  padding: 8px 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-editar:hover {
+  background-color: #8fa820;
+  transform: translateY(-1px);
+}
+
+.contrato-icon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.contrato-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contrato-filename {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.contrato-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.btn-download {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .lista-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .lista-header .btn {
+    width: 100%;
+  }
+
+  .contrato-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contrato-meta {
+    justify-content: center;
+  }
+
+  .btn-download {
+    width: 100%;
+  }
+}

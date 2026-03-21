@@ -1,0 +1,43 @@
+# OTIMIZAÇÃO SEO - SISTEMAS AUTOMATIZADOS
+
+## AM-CELL C Series - Célula Digitalização Automatizada
+
+**Meta Title:** AM-CELL C Series - Célula Digitalização Automatizada | Enterfix
+**Meta Description:** Célula automatizada AM-CELL C Series para linha de produção. Controle qualidade 100% automatizado com robótica integrada. Indústria 4.0!
+**Focus Keyphrase:** celula digitalizacao automatizada
+**SEO Title:** AM-CELL C Series - Automação Industrial Completa | Enterfix
+**Slug:** am-cell-series-celula-automatizada
+**Keywords:** célula automatizada, linha produção, controle qualidade, robótica integrada, indústria 4.0
+
+---
+
+## AM-DESK - Sistema Desktop Automatizado
+
+**Meta Title:** AM-DESK - Scanner 3D Desktop Automatizado | Enterfix
+**Meta Description:** AM-DESK sistema desktop automatizado com mesa rotativa e interface touch. Digitalização automática multi-ângulo em formato compacto!
+**Focus Keyphrase:** scanner 3d desktop automatizado
+**SEO Title:** AM-DESK Desktop Scanner - Automação Compacta | Enterfix
+**Slug:** am-desk-scanner-desktop-automatizado
+**Keywords:** desktop automatizado, mesa rotativa, interface touch, compacto, laboratório
+
+---
+
+## AutoScan-T - Sistema Turbo Alta Velocidade
+
+**Meta Title:** AutoScan-T - Scanner Industrial Turbo Alta Velocidade | Enterfix
+**Meta Description:** AutoScan-T sistema turbo com 5M pontos/segundo e 40-120 peças/hora. Máxima produtividade industrial com precisão mantida!
+**Focus Keyphrase:** scanner industrial turbo velocidade
+**SEO Title:** AutoScan-T Turbo - Máxima Velocidade Industrial | Enterfix
+**Slug:** autoscan-t-turbo-alta-velocidade
+**Keywords:** turbo velocidade, alta produtividade, processamento GPU, linha produção
+
+---
+
+## AutoScan-K - Sistema Kompakt Espaço Reduzido
+
+**Meta Title:** AutoScan-K - Scanner Industrial Kompakt | Enterfix
+**Meta Description:** AutoScan-K sistema kompakt em 1,2m² com funcionalidade industrial completa. Solução ideal para espaços reduzidos. Máxima eficiência!
+**Focus Keyphrase:** scanner industrial kompakt compacto
+**SEO Title:** AutoScan-K Kompakt - Eficiência em Espaço Reduzido | Enterfix
+**Slug:** autoscan-k-kompakt-compacto
+**Keywords:** kompakt, espaço reduzido, eficiência espacial, footprint mínimo

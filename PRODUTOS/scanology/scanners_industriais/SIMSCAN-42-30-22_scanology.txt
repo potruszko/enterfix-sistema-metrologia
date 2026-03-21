@@ -1,0 +1,180 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>SIMSCAN 42/30/22 - Scanner 3D Inteligente Série Professional</h1>
+
+<p class="produto-breve-descricao">Família completa de scanners 3D inteligentes com três modelos otimizados (42/30/22) para diferentes aplicações industriais críticas.</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">Série Professional SIMSCAN - Três Modelos, Uma Tecnologia</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">A série <strong>SIMSCAN 42/30/22</strong> oferece uma gama completa de scanners 3D inteligentes com diferentes configurações otimizadas para aplicações específicas. Esta família de produtos representa o equilíbrio perfeito entre performance, precisão e versatilidade.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">3</h3>
+        <p style="font-size: 16px;">Modelos da Série</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">4,2M</h3>
+        <p style="font-size: 16px;">Pontos/Seg (42)</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">0,020mm</h3>
+        <p style="font-size: 16px;">Precisão Máxima</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">420mm</h3>
+        <p style="font-size: 16px;">Área Máxima</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Série em Ação</h3>
+<p>Conheça as capacidades da série SIMSCAN 42/30/22 em diferentes cenários de aplicação industrial.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Comparativo entre os três modelos</li>
+<li>Aplicações específicas por modelo</li>
+<li>Otimizações de performance</li>
+<li>Interface unificada da série</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Comparativas da Série</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>SIMSCAN-42</th>
+<th>SIMSCAN-30</th>
+<th>SIMSCAN-22</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Volumétrica</strong></td>
+<td>Até 0,020mm</td>
+<td>Até 0,030mm</td>
+<td>Até 0,040mm</td>
+</tr>
+<tr>
+<td><strong>Taxa de Medição</strong></td>
+<td>4.200.000 pts/s</td>
+<td>3.000.000 pts/s</td>
+<td>2.200.000 pts/s</td>
+</tr>
+<tr>
+<td><strong>Área de Digitalização</strong></td>
+<td>420mm × 300mm</td>
+<td>300mm × 250mm</td>
+<td>220mm × 180mm</td>
+</tr>
+<tr>
+<td><strong>Distância de Trabalho</strong></td>
+<td>350mm</td>
+<td>320mm</td>
+<td>300mm</td>
+</tr>
+<tr>
+<td><strong>Profundidade de Campo</strong></td>
+<td>280mm</td>
+<td>250mm</td>
+<td>200mm</td>
+</tr>
+<tr>
+<td><strong>Peso</strong></td>
+<td>690g</td>
+<td>650g</td>
+<td>580g</td>
+</tr>
+<tr>
+<td><strong>Aplicação Principal</strong></td>
+<td>Grande Precisão</td>
+<td>Uso Geral</td>
+<td>Portabilidade</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações Otimizadas por Modelo</h3>
+
+<strong>SIMSCAN-42 - Alta Precisão:</strong>
+• Metrologia dimensional crítica
+• Controle de qualidade aeroespacial
+• Inspeção de componentes médicos
+
+<strong>SIMSCAN-30 - Uso Geral:</strong>
+• Aplicações industriais diversas
+• Engenharia reversa profissional
+• Controle de qualidade automotivo
+
+<strong>SIMSCAN-22 - Portabilidade:</strong>
+• Inspeções em campo
+• Aplicações educacionais
+• Digitalização rápida de protótipos
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Software Unificado da Série</h3>
+
+Todos os modelos da série SIMSCAN utilizam o mesmo software ScanViewer Pro Unified, garantindo consistência e facilidade de uso:
+
+<strong>Recursos Comuns:</strong>
+• Interface unificada para todos os modelos
+• Perfis de digitalização otimizados por modelo
+• Processamento adaptativo baseado no hardware
+• Ferramentas de análise dimensional avançadas
+• Exportação otimizada para diferentes formatos
+• Relatórios automáticos personalizáveis
+
+<strong>Vantagens da Plataforma Unificada:</strong>
+Treinamento único para toda a série, maior produtividade e consistência de resultados
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Flexibilidade da Série</h3>
+
+<strong>Escalabilidade:</strong>
+Possibilidade de upgrade entre modelos da série conforme evolução das necessidades.
+
+<strong>Consistência:</strong>
+Mesma interface e fluxo de trabalho em todos os modelos da série.
+
+<strong>Otimização:</strong>
+Cada modelo otimizado para diferentes tipos de aplicação e orçamento.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Série Completa Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para toda a série SIMSCAN:
+
+• <strong>Treinamento Série Completa:</strong> Cursos abrangendo todos os modelos da série
+• <strong>Suporte Técnico Unificado:</strong> Equipe especializada em toda a linha de produtos
+• <strong>Consultoria de Seleção:</strong> Auxílio na escolha do modelo ideal para cada aplicação
+• <strong>Upgrade de Modelos:</strong> Programa de upgrade facilitado entre modelos
+• <strong>Manutenção Especializada:</strong> Serviços técnicos para toda a série
+
+<strong>Agende uma Demonstração e conheça toda a versatilidade da série SIMSCAN 42/30/22!</strong>
+[/vc_column_text][/vc_column][/vc_row]

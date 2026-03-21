@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos e Condições Gerais de Uso e Compra — Enterfix</title>
+    <meta name="description" content="Termos e condições gerais de uso e de compra e venda do site Enterfix. Leia sobre política de vendas, pagamentos, entregas, trocas, devoluções, privacidade e seus direitos como consumidor." />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9; color: #1e293b; line-height: 1.75; font-size: 16px;
+        }
+        .tc-page { max-width: 1000px; margin: 40px auto; padding: 0 20px 60px; }
+
+        /* HERO */
+        .tc-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px; padding: 50px 48px; margin-bottom: 32px;
+            color: #fff; position: relative; overflow: hidden;
+        }
+        .tc-hero::before {
+            content: ''; position: absolute; right: -80px; top: -100px;
+            width: 380px; height: 380px; border-radius: 50%;
+            background: rgba(255,255,255,0.04); pointer-events: none;
+        }
+        .tc-hero::after {
+            content: ''; position: absolute; left: -40px; bottom: -120px;
+            width: 240px; height: 240px; border-radius: 50%;
+            background: rgba(255,255,255,0.03); pointer-events: none;
+        }
+        .tc-badge {
+            display: inline-block; background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32); border-radius: 50px;
+            padding: 4px 14px; font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 16px;
+        }
+        .tc-hero h1 { font-size: 27px; font-weight: 800; line-height: 1.25; margin-bottom: 14px; color: #fff; max-width: 740px; }
+        .tc-hero p  { font-size: 14.5px; opacity: 0.88; line-height: 1.85; max-width: 700px; margin: 0 0 20px; }
+        .tc-hero-meta { font-size: 12.5px; opacity: 0.72; }
+
+        /* KPIs */
+        .tc-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+        .tc-kpi {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 20px 22px; border-top: 4px solid #1F1659;
+        }
+        .tc-kpi-value { font-size: 24px; font-weight: 800; color: #1F1659; line-height: 1.1; }
+        .tc-kpi-label { font-size: 13px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+
+        /* ÍNDICE */
+        .tc-toc {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 28px 32px; margin-bottom: 24px;
+        }
+        .tc-toc h2 {
+            font-size: 15px; font-weight: 700; color: #1F1659;
+            margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+        }
+        .tc-toc-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px;
+        }
+        .tc-toc a {
+            display: flex; align-items: center; gap: 8px;
+            padding: 7px 10px; border-radius: 8px; text-decoration: none;
+            font-size: 13.5px; color: #334155; transition: background 0.15s;
+        }
+        .tc-toc a:hover { background: #f1f5f9; color: #1F1659; }
+        .tc-toc-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0;
+            background: #eff6ff; color: #1e40af; font-size: 11px; font-weight: 700;
+        }
+
+        /* SECTION */
+        .tc-section {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 36px 40px; margin-bottom: 16px; scroll-margin-top: 20px;
+        }
+        @media (max-width: 640px) {
+            .tc-section { padding: 24px 18px; }
+            .tc-hero { padding: 32px 22px; }
+            .tc-hero h1 { font-size: 20px; }
+            .tc-toc { padding: 20px 18px; }
+        }
+        .tc-section > h2 {
+            font-size: 18px; font-weight: 800; color: #1F1659;
+            margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .tc-tag {
+            font-size: 10.5px; font-weight: 700; letter-spacing: 0.7px; text-transform: uppercase;
+            padding: 3px 9px; border-radius: 20px;
+        }
+        .tc-tag--blue   { background: #eff6ff; color: #1e40af; }
+        .tc-tag--green  { background: #f0fdf4; color: #166534; }
+        .tc-tag--purple { background: #f5f3ff; color: #6d28d9; }
+        .tc-tag--orange { background: #fff7ed; color: #c2410c; }
+        .tc-tag--gray   { background: #f1f5f9; color: #475569; }
+
+        .tc-section h3 {
+            font-size: 15.5px; font-weight: 700; color: #0f172a;
+            margin: 20px 0 10px; padding-left: 12px; border-left: 3px solid #1F1659;
+        }
+        .tc-section p  { font-size: 14.5px; margin-bottom: 12px; color: #334155; line-height: 1.75; }
+        .tc-section p:last-child { margin-bottom: 0; }
+        .tc-section ul, .tc-section ol { padding-left: 22px; margin-bottom: 12px; }
+        .tc-section li { font-size: 14px; margin-bottom: 8px; color: #334155; line-height: 1.65; }
+        .tc-section strong { color: #0f172a; }
+        .tc-section a { color: #1d4ed8; text-decoration: underline; word-break: break-all; }
+
+        /* ALERT */
+        .tc-alert {
+            border-radius: 10px; padding: 14px 18px; margin: 16px 0;
+            font-size: 14px; line-height: 1.65;
+        }
+        .tc-alert p { font-size: 14px; margin: 0; }
+        .tc-alert--blue   { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .tc-alert--green  { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+        .tc-alert--yellow { background: #fefce8; border: 1px solid #fde047; border-left: 4px solid #ca8a04; }
+        .tc-alert--purple { background: #f5f3ff; border: 1px solid #c4b5fd; border-left: 4px solid #7c3aed; }
+        .tc-alert--red    { background: #fef2f2; border: 1px solid #fecaca; border-left: 4px solid #dc2626; }
+
+        /* RECUSA CARDS */
+        .tc-recusa {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin: 14px 0;
+        }
+        .tc-recusa-card {
+            border: 1px solid #fecaca; border-radius: 9px; padding: 12px 14px;
+            background: #fef2f2;
+            font-size: 13px; font-weight: 600; color: #991b1b;
+        }
+        .tc-recusa-card::before { content: '✕ '; }
+
+        /* DIREITOS GRID */
+        .tc-rights { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin: 16px 0; }
+        .tc-right-item {
+            border: 1px solid #e2e8f0; border-radius: 9px; padding: 14px 16px;
+            background: #fafbfc; display: flex; gap: 10px; align-items: flex-start;
+        }
+        .tc-right-icon {
+            width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0;
+            background: #eff6ff; display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+        }
+        .tc-right-title { font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 3px; }
+        .tc-right-desc  { font-size: 12.5px; color: #64748b; line-height: 1.55; }
+
+        /* TABELA LGPD */
+        .tc-tbl-wrap { overflow-x: auto; margin: 16px 0; }
+        .tc-tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 500px; }
+        .tc-tbl th { background: #1F1659; color: #fff; padding: 11px 14px; text-align: left; font-size: 12.5px; font-weight: 700; }
+        .tc-tbl th:first-child { border-radius: 8px 0 0 0; }
+        .tc-tbl th:last-child  { border-radius: 0 8px 0 0; }
+        .tc-tbl td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; color: #334155; vertical-align: top; }
+        .tc-tbl tr:nth-child(even) td { background: #f8fafc; }
+        .tc-tbl tr:last-child td { border-bottom: none; }
+
+        /* COOKIES LIST */
+        .tc-cookie-types { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin: 16px 0; }
+        .tc-cookie-card {
+            border: 1px solid #e2e8f0; border-radius: 9px; padding: 14px 16px; background: #fafbfc;
+        }
+        .tc-cookie-name { font-size: 13.5px; font-weight: 700; color: #1F1659; margin-bottom: 5px; }
+        .tc-cookie-desc { font-size: 12.5px; color: #64748b; line-height: 1.55; }
+
+        /* CONTACT BLOCK */
+        .tc-contact {
+            background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
+            padding: 16px 20px; margin: 16px 0; display: flex; flex-wrap: wrap; gap: 16px;
+        }
+        .tc-contact-item { font-size: 14px; color: #334155; display: flex; align-items: center; gap: 7px; }
+        .tc-contact-item strong { color: #0f172a; }
+
+        /* CARD DESTACADO */
+        .tc-highlight {
+            background: linear-gradient(135deg, #f5f3ff, #eff6ff);
+            border: 1px solid #c4b5fd; border-radius: 10px;
+            padding: 14px 18px; font-size: 14px; color: #4c1d95; margin: 14px 0;
+        }
+
+        /* CTA */
+        .tc-cta {
+            background: linear-gradient(135deg, #1e3a8a, #1F1659);
+            border-radius: 12px; padding: 36px 32px; text-align: center; color: #fff;
+            margin-top: 24px;
+        }
+        .tc-cta h2 { color: #fff; font-size: 19px; border: 0; padding: 0; margin-bottom: 10px; }
+        .tc-cta p  { font-size: 14.5px; opacity: 0.9; margin-bottom: 6px; }
+        .tc-cta-btn {
+            display: inline-block; background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.28); border-radius: 8px;
+            padding: 11px 26px; margin: 10px 6px 0; font-size: 14.5px; font-weight: 700;
+            color: #fff; text-decoration: none;
+        }
+        .tc-cta-btn--white { background: #fff; color: #1F1659; border-color: #fff; }
+
+        @media print {
+            body { background: #fff; }
+            .tc-page { margin: 0; max-width: 100%; }
+            .tc-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .tc-toc, .tc-cta { display: none; }
+        }
+    </style>
+</head>
+<body>
+<main class="tc-page" role="main">
+
+    <!-- HERO -->
+    <header class="tc-hero">
+        <div class="tc-badge">&#128220; Documento Legal — Versão 4.0</div>
+        <h1>Termos e Condições Gerais de Uso e de Compra e Venda</h1>
+        <p>Estes termos regulam o uso do site Enterfix e todas as relações de compra e venda realizadas por meio do endereço <strong>enterfix.com.br</strong> e <strong>loja.enterfix.com.br</strong>. Ao navegar ou realizar qualquer compra, você confirma que leu e aceita integralmente as condições aqui descritas.</p>
+        <div class="tc-hero-meta">
+            Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40 &nbsp;|&nbsp; Última atualização: março de 2026
+        </div>
+    </header>
+
+    <!-- KPIs -->
+    <div class="tc-kpis">
+        <div class="tc-kpi">
+            <div class="tc-kpi-value">19 seções</div>
+            <div class="tc-kpi-label">cobrindo todos os aspectos da relação comercial</div>
+        </div>
+        <div class="tc-kpi">
+            <div class="tc-kpi-value">CDC</div>
+            <div class="tc-kpi-label">Lei nº 8.078/90 — 7 dias de arrependimento garantidos</div>
+        </div>
+        <div class="tc-kpi">
+            <div class="tc-kpi-value">LGPD</div>
+            <div class="tc-kpi-label">Lei nº 13.709/18 — seus dados protegidos por lei</div>
+        </div>
+        <div class="tc-kpi">
+            <div class="tc-kpi-value">SAC</div>
+            <div class="tc-kpi-label">Seg–Sex 08:00–12:00 e 13:00–17:30 | (11) 4942-2222</div>
+        </div>
+    </div>
+
+    <!-- ÍNDICE -->
+    <nav class="tc-toc" aria-label="Índice dos termos">
+        <h2>&#128203; Índice de Seções</h2>
+        <div class="tc-toc-grid">
+            <a href="#s1"><span class="tc-toc-num">I</span> Do Objeto</a>
+            <a href="#s2"><span class="tc-toc-num">II</span> Da Aceitação dos Termos</a>
+            <a href="#s3"><span class="tc-toc-num">III</span> Da Navegação</a>
+            <a href="#s4"><span class="tc-toc-num">IV</span> Da Gestão do Site</a>
+            <a href="#s5"><span class="tc-toc-num">V</span> Do Cadastro</a>
+            <a href="#s6"><span class="tc-toc-num">VI</span> Das Responsabilidades</a>
+            <a href="#s7"><span class="tc-toc-num">VII</span> Dos Links Externos</a>
+            <a href="#s8"><span class="tc-toc-num">VIII</span> Dos Direitos Autorais</a>
+            <a href="#s9"><span class="tc-toc-num">IX</span> Da Política de Privacidade</a>
+            <a href="#s10"><span class="tc-toc-num">X</span> Das Ofertas e Produtos</a>
+            <a href="#s11"><span class="tc-toc-num">XI</span> Dos Preços</a>
+            <a href="#s12"><span class="tc-toc-num">XII</span> Do Pagamento</a>
+            <a href="#s13"><span class="tc-toc-num">XIII</span> Da Entrega</a>
+            <a href="#s14"><span class="tc-toc-num">XIV</span> Do Direito de Arrependimento</a>
+            <a href="#s15"><span class="tc-toc-num">XV</span> Das Trocas e Devoluções</a>
+            <a href="#s16"><span class="tc-toc-num">XVI</span> Do Atendimento ao Usuário</a>
+            <a href="#s17"><span class="tc-toc-num">XVII</span> Das Sanções</a>
+            <a href="#s18"><span class="tc-toc-num">XVIII</span> Das Alterações</a>
+            <a href="#s19"><span class="tc-toc-num">XIX</span> Do Direito Aplicável e Foro</a>
+        </div>
+    </nav>
+
+    <!-- IDENTIFICAÇÃO DA EMPRESA -->
+    <section class="tc-section">
+        <h2>&#127968; Identificação do Editor do Site</h2>
+        <div class="tc-contact">
+            <div class="tc-contact-item">&#127970; <strong>Razão Social:</strong>&nbsp;Enterfix Indústria, Comércio e Serviços Ltda.</div>
+            <div class="tc-contact-item">&#128196; <strong>CNPJ:</strong>&nbsp;13.250.539/0001-40</div>
+            <div class="tc-contact-item">&#128205; <strong>Endereço:</strong>&nbsp;Rua Waldemar Martins Ferreira, 287 — Jordanópolis, São Bernardo do Campo/SP, CEP 09891-010</div>
+            <div class="tc-contact-item">&#128140; <strong>E-mail:</strong>&nbsp;<a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a></div>
+            <div class="tc-contact-item">&#128222; <strong>Telefone:</strong>&nbsp;(11) 4942-2222 / 2220</div>
+            <div class="tc-contact-item">&#128100; <strong>Representante:</strong>&nbsp;Paulo Otavio Truszko — Diretor</div>
+        </div>
+        <p style="font-size:13px; color:#94a3b8;">Doravante denominada <strong>EDITOR DO SITE</strong>, por meio do endereço <a href="https://enterfix.com.br/">https://enterfix.com.br/</a> e <a href="https://loja.enterfix.com.br/">https://loja.enterfix.com.br/</a>.</p>
+    </section>
+
+    <!-- I -->
+    <section class="tc-section" id="s1">
+        <h2><span class="tc-toc-num">I</span> Do Objeto <span class="tc-tag tc-tag--blue">Política de Vendas</span></h2>
+
+        <p>O site <strong>Enterfix</strong> caracteriza-se pela prestação dos seguintes serviços, incluindo a venda à distância e por meio eletrônico de produtos e serviços de metrologia, instrumentação e serviços técnicos especializados.</p>
+
+        <h3>1. Política de Vendas</h3>
+        <p>O cliente é responsável por informar corretamente o endereço de entrega no momento da finalização de cada compra, bem como possibilitar o recebimento, mantendo no local uma pessoa maior de 18 anos portando documento original de identidade.</p>
+        <p>Não nos responsabilizamos por impossibilidade de entrega nos casos de endereço incorreto ou ausência de pessoa qualificada para recebimento. Todas as entregas não realizadas pelo cliente são enviadas pelos Correios ou transportadora, sendo de total responsabilidade da transportadora os prazos e tentativas de entrega.</p>
+
+        <h3>2. Verificação do Produto e Recusa da Entrega</h3>
+        <p>Orientamos o cliente a verificar os produtos no ato da entrega, na presença do entregador. Caso seja identificado qualquer tipo de violação, avaria ou mercadoria em desacordo com o pedido, o cliente deverá <strong>recusar o recebimento</strong>, anotando na Nota Fiscal e no documento de entrega um dos motivos abaixo:</p>
+
+        <div class="tc-recusa">
+            <div class="tc-recusa-card">Violação da embalagem ou invólucro do produto</div>
+            <div class="tc-recusa-card">Avaria do produto</div>
+            <div class="tc-recusa-card">Mercadoria em desacordo com o pedido</div>
+        </div>
+
+        <p>Após recusar, a encomenda retornará à nossa empresa e o cliente deverá comunicar o fato imediatamente por um dos nossos canais de atendimento para que a ocorrência seja analisada.</p>
+
+        <div class="tc-alert tc-alert--yellow">
+            <p>&#9888;&#65039; <strong>Atenção:</strong> ao assinar o documento de recebimento sem nenhuma ressalva escrita, o cliente confirma que a embalagem não possui avarias ou violação visíveis, e que recebeu o produto de acordo com o pedido.</p>
+        </div>
+
+        <h3>3. Disponibilidade de Produtos</h3>
+        <p>Buscamos manter as informações de disponibilidade atualizadas. Contudo, por compartilharmos o estoque com nossa loja física e representantes comerciais, existe a possibilidade de um produto se esgotar antes de ter seu status atualizado no site. Além disso, realizamos análise de qualidade antes do envio — caso o produto não seja aprovado e seja a última peça disponível, o envio não poderá ser realizado.</p>
+        <div class="tc-alert tc-alert--blue">
+            <p>&#8505;&#65039; <strong>Transparência:</strong> a Enterfix investe constantemente em tecnologias de gestão de estoque. Nosso principal objetivo é honestidade e transparência com nossos clientes em situações adversas.</p>
+        </div>
+
+        <h3>4. Cancelamento de Compras</h3>
+        <p><strong>Cancelamento pela Enterfix:</strong> nos reservamos ao direito de cancelar compras sem aviso prévio nos seguintes casos: não pagamento do boleto; impossibilidade de débito no cartão; inconsistência de dados cadastrais; suspeita de fraude; não cumprimento de solicitações de documentação; ou qualquer situação que demonstre má-fé do comprador.</p>
+        <p><strong>Cancelamento pelo cliente:</strong> de acordo com o art. 49 do Código de Defesa do Consumidor, o cliente pode solicitar o cancelamento em até 7 dias corridos após o recebimento do produto, desde que comunique seu desejo dentro deste prazo e que o produto esteja <strong>lacrado</strong>.</p>
+    </section>
+
+    <!-- II -->
+    <section class="tc-section" id="s2">
+        <h2><span class="tc-toc-num">II</span> Da Aceitação dos Termos e Condições</h2>
+        <p>Todos aqueles que desejarem acessar os serviços ofertados pelo site deverão previamente se informar sobre as regras deste instrumento, disponíveis para ampla consulta em link direto no próprio site.</p>
+        <p>Ao utilizar o site <strong>Enterfix</strong>, o usuário aceita integralmente as presentes normas e compromete-se a observá-las. Antes de iniciar qualquer navegação, o usuário deverá verificar eventuais modificações ou atualizações neste termo.</p>
+        <p>Caso não concorde com quaisquer das regras aqui descritas, o usuário deve imediatamente abster-se de utilizar o serviço e poderá contatar o SAC: <a href="mailto:sac@enterfix.com.br">sac@enterfix.com.br</a>.</p>
+    </section>
+
+    <!-- III -->
+    <section class="tc-section" id="s3">
+        <h2><span class="tc-toc-num">III</span> Da Navegação</h2>
+        <p>O editor do site compromete-se a utilizar todas as soluções técnicas disponíveis para permitir o acesso ao serviço 24 horas por dia, 7 dias por semana. Entretanto, poderá a qualquer momento interromper, limitar ou suspender o acesso ao site ou a partes dele, para realizar atualizações ou modificações julgadas necessárias para seu bom funcionamento.</p>
+        <p>Os presentes termos se aplicam a todas as extensões do site <strong>Enterfix</strong> em redes sociais ou comunidades, tanto as já existentes quanto aquelas ainda a serem implementadas.</p>
+    </section>
+
+    <!-- IV -->
+    <section class="tc-section" id="s4">
+        <h2><span class="tc-toc-num">IV</span> Da Gestão do Site</h2>
+        <p>Para a boa gestão, o editor poderá, a qualquer momento:</p>
+        <ul>
+            <li>Suspender, interromper ou limitar o acesso a todo ou a parte do site a uma categoria específica de internautas;</li>
+            <li>Remover toda informação que possa perturbar o funcionamento do site ou que esteja em conflito com normas do Direito brasileiro ou internacional;</li>
+            <li>Suspender o site para realizar atualizações e modificações.</li>
+        </ul>
+    </section>
+
+    <!-- V -->
+    <section class="tc-section" id="s5">
+        <h2><span class="tc-toc-num">V</span> Do Cadastro</h2>
+        <p>Os serviços do site <strong>Enterfix</strong> apenas poderão ser acessados por pessoas plenamente capazes conforme o Direito brasileiro. Todos aqueles que não possuírem plena capacidade civil deverão ser devidamente assistidos por seus representantes legais, que se responsabilizarão pelo cumprimento destas regras. Pessoas jurídicas também poderão se cadastrar por meio de seus representantes legais.</p>
+        <p>Ao usuário será permitido manter apenas uma conta junto ao site. Contas duplicadas serão automaticamente desativadas. Para o cadastramento, o usuário deverá fornecer integralmente os dados requeridos — precisos, verdadeiros e atualizados. O usuário deverá fornecer endereço de e-mail válido, pelo qual o site realizará todos os contatos necessários.</p>
+        <p>Após a confirmação do cadastro, o usuário possuirá login e senha pessoais, que <strong>não poderão ser informados a terceiros</strong>. O usuário deve comunicar imediatamente ao editor quaisquer atividades suspeitas em sua conta.</p>
+        <p>Não será permitido ceder, vender, alugar ou transferir a conta, que é pessoal e intransferível. Será automaticamente descadastrado o usuário que descumprir quaisquer normas deste instrumento.</p>
+    </section>
+
+    <!-- VI -->
+    <section class="tc-section" id="s6">
+        <h2><span class="tc-toc-num">VI</span> Das Responsabilidades</h2>
+        <p>O editor responsabiliza-se pelos defeitos ou vícios encontrados nos serviços prestados pelo site, desde que tenha lhes dado causa. Defeitos técnicos originados no próprio sistema do usuário não serão de responsabilidade do editor.</p>
+        <p>O editor é responsável pelas informações que divulgou diretamente. Informações incluídas pelos usuários (comentários, perfis) são de inteira responsabilidade dos próprios.</p>
+        <p>O usuário é responsável:</p>
+        <ul>
+            <li>Pela correta utilização do site e serviços, prezando pela boa convivência e cordialidade;</li>
+            <li>Pelo cumprimento das regras deste instrumento e das normas de Direito nacional e internacional;</li>
+            <li>Pela proteção dos dados de acesso à sua conta (login e senha).</li>
+        </ul>
+        <p>O editor <strong>não será responsável</strong> pelas características intrínsecas da internet, in especial relativas à confiabilidade das informações nela circulantes, nem por conteúdos ou atividades ilícitas praticadas através de seu site.</p>
+    </section>
+
+    <!-- VII -->
+    <section class="tc-section" id="s7">
+        <h2><span class="tc-toc-num">VII</span> Dos Links Externos</h2>
+        <p>O site <strong>Enterfix</strong> pode conter links externos redirecionando o usuário para outras páginas da internet, sobre os quais o editor não exerce controle. Apesar de verificações prévias, o editor se isenta de responsabilidade sobre o conteúdo de sites terceiros.</p>
+        <p>Links nas páginas do site Enterfix poderão ser incluídos desde que não sirvam para fins comerciais ou publicitários e mediante autorização prévia do editor. Não serão autorizados links para páginas que divulguem informações ilícitas, violentas, pornográficas, xenofóbicas, discriminatórias ou ofensivas.</p>
+    </section>
+
+    <!-- VIII -->
+    <section class="tc-section" id="s8">
+        <h2><span class="tc-toc-num">VIII</span> Dos Direitos Autorais <span class="tc-tag tc-tag--purple">Propriedade Intelectual</span></h2>
+        <p>A estrutura do site <strong>Enterfix</strong>, bem como textos, gráficos, imagens, fotografias, sons, vídeos e as demais aplicações informáticas são de propriedade do editor e protegidas pela legislação brasileira e internacional referente à propriedade intelectual.</p>
+        <p>Qualquer representação, reprodução, adaptação ou exploração parcial ou total dos conteúdos, marcas e serviços propostos pelo site, por qualquer meio, sem autorização prévia, expressa e escrita do editor, é <strong>estritamente vedada</strong>, podendo recorrer-se às medidas cíveis e penais cabíveis.</p>
+        <p>O acesso ao site não gera para o usuário qualquer direito de propriedade intelectual relativo a elementos do site. É vedado ao usuário incluir dados que possam modificar o conteúdo ou a aparência do site.</p>
+    </section>
+
+    <!-- IX -->
+    <section class="tc-section" id="s9">
+        <h2><span class="tc-toc-num">IX</span> Da Política de Privacidade <span class="tc-tag tc-tag--purple">LGPD</span></h2>
+
+        <div class="tc-alert tc-alert--purple">
+            <p>&#128274; Esta seção contém informações sobre o tratamento de dados pessoais do usuário, em conformidade com a <strong>Lei Federal nº 12.965/2014</strong> (Marco Civil da Internet), a <strong>Lei Federal nº 13.709/2018</strong> (LGPD) e o <strong>Regulamento UE nº 2016/679</strong> (GDPR).</p>
+        </div>
+
+        <h3>1. Seus Direitos como Titular dos Dados</h3>
+        <div class="tc-rights">
+            <div class="tc-right-item">
+                <div class="tc-right-icon">&#128269;</div>
+                <div>
+                    <div class="tc-right-title">Confirmação e Acesso</div>
+                    <div class="tc-right-desc">Saber se seus dados são tratados e acessá-los integralmente.</div>
+                </div>
+            </div>
+            <div class="tc-right-item">
+                <div class="tc-right-icon">&#9999;&#65039;</div>
+                <div>
+                    <div class="tc-right-title">Retificação</div>
+                    <div class="tc-right-desc">Corrigir dados inexatos ou incompletos sem demora.</div>
+                </div>
+            </div>
+            <div class="tc-right-item">
+                <div class="tc-right-icon">&#128465;&#65039;</div>
+                <div>
+                    <div class="tc-right-title">Eliminação (Direito ao Esquecimento)</div>
+                    <div class="tc-right-desc">Solicitar a exclusão de seus dados pessoais do site.</div>
+                </div>
+            </div>
+            <div class="tc-right-item">
+                <div class="tc-right-icon">&#128274;</div>
+                <div>
+                    <div class="tc-right-title">Limitação do Tratamento</div>
+                    <div class="tc-right-desc">Limitar como seus dados são utilizados em determinadas situações.</div>
+                </div>
+            </div>
+            <div class="tc-right-item">
+                <div class="tc-right-icon">&#9995;&#65039;</div>
+                <div>
+                    <div class="tc-right-title">Oposição</div>
+                    <div class="tc-right-desc">Opor-se ao tratamento dos dados, inclusive para marketing e profiling.</div>
+                </div>
+            </div>
+            <div class="tc-right-item">
+                <div class="tc-right-icon">&#128228;</div>
+                <div>
+                    <div class="tc-right-title">Portabilidade</div>
+                    <div class="tc-right-desc">Receber seus dados em formato estruturado e legível por máquina.</div>
+                </div>
+            </div>
+            <div class="tc-right-item">
+                <div class="tc-right-icon">&#129302;</div>
+                <div>
+                    <div class="tc-right-title">Não-Automatização</div>
+                    <div class="tc-right-desc">Não ser submetido a decisões exclusivamente automatizadas (profiling).</div>
+                </div>
+            </div>
+        </div>
+
+        <p>Para exercer qualquer destes direitos, envie comunicação escrita ao e-mail <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> com assunto <strong>"RGPD – enterfix.com.br"</strong>, informando: nome completo, CPF ou CNPJ, e-mail, direito que deseja exercer, data e assinatura.</p>
+
+        <h3>2. Dados Coletados e Base Legal</h3>
+
+        <div class="tc-tbl-wrap">
+            <table class="tc-tbl" aria-label="Bases legais para tratamento de dados">
+                <thead>
+                    <tr>
+                        <th>Dado Coletado</th>
+                        <th>Finalidade</th>
+                        <th>Base Legal (LGPD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nome completo / Razão Social</td>
+                        <td>Cadastro, emissão de nota fiscal, entrega</td>
+                        <td>Execução de contrato (Art. 7º, V)</td>
+                    </tr>
+                    <tr>
+                        <td>CPF / CNPJ</td>
+                        <td>Identificação fiscal, emissão NF-e</td>
+                        <td>Obrigação legal (Art. 7º, II)</td>
+                    </tr>
+                    <tr>
+                        <td>Endereço de entrega</td>
+                        <td>Logística e entrega do pedido</td>
+                        <td>Execução de contrato (Art. 7º, V)</td>
+                    </tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td>Comunicação, confirmação de pedido, SAC</td>
+                        <td>Execução de contrato (Art. 7º, V)</td>
+                    </tr>
+                    <tr>
+                        <td>Dados de pagamento (tokenizados)</td>
+                        <td>Processamento seguro de pagamentos</td>
+                        <td>Execução de contrato (Art. 7º, V)</td>
+                    </tr>
+                    <tr>
+                        <td>Dados de navegação (cookies)</td>
+                        <td>Melhoria da experiência, analytics</td>
+                        <td>Consentimento (Art. 7º, I)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>Os dados pessoais serão conservados pelo prazo máximo de <strong>3 anos</strong>, salvo solicitação de supressão antes deste prazo ou obrigação legal de conservação por prazo superior.</p>
+        <p>Os dados não serão compartilhados com terceiros, exceto: processadores de pagamento (dados tokenizados), transportadoras (nome e endereço para entrega) e por obrigação legal ou judicial.</p>
+
+        <h3>3. Responsável e Encarregado (DPO)</h3>
+        <p><strong>Controlador:</strong> Enterfix Indústria, Comércio e Serviços Ltda., representada por <strong>Paulo Otavio Truszko</strong>.<br>
+        <strong>Encarregado (DPO):</strong> Paulo Otavio Truszko — <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a></p>
+
+        <h3>4. Segurança dos Dados</h3>
+        <p>O site utiliza certificado <strong>SSL/TLS</strong> para transmissão criptografada de dados entre o navegador e o servidor. Adotamos medidas técnicas e organizacionais adequadas ao nível de risco de cada operação de tratamento. Em caso de violação de dados que possa causar risco ao titular, o usuário será comunicado em prazo adequado.</p>
+
+        <h3>5. Cookies</h3>
+        <div class="tc-cookie-types">
+            <div class="tc-cookie-card">
+                <div class="tc-cookie-name">&#129693; Cookies do Site</div>
+                <div class="tc-cookie-desc">Enviados exclusivamente pelo nosso servidor. Permitem reconhecer visitantes recorrentes e adaptar o conteúdo às preferências do usuário.</div>
+            </div>
+            <div class="tc-cookie-card">
+                <div class="tc-cookie-name">&#128200; Cookies Analíticos</div>
+                <div class="tc-cookie-desc">Coletam estatísticas anônimas de navegação para melhoria contínua do site. Nenhuma informação pessoal identificável é transmitida.</div>
+            </div>
+            <div class="tc-cookie-card">
+                <div class="tc-cookie-name">&#128241; Cookies de Redes Sociais</div>
+                <div class="tc-cookie-desc">Gerados pelos plugins de redes sociais presentes no site. Cada plataforma possui sua própria política de privacidade: <a href="https://www.facebook.com/policies/cookies/" target="_blank" rel="noopener">Facebook</a>, <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" rel="noopener">YouTube/Google</a>, <a href="https://www.linkedin.com/legal/cookie-policy" target="_blank" rel="noopener">LinkedIn</a>.</div>
+            </div>
+        </div>
+        <p>O usuário pode desativar cookies diretamente no navegador: <a href="https://support.google.com/chrome/answer/95647?hl=pt-BR" target="_blank" rel="noopener">Chrome</a> &bull; <a href="https://support.mozilla.org/pt-BR/kb/ative-e-desative-os-cookies-que-os-sites-usam" target="_blank" rel="noopener">Firefox</a> &bull; <a href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a> &bull; <a href="https://support.microsoft.com/pt-br/help/17442" target="_blank" rel="noopener">Edge/IE</a>. A desativação pode afetar algumas funcionalidades do site.</p>
+    </section>
+
+    <!-- X -->
+    <section class="tc-section" id="s10">
+        <h2><span class="tc-toc-num">X</span> Das Ofertas e Produtos</h2>
+        <p>Por intermédio do site <strong>Enterfix</strong>, o editor fornece ao cliente um catálogo ou loja online apresentando com exatidão os produtos e serviços vendidos. Os produtos são descritos com o maior grau de precisão possível, com informações corretas, claras, precisas e em língua portuguesa sobre características, qualidades, quantidade, preço, garantia, prazos e origem.</p>
+        <p>Os produtos são colocados à venda até o limite do estoque disponível. Antes de finalizar a compra, o usuário deverá informar-se sobre as especificações e destinação do produto, bem como sobre as condições de aplicação de eventuais ofertas.</p>
+        <p>As ofertas poderão ser encerradas antes do prazo previsto caso o estoque se esgote e não seja possível reabastecê-lo.</p>
+    </section>
+
+    <!-- XI -->
+    <section class="tc-section" id="s11">
+        <h2><span class="tc-toc-num">XI</span> Dos Preços</h2>
+        <p>O vendedor reserva-se o direito de modificar os preços a qualquer momento, publicando-os no site <strong>Enterfix</strong>. Serão aplicadas as tarifas em vigor no momento do pedido, sob reserva de disponibilidade dos produtos nesta data.</p>
+        <p>Os preços serão indicados em <strong>Reais (R$)</strong> e <strong>não incluem</strong> as taxas de entrega, que serão informadas separadamente antes da realização final do pedido. O montante total, incluindo todas as taxas, será indicado antes da validação final.</p>
+    </section>
+
+    <!-- XII -->
+    <section class="tc-section" id="s12">
+        <h2><span class="tc-toc-num">XII</span> Do Pagamento <span class="tc-tag tc-tag--green">Confirmação Automática</span></h2>
+        <p>O pagamento poderá ser realizado à vista ou a prazo, pelas seguintes formas:</p>
+        <ul>
+            <li><strong>Pix:</strong> confirmação instantânea;</li>
+            <li><strong>Boleto Bancário:</strong> aceito em toda a rede bancária até o vencimento — confirmação em 1 a 2 dias úteis;</li>
+            <li><strong>Cartão de Crédito</strong> (Visa, Mastercard, Hipercard, Amex, Diners, Elo): confirmação em 1 a 24 horas, dependendo do banco — via plataformas PagSeguro ou similar;</li>
+            <li><strong>PayPal:</strong> para pagamentos internacionais.</li>
+        </ul>
+        <div class="tc-alert tc-alert--green">
+            <p>&#10004; <strong>Confirmação automática:</strong> não é necessário enviar comprovante de pagamento, exceto se expressamente solicitado pela nossa equipe. O envio de comprovantes sem solicitação não agiliza o prazo de postagem.</p>
+        </div>
+        <p>O prazo de postagem começa a valer apenas após a confirmação do pagamento pelo sistema.</p>
+    </section>
+
+    <!-- XIII -->
+    <section class="tc-section" id="s13">
+        <h2><span class="tc-toc-num">XIII</span> Da Entrega</h2>
+        <p>O prazo de entrega será informado no momento do pedido, em dias úteis. O tempo é calculado conforme o estoque disponível, a região de destino, o processo de emissão da nota fiscal e a preparação do pedido.</p>
+        <p>Após a finalização do pedido, não será possível alterar a forma de pagamento, o endereço de entrega ou as condições de entrega. As entregas serão realizadas por transportadora contratada — o cliente será informado sobre a empresa responsável, política de entrega e número de rastreamento após o envio.</p>
+        <p>O editor não se responsabiliza pela montagem, desmontagem ou transporte dos produtos após a entrega no endereço informado pelo cliente.</p>
+    </section>
+
+    <!-- XIV -->
+    <section class="tc-section" id="s14">
+        <h2><span class="tc-toc-num">XIV</span> Do Direito de Arrependimento <span class="tc-tag tc-tag--green">CDC Art. 49</span></h2>
+        <div class="tc-highlight">
+            &#9989; Conforme o <strong>art. 49 do Código de Defesa do Consumidor</strong>, o cliente tem direito de desistir da compra em até <strong>7 (sete) dias corridos</strong> contados da data de recebimento do produto, sem necessidade de apresentação de justificativas.
+        </div>
+        <p>Para exercer o direito de arrependimento, o cliente deverá:</p>
+        <ol>
+            <li>Entrar em contato com o SAC pelo e-mail <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> ou pelo telefone (11) 4942-2222 dentro do prazo de 7 dias;</li>
+            <li>Devolver o produto ao vendedor nas mesmas condições em que o recebeu;</li>
+            <li>O produto deve estar <strong>lacrado e não utilizado</strong>.</li>
+        </ol>
+        <p>Após a confirmação do recebimento do produto devolvido e verificação das condições, o reembolso integral será processado.</p>
+    </section>
+
+    <!-- XV -->
+    <section class="tc-section" id="s15">
+        <h2><span class="tc-toc-num">XV</span> Das Trocas e Devoluções <span class="tc-tag tc-tag--orange">CDC</span></h2>
+        <p>A política de trocas e devoluções é regida pelo <strong>Código de Defesa do Consumidor</strong> (Lei Federal nº 8.078/1990). Além do arrependimento, a troca ou devolução será realizada mediante verificação de vícios de qualidade ou quantidade que tornem o produto impróprio ou inadequado ao consumo, ou que apresentem disparidade com as indicações da embalagem ou publicidade.</p>
+
+        <h3>Procedimento de Devolução</h3>
+        <ul>
+            <li>O produto poderá ser devolvido em até <strong>07 dias</strong> após o recebimento;</li>
+            <li>Não serão aceitas devoluções por mau uso do produto;</li>
+            <li>Entre em contato pelo e-mail <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> ou (11) 4942-2222 <strong>antes</strong> de efetuar o envio;</li>
+            <li>Em caso de defeito de fabricação, embale o produto na embalagem original e envie para: <em>Rua Waldemar Martins Ferreira, 287 — Jordanópolis, São Bernardo do Campo/SP, CEP 09891-010</em>;</li>
+            <li>Os custos de envio por defeito de fabricação serão arcados pela Enterfix;</li>
+            <li>O produto deve estar acompanhado da <strong>DANFE</strong> (Documento Auxiliar da Nota Fiscal Eletrônica) original.</li>
+        </ul>
+
+        <div class="tc-alert tc-alert--red">
+            <p>&#128683; <strong>Não serão aceitos:</strong> produtos lavados, usados, com odores, alterados pelo cliente, sem etiqueta, sem embalagem original ou com danos por mau uso.</p>
+        </div>
+
+        <h3>Procedimento de Troca</h3>
+        <p>Após a devolução confirmada, o cliente poderá escolher um produto de valor equivalente ou pela soma de diferentes produtos cujo valor final seja equivalente ao produto devolvido. Entre em contato pelo e-mail ou telefone acima. A troca será realizada em até <strong>10 dias</strong> após o recebimento do produto em nossa empresa.</p>
+
+        <div class="tc-alert tc-alert--yellow">
+            <p>&#9940; Se no prazo máximo de 30 dias não for possível sanar o vício do produto, o cliente poderá optar por: substituição do produto por outro da mesma espécie; devolução integral do valor pago; ou abatimento proporcional do preço — conforme o art. 18 do CDC.</p>
+        </div>
+    </section>
+
+    <!-- XVI -->
+    <section class="tc-section" id="s16">
+        <h2><span class="tc-toc-num">XVI</span> Do Serviço de Atendimento ao Usuário</h2>
+        <p>Em caso de dúvidas, sugestões ou problemas, o usuário poderá contatar diretamente o SAC Enterfix:</p>
+        <div class="tc-contact">
+            <div class="tc-contact-item">&#128140; <strong>E-mail:</strong>&nbsp;<a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a></div>
+            <div class="tc-contact-item">&#128222; <strong>Telefone:</strong>&nbsp;(11) 4942-2222 / 4942-2220</div>
+            <div class="tc-contact-item">&#128336; <strong>Horário:</strong>&nbsp;Seg–Sex, 08:00–12:00 e 13:00–17:30</div>
+            <div class="tc-contact-item">&#128205; <strong>Correspondência:</strong>&nbsp;Rua Waldemar Martins Ferreira, 287 — Jordanópolis, SBC/SP</div>
+        </div>
+    </section>
+
+    <!-- XVII -->
+    <section class="tc-section" id="s17">
+        <h2><span class="tc-toc-num">XVII</span> Das Sanções</h2>
+        <p>Sem prejuízo das demais medidas legais cabíveis, o editor poderá, a qualquer momento, advertir, suspender ou cancelar a conta do usuário que:</p>
+        <ul>
+            <li>Descumprir quaisquer dos dispositivos deste instrumento;</li>
+            <li>Descumprir os seus deveres de usuário;</li>
+            <li>Praticar atos fraudulentos ou dolosos;</li>
+            <li>Fornecer qualquer informação incorreta;</li>
+            <li>Adotar comportamento que constitua ou possa vir a importar ofensa ou dano a terceiro ou ao próprio site.</li>
+        </ul>
+    </section>
+
+    <!-- XVIII -->
+    <section class="tc-section" id="s18">
+        <h2><span class="tc-toc-num">XVIII</span> Das Alterações</h2>
+        <p>A presente versão foi <strong>atualizada em março de 2026</strong>. O editor reserva-se o direito de modificar a qualquer momento o site, os serviços e este documento, especialmente para adaptá-los às evoluções do site e à legislação vigente.</p>
+        <p>O usuário será explicitamente notificado em caso de alteração substantiva do presente termo. O uso continuado do serviço após modificações demonstra concordância com as novas normas. Caso discorde, deverá solicitar o cancelamento de sua conta e apresentar sua ressalva ao SAC.</p>
+    </section>
+
+    <!-- XIX -->
+    <section class="tc-section" id="s19">
+        <h2><span class="tc-toc-num">XIX</span> Do Direito Aplicável e do Foro</h2>
+        <p>Para a solução das controvérsias decorrentes deste instrumento, será aplicado integralmente o <strong>Direito brasileiro</strong>, notadamente a sua legislação consumerista (Lei Federal nº 8.078/1990) e a Lei de Proteção de Dados Pessoais (Lei Federal nº 13.709/2018).</p>
+        <p>Os eventuais litígios deverão ser apresentados no <strong>foro da comarca em que se encontra a sede do editor do site</strong> — São Bernardo do Campo/SP —, com renúncia expressa a qualquer outro foro, por mais privilegiado que seja.</p>
+    </section>
+
+    <!-- CTA -->
+    <div class="tc-cta">
+        <h2>&#128222; Dúvidas sobre estes termos?</h2>
+        <p>Nossa equipe está disponível para esclarecer qualquer ponto desta política.</p>
+        <p style="font-size:13px; opacity:0.7; margin-top:2px;">Seg–Sex, 08:00–12:00 e 13:00–17:30</p>
+        <a class="tc-cta-btn tc-cta-btn--white"
+           href="mailto:ecommerce@enterfix.com.br?subject=Dúvida sobre Termos e Condições">
+            &#128140; ecommerce@enterfix.com.br
+        </a>
+        <a class="tc-cta-btn" href="tel:+551149422222">&#128222; (11) 4942-2222 / 2220</a>
+        <p style="margin-top:16px; font-size:12px; opacity:0.65;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40 &nbsp;|&nbsp; enterfix.com.br</p>
+    </div>
+
+</main>
+</body>
+</html>

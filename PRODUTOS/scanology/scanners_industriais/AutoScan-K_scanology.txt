@@ -1,0 +1,194 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>AutoScan-K - Sistema de Digitalização Industrial Kompakt</h1>
+
+<p class="produto-breve-descricao">Sistema avançado de digitalização 3D com tecnologia de ponta para aplicações industriais profissionais.</p>
+
+O <strong>AutoScan-K</strong> é um sistema de digitalização 3D industrial kompakt que oferece máxima funcionalidade em espaço reduzido. Este sistema é ideal para ambientes com restrições de espaço que não podem comprometer a qualidade e precisão.
+
+<strong>Características Principais:</strong>
+• Design kompakt para espaços reduzidos
+• Funcionalidade industrial completa
+• Sistema de movimentação otimizado
+• Precisão mantida em formato reduzido
+• Fácil integração em linhas existentes
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">AutoScan-K - Sistema de Digitalização Industrial Kompakt - Tecnologia Avançada de Digitalização 3D</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Sistema avançado de digitalização 3D com tecnologia de ponta para aplicações industriais que exigem máxima precisão e eficiência operacional.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Auto</h3>
+        <p style="font-size: 16px;">Automatizado</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">CMM</h3>
+        <p style="font-size: 16px;">Compatível</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">24/7</h3>
+        <p style="font-size: 16px;">Operação</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">IA</h3>
+        <p style="font-size: 16px;">Inteligente</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração Técnica</h3>
+<p>Veja o AutoScan-K demonstrando suas capacidades avançadas de digitalização 3D.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Tecnologia de digitalização avançada</li>
+<li>Captura de alta precisão</li>
+<li>Processamento otimizado</li>
+<li>Interface profissional</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas</h3>
+
+[vc_row][vc_row][vc_column][vc_column_text]
+<h3>Tecnologia Kompakt Industrial</h3>
+
+O AutoScan-K utiliza design kompakt avançado que integra todas as funcionalidades industriais necessárias em footprint reduzido, sem comprometer performance ou precisão.
+
+<strong>Especificações Técnicas Kompakt:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Industrial</strong></td>
+<td>±0,025mm</td>
+</tr>
+<tr>
+<td><strong>Footprint</strong></td>
+<td>1200mm × 800mm</td>
+</tr>
+<tr>
+<td><strong>Volume de Digitalização</strong></td>
+<td>400mm × 300mm × 200mm</td>
+</tr>
+<tr>
+<td><strong>Altura Total</strong></td>
+<td>1800mm</td>
+</tr>
+<tr>
+<td><strong>Tempo de Ciclo</strong></td>
+<td>2-5 minutos/peça</td>
+</tr>
+<tr>
+<td><strong>Sistema de Movimentação</strong></td>
+<td>5 eixos kompakt</td>
+</tr>
+<tr>
+<td><strong>Capacidade de Carga</strong></td>
+<td>Até 15kg</td>
+</tr>
+<tr>
+<td><strong>Interface</strong></td>
+<td>Touch panel integrado</td>
+</tr>
+<tr>
+<td><strong>Conectividade</strong></td>
+<td>Ethernet industrial</td>
+</tr>
+<tr>
+<td><strong>Alimentação</strong></td>
+<td>220V, 3kW</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações Kompakt Industriais</h3>
+
+<strong>Linhas de Produção Compactas:</strong>
+• Integração em células de manufatura existentes
+• Controle de qualidade em espaços reduzidos
+• Otimização de layouts de produção
+
+<strong>Laboratórios Industriais:</strong>
+• Inspeção de amostras e protótipos
+• Controle de qualidade de desenvolvimento
+• Análise dimensional em laboratório
+
+<strong>Pequenas e Médias Empresas:</strong>
+• Digitalização industrial acessível
+• Controle de qualidade profissional
+• Solução completa em espaço reduzido
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Software AutoScan Kompakt</h3>
+
+O AutoScan-K utiliza o software AutoScan Kompakt, otimizado para operação em espaços reduzidos:
+
+<strong>Recursos Kompakt:</strong>
+• Interface simplificada para operação eficiente
+• Configuração automática para espaços reduzidos
+• Otimização de trajetórias para sistema kompakt
+• Relatórios de qualidade automatizados
+• Conectividade industrial padrão
+• Manutenção simplificada
+
+<strong>Eficiência Espacial:</strong>
+Máxima funcionalidade industrial em mínimo espaço ocupado
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens do Design Kompakt</h3>
+
+<strong>Eficiência Espacial:</strong>
+Footprint de apenas 1,2m² oferece funcionalidade industrial completa.
+
+<strong>Integração Facilitada:</strong>
+Design kompakt permite integração em linhas existentes sem grandes modificações.
+
+<strong>Custo-Benefício:</strong>
+Solução industrial completa com investimento otimizado.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Kompakt Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para sistemas kompakt:
+
+• <strong>Planejamento de Layout:</strong> Otimização de integração em espaços reduzidos
+• <strong>Instalação Especializada:</strong> Setup otimizado para ambientes kompakt
+• <strong>Treinamento Eficiente:</strong> Programas focados em operação kompakt
+• <strong>Manutenção Otimizada:</strong> Procedures específicos para sistemas kompakt
+• <strong>Consultoria em Espaço:</strong> Maximização de eficiência em espaços reduzidos
+
+<strong>Agende uma Demonstração e descubra as vantagens da digitalização industrial kompakt!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: scanner 3d, autoscan k, digitalização 3d, metrologia 3d, controle qualidade, scanology, enterfix, precisão industrial -->

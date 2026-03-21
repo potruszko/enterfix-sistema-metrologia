@@ -1,0 +1,470 @@
+<style>
+.devmq{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+
+/* ── HERO ── */
+.devmq-hero{background:linear-gradient(135deg,#1F1659 0%,#2d2580 45%,#1a4fa0 100%);border-radius:14px;overflow:hidden;margin-bottom:22px;position:relative;min-height:220px;display:flex;align-items:flex-end}
+.devmq-hero-vid{width:100%;height:100%;display:block;opacity:.4;position:absolute;inset:0;object-fit:cover;object-position:center}
+.devmq-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(15,10,50,.80) 0%,transparent 70%);width:100%}
+.devmq-badge{display:inline-block;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:3px 12px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.devmq-hero-overlay h1{font-size:22px;font-weight:800;color:#fff;line-height:1.2;margin:0 0 8px}
+.devmq-hero-overlay p{font-size:13.5px;color:rgba(255,255,255,.88);margin:0;max-width:640px;line-height:1.65}
+
+/* ── SPECS RÁPIDAS ── */
+.devmq-specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.devmq-spec{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;border-top:3px solid #1F1659}
+.devmq-spec-val{font-size:17px;font-weight:800;color:#1F1659;line-height:1.1}
+.devmq-spec-key{font-size:11.5px;color:#64748b;margin-top:3px}
+
+/* ── CARDS ── */
+.devmq-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.devmq-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid #e2e8f0;display:flex;align-items:center;gap:8px}
+.devmq-card p{font-size:14.5px;color:#334155;margin:0 0 10px;line-height:1.75}
+.devmq-card p:last-child{margin:0}
+
+/* ── FEATURES ── */
+.devmq-feats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.devmq-feats li{font-size:14px;color:#334155;padding:9px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+.devmq-feats li::before{content:'✓';color:#16a34a;font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* ── MODOS (FONTES DE LUZ) ── */
+.devmq-modes{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:10px 0}
+.devmq-mode{border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;background:#f8fafc;border-left:4px solid #1F1659}
+.devmq-mode-title{font-size:13.5px;font-weight:700;color:#1F1659;margin-bottom:5px}
+.devmq-mode-desc{font-size:13px;color:#475569;line-height:1.55}
+.devmq-mode-tag{display:inline-block;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-bottom:7px;color:#fff}
+.tag-ir{background:#64748b}
+.tag-vcsel{background:#0f766e}
+
+/* ── TABELA ── */
+.devmq-tbl-wrap{overflow-x:auto}
+.devmq-tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:420px}
+.devmq-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:12px;font-weight:700}
+.devmq-tbl th:first-child{border-radius:6px 0 0 0}
+.devmq-tbl th:last-child{border-radius:0 6px 0 0}
+.devmq-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.devmq-tbl tr:nth-child(even) td{background:#f8fafc}
+.devmq-tbl tr:last-child td{border-bottom:none}
+.devmq-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+
+/* ── APLICAÇÕES ── */
+.devmq-apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:12px 0}
+.devmq-app{border:1px solid #e2e8f0;border-radius:9px;padding:13px 15px;background:#fafbfc;display:flex;gap:10px;align-items:flex-start}
+.devmq-app-icon{font-size:22px;flex-shrink:0}
+.devmq-app-title{font-size:13.5px;font-weight:700;color:#0f172a;margin-bottom:3px}
+.devmq-app-desc{font-size:12.5px;color:#64748b;line-height:1.5}
+
+/* ── CARDS DE 6 PILARES ── */
+.devmq-pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin:14px 0}
+.devmq-pillar{border-radius:10px;padding:16px 14px;text-align:center;background:#f8fafc;border:1px solid #e2e8f0}
+.devmq-pillar-icon{font-size:24px;margin-bottom:7px}
+.devmq-pillar-title{font-size:13px;font-weight:700;color:#1F1659;margin-bottom:3px}
+.devmq-pillar-desc{font-size:11.5px;color:#475569;line-height:1.45}
+
+/* ── ALERTAS ── */
+.devmq-alert-blue{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#1e40af;margin:12px 0;line-height:1.6}
+.devmq-alert-green{background:#f0fdf4;border:1px solid #86efac;border-left:4px solid #16a34a;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#15803d;margin:12px 0;line-height:1.6}
+.devmq-alert-amber{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #d97706;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#92400e;margin:12px 0;line-height:1.6}
+
+/* ── SOFTWARES ── */
+.devmq-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px 28px;margin-bottom:16px}
+.devmq-soft h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+.devmq-soft-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;margin-top:16px}
+.devmq-soft-logos img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+/* ── VÍDEO ── */
+.devmq-video-wrap{background:linear-gradient(135deg,#1F1659,#1a4fa0);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.devmq-video-wrap h2{font-size:16px;font-weight:800;color:#fff;margin:0 0 8px;text-align:center}
+.devmq-video-wrap p{font-size:14px;color:rgba(255,255,255,.88);margin:0 0 16px;line-height:1.65;text-align:center}
+.devmq-iframe{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.devmq-iframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── CTA ── */
+.devmq-cta{background:linear-gradient(135deg,#1e3a8a,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.devmq-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.devmq-cta strong{color:#fff}
+.devmq-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.devmq-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.devmq-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.devmq-btn-green:hover,.devmq-btn-white:hover{filter:brightness(.95)}
+
+/* ── FOOTNOTES ── */
+.devmq-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+
+@media(max-width:700px){
+  .devmq-soft-logos{grid-template-columns:repeat(2,1fr)}
+  .devmq-hero-overlay h1{font-size:17px}
+  .devmq-card,.devmq-soft,.devmq-video-wrap,.devmq-cta{padding:20px 16px}
+}
+@media(max-width:440px){
+  .devmq-soft-logos{grid-template-columns:1fr}
+}
+</style>
+
+<div class="devmq">
+
+  <!-- Resumo para preview (WhatsApp/LinkedIn) -->
+  <p style="margin:0 0 16px 0;display:none">Scanner 3D colorido 3DeVOK MQ — 22 linhas de laser infravermelho + VCSEL, cor 24 bits, sem marcadores, sem fio opcional, precisão de 0,080 mm, 620 g.</p>
+
+  <!-- HERO -->
+  <div class="devmq-hero">
+    <video class="devmq-hero-vid" autoplay muted loop playsinline preload="none" aria-hidden="true">
+      <source src="https://enterfix.com.br/wp-content/uploads/2025/11/VIDEO-3DEVOK-MQ-ENTERFIX.mp4" type="video/mp4" />
+    </video>
+    <div class="devmq-hero-overlay">
+      <div class="devmq-badge">&#128247; Scanner 3D Colorido — 3DeVOK MQ</div>
+      <h1>3DeVOK MQ — Digitalização 3D Colorida Sem Fio, Para Todos os Cenários</h1>
+      <p>22 linhas de laser infravermelho + VCSEL &bull; Cor 24 bits &bull; Precisão até 0,080 mm &bull; Sem marcadores &bull; Sem fio opcional &bull; 620 g</p>
+    </div>
+  </div>
+
+  <!-- SPECS RÁPIDAS -->
+  <div class="devmq-specs">
+    <div class="devmq-spec">
+      <div class="devmq-spec-val">0,080 mm</div>
+      <div class="devmq-spec-key">Precisão</div>
+    </div>
+    <div class="devmq-spec">
+      <div class="devmq-spec-val">4,5 M/s</div>
+      <div class="devmq-spec-key">Pontos por segundo</div>
+    </div>
+    <div class="devmq-spec">
+      <div class="devmq-spec-val">70 FPS</div>
+      <div class="devmq-spec-key">Taxa de quadros</div>
+    </div>
+    <div class="devmq-spec">
+      <div class="devmq-spec-val">24 bits</div>
+      <div class="devmq-spec-key">Cor real HD</div>
+    </div>
+    <div class="devmq-spec">
+      <div class="devmq-spec-val">620 g</div>
+      <div class="devmq-spec-key">Peso</div>
+    </div>
+    <div class="devmq-spec">
+      <div class="devmq-spec-val">Sem fio</div>
+      <div class="devmq-spec-key">Handle opcional</div>
+    </div>
+  </div>
+
+  <!-- DESCRIÇÃO GERAL -->
+  <div class="devmq-card">
+    <h2>&#128221; Sobre o 3DeVOK MQ</h2>
+    <p>O <strong>3DeVOK MQ</strong> é o scanner 3D colorido da linha 3DeVOK, projetado para ser a ferramenta definitiva de produtividade para estúdios de design, farms de impressão 3D e pequenas e médias empresas. Combinando <strong>22 linhas de laser infravermelho invisível</strong> com <strong>luz estruturada VCSEL infravermelha</strong>, o MQ entrega dados 3D completos de forma totalmente markerless — em objetos de 5 cm até 5 m de tamanho.</p>
+    <p>Com <strong>captura de cor 24 bits</strong> e mapeamento de textura em alta definição, o MQ reproduz fielmente a aparência real dos objetos digitalizados — ideal para design artístico, digitalização humana, preservação de patrimônio cultural e visualização digital. A precisão de <strong>0,080 mm</strong> e resolução de <strong>0,1 mm</strong> atendem às exigências de quasi-industrial com facilidade de uso para qualquer perfil de operador.</p>
+    <p>Toda a operação é feita com <strong>laser Classe I</strong> (invisível ao olho humano, completamente seguro), sem necessidade de pó ou marcadores. Com o <strong>handle sem fio opcional</strong>, elimina a restrição de cabos para digitalização de objetos grandes — liberdade total em campo e estúdio. Conectividade USB 3.0 nativa para uso em bancada com máxima estabilidade.</p>
+    <div class="devmq-alert-green">
+      &#10004; <strong>100% laser invisível — Classe I em todos os modos:</strong> tanto o laser infravermelho de 22 linhas quanto o VCSEL são completamente invisíveis e certificados Classe I (IEC 60825), garantindo segurança total para digitalização de pessoas, crianças e objetos sensíveis à luz.
+    </div>
+  </div>
+
+  <!-- IMAGEM DO PRODUTO -->
+  <div style="background-image:url('https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg');background-size:cover;background-position:center;padding:32px 16px;border-radius:12px;margin-bottom:16px">
+    <img alt="3DeVOK MQ Scanner 3D Colorido" src="https://enterfix.com.br/wp-content/uploads/2025/11/3DEVOK-mq-ENTERFIX.png" style="max-width:560px;width:100%;height:auto;display:block;margin:0 auto;border-radius:16px" />
+  </div>
+
+  <!-- 6 PILARES -->
+  <div class="devmq-card">
+    <h2>&#9889; Seis Motivos para Escolher o MQ</h2>
+    <div class="devmq-pillars">
+      <div class="devmq-pillar">
+        <div class="devmq-pillar-icon">&#127919;</div>
+        <div class="devmq-pillar-title">Preciso</div>
+        <div class="devmq-pillar-desc">Até 0,08 mm de precisão para scans altamente detalhados</div>
+      </div>
+      <div class="devmq-pillar">
+        <div class="devmq-pillar-icon">&#128301;</div>
+        <div class="devmq-pillar-title">Detalhado</div>
+        <div class="devmq-pillar-desc">Resolução de 0,1 mm captura os menores detalhes da superfície</div>
+      </div>
+      <div class="devmq-pillar">
+        <div class="devmq-pillar-icon">&#9889;</div>
+        <div class="devmq-pillar-title">Rápido</div>
+        <div class="devmq-pillar-desc">4,5 milhões de pontos/s para eficiência profissional em campo</div>
+      </div>
+      <div class="devmq-pillar">
+        <div class="devmq-pillar-icon">&#128683;</div>
+        <div class="devmq-pillar-title">Sem marcadores</div>
+        <div class="devmq-pillar-desc">Digitalização markerless em ambos os modos — plug-and-scan</div>
+      </div>
+      <div class="devmq-pillar">
+        <div class="devmq-pillar-icon">&#127775;</div>
+        <div class="devmq-pillar-title">Colorido</div>
+        <div class="devmq-pillar-desc">Cor 24 bits + mapeamento de textura HD para reprodução fiel</div>
+      </div>
+      <div class="devmq-pillar">
+        <div class="devmq-pillar-icon">&#128268;</div>
+        <div class="devmq-pillar-title">Sem fio</div>
+        <div class="devmq-pillar-desc">Handle wireless opcional para digitalização livre de cabos</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODOS / FONTES DE LUZ -->
+  <div class="devmq-card">
+    <h2>&#128161; Dois Modos de Digitalização — Um Scanner Completo</h2>
+    <p>O 3DeVOK MQ combina dois sistemas de iluminação infravermelha complementares, criando um scanner versátil capaz de atender desde peças industriais pequenas até corpos humanos completos:</p>
+    <div class="devmq-modes">
+      <div class="devmq-mode">
+        <div class="devmq-mode-tag tag-ir">LASER INFRAVERMELHO — 22 LINHAS</div>
+        <div class="devmq-mode-title">&#128308; Alta Precisão em Objetos Pequenos e Médios</div>
+        <div class="devmq-mode-desc">22 linhas de laser infravermelho invisível para digitalização precisa de objetos a partir de <strong>5 cm</strong>. Precisão de <strong>0,080 mm</strong>, <strong>2.450.000 pontos/s</strong> e até <strong>70 FPS</strong> com alinhamento por marcadores. FOV de 140×140 mm até 490×490 mm. Distância de trabalho 150–1.000 mm. Ideal para peças mecânicas, joias, calçados e itens de design.</div>
+      </div>
+      <div class="devmq-mode">
+        <div class="devmq-mode-tag tag-vcsel">LUZ ESTRUTURADA VCSEL — 2 CAMPOS DE VISÃO</div>
+        <div class="devmq-mode-title">&#128994; Objetos Grandes e Digitalização Humana</div>
+        <div class="devmq-mode-desc">VCSEL infravermelho com <strong>2 FOVs distintos</strong> (Fine e Fast) para objetos de <strong>30 cm ou mais</strong>. Varredura ultrarrápida com <strong>4.500.000 pontos/s</strong>. FOV de até <strong>1.100×1.000 mm</strong> — ideal para retratos, corpo inteiro, móveis, esculturas e objetos de grande porte. Distância de trabalho 150–1.500 mm.</div>
+      </div>
+    </div>
+    <div class="devmq-alert-blue" style="margin-top:14px">
+      &#8505;&#65039; <strong>Suporte a objetos de 5 cm a 5 m:</strong> a combinação dos dois modos cobre praticamente qualquer tamanho de objeto em uma única sessão de digitalização, sem trocar de equipamento.
+    </div>
+  </div>
+
+  <!-- DIFERENCIAIS -->
+  <div class="devmq-card">
+    <h2>&#10003; Principais Diferenciais</h2>
+    <ul class="devmq-feats">
+      <li>22 linhas de laser infravermelho invisível — Classe I, olho-seguro</li>
+      <li>VCSEL estruturado com 2 campos de visão (Fine e Fast) — grande área</li>
+      <li>Digitalização markerless em ambos os modos — sem colagem de alvos</li>
+      <li>Cor 24 bits com mapeamento de textura em alta definição</li>
+      <li>Precisão até 0,080 mm — quasi-industrial para aplicações diversas</li>
+      <li>Resolução até 0,1 mm — captura detalhes finos com fidelidade</li>
+      <li>Até 4.500.000 pontos/s e 70 FPS — aquisição rápida e fluida</li>
+      <li>Digitaliza materiais pretos, reflexivos e cabelos sem pó preparatório</li>
+      <li>Opera em interior, exterior, baixa luminosidade e luz solar direta</li>
+      <li>Handle sem fio opcional — câmera central, liberdade de movimento</li>
+      <li>Suporta objetos de 5 cm até 5 m de tamanho</li>
+      <li>Design compacto 215 × 73 × 53 mm e leve 620 g — uso com uma só mão</li>
+      <li>Plug-and-play via USB 3.0 — configuração imediata, sem complexidade</li>
+      <li>Software 3DeVOK Studio com interface intuitiva e parâmetros flexíveis</li>
+      <li>Compatível com .stl e .obj para fluxo direto de impressão 3D</li>
+    </ul>
+  </div>
+
+  <!-- ESPECIFICAÇÕES TÉCNICAS -->
+  <div class="devmq-card">
+    <h2>&#128202; Especificações Técnicas</h2>
+    <div class="devmq-tbl-wrap">
+      <table class="devmq-tbl" aria-label="Especificações técnicas 3DeVOK MQ por modo">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Laser IV — 22 linhas</th>
+            <th>VCSEL Estruturado (Speckle)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tipo de luz</td>
+            <td>22 linhas infravermelhas [invisível]</td>
+            <td>Luz estruturada IV VCSEL [invisível]</td>
+          </tr>
+          <tr>
+            <td>Classe do laser</td>
+            <td colspan="2">Classe I — olho-seguro em ambos os modos</td>
+          </tr>
+          <tr>
+            <td>Recursos de digitalização</td>
+            <td>Markerless, luz invisível</td>
+            <td>Markerless, luz invisível, varredura parcial fina, alta velocidade grande área</td>
+          </tr>
+          <tr>
+            <td>Distância ponto a ponto</td>
+            <td>0,1 – 5 mm</td>
+            <td>Regular: 0,2 – 5 mm &nbsp;|&nbsp; Fino: 0,1 – 5 mm</td>
+          </tr>
+          <tr>
+            <td>Taxa de digitalização</td>
+            <td>Até 2.450.000 pontos/s</td>
+            <td>Até 4.500.000 pontos/s</td>
+          </tr>
+          <tr>
+            <td>Taxa de quadros</td>
+            <td>Até 70 FPS (alinhamento por marcadores)</td>
+            <td>Até 30 FPS</td>
+          </tr>
+          <tr>
+            <td>Distância de trabalho</td>
+            <td>150 – 1.000 mm</td>
+            <td>150 – 1.500 mm</td>
+          </tr>
+          <tr>
+            <td>Campo de visão (FOV)</td>
+            <td>140×140 mm – 490×490 mm</td>
+            <td>50×75 mm – 1.100×1.000 mm</td>
+          </tr>
+          <tr>
+            <td>Modos de alinhamento</td>
+            <td>Híbrido, marcadores, textura, geométrico</td>
+            <td>Híbrido, textura, geométrico</td>
+          </tr>
+          <tr>
+            <td>Captura de cor</td>
+            <td colspan="2">Sim — 24 bits com mapeamento de textura HD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="height:14px"></div>
+
+    <div class="devmq-tbl-wrap">
+      <table class="devmq-tbl" aria-label="Especificações gerais 3DeVOK MQ">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Precisão <sup>(1)</sup></td>
+            <td>Até 0,080 mm</td>
+          </tr>
+          <tr>
+            <td>Resolução</td>
+            <td>Até 0,1 mm</td>
+          </tr>
+          <tr>
+            <td>Dimensões</td>
+            <td>215 mm × 73 mm × 53 mm</td>
+          </tr>
+          <tr>
+            <td>Peso</td>
+            <td>620 g</td>
+          </tr>
+          <tr>
+            <td>Interface</td>
+            <td>USB 3.0</td>
+          </tr>
+          <tr>
+            <td>Sem fio</td>
+            <td>Suportado — com handle wireless opcional</td>
+          </tr>
+          <tr>
+            <td>Alimentação</td>
+            <td>DC 12 V / 5,0 A</td>
+          </tr>
+          <tr>
+            <td>Temperatura operacional</td>
+            <td>0 °C a 40 °C</td>
+          </tr>
+          <tr>
+            <td>Umidade operacional</td>
+            <td>10% a 90% UR (sem condensação)</td>
+          </tr>
+          <tr>
+            <td>Formatos de saída</td>
+            <td>.obj, .stl, .ply, .asc, .mk2, .txt, .epj, .apj, .spj, .map, .sk</td>
+          </tr>
+          <tr>
+            <td>Impressão 3D</td>
+            <td>Compatível nativo com .stl e .obj</td>
+          </tr>
+          <tr>
+            <td>Software nativo</td>
+            <td>3DeVOK Studio + 3DeVOK Mapping</td>
+          </tr>
+          <tr>
+            <td>Certificações</td>
+            <td>CE-EMC, FCC, RoHS, IEC 60825, IEC 62471, IEC 60529-IP50, WEEE, KC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="devmq-fn">
+      <sup>(1)</sup> Resultados de precisão obtidos em condições de laboratório; sujeitos a incertezas de medição conforme ambiente e superfície do objeto.<br>
+      <em>* A Enterfix reserva-se o direito de alterar parâmetros e imagens conforme a legislação vigente e atualizações do fabricante.</em>
+    </p>
+
+    <div class="devmq-alert-amber" style="margin-top:14px">
+      &#128187; <strong>Requisitos mínimos de PC recomendados:</strong> Windows 10/11 (64-bit) &bull; CPU: Intel i7-13650HX ou superior &bull; RAM: 32 GB ou mais &bull; GPU: NVIDIA RTX 3060 ou superior, mínimo 6 GB VRAM
+    </div>
+  </div>
+
+  <!-- APLICAÇÕES -->
+  <div class="devmq-card">
+    <h2>&#127981; Aplicações Típicas</h2>
+    <div class="devmq-apps">
+      <div class="devmq-app">
+        <div class="devmq-app-icon">&#128424;&#65039;</div>
+        <div>
+          <div class="devmq-app-title">Impressão 3D</div>
+          <div class="devmq-app-desc">Digitalização direta para .stl e .obj — da ideia ao arquivo pronto para impressão FDM, SLA ou SLS em minutos, sem modelagem manual.</div>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <div class="devmq-app-icon">&#129485;</div>
+        <div>
+          <div class="devmq-app-title">Reabilitação Médica e Biomédica</div>
+          <div class="devmq-app-desc">Laser IV invisível Classe I para captura segura de membros, tronco e face — próteses, órteses, palmilhas e personalização corporal com cor fiel.</div>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <div class="devmq-app-icon">&#127912;</div>
+        <div>
+          <div class="devmq-app-title">Design Artístico e Cultural</div>
+          <div class="devmq-app-desc">Cor 24 bits + alta resolução para digitalização fiel de esculturas, relíquias, artefatos culturais e objetos artísticos com preservação cromática total.</div>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <div class="devmq-app-icon">&#128295;</div>
+        <div>
+          <div class="devmq-app-title">Engenharia Reversa</div>
+          <div class="devmq-app-desc">Precisão de 0,08 mm no modo laser IV para recriação de modelos CAD de peças industriais, produtos e componentes sem documentação original.</div>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <div class="devmq-app-icon">&#128421;</div>
+        <div>
+          <div class="devmq-app-title">Humanos Digitais e Avatares</div>
+          <div class="devmq-app-desc">FOV de até 1.100×1.000 mm no modo VCSEL para captura de corpo inteiro com cor e textura HD — jogos, filmes, realidade virtual e e-commerce.</div>
+        </div>
+      </div>
+      <div class="devmq-app">
+        <div class="devmq-app-icon">&#127891;</div>
+        <div>
+          <div class="devmq-app-title">Educação e Pesquisa</div>
+          <div class="devmq-app-desc">Interface amigável e software didático — digitalização de peças anatômicas, arqueológicas e protótipos para laboratórios e instituições de ensino.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOFTWARES COMPATÍVEIS -->
+  <div class="devmq-soft">
+    <h2>&#128187; Software Nativo e Compatibilidade</h2>
+    <p style="font-size:14px;color:#475569;margin:0 0 4px">O 3DeVOK MQ opera nativamente com o <strong>3DeVOK Studio</strong> — plataforma de digitalização intuitiva com alinhamento híbrido, processamento de cor e exportação para todos os formatos de mercado. O <strong>3DeVOK Mapping</strong> complementa com análise e mapeamento de superfície. Para engenharia reversa paramétrica, compatível com <strong>QuickSurface Lite/Pro</strong>. Compatível também com:</p>
+    <div class="devmq-soft-logos">
+      <img alt="Zeiss" src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" />
+      <img alt="Verisurf" src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" />
+      <img alt="PolyWorks" src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" />
+      <img alt="Geomagic" src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" />
+    </div>
+    <p style="font-size:13px;color:#64748b;margin:14px 0 0">Exportação direta para SolidWorks, CATIA, Siemens NX e demais plataformas CAD via .obj, .stl, .ply e .igs.</p>
+  </div>
+
+  <!-- VÍDEO YOUTUBE -->
+  <div class="devmq-video-wrap">
+    <h2>&#127916; 3DeVOK MQ em Ação</h2>
+    <p>Veja o 3DeVOK MQ em operação — a digitalização sem marcadores, a cor 24 bits em tempo real, o modo sem fio e a versatilidade do VCSEL para objetos de todos os tamanhos.</p>
+    <div class="devmq-iframe">
+      <iframe allowfullscreen loading="lazy" src="https://www.youtube.com/embed/AwhwQ6hOgA8" title="3DeVOK MQ Scanner 3D Colorido"></iframe>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="devmq-cta">
+    <p><strong>&#128222; Solicite uma demonstração ou orçamento personalizado</strong></p>
+    <p>Fale com nosso time técnico e descubra como o 3DeVOK MQ pode atender sua aplicação — impressão 3D, digitalização humana, design ou pesquisa.</p>
+    <div class="devmq-cta-btns">
+      <a class="devmq-btn-green" href="https://enterfix.com.br/produto/3devok-mq/" rel="noopener" target="_blank">&#128722; Comprar na Loja</a>
+      <a class="devmq-btn-white" href="https://lp.enterfix.com.br/catalogo-simscan-e" rel="noopener" target="_blank">&#128196; Baixar Catálogo</a>
+      <a class="devmq-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" rel="noopener" target="_blank">&#128172; WhatsApp (11) 96841-6776</a>
+      <a class="devmq-btn-white" href="mailto:vendas@enterfix.com.br">&#9993;&#65039; vendas@enterfix.com.br</a>
+    </div>
+    <p style="font-size:12px;opacity:.65;margin-top:14px">Seg–Sex 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; Enterfix Indústria, Comércio e Serviços Ltda.</p>
+  </div>
+
+</div>

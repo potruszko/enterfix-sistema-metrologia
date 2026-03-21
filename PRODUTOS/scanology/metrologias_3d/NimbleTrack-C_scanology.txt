@@ -1,0 +1,348 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos de Rastreamento Avançado</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_TRACKING]" alt="Rastreamento Real-Time" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Tempo Real</h4>
+<p style="font-size: 14px; line-height: 1.5;">Rastreamento contínuo com atualização em tempo real para máxima precisão operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PRECISION]" alt="Alta Precisão" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Alta Precisão</h4>
+<p style="font-size: 14px; line-height: 1.5;">Precisão submilimétrica para aplicações de metrologia e controle de qualidade.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_WIRELESS]" alt="Sistema Sem Fio" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Sem Fio</h4>
+<p style="font-size: 14px; line-height: 1.5;">Comunicação wireless para máxima mobilidade e flexibilidade operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_CALIBRATION]" alt="Auto Calibração" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Auto Calibração</h4>
+<p style="font-size: 14px; line-height: 1.5;">Sistema de calibração automática para manutenção contínua da precisão.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Applications Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>NimbleTrack-C - Sistema de Rastreamento 3D Compacto</h1>
+
+<p class="produto-breve-descricao">Sistema avançado de rastreamento 3D com tecnologia de ponta para aplicações de metrologia e posicionamento de alta precisão.</p>
+
+O <strong>NimbleTrack-C</strong> é um sistema de rastreamento 3D compacto e portátil que oferece monitoramento preciso de posição e orientação em tempo real. Este sistema representa a mais avançada tecnologia em rastreamento ótico para aplicações industriais e de pesquisa.
+
+<strong>Características Principais:</strong>
+• Sistema de rastreamento ótico de alta precisão
+• Monitoramento 6DOF (6 graus de liberdade)
+• Taxa de atualização ultrarrápida de 1000Hz
+• Volume de rastreamento configurável
+• Tecnologia de marcadores passivos e ativos
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">NimbleTrack-C - Sistema de Rastreamento 3D Compacto - Sistema de Rastreamento 3D Avançado</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Sistema avançado de rastreamento 3D com tecnologia de ponta para aplicações de metrologia e posicionamento de alta precisão.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Nimble</h3>
+        <p style="font-size: 16px;">Ágil & Preciso</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">6DOF</h3>
+        <p style="font-size: 16px;">Liberdades</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Real-Time</h3>
+        <p style="font-size: 16px;">Rastreamento</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Wireless</h3>
+        <p style="font-size: 16px;">Tecnologia</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração de Rastreamento</h3>
+<p>Veja o NimbleTrack-C demonstrando suas capacidades avançadas de rastreamento 3D em tempo real.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Rastreamento em tempo real</li>
+<li>Precisão de posicionamento</li>
+<li>Calibração automática</li>
+<li>Interface intuitiva</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas de Rastreamento</h3>
+
+[vc_row]<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Software de Rastreamento Profissional</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Soluções de software especializadas para rastreamento 3D e análise de movimento</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🎯 Rastreamento Avançado</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Rastreamento multi-objeto simultâneo</li>
+            <li>Compensação de vibração automática</li>
+            <li>Análise de trajetória em tempo real</li>
+            <li>Relatórios de movimento detalhados</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">📊 Integração Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>CMMs e braços articulados</li>
+            <li>Softwares de metrologia</li>
+            <li>Sistemas de automação industrial</li>
+            <li>APIs para desenvolvimento customizado</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Tecnologia de Rastreamento Ótico</h3>
+
+O NimbleTrack-C utiliza tecnologia avançada de rastreamento ótico que combina câmeras de alta velocidade com algoritmos de processamento em tempo real para fornecer dados precisos de posição e orientação.
+
+<strong>Especificações Técnicas de Rastreamento:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão de Posição</strong></td>
+<td>±0,1mm</td>
+</tr>
+<tr>
+<td><strong>Precisão Angular</strong></td>
+<td>±0,02°</td>
+</tr>
+<tr>
+<td><strong>Taxa de Atualização</strong></td>
+<td>1000Hz</td>
+</tr>
+<tr>
+<td><strong>Latência</strong></td>
+<td>< 2ms</td>
+</tr>
+<tr>
+<td><strong>Volume de Rastreamento</strong></td>
+<td>2m × 2m × 2m (padrão)</td>
+</tr>
+<tr>
+<td><strong>Número de Câmeras</strong></td>
+<td>4-8 (configurável)</td>
+</tr>
+<tr>
+<td><strong>Resolução das Câmeras</strong></td>
+<td>1280 × 1024 pixels</td>
+</tr>
+<tr>
+<td><strong>Tipos de Marcadores</strong></td>
+<td>Passivos e ativos</td>
+</tr>
+<tr>
+<td><strong>Conectividade</strong></td>
+<td>Gigabit Ethernet, USB 3.0</td>
+</tr>
+<tr>
+<td><strong>Alimentação</strong></td>
+<td>PoE ou fonte externa</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações de Rastreamento Industrial</h3>
+
+<strong>Robótica e Automação:</strong>
+• Rastreamento de robôs industriais em tempo real
+• Calibração dinâmica de sistemas robóticos
+• Validação de trajetórias programadas
+
+<strong>Realidade Virtual e Aumentada:</strong>
+• Rastreamento de usuários em aplicações VR/AR
+• Sistemas de treinamento imersivo
+• Simulação de operações complexas
+
+<strong>Pesquisa e Desenvolvimento:</strong>
+• Análise de movimentos biomecânicos
+• Estudos de dinâmica de fluidos
+• Validação de simulações dinâmicas
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos de Rastreamento Avançado</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_TRACKING]" alt="Rastreamento Real-Time" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Tempo Real</h4>
+<p style="font-size: 14px; line-height: 1.5;">Rastreamento contínuo com atualização em tempo real para máxima precisão operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PRECISION]" alt="Alta Precisão" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Alta Precisão</h4>
+<p style="font-size: 14px; line-height: 1.5;">Precisão submilimétrica para aplicações de metrologia e controle de qualidade.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_WIRELESS]" alt="Sistema Sem Fio" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Sem Fio</h4>
+<p style="font-size: 14px; line-height: 1.5;">Comunicação wireless para máxima mobilidade e flexibilidade operacional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_CALIBRATION]" alt="Auto Calibração" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Auto Calibração</h4>
+<p style="font-size: 14px; line-height: 1.5;">Sistema de calibração automática para manutenção contínua da precisão.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Applications Section -->
+[vc_row][vc_column][vc_column_text]
+<h3>Software de Rastreamento Profissional</h3>
+
+O NimbleTrack-C vem acompanhado do software TrackViewer Pro, especializado em rastreamento 3D em tempo real:
+
+<strong>Recursos Avançados:</strong>
+• Interface em tempo real com latência mínima
+• Calibração automática do sistema de câmeras
+• Suporte para múltiplos objetos simultâneos
+• Exportação de dados para análise posterior
+• APIs para integração com aplicações personalizadas
+• Ferramentas de análise de trajetórias
+
+<strong>Integração com Terceiros:</strong>
+SDKs disponíveis para MATLAB, LabVIEW, Python e C++
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens do Rastreamento Ótico</h3>
+
+<strong>Precisão Excepcional:</strong>
+Precisão submilimétrica combinada com alta taxa de atualização para aplicações críticas.
+
+<strong>Flexibilidade de Setup:</strong>
+Sistema modular permite configurações personalizadas conforme necessidade da aplicação.
+
+<strong>Tempo Real:</strong>
+Latência mínima de 2ms permite aplicações em tempo real mais exigentes.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Software de Rastreamento Profissional</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Soluções de software especializadas para rastreamento 3D e análise de movimento</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🎯 Rastreamento Avançado</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Rastreamento multi-objeto simultâneo</li>
+            <li>Compensação de vibração automática</li>
+            <li>Análise de trajetória em tempo real</li>
+            <li>Relatórios de movimento detalhados</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">📊 Integração Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>CMMs e braços articulados</li>
+            <li>Softwares de metrologia</li>
+            <li>Sistemas de automação industrial</li>
+            <li>APIs para desenvolvimento customizado</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Rastreamento Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para sistemas de rastreamento 3D:
+
+• <strong>Treinamento em Rastreamento:</strong> Cursos especializados em tecnologias de rastreamento ótico
+• <strong>Setup e Calibração:</strong> Assistência completa para instalação e calibração
+• <strong>Integração de Sistemas:</strong> Consultoria para integração com sistemas existentes
+• <strong>Desenvolvimento de APIs:</strong> Suporte para desenvolvimento de aplicações customizadas
+• <strong>Manutenção Especializada:</strong> Serviços técnicos para sistemas de alta precisão
+
+<strong>Agende uma Demonstração e descubra o poder do rastreamento 3D de precisão com o NimbleTrack-C!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Download CTA Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 80px !important;padding-bottom: 80px !important;}" el_class="cta-download-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Revolucione seus Processos de Rastreamento 3D</h3>
+<p style="font-size: 1.3em; line-height: 1.6; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Descubra como nossa tecnologia de rastreamento pode otimizar seus processos de metrologia e controle de qualidade.</p>
+
+<div style="margin-bottom: 40px;">
+<a href="[LINK_ORCAMENTO]" style="display: inline-block; background-color: #ffd700; color: #2c3e50; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+📞 SOLICITAR ORÇAMENTO
+</a>
+<a href="[LINK_DEMONSTRACAO]" style="display: inline-block; background-color: transparent; color: white; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; border: 2px solid white; transition: all 0.3s ease;">
+🎯 AGENDAR DEMONSTRAÇÃO
+</a>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📧</div>
+    <div style="font-size: 1.1em;">contato@enterfix.com.br</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📱</div>
+    <div style="font-size: 1.1em;">+55 11 5555-5555</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">⚡</div>
+    <div style="font-size: 1.1em;">Suporte Especializado</div>
+</div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: rastreamento 3d, nimbletrack c, sistema rastreamento, metrologia 3d, posicionamento, tracking, scanology, enterfix -->

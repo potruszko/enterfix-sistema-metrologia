@@ -1,0 +1,319 @@
+# BREADCRUMBS SCANOLOGY - Navegação Hierárquica
+
+## Implementação WordPress/WooCommerce
+
+### Schema Markup para SEO
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://enterfix.com.br/"
+  }, {
+    "@type": "ListItem", 
+    "position": 2,
+    "name": "Produtos",
+    "item": "https://enterfix.com.br/produtos/"
+  }, {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Scanology",
+    "item": "https://enterfix.com.br/scanology/"
+  }, {
+    "@type": "ListItem",
+    "position": 4,
+    "name": "Scanners 3D Portáteis",
+    "item": "https://enterfix.com.br/scanners-3d-portateis-scanology/"
+  }, {
+    "@type": "ListItem",
+    "position": 5,
+    "name": "SIMSCAN-E"
+  }]
+}
+```
+
+### PHP Function para Breadcrumbs
+```php
+// functions.php
+function scanology_breadcrumbs() {
+    global $post;
+    
+    $breadcrumbs = array();
+    $schema_items = array();
+    $position = 1;
+    
+    // Home
+    $breadcrumbs[] = '<a href="' . home_url('/') . '">Home</a>';
+    $schema_items[] = array(
+        '@type' => 'ListItem',
+        'position' => $position++,
+        'name' => 'Home',
+        'item' => home_url('/')
+    );
+    
+    // Produtos
+    $breadcrumbs[] = '<a href="' . home_url('/produtos/') . '">Produtos</a>';
+    $schema_items[] = array(
+        '@type' => 'ListItem',
+        'position' => $position++,
+        'name' => 'Produtos',
+        'item' => home_url('/produtos/')
+    );
+    
+    // Scanology
+    $breadcrumbs[] = '<a href="' . home_url('/scanology/') . '">Scanology</a>';
+    $schema_items[] = array(
+        '@type' => 'ListItem',
+        'position' => $position++,
+        'name' => 'Scanology',
+        'item' => home_url('/scanology/')
+    );
+    
+    // Categoria específica
+    $categoria = get_scanology_categoria();
+    if ($categoria) {
+        $breadcrumbs[] = '<a href="' . $categoria['url'] . '">' . $categoria['name'] . '</a>';
+        $schema_items[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => $categoria['name'],
+            'item' => $categoria['url']
+        );
+    }
+    
+    // Produto atual (sem link)
+    if (is_single()) {
+        $breadcrumbs[] = '<span class="current">' . get_the_title() . '</span>';
+        $schema_items[] = array(
+            '@type' => 'ListItem',
+            'position' => $position,
+            'name' => get_the_title()
+        );
+    }
+    
+    // Output HTML
+    echo '<nav class="breadcrumbs-scanology" aria-label="Navegação">';
+    echo '<ol class="breadcrumb-list">';
+    foreach ($breadcrumbs as $index => $breadcrumb) {
+        $class = ($index === count($breadcrumbs) - 1) ? 'breadcrumb-current' : '';
+        echo '<li class="breadcrumb-item ' . $class . '">' . $breadcrumb . '</li>';
+        if ($index < count($breadcrumbs) - 1) {
+            echo '<li class="breadcrumb-separator">›</li>';
+        }
+    }
+    echo '</ol>';
+    echo '</nav>';
+    
+    // Schema JSON-LD
+    $schema = array(
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => $schema_items
+    );
+    echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+}
+
+function get_scanology_categoria() {
+    $current_url = $_SERVER['REQUEST_URI'];
+    
+    $categorias = array(
+        '/scanners-3d-portateis-scanology' => array(
+            'name' => 'Scanners 3D Portáteis',
+            'url' => home_url('/scanners-3d-portateis-scanology/')
+        ),
+        '/sistemas-rastreamento-3d-scanology' => array(
+            'name' => 'Sistemas de Rastreamento',
+            'url' => home_url('/sistemas-rastreamento-3d-scanology/')
+        ),
+        '/sistemas-automatizados-scanology' => array(
+            'name' => 'Sistemas Automatizados',
+            'url' => home_url('/sistemas-automatizados-scanology/')
+        ),
+        '/sistema-fotogrametria-3d-scanology' => array(
+            'name' => 'Fotogrametria 3D',
+            'url' => home_url('/sistema-fotogrametria-3d-scanology/')
+        ),
+        '/softwares-3d-profissionais-scanology' => array(
+            'name' => 'Softwares 3D',
+            'url' => home_url('/softwares-3d-profissionais-scanology/')
+        )
+    );
+    
+    foreach ($categorias as $path => $categoria) {
+        if (strpos($current_url, $path) !== false) {
+            return $categoria;
+        }
+    }
+    
+    return null;
+}
+```
+
+### CSS para Breadcrumbs
+```css
+.breadcrumbs-scanology {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.breadcrumb-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    background: rgba(30, 136, 229, 0.1);
+    color: #1565c0;
+}
+
+.breadcrumb-current {
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.breadcrumb-separator {
+    color: #666;
+    font-weight: normal;
+    margin: 0 3px;
+    font-size: 16px;
+}
+
+/* Versão compacta para mobile */
+@media (max-width: 768px) {
+    .breadcrumbs-scanology {
+        padding: 10px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .breadcrumb-item a,
+    .breadcrumb-current {
+        font-size: 13px;
+        padding: 3px 5px;
+    }
+    
+    .breadcrumb-separator {
+        font-size: 14px;
+        margin: 0 2px;
+    }
+    
+    /* Esconde itens intermediários em telas muito pequenas */
+    .breadcrumb-list .breadcrumb-item:nth-child(3):not(:last-child),
+    .breadcrumb-list .breadcrumb-item:nth-child(4):not(:last-child) {
+        display: none;
+    }
+    
+    /* Adiciona "..." quando há itens ocultos */
+    .breadcrumb-list .breadcrumb-item:nth-child(2):after {
+        content: " ... ";
+        color: #666;
+        margin: 0 5px;
+    }
+}
+```
+
+## Breadcrumbs Específicos por Categoria
+
+### 1. Scanners 3D Portáteis
+```
+Home › Produtos › Scanology › Scanners 3D Portáteis › [Produto]
+```
+
+#### Produtos:
+- Home › Produtos › Scanology › Scanners 3D Portáteis › SIMSCAN-E
+- Home › Produtos › Scanology › Scanners 3D Portáteis › KSCAN-E
+- Home › Produtos › Scanology › Scanners 3D Portáteis › KSCAN-X
+- Home › Produtos › Scanology › Scanners 3D Portáteis › KSCAN-Magic
+- Home › Produtos › Scanology › Scanners 3D Portáteis › SIMSCAN 42
+- Home › Produtos › Scanology › Scanners 3D Portáteis › SIMSCAN 30
+- Home › Produtos › Scanology › Scanners 3D Portáteis › SIMSCAN 22
+- Home › Produtos › Scanology › Scanners 3D Portáteis › AXE-B
+
+### 2. Sistemas de Rastreamento
+```
+Home › Produtos › Scanology › Sistemas de Rastreamento › [Produto]
+```
+
+#### Produtos:
+- Home › Produtos › Scanology › Sistemas de Rastreamento › NimbleTrack
+- Home › Produtos › Scanology › Sistemas de Rastreamento › TrackScan-SHARP
+- Home › Produtos › Scanology › Sistemas de Rastreamento › TrackScan-DUO
+- Home › Produtos › Scanology › Sistemas de Rastreamento › M-Track Mobile
+- Home › Produtos › Scanology › Sistemas de Rastreamento › Tracker-M
+- Home › Produtos › Scanology › Sistemas de Rastreamento › T-Probe
+
+### 3. Sistemas Automatizados
+```
+Home › Produtos › Scanology › Sistemas Automatizados › [Produto]
+```
+
+#### Produtos:
+- Home › Produtos › Scanology › Sistemas Automatizados › AM-CELL 5
+- Home › Produtos › Scanology › Sistemas Automatizados › AutoScan-Desktop
+- Home › Produtos › Scanology › Sistemas Automatizados › AutoScan-TURBO
+- Home › Produtos › Scanology › Sistemas Automatizados › AutoScan-KOMPAKT
+
+### 4. Fotogrametria 3D
+```
+Home › Produtos › Scanology › Fotogrametria 3D › MSCAN-L15
+```
+
+### 5. Softwares 3D
+```
+Home › Produtos › Scanology › Softwares 3D › [Produto]
+```
+
+#### Produtos:
+- Home › Produtos › Scanology › Softwares 3D › DefiniSight V5
+- Home › Produtos › Scanology › Softwares 3D › ScanViewer
+- Home › Produtos › Scanology › Softwares 3D › TViewer
+- Home › Produtos › Scanology › Softwares 3D › 3DeVOK Studio
+
+## Integração com WooCommerce
+```php
+// Para produtos WooCommerce
+function woocommerce_scanology_breadcrumbs() {
+    if (is_woocommerce()) {
+        remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+        add_action('woocommerce_before_main_content', 'scanology_breadcrumbs', 20);
+    }
+}
+add_action('init', 'woocommerce_scanology_breadcrumbs');
+```
+
+## Shortcode para uso manual
+```php
+// Shortcode [scanology_breadcrumbs]
+function scanology_breadcrumbs_shortcode($atts) {
+    ob_start();
+    scanology_breadcrumbs();
+    return ob_get_clean();
+}
+add_shortcode('scanology_breadcrumbs', 'scanology_breadcrumbs_shortcode');
+```

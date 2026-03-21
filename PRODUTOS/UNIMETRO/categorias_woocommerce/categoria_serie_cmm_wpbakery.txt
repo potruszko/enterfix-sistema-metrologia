@@ -1,0 +1,46 @@
+[vc_row][vc_column][vc_column_text]
+<h1 style="text-align: center; color: #0066cc;">SÉRIE CMM - MEDIÇÃO POR COORDENADAS</h1>
+<p style="text-align: center; font-size: 18px; color: #333;">Medição tridimensional de precisão - Estrutura em granito com cabeçote Renishaw</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890123{background-color: #f8f9fa !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sobre a Série CMM</h2>
+<p>A Série CMM (Coordinate Measuring Machine) representa o padrão ouro em medição por coordenadas tridimensional, oferecendo precisão excepcional para aplicações metrológicas críticas. Com estrutura em granito e cabeçote de apalpação Renishaw, esta série atende aos mais rigorosos padrões industriais de medição dimensional.</p>
+
+<p>Desenvolvida para laboratórios de metrologia e aplicações que exigem rastreabilidade total, a Série CMM combina estabilidade estrutural incomparável com tecnologia de medição de última geração. O sistema de coordenadas tridimensional permite medição completa de geometrias complexas com precisão micrométrica.</p>
+
+<p>Equipada com software especializado para análise dimensional e geométrica, as máquinas CMM oferecem relatórios completos de conformidade, análise estatística e certificação metrológica, sendo essenciais para indústrias regulamentadas e aplicações de alta precisão.</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Características Técnicas</h2>
+<ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Estrutura em Granito:</strong> Base ultra-estável com baixo coeficiente térmico</li>
+<li><strong>Cabeçote Renishaw:</strong> Sistema de apalpação de precisão mundial</li>
+<li><strong>Medição 3D:</strong> Coordenadas tridimensionais completas</li>
+<li><strong>Precisão Excepcional:</strong> 1.5+L/300μm em todos os eixos</li>
+<li><strong>Controle Térmico:</strong> Compensação automática de temperatura</li>
+<li><strong>Software Avançado:</strong> Análise dimensional e geométrica completa</li>
+<li><strong>Rastreabilidade:</strong> Certificação metrológica padrão internacional</li>
+<li><strong>Apalpadores Múltiplos:</strong> Sistema automático de troca</li>
+<li><strong>Análise Estatística:</strong> SPC integrado para controle de processo</li>
+<li><strong>Relatórios Completos:</strong> Documentação técnica detalhada</li>
+</ul>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890124{background-color: #e9ecef !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Modelos Disponíveis</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 400px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">CMM STANDARD</h3>
+<p><strong>Área de Medição:</strong> 500 x 400 x 400mm</p>
+<p><strong>Estrutura:</strong> Granito natural com tratamento especial</p>
+<p><strong>Cabeçote:</strong> Renishaw PH10M com rotação automática</p>
+<p><strong>Precisão:</strong> 1.5+L/300μm (MPE)</p>
+<p><strong>Aplicação:</strong> Laboratórios de metrologia e controle de qualidade</p>
+<p><strong>Ideal para:</strong> Medição dimensional completa e certificação</p>
+<p><strong>Software:</strong> PC-DMIS ou similar para análise avançada</p>
+<p><strong>Capacidade:</strong> Componentes de médio porte com alta precisão</p>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]

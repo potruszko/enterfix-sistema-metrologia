@@ -1,0 +1,1101 @@
+# LANDING PAGE PRINCIPAL - SCANOLOGY
+
+## HTML da Landing Page
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanology - Linha Completa Digitalização 3D | 22 Produtos | Enterfix</title>
+    <meta name="description" content="Linha Scanology com 22 produtos para digitalização 3D profissional. Scanners portáteis, sistemas automatizados, softwares. Tecnologia avançada com precisão submilimétrica!">
+    <meta name="keywords" content="scanology digitalizacao 3d, scanners profissionais, sistemas automatizados 3d, softwares 3d, linha completa scanology">
+    <link rel="canonical" href="https://enterfix.com.br/scanology">
+</head>
+<body>
+    <div class="scanology-landing">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1 class="hero-title">
+                                <span class="brand">Scanology</span>
+                                <span class="subtitle">Linha Completa de Digitalização 3D</span>
+                            </h1>
+                            <p class="hero-description">
+                                22 produtos de tecnologia avançada para todas as necessidades de digitalização 3D profissional.
+                                Precisão submilimétrica, velocidade superior e facilidade de uso.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">22</span>
+                                    <span class="stat-label">Produtos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">Categorias</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">±0.015mm</span>
+                                    <span class="stat-label">Precisão Máxima</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3M+</span>
+                                    <span class="stat-label">Pontos/Segundo</span>
+                                </div>
+                            </div>
+                            <div class="hero-actions">
+                                <a href="#categorias" class="btn-primary">Explorar Produtos</a>
+                                <a href="/contato-scanology" class="btn-secondary">Agende uma Demonstração</a>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="product-showcase">
+                                <div class="showcase-item active" data-product="simscan-e">
+                                    <img src="/images/simscan-e-hero.jpg" alt="SIMSCAN-E Scanner 3D">
+                                </div>
+                                <div class="showcase-item" data-product="kscan-magic">
+                                    <img src="/images/kscan-magic-hero.jpg" alt="KSCAN-Magic com IA">
+                                </div>
+                                <div class="showcase-item" data-product="am-cell">
+                                    <img src="/images/am-cell-hero.jpg" alt="AM-CELL Sistema Automatizado">
+                                </div>
+                            </div>
+                            <div class="showcase-controls">
+                                <button class="control-btn active" data-target="simscan-e">Portáteis</button>
+                                <button class="control-btn" data-target="kscan-magic">Inteligência Artificial</button>
+                                <button class="control-btn" data-target="am-cell">Automatizados</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorias Section -->
+        <section id="categorias" class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore Nossas Categorias</h2>
+                    <p>Encontre a solução perfeita para sua aplicação</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="category-card" data-categoria="portateis">
+                        <div class="card-header" style="background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);">
+                            <div class="card-icon">📱</div>
+                            <h3>Scanners 3D Portáteis</h3>
+                            <span class="product-count">8 Produtos</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-description">
+                                <p>Scanners de alta precisão para mobilidade total. Ideais para medição em campo e trabalhos detalhados.</p>
+                            </div>
+                            <div class="card-highlights">
+                                <ul>
+                                    <li>Precisão: ±0,015-0,1mm</li>
+                                    <li>Taxa: 1,35-3,0 M pts/s</li>
+                                    <li>Peso: 0,6-1,5kg</li>
+                                    <li>Tecnologia LED e IA</li>
+                                </ul>
+                            </div>
+                            <div class="card-products">
+                                <div class="product-pills">
+                                    <span class="pill">SIMSCAN-E</span>
+                                    <span class="pill">KSCAN-Magic</span>
+                                    <span class="pill">AXE-B</span>
+                                    <span class="pill">+5 modelos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/scanners-3d-portateis-scanology" class="btn-explore">Explorar Categoria</a>
+                            <a href="/comparar-scanners-portateis" class="btn-compare">Comparar Modelos</a>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-categoria="rastreamento">
+                        <div class="card-header" style="background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);">
+                            <div class="card-icon">🎯</div>
+                            <h3>Sistemas de Rastreamento</h3>
+                            <span class="product-count">6 Produtos</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-description">
+                                <p>Sistemas de monitoramento 6DOF com precisão submilimétrica para aplicações críticas.</p>
+                            </div>
+                            <div class="card-highlights">
+                                <ul>
+                                    <li>Precisão: ±0,005-0,12mm</li>
+                                    <li>Taxa: 600-2000Hz</li>
+                                    <li>Rastreamento 6DOF</li>
+                                    <li>Tempo real</li>
+                                </ul>
+                            </div>
+                            <div class="card-products">
+                                <div class="product-pills">
+                                    <span class="pill">NimbleTrack</span>
+                                    <span class="pill">TrackScan-SHARP</span>
+                                    <span class="pill">M-Track</span>
+                                    <span class="pill">+3 sistemas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/sistemas-rastreamento-3d-scanology" class="btn-explore">Explorar Categoria</a>
+                            <a href="/comparar-sistemas-rastreamento" class="btn-compare">Comparar Sistemas</a>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-categoria="automatizados">
+                        <div class="card-header" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">
+                            <div class="card-icon">🤖</div>
+                            <h3>Sistemas Automatizados</h3>
+                            <span class="product-count">4 Produtos</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-description">
+                                <p>Soluções para linha de produção com controle de qualidade 24/7 e integração robótica.</p>
+                            </div>
+                            <div class="card-highlights">
+                                <ul>
+                                    <li>Capacidade: 5-50kg</li>
+                                    <li>Velocidade: 30s-8min</li>
+                                    <li>Operação 24/7</li>
+                                    <li>Integração robótica</li>
+                                </ul>
+                            </div>
+                            <div class="card-products">
+                                <div class="product-pills">
+                                    <span class="pill">AM-CELL 5</span>
+                                    <span class="pill">AutoScan-TURBO</span>
+                                    <span class="pill">AutoScan-Desktop</span>
+                                    <span class="pill">KOMPAKT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/sistemas-automatizados-scanology" class="btn-explore">Explorar Categoria</a>
+                            <a href="/comparar-sistemas-automatizados" class="btn-compare">Comparar Sistemas</a>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-categoria="fotogrametria">
+                        <div class="card-header" style="background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);">
+                            <div class="card-icon">📷</div>
+                            <h3>Fotogrametria 3D</h3>
+                            <span class="product-count">1 Sistema</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-description">
+                                <p>Sistema multi-câmera para digitalização de objetos grandes com captura instantânea.</p>
+                            </div>
+                            <div class="card-highlights">
+                                <ul>
+                                    <li>Resolução: 15MP</li>
+                                    <li>Precisão: ±0,01mm</li>
+                                    <li>8-24 câmeras</li>
+                                    <li>Captura < 1s</li>
+                                </ul>
+                            </div>
+                            <div class="card-products">
+                                <div class="product-pills">
+                                    <span class="pill featured">MSCAN-L15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/sistema-fotogrametria-3d-scanology" class="btn-explore">Ver Sistema</a>
+                            <a href="/mscan-l15" class="btn-compare">Detalhes Técnicos</a>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-categoria="softwares">
+                        <div class="card-header" style="background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);">
+                            <div class="card-icon">💻</div>
+                            <h3>Softwares 3D</h3>
+                            <span class="product-count">4 Soluções</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-description">
+                                <p>Suíte completa de software para workflow de digitalização, análise e visualização 3D.</p>
+                            </div>
+                            <div class="card-highlights">
+                                <ul>
+                                    <li>Análise dimensional</li>
+                                    <li>Visualização VR/AR</li>
+                                    <li>Workflow completo</li>
+                                    <li>Integração total</li>
+                                </ul>
+                            </div>
+                            <div class="card-products">
+                                <div class="product-pills">
+                                    <span class="pill">DefiniSight V5</span>
+                                    <span class="pill">ScanViewer</span>
+                                    <span class="pill">TViewer</span>
+                                    <span class="pill">3DeVOK</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/softwares-3d-profissionais-scanology" class="btn-explore">Explorar Softwares</a>
+                            <a href="/workflow-completo-3d" class="btn-compare">Ver Workflow</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por que Escolher Scanology?</h2>
+                    <p>Tecnologia avançada que transforma seu workflow de digitalização 3D</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Velocidade Superior</h3>
+                        <p>Taxa de medição até 3M+ pontos por segundo com processamento em tempo real</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Precisão Extrema</h3>
+                        <p>Precisão submilimétrica de até ±0,015mm para as aplicações mais exigentes</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Inteligência Artificial</h3>
+                        <p>KSCAN-Magic com IA integrada para otimização automática de parâmetros</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>Portabilidade Total</h3>
+                        <p>Scanners a partir de 0,6kg para máxima mobilidade em campo</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Workflow Integrado</h3>
+                        <p>Software completo desde captura até análise dimensional e relatórios</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏭</div>
+                        <h3>Automação Industrial</h3>
+                        <p>Sistemas automatizados para controle de qualidade 24/7 na produção</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="applications-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Aplicações da Linha Scanology</h2>
+                    <p>Soluções especializadas para cada setor industrial</p>
+                </div>
+                
+                <div class="applications-grid">
+                    <div class="app-card">
+                        <div class="app-icon">🚗</div>
+                        <h3>Automotivo</h3>
+                        <p>Inspeção de qualidade, engenharia reversa, controle dimensional de componentes</p>
+                        <div class="app-products">SIMSCAN-E, KSCAN-X, AM-CELL</div>
+                    </div>
+                    <div class="app-card">
+                        <div class="app-icon">✈️</div>
+                        <h3>Aeroespacial</h3>
+                        <p>Medição de alta precisão, verificação de conformidade, manutenção preventiva</p>
+                        <div class="app-products">NimbleTrack, TrackScan-SHARP</div>
+                    </div>
+                    <div class="app-card">
+                        <div class="app-icon">🏭</div>
+                        <h3>Manufatura</h3>
+                        <p>Controle de qualidade em linha, prototipagem rápida, otimização de processos</p>
+                        <div class="app-products">AutoScan-TURBO, DefiniSight V5</div>
+                    </div>
+                    <div class="app-card">
+                        <div class="app-icon">🎨</div>
+                        <h3>Design & Arte</h3>
+                        <p>Digitalização de objetos culturais, criação de modelos 3D, restauração digital</p>
+                        <div class="app-products">MSCAN-L15, 3DeVOK Studio</div>
+                    </div>
+                    <div class="app-card">
+                        <div class="app-icon">🔬</div>
+                        <h3>Pesquisa & Educação</h3>
+                        <p>Análise dimensional, desenvolvimento de produtos, ensino de metrologia</p>
+                        <div class="app-products">SIMSCAN 22/30, ScanViewer</div>
+                    </div>
+                    <div class="app-card">
+                        <div class="app-icon">⚙️</div>
+                        <h3>Engenharia</h3>
+                        <p>Análise estrutural, simulação, verificação de projetos, documentação técnica</p>
+                        <div class="app-products">TViewer, M-Track Mobile</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Pronto para Revolucionar sua Digitalização 3D?</h2>
+                    <p>Descubra como a linha Scanology pode transformar seu workflow de trabalho. Agende uma demonstração personalizada e veja nossos produtos em ação.</p>
+                    <div class="cta-actions">
+                        <a href="/contato-scanology" class="btn-cta-primary">Agende uma Demonstração</a>
+                        <a href="/linha-completa-scanology" class="btn-cta-secondary">Ver Linha Completa</a>
+                    </div>
+                    <div class="cta-info">
+                        <div class="info-item">
+                            <span class="info-label">Suporte Técnico:</span>
+                            <span class="info-value">Especializado</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Treinamento:</span>
+                            <span class="info-value">Incluído</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Garantia:</span>
+                            <span class="info-value">Internacional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scanology-landing.js"></script>
+</body>
+</html>
+```
+
+### CSS da Landing Page
+```css
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #0d47a1 0%, #1e88e5 50%, #42a5f5 100%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 71, 161, 0.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-title {
+    margin-bottom: 20px;
+}
+
+.hero-title .brand {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+.hero-title .subtitle {
+    display: block;
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 15px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: white;
+    color: #1e88e5;
+    border: 2px solid white;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #1e88e5;
+    transform: translateY(-2px);
+}
+
+.hero-visual {
+    position: relative;
+}
+
+.product-showcase {
+    position: relative;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+.showcase-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.8s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.showcase-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.showcase-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.control-btn.active,
+.control-btn:hover {
+    background: white;
+    color: #1e88e5;
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    padding: 25px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.product-count {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.card-content {
+    padding: 25px 20px;
+}
+
+.card-description p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card-highlights ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.card-highlights li {
+    padding: 5px 0;
+    color: #555;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card-highlights li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.product-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill {
+    background: #f0f8ff;
+    color: #1e88e5;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.pill.featured {
+    background: #e3f2fd;
+    font-weight: 600;
+}
+
+.card-actions {
+    padding: 0 20px 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-explore,
+.btn-compare {
+    flex: 1;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-explore {
+    background: #1e88e5;
+    color: white;
+}
+
+.btn-explore:hover {
+    background: #1565c0;
+    transform: translateY(-1px);
+}
+
+.btn-compare {
+    background: #f0f8ff;
+    color: #1e88e5;
+    border: 1px solid #1e88e5;
+}
+
+.btn-compare:hover {
+    background: #1e88e5;
+    color: white;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Applications Section */
+.applications-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.app-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+
+.app-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.app-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.app-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.app-products {
+    background: #f0f8ff;
+    color: #1e88e5;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.btn-cta-primary,
+.btn-cta-secondary {
+    padding: 15px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-primary {
+    background: white;
+    color: #1e88e5;
+}
+
+.btn-cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-cta-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-cta-secondary:hover {
+    background: white;
+    color: #1e88e5;
+}
+
+.cta-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0.9;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.info-label {
+    opacity: 0.8;
+}
+
+.info-value {
+    font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-content .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-title .brand {
+        font-size: 3rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+```
+
+### JavaScript da Landing Page
+```javascript
+// Controle do showcase de produtos no hero
+class ScanologyLanding {
+    constructor() {
+        this.currentProduct = 0;
+        this.products = ['simscan-e', 'kscan-magic', 'am-cell'];
+        this.init();
+    }
+    
+    init() {
+        this.bindShowcaseControls();
+        this.startAutoRotation();
+        this.bindSmoothScroll();
+        this.addScrollAnimations();
+    }
+    
+    bindShowcaseControls() {
+        document.querySelectorAll('.control-btn').forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                this.switchProduct(index);
+            });
+        });
+    }
+    
+    switchProduct(index) {
+        // Remove active classes
+        document.querySelectorAll('.showcase-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        document.querySelectorAll('.control-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Add active to selected
+        document.querySelector(`[data-product="${this.products[index]}"]`).classList.add('active');
+        document.querySelectorAll('.control-btn')[index].classList.add('active');
+        
+        this.currentProduct = index;
+    }
+    
+    startAutoRotation() {
+        setInterval(() => {
+            this.currentProduct = (this.currentProduct + 1) % this.products.length;
+            this.switchProduct(this.currentProduct);
+        }, 5000); // 5 segundos
+    }
+    
+    bindSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+    
+    addScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observar elementos para animação
+        document.querySelectorAll('.category-card, .feature-item, .app-card').forEach(el => {
+            observer.observe(el);
+        });
+    }
+}
+
+// Inicializar quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', () => {
+    new ScanologyLanding();
+});
+
+// CSS para animações
+const style = document.createElement('style');
+style.textContent = `
+    .category-card,
+    .feature-item,
+    .app-card {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+    
+    .animate-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(style);
+```
+
+## Configuração WordPress
+
+### URL da Landing Page
+```
+/scanology (página principal)
+```
+
+### Meta Tags SEO Completas
+```html
+<title>Scanology - Linha Completa Digitalização 3D | 22 Produtos | Enterfix</title>
+<meta name="description" content="Linha Scanology com 22 produtos para digitalização 3D profissional. Scanners portáteis, sistemas automatizados, softwares. Tecnologia avançada com precisão submilimétrica!">
+<meta name="keywords" content="scanology digitalizacao 3d, scanners profissionais, sistemas automatizados 3d, softwares 3d, linha completa scanology">
+<link rel="canonical" href="https://enterfix.com.br/scanology">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Scanology - Linha Completa Digitalização 3D">
+<meta property="og:description" content="22 produtos para digitalização 3D profissional com precisão submilimétrica">
+<meta property="og:image" content="/images/scanology-hero-social.jpg">
+<meta property="og:url" content="https://enterfix.com.br/scanology">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Linha Scanology",
+  "description": "Linha completa com 22 produtos para digitalização 3D profissional",
+  "brand": "Scanology",
+  "manufacturer": "Enterfix"
+}
+</script>
+```

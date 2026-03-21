@@ -1,0 +1,65 @@
+[vc_row][vc_column][vc_column_text]
+<h1 style="text-align: center; color: #0066cc;">SÉRIE ULTRA - MÁXIMA PRECISÃO E AUTOMAÇÃO</h1>
+<p style="text-align: center; font-size: 18px; color: #333;">Topo de linha em tecnologia CNC - Produtividade excepcional</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890123{background-color: #f8f9fa !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sobre a Série ULTRA</h2>
+<p>A Série ULTRA representa o que há de mais avançado em tecnologia de medição por visão automatizada. Como topo de linha da Enterfix, esta série combina precisão excepcional, automação completa e produtividade incomparável, estabelecendo novos padrões na indústria de controle de qualidade.</p>
+
+<p>Desenvolvida para aplicações que exigem máxima precisão e alta produtividade, a Série ULTRA incorpora tecnologias patenteadas, estrutura ultra-rígida e componentes de qualidade superior. Com servomotores AC de alta performance e sistema de zoom totalmente automático, estas máquinas oferecem repetibilidade excepcional e velocidade de medição superior.</p>
+
+<p>Cada máquina ULTRA é equipada com software inteligente, sistema de iluminação adaptativo e recursos avançados de análise que garantem resultados consistentes mesmo nas aplicações mais exigentes. A série é ideal para indústrias de alta precisão como aeroespacial, automotiva e dispositivos médicos.</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Características Técnicas</h2>
+<ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Estrutura Ultra-Rígida:</strong> Base em granito sintético com isolamento de vibrações</li>
+<li><strong>Servomotores AC:</strong> Acionamento de alta precisão em todos os eixos</li>
+<li><strong>Zoom Automático:</strong> Sistema motorizado com magnificação programável</li>
+<li><strong>Precisão Excepcional:</strong> 2+L/200μm com repetibilidade de 1.5μm</li>
+<li><strong>Software Avançado:</strong> IA integrada para análise automática</li>
+<li><strong>Iluminação Adaptativa:</strong> LED com controle automático de intensidade</li>
+<li><strong>Velocidade Superior:</strong> Até 3x mais rápida que concorrentes</li>
+<li><strong>Conectividade Industrial:</strong> Integração total com sistemas MES/ERP</li>
+<li><strong>Calibração Automática:</strong> Sistema auto-calibrante com padrões integrados</li>
+<li><strong>Tecnologia Patenteada:</strong> Algoritmos exclusivos Enterfix</li>
+</ul>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890124{background-color: #e9ecef !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Modelos Disponíveis</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<h3 style="color: #0066cc; margin-bottom: 15px;">ULTRA 200</h3>
+<p><strong>Área de Medição:</strong> 200 x 100 x 150mm</p>
+<p><strong>Aplicação:</strong> Componentes de alta precisão</p>
+<p><strong>Ideal para:</strong> Eletrônicos e micro componentes</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<h3 style="color: #0066cc; margin-bottom: 15px;">ULTRA 300</h3>
+<p><strong>Área de Medição:</strong> 300 x 200 x 200mm</p>
+<p><strong>Aplicação:</strong> Componentes médios de precisão</p>
+<p><strong>Ideal para:</strong> Automotiva e aeroespacial</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<h3 style="color: #0066cc; margin-bottom: 15px;">ULTRA 400</h3>
+<p><strong>Área de Medição:</strong> 400 x 300 x 200mm</p>
+<p><strong>Aplicação:</strong> Produção industrial de alto volume</p>
+<p><strong>Ideal para:</strong> Linhas automatizadas</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<h3 style="color: #0066cc; margin-bottom: 15px;">ULTRA 500</h3>
+<p><strong>Área de Medição:</strong> 500 x 400 x 200mm</p>
+<p><strong>Aplicação:</strong> Componentes grandes com precisão CNC</p>
+<p><strong>Ideal para:</strong> Indústria pesada e moldes</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<h3 style="color: #0066cc; margin-bottom: 15px;">ULTRA 600</h3>
+<p><strong>Área de Medição:</strong> 600 x 500 x 200mm</p>
+<p><strong>Aplicação:</strong> Máxima capacidade com precisão excepcional</p>
+<p><strong>Ideal para:</strong> Componentes grandes e complexos</p>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]

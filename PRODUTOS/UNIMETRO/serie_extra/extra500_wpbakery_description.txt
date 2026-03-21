@@ -1,0 +1,71 @@
+[vc_row full_width="stretch_row" bg_type="image" bg_override="ex-full" css=".vc_custom_1742778000466{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_01.jpg?id=4712) !important;}"][vc_column][vc_single_image image="5304" img_size="FULL" alignment="center" css_animation="none" css=""][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="grad" bg_override="full" css=".vc_custom_1743499489559{padding-top: 80px !important;padding-bottom: 100px !important;background-color: #F2F2F2 !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E3E3E3));background: -moz-linear-gradient(top,#E3E3E3 0%);background: -webkit-linear-gradient(top,#E3E3E3 0%);background: -o-linear-gradient(top,#E3E3E3 0%);background: -ms-linear-gradient(top,#E3E3E3 0%);background: linear-gradient(top,#E3E3E3 0%);"][vc_column][vc_column_text css_animation="none" css=".vc_custom_1743499181401{padding: 32px !important;}"]
+<p style="text-align: center;">EXTRA series semi-automática MÁQUINA DE MEDIÇÃO POR VISÃO combina características manuais e automáticas, oferecendo maior precisão e produtividade. O EXTRA 500 oferece a maior área de medição da série semi-automática, ideal para componentes de grande porte, proporcionando máxima eficiência e precisão no processo de controle de qualidade, fabricado pela Enterfix e comercializado com a marca Enterfix.</p>
+[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1743499551634{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][vc_single_image image="5398" img_size="full" alignment="center" css_animation="none" css=""][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" css=".vc_custom_1742774265064{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_041.jpg?id=4732) !important;}"][vc_column][ind_custom_heading heading="Software" heading_color="#FFFFFF" position="center"][vc_column_text css=""]
+<p style="text-align: center;"><span style="color: #ffffff;">Sistema semi-automático de alta capacidade com software inteligente de medição, combinando controles manuais e automáticos para máxima precisão e produtividade em componentes de grande porte.</span></p>
+[/vc_column_text][ultimate_video u_video_url="https://www.youtube.com/watch?v=y8bCzZ_D7xI" yt_autoplay="" yt_sugg_video="" yt_mute_control="" yt_modest_branding="" yt_privacy_mode="" thumbnail="custom" custom_thumb="id^5402|url^https://enterfix.com.br/wp-content/uploads/2025/03/Software-1.png|caption^null|alt^null|title^Software|description^null" play_source="image" play_image="id^5159|url^https://enterfix.com.br/wp-content/uploads/2025/03/Enterfix-Symbol.png|caption^null|alt^null|title^Enterfix-Symbol|description^null" play_size="75" hover_animation="wobble-vertical" enable_sub_bar="on" chanel_id_name="channel_id" show_sub_count="" main_video_font_family="font_family:Poppins|font_call:Poppins"][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1742774273231{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_051.jpg?id=4759) !important;}"][vc_column][ind_custom_heading heading="Informações Técnicas" position="center"][vc_column_text css=""]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th colspan="2">Itens</th>
+<th>EXTRA 500</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Dimensão (mm) (L × W × H)</td>
+<td>950 × 850 × 1195</td>
+</tr>
+<tr>
+<td colspan="2">Faixa de medição (mm) (X × Y × Z)</td>
+<td>500 × 400 × 200</td>
+</tr>
+<tr>
+<td colspan="2">Precisão (μm)</td>
+<td>2.5 + L/200</td>
+</tr>
+<tr>
+<td colspan="2">Repetibilidade (μm)</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td rowspan="5">Imagem e medição</td>
+<td>Câmera CCD</td>
+<td>Câmera digital HD GIGA de 1,3 M pixels</td>
+</tr>
+<tr>
+<td>Lente Zoom</td>
+<td>Semi-automático Lente Zoom 0.7–4.5X com controle motorizado</td>
+</tr>
+<tr>
+<td>Ampliação</td>
+<td>\1–\2 X (varia conforme o modelo da câmera)</td>
+</tr>
+<tr>
+<td>FOV</td>
+<td>8.1–1.3 mm (depende da combinação câmera + lente)</td>
+</tr>
+<tr>
+<td>Distância de Trabalho</td>
+<td>90 mm</td>
+</tr>
+<tr>
+<td colspan="2">Escala linear (resolução)</td>
+<td>0.1 μm</td>
+</tr>
+<tr>
+<td colspan="2">Sistema de Acionamento</td>
+<td>Semi-automático com controles CNC assistidos e joystick</td>
+</tr>
+<tr>
+<td colspan="2">Sistema de Iluminação</td>
+<td>LED programável em múltiplas zonas, luz paralela inferior LED</td>
+</tr>
+<tr>
+<td colspan="2">Peso (kg)</td>
+<td>420</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="bg_color" bg_override="full" css=".vc_custom_1743500100468{padding-top: 40px !important;background-color: #14263C !important;}" bg_color_value="#14263C"][vc_column][ind_custom_heading heading="ACESSÓRIOS" heading_color="#FFFFFF" position="center"][vc_row_inner][vc_column_inner width="1/4"][vc_single_image image="5305" img_size="Full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=".vc_custom_1743499676874{border-radius: 10px !important;border-color: #FFFFFF !important;}"][ind_custom_heading heading="Sistema Iluminação Avançado" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5375" img_size="full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=""][ind_custom_heading heading="Câmera CCD HD GIGA" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5376" img_size="full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=""][ind_custom_heading heading="Escala Linear Precisão" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5377" img_size="full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=""][ind_custom_heading heading="Zoom Semi-automático" heading_color="#FFFFFF" size="small"][/vc_column_inner][/vc_row_inner][vc_empty_space][/vc_column][/vc_row][vc_row bg_type="image" bg_override="full" css=".vc_custom_1742774292621{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][ind_custom_heading heading="Download do Catálogo" position="center"][vc_column_text css=".vc_custom_1743181076594{padding-top: 16px !important;padding-bottom: 16px !important;}"]
+<p style="text-align: center;">Faça o download do catálogo completo da nossa máquina de medição <strong>ENTERFIX EXTRA 500 - Máquina Semi-Automática</strong> e conheça todos os recursos, especificações e diferenciais que ela oferece.</p>
+[/vc_column_text][ult_buttons btn_title="DOWNLOAD" btn_link="url:https%3A%2F%2Flp.enterfix.com.br%2Fcatalogo-extra500|title:Contato" btn_align="ubtn-center" btn_size="ubtn-large" btn_title_color="#FFFFFF" btn_bg_color="#A0BF30" btn_bg_color_hover="#1E73BE" btn_title_color_hover="#FFFFFF" icon="none" icon_size="24" icon_color="#FFFFFF" btn_icon_pos="ubtn-sep-icon-at-left" btn_border_style="solid" btn_border_size="1" btn_radius="10" btn_font_family="font_family:Poppins|font_call:Poppins|variant:700" btn_font_style="font-weight:700;" btn_font_size="desktop:16px;"][/vc_column][/vc_row][vc_row css_animation="none" bg_type="bg_color" bg_override="ex-full" css=".vc_custom_1743500127107{padding-top: 32px !important;background-color: #FFFFFF !important;}" bg_color_value="#FFFFFF"][vc_column][ind_custom_heading heading="ENTRAR EM CONTATO" position="center"][contact-form-7 id="4149" title="Formulário de Contato"][/vc_column][/vc_row]

@@ -1,0 +1,182 @@
+﻿[vc_row full_width="stretch_row" bg_type="image" bg_override="ex-full" css=".vc_custom_1742778000466{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_01.jpg?id=4712) !important;}"][vc_column][vc_single_image image="5523" img_size="FULL" alignment="center" css_animation="none" css=""][/vc_column][/vc_row][vc_row bg_type="image" bg_override="full" css=".vc_custom_1742847502067{padding-top: 80px !important;padding-bottom: 100px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_021.jpg?id=4723) !important;}"][vc_column][vc_column_text css_animation="none" css=".vc_custom_1743975859304{margin-top: 60px !important;margin-bottom: 60px !important;margin-left: 0px !important;padding-top: 32px !important;padding-right: 32px !important;padding-bottom: 32px !important;padding-left: 32px !important;}"]
+<p style="text-align: center;"><strong>SISTEMA DE FIXAÇÃO PARA MÁQUINAS CMM</strong></p>
+<p>Nossos sistemas de fixação para máquinas CMM são desenvolvidos para proporcionar máxima precisão e estabilidade durante as medições. Com um design intuitivo e fácil de configurar, esses sistemas garantem resultados consistentes e confiáveis, essencial para otimizar a eficiência e a qualidade dos processos de medição em diversas aplicações industriais.[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1742770225154{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][vc_single_image image="5398" img_size="full" alignment="center" css_animation="fadeIn" css=""][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" css=".vc_custom_1742774265064{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_041.jpg?id=4732) !important;}"][vc_column][ind_custom_heading heading="Video" heading_color="#FFFFFF" position="center"][vc_column_text css=""]<span style="color: #ffffff;">Assista à demonstração do nosso sistema de fixação para máquinas CMM, que oferece precisão e estabilidade excepcionais. O sistema é complementado por uma poderosa interface de software, permitindo medições de alta precisão em 2D e 3D. Veja como a integração entre o hardware robusto e o software avançado pode otimizar seus processos de medição industrial, garantindo resultados confiáveis e consistentes em suas operações.</span>[/vc_column_text][ultimate_video u_video_url="https://www.youtube.com/watch?v=gyjDJUU2wBU" yt_autoplay="" yt_sugg_video="" yt_mute_control="" yt_modest_branding="" yt_privacy_mode="" thumbnail="custom" custom_thumb="id^5402|url^https://enterfix.com.br/wp-content/uploads/2025/03/Software-1.png|caption^null|alt^null|title^Software|description^null" play_source="image" play_image="id^5159|url^https://enterfix.com.br/wp-content/uploads/2025/03/Enterfix-Symbol.png|caption^null|alt^null|title^Enterfix-Symbol|description^null" play_size="75" hover_animation="wobble-vertical" enable_sub_bar="on" chanel_id_name="channel_id" yt_channel_id="UCLBOUkL5Gm5SwbVOfcmQ6TA" yt_channel_text="Inscreva-se em nosso canal no YouTube e fique por dentro de todas as novidades!" show_sub_count="" main_video_font_family="font_family:Poppins|font_call:Poppins"][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1742774273231{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_051.jpg?id=4759) !important;}"][vc_column][ind_custom_heading heading="Componentes" position="center"][vc_column_text css=""]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Itens</th>
+<th>Nº de Marca</th>
+<th>Qtd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grampo de tensão</td>
+<td>90001</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Grampo de tensão de fio curto</td>
+<td>90001</td>
+<td>4</td>
+</tr>
+<tr>
+<td >Grampo de tensão de fio longo</td>
+<td >90002</td>
+<td >4</td>
+</tr>
+<tr>
+<td >Suporte de grampo de tensão curto</td>
+<td >90003</td>
+<td >4</td>
+</tr>
+<tr>
+<td >Suporte de grampo de tensão longo</td>
+<td >90004</td>
+<td >8</td>
+</tr>
+<tr>
+<td >Suporte de 6Ã—5mm</td>
+<td >90005</td>
+<td >3</td>
+</tr>
+<tr>
+<td >Suporte de 6Ã—10mm</td>
+<td >90006</td>
+<td >3</td>
+</tr>
+<tr>
+<td >Suporte de 6Ã—25mm</td>
+<td >90007</td>
+<td >6</td>
+</tr>
+<tr>
+<td >Suporte de 9Ã—5mm</td>
+<td >90008</td>
+<td >6</td>
+</tr>
+<tr>
+<td >Suporte de 9Ã—10mm</td>
+<td >90009</td>
+<td >3</td>
+</tr>
+<tr>
+<td >Suporte de 9Ã—20mm</td>
+<td >900010</td>
+<td >6</td>
+</tr>
+<tr>
+<td >Suporte de 9Ã—25mm</td>
+<td >900011</td>
+<td >6</td>
+</tr>
+<tr>
+<td >Suporte de 12Ã—10mm</td>
+<td >900012</td>
+<td >6</td>
+</tr>
+<tr>
+<td >Suporte de 12Ã—25mm</td>
+<td >900013</td>
+<td >6</td>
+</tr>
+<tr>
+<td >Suporte plano de 6Ã—10mm</td>
+<td >900014</td>
+<td >6</td>
+</tr>
+<tr>
+<td >Suporte plano de 9Ã—10mm</td>
+<td >900015</td>
+<td >4</td>
+</tr>
+<tr>
+<td >Suporte de 9Ã—10mm</td>
+<td >900016</td>
+<td >4</td>
+</tr>
+<tr>
+<td >Suporte plano de 12Ã—10mm</td>
+<td >900017</td>
+<td >4</td>
+</tr>
+<tr>
+<td >Suporte ajustável de 9mm</td>
+<td >900018</td>
+<td >2</td>
+</tr>
+<tr>
+<td >Suporte esférico de 6mm</td>
+<td >900019</td>
+<td >2</td>
+</tr>
+<tr>
+<td >Adaptador multi-direcional</td>
+<td >900020</td>
+<td >2</td>
+</tr>
+<tr>
+<td >Parafuso de suporte de tensão</td>
+<td >900021</td>
+<td >2</td>
+</tr>
+<tr>
+<td >Bloco em L</td>
+<td >900022</td>
+<td >1</td>
+</tr>
+<tr>
+<td >Slide ajustável</td>
+<td >900023</td>
+<td >4</td>
+</tr>
+<tr>
+<td >Bloco de troca de direção</td>
+<td >900024</td>
+<td >1</td>
+</tr>
+<tr>
+<td >Base do bloco de troca de direção</td>
+<td >900025</td>
+<td >1</td>
+</tr>
+<tr>
+<td >Suporte de tensão</td>
+<td >900026</td>
+<td >1</td>
+</tr>
+<tr>
+<td >Adaptador de M4 para M8</td>
+<td >900027</td>
+<td >4</td>
+</tr>
+<tr>
+<td >Slide ajustável transparente</td>
+<td >900028</td>
+<td >8</td>
+</tr>
+<tr>
+<td >Chave de fenda M3</td>
+<td >900029</td>
+<td >1</td>
+</tr>
+<tr>
+<td >Placa de embalagem de componentes</td>
+<td ></td>
+<td ></td>
+</tr>
+<tr>
+<td >Parafusos M4Ã—10 (20 pcs)</td>
+<td ></td>
+<td ></td>
+</tr>
+<tr>
+<td >Mala de embalagem</td>
+<td ></td>
+<td ></td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row][vc_row bg_type="image" bg_override="full" css=".vc_custom_1742774292621{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][ind_custom_heading heading="Download do Catálogo" position="center"][vc_column_text css=".vc_custom_1743975987972{padding-top: 16px !important;padding-bottom: 16px !important;}"]
+<p style="text-align: center;">Faça o download do catálogo completo do nosso sistema de Fixação <strong>E-FIX</strong> e conheça todos os recursos, especificações e diferenciais que ele oferece.</p>
+[/vc_column_text][ult_buttons btn_title="DOWNLOAD" btn_link="url:https%3A%2F%2Flp.enterfix.com.br%2Fcatalogo-sistema-de-fixacao|title:Contato" btn_align="ubtn-center" btn_size="ubtn-large" btn_title_color="#FFFFFF" btn_bg_color="#A0BF30" btn_bg_color_hover="#1E73BE" btn_title_color_hover="#FFFFFF" icon="none" icon_size="24" icon_color="#FFFFFF" btn_icon_pos="ubtn-sep-icon-at-left" btn_border_style="solid" btn_border_size="1" btn_radius="10" btn_font_family="font_family:Poppins|font_call:Poppins|variant:700" btn_font_style="font-weight:700;" btn_font_size="desktop:16px;"][/vc_column][/vc_row][vc_row css_animation="fadeIn" bg_type="bg_color" bg_override="ex-full" css=".vc_custom_1742847860593{padding-top: 32px !important;}" bg_color_value="#FFFFFF"][vc_column][ind_custom_heading heading="ENTRAR EM CONTATO" position="center"][contact-form-7 id="4149" title="Formulário de Contato"][/vc_column][/vc_row]

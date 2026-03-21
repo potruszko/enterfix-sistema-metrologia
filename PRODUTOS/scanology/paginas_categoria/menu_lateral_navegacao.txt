@@ -1,0 +1,391 @@
+# MENU LATERAL SCANOLOGY - WordPress/WooCommerce
+
+## Implementação no WordPress
+
+### Widget de Menu Personalizado
+```php
+// functions.php
+function scanology_custom_menu_widget() {
+    register_sidebar(array(
+        'name' => 'Menu Lateral Scanology',
+        'id' => 'scanology-sidebar-menu',
+        'description' => 'Menu lateral para páginas Scanology',
+        'before_widget' => '<div class="scanology-menu-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="menu-title">',
+        'after_title' => '</h3>',
+    ));
+}
+add_action('widgets_init', 'scanology_custom_menu_widget');
+```
+
+### HTML do Menu Lateral
+```html
+<div class="scanology-sidebar-menu">
+    <div class="menu-header">
+        <h2>Scanology</h2>
+        <span class="product-count">22 Produtos</span>
+    </div>
+    
+    <nav class="categoria-nav">
+        <div class="categoria-item" data-categoria="portateis">
+            <a href="/scanners-3d-portateis-scanology" class="categoria-link">
+                <span class="categoria-icon">📱</span>
+                <span class="categoria-nome">Scanners 3D Portáteis</span>
+                <span class="produto-count">(8)</span>
+            </a>
+            <ul class="subcategoria-list">
+                <li><a href="/simscan-e">SIMSCAN-E</a></li>
+                <li><a href="/kscan-e">KSCAN-E</a></li>
+                <li><a href="/kscan-x">KSCAN-X</a></li>
+                <li><a href="/kscan-magic">KSCAN-Magic</a></li>
+                <li><a href="/simscan-42">SIMSCAN 42</a></li>
+                <li><a href="/simscan-30">SIMSCAN 30</a></li>
+                <li><a href="/simscan-22">SIMSCAN 22</a></li>
+                <li><a href="/axe-b">AXE-B</a></li>
+            </ul>
+        </div>
+        
+        <div class="categoria-item" data-categoria="rastreamento">
+            <a href="/sistemas-rastreamento-3d-scanology" class="categoria-link">
+                <span class="categoria-icon">🎯</span>
+                <span class="categoria-nome">Sistemas de Rastreamento</span>
+                <span class="produto-count">(6)</span>
+            </a>
+            <ul class="subcategoria-list">
+                <li><a href="/nimbletrack">NimbleTrack</a></li>
+                <li><a href="/trackscan-sharp">TrackScan-SHARP</a></li>
+                <li><a href="/trackscan-duo">TrackScan-DUO</a></li>
+                <li><a href="/m-track-mobile">M-Track Mobile</a></li>
+                <li><a href="/tracker-m">Tracker-M</a></li>
+                <li><a href="/t-probe">T-Probe</a></li>
+            </ul>
+        </div>
+        
+        <div class="categoria-item" data-categoria="automatizados">
+            <a href="/sistemas-automatizados-scanology" class="categoria-link">
+                <span class="categoria-icon">🤖</span>
+                <span class="categoria-nome">Sistemas Automatizados</span>
+                <span class="produto-count">(4)</span>
+            </a>
+            <ul class="subcategoria-list">
+                <li><a href="/am-cell-5">AM-CELL 5</a></li>
+                <li><a href="/autoscan-desktop">AutoScan-Desktop</a></li>
+                <li><a href="/autoscan-turbo">AutoScan-TURBO</a></li>
+                <li><a href="/autoscan-kompakt">AutoScan-KOMPAKT</a></li>
+            </ul>
+        </div>
+        
+        <div class="categoria-item" data-categoria="fotogrametria">
+            <a href="/sistema-fotogrametria-3d-scanology" class="categoria-link">
+                <span class="categoria-icon">📷</span>
+                <span class="categoria-nome">Fotogrametria 3D</span>
+                <span class="produto-count">(1)</span>
+            </a>
+            <ul class="subcategoria-list">
+                <li><a href="/mscan-l15">MSCAN-L15</a></li>
+            </ul>
+        </div>
+        
+        <div class="categoria-item" data-categoria="softwares">
+            <a href="/softwares-3d-profissionais-scanology" class="categoria-link">
+                <span class="categoria-icon">💻</span>
+                <span class="categoria-nome">Softwares 3D</span>
+                <span class="produto-count">(4)</span>
+            </a>
+            <ul class="subcategoria-list">
+                <li><a href="/definisight-v5">DefiniSight V5</a></li>
+                <li><a href="/scanviewer">ScanViewer</a></li>
+                <li><a href="/tviewer">TViewer</a></li>
+                <li><a href="/3devok-studio">3DeVOK Studio</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="menu-footer">
+        <a href="/scanology-completa" class="ver-todos-btn">Ver Linha Completa</a>
+        <a href="/contato-scanology" class="contato-btn">Agende uma Demonstração</a>
+    </div>
+</div>
+```
+
+### CSS do Menu Lateral
+```css
+.scanology-sidebar-menu {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.menu-header {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #1e88e5;
+    margin-bottom: 20px;
+}
+
+.menu-header h2 {
+    color: #1e88e5;
+    font-size: 24px;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.product-count {
+    color: #666;
+    font-size: 14px;
+    background: #f0f8ff;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.categoria-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.categoria-item {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.categoria-item:hover {
+    border-color: #1e88e5;
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.2);
+}
+
+.categoria-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.categoria-link:hover {
+    background: #e3f2fd;
+    color: #1e88e5;
+}
+
+.categoria-icon {
+    font-size: 18px;
+    margin-right: 10px;
+    width: 25px;
+    text-align: center;
+}
+
+.categoria-nome {
+    flex-grow: 1;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.produto-count {
+    background: #1e88e5;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.subcategoria-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.categoria-item.active .subcategoria-list {
+    max-height: 300px;
+    padding: 10px 0;
+}
+
+.subcategoria-list li {
+    padding: 0;
+}
+
+.subcategoria-list a {
+    display: block;
+    padding: 8px 20px 8px 50px;
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.subcategoria-list a:hover {
+    background: #f0f8ff;
+    color: #1e88e5;
+    border-left-color: #1e88e5;
+}
+
+.subcategoria-list a.current {
+    background: #e3f2fd;
+    color: #1e88e5;
+    border-left-color: #1e88e5;
+    font-weight: 600;
+}
+
+.menu-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ver-todos-btn,
+.contato-btn {
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.ver-todos-btn {
+    background: #f0f8ff;
+    color: #1e88e5;
+    border: 1px solid #1e88e5;
+}
+
+.ver-todos-btn:hover {
+    background: #1e88e5;
+    color: white;
+}
+
+.contato-btn {
+    background: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+}
+
+.contato-btn:hover {
+    background: #45a049;
+    border-color: #45a049;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .scanology-sidebar-menu {
+        position: relative;
+        top: auto;
+        max-height: none;
+        margin-bottom: 20px;
+    }
+    
+    .categoria-item {
+        margin-bottom: 10px;
+    }
+    
+    .categoria-link {
+        padding: 10px 12px;
+    }
+    
+    .categoria-nome {
+        font-size: 13px;
+    }
+}
+```
+
+### JavaScript para Interatividade
+```javascript
+// Menu lateral interativo
+jQuery(document).ready(function($) {
+    // Toggle subcategorias
+    $('.categoria-link').on('click', function(e) {
+        if ($(this).parent().find('.subcategoria-list').length > 0) {
+            e.preventDefault();
+            
+            var $item = $(this).parent();
+            var $others = $('.categoria-item').not($item);
+            
+            // Fecha outras categorias
+            $others.removeClass('active');
+            
+            // Toggle categoria atual
+            $item.toggleClass('active');
+        }
+    });
+    
+    // Marca categoria ativa baseada na URL atual
+    var currentPath = window.location.pathname;
+    $('.subcategoria-list a').each(function() {
+        if ($(this).attr('href') === currentPath) {
+            $(this).addClass('current');
+            $(this).closest('.categoria-item').addClass('active');
+        }
+    });
+    
+    // Marca categoria principal se não há produto específico
+    $('.categoria-link').each(function() {
+        if ($(this).attr('href') === currentPath) {
+            $(this).addClass('current');
+        }
+    });
+    
+    // Smooth scroll para âncoras
+    $('.subcategoria-list a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        var target = $($(this).attr('href'));
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 100
+            }, 500);
+        }
+    });
+});
+```
+
+## Implementação no WooCommerce
+
+### Shortcode para Menu Lateral
+```php
+// Shortcode para usar em qualquer página
+function scanology_sidebar_menu_shortcode($atts) {
+    $atts = shortcode_atts(array(
+        'categoria_atual' => '',
+        'produto_atual' => ''
+    ), $atts);
+    
+    ob_start();
+    include(get_template_directory() . '/template-parts/scanology-sidebar-menu.php');
+    return ob_get_clean();
+}
+add_shortcode('scanology_menu', 'scanology_sidebar_menu_shortcode');
+
+// Uso: [scanology_menu categoria_atual="portateis" produto_atual="simscan-e"]
+```
+
+### Template Part
+```php
+// template-parts/scanology-sidebar-menu.php
+<div class="scanology-sidebar-menu">
+    <?php 
+    $current_category = get_query_var('categoria_atual', '');
+    $current_product = get_query_var('produto_atual', '');
+    
+    // Renderizar menu HTML aqui
+    ?>
+</div>
+```

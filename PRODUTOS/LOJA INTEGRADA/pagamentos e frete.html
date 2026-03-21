@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frete & Pagamentos — Enterfix</title>
+    <meta name="description" content="Informações completas sobre formas de pagamento, prazos de entrega, cálculo de frete e rastreamento de pedidos da Enterfix." />
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.75;
+            font-size: 16px;
+        }
+
+        /* ===== LAYOUT ===== */
+        .fp-page {
+            max-width: 1060px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ===== HERO ===== */
+        .fp-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px;
+            padding: 44px 40px;
+            margin-bottom: 32px;
+            color: #fff;
+        }
+        .fp-hero .fp-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32);
+            border-radius: 50px;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .fp-hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .fp-hero p {
+            font-size: 14px;
+            opacity: 0.88;
+            line-height: 1.9;
+            margin: 0;
+        }
+
+        /* ===== KPI BANNER ===== */
+        .fp-kpi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+        .fp-kpi-item {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #1F1659;
+            border-radius: 10px;
+            padding: 18px 20px;
+            text-align: center;
+        }
+        .fp-kpi-item .fp-kpi-icon { font-size: 26px; margin-bottom: 8px; }
+        .fp-kpi-item strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 800;
+            color: #1F1659;
+            margin-bottom: 4px;
+        }
+        .fp-kpi-item span { font-size: 13px; color: #64748b; line-height: 1.4; }
+
+        /* ===== SEÇÕES ===== */
+        .fp-section {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 36px 40px;
+            margin-bottom: 22px;
+        }
+        @media (max-width: 640px) {
+            .fp-section { padding: 24px 18px; }
+            .fp-hero { padding: 30px 22px; }
+        }
+
+        /* ===== HEADINGS ===== */
+        .fp-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1F1659;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .fp-section h3 {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #334155;
+            margin: 22px 0 8px;
+            padding-left: 12px;
+            border-left: 3px solid #6366f1;
+        }
+
+        /* ===== TEXTO ===== */
+        .fp-section p { font-size: 15px; margin-bottom: 12px; }
+        .fp-section ul, .fp-section ol { padding-left: 22px; margin-bottom: 14px; }
+        .fp-section li { font-size: 15px; margin-bottom: 8px; }
+        .fp-section strong { color: #0f172a; }
+        .fp-section a { color: #1d4ed8; text-decoration: underline; }
+        .fp-small { font-size: 13.5px; }
+        .fp-muted { color: #64748b; }
+
+        /* ===== GRADE DE PAGAMENTOS ===== */
+        .fp-pay-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+        .fp-pay-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .fp-pay-card--pix   { border-top: 4px solid #06b6d4; background: #f0fdff; }
+        .fp-pay-card--card  { border-top: 4px solid #6366f1; background: #f5f3ff; }
+        .fp-pay-card--billet{ border-top: 4px solid #f59e0b; background: #fffbeb; }
+        .fp-pay-icon { font-size: 28px; }
+        .fp-pay-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .fp-pay-badge {
+            display: inline-block;
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 50px;
+        }
+        .fp-pay-badge--fast   { background: #dcfce7; color: #166534; }
+        .fp-pay-badge--mid    { background: #dbeafe; color: #1e40af; }
+        .fp-pay-badge--slow   { background: #ffedd5; color: #9a3412; }
+        .fp-pay-desc { font-size: 14px; color: #475569; line-height: 1.55; margin: 0; }
+        .fp-pay-time { font-size: 13px; color: #64748b; margin: 0; }
+
+        /* ===== PRAZO VISUAL ===== */
+        .fp-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 18px 0;
+            position: relative;
+            padding-left: 26px;
+        }
+        .fp-timeline::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        .fp-tl-item {
+            position: relative;
+            padding: 0 0 22px 16px;
+        }
+        .fp-tl-item:last-child { padding-bottom: 0; }
+        .fp-tl-dot {
+            position: absolute;
+            left: -17px;
+            top: 3px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #1F1659;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #1F1659;
+        }
+        .fp-tl-item strong { display: block; font-size: 14.5px; color: #0f172a; }
+        .fp-tl-item span { font-size: 13.5px; color: #64748b; }
+
+        /* ===== CARDS DESTAQUE ===== */
+        .fp-alert {
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+        .fp-alert p:last-child { margin: 0; }
+        .fp-alert--blue   { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .fp-alert--green  { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+        .fp-alert--yellow { background: #fefce8; border: 1px solid #fde047; border-left: 4px solid #ca8a04; }
+        .fp-alert--red    { background: #fff1f2; border: 1px solid #fecdd3; border-left: 4px solid #dc2626; }
+
+        /* ===== ACCORDION ===== */
+        .fp-faq { margin: 14px 0; }
+        .fp-faq details {
+            border: 1px solid #e2e8f0;
+            border-radius: 9px;
+            margin-bottom: 8px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .fp-faq details summary {
+            cursor: pointer;
+            padding: 14px 18px;
+            font-weight: 700;
+            font-size: 14.5px;
+            color: #1e293b;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .fp-faq details summary::-webkit-details-marker { display: none; }
+        .fp-faq details summary::after {
+            content: '+';
+            font-size: 20px;
+            font-weight: 400;
+            color: #94a3b8;
+            transition: transform 0.2s;
+        }
+        .fp-faq details[open] summary {
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1F1659;
+        }
+        .fp-faq details[open] summary::after { content: '−'; color: #1F1659; }
+        .fp-faq .fp-faq-body {
+            padding: 14px 18px;
+            font-size: 14.5px;
+            color: #475569;
+            line-height: 1.65;
+        }
+
+        /* ===== CONTATO ===== */
+        .fp-contact {
+            background: linear-gradient(135deg, #1e3a8a, #1F1659);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            color: #fff;
+        }
+        .fp-contact h2 {
+            color: #fff;
+            font-size: 18px;
+            border: 0;
+            padding: 0;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
+        .fp-contact p { font-size: 14px; opacity: 0.9; margin-bottom: 6px; }
+        .fp-contact a { color: #93c5fd; font-weight: 700; }
+        .fp-contact-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 8px;
+            padding: 10px 26px;
+            margin: 10px 6px 0;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .fp-contact-btn:hover { background: rgba(255,255,255,0.24); color: #fff; }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body { background: #fff; }
+            .fp-page { margin: 0; padding: 0; max-width: 100%; }
+            .fp-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="fp-page" role="main">
+
+    <!-- HERO -->
+    <header class="fp-hero">
+        <div class="fp-badge">&#128666; Logística &amp; Pagamentos</div>
+        <h1>Formas de Pagamento &amp; Política de Frete</h1>
+        <p>Tudo o que você precisa saber sobre como pagar, quando seu pedido será postado e como acompanhar a entrega.</p>
+    </header>
+
+    <!-- KPIs -->
+    <div class="fp-kpi" aria-label="Destaques">
+        <div class="fp-kpi-item">
+            <div class="fp-kpi-icon">&#9889;</div>
+            <strong>1 hora</strong>
+            <span>confirmação via Pix</span>
+        </div>
+        <div class="fp-kpi-item">
+            <div class="fp-kpi-icon">&#128230;</div>
+            <strong>até 2 dias úteis</strong>
+            <span>para postagem após pagamento aprovado</span>
+        </div>
+        <div class="fp-kpi-item">
+            <div class="fp-kpi-icon">&#128340;</div>
+            <strong>Seg–Sex, 8h–18h</strong>
+            <span>janela padrão de entrega</span>
+        </div>
+        <div class="fp-kpi-item">
+            <div class="fp-kpi-icon">&#128205;</div>
+            <strong>Todo o Brasil</strong>
+            <span>entregamos em todas as regiões</span>
+        </div>
+    </div>
+
+    <!-- FORMAS DE PAGAMENTO -->
+    <section class="fp-section" id="pagamento">
+        <h2>&#128179; Formas de Pagamento</h2>
+        <p>Aceitamos os principais meios de pagamento do mercado. O prazo de entrega só começa a contar após a <strong>confirmação e aprovação do pagamento</strong> pela instituição financeira responsável.</p>
+
+        <div class="fp-pay-grid">
+
+            <!-- PIX -->
+            <div class="fp-pay-card fp-pay-card--pix">
+                <div class="fp-pay-icon">&#9889;</div>
+                <h3>Pix</h3>
+                <span class="fp-pay-badge fp-pay-badge--fast">&#9989; Confirmação imediata</span>
+                <p class="fp-pay-desc">Pagamento exclusivamente via chave Pix gerada no checkout. Aprovação em até <strong>1 hora</strong> — a opção mais rápida para liberar seu pedido.</p>
+                <p class="fp-pay-time">&#128336; Disponível 24h por dia, 7 dias por semana.</p>
+            </div>
+
+            <!-- CARTÃO DE CRÉDITO -->
+            <div class="fp-pay-card fp-pay-card--card">
+                <div class="fp-pay-icon">&#128179;</div>
+                <h3>Cartão de Crédito</h3>
+                <span class="fp-pay-badge fp-pay-badge--mid">&#9203; Aprovação em até 72h</span>
+                <p class="fp-pay-desc">Bandeiras Visa, Mastercard, Elo, American Express e demais aceitas pela plataforma. Parcelamento conforme condições exibidas no checkout.</p>
+                <p class="fp-pay-time">&#128336; Análise em 4 a 72 horas úteis a depender da operadora.</p>
+            </div>
+
+            <!-- BOLETO -->
+            <div class="fp-pay-card fp-pay-card--billet">
+                <div class="fp-pay-icon">&#128196;</div>
+                <h3>Boleto Bancário</h3>
+                <span class="fp-pay-badge fp-pay-badge--slow">&#9200; Compensação em até 2 dias úteis</span>
+                <p class="fp-pay-desc">O boleto é gerado no ato da compra com vencimento de <strong>3 dias corridos</strong>. Após o pagamento, a compensação bancária pode levar até <strong>2 dias úteis</strong>.</p>
+                <p class="fp-pay-time">&#128336; Não pague após o vencimento — o pedido será cancelado automaticamente.</p>
+            </div>
+
+        </div>
+
+        <div class="fp-alert fp-alert--blue">
+            <p>&#128161; <strong>Dica de velocidade:</strong> Para receber seu pedido o mais rápido possível, prefira pagar com <strong>Pix</strong> ou <strong>Cartão de Crédito</strong>. Com o Pix, a confirmação é quase instantânea e seu pedido entra em preparação em minutos.</p>
+        </div>
+
+        <h3>Segurança e Análise de Risco</h3>
+        <p>Todos os pedidos passam por análise automática antifraude. Em alguns casos, nossa equipe pode solicitar documentos adicionais para validar o cadastro — isso pode acrescentar algumas horas ao processo de aprovação. Você será notificado por e-mail em todas as etapas.</p>
+    </section>
+
+    <!-- POLÍTICA DE FRETE -->
+    <section class="fp-section" id="frete">
+        <h2>&#128666; Política de Frete</h2>
+        <p>Trabalhamos com parceiros logísticos reconhecidos nacionalmente para garantir entregas seguras e rastreáveis em todo o Brasil. O valor e prazo do frete são calculados automaticamente no carrinho a partir do seu CEP.</p>
+
+        <h3>Como calcular o frete?</h3>
+        <ol>
+            <li>Adicione os produtos desejados ao carrinho;</li>
+            <li>No carrinho, informe seu CEP no campo indicado;</li>
+            <li>As opções de frete com preços e prazos serão exibidas automaticamente;</li>
+            <li>Escolha a modalidade desejada e prossiga para o checkout.</li>
+        </ol>
+
+        <h3>Prazo de postagem</h3>
+        <p>Após a confirmação do pagamento, seu pedido é separado, embalado e postado em <strong>até 2 dias úteis</strong>. O prazo de transporte informado pelo parceiro logístico começa a contar a partir da data de postagem.</p>
+
+        <div class="fp-alert fp-alert--yellow">
+            <p>&#9888;&#65039; <strong>Importante:</strong> O prazo total de entrega é a soma do <strong>prazo de postagem</strong> (até 2 dias úteis após aprovação do pagamento) com o <strong>prazo de transporte</strong> (conforme calculado no carrinho).</p>
+        </div>
+
+        <h3>Janela de entrega</h3>
+        <p>As entregas são realizadas de <strong>segunda a sexta-feira, das 8h às 18h</strong>. Em determinadas faixas de CEP e cidades, peuvent ocorrer também entregas aos <strong>sábados em horário comercial</strong>, conforme política do parceiro logístico.</p>
+    </section>
+
+    <!-- LINHA DO TEMPO DO PEDIDO -->
+    <section class="fp-section" id="timeline">
+        <h2>&#128203; Como funciona o seu pedido?</h2>
+        <p>Da compra à sua porta, veja cada etapa do processo:</p>
+
+        <div class="fp-timeline">
+            <div class="fp-tl-item">
+                <div class="fp-tl-dot"></div>
+                <strong>1. Pedido realizado</strong>
+                <span>Você finaliza a compra e recebe a confirmação por e-mail com os detalhes do pedido.</span>
+            </div>
+            <div class="fp-tl-item">
+                <div class="fp-tl-dot"></div>
+                <strong>2. Pagamento em análise</strong>
+                <span>Pix: até 1h &nbsp;|&nbsp; Cartão: até 72h úteis &nbsp;|&nbsp; Boleto: até 2 dias úteis após compensação.</span>
+            </div>
+            <div class="fp-tl-item">
+                <div class="fp-tl-dot"></div>
+                <strong>3. Pagamento aprovado</strong>
+                <span>Você recebe um e-mail de confirmação. A partir deste momento o prazo de postagem começa a contar.</span>
+            </div>
+            <div class="fp-tl-item">
+                <div class="fp-tl-dot"></div>
+                <strong>4. Pedido em preparação</strong>
+                <span>Equipe separando e embalando os itens. Prazo: até 2 dias úteis.</span>
+            </div>
+            <div class="fp-tl-item">
+                <div class="fp-tl-dot"></div>
+                <strong>5. Pedido postado / coletado</strong>
+                <span>Você recebe o código de rastreio por e-mail. O prazo de transporte começa a contar.</span>
+            </div>
+            <div class="fp-tl-item">
+                <div class="fp-tl-dot"></div>
+                <strong>6. Em trânsito</strong>
+                <span>Pedido a caminho. Acompanhe pelo código de rastreio ou pela área "Meus Pedidos".</span>
+            </div>
+            <div class="fp-tl-item">
+                <div class="fp-tl-dot" style="background:#16a34a; box-shadow: 0 0 0 2px #16a34a;"></div>
+                <strong>7. Pedido entregue ✔</strong>
+                <span>Produto nas suas mãos! Lembre-se de conferir a embalagem antes de assinar o recebimento.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES -->
+    <section class="fp-section" id="faq">
+        <h2>&#10067; Dúvidas Frequentes</h2>
+
+        <div class="fp-faq">
+
+            <details open>
+                <summary>Como rastrear meu pedido?</summary>
+                <div class="fp-faq-body">
+                    Assim que o pedido for postado, você receberá por e-mail o código de rastreio (quando disponível pelo parceiro logístico). O status atualizado também pode ser acompanhado diretamente na sua área <strong>"Meus Pedidos"</strong> no site.
+                </div>
+            </details>
+
+            <details>
+                <summary>E se eu não estiver em casa na entrega?</summary>
+                <div class="fp-faq-body">
+                    A transportadora realizará uma ou mais tentativas de entrega. Em caso de ausência repetida, o pacote pode ser enviado para uma <strong>agência, ponto de retirada ou locker</strong> próximo ao seu endereço, conforme a política do parceiro logístico. Se não houver retirada dentro do prazo, o pacote retorna ao remetente e um novo envio pode incorrer em custos adicionais de frete.
+                </div>
+            </details>
+
+            <details>
+                <summary>Meu endereço está errado. O que fazer?</summary>
+                <div class="fp-faq-body">
+                    Revise seus dados cadastrais antes de finalizar o pedido. Se perceber o erro <strong>antes da postagem</strong>, entre em contato imediatamente com nosso SAC. Após a postagem, alterações de endereço podem não ser possíveis e o reenvio por endereço incorreto gera novo prazo e custo de frete.
+                </div>
+            </details>
+
+            <details>
+                <summary>Quando o prazo de entrega fica pausado?</summary>
+                <div class="fp-faq-body">
+                    O prazo de transporte pode ser pausado nas seguintes situações:
+                    <ul style="margin-top:8px;">
+                        <li>Destinatário ausente em múltiplas tentativas;</li>
+                        <li>Endereço incompleto ou necessidade de confirmação de dados;</li>
+                        <li>Retenção pela Receita Federal ou órgãos de fiscalização;</li>
+                        <li>Condições climáticas adversas, greves ou situações de força maior.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Preciso conferir o produto na entrega?</summary>
+                <div class="fp-faq-body">
+                    <strong>Sim, sempre.</strong> No ato da entrega, verifique a integridade da embalagem e do produto. Se houver avaria visível, violação da embalagem ou produto incorreto, <strong>recuse o recebimento</strong> e registre o motivo no comprovante do entregador. Em seguida, entre em contato com nosso SAC imediatamente.
+                </div>
+            </details>
+
+            <details>
+                <summary>Meu boleto venceu. Posso pagar mesmo assim?</summary>
+                <div class="fp-faq-body">
+                    Não. Boletos vencidos têm o pedido cancelado automaticamente pelo sistema. Caso queira reativar a compra, será necessário realizar um novo pedido. Se os itens ainda estiverem disponíveis em estoque, entre em contato com o SAC para verificar.
+                </div>
+            </details>
+
+            <details>
+                <summary>O pagamento por Cartão foi recusado. O que acontece?</summary>
+                <div class="fp-faq-body">
+                    Em caso de recusa, o pedido fica pendente e nenhum valor é cobrado. Você pode tentar novamente com outro cartão ou mudar a forma de pagamento. Para recusas recorrentes, verifique com seu banco o limite disponível e se não há bloqueio para compras online.
+                </div>
+            </details>
+
+        </div>
+
+        <div class="fp-alert fp-alert--green">
+            <p>&#9989; <strong>Frete grátis:</strong> Fique de olho em nossas promoções sazonais com frete grátis para CEPs selecionados ou acima de determinado valor de compra. As condições são exibidas automaticamente no carrinho quando aplicáveis.</p>
+        </div>
+    </section>
+
+    <!-- CONTATO SAC -->
+    <div class="fp-contact">
+        <h2>&#128222; Precisa de ajuda?</h2>
+        <p>Nossa equipe de atendimento está disponível de segunda a sexta-feira, das 8h às 17h.</p>
+        <p>Tenha em mãos o número do seu pedido para um atendimento mais ágil.</p>
+        <a class="fp-contact-btn" href="mailto:ecommerce@enterfix.com.br">&#128140; ecommerce@enterfix.com.br</a>
+        <a class="fp-contact-btn" href="tel:+551149422222">&#128222; (11) 4942-2222</a>
+        <p style="margin-top:16px; font-size:12px; opacity:0.7;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40</p>
+    </div>
+
+</main>
+
+</body>
+</html>
+    .policy-container{max-width:900px;margin:0 auto;padding:0 16px}
+    h1,h2,h3{margin:18px 0 10px}
+    h1{font-size:28px}
+    h2{font-size:22px}
+    h3{font-size:18px}
+    p,li{font-size:15px}
+    .muted{color:#5F6B7A}
+    .note{background:#FFFDF2;border:1px solid #F3E4A4;border-radius:8px;padding:12px;margin:16px 0}
+    .card{background:#F7F8FB;border:1px solid #E3E6EE;border-radius:8px;padding:14px;margin:18px 0}
+    .hr{height:1px;background:#E3E6EE;border:0;margin:22px 0}
+    a{color:#1F1659;text-decoration:underline}
+    ul{padding-left:20px}
+    details{border:1px solid #E3E6EE;border-radius:8px;padding:0;background:#fff;margin:10px 0}
+    details>summary{cursor:pointer;list-style:none;padding:12px 14px;font-weight:bold}
+    details[open]>summary{border-bottom:1px solid #E3E6EE;background:#F7F8FB}
+    details .content{padding:12px 14px}
+    .kpi{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 2px}
+    .kpi div{flex:1 1 200px;background:#F7F8FB;border:1px solid #E3E6EE;border-radius:8px;padding:10px}
+    .kpi b{display:block;font-size:18px;margin-bottom:2px}
+    @media (max-width:520px){
+      h1{font-size:24px}
+      h2{font-size:20px}
+      p,li{font-size:14px}
+    }
+</style>
+<div class="policy-container">
+<h1 id="frete-title">Política de Frete & Pagamentos</h1>
+
+<p class="muted">Documento informativo sobre prazos, cálculo de frete, aprovação de pagamentos e janelas de entrega.</p>
+<!-- KPIs rápidos (opcional) -->
+
+<div aria-hidden="true" class="kpi">
+<div><b>até 2 dias úteis</b><span class="muted">para postagem após confirmação do pagamento</span></div>
+
+<div><b>Seg–Sex, 8h–18h</b><span class="muted">janela padrão de entrega (pode haver sábados em alguns CEPs)</span></div>
+</div>
+
+<div class="hr"> </div>
+<!-- CONTEÚDO OFICIAL (mantido exatamente como enviado) -->
+
+<article id="conteudo-oficial">
+<h2>Política de Frete</h2>
+
+<p>Os pedidos realizados em nosso site são enviados através de parceiros de logística reconhecidos no mercado para todas as regiões do Brasil, até 2 dias úteis após o recebimento da confirmação do pagamento dado pela instituição responsável pela cobrança.</p>
+
+<p>Para consultar o valor e prazo do frete, escolha quais itens deseja comprar e clique em “Adicionar ao Carrinho”. Em seguida, informe seu CEP, o custo e o prazo serão calculados automaticamente.</p>
+
+<p><strong>Atenção:</strong></p>
+
+<ul>
+	<li>O prazo de entrega começa a contar após a aprovação do pagamento. Assim que seu pagamento for aprovado você será notificado por e-mail;</li>
+	<li>Todos os pedidos estão sujeitos à análise e aprovação de dados cadastrais, o que pode demandar um tempinho maior na confirmação do pagamento;</li>
+</ul>
+
+<h2>Política de Pagamento</h2>
+
+<p>O prazo de entrega indicado no pedido começa a contar a partir da data de identificação do pagamento, que varia de acordo com a forma de pagamento:</p>
+
+<ul>
+	<li>Cartão de Crédito entre quatro (4) e setenta e duas (72) horas úteis</li>
+	<li>Pix em até uma hora</li>
+	<li>Boleto Bancário: após a compensação que pode ocorrer em até 2 dias úteis</li>
+</ul>
+
+<p>Deste modo, caso tenha urgência no recebimento da entrega, sugerimos efetuar o pagamento via Cartão de Crédito ou Pix.</p>
+
+<p>As entregas ocorrem de segunda à sexta-feira das 8h às 18h. Em algumas faixas de CEP de algumas cidades, pode haver entregas aos sábados em horário comercial. Caso você esteja ausente ou havendo necessidade de confirmar endereço e/ou nome do destinatário, ou mesmo na hipótese da caixa ficar retida para análise e validação dos órgãos competentes, o prazo de entrega é pausado.</p>
+</article>
+
+<div class="hr"> </div>
+<!-- COMPLEMENTOS ÚTEIS (adições; remova se não quiser) -->
+
+<section aria-labelledby="comp-title" class="card">
+<h2 id="comp-title">Complementos úteis</h2>
+
+<details open=""><summary>Rastreamento do pedido</summary>
+
+<div class="content">Assim que o pedido for postado, você receberá por e-mail o código de rastreio (quando aplicável). O status também pode ser acompanhado pela sua área “Meus Pedidos”.</div>
+</details>
+
+<details><summary>Tentativas de entrega & destinatário ausente</summary>
+
+<div class="content">As transportadoras realizam uma ou mais tentativas. Em caso de ausência, o pacote pode seguir para agência/locker para retirada ou retornar ao remetente, conforme política do parceiro logístico.</div>
+</details>
+
+<details><summary>Endereço incorreto ou incompleto</summary>
+
+<div class="content">Se o endereço estiver incorreto/incompleto, a entrega pode atrasar ou não ocorrer. Revise seus dados no checkout; reenvio por motivo de endereço pode gerar novo prazo e custo.</div>
+</details>
+
+<details><summary>Reentrega e prazos pausados</summary>
+
+<div class="content">O prazo de transporte pode ser pausado em fiscalizações, retenções para validação de dados e situações de força maior (clima, greves, restrições locais).</div>
+</details>
+
+<details><summary>Conferência no recebimento</summary>
+
+<div class="content">No ato da entrega, verifique a integridade da embalagem e do produto. Se houver avaria ou violação, recuse e registre o motivo no comprovante do entregador.</div>
+</details>
+</section>
+
+<div class="note" role="note"><strong>Dica:</strong> Para entregas mais rápidas, prefira pagamento por <em>Pix</em> ou <em>Cartão de Crédito</em>, que têm confirmação mais ágil.</div>
+</div>
+</section>

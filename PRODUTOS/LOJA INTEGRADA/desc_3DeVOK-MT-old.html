@@ -1,0 +1,465 @@
+<style>
+/* ─────────────────────────────────────────────
+   PREFIX: .devmt  |  3DeVOK MT — Enterfix
+───────────────────────────────────────────── */
+.devmt{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+
+/* ── HERO ── */
+.devmt-hero{background:#1F1659;border-radius:14px;overflow:hidden;margin-bottom:22px;position:relative;min-height:380px;display:flex;align-items:flex-end}
+.devmt-hero-video{position:absolute;inset:-60px -80px;width:calc(100% + 160px);height:calc(100% + 120px);border:0;pointer-events:none;opacity:.55}
+.devmt-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(15,10,50,.80) 0%,transparent 70%);width:100%}
+.devmt-badge{display:inline-block;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:3px 12px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.devmt-hero-overlay h1{font-size:22px;font-weight:800;color:#fff;line-height:1.2;margin:0 0 8px}
+.devmt-hero-overlay p{font-size:13.5px;color:rgba(255,255,255,.88);margin:0;max-width:640px;line-height:1.65}
+
+/* ── SPECS RÁPIDAS ── */
+.devmt-specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.devmt-spec{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;border-top:3px solid #1F1659}
+.devmt-spec-val{font-size:17px;font-weight:800;color:#1F1659;line-height:1.1}
+.devmt-spec-key{font-size:11.5px;color:#64748b;margin-top:3px}
+
+/* ── CARDS ── */
+.devmt-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.devmt-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid #e2e8f0;display:flex;align-items:center;gap:8px}
+.devmt-card p{font-size:14.5px;color:#334155;margin:0 0 10px;line-height:1.75}
+.devmt-card p:last-child{margin:0}
+
+/* ── FEATURES ── */
+.devmt-feats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.devmt-feats li{font-size:14px;color:#334155;padding:9px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+.devmt-feats li::before{content:'✓';color:#16a34a;font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* ── MODOS (FONTES DE LUZ) ── */
+.devmt-modes{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:10px 0}
+.devmt-mode{border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;background:#f8fafc;border-left:4px solid #1F1659}
+.devmt-mode-title{font-size:13.5px;font-weight:700;color:#1F1659;margin-bottom:5px}
+.devmt-mode-desc{font-size:13px;color:#475569;line-height:1.55}
+.devmt-mode-tag{display:inline-block;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-bottom:7px;color:#fff}
+.tag-blue{background:#1F1659}
+.tag-ir{background:#64748b}
+.tag-vcsel{background:#0f766e}
+
+/* ── TABELA ── */
+.devmt-tbl-wrap{overflow-x:auto}
+.devmt-tbl{width:100%;border-collapse:collapse;font-size:13.5px;min-width:420px}
+.devmt-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:12px;font-weight:700}
+.devmt-tbl th:first-child{border-radius:6px 0 0 0}
+.devmt-tbl th:last-child{border-radius:0 6px 0 0}
+.devmt-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.devmt-tbl tr:nth-child(even) td{background:#f8fafc}
+.devmt-tbl tr:last-child td{border-bottom:none}
+.devmt-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+
+/* ── APLICAÇÕES ── */
+.devmt-apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:12px 0}
+.devmt-app{border:1px solid #e2e8f0;border-radius:9px;padding:13px 15px;background:#fafbfc;display:flex;gap:10px;align-items:flex-start}
+.devmt-app-icon{font-size:22px;flex-shrink:0}
+.devmt-app-title{font-size:13.5px;font-weight:700;color:#0f172a;margin-bottom:3px}
+.devmt-app-desc{font-size:12.5px;color:#64748b;line-height:1.5}
+
+/* ── CARDS DE DESTAQUE (3 pilares) ── */
+.devmt-pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:14px 0}
+.devmt-pillar{border-radius:10px;padding:18px 16px;text-align:center}
+.devmt-pillar-1{background:#eff6ff;border:1px solid #bfdbfe}
+.devmt-pillar-2{background:#f0fdf4;border:1px solid #86efac}
+.devmt-pillar-3{background:#fefce8;border:1px solid #fde68a}
+.devmt-pillar-4{background:#fdf4ff;border:1px solid #e9d5ff}
+.devmt-pillar-icon{font-size:26px;margin-bottom:8px}
+.devmt-pillar-title{font-size:13px;font-weight:700;color:#1e293b;margin-bottom:4px}
+.devmt-pillar-desc{font-size:12px;color:#475569;line-height:1.5}
+
+/* ── ALERTAS ── */
+.devmt-alert-blue{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#1e40af;margin:12px 0;line-height:1.6}
+.devmt-alert-green{background:#f0fdf4;border:1px solid #86efac;border-left:4px solid #16a34a;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#15803d;margin:12px 0;line-height:1.6}
+.devmt-alert-amber{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #d97706;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#92400e;margin:12px 0;line-height:1.6}
+
+/* ── SOFTWARES ── */
+.devmt-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px 28px;margin-bottom:16px}
+.devmt-soft h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+.devmt-soft-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;margin-top:16px}
+.devmt-soft-logos img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+/* ── VÍDEO ── */
+.devmt-video-wrap{background:linear-gradient(135deg,#1F1659,#1a4fa0);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.devmt-video-wrap h2{font-size:16px;font-weight:800;color:#fff;margin:0 0 8px;text-align:center}
+.devmt-video-wrap p{font-size:14px;color:rgba(255,255,255,.88);margin:0 0 16px;line-height:1.65;text-align:center}
+.devmt-iframe{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.devmt-iframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── CTA ── */
+.devmt-cta{background:linear-gradient(135deg,#1e3a8a,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.devmt-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.devmt-cta strong{color:#fff}
+.devmt-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.devmt-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.devmt-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.devmt-btn-green:hover,.devmt-btn-white:hover{filter:brightness(.95)}
+
+/* ── FOOTNOTES ── */
+.devmt-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+
+@media(max-width:700px){
+  .devmt-soft-logos{grid-template-columns:repeat(2,1fr)}
+  .devmt-hero-overlay h1{font-size:17px}
+  .devmt-card,.devmt-soft,.devmt-video-wrap,.devmt-cta{padding:20px 16px}
+}
+@media(max-width:440px){
+  .devmt-soft-logos{grid-template-columns:1fr}
+}
+</style>
+
+<div class="devmt">
+
+  <!-- Resumo para preview (WhatsApp/LinkedIn) -->
+  <p style="margin:0 0 16px 0;display:none">Scanner 3D profissional 3DeVOK MT — 3 fontes de luz (laser azul + infravermelho + VCSEL), precisão de 0,040 mm, sem marcadores, captura colorida HD, 640 g.</p>
+
+  <!-- HERO -->
+  <div class="devmt-hero">
+    <iframe class="devmt-hero-video" src="https://www.youtube.com/embed/eGxuXPOnq9k?autoplay=1&mute=1&loop=1&playlist=eGxuXPOnq9k&controls=0&showinfo=0&modestbranding=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" title="3DeVOK MT"></iframe>
+    <div class="devmt-hero-overlay">
+      <div class="devmt-badge">&#128247; Scanner 3D Profissional — 3DeVOK MT</div>
+      <h1>3DeVOK MT — Versátil e Poderoso, Tudo em Uma Ferramenta</h1>
+      <p>3 fontes de luz: Laser Azul + Infravermelho + VCSEL &bull; Precisão até 0,040 mm &bull; Sem marcadores &bull; Cor HD &bull; 640 g</p>
+    </div>
+  </div>
+
+  <!-- SPECS RÁPIDAS -->
+  <div class="devmt-specs">
+    <div class="devmt-spec">
+      <div class="devmt-spec-val">0,040 mm</div>
+      <div class="devmt-spec-key">Precisão básica</div>
+    </div>
+    <div class="devmt-spec">
+      <div class="devmt-spec-val">4,5 M/s</div>
+      <div class="devmt-spec-key">Pontos por segundo</div>
+    </div>
+    <div class="devmt-spec">
+      <div class="devmt-spec-val">70 FPS</div>
+      <div class="devmt-spec-key">Taxa de quadros</div>
+    </div>
+    <div class="devmt-spec">
+      <div class="devmt-spec-val">3 fontes</div>
+      <div class="devmt-spec-key">Azul + IR + VCSEL</div>
+    </div>
+    <div class="devmt-spec">
+      <div class="devmt-spec-val">640 g</div>
+      <div class="devmt-spec-key">Peso</div>
+    </div>
+    <div class="devmt-spec">
+      <div class="devmt-spec-val">Sem alvo</div>
+      <div class="devmt-spec-key">Markerless nativo</div>
+    </div>
+  </div>
+
+  <!-- DESCRIÇÃO GERAL -->
+  <div class="devmt-card">
+    <h2>&#128221; Sobre o 3DeVOK MT</h2>
+    <p>O <strong>3DeVOK MT</strong> é um scanner 3D profissional desenvolvido para máxima produtividade, herdando a excelência tecnológica dos scanners industriais Scantech e incorporando uma inovadora <strong>tecnologia de múltiplas fontes de luz</strong>: laser azul, laser infravermelho e luz estruturada infravermelha VCSEL — tudo em um único equipamento compacto de <strong>215 × 73 × 53 mm</strong> e <strong>640 g</strong>.</p>
+    <p>Com <strong>34 linhas de laser azul</strong> para alta precisão industrial, <strong>22 linhas de laser infravermelho</strong> para digitalização sem luz visível (cabelos, pele, objetos sensíveis à luz) e <strong>luz estruturada VCSEL de grande área</strong> para velocidade e cobertura máximas — o MT resolve em um só scanner cenários que antes exigiam equipamentos diferentes. A precisão básica de <strong>0,040 mm</strong> e resolução de até <strong>0,050 mm</strong> atendem desde engenharia reversa industrial até digitalização humana e design artístico.</p>
+    <p>Integrado ao software <strong>3DeVOK Studio</strong>, o scanner oferece alinhamento híbrido avançado (geométrico + textura + marcadores), captura de cor em alta definição, digitalização de materiais difíceis sem pó e operação plug-and-play via USB 3.0 — com suporte a todos os principais formatos CAD/CAM do mercado.</p>
+    <div class="devmt-alert-green">
+      &#10004; <strong>Sem marcadores em todos os modos:</strong> os três modos de fonte de luz suportam digitalização completamente markerless, eliminando a etapa de colagem de alvos e acelerando o fluxo de trabalho em campo e laboratório.
+    </div>
+  </div>
+
+  <!-- IMAGEM DO PRODUTO -->
+  <div style="background-image:url('https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg');background-size:cover;background-position:center;padding:32px 16px;border-radius:12px;margin-bottom:16px">
+    <img alt="3DeVOK MT Scanner 3D Profissional" src="https://cdn.3d-scantech.com.cn/WiYhYl9GGCzrtux2/upload/image/20250314/645a5b42b50ff6c04090f131a14ff000.webp" style="max-width:560px;width:100%;height:auto;display:block;margin:0 auto;border-radius:16px" />
+  </div>
+
+  <!-- 4 PILARES -->
+  <div class="devmt-card">
+    <h2>&#9889; Quatro Pilares de Performance</h2>
+    <div class="devmt-pillars">
+      <div class="devmt-pillar devmt-pillar-1">
+        <div class="devmt-pillar-icon">&#128337;</div>
+        <div class="devmt-pillar-title">Eficiente</div>
+        <div class="devmt-pillar-desc">Sem marcadores, alinhamento híbrido e plug-and-play para máxima produtividade on-site</div>
+      </div>
+      <div class="devmt-pillar devmt-pillar-2">
+        <div class="devmt-pillar-icon">&#127919;</div>
+        <div class="devmt-pillar-title">Preciso</div>
+        <div class="devmt-pillar-desc">Resolução até 0,05 mm e precisão básica até 0,04 mm — dados industriais de alta confiabilidade</div>
+      </div>
+      <div class="devmt-pillar devmt-pillar-3">
+        <div class="devmt-pillar-icon">&#128736;</div>
+        <div class="devmt-pillar-title">Confiável</div>
+        <div class="devmt-pillar-desc">Opera em plena luz solar, digitaliza materiais pretos e reflexivos sem pó preparatório</div>
+      </div>
+      <div class="devmt-pillar devmt-pillar-4">
+        <div class="devmt-pillar-icon">&#127914;</div>
+        <div class="devmt-pillar-title">Versátil</div>
+        <div class="devmt-pillar-desc">3 fontes de luz em um scanner — engenharia reversa, corpo humano, design artístico, pesquisa</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FONTES DE LUZ / MODOS -->
+  <div class="devmt-card">
+    <h2>&#128161; Três Fontes de Luz — Uma Ferramenta Completa</h2>
+    <p>A grande inovação do 3DeVOK MT é reunir três tecnologias de iluminação em um único scanner portátil, cada uma otimizada para um conjunto específico de aplicações:</p>
+    <div class="devmt-modes">
+      <div class="devmt-mode">
+        <div class="devmt-mode-tag tag-blue">LASER AZUL — 34 LINHAS</div>
+        <div class="devmt-mode-title">&#128309; Digitalização de Alta Precisão</div>
+        <div class="devmt-mode-desc">34 linhas de laser azul para engenharia reversa e inspeção dimensional industrial com <strong>precisão até 0,040 mm</strong> e <strong>3.300.000 pontos/s</strong>. FOV de 140×140 até 490×490 mm. Distância de trabalho 150–1.000 mm. Ideal para peças mecânicas, moldes e componentes industriais.</div>
+      </div>
+      <div class="devmt-mode">
+        <div class="devmt-mode-tag tag-ir">LASER INFRAVERMELHO — 22 LINHAS</div>
+        <div class="devmt-mode-title">&#128308; Digitalização Sem Luz Visível</div>
+        <div class="devmt-mode-desc">22 linhas de laser infravermelho <strong>invisíveis e olho-seguras (Classe I)</strong> para objetos e superfícies sensíveis à luz. <strong>2.450.000 pontos/s</strong>. Suporta captura de cabelo, pele e materiais biológicos. FOV estendido de 50×75 até 1.100×1.000 mm — ideal para digitalização humana.</div>
+      </div>
+      <div class="devmt-mode">
+        <div class="devmt-mode-tag tag-vcsel">LUZ ESTRUTURADA VCSEL</div>
+        <div class="devmt-mode-title">&#128994; Grande Área em Alta Velocidade</div>
+        <div class="devmt-mode-desc">Infravermelho VCSEL de grande área para varredura ultrarrápida com <strong>4.500.000 pontos/s</strong> e campo de visão ampliado. Digitalização parcial fina e modo de alta velocidade disponíveis. Ideal para objetos grandes ou digitalização de corpo inteiro em tempo recorde.</div>
+      </div>
+    </div>
+    <div class="devmt-alert-blue" style="margin-top:14px">
+      &#8505;&#65039; <strong>Alinhamento Híbrido Avançado:</strong> o MT integra alinhamento por características geométricas, textura e marcadores nas três fontes de luz, operando de forma fluida sem necessidade de alvos na grande maioria dos cenários.
+    </div>
+  </div>
+
+  <!-- DIFERENCIAIS -->
+  <div class="devmt-card">
+    <h2>&#10003; Principais Diferenciais</h2>
+    <ul class="devmt-feats">
+      <li>3 fontes de luz em 1 scanner: laser azul + infravermelho + VCSEL estruturado</li>
+      <li>Digitalização markerless em todos os modos — sem colagem de alvos</li>
+      <li>Precisão básica até 0,040 mm — nível industrial certificado</li>
+      <li>Resolução até 0,050 mm com ponto mínimo de 0,05 mm</li>
+      <li>Até 4.500.000 pontos/s (modo VCSEL) — aquisição ultrarrápida</li>
+      <li>70 FPS — digitalização fluida mesmo em geometrias complexas</li>
+      <li>Captura de cor em HD com mapeamento de textura de alta definição</li>
+      <li>Digitaliza materiais pretos e reflexivos sem pó preparatório</li>
+      <li>Opera em luz solar direta, ambientes internos e de baixa luminosidade</li>
+      <li>Laser Classe I e II certificados (IEC 60825 + IEC 62471) — olho-seguro</li>
+      <li>Design compacto 215 × 73 × 53 mm e leve 640 g — uso com uma só mão</li>
+      <li>Plug-and-play via USB 3.0 — sem drivers complexos ou configurações</li>
+      <li>Campo de visão ajustável de 140×140 mm até 1.100×1.000 mm</li>
+      <li>Software 3DeVOK Studio com interface moderna e parâmetros flexíveis</li>
+      <li>Compatível com os principais softwares CAD/CAM e metrologia do mercado</li>
+    </ul>
+  </div>
+
+  <!-- ESPECIFICAÇÕES TÉCNICAS -->
+  <div class="devmt-card">
+    <h2>&#128202; Especificações Técnicas</h2>
+    <div class="devmt-tbl-wrap">
+      <table class="devmt-tbl" aria-label="Especificações técnicas 3DeVOK MT">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Laser Azul (34 linhas)</th>
+            <th>Laser IV (22 linhas)</th>
+            <th>VCSEL Estruturado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Classe do laser</td>
+            <td colspan="2">Classe II — olho-seguro</td>
+            <td>Classe I — olho-seguro</td>
+          </tr>
+          <tr>
+            <td>Recursos de digitalização</td>
+            <td>Markerless</td>
+            <td>Markerless, sem luz visível</td>
+            <td>Markerless, sem luz, digitaliz. parcial, alta velocidade</td>
+          </tr>
+          <tr>
+            <td>Distância ponto a ponto</td>
+            <td>0,05 – 5 mm</td>
+            <td colspan="2">0,1 – 5 mm</td>
+          </tr>
+          <tr>
+            <td>Taxa de digitalização</td>
+            <td>Até 3.300.000 pontos/s</td>
+            <td>Até 2.450.000 pontos/s</td>
+            <td>Até 4.500.000 pontos/s</td>
+          </tr>
+          <tr>
+            <td>Distância de trabalho</td>
+            <td>150 – 1.000 mm</td>
+            <td colspan="2">150 – 1.500 mm</td>
+          </tr>
+          <tr>
+            <td>Campo de visão (FOV)</td>
+            <td>140×140 mm – 490×490 mm</td>
+            <td colspan="2">50×75 mm – 1.100×1.000 mm</td>
+          </tr>
+          <tr>
+            <td>Modos de alinhamento</td>
+            <td>Híbrido, marcadores, textura, geométrico</td>
+            <td colspan="2">Híbrido, textura, geométrico</td>
+          </tr>
+          <tr>
+            <td>Captura de cor</td>
+            <td colspan="3">Sim — câmera de cor integrada com textura HD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="height:14px"></div>
+
+    <div class="devmt-tbl-wrap">
+      <table class="devmt-tbl" aria-label="Especificações gerais 3DeVOK MT">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Precisão básica <sup>(1)</sup></td>
+            <td>Até 0,040 mm</td>
+          </tr>
+          <tr>
+            <td>Precisão volumétrica <sup>(1)</sup></td>
+            <td>Até 0,040 mm + 0,040 mm/m</td>
+          </tr>
+          <tr>
+            <td>Resolução</td>
+            <td>Até 0,050 mm</td>
+          </tr>
+          <tr>
+            <td>Taxa de quadros</td>
+            <td>Até 70 FPS</td>
+          </tr>
+          <tr>
+            <td>Dimensões</td>
+            <td>215 mm × 73 mm × 53 mm</td>
+          </tr>
+          <tr>
+            <td>Peso</td>
+            <td>640 g</td>
+          </tr>
+          <tr>
+            <td>Interface</td>
+            <td>USB 3.0</td>
+          </tr>
+          <tr>
+            <td>Alimentação</td>
+            <td>DC 12 V / 5,0 A</td>
+          </tr>
+          <tr>
+            <td>Temperatura operacional</td>
+            <td>0 °C a 40 °C</td>
+          </tr>
+          <tr>
+            <td>Umidade operacional</td>
+            <td>10% a 90% UR (sem condensação)</td>
+          </tr>
+          <tr>
+            <td>Formatos de saída</td>
+            <td>.obj, .stl, .ply, .asc, .mk2, .txt, .epj, .apj, .spj, .map, .sk</td>
+          </tr>
+          <tr>
+            <td>Software nativo</td>
+            <td>3DeVOK Studio + 3DeVOK Mapping</td>
+          </tr>
+          <tr>
+            <td>Certificações</td>
+            <td>CE-EMC, FCC, RoHS, IEC 60825, IEC 62471, IEC 60529-IP50, WEEE, KC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="devmt-fn">
+      <sup>(1)</sup> Resultados de precisão obtidos em condições de laboratório; sujeitos a incertezas de medição conforme ambiente e superfície do objeto.<br>
+      <em>* A Enterfix reserva-se o direito de alterar parâmetros e imagens conforme a legislação vigente e atualizações do fabricante.</em>
+    </p>
+
+    <div class="devmt-alert-amber" style="margin-top:14px">
+      &#128187; <strong>Requisitos mínimos de PC recomendados:</strong> Windows 10/11 (64-bit) &bull; CPU: Intel i7-13650HX ou superior &bull; RAM: 32 GB ou mais &bull; GPU: NVIDIA RTX 3060 ou superior, mínimo 6 GB VRAM
+    </div>
+  </div>
+
+  <!-- APLICAÇÕES -->
+  <div class="devmt-card">
+    <h2>&#127981; Aplicações Típicas</h2>
+    <div class="devmt-apps">
+      <div class="devmt-app">
+        <div class="devmt-app-icon">&#128295;</div>
+        <div>
+          <div class="devmt-app-title">Engenharia Reversa</div>
+          <div class="devmt-app-desc">34 linhas de laser azul com precisão de 0,04 mm — recriação de modelos CAD de peças sem documentação, compatível com software RE líderes de mercado.</div>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <div class="devmt-app-icon">&#129485;</div>
+        <div>
+          <div class="devmt-app-title">Digitalização Humana</div>
+          <div class="devmt-app-desc">Laser infravermelho Classe I (invisível e olho-seguro) para captura de corpo, face, cabelo e membros — reabilitação médica, próteses e customização corporal.</div>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <div class="devmt-app-icon">&#127912;</div>
+        <div>
+          <div class="devmt-app-title">Design Artístico e Escultura</div>
+          <div class="devmt-app-desc">Cor HD + resolução de 0,1 mm no modo VCSEL — digitalização de esculturas, artefatos e objetos artísticos com fidelidade cromática excepcional.</div>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <div class="devmt-app-icon">&#128202;</div>
+        <div>
+          <div class="devmt-app-title">Controle de Qualidade</div>
+          <div class="devmt-app-desc">Inspeção dimensional e comparação CAD vs. peça real para componentes automotivos, aeroespaciais e de manufatura em geral.</div>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <div class="devmt-app-icon">&#128424;&#65039;</div>
+        <div>
+          <div class="devmt-app-title">Impressão 3D</div>
+          <div class="devmt-app-desc">Geração de STL/OBJ de alta qualidade para impressão FDM, SLA e SLS — do objeto físico ao arquivo pronto para impressão em minutos.</div>
+        </div>
+      </div>
+      <div class="devmt-app">
+        <div class="devmt-app-icon">&#127891;</div>
+        <div>
+          <div class="devmt-app-title">Pesquisa, Educação e Arqueologia</div>
+          <div class="devmt-app-desc">Múltiplas fontes de luz e software didático com desconto educacional — digitalização de relíquias, peças anatômicas e protótipos acadêmicos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOFTWARES COMPATÍVEIS -->
+  <div class="devmt-soft">
+    <h2>&#128187; Software Nativo e Compatibilidade</h2>
+    <p style="font-size:14px;color:#475569;margin:0 0 4px">O 3DeVOK MT opera nativamente com o <strong>3DeVOK Studio</strong> — plataforma de digitalização com interface intuitiva, parâmetros ajustáveis, alinhamento híbrido e exportação para todos os formatos de mercado. Para mapeamento de superfície e análise avançada, o <strong>3DeVOK Mapping</strong> complementa o fluxo de trabalho. Compatível também com:</p>
+    <div class="devmt-soft-logos">
+      <img alt="Zeiss" src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" />
+      <img alt="Verisurf" src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" />
+      <img alt="PolyWorks" src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" />
+      <img alt="Geomagic" src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" />
+    </div>
+    <p style="font-size:13px;color:#64748b;margin:14px 0 0">Compatível ainda com <strong>QuickSurface Lite/Pro</strong> (engenharia reversa paramétrica), além de importação direta no SolidWorks, CATIA, Siemens NX e demais plataformas CAD via formatos .obj, .stl, .ply e .igs.</p>
+  </div>
+
+  <!-- VÍDEO YOUTUBE -->
+  <div class="devmt-video-wrap">
+    <h2>&#127916; 3DeVOK MT em Ação</h2>
+    <p>Veja o 3DeVOK MT em operação real — as três fontes de luz, a digitalização markerless, a captura de cor HD e a velocidade do modo VCSEL em aplicações de engenharia reversa e digitalização humana.</p>
+    <div class="devmt-iframe">
+      <iframe allowfullscreen loading="lazy" src="https://www.youtube.com/embed/pFbamWRfGCw" title="3DeVOK MT Professional 3D Scanner"></iframe>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="devmt-cta">
+    <p><strong>&#128222; Solicite uma demonstração ou orçamento personalizado</strong></p>
+    <p>Fale com nosso time técnico e descubra como o 3DeVOK MT pode atender sua aplicação — engenharia reversa, digitalização humana, design ou controle de qualidade.</p>
+    <div class="devmt-cta-btns">
+      <a class="devmt-btn-green" href="https://enterfix.com.br/produto/3devok-mt/" rel="noopener" target="_blank">&#128722; Comprar na Loja</a>
+      <a class="devmt-btn-white" href="https://lp.enterfix.com.br/catalogo-3devok-mt" rel="noopener" target="_blank">&#128196; Baixar Catálogo</a>
+      <a class="devmt-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" rel="noopener" target="_blank">&#128172; WhatsApp (11) 96841-6776</a>
+      <a class="devmt-btn-white" href="mailto:vendas@enterfix.com.br">&#9993;&#65039; vendas@enterfix.com.br</a>
+    </div>
+    <p style="font-size:12px;opacity:.65;margin-top:14px">Seg–Sex 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; Enterfix Indústria, Comércio e Serviços Ltda.</p>
+  </div>
+
+</div>

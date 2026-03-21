@@ -1,0 +1,56 @@
+[vc_row full_width="stretch_row" bg_type="grad" bg_override="full" css=".vc_custom_1743499489559{padding-top: 60px !important;padding-bottom: 80px !important;background-color: #F2F2F2 !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FCFCFC), color-stop(100%, #E3E3E3));background: -moz-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -webkit-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -o-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -ms-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);"][vc_column][ind_custom_heading heading="SISTEMAS AUTOMATIZADOS" position="center" margin_bottom="32"][vc_column_text css_animation="fadeInUp" css=".vc_custom_1743499181401{padding: 32px !important;text-align: center;}"]
+
+<p style="text-align: center;font-size: 18px;line-height: 1.6">
+Os <strong>Sistemas Automatizados</strong> da Scanology oferecem <strong>digitalização 3D totalmente automatizada</strong> para integração em linhas de produção e ambientes industriais de alta demanda.
+</p>
+
+<p style="text-align: center;font-size: 16px;color: #666;line-height: 1.6">
+Com robótica integrada e controle de qualidade 24/7, nossa linha automatizada garante <strong>máxima produtividade</strong> e qualidade consistente, desde soluções desktop compactas até células industriais completas.
+</p>
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1743499551634{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;padding-top: 40px !important;padding-bottom: 80px !important;}"][vc_column]
+
+[ind_custom_heading heading="MODELOS DISPONÍVEIS" heading_color="#000000" position="center" margin_bottom="32"]
+
+[vc_column_text css_animation="fadeInUp"]
+
+<table style="width: 85%;max-width: 1000px;margin: 40px auto;border-collapse: collapse;text-align: center;font-size: 16px;line-height: 1.6;border-radius: 8px;overflow: hidden">
+  <thead style="background-color: #E67E22;color: #ffffff">
+    <tr>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Modelo</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Aplicação Principal</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Tempo de Ciclo</th>
+      <th style="padding: 14px;border: 1px solid #dcdcdc">Capacidade</th>
+    </tr>
+  </thead>
+  <tbody style="color: #333">
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>AM-CELL C Series</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Célula automatizada industrial</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">2-8 min/peça</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Até 50kg</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>AM-DESK</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Sistema desktop automatizado</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">5-15 minutos</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Até 5kg</td>
+    </tr>
+    <tr style="background-color: #ffffff">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>AutoScan-T</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Sistema turbo alta velocidade</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">30-90 segundos</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">40-120 peças/hora</td>
+    </tr>
+    <tr style="background-color: #f7f7f7">
+      <td style="padding: 12px;border: 1px solid #dcdcdc"><strong>AutoScan-K</strong></td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Sistema kompakt espaço reduzido</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">2-5 minutos</td>
+      <td style="padding: 12px;border: 1px solid #dcdcdc">Até 15kg</td>
+    </tr>
+  </tbody>
+</table>
+
+[/vc_column_text][/vc_column][/vc_row]

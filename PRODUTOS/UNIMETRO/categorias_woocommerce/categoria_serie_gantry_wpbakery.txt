@@ -1,0 +1,46 @@
+[vc_row][vc_column][vc_column_text]
+<h1 style="text-align: center; color: #0066cc;">SÉRIE GANTRY - MEDIÇÃO DE GRANDES COMPONENTES</h1>
+<p style="text-align: center; font-size: 18px; color: #333;">Estrutura pórtico para componentes industriais - HP Series com capacidade excepcional</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890123{background-color: #f8f9fa !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sobre a Série GANTRY</h2>
+<p>A Série GANTRY foi especialmente desenvolvida para medição de grandes componentes industriais, utilizando estrutura em pórtico fixo que oferece estabilidade excepcional e capacidade de carga superior. Com a linha HP Series, esta série atende às demandas de indústrias que trabalham com componentes de grande porte mantendo alta precisão.</p>
+
+<p>Projetada para superar os desafios de medição em componentes pesados e volumosos, a estrutura tipo gantry proporciona rigidez estrutural incomparável, eliminando deflexões e garantindo precisão consistente mesmo com cargas de até 2000kg. O design permite acesso facilitado para carregamento de peças grandes.</p>
+
+<p>Equipada com sistemas de medição avançados e software especializado para grandes componentes, as máquinas GANTRY oferecem produtividade excepcional em aplicações industriais pesadas, sendo ideais para indústrias aeroespacial, naval, energia e equipamentos industriais de grande porte.</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Características Técnicas</h2>
+<ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Estrutura Pórtico:</strong> Design fixo com máxima rigidez estrutural</li>
+<li><strong>Capacidade de Carga:</strong> Até 2000kg com precisão mantida</li>
+<li><strong>Área Expandida:</strong> Volume de medição otimizado para grandes peças</li>
+<li><strong>Acesso Facilitado:</strong> Carregamento simplificado de componentes pesados</li>
+<li><strong>Rigidez Superior:</strong> Eliminação de deflexões e vibrações</li>
+<li><strong>Precisão Mantida:</strong> Especificações garantidas mesmo com carga máxima</li>
+<li><strong>Sistema Robusto:</strong> Componentes dimensionados para uso industrial pesado</li>
+<li><strong>Software Especializado:</strong> Otimizado para componentes de grande porte</li>
+<li><strong>Isolamento de Vibrações:</strong> Base preparada para ambientes industriais</li>
+<li><strong>Manutenção Facilitada:</strong> Acesso otimizado para componentes críticos</li>
+</ul>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890124{background-color: #e9ecef !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Modelos Disponíveis</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 400px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">GANTRY HP SERIES</h3>
+<p><strong>Área de Medição:</strong> 1500 x 1000 x 800mm</p>
+<p><strong>Estrutura:</strong> Pórtico fixo em aço com tratamento especial</p>
+<p><strong>Capacidade de Carga:</strong> 2000kg máximo</p>
+<p><strong>Precisão:</strong> 2+L/300μm mantida com carga total</p>
+<p><strong>Aplicação:</strong> Componentes industriais de grande porte</p>
+<p><strong>Ideal para:</strong> Aeroespacial, naval, energia, equipamentos pesados</p>
+<p><strong>Características:</strong> Acesso 360° e carregamento facilitado</p>
+<p><strong>Software:</strong> Especializado para análise de grandes componentes</p>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]

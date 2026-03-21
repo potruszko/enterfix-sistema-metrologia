@@ -1,0 +1,139 @@
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h2>3DeVOK MT - Scanner 3D de Cor Multi-Textura</h2>
+
+O <strong>3DeVOK MT</strong> é um scanner 3D de cor especializado em captura de múltiplas texturas e propriedades de superfície. Este sistema avançado oferece digitalização completa de materiais complexos com diferentes propriedades óticas.
+
+<strong>Características Principais:</strong>
+• Captura simultânea de múltiplas propriedades de superfície
+• Sistema de iluminação multi-espectral
+• Análise de propriedades de materiais
+• Digitalização de superfícies complexas
+• Processamento avançado de texturas
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Tecnologia Multi-Textura</h3>
+
+O 3DeVOK MT utiliza tecnologia avançada de captura multi-espectral que permite digitalizar diferentes propriedades de superfície simultaneamente, incluindo albedo, normalidade, rugosidade e propriedades especulares.
+
+<strong>Especificações Técnicas Multi-Textura:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão Geométrica</strong></td>
+<td>±0,08mm</td>
+</tr>
+<tr>
+<td><strong>Resolução de Textura</strong></td>
+<td>4K por propriedade</td>
+</tr>
+<tr>
+<td><strong>Propriedades Capturadas</strong></td>
+<td>Albedo, Normal, Roughness, Specular</td>
+</tr>
+<tr>
+<td><strong>Espectros de Iluminação</strong></td>
+<td>6 bandas espectrais</td>
+</tr>
+<tr>
+<td><strong>Área de Digitalização</strong></td>
+<td>250mm × 200mm</td>
+</tr>
+<tr>
+<td><strong>Tempo de Captura</strong></td>
+<td>5-8 segundos/frame</td>
+</tr>
+<tr>
+<td><strong>Câmeras Especializadas</strong></td>
+<td>3 × 20MP multi-espectrais</td>
+</tr>
+<tr>
+<td><strong>Análise de Materiais</strong></td>
+<td>BRDF completo</td>
+</tr>
+<tr>
+<td><strong>Formatos PBR</strong></td>
+<td>Metallic/Roughness, Specular/Glossiness</td>
+</tr>
+<tr>
+<td><strong>Compatibilidade</strong></td>
+<td>Unreal, Unity, Blender, Maya</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações Multi-Textura Avançadas</h3>
+
+<strong>Desenvolvimento de Jogos:</strong>
+• Criação de assets PBR realistas
+• Digitalização de materiais reais
+• Texturas para engines de renderização
+
+<strong>Indústria de Materiais:</strong>
+• Caracterização de superfícies
+• Análise de propriedades óticas
+• Controle de qualidade visual
+
+<strong>Pesquisa e Desenvolvimento:</strong>
+• Estudos de propriedades de materiais
+• Validação de modelos de renderização
+• Análise de comportamento ótico
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Software 3DeVOK Materials</h3>
+
+O 3DeVOK MT utiliza o software 3DeVOK Materials, especializado em análise de propriedades de materiais:
+
+<strong>Recursos Materials:</strong>
+• Análise automática de propriedades BRDF
+• Geração de mapas PBR completos
+• Calibração de propriedades espectrais
+• Exportação para engines 3D populares
+• Biblioteca de materiais digitais
+• Análise comparativa de materiais
+
+<strong>Pipeline PBR:</strong>
+Fluxo completo para criação de materiais physically based rendering
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens Multi-Textura</h3>
+
+<strong>Realismo Máximo:</strong>
+Captura de todas as propriedades óticas necessárias para renderização fotorrealística.
+
+<strong>Eficiência de Workflow:</strong>
+Múltiplas propriedades capturadas simultaneamente em uma única sessão.
+
+<strong>Compatibilidade Universal:</strong>
+Saída direta para principais engines de renderização do mercado.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Multi-Textura Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para captura multi-textura:
+
+• <strong>Treinamento PBR:</strong> Cursos em workflows de materiais PBR
+• <strong>Calibração Espectral:</strong> Setup profissional de captura multi-espectral
+• <strong>Consultoria de Materials:</strong> Otimização para diferentes tipos de materiais
+• <strong>Integração Pipeline:</strong> Suporte para integração com workflows de produção
+• <strong>Biblioteca de Materiais:</strong> Acesso a biblioteca expandida de materiais
+
+<strong>Agende uma Demonstração e explore o futuro da captura de materiais digitais!</strong>
+[/vc_column_text][/vc_column][/vc_row]

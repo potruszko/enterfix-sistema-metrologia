@@ -1,0 +1,319 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos Principais do Software</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PROCESSING]" alt="Processamento Avançado" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Processamento IA</h4>
+<p style="font-size: 14px; line-height: 1.5;">Algoritmos inteligentes para processamento automático e otimizado de dados 3D.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_ANALYSIS]" alt="Análise Avançada" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Análise Completa</h4>
+<p style="font-size: 14px; line-height: 1.5;">Ferramentas avançadas de medição, comparação e análise dimensional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_VISUALIZATION]" alt="Visualização 3D" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Visualização 3D</h4>
+<p style="font-size: 14px; line-height: 1.5;">Renderização em tempo real com qualidade fotorrealística e interação intuitiva.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_EXPORT]" alt="Exportação Múltipla" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Exportação Flex</h4>
+<p style="font-size: 14px; line-height: 1.5;">Suporte nativo para múltiplos formatos industriais e CAD.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Resources Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>TViewer - Software de Visualização em Realidade Virtual</h1>
+
+<p class="produto-breve-descricao">Software profissional de digitalização 3D com recursos avançados para processamento, análise e visualização de dados tridimensionais.</p>
+
+O <strong>TViewer</strong> é um software especializado em visualização de dados 3D em realidade virtual e ambientes imersivos. Esta solução inovadora permite exploração de modelos 3D de forma totalmente imersiva e colaborativa.
+
+<strong>Características Principais:</strong>
+• Visualização em realidade virtual (VR)
+• Suporte para headsets VR populares
+• Colaboração multi-usuário em VR
+• Interface de realidade aumentada (AR)
+• Experiências imersivas personalizáveis
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">TViewer - Software de Visualização em Realidade Virtual - Software Profissional de Digitalização 3D</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Software profissional de digitalização 3D com recursos avançados para processamento, análise e visualização de dados tridimensionais.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Touch</h3>
+        <p style="font-size: 16px;">Interface</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Mobile</h3>
+        <p style="font-size: 16px;">Mobilidade</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">3D</h3>
+        <p style="font-size: 16px;">Interação</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Portable</h3>
+        <p style="font-size: 16px;">Portátil</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração do Software</h3>
+<p>Veja o TViewer em ação demonstrando seus recursos avançados de processamento 3D.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Interface intuitiva e profissional</li>
+<li>Processamento automático</li>
+<li>Recursos de análise avançados</li>
+<li>Exportação para múltiplos formatos</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações e Recursos do Software</h3>
+
+[vc_row]<!-- Features Cards Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #ffffff !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 40px;">Recursos Principais do Software</h3>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_PROCESSING]" alt="Processamento Avançado" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Processamento IA</h4>
+<p style="font-size: 14px; line-height: 1.5;">Algoritmos inteligentes para processamento automático e otimizado de dados 3D.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_ANALYSIS]" alt="Análise Avançada" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Análise Completa</h4>
+<p style="font-size: 14px; line-height: 1.5;">Ferramentas avançadas de medição, comparação e análise dimensional.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_VISUALIZATION]" alt="Visualização 3D" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Visualização 3D</h4>
+<p style="font-size: 14px; line-height: 1.5;">Renderização em tempo real com qualidade fotorrealística e interação intuitiva.</p>
+</div>
+[/vc_column_text][/vc_column][vc_column width="1/4"][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;padding: 30px !important;border: 1px solid #e0e0e0 !important;border-radius: 10px !important;background-color: #f8f9fa !important;}"]
+<div style="text-align: center;">
+<img src="[ICON_EXPORT]" alt="Exportação Múltipla" style="width: 64px; height: 64px; margin-bottom: 20px;">
+<h4 style="color: #2c3e50; margin-bottom: 15px;">Exportação Flex</h4>
+<p style="font-size: 14px; line-height: 1.5;">Suporte nativo para múltiplos formatos industriais e CAD.</p>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Resources Section -->
+<!-- Software Compatibility Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #2c3e50 !important;padding-top: 60px !important;padding-bottom: 60px !important;}"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; margin-bottom: 30px;">Integração e Compatibilidade</h3>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 40px;">Integração perfeita com ecossistema completo de digitalização 3D</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">🔗 Conectividade Total</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>Todos os scanners Scanology</li>
+            <li>Sistemas de rastreamento</li>
+            <li>Equipamentos de terceiros</li>
+            <li>APIs para desenvolvimento</li>
+        </ul>
+    </div>
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px;">
+        <h4 style="color: #ffd700; margin-bottom: 15px;">💾 Formatos Suportados</h4>
+        <ul style="text-align: left; line-height: 1.6;">
+            <li>STL, OBJ, PLY, ASC</li>
+            <li>IGES, STEP, CAD nativo</li>
+            <li>Formatos de metrologia</li>
+            <li>Exportação customizada</li>
+        </ul>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Tecnologia de Realidade Virtual</h3>
+
+O TViewer utiliza tecnologia avançada de VR/AR que permite visualização imersiva de dados 3D em escala real, oferecendo experiências colaborativas e análises dimensionais em ambiente virtual.
+
+<strong>Recursos de Realidade Virtual:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Funcionalidade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visualização VR</strong></td>
+<td>Exploração imersiva de modelos 3D</td>
+</tr>
+<tr>
+<td><strong>Escala Real</strong></td>
+<td>Visualização em tamanho real dos objetos</td>
+</tr>
+<tr>
+<td><strong>Colaboração Multi-usuário</strong></td>
+<td>Até 8 usuários simultâneos em VR</td>
+</tr>
+<tr>
+<td><strong>Medições VR</strong></td>
+<td>Ferramentas de medição em ambiente virtual</td>
+</tr>
+<tr>
+<td><strong>Anotações 3D</strong></td>
+<td>Sistema de comentários espaciais</td>
+</tr>
+<tr>
+<td><strong>Realidade Aumentada</strong></td>
+<td>Sobreposição AR em ambiente real</td>
+</tr>
+<tr>
+<td><strong>Headsets Suportados</strong></td>
+<td>Oculus, HTC Vive, Windows Mixed Reality</td>
+</tr>
+<tr>
+<td><strong>Streaming de Dados</strong></td>
+<td>Carregamento otimizado de grandes modelos</td>
+</tr>
+<tr>
+<td><strong>Apresentações VR</strong></td>
+<td>Modo apresentação para demos</td>
+</tr>
+<tr>
+<td><strong>Exportação VR</strong></td>
+<td>Criação de experiências standalone</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações em Realidade Virtual</h3>
+
+<strong>Design e Prototipagem:</strong>
+• Avaliação de protótipos em escala real
+• Revisões de design colaborativas
+• Análise ergonômica em VR
+
+<strong>Treinamento e Educação:</strong>
+• Treinamentos imersivos industriais
+• Educação técnica em 3D
+• Simulações de procedimentos
+
+<strong>Apresentações Comerciais:</strong>
+• Demos imersivas para clientes
+• Apresentações de produtos em VR
+• Marketing experiencial
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Experiências Colaborativas</h3>
+
+O TViewer oferece funcionalidades avançadas de colaboração em ambiente virtual:
+
+<strong>Colaboração VR:</strong>
+• Reuniões virtuais com modelos 3D
+• Discussões técnicas em ambiente imersivo
+• Tomada de decisões colaborativas
+• Registro de sessões VR
+• Compartilhamento de pontos de vista
+• Ferramentas de comunicação integradas
+
+<strong>Produtividade Elevada:</strong>
+Colaboração remota eficiente reduz necessidade de deslocamentos
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens da Realidade Virtual</h3>
+
+<strong>Imersão Total:</strong>
+Experiência de visualização completamente imersiva em escala real.
+
+<strong>Colaboração Global:</strong>
+Equipes distribuídas podem colaborar como se estivessem no mesmo local.
+
+<strong>Compreensão Aprimorada:</strong>
+Visualização 3D imersiva melhora significativamente a compreensão de geometrias complexas.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico VR Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para tecnologias VR/AR:
+
+• <strong>Setup de VR:</strong> Assistência completa para configuração de ambiente VR
+• <strong>Treinamento VR:</strong> Cursos especializados em uso de VR para dados 3D
+• <strong>Consultoria em Aplicações:</strong> Desenvolvimento de aplicações VR customizadas
+• <strong>Suporte de Hardware:</strong> Assistência para seleção e setup de equipamentos VR
+• <strong>Experiências Customizadas:</strong> Desenvolvimento de experiências VR específicas
+
+<strong>Agende uma Demonstração e entre no futuro da visualização 3D imersiva!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Download CTA Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 80px !important;padding-bottom: 80px !important;}" el_class="cta-download-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{text-align: center !important;color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h3 style="color: white; font-size: 2.2em; margin-bottom: 20px;">Potencialize sua Digitalização 3D</h3>
+<p style="font-size: 1.3em; line-height: 1.6; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Descubra como nosso software pode maximizar o potencial dos seus dados 3D com recursos profissionais avançados.</p>
+
+<div style="margin-bottom: 40px;">
+<a href="[LINK_DOWNLOAD]" style="display: inline-block; background-color: #ffd700; color: #2c3e50; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+💾 DOWNLOAD GRATUITO
+</a>
+<a href="[LINK_DEMONSTRACAO]" style="display: inline-block; background-color: transparent; color: white; padding: 18px 40px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 50px; margin: 10px; border: 2px solid white; transition: all 0.3s ease;">
+🎯 DEMO ONLINE
+</a>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">📧</div>
+    <div style="font-size: 1.1em;">contato@enterfix.com.br</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">💬</div>
+    <div style="font-size: 1.1em;">Suporte Técnico</div>
+</div>
+<div style="text-align: center;">
+    <div style="font-size: 2.5em; margin-bottom: 10px;">🚀</div>
+    <div style="font-size: 1.1em;">Treinamento Gratuito</div>
+</div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: software 3d, tviewer, digitalização 3d, processamento 3d, visualização 3d, análise 3d, scanology, enterfix -->

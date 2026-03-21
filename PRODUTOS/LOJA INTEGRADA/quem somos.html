@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quem Somos — Enterfix</title>
+    <meta name="description" content="Conheça a Enterfix: referência em metrologia e automação industrial no Brasil desde 2011. Precisão, inovação e soluções sob medida para a indústria." />
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.75;
+            font-size: 16px;
+        }
+
+        /* ===== LAYOUT ===== */
+        .qs-page {
+            max-width: 1060px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ===== HERO ===== */
+        .qs-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px;
+            padding: 52px 44px;
+            margin-bottom: 32px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .qs-hero::before {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            pointer-events: none;
+        }
+        .qs-hero::after {
+            content: '';
+            position: absolute;
+            right: 60px;
+            bottom: -80px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            pointer-events: none;
+        }
+        .qs-hero .qs-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32);
+            border-radius: 50px;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .qs-hero h1 {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: #fff;
+            max-width: 700px;
+        }
+        .qs-hero p {
+            font-size: 15px;
+            opacity: 0.88;
+            line-height: 1.85;
+            max-width: 680px;
+            margin: 0;
+        }
+        .qs-hero a { color: #93c5fd; }
+
+        /* ===== NÚMEROS ===== */
+        .qs-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+        .qs-stat {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #1F1659;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .qs-stat-icon { font-size: 28px; margin-bottom: 8px; }
+        .qs-stat strong {
+            display: block;
+            font-size: 28px;
+            font-weight: 800;
+            color: #1F1659;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .qs-stat span { font-size: 13px; color: #64748b; line-height: 1.4; }
+
+        /* ===== SEÇÕES ===== */
+        .qs-section {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 38px 42px;
+            margin-bottom: 22px;
+        }
+        @media (max-width: 640px) {
+            .qs-section { padding: 24px 18px; }
+            .qs-hero { padding: 34px 24px; }
+            .qs-hero h1 { font-size: 22px; }
+        }
+
+        /* ===== HEADINGS ===== */
+        .qs-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1F1659;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .qs-section h3 {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #334155;
+            margin: 26px 0 8px;
+            padding-left: 12px;
+            border-left: 3px solid #6366f1;
+        }
+
+        /* ===== TEXTO ===== */
+        .qs-section p  { font-size: 15px; margin-bottom: 12px; }
+        .qs-section ul { padding-left: 22px; margin-bottom: 14px; }
+        .qs-section li { font-size: 15px; margin-bottom: 9px; }
+        .qs-section strong { color: #0f172a; }
+        .qs-section a { color: #1d4ed8; text-decoration: underline; }
+        .qs-section a:hover { color: #1e40af; }
+
+        /* ===== GRID O QUE FAZEMOS ===== */
+        .qs-service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+        .qs-service-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: box-shadow 0.2s;
+        }
+        .qs-service-card:hover { box-shadow: 0 4px 16px rgba(31,22,89,0.1); }
+        .qs-service-card--blue   { border-top: 4px solid #3b82f6; background: #eff6ff; }
+        .qs-service-card--indigo { border-top: 4px solid #6366f1; background: #f5f3ff; }
+        .qs-service-card--cyan   { border-top: 4px solid #06b6d4; background: #f0fdff; }
+        .qs-service-card--green  { border-top: 4px solid #16a34a; background: #f0fdf4; }
+        .qs-service-icon { font-size: 30px; }
+        .qs-service-card h3 { font-size: 15px; font-weight: 700; color: #0f172a; margin: 0; padding: 0; border: 0; }
+        .qs-service-card p  { font-size: 14px; color: #475569; margin: 0; line-height: 1.6; }
+
+        /* ===== VALORES ===== */
+        .qs-values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+        .qs-value-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .qs-value-icon { font-size: 26px; }
+        .qs-value-item h3 { font-size: 15px; font-weight: 700; color: #1F1659; margin: 0; padding: 0; border: 0; }
+        .qs-value-item p  { font-size: 14px; color: #475569; margin: 0; line-height: 1.55; }
+
+        /* ===== PARCEIROS ===== */
+        .qs-partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+        .qs-partner-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px 22px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+        .qs-partner-icon { font-size: 28px; flex-shrink: 0; }
+        .qs-partner-card h3 { font-size: 15px; font-weight: 700; color: #0f172a; margin: 0 0 4px; padding: 0; border: 0; }
+        .qs-partner-card p  { font-size: 13.5px; color: #475569; margin: 0; line-height: 1.55; }
+
+        /* ===== ALERT ===== */
+        .qs-alert {
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+        .qs-alert p:last-child { margin: 0; }
+        .qs-alert p { font-size: 14.5px; }
+        .qs-alert--blue  { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .qs-alert--green { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+
+        /* ===== CTA FINAL ===== */
+        .qs-cta {
+            background: linear-gradient(135deg, #1e3a8a, #1F1659);
+            border-radius: 12px;
+            padding: 38px 36px;
+            text-align: center;
+            color: #fff;
+        }
+        .qs-cta h2 { color: #fff; font-size: 20px; border: 0; padding: 0; margin-bottom: 12px; justify-content: center; }
+        .qs-cta p  { font-size: 14.5px; opacity: 0.9; margin-bottom: 8px; }
+        .qs-cta a  { color: #93c5fd; font-weight: 700; }
+        .qs-cta-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.30);
+            border-radius: 8px;
+            padding: 11px 28px;
+            margin: 10px 6px 0;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .qs-cta-btn:hover { background: rgba(255,255,255,0.24); color: #fff; }
+        .qs-cta-btn--white {
+            background: #fff;
+            color: #1F1659;
+            border-color: #fff;
+        }
+        .qs-cta-btn--white:hover { background: #e2e8f0; color: #1F1659; }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body { background: #fff; }
+            .qs-page { margin: 0; padding: 0; max-width: 100%; }
+            .qs-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="qs-page" role="main">
+
+    <!-- HERO -->
+    <header class="qs-hero">
+        <div class="qs-badge">&#127981; Desde 2011 &nbsp;|&nbsp; São Bernardo do Campo, SP</div>
+        <h1>Referência em Metrologia e Automação Industrial no Brasil</h1>
+        <p>
+            A <strong style="color:#fff;">Enterfix</strong> nasceu com o propósito de levar às indústrias brasileiras soluções de inspeção e medição automatizada que unem <strong style="color:#fff;">precisão, inovação e custo-benefício</strong>. Mais do que equipamentos, entregamos inteligência aplicada ao chão de fábrica — transformando processos de qualidade em verdadeiros diferenciais competitivos.
+        </p>
+    </header>
+
+    <!-- NÚMEROS -->
+    <div class="qs-stats" aria-label="Enterfix em números">
+        <div class="qs-stat">
+            <div class="qs-stat-icon">&#128197;</div>
+            <strong>+14 anos</strong>
+            <span>de atuação no mercado industrial</span>
+        </div>
+        <div class="qs-stat">
+            <div class="qs-stat-icon">&#127981;</div>
+            <strong>+500</strong>
+            <span>empresas atendidas em todo o Brasil</span>
+        </div>
+        <div class="qs-stat">
+            <div class="qs-stat-icon">&#127968;</div>
+            <strong>3</strong>
+            <span>parceiros fabricantes globais</span>
+        </div>
+        <div class="qs-stat">
+            <div class="qs-stat-icon">&#128101;</div>
+            <strong>100%</strong>
+            <span>suporte técnico especializado</span>
+        </div>
+    </div>
+
+    <!-- NOSSA HISTÓRIA -->
+    <section class="qs-section" id="historia">
+        <h2>&#128218; Nossa História</h2>
+        <p>
+            Fundada em <strong>2011</strong>, em São Bernardo do Campo — coração do polo industrial do ABC paulista —, a Enterfix surgiu da visão de um grupo de engenheiros que identificou uma lacuna no mercado: a necessidade de <strong>soluções de metrologia de alta precisão acessíveis e orientadas à realidade da indústria nacional</strong>.
+        </p>
+        <p>
+            Ao longo de mais de 14 anos, crescemos junto com nossos clientes, evoluindo de representante de equipamentos a um parceiro estratégico completo, com portfólio de produtos, serviços de campo, desenvolvimento de software e integrações customizadas. Hoje, atendemos empresas dos mais variados segmentos — automotivo, aeronáutico, metalúrgico, eletrônico e bens de capital — em todo o território nacional.
+        </p>
+
+        <div class="qs-alert qs-alert--blue">
+            <p>&#127981; Nossa sede fica na <strong>Rua Waldemar Martins Ferreira, 289 – Jordanópolis, São Bernardo do Campo/SP</strong>. Contamos com laboratório próprio de calibração e equipe técnica pronta para visitas em campo.</p>
+        </div>
+    </section>
+
+    <!-- O QUE FAZEMOS -->
+    <section class="qs-section" id="o-que-fazemos">
+        <h2>&#128736;&#65039; O Que Fazemos</h2>
+        <p>Nossa atuação cobre todo o ciclo de metrologia e automação industrial — do diagnóstico e especificação de solução até a operação assistida e o suporte contínuo pós-implantação.</p>
+
+        <div class="qs-service-grid">
+
+            <div class="qs-service-card qs-service-card--blue">
+                <div class="qs-service-icon">&#128200;</div>
+                <h3>Sistemas Automatizados de Inspeção e Medição</h3>
+                <p>Do controle dimensional básico a soluções avançadas com MMCs, VMMs, scanners 3D, rastreadores a laser e sistemas de visão industrial integrados à linha de produção.</p>
+            </div>
+
+            <div class="qs-service-card qs-service-card--indigo">
+                <div class="qs-service-icon">&#128295;</div>
+                <h3>Serviços e Suporte Técnico Especializado</h3>
+                <p>Calibração rastreável, manutenção preventiva e corretiva, treinamentos técnicos certificados e suporte remoto que garantem confiabilidade total nos resultados de medição.</p>
+            </div>
+
+            <div class="qs-service-card qs-service-card--cyan">
+                <div class="qs-service-icon">&#128187;</div>
+                <h3>Desenvolvimento de Tecnologia Nacional</h3>
+                <p>Softwares próprios e integrações customizadas que conectam chão de fábrica, ERP e dashboards de gestão da qualidade em tempo real — desenvolvidos com domínio total do código.</p>
+            </div>
+
+            <div class="qs-service-card qs-service-card--green">
+                <div class="qs-service-icon">&#127891;</div>
+                <h3>Treinamento e Capacitação Técnica</h3>
+                <p>Programas de formação para operadores e engenheiros de qualidade — do básico de metrologia dimensional ao uso avançado de scanners 3D e softwares de análise.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MISSÃO, VISÃO E VALORES -->
+    <section class="qs-section" id="missao">
+        <h2>&#127919; Missão, Visão e Valores</h2>
+
+        <h3>Missão</h3>
+        <p>
+            Capacitar empresas a produzirem com <strong>mais qualidade, eficiência e competitividade</strong>, por meio da digitalização e automação de processos de metrologia e inspeção industrial — entregando soluções precisas, acessíveis e escaláveis.
+        </p>
+
+        <h3>Visão</h3>
+        <p>
+            Ser reconhecida como a <strong>principal referência em metrologia industrial integrada do Brasil</strong>, amplificando a competitividade da indústria nacional por meio de tecnologia de ponta e conhecimento aplicado.
+        </p>
+
+        <h3>Valores</h3>
+        <div class="qs-values-grid">
+            <div class="qs-value-item">
+                <div class="qs-value-icon">&#128269;</div>
+                <h3>Precisão</h3>
+                <p>A essência do nosso trabalho está em cada micrômetro medido. Não abrimos mão de rigor técnico em nenhuma etapa.</p>
+            </div>
+            <div class="qs-value-item">
+                <div class="qs-value-icon">&#128161;</div>
+                <h3>Inovação</h3>
+                <p>Buscamos continuamente novas tecnologias e abordagens para entregar soluções de ponta, sempre um passo à frente.</p>
+            </div>
+            <div class="qs-value-item">
+                <div class="qs-value-icon">&#129309;</div>
+                <h3>Transparência</h3>
+                <p>Relações sólidas e honestas com clientes, parceiros e colaboradores. Comunicação clara em todos os momentos.</p>
+            </div>
+            <div class="qs-value-item">
+                <div class="qs-value-icon">&#127919;</div>
+                <h3>Comprometimento</h3>
+                <p>Estamos ao lado dos nossos clientes em cada etapa da jornada — da especificação à operação e ao suporte contínuo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARCEIROS GLOBAIS -->
+    <section class="qs-section" id="parceiros">
+        <h2>&#127758; Parceiros Fabricantes Globais</h2>
+        <p>
+            Somos representantes exclusivos ou autorizados de fabricantes globais de renome, trazendo para o Brasil as tecnologias mais avançadas em metrologia 3D e automação industrial:
+        </p>
+
+        <div class="qs-partner-grid">
+
+            <div class="qs-partner-card">
+                <div class="qs-partner-icon">&#128200;</div>
+                <div>
+                    <h3>Chotest</h3>
+                    <p>Fabricante chinês líder em Máquinas de Medição por Coordenadas (MMCs) e equipamentos de metrologia dimensional de alta precisão para a indústria manufatureira.</p>
+                </div>
+            </div>
+
+            <div class="qs-partner-card">
+                <div class="qs-partner-icon">&#128208;</div>
+                <div>
+                    <h3>Unimetro</h3>
+                    <p>Especialista em sistemas de medição e controle dimensional com soluções para controle de qualidade em linha, inspeção automatizada e gauges especiais.</p>
+                </div>
+            </div>
+
+            <div class="qs-partner-card">
+                <div class="qs-partner-icon">&#128303;</div>
+                <div>
+                    <h3>Scantech</h3>
+                    <p>Referência mundial em scanners 3D industriais portáteis e estacionários — soluções de digitalização 3D, inspeção de superfície e engenharia reversa com altíssima resolução.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="qs-alert qs-alert--green">
+            <p>&#9989; Todos os equipamentos comercializados pela Enterfix possuem <strong>garantia de fábrica</strong>, suporte técnico nacional e documentação rastreável. Oferecemos também contratos de manutenção preventiva e calibração periódica.</p>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER -->
+    <section class="qs-section" id="por-que">
+        <h2>&#11088; Por que Escolher a Enterfix?</h2>
+        <p>
+            Nosso time é formado por <strong>engenheiros e especialistas apaixonados por tecnologia de medição</strong>, comprometidos em oferecer atendimento genuinamente consultivo — que vai muito além da venda de equipamentos.
+        </p>
+        <ul>
+            <li><strong>Diagnóstico técnico gratuito:</strong> analisamos o seu processo de qualidade antes de recomendar qualquer solução.</li>
+            <li><strong>Soluções sob medida:</strong> entendemos a realidade de cada cliente e entregamos configurações escaláveis e integradas.</li>
+            <li><strong>Suporte nacional:</strong> equipe técnica disponível para visitas em campo em todo o Brasil.</li>
+            <li><strong>Treinamento incluso:</strong> capacitamos sua equipe para extrair o máximo de cada equipamento ou software adquirido.</li>
+            <li><strong>Relacionamento de longo prazo:</strong> não encerramos o relacionamento na entrega — acompanhamos toda a vida útil do equipamento.</li>
+            <li><strong>Tecnologia nacional integrada:</strong> softwares desenvolvidos no Brasil, com suporte local e adaptação à legislação e normas técnicas brasileiras (ABNT, INMETRO).</li>
+        </ul>
+    </section>
+
+    <!-- CTA -->
+    <div class="qs-cta">
+        <h2>&#128172; Vamos conversar sobre o seu processo?</h2>
+        <p>Nossa equipe está pronta para entender a sua necessidade e propor a solução mais adequada — sem compromisso.</p>
+        <p>Acesse nosso site institucional para conhecer nossos casos de uso, portfólio completo e muito mais.</p>
+        <a class="qs-cta-btn qs-cta-btn--white" href="https://enterfix.com.br/sobre-nos/" target="_blank" rel="noopener">&#127981; Nossa história completa</a>
+        <a class="qs-cta-btn" href="mailto:ecommerce@enterfix.com.br">&#128140; Fale conosco</a>
+        <a class="qs-cta-btn" href="tel:+551149422222">&#128222; (11) 4942-2222</a>
+        <p style="margin-top:18px; font-size:12px; opacity:0.65;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40 &nbsp;|&nbsp; SBC/SP</p>
+    </div>
+
+</main>
+
+</body>
+</html>
+
+<p>Fundada em 2011, a Enterfix nasceu com o propósito de levar às indústrias brasileiras soluções de <strong>inspeção e medição automatizada</strong> que unem <strong>precisão, inovação e custo-benefício</strong>. Nossa atuação vai muito além de fornecer equipamentos: ajudamos empresas a transformar seus processos de qualidade em verdadeiros diferenciais competitivos.</p>
+
+<h3>O que fazemos</h3>
+
+<ul>
+	<li><strong>Sistemas Automatizados de Inspeção e Medição</strong> – do simples controle dimensional a soluções avançadas com VMMs, scanners 3D e rastreadores a laser.</li>
+	<li><strong>Serviços e suporte técnico especializado</strong> – calibração, manutenção e treinamentos que garantem confiabilidade total nos resultados.</li>
+	<li><strong>Desenvolvimento de tecnologia nacional</strong> – softwares e integrações próprias que conectam chão de fábrica, ERP e gestão em tempo real.</li>
+</ul>
+
+<h3>Nossa missão</h3>
+
+<p>Capacitar empresas a produzirem com <strong>mais qualidade, eficiência e competitividade</strong>, através da digitalização e automação de processos de metrologia e inspeção.</p>
+
+<h3>Nossos valores</h3>
+
+<ul>
+	<li><strong>Precisão</strong>: a essência do nosso trabalho está em cada micrômetro medido.</li>
+	<li><strong>Inovação</strong>: buscamos continuamente novas tecnologias para oferecer soluções de ponta.</li>
+	<li><strong>Transparência</strong>: relações sólidas e honestas com clientes, parceiros e colaboradores.</li>
+	<li><strong>Compromisso</strong>: estamos ao lado dos nossos clientes em cada etapa da jornada.</li>
+</ul>
+
+<h3>Por que escolher a Enterfix?</h3>
+
+<p>Nosso time é formado por engenheiros e especialistas apaixonados por tecnologia e comprometidos em oferecer <strong>atendimento consultivo</strong>, que vai além da venda de equipamentos. Entendemos a realidade de cada cliente para entregar soluções sob medida, escaláveis e integradas.</p>
+
+<p>Além disso, somos parceiros estratégicos de fabricantes globais de renome, como <strong>Chotest</strong>, <strong>Unimetro</strong> e <strong>Scantech</strong>, trazendo para o Brasil o que há de mais moderno em metrologia.</p>
+
+<h3>Mais sobre nós</h3>
+
+<p>Quer conhecer nossa história completa, nossos cases e onde queremos chegar? Acesse: <a href="https://enterfix.com.br/sobre-nos/" target="_blank">enterfix.com.br/sobre-nos</a></p>

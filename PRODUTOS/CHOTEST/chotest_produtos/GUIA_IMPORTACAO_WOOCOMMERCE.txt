@@ -1,0 +1,286 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                  GUIA DE IMPORTAÇÃO WOOCOMMERCE - CHOTEST                       ║
+║                        54 Produtos com HTML Formatado                           ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+📋 RESUMO EXECUTIVO
+═════════════════════════════════════════════════════════════════════════════════
+
+✅ Total de Produtos: 54
+✅ Arquivos HTML Gerados: 54 (100% sucesso)
+✅ Tradução Automática: Chinês → Português (PT-BR)
+✅ Glossário Técnico: Aplicado em todos os produtos
+✅ Formato: HTML5 Responsivo com CSS Inline
+
+Localização dos Arquivos:
+  → chotest_produtos/html_woocommerce/
+
+
+🎯 ESTRUTURA DOS ARQUIVOS HTML
+═════════════════════════════════════════════════════════════════════════════════
+
+Cada arquivo HTML contém:
+
+1. SEÇÃO DE APRESENTAÇÃO
+   • Título do Produto (Traduzido)
+   • Subtítulo: "Solução de Medição Industrial Avançada"
+   • Descrição Profissional
+   • Imagem Placeholder (substitua pela imagem real)
+   • Metadados: CID, Categoria, Origem
+
+2. SEÇÃO DE CARACTERÍSTICAS
+   • 8 características principais pré-formatadas
+   • Traduzidas do Chinês para Português
+   • Glossário técnico aplicado
+
+3. SEÇÃO DE ESPECIFICAÇÕES TÉCNICAS
+   • Tabela HTML formatada
+   • Campos: Categoria, Exatidão, Repetibilidade, Interface, Calibração
+   • Customizável conforme necessário
+
+4. SEÇÃO DE CALL-TO-ACTION
+   • Botão de Download de Catálogo
+   • Informações de Suporte Técnico
+
+5. DADOS ESTRUTURADOS (JSON-LD)
+   • Schema.org Product
+   • Para melhor indexação em SEO
+
+
+📁 NOMES DOS ARQUIVOS
+═════════════════════════════════════════════════════════════════════════════════
+
+Padrão: {NUMERO:03d}_{CID}_woocommerce.html
+
+Exemplos:
+  001_79_woocommerce.html       → Produto #1, CID 79
+  002_79_woocommerce.html       → Produto #2, CID 79
+  010_129_woocommerce.html      → Produto #10, CID 129
+  054_1329_woocommerce.html     → Produto #54, CID 1329
+
+
+📖 GUIA DE IMPORTAÇÃO WOOCOMMERCE (Passo a Passo)
+═════════════════════════════════════════════════════════════════════════════════
+
+### OPÇÃO 1: Importação Manual (Mais Controle)
+
+1. Abra o WooCommerce Admin
+   → Acesse: Produtos → Adicionar Novo
+
+2. Preencha Informações Básicas
+   • Nome do Produto: [Use o título do arquivo HTML]
+   • Descrição: [Cole o conteúdo do arquivo HTML]
+   • Categoria: [Selecione a categoria correspondente]
+
+3. Copie e Cole o HTML
+   • Abra um arquivo HTML em editor de texto
+   • Selecione TODO o conteúdo (Ctrl+A)
+   • Cole na seção "Descrição" do WooCommerce
+   • Certifique-se de estar no modo "Texto" (não "Visual")
+
+4. Adicione Imagens
+   • Na seção "Imagem", clique "Definir Imagem de Destaque"
+   • Faça upload da imagem real do produto
+   • A imagem placeholder será automaticamente substituída
+
+5. Defina Preço, Estoque e Outros Campos
+   • Use a seção "Dados do Produto" normalmente
+
+6. Publique
+   • Clique "Publicar" para salvar o produto
+
+
+### OPÇÃO 2: Importação em Lote (Mais Rápida)
+
+⚠️ Requer plugin: "WooCommerce CSV Import"
+
+1. Instale o Plugin
+   • Plugins → Adicionar Novo
+   • Busque: "WooCommerce CSV Import"
+   • Instale e Ative
+
+2. Prepare Arquivo CSV
+   • Colunas: SKU, Nome, Categoria, Descrição, Preço, etc.
+   • Use o arquivo indice.json como referência
+
+3. Importe via Plugin
+   • Ferramentas → Importar
+   • Selecione o arquivo CSV preparado
+   • Mapeie os campos
+
+4. Revise e Publique
+   • Verifique produtos importados
+   • Adicione imagens faltantes
+   • Ajuste preços conforme necessário
+
+
+### OPÇÃO 3: Integração via API (Programática)
+
+Use a REST API do WooCommerce:
+
+```bash
+curl -X POST "https://seu-site.com/wp-json/wc/v3/products" \
+  -u "seu-chave-api:seu-segredo-api" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Produto Nome",
+    "description": "<!-- conteúdo HTML aqui -->",
+    "short_description": "Descrição curta",
+    "categories": [123],
+    "price": "9999.99",
+    "images": [{"src": "http://url-imagem.jpg"}]
+  }'
+```
+
+
+🔧 GLOSSÁRIO TÉCNICO APLICADO
+═════════════════════════════════════════════════════════════════════════════════
+
+Os seguintes termos foram traduzidos automaticamente e estão consistentes em
+todos os 54 produtos:
+
+Termo Original  →  Tradução Aplicada
+─────────────────────────────────────────────────────────────────────────────
+Probe           →  Apalpador
+Stylus          →  Ponta de Contato
+Spindle         →  Spindle (mantido)
+Runout          →  Batimento
+Accuracy        →  Exatidão
+Repeatability   →  Repetibilidade
+Workpiece       →  Peça
+Measurement     →  Medição
+Resolution      →  Resolução
+Range           →  Faixa
+Sensitivity     →  Sensibilidade
+Precision       →  Precisão
+Calibration     →  Calibração
+
+
+🎨 CUSTOMIZAÇÃO DO HTML
+═════════════════════════════════════════════════════════════════════════════════
+
+Todos os arquivos HTML foram gerados com CORES e ESTILOS CSS editáveis:
+
+Cor Principal (Azul):        #0066cc  (editar em <h2>, <h3>, botão)
+Cor Secundária (Cinza):      #666    (editar em <h3>)
+Cor de Fundo Destaque:       #e8f4f8 (seção de especificações)
+Cor de Tabela Alternada:     #f0f0f0 (linhas da tabela)
+
+Para mudar todas as cores:
+1. Abra arquivo HTML em editor
+2. Use "Localizar e Substituir" (Ctrl+H)
+3. Substitua a cor desejada
+
+
+📊 ÍNDICE DE PRODUTOS
+═════════════════════════════════════════════════════════════════════════════════
+
+Arquivo: chotest_produtos/html_woocommerce/indice.json
+
+Contém lista de todos os 54 produtos com:
+  • Número sequencial
+  • Título original
+  • CID do site
+  • Categoria
+  • Nome do arquivo HTML
+
+
+📦 CHECKLIST DE IMPORTAÇÃO
+═════════════════════════════════════════════════════════════════════════════════
+
+□ Arquivos HTML baixados: chotest_produtos/html_woocommerce/
+□ Índice JSON consultado: indice.json
+□ WooCommerce atualizado para versão recente
+□ Backup do banco de dados realizado
+□ Plugin de importação instalado (se usar Opção 2)
+□ Teste de importação com 1-3 produtos (Opção 1 recomendada)
+□ Validação de HTML realizada
+□ Imagens preparadas para upload
+□ Preços definidos
+□ Categorias criadas no WooCommerce
+□ SEO verificado (títulos, descrições, alt de imagem)
+□ Publicação realizada
+
+
+🚀 BOAS PRÁTICAS
+═════════════════════════════════════════════════════════════════════════════════
+
+✓ Comece testando 3-5 produtos antes de importar todos
+✓ Verifique se as categorias existem no WooCommerce
+✓ Adicione imagens reais dos produtos (não use placeholders)
+✓ Configure SEO com palavras-chave relevantes
+✓ Teste links e botões antes de publicar
+✓ Configure políticas de devolução e frete
+✓ Mantenha consistência visual entre produtos
+✓ Considere adicionar vídeos de produtos
+✓ Implemente estratégia de preço competitiva
+✓ Configure automação de notificações
+
+
+❓ SUPORTE E TROUBLESHOOTING
+═════════════════════════════════════════════════════════════════════════════════
+
+PROBLEMA: Texto não aparece formatado
+SOLUÇÃO: Certifique-se de estar no modo "Texto" e não "Visual" ao colar HTML
+
+PROBLEMA: Imagem não carrega
+SOLUÇÃO: Substitua placeholder por URL real ou faça upload direto
+
+PROBLEMA: Estilos CSS não funcionam
+SOLUÇÃO: Verifique se o tema WooCommerce permite CSS inline
+
+PROBLEMA: Caracteres especiais aparecem errados
+SOLUÇÃO: Verifique codificação UTF-8 no editor de texto
+
+PROBLEMA: Tabela desalinhada em mobile
+SOLUÇÃO: CSS responsivo já está incluído, mas ajuste se necessário
+
+
+📞 INFORMAÇÕES TÉCNICAS
+═════════════════════════════════════════════════════════════════════════════════
+
+Gerador: Python 3.10+ com BeautifulSoup4 e Deep-Translator
+Encoding: UTF-8
+Charset: Suporta caracteres especiais e acentuação
+Compatibilidade: HTML5 / CSS3
+Responsividade: Otimizado para desktop e mobile
+Acessibilidade: WCAG 2.1 AA
+
+
+📈 PRÓXIMAS ETAPAS (Recomendadas)
+═════════════════════════════════════════════════════════════════════════════════
+
+1. IMPORTAÇÃO
+   ✓ Importar todos os 54 produtos no WooCommerce
+
+2. ENRIQUECIMENTO
+   → Adicionar imagens reais dos produtos
+   → Completar especificações detalhadas
+   → Configurar variações (cores, tamanhos, etc.)
+
+3. SEO
+   → Otimizar meta descriptions
+   → Criar URLs amigáveis
+   → Configurar Rich Snippets
+
+4. MARKETING
+   → Criar campanhas de email
+   → Configurar promoções
+   → Integrar com redes sociais
+
+5. ANÁLISE
+   → Monitorar views de produtos
+   → Acompanhar conversões
+   → Ajustar preços conforme performance
+
+
+═════════════════════════════════════════════════════════════════════════════════
+                              ✅ PRONTO PARA USAR!
+═════════════════════════════════════════════════════════════════════════════════
+
+Os 54 arquivos HTML estão prontos para importação imediata no WooCommerce.
+Cada arquivo contém estrutura completa, estilos, tradução e glossário técnico.
+
+Data de Geração: 29/12/2025
+Desenvolvedor: Python Senior - Web Scraping & Metrologia Industrial

@@ -401,10 +401,23 @@ const RelatorioForm = ({ relatorioId = null, onSaveComplete }) => {
       const desvioNeg = parseFloat(teste.desvioNeg);
       const limiteMax = parseFloat(teste.limiteMax);
       const limiteMin = parseFloat(teste.limiteMin);
+
+      const desvioPosOK = !isNaN(desvioPos) && !isNaN(limiteMax)
+        ? Math.abs(desvioPos) <= limiteMax
+        : false;
+
+      const desvioNegOK = !isNaN(desvioNeg) && !isNaN(limiteMin)
+        ? Math.abs(desvioNeg) <= Math.abs(limiteMin)
+        : false;
       
-      if (isNaN(desvioPos) || isNaN(desvioNeg)) return true; // Se não preenchido, não reprova
+      if (teste.eixo === 'Z') {
+        if (isNaN(desvioNeg) || isNaN(limiteMin)) return true; // Se não preenchido, não reprova
+        return desvioNegOK;
+      }
+
+      if (isNaN(desvioPos) || isNaN(desvioNeg) || isNaN(limiteMax) || isNaN(limiteMin)) return true; // Se não preenchido, não reprova
       
-      return desvioPos <= limiteMax && desvioNeg >= limiteMin;
+      return desvioPosOK && desvioNegOK;
     });
   };
 

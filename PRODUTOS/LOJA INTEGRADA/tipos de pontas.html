@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de Pontas de Medição para CMM — Enterfix</title>
+    <meta name="description" content="Guia completo dos tipos de pontas de medição (styli) para máquinas tridimensionais: pontas retas, em L, anguladas, estrela, cilíndricas e discos. Parâmetros, materiais e aplicações. Enterfix." />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9; color: #1e293b; line-height: 1.75; font-size: 16px;
+        }
+        .pt-page { max-width: 1100px; margin: 40px auto; padding: 0 20px 60px; }
+
+        /* HERO */
+        .pt-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px; padding: 50px 44px; margin-bottom: 32px;
+            color: #fff; position: relative; overflow: hidden;
+        }
+        .pt-hero::before {
+            content: ''; position: absolute; right: -60px; top: -80px;
+            width: 340px; height: 340px; border-radius: 50%;
+            background: rgba(255,255,255,0.04); pointer-events: none;
+        }
+        .pt-hero::after {
+            content: ''; position: absolute; right: 120px; bottom: -100px;
+            width: 220px; height: 220px; border-radius: 50%;
+            background: rgba(255,255,255,0.03); pointer-events: none;
+        }
+        .pt-badge {
+            display: inline-block; background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32); border-radius: 50px;
+            padding: 4px 14px; font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 16px;
+        }
+        .pt-hero h1 { font-size: 27px; font-weight: 800; line-height: 1.25; margin-bottom: 14px; color: #fff; max-width: 720px; }
+        .pt-hero p  { font-size: 14.5px; opacity: 0.88; line-height: 1.85; max-width: 720px; margin: 0; }
+
+        /* KPI */
+        .pt-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; margin-bottom: 24px; }
+        .pt-kpi {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 20px 22px; border-top: 4px solid #1F1659;
+        }
+        .pt-kpi-value { font-size: 26px; font-weight: 800; color: #1F1659; line-height: 1.1; }
+        .pt-kpi-label { font-size: 13px; color: #64748b; margin-top: 4px; line-height: 1.4; }
+
+        /* SECTION */
+        .pt-section {
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 38px 42px; margin-bottom: 24px;
+        }
+        @media (max-width: 640px) {
+            .pt-section { padding: 24px 18px; }
+            .pt-hero { padding: 32px 22px; }
+            .pt-hero h1 { font-size: 20px; }
+        }
+        .pt-section > h2 {
+            font-size: 20px; font-weight: 700; color: #1F1659;
+            margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .pt-lead { font-size: 14.5px; color: #64748b; margin-bottom: 24px; margin-top: 4px; }
+        .pt-section h3 {
+            font-size: 15.5px; font-weight: 700; color: #334155;
+            margin: 20px 0 8px; padding-left: 12px; border-left: 3px solid #6366f1;
+        }
+        .pt-section p  { font-size: 15px; margin-bottom: 10px; }
+        .pt-section ul { padding-left: 22px; margin-bottom: 12px; }
+        .pt-section li { font-size: 14.5px; margin-bottom: 7px; color: #334155; }
+        .pt-section strong { color: #0f172a; }
+        .pt-section a { color: #1d4ed8; text-decoration: underline; }
+
+        /* TIPO CARDS */
+        .pt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin-top: 8px; }
+        .pt-card {
+            border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;
+            display: flex; flex-direction: column; transition: box-shadow 0.2s;
+            background: #fff;
+        }
+        .pt-card:hover { box-shadow: 0 6px 22px rgba(31,22,89,0.11); }
+        .pt-card-head {
+            padding: 22px 22px 16px; background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex; align-items: flex-start; gap: 14px;
+        }
+        .pt-card-icon {
+            width: 48px; height: 48px; border-radius: 11px; flex-shrink: 0;
+            background: #1F1659; display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+        .pt-card-hd { flex: 1; }
+        .pt-card-title { font-size: 16px; font-weight: 700; color: #0f172a; line-height: 1.2; }
+        .pt-card-sub   { font-size: 12px; color: #94a3b8; margin-top: 3px; font-style: italic; }
+        .pt-card-body  { padding: 16px 22px 20px; font-size: 14px; color: #475569; line-height: 1.65; }
+        .pt-card-body p { margin-bottom: 10px; font-size: 14px; }
+        .pt-card-body ul { padding-left: 18px; margin: 8px 0 0; }
+        .pt-card-body li { font-size: 13.5px; margin-bottom: 5px; }
+        .pt-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+        .pt-tag {
+            background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px;
+            padding: 3px 10px; font-size: 12px; color: #1e40af; font-weight: 500;
+        }
+        .pt-tag--green { background: #f0fdf4; border-color: #86efac; color: #15803d; }
+        .pt-tag--gray  { background: #f1f5f9; border-color: #cbd5e1; color: #475569; }
+
+        /* PARÂMETROS TABLE */
+        .pt-params { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-top: 8px; }
+        .pt-params th {
+            background: #1F1659; color: #fff; padding: 11px 16px; text-align: left;
+            font-weight: 700; font-size: 13px;
+        }
+        .pt-params th:first-child { border-radius: 8px 0 0 0; }
+        .pt-params th:last-child  { border-radius: 0 8px 0 0; }
+        .pt-params td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; color: #334155; vertical-align: top; }
+        .pt-params tr:nth-child(even) td { background: #f8fafc; }
+        .pt-params tr:last-child td { border-bottom: none; }
+        .pt-params .pt-param-code { font-weight: 700; color: #1F1659; font-size: 15px; white-space: nowrap; }
+        .pt-params .pt-param-name { font-weight: 600; color: #0f172a; }
+        .pt-params .pt-param-detail { font-size: 13px; color: #64748b; margin-top: 2px; }
+
+        /* ROSCA / DIÂMETRO TABLE */
+        .pt-spec-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+        .pt-spec-table th {
+            background: #334155; color: #fff; padding: 9px 14px; text-align: left; font-size: 12.5px;
+        }
+        .pt-spec-table td { padding: 8px 14px; border-bottom: 1px solid #e2e8f0; color: #334155; }
+        .pt-spec-table tr:nth-child(even) td { background: #f8fafc; }
+        .pt-spec-table tr:last-child td { border-bottom: none; }
+
+        /* MATERIAIS */
+        .pt-mat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 8px; }
+        .pt-mat-card {
+            border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 18px;
+            border-left: 4px solid #1F1659;
+        }
+        .pt-mat-name { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+        .pt-mat-code { display: inline-block; background: #1F1659; color: #fff; border-radius: 5px; padding: 1px 8px; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+        .pt-mat-desc { font-size: 13.5px; color: #475569; line-height: 1.55; }
+        .pt-mat-card:nth-child(2) { border-left-color: #6366f1; }
+        .pt-mat-card:nth-child(2) .pt-mat-code { background: #6366f1; }
+        .pt-mat-card:nth-child(3) { border-left-color: #0ea5e9; }
+        .pt-mat-card:nth-child(3) .pt-mat-code { background: #0ea5e9; }
+        .pt-mat-card:nth-child(4) { border-left-color: #10b981; }
+        .pt-mat-card:nth-child(4) .pt-mat-code { background: #10b981; }
+
+        /* ALERT */
+        .pt-alert {
+            border-radius: 10px; padding: 14px 18px; margin: 14px 0;
+            font-size: 14.5px; line-height: 1.6;
+        }
+        .pt-alert p { font-size: 14.5px; margin: 0; }
+        .pt-alert--blue   { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .pt-alert--yellow { background: #fefce8; border: 1px solid #fde047; border-left: 4px solid #ca8a04; }
+        .pt-alert--green  { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+
+        /* DIAGRAMA LEGENDA */
+        .pt-diagram {
+            background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
+            padding: 20px 24px; margin-top: 18px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start;
+        }
+        .pt-diagram-legend { flex: 1; min-width: 220px; }
+        .pt-legend-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; font-size: 14px; }
+        .pt-legend-dot {
+            width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+            background: #1F1659; color: #fff; font-weight: 800; font-size: 12px;
+            display: flex; align-items: center; justify-content: center; margin-top: 2px;
+        }
+        .pt-legend-text strong { color: #0f172a; display: block; font-size: 14px; }
+        .pt-legend-text span   { color: #64748b; font-size: 13px; line-height: 1.4; }
+
+        /* CTA */
+        .pt-cta {
+            background: linear-gradient(135deg, #1e3a8a, #1F1659);
+            border-radius: 12px; padding: 36px 32px; text-align: center; color: #fff;
+        }
+        .pt-cta h2 { color: #fff; font-size: 19px; border: 0; padding: 0; margin-bottom: 10px; }
+        .pt-cta p  { font-size: 14.5px; opacity: 0.9; margin-bottom: 6px; }
+        .pt-cta-btn {
+            display: inline-block; background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.28); border-radius: 8px;
+            padding: 11px 26px; margin: 10px 6px 0; font-size: 14.5px; font-weight: 700;
+            color: #fff; text-decoration: none;
+        }
+        .pt-cta-btn--white { background: #fff; color: #1F1659; border-color: #fff; }
+
+        @media print {
+            body { background: #fff; }
+            .pt-page { margin: 0; max-width: 100%; }
+            .pt-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+<main class="pt-page" role="main">
+
+    <!-- HERO -->
+    <header class="pt-hero">
+        <div class="pt-badge">&#128270; Catálogo Técnico — Pontas de Medição CMM</div>
+        <h1>Tipos de Pontas de Medição para Máquinas Tridimensionais</h1>
+        <p>As pontas de medição (styli) são componentes essenciais nos sistemas de apalpamento de máquinas tridimensionais (CMM). A escolha correta do tipo, material e geometria da ponta impacta diretamente na precisão, repetitividade e vida útil do apalpador. Conheça todos os modelos disponíveis e seus parâmetros técnicos.</p>
+    </header>
+
+    <!-- KPIs -->
+    <div class="pt-kpis">
+        <div class="pt-kpi">
+            <div class="pt-kpi-value">6 tipos</div>
+            <div class="pt-kpi-label">de geometria de ponta disponíveis no catálogo</div>
+        </div>
+        <div class="pt-kpi">
+            <div class="pt-kpi-value">Ø 0,3–10 mm</div>
+            <div class="pt-kpi-label">faixa de diâmetros de esferas disponíveis</div>
+        </div>
+        <div class="pt-kpi">
+            <div class="pt-kpi-value">M2 a M5</div>
+            <div class="pt-kpi-label">roscas de fixação compatíveis com apalpadores CMM</div>
+        </div>
+        <div class="pt-kpi">
+            <div class="pt-kpi-value">4 materiais</div>
+            <div class="pt-kpi-label">de haste: cerâmica, metal duro, inox e fibra de carbono</div>
+        </div>
+    </div>
+
+    <!-- TIPOS DE PONTAS -->
+    <section class="pt-section" id="tipos">
+        <h2>&#128270; Tipos de Pontas de Medição</h2>
+        <p class="pt-lead">Cada geometria de ponta é projetada para uma classe de aplicações específicas. A combinação entre o tipo de ponta, o material da haste e o diâmetro da esfera define a melhor solução para cada feature de medição.</p>
+
+        <div class="pt-grid">
+
+            <!-- RETA -->
+            <div class="pt-card">
+                <div class="pt-card-head">
+                    <div class="pt-card-icon">&#8593;</div>
+                    <div class="pt-card-hd">
+                        <div class="pt-card-title">Ponta Reta</div>
+                        <div class="pt-card-sub">Straight Stylus</div>
+                    </div>
+                </div>
+                <div class="pt-card-body">
+                    <p>É o modelo mais encontrado no mercado, atendendo a grande maioria das aplicações de posicionamento com o apalpador. Chamada assim por possuir um tronco reto, é utilizada quando há contato direto e sem obstáculos com a superfície a ser medida.</p>
+                    <ul>
+                        <li>Maior disponibilidade de comprimentos (L) e EWLs</li>
+                        <li>Compatível com todas as roscas M2, M3, M4 e M5</li>
+                        <li>Esferas de Rubi, Nitreto de Silício, Vidro e Aço</li>
+                        <li>Indicada como ponta padrão para setup inicial de CMM</li>
+                    </ul>
+                    <div class="pt-card-tags">
+                        <span class="pt-tag pt-tag--green">Uso Geral</span>
+                        <span class="pt-tag">CMM</span>
+                        <span class="pt-tag pt-tag--gray">Acesso direto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EM L -->
+            <div class="pt-card">
+                <div class="pt-card-head">
+                    <div class="pt-card-icon">&#8627;</div>
+                    <div class="pt-card-hd">
+                        <div class="pt-card-title">Ponta em L</div>
+                        <div class="pt-card-sub">L-Shape Stylus</div>
+                    </div>
+                </div>
+                <div class="pt-card-body">
+                    <p>Possui uma dobra de 90° na haste, permitindo o acesso lateral a features que uma ponta reta não alcançaria sem reposicionamento da peça. Essencial para a medição de furos horizontais, rebaixos e roscas perpendiculares ao eixo principal do apalpador.</p>
+                    <ul>
+                        <li>Dobra a 90° — acesso lateral sem reposicionar a peça</li>
+                        <li>Disponível nos braços curtos e longos</li>
+                        <li>Indicada para furos horizontais e rasgos</li>
+                        <li>Exige calibração individual do raio da esfera</li>
+                    </ul>
+                    <div class="pt-card-tags">
+                        <span class="pt-tag">Furos laterais</span>
+                        <span class="pt-tag">Rebaixos</span>
+                        <span class="pt-tag pt-tag--gray">90°</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANGULADA -->
+            <div class="pt-card">
+                <div class="pt-card-head">
+                    <div class="pt-card-icon">&#8599;</div>
+                    <div class="pt-card-hd">
+                        <div class="pt-card-title">Ponta Angulada</div>
+                        <div class="pt-card-sub">Angled Stylus</div>
+                    </div>
+                </div>
+                <div class="pt-card-body">
+                    <p>Similar à ponta em L, porém com ângulos intermediários — tipicamente 30°, 45° ou 60°. Utilizada quando o acesso à feature é oblíquo, permitindo medição em superfícies inclinadas ou internas de difícil alcance sem gerar erros de Abbé significativos.</p>
+                    <ul>
+                        <li>Ângulos: 30°, 45°, 60° e 90°</li>
+                        <li>Reduz o erro de Abbé em medições oblíquas</li>
+                        <li>Indicada para cones, chanfros e cavidades inclinadas</li>
+                        <li>Exige cuidado com a direção de disparo (trigger direction)</li>
+                    </ul>
+                    <div class="pt-card-tags">
+                        <span class="pt-tag">Superfícies inclinadas</span>
+                        <span class="pt-tag">Cones</span>
+                        <span class="pt-tag pt-tag--gray">30°–90°</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ESTRELA -->
+            <div class="pt-card">
+                <div class="pt-card-head">
+                    <div class="pt-card-icon">&#11088;</div>
+                    <div class="pt-card-hd">
+                        <div class="pt-card-title">Ponta em Estrela</div>
+                        <div class="pt-card-sub">Star Stylus</div>
+                    </div>
+                </div>
+                <div class="pt-card-body">
+                    <p>Configuração com múltiplas hastes (tipicamente 3 ou 5) dispostas radialmente a partir de um corpo central, formando uma estrela. Permite medir em múltiplas direções com um único apalpador, eliminando trocas de ponta durante o programa de medição.</p>
+                    <ul>
+                        <li>3 ou 5 hastes radiais (configurações +X, -X, +Y, -Y, ±Z)</li>
+                        <li>Reduz o tempo de ciclo de medição</li>
+                        <li>Exige calibração individual de cada esfera</li>
+                        <li>Indicada para peças com features em múltiplas faces</li>
+                    </ul>
+                    <div class="pt-card-tags">
+                        <span class="pt-tag">Multi-direção</span>
+                        <span class="pt-tag">Alto volume</span>
+                        <span class="pt-tag pt-tag--gray">3 ou 5 hastes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CILÍNDRICA -->
+            <div class="pt-card">
+                <div class="pt-card-head">
+                    <div class="pt-card-icon">&#9645;</div>
+                    <div class="pt-card-hd">
+                        <div class="pt-card-title">Ponta Cilíndrica</div>
+                        <div class="pt-card-sub">Cylinder Stylus</div>
+                    </div>
+                </div>
+                <div class="pt-card-body">
+                    <p>Substitui a esfera por um cilindro de metal duro ou rubi. Utilizada para a medição de roscas internas (onde a esfera esférica não forma contato correto na helicóide), rasgos e sulcos, ou para digitalização de arestas. A ponta cilíndrica amosta a superfície ao longo de um geratriz.</p>
+                    <ul>
+                        <li>Corpo cilíndrico em metal duro ou rubi</li>
+                        <li>Ideal para medição de roscas, rasgos e sulcos</li>
+                        <li>Medição de arestas e rebaixos estreitos</li>
+                        <li>Disponível em comprimentos e diâmetros variados</li>
+                    </ul>
+                    <div class="pt-card-tags">
+                        <span class="pt-tag">Roscas</span>
+                        <span class="pt-tag">Rasgos</span>
+                        <span class="pt-tag pt-tag--gray">Arestas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DISCO -->
+            <div class="pt-card">
+                <div class="pt-card-head">
+                    <div class="pt-card-icon">&#9900;</div>
+                    <div class="pt-card-hd">
+                        <div class="pt-card-title">Ponta Disco / Haste-Disco</div>
+                        <div class="pt-card-sub">Disc Stylus</div>
+                    </div>
+                </div>
+                <div class="pt-card-body">
+                    <p>Possui um elemento de contato em forma de disco (ou anel) fixado na extremidade da haste. Utilizado principalmente para a medição de ressaltos, rebaixos internos, ranhuras e superfícies subjacentes inacessíveis a uma ponta esférica, realizando contato por baixo da superfície.</p>
+                    <ul>
+                        <li>Disco em rubi ou metal duro</li>
+                        <li>Acessa ranhuras e faces inferiores de ressaltos</li>
+                        <li>Necessita de programa de medição dedicado</li>
+                        <li>Disponível em diâmetros de 1 mm a 8 mm</li>
+                    </ul>
+                    <div class="pt-card-tags">
+                        <span class="pt-tag">Rebaixos internos</span>
+                        <span class="pt-tag">Ranhuras</span>
+                        <span class="pt-tag pt-tag--gray">Superfície inferior</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PARÂMETROS -->
+    <section class="pt-section" id="parametros">
+        <h2>&#128220; Parâmetros Técnicos — Legenda do Catálogo</h2>
+        <p class="pt-lead">Todos os modelos do catálogo Enterfix são descritos pelos parâmetros abaixo. Compreender cada parâmetro é fundamental para especificar corretamente a ponta ideal para cada aplicação.</p>
+
+        <!-- Diagrama de legenda -->
+        <div class="pt-diagram">
+            <div class="pt-diagram-legend">
+                <div class="pt-legend-item">
+                    <div class="pt-legend-dot">L</div>
+                    <div class="pt-legend-text">
+                        <strong>Comprimento Total (L)</strong>
+                        <span>Dimensão total da ponta, da face de contato da rosca até o centro da esfera. Expresso em milímetros.</span>
+                    </div>
+                </div>
+                <div class="pt-legend-item">
+                    <div class="pt-legend-dot" style="font-size:10px;">EWL</div>
+                    <div class="pt-legend-text">
+                        <strong>Comprimento Efetivo de Trabalho (EWL)</strong>
+                        <span>Comprimento útil da haste abaixo do ponto de roscamento, ou seja, a profundidade máxima de acesso em furos e cavidades antes de o corpo do apalpador tocar a peça.</span>
+                    </div>
+                </div>
+                <div class="pt-legend-item">
+                    <div class="pt-legend-dot" style="font-size:10px;">&#8960;</div>
+                    <div class="pt-legend-text">
+                        <strong>Diâmetro da Esfera (Ø Esfera)</strong>
+                        <span>Diâmetro nominal da esfera de contato. Disponível de 0,3 mm a 10 mm. Esferas menores acessam features mais estreitas; esferas maiores oferecem maior estabilidade de contato.</span>
+                    </div>
+                </div>
+                <div class="pt-legend-item">
+                    <div class="pt-legend-dot" style="font-size:11px;">M</div>
+                    <div class="pt-legend-text">
+                        <strong>Rosca de Fixação</strong>
+                        <span>Rosca métrica para fixação no apalpador ou módulo intermediário. Pode ser M2, M3, M4 ou M5 — definida pelo apalpador e módulo de extensão do fabricante.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela de parâmetros -->
+        <div style="overflow-x:auto; margin-top:22px;">
+            <table class="pt-params" aria-label="Tabela de parâmetros do catálogo de pontas">
+                <thead>
+                    <tr>
+                        <th style="width:90px;">Código</th>
+                        <th style="width:200px;">Parâmetro</th>
+                        <th>Descrição e Valores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pt-param-code">L</td>
+                        <td class="pt-param-name">Comprimento Total</td>
+                        <td>
+                            Comprimento total da ponta medido da face de apoio da rosca até o centro geométrico da esfera.
+                            <div class="pt-param-detail">Exemplos: 10 mm / 20 mm / 30 mm / 50 mm / 75 mm / 100 mm</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pt-param-code">EWL</td>
+                        <td class="pt-param-name">Compr. Efetivo de Trabalho</td>
+                        <td>
+                            Comprimento útil da haste disponível para entrar em cavidades e furos sem que o corpo do apalpador toque a peça. Sempre menor que L.
+                            <div class="pt-param-detail">O EWL é o parâmetro crítico para determinar se a ponta alcança a feature sem colisão.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pt-param-code">ROSCA</td>
+                        <td class="pt-param-name">Rosca de Fixação</td>
+                        <td>
+                            Rosca métrica para acoplamento ao apalpador ou módulo de extensão. Deve ser compatível com o apalpador instalado na CMM.
+                            <div class="pt-param-detail">Valores disponíveis: M2 &nbsp;|&nbsp; M3 &nbsp;|&nbsp; M4 &nbsp;|&nbsp; M5</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pt-param-code">MAT. HASTE</td>
+                        <td class="pt-param-name">Material da Haste</td>
+                        <td>
+                            Material construtivo da haste, que influencia rigidez, peso, expansão térmica e susceptibilidade magnética.
+                            <div class="pt-param-detail">CE (Cerâmica) &nbsp;|&nbsp; MD (Metal Duro) &nbsp;|&nbsp; Inox (Aço Inoxidável) &nbsp;|&nbsp; FC (Fibra de Carbono)</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pt-param-code">Ø ESFERA</td>
+                        <td class="pt-param-name">Diâmetro da Esfera</td>
+                        <td>
+                            Diâmetro nominal da esfera de contato. Impacta diretamente o acesso a features internas e a força de contato distribuída sobre a superfície.
+                            <div class="pt-param-detail">Faixa disponível: 0,3 mm até 10 mm — em incrementos padrão de 0,5 mm e 1 mm.</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ROSCAS -->
+    <section class="pt-section" id="roscas">
+        <h2>&#128295; Roscas de Fixação e Compatibilidade</h2>
+        <p class="pt-lead">A rosca de fixação conecta a ponta ao apalpador ou ao módulo de extensão. A tabela abaixo relaciona as roscas disponíveis com os apalpadores mais comuns do mercado.</p>
+
+        <div style="overflow-x:auto;">
+            <table class="pt-spec-table" aria-label="Roscas de fixação e compatibilidade com apalpadores">
+                <thead>
+                    <tr>
+                        <th>Rosca</th>
+                        <th>Diâmetro Nominal</th>
+                        <th>Apalpadores Compatíveis</th>
+                        <th>Aplicação Típica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>M2</strong></td>
+                        <td>2 mm</td>
+                        <td>Renishaw TP2, TP6, TP20 (módulo M2), Zeiss VAST Nano</td>
+                        <td>Pontas micro, diâmetros de esfera ≤ 1 mm, furos muito pequenos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M3</strong></td>
+                        <td>3 mm</td>
+                        <td>Renishaw TP20, TP200, SP25, Hexagon HP-S, Mitutoyo</td>
+                        <td>Pontas padrão para uso geral; a rosca mais comum no mercado CMM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M4</strong></td>
+                        <td>4 mm</td>
+                        <td>Renishaw TP6, TP7M, Marposs P7, DEA (Hexagon) apalpadores legados</td>
+                        <td>Pontas para hastes mais longas e pesadas, furos de grande profundidade</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M5</strong></td>
+                        <td>5 mm</td>
+                        <td>Renishaw TP1, TP2 (versões antigas), Leitz LSP, apalpadores de grande porte</td>
+                        <td>Pontas robustas, hastes longas &gt; 100 mm, medição de grandes estruturas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pt-alert pt-alert--blue" style="margin-top:16px;">
+            <p>&#8505;&#65039; <strong>Dica:</strong> sempre verifique a rosca do apalpador instalado e do módulo de extensão antes de especificar a ponta. Módulos de extensão podem adaptar M3 → M4 ou M4 → M5 quando necessário.</p>
+        </div>
+    </section>
+
+    <!-- MATERIAIS DE HASTE -->
+    <section class="pt-section" id="materiais">
+        <h2>&#9881;&#65039; Materiais de Haste</h2>
+        <p class="pt-lead">O material da haste influencia rigidez, peso, expansão térmica e comportamento magnético. Cada material tem uma classe de aplicação preferencial.</p>
+
+        <div class="pt-mat-grid">
+            <div class="pt-mat-card">
+                <div class="pt-mat-code">CE</div>
+                <div class="pt-mat-name">Cerâmica (Al&#8322;O&#8323;)</div>
+                <div class="pt-mat-desc">Alta rigidez, baixa expansão térmica e não magnética. É o material padrão para uso geral em CMM, proporcionando excelente relação rigidez/peso e estabilidade dimensional em ambientes com variação de temperatura.</div>
+            </div>
+            <div class="pt-mat-card">
+                <div class="pt-mat-code">MD</div>
+                <div class="pt-mat-name">Metal Duro (WC-Co)</div>
+                <div class="pt-mat-desc">Extremamente rígida, indicada para pontas curtas que exigem máxima rigidez lateral — como pontas estrela e pontas em L com braço curto. Susceptível ao magnetismo; evitar em peças ferromagnéticas que possam atrair a haste.</div>
+            </div>
+            <div class="pt-mat-card">
+                <div class="pt-mat-code">Inox</div>
+                <div class="pt-mat-name">Aço Inoxidável (AISI 303)</div>
+                <div class="pt-mat-desc">Versátil e resistente à corrosão. Maior expansão térmica que a cerâmica — usar em ambientes climatizados (20 °C ± 1 °C). Boa usinabilidade, disponível em uma ampla gama de comprimentos. Indicada quando o custo é o fator principal.</div>
+            </div>
+            <div class="pt-mat-card">
+                <div class="pt-mat-code">FC</div>
+                <div class="pt-mat-name">Fibra de Carbono (CFRP)</div>
+                <div class="pt-mat-desc">Levíssima e com baixíssima expansão térmica. Essencial para pontas longas (&gt; 50 mm) onde o peso da haste aumentaria o erro de deflexão dinâmica. Não magnética. Frágil sob impacto lateral — evitar colisões.</div>
+            </div>
+        </div>
+
+        <div class="pt-alert pt-alert--yellow" style="margin-top: 14px;">
+            <p>&#9888;&#65039; <strong>Atenção à temperatura:</strong> para pontas de aço inoxidável, recomenda-se que a peça e a CMM estejam a 20 °C ± 1 °C por pelo menos 4 horas antes da medição, conforme ISO 1 e ASME B89.6.2.</p>
+        </div>
+    </section>
+
+    <!-- ESFERAS -->
+    <section class="pt-section" id="esferas">
+        <h2>&#11044; Esferas de Contato — Diâmetros e Aplicações</h2>
+        <p class="pt-lead">O diâmetro da esfera determina o acesso mínimo a furos e cavidades e influencia a força de contato distribuída sobre a superfície. Veja as faixas de diâmetro e suas aplicações típicas.</p>
+
+        <div style="overflow-x:auto;">
+            <table class="pt-spec-table" aria-label="Diâmetros de esfera por aplicação">
+                <thead>
+                    <tr>
+                        <th>Ø Esfera</th>
+                        <th>Faixa de Uso</th>
+                        <th>Aplicação Típica</th>
+                        <th>Observação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>0,3 – 0,5 mm</strong></td>
+                        <td>Micro</td>
+                        <td>Furos muito pequenos, microgeometria, relógios e eletrônica de precisão</td>
+                        <td>Exige CMM com baixíssima força de trigger (&lt; 0,01 N). Haste M2.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>0,5 – 1,0 mm</strong></td>
+                        <td>Pequeno</td>
+                        <td>Furos de &#8960; &lt; 3 mm, roscas M3–M6, features de precisão em moldes</td>
+                        <td>Haste CE ou MD. Cuidado com deflexão em comprimentos &gt; 20 mm.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1,0 – 3,0 mm</strong></td>
+                        <td>Padrão</td>
+                        <td>Uso geral — furos, planos, cilindros, cones, rasgos. A faixa mais utilizada em CMM de produção.</td>
+                        <td>Maior disponibilidade de modelos. Rosca M3 padrão.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3,0 – 6,0 mm</strong></td>
+                        <td>Médio</td>
+                        <td>Planos grandes, esferas de referência, medição de peças brutas ou fundidas</td>
+                        <td>Boa estabilidade de contato. Menor sensibilidade a superfícies rugosas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6,0 – 10,0 mm</strong></td>
+                        <td>Grande</td>
+                        <td>Peças de grande porte, medição de planos em fundidos e forjados, referências de calibração</td>
+                        <td>Rosca M4 ou M5. Peso elevado — verificar capacidade de carga do apalpador.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pt-alert pt-alert--green" style="margin-top:14px;">
+            <p>&#10004; <strong>Regra geral:</strong> utilize a maior esfera que caiba na feature a medir. Esferas maiores são menos sensíveis à rugosidade da superfície, ao erro de forma local e ao alinhamento, melhorando a repetitividade da medição.</p>
+        </div>
+    </section>
+
+    <!-- COMO ESCOLHER -->
+    <section class="pt-section" id="escolha">
+        <h2>&#128161; Como Selecionar a Ponta Correta</h2>
+        <p class="pt-lead">Siga o roteiro abaixo para definir o tipo, comprimento e material mais adequados para cada aplicação de medição.</p>
+
+        <h3>1. Defina a geometria pelo tipo de acesso</h3>
+        <ul>
+            <li><strong>Acesso direto pelo topo:</strong> Ponta Reta — primeira opção para qualquer setup</li>
+            <li><strong>Acesso lateral (furo horizontal):</strong> Ponta em L ou Angulada 90°</li>
+            <li><strong>Acesso oblíquo (chanfro, cone):</strong> Ponta Angulada 30°, 45° ou 60°</li>
+            <li><strong>Múltiplas direções sem troca:</strong> Ponta Estrela (3 ou 5 hastes)</li>
+            <li><strong>Roscas internas e rasgos:</strong> Ponta Cilíndrica</li>
+            <li><strong>Faces inferiores de ressaltos e ranhuras:</strong> Ponta Disco</li>
+        </ul>
+
+        <h3>2. Defina o diâmetro da esfera</h3>
+        <ul>
+            <li>Use a maior esfera que caiba no menor furo ou cavidade a medir</li>
+            <li>Para furos: Ø esfera ≤ 0,8 × Ø furo (deixar folga para não tocar a parede lateral)</li>
+            <li>Para EWL longo: prefira esfera maior (melhor estabilidade dinâmica)</li>
+        </ul>
+
+        <h3>3. Escolha o comprimento (L e EWL)</h3>
+        <ul>
+            <li>EWL deve ser &gt; profundidade máxima da feature + 2 mm de folga de segurança</li>
+            <li>Quanto mais curto, mais rígido — use o menor comprimento que alcance a feature</li>
+            <li>Para pontas longas (&gt; 50 mm), opte por haste de Fibra de Carbono ou Cerâmica</li>
+        </ul>
+
+        <h3>4. Escolha o material da haste</h3>
+        <ul>
+            <li><strong>CE (Cerâmica):</strong> 1ª opção para uso geral em CMM — baixa expansão, não magnética</li>
+            <li><strong>MD (Metal Duro):</strong> pontas curtas que exigem máxima rigidez (estrela, L curto)</li>
+            <li><strong>FC (Fibra de Carbono):</strong> pontas longas (&gt; 50 mm) para minimizar deflexão e peso</li>
+            <li><strong>Inox:</strong> quando o custo é prioritário e o ambiente é estável em temperatura</li>
+        </ul>
+
+        <div class="pt-alert pt-alert--blue" style="margin-top:8px;">
+            <p>&#8505;&#65039; <strong>Dúvida na especificação?</strong> Nossa equipe técnica auxilia na seleção da ponta ideal com base no desenho da peça e nas especificações dimensionais exigidas. Entre em contato informando o modelo do apalpador e a feature a medir.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="pt-cta">
+        <h2>&#128270; Precisa de uma ponta específica?</h2>
+        <p>Consultoria técnica gratuita para seleção de pontas de medição. Informe o apalpador, a feature e a tolerância — sugerimos a solução ideal.</p>
+        <p style="font-size:13px; opacity:0.7; margin-top:2px;">Seg–Sex, 08:00–12:00 e 13:00–17:30</p>
+        <a class="pt-cta-btn pt-cta-btn--white"
+           href="mailto:ecommerce@enterfix.com.br?subject=Consulta%20Pontas%20de%20Medi%C3%A7%C3%A3o&body=Apalpador:%0D%0AFeature a medir:%0D%0ATolerancias:%0D%0ADiametro do furo / profundidade:">
+            &#128140; ecommerce@enterfix.com.br
+        </a>
+        <a class="pt-cta-btn" href="tel:+551149422222">&#128222; (11) 4942-2222 / 2220</a>
+        <p style="margin-top:16px; font-size:12px; opacity:0.65;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40</p>
+    </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,756 @@
+<section aria-labelledby="pp-title" class="pp-wrap">
+<style type="text/css">
+/* ===== POLÍTICA DE PRIVACIDADE — ENTERFIX ===== */
+.pp-wrap *,
+.pp-wrap *::before,
+.pp-wrap *::after { box-sizing: border-box; }
+
+.pp-wrap {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.pp-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: #ffffff;
+}
+
+/* ---- Cabeçalho ---- */
+.pp-hero {
+    background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+    border-radius: 12px;
+    padding: 40px 35px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+.pp-hero h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+.pp-hero .pp-subtitle {
+    font-size: 14px;
+    opacity: 0.85;
+    margin: 0;
+    line-height: 1.9;
+}
+.pp-hero .pp-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.pp-hero a { color: #93c5fd; }
+
+/* ---- Headings ---- */
+.pp-wrap h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1F1659;
+    margin: 44px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.pp-wrap h2 .pp-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    background: #1F1659;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+.pp-wrap h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #334155;
+    margin: 24px 0 10px;
+    padding-left: 12px;
+    border-left: 3px solid #6366f1;
+}
+
+/* ---- Parágrafos e listas ---- */
+.pp-wrap p  { margin: 0 0 14px; }
+.pp-wrap ul,
+.pp-wrap ol { margin: 0 0 18px; padding-left: 26px; }
+.pp-wrap li { margin-bottom: 8px; }
+.pp-wrap strong { color: #0f172a; }
+.pp-wrap a { color: #1d4ed8; text-decoration: underline; }
+.pp-wrap hr { border: 0; border-top: 1px solid #e2e8f0; margin: 42px 0; }
+
+/* ---- Sumário ---- */
+.pp-toc {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 42px;
+}
+.pp-toc strong {
+    display: block;
+    font-size: 16px;
+    color: #1F1659;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.pp-toc ol { margin: 0; padding-left: 22px; }
+.pp-toc li { margin-bottom: 4px; font-size: 15px; }
+.pp-toc a { color: #1e3a8a; text-decoration: none; font-weight: 500; }
+.pp-toc a:hover { text-decoration: underline; color: #1F1659; }
+
+/* ---- Cards de destaque ---- */
+.pp-card {
+    background: #f0f4ff;
+    border: 1px solid #c7d2fe;
+    border-left: 5px solid #4f46e5;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin: 24px 0;
+}
+.pp-card.pp-card--green {
+    background: #f0fdf4;
+    border-color: #86efac;
+    border-left-color: #16a34a;
+}
+.pp-card.pp-card--yellow {
+    background: #fefce8;
+    border-color: #fde047;
+    border-left-color: #ca8a04;
+}
+.pp-card.pp-card--red {
+    background: #fff1f2;
+    border-color: #fecdd3;
+    border-left-color: #dc2626;
+}
+.pp-card p:last-child { margin-bottom: 0; }
+
+/* ---- Tabela de bases legais ---- */
+.pp-table-wrap { overflow-x: auto; margin: 20px 0 28px; }
+.pp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+.pp-table th {
+    background: #1F1659;
+    color: #fff;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.pp-table th:first-child { border-radius: 8px 0 0 0; }
+.pp-table th:last-child  { border-radius: 0 8px 0 0; }
+.pp-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+}
+.pp-table tr:last-child td { border-bottom: 0; }
+.pp-table tr:nth-child(even) td { background: #f8fafc; }
+.pp-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+.pp-tag--blue   { background: #dbeafe; color: #1e40af; }
+.pp-tag--green  { background: #dcfce7; color: #166534; }
+.pp-tag--purple { background: #ede9fe; color: #5b21b6; }
+.pp-tag--orange { background: #ffedd5; color: #9a3412; }
+
+/* ---- Direitos ---- */
+.pp-rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 14px;
+    margin: 18px 0 24px;
+}
+.pp-right-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.pp-right-item .pp-right-icon {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.pp-right-item strong { display: block; font-size: 14px; color: #0f172a; margin-bottom: 3px; }
+.pp-right-item span { font-size: 14px; color: #475569; line-height: 1.5; }
+
+/* ---- Contato DPO ---- */
+.pp-dpo {
+    background: linear-gradient(135deg, #1e3a8a, #1F1659);
+    border-radius: 12px;
+    padding: 30px 30px;
+    margin: 30px 0;
+    color: #ffffff;
+    text-align: center;
+}
+.pp-dpo h3 { color: #fff; border: 0; padding: 0; margin: 0 0 12px; font-size: 20px; }
+.pp-dpo p { font-size: 15px; margin-bottom: 10px; opacity: 0.9; }
+.pp-dpo a { color: #93c5fd; font-weight: 700; }
+.pp-dpo .pp-dpo-email {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.30);
+    border-radius: 8px;
+    padding: 10px 22px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ---- Footer ---- */
+.pp-footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.pp-footer strong { color: #334155; }
+
+/* ---- Utils ---- */
+.pp-small   { font-size: 14px; }
+.pp-muted   { color: #64748b; }
+.pp-mono    { font-family: "SFMono-Regular", Consolas, monospace; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+</style>
+
+<div class="pp-container">
+
+    <!-- CABEÇALHO -->
+    <div class="pp-hero">
+        <span class="pp-badge">&#128272; LGPD | Lei 13.709/2018</span>
+        <h1 id="pp-title">Política de Privacidade e Proteção de Dados Pessoais</h1>
+        <p class="pp-subtitle">
+            <strong>Controladora:</strong> Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40<br />
+            <strong>Endereço:</strong> Rua Waldemar Martins Ferreira, 289 – Jordanópolis, São Bernardo do Campo/SP – CEP 09891-010<br />
+            <strong>Encarregado (DPO):</strong> <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> &nbsp;|&nbsp; Versão 3.0 &nbsp;|&nbsp; Vigência: Marco Civil da Internet (Lei 12.965/2014) e LGPD (Lei 13.709/2018)
+        </p>
+    </div>
+
+    <!-- SUMÁRIO -->
+    <div class="pp-toc">
+        <strong>&#128196; Sumário de Navegação</strong>
+        <ol>
+            <li><a href="#pp-intro">Apresentação e Âmbito de Aplicação</a></li>
+            <li><a href="#pp-lgpd">Fundamento Legal — LGPD (Lei nº 13.709/2018)</a></li>
+            <li><a href="#pp-conceitos">Definições e Conceitos Essenciais</a></li>
+            <li><a href="#pp-dados">Quais Dados Coletamos e Como</a></li>
+            <li><a href="#pp-bases">Bases Legais e Finalidades do Tratamento</a></li>
+            <li><a href="#pp-cookies">Política de Cookies e Tecnologias de Rastreamento</a></li>
+            <li><a href="#pp-compartilhamento">Compartilhamento de Dados com Terceiros</a></li>
+            <li><a href="#pp-transferencia">Transferência Internacional de Dados</a></li>
+            <li><a href="#pp-retencao">Prazo de Retenção e Critérios de Exclusão</a></li>
+            <li><a href="#pp-direitos">Direitos dos Titulares — Art. 18 da LGPD</a></li>
+            <li><a href="#pp-exercicio">Como Exercer seus Direitos</a></li>
+            <li><a href="#pp-seguranca">Segurança da Informação</a></li>
+            <li><a href="#pp-menores">Tratamento de Dados de Menores</a></li>
+            <li><a href="#pp-decisoes">Decisões Automatizadas e Perfis</a></li>
+            <li><a href="#pp-anpd">Reclamação perante a ANPD</a></li>
+            <li><a href="#pp-alteracoes">Atualizações desta Política</a></li>
+        </ol>
+    </div>
+
+    <!-- 1. INTRODUÇÃO -->
+    <div id="pp-intro">
+        <h2><span class="pp-num">1</span> Apresentação e Âmbito de Aplicação</h2>
+        <p>
+            A <strong>ENTERFIX Indústria, Comércio e Serviços Ltda.</strong> ("<strong>ENTERFIX</strong>", "<strong>nós</strong>" ou "<strong>Controladora</strong>") é uma empresa brasileira que respeita e valoriza a privacidade de todos que interagem com seus canais digitais. Esta <strong>Política de Privacidade e Proteção de Dados Pessoais</strong> ("<strong>Política</strong>") tem por objetivo informar, de maneira clara, transparente e acessível, como coletamos, tratamos, armazenamos e protegemos os dados pessoais de nossos clientes, fornecedores, colaboradores e visitantes ("<strong>Titulares</strong>").
+        </p>
+        <p>
+            Este documento aplica-se a todas as operações de tratamento de dados realizadas por meio de nosso site, loja virtual, aplicativos, canais de atendimento, redes sociais e qualquer outra plataforma mantida pela ENTERFIX, independentemente do dispositivo ou meio de acesso utilizado pelo Titular.
+        </p>
+        <div class="pp-card pp-card--green">
+            <p>
+                &#9989; <strong>Compromisso ENTERFIX:</strong> Nós nunca venderemos seus dados pessoais a terceiros. Todo tratamento realizado está ancorado em bases legais expressas na LGPD e tem por objetivo exclusivo o aprimoramento de nossos serviços e o cumprimento de obrigações legais.
+            </p>
+        </div>
+        <p>
+            Ao utilizar nossos serviços, acessar nosso site ou realizar compras em nossa loja, o Titular declara que leu, compreendeu e concorda com os termos desta Política. Caso não concorde com qualquer disposição aqui prevista, solicitamos que se abstenha de utilizar os nossos serviços e entre em contato com nosso Encarregado (DPO) para esclarecimentos.
+        </p>
+    </div>
+
+    <!-- 2. LGPD -->
+    <div id="pp-lgpd">
+        <h2><span class="pp-num">2</span> Fundamento Legal — LGPD (Lei nº 13.709/2018)</h2>
+        <p>
+            A <strong>Lei Geral de Proteção de Dados Pessoais</strong> (LGPD), em vigor desde setembro de 2020, é o principal diploma normativo brasileiro que regula o tratamento de dados pessoais por pessoas naturais e jurídicas de direito público ou privado, em meios físicos ou digitais, com o objetivo de proteger os direitos fundamentais de liberdade, privacidade e o livre desenvolvimento da personalidade da pessoa natural.
+        </p>
+        <p>
+            Complementarmente, a ENTERFIX observa ainda: o <strong>Marco Civil da Internet</strong> (Lei nº 12.965/2014), o <strong>Código de Defesa do Consumidor</strong> (Lei nº 8.078/1990), a <strong>Lei do Cadastro Positivo</strong> (Lei nº 12.414/2011), a legislação tributária e fiscal vigente, bem como as regulamentações e resoluções emitidas pela <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>.
+        </p>
+        <p>
+            O tratamento de dados pessoais pela ENTERFIX é guiado pelos princípios previstos no art. 6º da LGPD:
+        </p>
+        <ul>
+            <li><strong>Finalidade:</strong> propósitos legítimos, específicos, explícitos e informados;</li>
+            <li><strong>Adequação:</strong> compatibilidade com as finalidades informadas;</li>
+            <li><strong>Necessidade:</strong> limitação ao mínimo necessário (data minimization);</li>
+            <li><strong>Livre Acesso:</strong> garantia de consulta facilitada e gratuita;</li>
+            <li><strong>Qualidade:</strong> exatidão, clareza e atualização dos dados;</li>
+            <li><strong>Transparência:</strong> informações claras e acessíveis sobre o tratamento;</li>
+            <li><strong>Segurança:</strong> medidas técnicas e administrativas de proteção;</li>
+            <li><strong>Prevenção:</strong> adoção de medidas para evitar danos;</li>
+            <li><strong>Não Discriminação:</strong> vedação de tratamento para fins discriminatórios;</li>
+            <li><strong>Responsabilização:</strong> demonstração de adoção de medidas eficazes.</li>
+        </ul>
+    </div>
+
+    <!-- 3. CONCEITOS -->
+    <div id="pp-conceitos">
+        <h2><span class="pp-num">3</span> Definições e Conceitos Essenciais</h2>
+        <p>Para fins desta Política, os termos a seguir terão os significados abaixo descritos, conforme definidos pela LGPD:</p>
+        <ul>
+            <li><strong>Dado Pessoal:</strong> Informação relacionada a pessoa natural identificada ou identificável — como nome, CPF, RG, endereço, telefone, e-mail, IP, geolocalização e dados comportamentais de navegação.</li>
+            <li><strong>Dado Pessoal Sensível:</strong> Dado sobre origem racial ou étnica, convicção religiosa, opinião política, saúde, vida sexual, dado genético ou biométrico. A ENTERFIX não coleta dados sensíveis intencionalmente em suas operações de e-commerce.</li>
+            <li><strong>Tratamento:</strong> Toda operação realizada com dados pessoais, como coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação, controle, modificação, comunicação, transferência, difusão ou extração.</li>
+            <li><strong>Titular:</strong> A pessoa natural a quem se referem os dados pessoais que são objeto de tratamento.</li>
+            <li><strong>Controladora:</strong> Pessoa jurídica responsável pelas decisões referentes ao tratamento de dados — no caso, a ENTERFIX.</li>
+            <li><strong>Operadora:</strong> Pessoa natural ou jurídica que realiza o tratamento de dados em nome da Controladora (ex: plataforma de e-commerce, gateway de pagamento).</li>
+            <li><strong>Encarregado (DPO):</strong> Pessoa indicada pela Controladora como canal de comunicação entre a ENTERFIX, os Titulares e a ANPD.</li>
+            <li><strong>Consentimento:</strong> Manifestação livre, informada e inequívoca pela qual o Titular concorda com o tratamento de seus dados para uma finalidade determinada.</li>
+            <li><strong>Anonimização:</strong> Utilização de meios técnicos razoáveis e disponíveis na ocasião do tratamento, por meio dos quais um dado perde a possibilidade de associação, direta ou indireta, ao Titular.</li>
+            <li><strong>ANPD:</strong> Autoridade Nacional de Proteção de Dados, órgão federal responsável por zelar pela proteção de dados pessoais e fiscalizar o cumprimento da LGPD.</li>
+        </ul>
+    </div>
+
+    <!-- 4. QUAIS DADOS COLETAMOS -->
+    <div id="pp-dados">
+        <h2><span class="pp-num">4</span> Quais Dados Coletamos e Como</h2>
+
+        <h3>4.1 Dados Fornecidos Diretamente pelo Titular</h3>
+        <ul>
+            <li><strong>Cadastro:</strong> nome completo, CPF/CNPJ, data de nascimento, gênero (opcional), endereço de entrega e cobrança, telefone e e-mail.</li>
+            <li><strong>Pagamento:</strong> dados de cartão tokenizados pelo gateway de pagamento (a ENTERFIX não armazena dados de cartão em seus servidores), CPF para emissão de nota fiscal.</li>
+            <li><strong>Comunicação:</strong> mensagens enviadas via SAC, chat, e-mail, WhatsApp ou redes sociais, incluindo conteúdo e metadados da conversa.</li>
+            <li><strong>Avaliações:</strong> comentários, notas e fotos de produtos submetidos voluntariamente.</li>
+        </ul>
+
+        <h3>4.2 Dados Coletados Automaticamente</h3>
+        <ul>
+            <li><strong>Dados de acesso:</strong> endereço IP, tipo e versão do navegador, sistema operacional, páginas visitadas, tempo de permanência, URLs de origem/destino, data e hora do acesso — conforme exigido pelo art. 15 do Marco Civil da Internet.</li>
+            <li><strong>Dados de navegação:</strong> comportamento de cliques, buscas realizadas, produtos visualizados, itens adicionados ao carrinho e histórico de compras.</li>
+            <li><strong>Cookies e tecnologias semelhantes:</strong> conforme detalhado na Seção 6.</li>
+        </ul>
+
+        <h3>4.3 Dados Obtidos de Terceiros</h3>
+        <ul>
+            <li>Informações de bureaus de crédito e antifraude para análise de risco de transações.</li>
+            <li>Dados de redes sociais quando o Titular opta por login social (Facebook, Google).</li>
+            <li>Dados de parceiros logísticos para rastreamento de entregas.</li>
+        </ul>
+    </div>
+
+    <!-- 5. BASES LEGAIS E FINALIDADES -->
+    <div id="pp-bases">
+        <h2><span class="pp-num">5</span> Bases Legais e Finalidades do Tratamento</h2>
+        <p>A LGPD exige que todo tratamento de dados pessoais esteja fundamentado em ao menos uma das hipóteses legais previstas em seu art. 7º. A tabela abaixo apresenta, de forma transparente, a base legal aplicável a cada finalidade de tratamento adotada pela ENTERFIX:</p>
+
+        <div class="pp-table-wrap">
+            <table class="pp-table">
+                <thead>
+                    <tr>
+                        <th>Finalidade do Tratamento</th>
+                        <th>Base Legal (Art. 7º LGPD)</th>
+                        <th>Dados Envolvidos</th>
+                        <th>Retenção</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Criação e gestão de cadastro de cliente</td>
+                        <td><span class="pp-tag pp-tag--blue">Execução de Contrato — VII</span></td>
+                        <td>Nome, e-mail, CPF, endereço, telefone</td>
+                        <td>Até rescisão + 5 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Processamento de pedidos e entrega</td>
+                        <td><span class="pp-tag pp-tag--blue">Execução de Contrato — VII</span></td>
+                        <td>Endereço, CPF, dados de contato</td>
+                        <td>5 anos (fiscal)</td>
+                    </tr>
+                    <tr>
+                        <td>Emissão de Nota Fiscal e obrigações fiscais</td>
+                        <td><span class="pp-tag pp-tag--green">Obrigação Legal — II</span></td>
+                        <td>CPF/CNPJ, nome, endereço</td>
+                        <td>10 anos (Fisco)</td>
+                    </tr>
+                    <tr>
+                        <td>Prevenção e combate a fraudes</td>
+                        <td><span class="pp-tag pp-tag--purple">Legítimo Interesse — IX</span></td>
+                        <td>IP, dados de comportamento, CPF</td>
+                        <td>6 meses a 2 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Atendimento ao cliente (SAC / pós-venda)</td>
+                        <td><span class="pp-tag pp-tag--blue">Execução de Contrato — VII</span></td>
+                        <td>Histórico de pedidos, dados de contato</td>
+                        <td>5 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Envio de comunicações transacionais (NF, rastreio)</td>
+                        <td><span class="pp-tag pp-tag--blue">Execução de Contrato — VII</span></td>
+                        <td>E-mail, telefone</td>
+                        <td>Vigência do contrato</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing, e-mail marketing e ofertas personalizadas</td>
+                        <td><span class="pp-tag pp-tag--orange">Consentimento — I</span></td>
+                        <td>E-mail, histórico de compras</td>
+                        <td>Até revogação</td>
+                    </tr>
+                    <tr>
+                        <td>Análise e melhoria do site (analytics)</td>
+                        <td><span class="pp-tag pp-tag--purple">Legítimo Interesse — IX</span></td>
+                        <td>IP anonimizado, comportamento</td>
+                        <td>26 meses</td>
+                    </tr>
+                    <tr>
+                        <td>Cookies de publicidade e remarketing</td>
+                        <td><span class="pp-tag pp-tag--orange">Consentimento — I</span></td>
+                        <td>Cookies, perfil de navegação</td>
+                        <td>Até revogação</td>
+                    </tr>
+                    <tr>
+                        <td>Registro de logs de acesso (Marco Civil)</td>
+                        <td><span class="pp-tag pp-tag--green">Obrigação Legal — II</span></td>
+                        <td>IP, data/hora, URL</td>
+                        <td>6 meses (obrigatório)</td>
+                    </tr>
+                    <tr>
+                        <td>Cumprimento de decisões judiciais ou regulatórias</td>
+                        <td><span class="pp-tag pp-tag--green">Obrigação Legal — II</span></td>
+                        <td>Conforme determinado</td>
+                        <td>Conforme determinado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pp-card pp-card--yellow">
+            <p>&#9888;&#65039; <strong>Legítimo Interesse:</strong> Quando utilizamos essa base legal (Art. 7º, IX), realizamos previamente um <em>balancing test</em> (teste de ponderação), garantindo que nossos interesses legítimos não prevalecem sobre os direitos e liberdades fundamentais dos Titulares.</p>
+        </div>
+    </div>
+
+    <!-- 6. COOKIES -->
+    <div id="pp-cookies">
+        <h2><span class="pp-num">6</span> Política de Cookies e Tecnologias de Rastreamento</h2>
+        <p>
+            Cookies são pequenos arquivos de texto instalados no dispositivo do Titular quando este acessa nosso site. A ENTERFIX também pode utilizar tecnologias similares, como <em>web beacons</em>, <em>pixel tags</em> e <em>local storage</em>. Abaixo descrevemos cada categoria:
+        </p>
+
+        <h3>6.1 Cookies Estritamente Necessários</h3>
+        <p>Essenciais ao funcionamento do site e da loja. Sem eles, serviços como o carrinho de compras, sessão autenticada e checkout não operam corretamente. <strong>Não requerem consentimento</strong> por serem indispensáveis à prestação do serviço solicitado pelo Titular (art. 7º, V, LGPD).</p>
+        <ul>
+            <li>Sessão de usuário autenticado;</li>
+            <li>Persistência de itens no carrinho;</li>
+            <li>Token CSRF de segurança de formulários.</li>
+        </ul>
+
+        <h3>6.2 Cookies de Desempenho e Analytics</h3>
+        <p>Coletam informações anônimas sobre como os visitantes utilizam o site (páginas mais acessadas, erros encontrados, taxa de rejeição). Utilizamos ferramentas como o <strong>Google Analytics</strong> com anonimização de IP habilitada. <strong>Requerem consentimento</strong>.</p>
+
+        <h3>6.3 Cookies de Funcionalidade</h3>
+        <p>Armazenam preferências do Titular (idioma, moeda, última busca) para personalizar a experiência. <strong>Requerem consentimento</strong>.</p>
+
+        <h3>6.4 Cookies de Marketing e Publicidade</h3>
+        <p>Utilizados por parceiros como <strong>Google Ads</strong>, <strong>Meta Pixel (Facebook/Instagram)</strong> e outras plataformas de publicidade para exibir anúncios relevantes e medir a efetividade de campanhas. Podem rastrear o Titular em outros sites (<em>cross-site tracking</em>). <strong>Requerem consentimento explícito</strong>.</p>
+
+        <h3>6.5 Gestão de Cookies</h3>
+        <p>
+            O Titular pode gerenciar, bloquear ou excluir cookies a qualquer momento por meio das configurações do navegador. Consulte o guia de seu navegador:
+            <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome</a> |
+            <a href="https://support.mozilla.org/pt-BR/kb/ativar-e-desativar-cookies-preferencias-de-rastreamento" target="_blank" rel="noopener">Firefox</a> |
+            <a href="https://support.microsoft.com/pt-br/windows/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Edge</a> |
+            <a href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a>.
+        </p>
+        <p class="pp-small pp-muted">A desativação de cookies não essenciais pode afetar a experiência de navegação, mas não impede o uso básico da loja.</p>
+    </div>
+
+    <!-- 7. COMPARTILHAMENTO -->
+    <div id="pp-compartilhamento">
+        <h2><span class="pp-num">7</span> Compartilhamento de Dados com Terceiros</h2>
+        <p>
+            A ENTERFIX <strong>não comercializa, não vende e não cede</strong> dados pessoais de seus Titulares a terceiros com fins comerciais. O compartilhamento ocorre de forma estritamente necessária, conforme descrito abaixo, e todos os terceiros que recebem dados pessoais são contratualmente obrigados a tratá-los em conformidade com a LGPD:
+        </p>
+        <ul>
+            <li><strong>Transportadoras e Correios:</strong> nome, CPF e endereço do destinatário para fins de entrega de mercadorias.</li>
+            <li><strong>Gateways de Pagamento (ex: Cielo, PagSeguro, Mercado Pago):</strong> dados necessários à autorização e processamento de transações financeiras, conforme regulamentação do Banco Central.</li>
+            <li><strong>Plataformas de E-commerce:</strong> a infraestrutura da loja é operada por parceiros tecnológicos que atuam como Operadores sob contrato de Tratamento de Dados (DPA).</li>
+            <li><strong>Bureaus de Antifraude (ex: Konduto, ClearSale):</strong> dados comportamentais e de identificação para análise de risco de transações.</li>
+            <li><strong>Autoridades Fiscais e Órgãos Governamentais:</strong> CPF, CNPJ, dados de NF e registros de transações para cumprimento de obrigações tributárias perante SEFAZ, Receita Federal e demais órgãos.</li>
+            <li><strong>Serviços de E-mail Marketing (ex: Mailchimp, SendGrid):</strong> e-mail e nome do Titular, exclusivamente quando há consentimento para recebimento de comunicações.</li>
+            <li><strong>Plataformas de Publicidade (Google, Meta):</strong> dados pseudonimizados (hashed) para segmentação de campanhas, somente com consentimento.</li>
+            <li><strong>Autoridades Judiciais e Regulatórias:</strong> em cumprimento de ordem judicial, regulatória ou administrativa, nos limites do determinado.</li>
+        </ul>
+    </div>
+
+    <!-- 8. TRANSFERÊNCIA INTERNACIONAL -->
+    <div id="pp-transferencia">
+        <h2><span class="pp-num">8</span> Transferência Internacional de Dados</h2>
+        <p>
+            Alguns de nossos parceiros tecnológicos (como serviços de nuvem, plataformas de analytics e publicidade) podem estar localizados ou processar dados em países diferentes do Brasil. Conforme dispõe o art. 33 da LGPD, a transferência internacional de dados pessoais somente ocorre quando:
+        </p>
+        <ul>
+            <li>O país destinatário oferece grau de proteção de dados adequado, reconhecido pela ANPD; <strong>ou</strong></li>
+            <li>A transferência é amparada por <strong>Cláusulas Contratuais Padrão</strong> aprovadas pela ANPD ou por normas corporativas globais (Binding Corporate Rules — BCR); <strong>ou</strong></li>
+            <li>O Titular concedeu consentimento específico e destacado para a transferência, após ser informado sobre os riscos decorrentes.</li>
+        </ul>
+        <div class="pp-card">
+            <p>
+                &#127758; Os principais destinos de transferência incluem: <strong>Estados Unidos</strong> (servidores Google Cloud, Amazon AWS, Meta) e <strong>União Europeia</strong> (parceiros sujeitos ao GDPR — Regulamento Geral de Proteção de Dados). Para solicitar informações sobre salvaguardas específicas adotadas, entre em contato com o DPO.
+            </p>
+        </div>
+    </div>
+
+    <!-- 9. RETENÇÃO -->
+    <div id="pp-retencao">
+        <h2><span class="pp-num">9</span> Prazo de Retenção e Critérios de Exclusão</h2>
+        <p>A ENTERFIX mantém os dados pessoais apenas pelo tempo necessário à consecução das finalidades para as quais foram coletados, observando os seguintes critérios:</p>
+        <ul>
+            <li><strong>Vigência da relação contratual:</strong> Os dados são mantidos enquanto o cliente possuir conta ativa em nossa plataforma.</li>
+            <li><strong>Prazo prescricional civil:</strong> 5 anos após o encerramento do contrato, conforme art. 206, §5º, do Código Civil, para eventual defesa em processos judiciais ou administrativos.</li>
+            <li><strong>Obrigações fiscais e tributárias:</strong> mínimo de 5 anos (podendo chegar a 10 anos para documentos contábeis), conforme legislação fiscal aplicável.</li>
+            <li><strong>Registros de acesso:</strong> 6 meses, conforme art. 15 do Marco Civil da Internet (Lei 12.965/2014).</li>
+            <li><strong>Dados de marketing (consentimento):</strong> mantidos até a revogação do consentimento pelo Titular, após o qual serão excluídos ou anonimizados em até 15 dias úteis.</li>
+            <li><strong>Logs de segurança e antifraude:</strong> até 2 anos, para fins de auditoria e prevenção de ilícitos.</li>
+        </ul>
+        <p>
+            Após o decurso dos prazos aplicáveis, os dados serão <strong>eliminados de forma segura e irreversível</strong> ou <strong>anonimizados</strong>, de modo que não seja mais possível identificar o Titular, conforme previsto no art. 16 da LGPD.
+        </p>
+    </div>
+
+    <!-- 10. DIREITOS DO TITULAR -->
+    <div id="pp-direitos">
+        <h2><span class="pp-num">10</span> Direitos dos Titulares — Art. 18 da LGPD</h2>
+        <p>A LGPD garante ao Titular amplo rol de direitos em relação ao tratamento de seus dados pessoais. A ENTERFIX se compromete a responder às solicitações no prazo de <strong>até 15 dias corridos</strong>, conforme art. 18, §5º, da LGPD:</p>
+
+        <div class="pp-rights-grid">
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#128269;</span>
+                <div>
+                    <strong>Confirmação e Acesso</strong>
+                    <span>Saber se tratamos seus dados e obter cópia das informações.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#9999;&#65039;</span>
+                <div>
+                    <strong>Correção</strong>
+                    <span>Retificar dados incompletos, inexatos ou desatualizados.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#128683;</span>
+                <div>
+                    <strong>Anonimização, Bloqueio ou Eliminação</strong>
+                    <span>Solicitar o bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#128228;</span>
+                <div>
+                    <strong>Portabilidade</strong>
+                    <span>Receber seus dados em formato estruturado para transferência a outro fornecedor.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#128465;&#65039;</span>
+                <div>
+                    <strong>Eliminação pelo Consentimento</strong>
+                    <span>Excluir dados tratados com base no seu consentimento, a qualquer momento.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#128101;</span>
+                <div>
+                    <strong>Compartilhamento</strong>
+                    <span>Saber com quais entidades públicas e privadas seus dados são compartilhados.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#9940;</span>
+                <div>
+                    <strong>Não Consentimento</strong>
+                    <span>Ser informado sobre a possibilidade de não consentir e as consequências da negativa.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#128260;</span>
+                <div>
+                    <strong>Revogação do Consentimento</strong>
+                    <span>Retirar o consentimento anteriormente concedido, sem prejuízo da licitude do tratamento realizado antes da revogação.</span>
+                </div>
+            </div>
+            <div class="pp-right-item">
+                <span class="pp-right-icon">&#128064;</span>
+                <div>
+                    <strong>Revisão de Decisão Automatizada</strong>
+                    <span>Solicitar revisão humana de decisões tomadas exclusivamente com base em tratamento automatizado de dados (art. 20 LGPD).</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pp-card pp-card--yellow">
+            <p>&#9888;&#65039; <strong>Atenção:</strong> O exercício dos direitos acima pode ser limitado quando o tratamento de dados for necessário para o cumprimento de obrigação legal ou regulatória, para o exercício regular de direitos em processo judicial, administrativo ou arbitral, ou por razões de segurança pública, nos termos dos arts. 16 e 18, §4º, da LGPD.</p>
+        </div>
+    </div>
+
+    <!-- 11. COMO EXERCER -->
+    <div id="pp-exercicio">
+        <h2><span class="pp-num">11</span> Como Exercer seus Direitos</h2>
+        <p>Para exercer qualquer dos direitos previstos no art. 18 da LGPD ou para esclarecer dúvidas sobre esta Política, o Titular pode entrar em contato com o nosso <strong>Encarregado de Proteção de Dados (DPO)</strong>:</p>
+
+        <div class="pp-dpo">
+            <h3>&#128272; Canal do Encarregado (DPO)</h3>
+            <p>Atendemos solicitações de segunda a sexta-feira, das 08h às 17h.</p>
+            <a class="pp-dpo-email" href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a>
+            <p><strong>Assunto do e-mail:</strong> <em>"Solicitação LGPD – [Tipo de Solicitação] – [Seu Nome]"</em></p>
+            <p>Correspondência física: Rua Waldemar Martins Ferreira, 289 – Jordanópolis, São Bernardo do Campo/SP – CEP 09891-010</p>
+            <p>&#128222; (11) 4942-2222 &nbsp;&nbsp; (11) 4942-2220</p>
+        </div>
+
+        <h3>11.1 Procedimento de Atendimento</h3>
+        <ol>
+            <li><strong>Identificação:</strong> Para sua segurança, poderemos solicitar documentação comprobatória de identidade antes de processar a requisição, garantindo que não fornecemos dados a terceiros não autorizados.</li>
+            <li><strong>Análise:</strong> Nossa equipe analisará a solicitação verificando a viabilidade legal do atendimento.</li>
+            <li><strong>Resposta:</strong> Responderemos no prazo de até <strong>15 dias corridos</strong> contados do recebimento da solicitação, com o resultado do atendimento ou justificativa fundamentada em caso de impossibilidade.</li>
+            <li><strong>Recurso à ANPD:</strong> Caso não fique satisfeito com nossa resposta, o Titular pode peticionar à ANPD (conforme Seção 15).</li>
+        </ol>
+        <p class="pp-small pp-muted">O atendimento a solicitações de acesso a dados é <strong>gratuito</strong>, nos termos do art. 18, §5º, da LGPD.</p>
+    </div>
+
+    <!-- 12. SEGURANÇA -->
+    <div id="pp-seguranca">
+        <h2><span class="pp-num">12</span> Segurança da Informação</h2>
+        <p>
+            A ENTERFIX adota medidas técnicas, físicas e administrativas adequadas para proteger seus dados pessoais contra acesso não autorizado, perda acidental, alteração indevida, divulgação ou destruição, conforme exigido pelo art. 46 da LGPD.
+        </p>
+
+        <h3>12.1 Medidas Técnicas</h3>
+        <ul>
+            <li><strong>Criptografia TLS/SSL (HTTPS):</strong> Todo o tráfego de dados entre o navegador do usuário e nossos servidores é criptografado com protocolo TLS 1.2 ou superior.</li>
+            <li><strong>Criptografia de dados sensíveis em repouso:</strong> Senhas são armazenadas com hash seguro (bcrypt/Argon2). Dados de pagamento são tokenizados pelo gateway certificado PCI-DSS.</li>
+            <li><strong>Controle de acesso baseado em função (RBAC):</strong> Apenas colaboradores autorizados têm acesso aos dados, limitado ao mínimo necessário ao exercício de suas funções.</li>
+            <li><strong>Firewall e sistemas de detecção de intrusão (IDS/IPS):</strong> Monitoramento contínuo da infraestrutura contra ameaças externas.</li>
+            <li><strong>Testes de segurança periódicos:</strong> Realizamos avaliações regulares de vulnerabilidade e, periodicamente, testes de penetração (pentest).</li>
+            <li><strong>Backups criptografados:</strong> Cópias de segurança são realizadas regularmente e armazenadas em ambientes segregados e criptografados.</li>
+        </ul>
+
+        <h3>12.2 Medidas Administrativas</h3>
+        <ul>
+            <li>Treinamento periódico dos colaboradores em privacidade e segurança da informação.</li>
+            <li>Política interna de tratamento de dados e cláusulas de confidencialidade em contratos de trabalho e com fornecedores.</li>
+            <li>Procedimento documentado para gestão e resposta a incidentes de segurança (art. 48 LGPD).</li>
+        </ul>
+
+        <h3>12.3 Incidente de Segurança (Violação de Dados)</h3>
+        <p>
+            Na hipótese improvável de um incidente de segurança que possa acarretar risco ou dano relevante ao Titular, a ENTERFIX notificará a <strong>ANPD e os Titulares afetados</strong> em <strong>prazo razoável</strong>, nos termos do art. 48 da LGPD, contendo: natureza dos dados afetados, informações sobre os Titulares envolvidos, medidas técnicas adotadas para mitigação e canal de contato do DPO.
+        </p>
+
+        <div class="pp-card pp-card--red">
+            <p>&#128274; <strong>Responsabilidade do Titular:</strong> A segurança também depende de você. Mantenha sua senha confidencial, não a compartilhe com terceiros e altere-a imediatamente caso suspeite de uso indevido. A ENTERFIX nunca solicitará sua senha por e-mail, telefone ou chat.</p>
+        </div>
+    </div>
+
+    <!-- 13. MENORES -->
+    <div id="pp-menores">
+        <h2><span class="pp-num">13</span> Tratamento de Dados de Menores de Idade</h2>
+        <p>
+            A ENTERFIX não direciona seus produtos, serviços ou comunicações de marketing a <strong>menores de 18 anos</strong>. O cadastro em nossa loja exige que o Titular seja maior de 18 anos ou seja emancipado legalmente. Não realizamos, de forma intencional, o tratamento de dados de crianças (menores de 12 anos) ou adolescentes.
+        </p>
+        <p>
+            Em conformidade com o art. 14 da LGPD e a Lei nº 14.811/2024 (Lei Henry Borel — Proteção Integral da Criança), caso tomemos conhecimento de que dados de menores foram coletados inadvertidamente, eliminaremos tais informações com a maior brevidade possível. Os responsáveis legais podem entrar em contato com o DPO para solicitar a exclusão de dados de menores sob sua responsabilidade.
+        </p>
+    </div>
+
+    <!-- 14. DECISÕES AUTOMATIZADAS -->
+    <div id="pp-decisoes">
+        <h2><span class="pp-num">14</span> Decisões Automatizadas e Perfilamento</h2>
+        <p>
+            A ENTERFIX pode utilizar sistemas automatizados para análise de risco de crédito e prevenção de fraudes em transações de compra. Tais sistemas avaliam fatores como: comportamento de navegação, histórico de pedidos, dados de pagamento e informações de bureaus especializados.
+        </p>
+        <p>
+            Conforme assegurado pelo art. 20 da LGPD, o Titular tem o <strong>direito de solicitar revisão humana</strong> de qualquer decisão tomada exclusivamente com base em tratamento automatizado que afete seus interesses — como a recusa de uma transação. Para exercer esse direito, entre em contato com nosso DPO.
+        </p>
+        <p>
+            Para fins de marketing personalizado, utilizamos perfilamento com base em histórico de compras e navegação. Esse tratamento é realizado com base no interesse legítimo (art. 7º, IX) e o Titular pode se opor a ele a qualquer momento.
+        </p>
+    </div>
+
+    <!-- 15. ANPD -->
+    <div id="pp-anpd">
+        <h2><span class="pp-num">15</span> Reclamação perante a ANPD</h2>
+        <p>
+            Sem prejuízo de qualquer outra via administrativa ou judicial, o Titular tem o direito de apresentar petição à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> caso considere que o tratamento de seus dados pessoais pela ENTERFIX está em desconformidade com a LGPD (art. 18, §1º, LGPD).
+        </p>
+        <div class="pp-card">
+            <p>
+                &#127981; <strong>ANPD — Autoridade Nacional de Proteção de Dados</strong><br />
+                Site oficial: <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">www.gov.br/anpd</a><br />
+                Peticionamento eletrônico: <a href="https://www.gov.br/anpd/pt-br/assuntos/peticoes" target="_blank" rel="noopener">Portal de Petições — ANPD</a>
+            </p>
+        </div>
+        <p class="pp-small pp-muted">Recomendamos, antes de recorrer à ANPD, que o Titular tente resolver a questão diretamente conosco por meio do canal do DPO, para que possamos atendê-lo da melhor forma possível.</p>
+    </div>
+
+    <!-- 16. ATUALIZAÇÕES -->
+    <div id="pp-alteracoes">
+        <h2><span class="pp-num">16</span> Atualizações desta Política</h2>
+        <p>
+            Esta Política pode ser revisada e atualizada periodicamente, em resposta a alterações legais ou regulatórias, mudanças em nossas práticas de negócio, novas recomendações da ANPD ou aprimoramentos em nossos sistemas de privacidade. A data de vigência e o número de versão no cabeçalho deste documento serão atualizados a cada revisão.
+        </p>
+        <p>
+            Em caso de alterações <strong>materiais</strong> — que afetem significativamente a forma como tratamos seus dados — notificaremos os Titulares cadastrados por <strong>e-mail ou aviso destacado em nosso site</strong>, com antecedência razoável, antes que as modificações entrem em vigor. A continuidade de uso dos nossos serviços após a vigência da nova versão implica na aceitação de seus termos.
+        </p>
+        <p>
+            O histórico de versões anteriores desta Política está disponível mediante solicitação ao DPO.
+        </p>
+    </div>
+
+    <hr />
+
+    <div class="pp-footer">
+        <p>
+            <strong>Enterfix Indústria, Comércio e Serviços Ltda.</strong><br />
+            CNPJ 13.250.539/0001-40 — Rua Waldemar Martins Ferreira, 289 – Jordanópolis, SBC/SP – CEP 09891-010<br />
+            &#128222; (11) 4942-2222 | (11) 4942-2220 &nbsp; | &nbsp; &#128140; <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a>
+        </p>
+        <p class="pp-small">Versão 3.0 &nbsp;|&nbsp; Vigente conforme LGPD (Lei 13.709/2018) e Marco Civil da Internet (Lei 12.965/2014)</p>
+    </div>
+
+</div>
+</section>

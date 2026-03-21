@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trocas e Devoluções — Enterfix</title>
+    <meta name="description" content="Política completa de trocas, devoluções e reembolsos da Enterfix. Saiba seus direitos e como solicitar em poucos passos." />
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.75;
+            font-size: 16px;
+        }
+
+        /* ===== LAYOUT ===== */
+        .td-page {
+            max-width: 1060px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ===== HERO ===== */
+        .td-hero {
+            background: linear-gradient(135deg, #1F1659 0%, #2d2580 50%, #1a4fa0 100%);
+            border-radius: 14px;
+            padding: 44px 40px;
+            margin-bottom: 32px;
+            color: #fff;
+        }
+        .td-hero .td-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.32);
+            border-radius: 50px;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .td-hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 14px;
+            color: #fff;
+        }
+        .td-hero p { font-size: 14px; opacity: 0.88; line-height: 1.9; margin: 0; }
+
+        /* ===== KPI BANNER ===== */
+        .td-kpi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+        .td-kpi-item {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #1F1659;
+            border-radius: 10px;
+            padding: 18px 20px;
+            text-align: center;
+        }
+        .td-kpi-item .td-kpi-icon { font-size: 26px; margin-bottom: 8px; }
+        .td-kpi-item strong { display: block; font-size: 21px; font-weight: 800; color: #1F1659; margin-bottom: 4px; }
+        .td-kpi-item span { font-size: 13px; color: #64748b; line-height: 1.4; }
+
+        /* ===== SEÇÕES ===== */
+        .td-section {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 36px 40px;
+            margin-bottom: 22px;
+        }
+        @media (max-width: 640px) {
+            .td-section { padding: 24px 18px; }
+            .td-hero { padding: 30px 22px; }
+        }
+
+        /* ===== HEADINGS ===== */
+        .td-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1F1659;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .td-section h3 {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #334155;
+            margin: 24px 0 8px;
+            padding-left: 12px;
+            border-left: 3px solid #6366f1;
+        }
+        .td-section h3:first-of-type { margin-top: 0; }
+
+        /* ===== TEXTO ===== */
+        .td-section p { font-size: 15px; margin-bottom: 12px; }
+        .td-section ul, .td-section ol { padding-left: 22px; margin-bottom: 14px; }
+        .td-section li { font-size: 15px; margin-bottom: 8px; }
+        .td-section strong { color: #0f172a; }
+        .td-section a { color: #1d4ed8; text-decoration: underline; }
+        .td-section a:hover { color: #1e40af; }
+        .td-section hr { border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0; }
+        .td-small { font-size: 13.5px; }
+        .td-muted { color: #64748b; }
+
+        /* ===== CARDS SUMÁRIO (3 tipos) ===== */
+        .td-type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 14px;
+            margin: 20px 0;
+        }
+        .td-type-card {
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid transparent;
+        }
+        .td-type-card .td-type-icon { font-size: 28px; margin-bottom: 10px; }
+        .td-type-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 6px;
+            padding: 0;
+            border: 0;
+        }
+        .td-type-card p { font-size: 13.5px; color: #475569; margin: 0 0 8px; }
+        .td-type-card .td-deadline {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 50px;
+        }
+        .td-type-card--blue   { background: #eff6ff; border-color: #bfdbfe; }
+        .td-type-card--blue   .td-deadline { background: #dbeafe; color: #1e40af; }
+        .td-type-card--green  { background: #f0fdf4; border-color: #86efac; }
+        .td-type-card--green  .td-deadline { background: #dcfce7; color: #166534; }
+        .td-type-card--orange { background: #fff7ed; border-color: #fed7aa; }
+        .td-type-card--orange .td-deadline { background: #ffedd5; color: #9a3412; }
+
+        /* ===== CARDS REEMBOLSO ===== */
+        .td-refund-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+        .td-refund-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .td-refund-card--coupon { border-top: 4px solid #a855f7; background: #faf5ff; }
+        .td-refund-card--card   { border-top: 4px solid #6366f1; background: #f5f3ff; }
+        .td-refund-card--pix    { border-top: 4px solid #06b6d4; background: #f0fdff; }
+        .td-refund-card--billet { border-top: 4px solid #f59e0b; background: #fffbeb; }
+        .td-refund-card .td-ri  { font-size: 26px; }
+        .td-refund-card h3 { font-size: 15px; font-weight: 700; color: #0f172a; margin: 0; padding: 0; border: 0; }
+        .td-refund-card .td-rt  { font-size: 12px; font-weight: 700; background: rgba(0,0,0,0.07); padding: 2px 9px; border-radius: 50px; display: inline-block; color: #334155; }
+        .td-refund-card p       { font-size: 13.5px; color: #475569; margin: 0; line-height: 1.55; }
+
+        /* ===== TIMELINE PASSO A PASSO ===== */
+        .td-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 20px 0;
+            position: relative;
+            padding-left: 26px;
+        }
+        .td-steps::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            bottom: 14px;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        .td-step {
+            position: relative;
+            padding: 0 0 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .td-step:last-child { padding-bottom: 0; }
+        .td-step-num {
+            position: absolute;
+            left: -15px;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #1F1659;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #1F1659;
+            flex-shrink: 0;
+        }
+        .td-step strong { font-size: 15px; color: #0f172a; padding-top: 4px; }
+        .td-step span   { font-size: 14px; color: #475569; line-height: 1.55; }
+        .td-step .td-kbd {
+            display: inline-block;
+            font-family: "SFMono-Regular", Consolas, monospace;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            padding: 1px 7px;
+            font-size: 12.5px;
+            color: #334155;
+        }
+
+        /* ===== ALERTS ===== */
+        .td-alert {
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+        .td-alert p:last-child { margin: 0; }
+        .td-alert p { font-size: 14.5px; }
+        .td-alert--blue   { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #3b82f6; }
+        .td-alert--green  { background: #f0fdf4; border: 1px solid #86efac; border-left: 4px solid #16a34a; }
+        .td-alert--yellow { background: #fefce8; border: 1px solid #fde047; border-left: 4px solid #ca8a04; }
+        .td-alert--red    { background: #fff1f2; border: 1px solid #fecdd3; border-left: 4px solid #dc2626; }
+
+        /* ===== CONTATO ===== */
+        .td-contact {
+            background: linear-gradient(135deg, #1e3a8a, #1F1659);
+            border-radius: 12px;
+            padding: 32px 30px;
+            text-align: center;
+            color: #fff;
+        }
+        .td-contact h2 { color: #fff; font-size: 18px; border: 0; padding: 0; margin-bottom: 10px; justify-content: center; }
+        .td-contact p  { font-size: 14px; opacity: 0.9; margin-bottom: 6px; }
+        .td-contact a  { color: #93c5fd; font-weight: 700; }
+        .td-contact-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.13);
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 8px;
+            padding: 10px 24px;
+            margin: 10px 6px 0;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+        .td-contact-btn:hover { background: rgba(255,255,255,0.22); color: #fff; }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body { background: #fff; }
+            .td-page { margin: 0; padding: 0; max-width: 100%; }
+            .td-hero { background: #1F1659 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="td-page" role="main">
+
+    <!-- HERO -->
+    <header class="td-hero">
+        <div class="td-badge">&#128260; CDC &nbsp;|&nbsp; Art. 18 e 49</div>
+        <h1>Trocas, Devoluções e Reembolsos</h1>
+        <p>Sua satisfação é nossa prioridade. Aqui você encontra, de forma clara e objetiva, como solicitar troca ou devolução de produtos comprados na Enterfix, seus prazos e direitos garantidos pelo Código de Defesa do Consumidor.</p>
+    </header>
+
+    <!-- KPIs -->
+    <div class="td-kpi" aria-label="Prazos em destaque">
+        <div class="td-kpi-item">
+            <div class="td-kpi-icon">&#128260;</div>
+            <strong>7 dias</strong>
+            <span>arrependimento ou insatisfação</span>
+        </div>
+        <div class="td-kpi-item">
+            <div class="td-kpi-icon">&#128722;</div>
+            <strong>7 dias</strong>
+            <span>produto errado ou incompleto</span>
+        </div>
+        <div class="td-kpi-item">
+            <div class="td-kpi-icon">&#128296;</div>
+            <strong>90 dias</strong>
+            <span>defeito de fabricação (CDC)</span>
+        </div>
+        <div class="td-kpi-item">
+            <div class="td-kpi-icon">&#9203;</div>
+            <strong>5 dias úteis</strong>
+            <span>prazo de resposta da nossa equipe</span>
+        </div>
+    </div>
+
+    <!-- TIPOS DE SOLICITAÇÃO -->
+    <section class="td-section" id="tipos">
+        <h2>&#128196; Tipos de Solicitação</h2>
+        <p>Existem três situações que podem gerar uma solicitação de troca ou devolução. Identifique o seu caso abaixo:</p>
+
+        <div class="td-type-grid">
+
+            <div class="td-type-card td-type-card--blue">
+                <div class="td-type-icon">&#128531;</div>
+                <h3>Arrependimento ou Insatisfação</h3>
+                <p>Você recebeu o produto mas mudou de ideia, ele não atendeu às suas expectativas ou simplesmente não ficou do seu agrado.</p>
+                <span class="td-deadline">&#128337; Até 7 dias corridos após o recebimento</span>
+            </div>
+
+            <div class="td-type-card td-type-card--green">
+                <div class="td-type-icon">&#10060;</div>
+                <h3>Produto Divergente ou Incompleto</h3>
+                <p>Você recebeu um produto diferente do comprado, com tamanho/cor errado, ou faltando algum acessório ou item do kit.</p>
+                <span class="td-deadline">&#128337; Até 7 dias corridos após o recebimento</span>
+            </div>
+
+            <div class="td-type-card td-type-card--orange">
+                <div class="td-type-icon">&#128296;</div>
+                <h3>Defeito de Fabricação</h3>
+                <p>O produto apresentou problema de fabricação — não funciona corretamente ou possui vício que compromete seu uso ou valor.</p>
+                <span class="td-deadline">&#128337; Até 90 dias corridos após o recebimento</span>
+            </div>
+
+        </div>
+
+        <div class="td-alert td-alert--blue">
+            <p>&#9432; <strong>Base legal:</strong> O prazo de 7 dias para arrependimento é garantido pelo <strong>art. 49 do CDC</strong> (Código de Defesa do Consumidor) para compras realizadas fora do estabelecimento comercial (inclusive pela internet). O prazo de 90 dias para defeito em produtos duráveis é garantido pelo <strong>art. 26, II, do CDC</strong>.</p>
+        </div>
+    </section>
+
+    <!-- CONDIÇÕES GERAIS -->
+    <section class="td-section" id="condicoes">
+        <h2>&#9989; Condições para Troca ou Devolução</h2>
+        <p>Para que a solicitação seja aceita, o produto deve ser devolvido nas seguintes condições:</p>
+
+        <h3>Condições obrigatórias</h3>
+        <ul>
+            <li>Produto <strong>sem sinais de uso</strong>, manchas, sujeira, suor ou deterioração;</li>
+            <li>Embalagem original <strong>preservada e íntegra</strong>, com etiquetas originais afixadas;</li>
+            <li>Acompanhado de <strong>todos os itens, acessórios e manuais</strong> recebidos no pedido original;</li>
+            <li>Solicitação realizada <strong>dentro do prazo</strong> aplicável à situação (7 ou 90 dias).</li>
+        </ul>
+
+        <div class="td-alert td-alert--red">
+            <p>&#128683; <strong>Não são aceitas devoluções</strong> de produtos com evidência de uso indevido, mau uso, desgaste por uso normal ou danos causados pelo comprador. Nesses casos, a responsabilidade de reparo é do titular do produto.</p>
+        </div>
+
+        <h3>Como comprovar o estado do produto</h3>
+        <p>Para agilizar a análise, ao enviar o e-mail de solicitação, inclua <strong>fotos nítidas</strong> do produto (todos os lados), da embalagem (externa e interna) e, quando aplicável, da etiqueta com código. Para defeitos, inclua vídeo demonstrando o problema.</p>
+    </section>
+
+    <!-- PASSO A PASSO -->
+    <section class="td-section" id="como-solicitar">
+        <h2>&#128203; Como Solicitar (Passo a Passo)</h2>
+        <p>Siga as etapas abaixo para abrir sua solicitação de troca ou devolução:</p>
+
+        <div class="td-steps">
+
+            <div class="td-step">
+                <span class="td-step-num">1</span>
+                <strong>Localize o número do pedido</strong>
+                <span>Você o encontra no e-mail de confirmação de compra ou na área <strong>"Meus Pedidos"</strong> do site.</span>
+            </div>
+
+            <div class="td-step">
+                <span class="td-step-num">2</span>
+                <strong>Envie o e-mail para nossa equipe</strong>
+                <span>Escreva para <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> com o assunto: <span class="td-kbd">Troca/Devolução – Nº [Número do Pedido]</span></span>
+            </div>
+
+            <div class="td-step">
+                <span class="td-step-num">3</span>
+                <strong>Descreva o motivo e anexe evidências</strong>
+                <span>Informe o motivo (arrependimento, produto divergente, acessório faltante ou defeito) e anexe <strong>fotos e/ou vídeo</strong> do produto e da embalagem.</span>
+            </div>
+
+            <div class="td-step">
+                <span class="td-step-num">4</span>
+                <strong>Aguarde nossa análise</strong>
+                <span>Nossa equipe retornará em até <strong>5 dias úteis</strong> com o resultado da análise e as instruções de postagem (etiqueta, endereço e prazo).</span>
+            </div>
+
+            <div class="td-step">
+                <span class="td-step-num">5</span>
+                <strong>Envie o produto conforme instrução</strong>
+                <span>Embale o produto com cuidado, inclua todos os itens e guarde o <strong>comprovante de postagem</strong> até a conclusão do processo.</span>
+            </div>
+
+            <div class="td-step">
+                <span class="td-step-num" style="background:#16a34a; box-shadow: 0 0 0 2px #16a34a;">&#10003;</span>
+                <strong>Conclusão: troca, cupom ou reembolso</strong>
+                <span>Após recebermos e conferirmos o produto, providenciaremos a <strong>troca</strong>, o <strong>cupom de desconto</strong> ou o <strong>estorno</strong>, conforme sua escolha e situação.</span>
+            </div>
+
+        </div>
+
+        <div class="td-alert td-alert--green">
+            <p>&#128226; Você receberá atualizações por e-mail em cada etapa do processo. Se desejar, também pode ligar para <strong>(11) 4942-2222</strong> nos horários de atendimento.</p>
+        </div>
+    </section>
+
+    <!-- FORMAS DE REEMBOLSO -->
+    <section class="td-section" id="reembolso">
+        <h2>&#128176; Formas de Restituição de Valores</h2>
+        <p>Após a análise e aprovação da devolução, você pode escolher uma das seguintes opções de restituição:</p>
+
+        <div class="td-refund-grid">
+
+            <div class="td-refund-card td-refund-card--coupon">
+                <div class="td-ri">&#127991;</div>
+                <h3>Cupom de Desconto</h3>
+                <span class="td-rt">Disponível para qualquer motivo</span>
+                <p>Crédito aplicado na próxima compra, com validade de <strong>90 dias</strong>. De uso exclusivo do titular da conta — não transferível e não conversível em dinheiro. Insira o código no campo indicado no checkout.</p>
+            </div>
+
+            <div class="td-refund-card td-refund-card--card">
+                <div class="td-ri">&#128179;</div>
+                <h3>Estorno — Cartão de Crédito</h3>
+                <span class="td-rt">Até 1–2 ciclos de fatura</span>
+                <p>Solicitamos o estorno à administradora em até <strong>7 dias úteis</strong> após aprovação. O crédito na fatura depende das regras da sua administradora — normalmente em um ou dois ciclos de cobrança.</p>
+            </div>
+
+            <div class="td-refund-card td-refund-card--pix">
+                <div class="td-ri">&#9889;</div>
+                <h3>Estorno — Pix</h3>
+                <span class="td-rt">Até 30 dias</span>
+                <p>O valor é devolvido em até <strong>30 dias</strong> para a conta do intermediador de pagamento utilizado. O saque pode ser solicitado conforme instruções do intermediador.</p>
+            </div>
+
+            <div class="td-refund-card td-refund-card--billet">
+                <div class="td-ri">&#128196;</div>
+                <h3>Estorno — Boleto</h3>
+                <span class="td-rt">Até 30 dias</span>
+                <p>O valor é devolvido em até <strong>30 dias</strong> para a conta do intermediador de pagamento. O saque pode ser solicitado conforme instruções do intermediador de pagamentos.</p>
+            </div>
+
+        </div>
+
+        <div class="td-alert td-alert--yellow">
+            <p>&#9888;&#65039; <strong>Atenção:</strong> Os prazos de estorno iniciam somente após o recebimento, conferência e aprovação do produto devolvido em nosso centro de distribuição. O prazo de envio do produto ao nosso estoque não está incluído no prazo de estorno.</p>
+        </div>
+    </section>
+
+    <!-- SITUAÇÕES ESPECÍFICAS -->
+    <section class="td-section" id="situacoes">
+        <h2>&#128269; Situações Específicas</h2>
+
+        <h3>Produto com defeito de fabricação</h3>
+        <p>Identificou um defeito que compromete o uso ou o valor do produto? Você tem até <strong>90 dias corridos</strong> após o recebimento para solicitar troca ou devolução (art. 26, II, CDC). Envie fotos e/ou vídeo evidenciando o defeito. Após análise e <strong>confirmado o vício de fabricação</strong>, realizamos a troca ou reembolso <strong>sem qualquer custo</strong> ao consumidor.</p>
+
+        <div class="td-alert td-alert--yellow">
+            <p>&#9888;&#65039; Defeitos decorrentes de <strong>uso indevido</strong>, quedas, mau uso, modificações ou desgaste por uso normal <strong>não são cobertos</strong> pela política de defeito de fabricação.</p>
+        </div>
+
+        <h3>Produto divergente ou acessório faltante</h3>
+        <p>Recebeu um produto diferente do comprado, com cor/tamanho errado ou sem algum item do kit? Você tem <strong>7 dias corridos</strong> para solicitar a troca. Envie imagens do produto recebido (incluindo a etiqueta) para que nossa equipe valide a divergência. Comprovado o erro, a troca é realizada <strong>sem custos para o consumidor</strong>.</p>
+
+        <h3>Produto entregue com embalagem danificada</h3>
+        <p>Se no momento da entrega a embalagem apresentar danos visíveis, <strong>recuse o recebimento</strong> e registre o motivo no comprovante do entregador. Em seguida, entre em contato com nosso SAC imediatamente. Não recuse sem registrar — isso é fundamental para agilizar o processo de troca.</p>
+
+        <h3>Prazo expirado</h3>
+        <p>Após os prazos de 7 ou 90 dias, não é possível solicitar troca ou devolução com base nas políticas acima. Dúvidas sobre garantia do fabricante devem ser dirigidas diretamente ao fabricante do produto.</p>
+    </section>
+
+    <!-- DICAS ÚTEIS -->
+    <section class="td-section" id="dicas">
+        <h2>&#128161; Dicas para um Processo Mais Ágil</h2>
+        <ul>
+            <li>Guarde todas as embalagens e acessórios até ter a certeza de que ficou satisfeito com o produto;</li>
+            <li>Fotografe o produto <strong>antes de abrir</strong> a embalagem — isso ajuda em casos de danos no transporte;</li>
+            <li>Embale o produto com cuidado na devolução para evitar danos adicionais durante o transporte;</li>
+            <li>Inclua <strong>todos os itens originais</strong>: produto, embalagem interna, manuais, acessórios e brindes;</li>
+            <li>Guarde o <strong>comprovante de postagem</strong> até receber a confirmação de conclusão do processo;</li>
+            <li>Acompanhe o rastreamento do envio e informe o código ao nosso SAC para agilizar a localização.</li>
+        </ul>
+    </section>
+
+    <!-- CONTATO -->
+    <div class="td-contact">
+        <h2>&#128222; Central de Atendimento</h2>
+        <p>De segunda a sexta-feira, das 8h às 17h. Tenha o número do pedido em mãos.</p>
+        <p>Rua Waldemar Martins Ferreira, 289 – Jordanópolis, São Bernardo do Campo/SP – CEP 09891-010</p>
+        <a class="td-contact-btn" href="mailto:ecommerce@enterfix.com.br">&#128140; ecommerce@enterfix.com.br</a>
+        <a class="td-contact-btn" href="tel:+551149422222">&#128222; (11) 4942-2222</a>
+        <a class="td-contact-btn" href="tel:+551149422220">&#128222; (11) 4942-2220</a>
+        <p style="margin-top:16px; font-size:12px; opacity:0.7;">Enterfix Indústria, Comércio e Serviços Ltda. &nbsp;|&nbsp; CNPJ 13.250.539/0001-40</p>
+    </div>
+
+</main>
+
+</body>
+</html>
+    .container {max-width: 880px; margin: 0 auto; padding: 0 16px;}
+    h2, h3 {margin: 18px 0 10px;}
+    h2 {font-size: 28px;}
+    h3 {font-size: 20px;}
+    p, li {font-size: 15px;}
+    .lead {font-size:16px; margin: 6px 0 14px;}
+    .card {background:#F7F8FB; border:1px solid #E3E6EE; border-radius:8px; padding:16px; margin:16px 0;}
+    .badge {display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; background:#E8F3C7; border:1px solid #CDE08A; color:#2A3B0A; font-weight:bold;}
+    .grid {display:grid; gap:12px;}
+    @media (min-width: 740px){ .grid-2 {grid-template-columns: 1fr 1fr;} }
+    .list {padding-left:20px; margin:8px 0;}
+    .muted {color:#5F6B7A;}
+    .strong {font-weight:bold;}
+    .steps {counter-reset: step; margin:0; padding:0;}
+    .steps li {list-style:none; margin:8px 0; padding-left:36px; position:relative;}
+    .steps li:before {counter-increment: step; content: counter(step); position:absolute; left:0; top:0; width:26px; height:26px; border-radius:50%; border:1px solid #CDE08A; background:#E8F3C7; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:bold; color:#2A3B0A;}
+    .callout {background:#FFF; border-left:4px solid #A0BF30; padding:12px 14px; border-radius:8px; border:1px solid #E3E6EE;}
+    .small {font-size:13px;}
+    a {color:#1F1659; text-decoration:underline;}
+    .kbd {font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; background:#F2F3F7; border:1px solid #E3E6EE; border-radius:6px; padding:2px 6px;}
+    .hr {height:1px; background:#E3E6EE; border:0; margin:20px 0;}
+</style>
+<div class="container">
+<h2>TROCAS E DEVOLUÇÕES</h2>
+
+<p class="lead">Olá! Aqui você encontra, de forma clara e objetiva, como solicitar <strong>troca</strong> ou <strong>devolução</strong> dos produtos comprados na Enterfix.</p>
+
+<div class="card"><span class="badge">Resumo rápido</span>
+
+<div class="grid grid-2" style="margin-top:10px;">
+<div>
+<p class="small"><strong>Arrependimento/Insatisfação:</strong> solicitar <strong>em até 7 dias corridos</strong> após o recebimento. Produto sem uso, na embalagem original e com todos os itens/acessórios.</p>
+
+<p class="small"><strong>Erro no pedido (produto divergente ou acessório faltante):</strong> solicitar <strong>em até 7 dias corridos</strong> com fotos e número do pedido.</p>
+</div>
+
+<div>
+<p class="small"><strong>Defeito de fabricação:</strong> solicitar <strong>em até 90 dias corridos</strong> após a entrega (art. 26, CDC), com evidências fotográficas para análise.</p>
+
+<p class="small"><strong>Contato oficial:</strong> <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> | Tel: (11) 4942-2222 / 2220</p>
+</div>
+</div>
+</div>
+
+<h3>Política de Devolução (arrependimento/insatisfação)</h3>
+
+<p>Se você recebeu um produto e não ficou satisfeito, ele não serviu ou se arrependeu da compra, é possível solicitar a <strong>devolução para estorno em até 7 (sete) dias corridos</strong> a contar do recebimento.</p>
+
+<p>Condições necessárias:</p>
+
+<ul class="list">
+	<li>Produto na embalagem original, <strong>sem indícios de uso</strong> e com <strong>todos os itens e acessórios</strong> recebidos.</li>
+</ul>
+
+<p>Para solicitar, envie e-mail para <a href="mailto:ecommerce@enterfix.com.br"><strong>ecommerce@enterfix.com.br</strong></a> informando o número do pedido e <strong>anexando imagens</strong> que comprovem o estado do produto.</p>
+
+<h3>Política de Troca (produto divergente ou incompleto)</h3>
+
+<p>Se você recebeu um <strong>produto diferente</strong> do comprado em nosso site ou <strong>sem algum acessório</strong>, peça a troca <strong>dentro de 7 (sete) dias corridos</strong> após o recebimento.</p>
+
+<p>Como comprovar:</p>
+
+<ul class="list">
+	<li>Envie fotos do produto recebido (e da <strong>etiqueta</strong>, em caso de divergência de tamanho) + número do pedido para <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a>.</li>
+</ul>
+
+<p>Após análise e <strong>comprovado o erro</strong>, iniciaremos o procedimento de troca <strong>sem custos adicionais</strong> ao cliente.</p>
+
+<h3>Defeito no produto recebido</h3>
+
+<p>Se você identificar <strong>defeito de fabricação</strong>, você terá <strong>90 (noventa) dias corridos</strong> após a entrega para solicitar a troca ou a devolução.</p>
+
+<p>Como proceder:</p>
+
+<ul class="list">
+	<li>Envie fotos do produto + número do pedido para <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a>.</li>
+	<li>Confirmado o defeito, daremos andamento à troca <strong>sem custos</strong>.</li>
+</ul>
+
+<p class="callout small"><strong>Atenção:</strong> caso o defeito seja decorrente de <strong>uso indevido</strong> ou mau uso, a responsabilidade de reparo é do comprador.</p>
+
+<h3>Condições gerais para Troca/Devolução</h3>
+
+<ul class="list">
+	<li>Sem sinais de uso, manchas, sujeira, suor ou deterioração;</li>
+	<li>Com embalagem interna preservada e <strong>etiquetas originais</strong> aplicadas;</li>
+	<li>Prazos: <strong>90 dias</strong> para defeito de fabricação e <strong>7 dias</strong> para erro no pedido ou arrependimento (contados do recebimento).</li>
+</ul>
+
+<p>Para solicitar, escreva para <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> com as evidências. Nós retornaremos com as instruções de postagem em até <strong>5 (cinco) dias úteis</strong>.</p>
+
+<h3>Formas de Restituição de Valores</h3>
+
+<div class="card">
+<p><strong>Cupom de desconto</strong><br />
+Você pode optar por cupom de desconto em qualquer situação de troca por insatisfação. Validade de <strong>90 dias</strong>, uso exclusivo pelo titular da conta (não transferível e não conversível em dinheiro). Para utilizar: finalize uma nova compra e insira o cupom no checkout.</p>
+
+<hr class="hr" />
+<p><strong>Estorno (cartão de crédito)</strong><br />
+Após recebimento e aprovação da devolução, a Enterfix solicita o estorno à administradora do cartão em até <strong>7 dias úteis</strong>. O crédito na fatura depende das regras da administradora, podendo levar de <strong>1 a 2 ciclos</strong> de fatura.</p>
+
+<hr class="hr" />
+<p><strong>Estorno (PIX / transferência)</strong><br />
+Após aprovação, o valor é estornado <strong>em até 30 dias</strong> para a conta do intermediador de pagamento; você poderá solicitar o saque conforme as instruções do intermediador.</p>
+
+<hr class="hr" />
+<p><strong>Estorno (boleto)</strong><br />
+Após aprovação, o valor é estornado <strong>em até 30 dias</strong> para a conta do intermediador de pagamento; você poderá solicitar o saque conforme as instruções do intermediador.</p>
+</div>
+
+<h3>Como solicitar (passo a passo)</h3>
+
+<ol class="steps">
+	<li>Localize o <span class="kbd">nº do pedido</span> no e-mail de confirmação.</li>
+	<li>Envie e-mail para <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a> com assunto <span class="kbd">Troca/Devolução – Nº do Pedido</span>.</li>
+	<li>Anexe <strong>fotos</strong> do produto (e etiqueta, quando aplicável) e descreva o motivo (arrependimento, divergência, falta de acessório ou defeito).</li>
+	<li>Aguarde nosso retorno (até <strong>5 dias úteis</strong>) com as instruções de postagem/etiqueta e próximos passos.</li>
+	<li>Após a análise na chegada do item, seguiremos com <strong>troca</strong>, <strong>cupom</strong> ou <strong>estorno</strong> de acordo com os tópicos acima.</li>
+</ol>
+
+<div class="card">
+<h3 style="margin-top:0;">Dicas úteis</h3>
+
+<ul class="list">
+	<li>Embale o produto com cuidado para evitar danos no transporte.</li>
+	<li>Inclua todos os itens e acessórios enviados originalmente.</li>
+	<li>Guarde o comprovante de postagem até a conclusão do processo.</li>
+</ul>
+</div>
+
+<h3>Central de Atendimento</h3>
+
+<p><strong>E-mail:</strong> <a href="mailto:ecommerce@enterfix.com.br">ecommerce@enterfix.com.br</a><br />
+<strong>Telefones:</strong> (11) 4942-2222 / (11) 4942-2220<br />
+<strong>Endereço para correspondência (quando solicitado):</strong><br />
+Rua Waldemar Martins Ferreira, 287 – Jordanópolis, São Bernardo do Campo/SP – CEP 09891-010</p>
+
+<p class="muted small">Observação: assim que recebermos seu pedido por e-mail, nossa equipe validará as informações e orientará sobre logística de envio/retirada e prazos, conforme o caso.</p>
+</div>
+</section>

@@ -1,0 +1,619 @@
+<style>
+/* ─────────────────────────────────────────────
+   PREFIX: .gcx  |  Geomagic Control X — Enterfix
+   Software de Metrologia 3D — Hexagon
+───────────────────────────────────────────── */
+.gcx{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+.gcx *{box-sizing:border-box}
+
+/* ── ANIMAÇÕES ── */
+@keyframes gcx-fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.gcx-anim{animation:gcx-fadeUp .7s ease both}
+.gcx-anim-d1{animation-delay:.1s}.gcx-anim-d2{animation-delay:.25s}.gcx-anim-d3{animation-delay:.4s}
+.gcx-anim-d4{animation-delay:.55s}.gcx-anim-d5{animation-delay:.7s}.gcx-anim-d6{animation-delay:.85s}
+
+/* ── HERO ── */
+.gcx-hero{position:relative;background:#080520;border-radius:14px;overflow:hidden;margin-bottom:22px;min-height:400px;display:flex;align-items:flex-end}
+.gcx-hero-video{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;opacity:.32}
+.gcx-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(8,5,32,.95) 0%,rgba(8,5,32,.6) 55%,transparent 100%);width:100%}
+.gcx-hero-tag{display:inline-block;background:rgba(160,191,48,.2);border:1px solid rgba(160,191,48,.5);border-radius:50px;padding:3px 14px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#c8e05a;margin-bottom:12px}
+.gcx-hero-title{font-size:28px;font-weight:900;color:#fff;margin:0 0 8px;line-height:1.2;max-width:600px}
+.gcx-hero-sub{font-size:13.5px;color:rgba(255,255,255,.8);margin:6px 0 18px;max-width:660px;line-height:1.6}
+.gcx-hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.gcx-hero-btn-green{display:inline-block;padding:10px 22px;border-radius:6px;background:#A0BF30;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none}
+.gcx-hero-btn-outline{display:inline-block;padding:10px 22px;border-radius:6px;background:transparent;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.45)}
+.gcx-hero-product-img{position:absolute;right:28px;bottom:0;max-height:88%;width:auto;max-width:260px;z-index:3;object-fit:contain}
+
+/* ── DESTAQUE CENTRAL ── */
+.gcx-prodes{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.gcx-prodes h1{font-size:17px;font-weight:800;color:#1F1659;text-align:center;margin:0 0 18px}
+.gcx-slides{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.gcx-slide-img{width:100%;border-radius:10px;display:block;object-fit:cover;max-height:240px}
+.gcx-desc-text{font-size:14px;color:#334155;line-height:1.75;margin:0 0 10px}
+.gcx-key-feats{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.gcx-key-feat{background:#f4f8e8;border:1px solid #c8dc82;border-radius:20px;padding:4px 12px;font-size:12.5px;color:#5a7200;font-weight:600}
+
+/* ── PILARES DO SOFTWARE ── */
+.gcx-pillars{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.gcx-pillars-header{background:linear-gradient(135deg,#1F1659,#14263C);color:#fff;padding:20px 28px;text-align:center}
+.gcx-pillars-header h2{font-size:16px;font-weight:800;margin:0 0 4px;color:#fff}
+.gcx-pillars-header p{font-size:13px;opacity:.8;margin:0}
+.gcx-pillars-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.gcx-pillar{border-right:1px solid #e2e8f0;padding:22px 18px;text-align:center}
+.gcx-pillar:last-child{border-right:none}
+.gcx-pillar-val{font-size:22px;font-weight:900;color:#A0BF30;line-height:1;margin-bottom:4px}
+.gcx-pillar-lbl{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.8px;font-weight:600}
+.gcx-cta-bar{background:linear-gradient(135deg,#161144,#1F1659);color:#fff;text-align:center;padding:20px 24px}
+.gcx-cta-bar h3{font-size:15px;font-weight:800;margin:0 0 10px}
+.gcx-cta-bar-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.gcx-cta-bar a{display:inline-block;padding:9px 20px;border-radius:6px;font-size:13.5px;font-weight:700;text-decoration:none}
+.gcx-cta-bar-primary{background:#fff;color:#1F1659}
+.gcx-cta-bar-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+
+/* ── FEATURE SECTIONS ── */
+.gcx-features-wrap{margin-bottom:16px}
+.gcx-feature{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:12px}
+.gcx-feature.rev{direction:rtl}
+.gcx-feature.rev > *{direction:ltr}
+.gcx-feature-img{width:100%;height:100%;object-fit:cover;min-height:240px;display:block}
+.gcx-feature-body{padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.gcx-feature-body h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 12px}
+.gcx-feature-body h3{font-size:13px;font-weight:700;color:#A0BF30;margin:0 0 10px}
+.gcx-feature-body ul{margin:0;padding-left:18px}
+.gcx-feature-body li{font-size:13.5px;color:#334155;line-height:1.65;margin-bottom:5px}
+.gcx-feature-body li strong{color:#1e293b}
+.gcx-feature-body p{font-size:13px;color:#475569;margin:0 0 6px}
+
+/* ── FLUXO DE TRABALHO ── */
+.gcx-workflow{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.gcx-workflow-header{background:linear-gradient(135deg,#1F1659,#14263C);color:#fff;padding:20px 28px;text-align:center}
+.gcx-workflow-header h2{font-size:16px;font-weight:800;margin:0 0 4px;color:#fff}
+.gcx-workflow-header p{font-size:13px;opacity:.8;margin:0}
+.gcx-workflow-steps{display:grid;grid-template-columns:repeat(5,1fr)}
+.gcx-step{border-right:1px solid #e2e8f0;padding:20px 14px;text-align:center;position:relative}
+.gcx-step:last-child{border-right:none}
+.gcx-step-num{width:34px;height:34px;border-radius:50%;background:#1F1659;color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.gcx-step-title{font-size:12.5px;font-weight:700;color:#1F1659;margin:0 0 5px}
+.gcx-step-desc{font-size:11.5px;color:#64748b;line-height:1.5;margin:0}
+.gcx-step-arrow{position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-size:16px;color:#A0BF30;z-index:1;font-weight:900}
+
+/* ── VÍDEO ── */
+.gcx-video-wrap{background:linear-gradient(135deg,#1F1659,#14263C);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.gcx-video-wrap h2{font-size:16px;font-weight:800;color:#fff;text-align:center;margin:0 0 18px}
+.gcx-iframe-wrap{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.gcx-iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── CARDS ── */
+.gcx-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.gcx-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+
+/* ── TABELA ── */
+.gcx-tbl-wrap{overflow-x:auto}
+.gcx-tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:460px}
+.gcx-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:11.5px;font-weight:700}
+.gcx-tbl th:first-child{border-radius:6px 0 0 0}
+.gcx-tbl th:last-child{border-radius:0 6px 0 0}
+.gcx-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.gcx-tbl tr:nth-child(even) td{background:#f8fafc}
+.gcx-tbl tr:last-child td{border-bottom:none}
+.gcx-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+.gcx-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+
+/* ── BADGE ── */
+.gcx-badge{display:inline-block;background:#A0BF30;color:#fff;font-size:11px;font-weight:700;border-radius:20px;padding:2px 10px;margin-bottom:6px}
+.gcx-badge-blue{background:#1F1659}
+
+/* ── COMPATIBILIDADE ── */
+.gcx-compat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.gcx-compat-item{border-radius:8px;background:#f8fafc;border:1px solid #e2e8f0;padding:12px 14px;display:flex;align-items:flex-start;gap:10px}
+.gcx-compat-item::before{content:'✓';color:#A0BF30;font-weight:800;font-size:16px;flex-shrink:0;margin-top:1px}
+.gcx-compat-item p{margin:0;font-size:12.5px;color:#334155;font-weight:600;line-height:1.4}
+
+/* ── APLICAÇÕES ── */
+.gcx-apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:12px 0}
+.gcx-app{border-radius:10px;overflow:hidden;border:1px solid #e2e8f0}
+.gcx-app img{width:100%;height:160px;object-fit:cover;display:block}
+.gcx-app-body{padding:12px 14px;background:#fff}
+.gcx-app-body h3{font-size:13.5px;font-weight:700;color:#1F1659;margin:0 0 5px}
+.gcx-app-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.55}
+
+/* ── SOFTWARE ECOSYSTEM ── */
+.gcx-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:22px 28px;margin-bottom:16px}
+.gcx-soft h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.gcx-soft-main{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;margin-bottom:18px;background:#fff;border-radius:10px;border:1px solid #e2e8f0;padding:18px 20px}
+.gcx-soft-main img.icon{width:64px;height:64px;object-fit:contain;border-radius:8px}
+.gcx-soft-main-body h3{font-size:14px;font-weight:800;color:#1F1659;margin:0 0 5px}
+.gcx-soft-main-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.5}
+.gcx-soft-compatible{margin-top:12px}
+.gcx-soft-compatible h3{font-size:13px;font-weight:700;color:#1F1659;margin:0 0 10px}
+.gcx-soft-tags{display:flex;flex-wrap:wrap;gap:8px}
+.gcx-soft-tag{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:4px 12px;font-size:12.5px;color:#334155;font-weight:500}
+
+/* ── CTA FINAL ── */
+.gcx-cta{background:linear-gradient(135deg,#161144,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.gcx-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.gcx-cta strong{color:#fff}
+.gcx-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.gcx-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.gcx-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+
+@media(max-width:700px){
+  .gcx-slides,.gcx-feature,.gcx-feature.rev,.gcx-pillars-grid,.gcx-workflow-steps,.gcx-compat-grid{grid-template-columns:1fr;direction:ltr}
+  .gcx-feature.rev>*{direction:ltr}
+  .gcx-step-arrow{display:none}
+  .gcx-pillar,.gcx-step{border-right:none;border-bottom:1px solid #e2e8f0}
+  .gcx-pillar:last-child,.gcx-step:last-child{border-bottom:none}
+  .gcx-hero-product-img{display:none}
+  .gcx-prodes,.gcx-card,.gcx-soft,.gcx-video-wrap,.gcx-cta{padding:20px 16px}
+  .gcx-soft-main{grid-template-columns:1fr}
+}
+@media(max-width:440px){
+  .gcx-soft-main img.icon{display:none}
+}
+</style>
+
+<div class="gcx">
+
+  <!-- ══════════════════════════════════════════════
+       HERO — vídeo de fundo + imagem do produto
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-hero">
+    <iframe class="gcx-hero-video"
+      src="https://www.youtube.com/embed/YGvoYfD7yVs?autoplay=1&mute=1&loop=1&playlist=YGvoYfD7yVs&controls=0&showinfo=0&modestbranding=1&rel=0"
+      allow="autoplay;encrypted-media" allowfullscreen loading="lazy"
+      title="Geomagic Control X — Software de Metrologia 3D Profissional"></iframe>
+    <img class="gcx-hero-product-img"
+      src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_packaging.jpg"
+      alt="Geomagic Control X — Software de Metrologia 3D" />
+    <div class="gcx-hero-overlay">
+      <div class="gcx-hero-tag">🔬 Software de Metrologia 3D &bull; Hexagon</div>
+      <h1 class="gcx-hero-title gcx-anim gcx-anim-d1">Geomagic® Control X™<br>Inspeção 3D Profissional sem Igual</h1>
+      <p class="gcx-hero-sub gcx-anim gcx-anim-d2">
+        O software de metrologia 3D mais completo do mercado — inspeção baseada em scan, comparação CAD, GD&amp;T, relatórios automatizados e compatibilidade total com qualquer scanner 3D.
+      </p>
+      <div class="gcx-hero-btns gcx-anim gcx-anim-d3">
+        <a class="gcx-hero-btn-green" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Solicitar Demonstração</a>
+        <a class="gcx-hero-btn-outline" href="https://lp.enterfix.com.br/catalogo-geomagic-control-x" target="_blank" rel="noopener">📄 Baixar Catálogo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       OVERVIEW — descrição + badges de destaque
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-prodes gcx-anim">
+    <h1>Geomagic Control X: Muito Além de um Simples Software de Metrologia</h1>
+    <div class="gcx-slides">
+      <img class="gcx-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_keyvisual_2025.png"
+        alt="Geomagic Control X — Software de Metrologia 3D 2025" />
+      <img class="gcx-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_keyvisual_hq.jpg"
+        alt="Geomagic Control X — Key Visual Oficial Hexagon" />
+    </div>
+    <p class="gcx-desc-text">
+      O <strong>Geomagic® Control X™</strong> é uma plataforma abrangente de metrologia 3D desenvolvida pela <strong>Hexagon</strong> — líder mundial em soluções de qualidade e medição. Com mais de 20 anos de evolução contínua, oferece fluxos de trabalho intuitivos para inspeção baseada em scan, dimensionamento GD&amp;T, mapas de desvio 3D, automação e relatórios profissionais ricos em informação.
+    </p>
+    <p class="gcx-desc-text">
+      Com o Control X, qualquer profissional de qualidade pode <strong>medir mais rápido</strong>, <strong>medir de forma completa</strong>, <strong>medir mais frequentemente</strong> e <strong>medir em qualquer lugar</strong> — seja no laboratório de metrologia, no chão de fábrica ou em campo. Compatível com todos os scanners 3D, braços de medição e tomografia computadorizada.
+    </p>
+    <div class="gcx-key-feats">
+      <span class="gcx-key-feat">Inspeção 3D Baseada em Scan</span>
+      <span class="gcx-key-feat">Comparação CAD vs Peça Real</span>
+      <span class="gcx-key-feat">GD&amp;T / PMI Integrado</span>
+      <span class="gcx-key-feat">Automação Visual Scripting</span>
+      <span class="gcx-key-feat">Relatórios Profissionais</span>
+      <span class="gcx-key-feat">50+ Formatos Importados</span>
+      <span class="gcx-key-feat">Todos os Scanners 3D</span>
+      <span class="gcx-key-feat">Certificado NIST-PTB</span>
+      <span class="gcx-key-feat">Análise de Aerofólio Inclusa</span>
+      <span class="gcx-key-feat">13 Idiomas — PT-BR Nativo</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PILARES — 4 métricas + CTA bar
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-pillars gcx-anim gcx-anim-d1">
+    <div class="gcx-pillars-header">
+      <h2>Resultados Confiáveis. Workflows Rápidos. Qualidade Sem Concessões.</h2>
+      <p>Plataforma profissional de metrologia — pronta para linha de produção, LAP e inspeção de primeiro artigo</p>
+    </div>
+    <div class="gcx-pillars-grid">
+      <div class="gcx-pillar">
+        <div class="gcx-pillar-val">20+</div>
+        <div class="gcx-pillar-lbl">Anos de Desenvolvimento</div>
+      </div>
+      <div class="gcx-pillar">
+        <div class="gcx-pillar-val">50+</div>
+        <div class="gcx-pillar-lbl">Formatos CAD/Malha</div>
+      </div>
+      <div class="gcx-pillar">
+        <div class="gcx-pillar-val">100%</div>
+        <div class="gcx-pillar-lbl">Compatível com Todos os Scanners</div>
+      </div>
+      <div class="gcx-pillar">
+        <div class="gcx-pillar-val">13</div>
+        <div class="gcx-pillar-lbl">Idiomas Suportados</div>
+      </div>
+    </div>
+    <div class="gcx-cta-bar">
+      <h3>Descubra o Geomagic Control X na Prática</h3>
+      <div class="gcx-cta-bar-btns">
+        <a class="gcx-cta-bar-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Agendar Demonstração</a>
+        <a class="gcx-cta-bar-secondary" href="https://lp.enterfix.com.br/catalogo-geomagic-control-x" target="_blank" rel="noopener">📄 Catálogo Técnico</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       FEATURES — 6 seções alternadas imagem+texto
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-features-wrap">
+
+    <!-- 1. Inspeção Baseada em Scan (imagem à esquerda) -->
+    <div class="gcx-feature gcx-anim gcx-anim-d1">
+      <img class="gcx-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_interface_quality.png"
+        alt="Inspeção 3D Baseada em Scan — Comparação CAD vs Peça Real" />
+      <div class="gcx-feature-body">
+        <h2>Inspeção 3D Completa Baseada em Scan</h2>
+        <h3>Comparação CAD vs Peça Real com Mapas de Desvio 3D</h3>
+        <ul>
+          <li><strong>Comparação 3D:</strong> Sobreponha o scan digitalizado ao modelo CAD de referência e visualize qualquer desvio em mapa de cores intuitivo</li>
+          <li><strong>Mapa de Desvios 2D e 3D:</strong> Identifique visualmente regiões fora de tolerância, ondulações, afundamentos e deformações após conformação</li>
+          <li><strong>Análise de Seção Transversal:</strong> Corte o modelo 3D em qualquer plano e compare curvas 2D com o CAD de referência com precisão micrométrica</li>
+          <li><strong>Inspeção de Superfície:</strong> Avalie planeza, cilindricidade, conicidade e outras formas geométricas com tolerâncias personalizáveis</li>
+          <li><strong>Detecção de Defeitos:</strong> Localize e quantifique riscos, bolhas, amassados e variações de espessura diretamente no modelo 3D</li>
+          <li><strong>Algoritmos Scan-Native:</strong> Otimizados para dados de scanner — processamento rápido de grandes malhas sem simplificação dos dados</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. GD&T e Dimensionamento (imagem à direita) -->
+    <div class="gcx-feature rev gcx-anim gcx-anim-d2">
+      <img class="gcx-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_keyvisual_dimensions.jpg"
+        alt="GD&T e Dimensionamento CAD-Nativo no Geomagic Control X" />
+      <div class="gcx-feature-body">
+        <h2>GD&amp;T e Dimensionamento CAD-Nativo</h2>
+        <h3>PMI, ASME Y14.5 e ISO 1101 — Sem Custo Extra</h3>
+        <ul>
+          <li><strong>GD&amp;T Completo:</strong> Tolerâncias geométricas (planeza, circularidade, concentricidade, posição, runout, etc.) conforme ASME Y14.5 e ISO 1101</li>
+          <li><strong>PMI / MBD:</strong> Importação de Informações de Produto por Modelo diretamente dos formatos CAD — sem necessidade de relidar as tolerâncias</li>
+          <li><strong>Dimensionamento CAD-Aware:</strong> Cotas e anotações se referenciam automaticamente às entidades de projeto do modelo — não ao scan</li>
+          <li><strong>Importadores CAD Nativos:</strong> CATIA V4/V5/V6, SolidWorks, Creo/ProE, NX, Inventor, STEP, IGES, JT, Parasolid — incluídos sem taxas adicionais</li>
+          <li><strong>Posição de Furos:</strong> Medição precisa de posição, diâmetro, perpendicularidade e padrão de furos em relação ao datum</li>
+          <li><strong>Múltiplos Alinhamentos:</strong> Best-fit, RPS, iterativo, datum, local — adapte o alinhamento ao seu processo de produção</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Mais Profundo que Aprovado / Reprovado (img esquerda) -->
+    <div class="gcx-feature gcx-anim gcx-anim-d3">
+      <img class="gcx-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_interface_insights.png"
+        alt="Insights Além do Aprovado/Reprovado no Geomagic Control X" />
+      <div class="gcx-feature-body">
+        <h2>Insights que Vão Além do Aprovado / Reprovado</h2>
+        <h3>Entenda por que a Peça Está Fora de Tolerância</h3>
+        <ul>
+          <li><strong>Navegador de Resultados:</strong> Gerencie e compare resultados de múltiplas medições da mesma peça ao longo do tempo em um único projeto</li>
+          <li><strong>Análise de Acúmulo:</strong> Investigue como desvios individuais se acumulam em conjuntos soldados ou montados</li>
+          <li><strong>Tendência Temporal:</strong> Monitore a evolução das dimensões críticas ao longo de lotes de produção para controle estatístico</li>
+          <li><strong>SPC Ready:</strong> Exporte dados de medição diretamente para sistemas de Controle Estatístico de Processo (SPC/SQC)</li>
+          <li><strong>Família de Peças:</strong> Inspecione um conjunto de peças relacionadas em um único projeto — referências cruzadas entre componentes</li>
+          <li><strong>Análise de Tomografia CT:</strong> Use dados de CT para inspecionar geometrias internas, porosidades e distâncias de parede que scanners externos não alcançam</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Relatórios Profissionais (imagem à direita) -->
+    <div class="gcx-feature rev gcx-anim gcx-anim-d4">
+      <img class="gcx-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_feat_software_04.png"
+        alt="Relatórios Personalizados no Geomagic Control X" />
+      <div class="gcx-feature-body">
+        <h2>Relatórios Profissionais e Comunicativos</h2>
+        <h3>PDF, Excel e HTML — Templates Personalizáveis</h3>
+        <ul>
+          <li><strong>Designer de Relatório Avançado:</strong> Controle total sobre layout, estilo e paginação — combine vistas 3D, tabelas e gráficos em uma única página</li>
+          <li><strong>Múltiplos Formatos:</strong> Exporte relatórios em PDF, Excel, HTML ou Word — com vistas 3D renderizadas de alta qualidade</li>
+          <li><strong>Templates Personalizados:</strong> Crie e salve templates com a identidade visual da sua empresa para relatórios padronizados</li>
+          <li><strong>Anotações 3D Inteligentes:</strong> Controle em detalhes finos como as cotas serão exibidas — use padrões populares ou crie estilos customizados</li>
+          <li><strong>Vistas Controladas:</strong> Defina exatamente o ângulo de visão de cada detalhe para comunicação clara com clientes e fornecedores</li>
+          <li><strong>Análise Multi-resultado:</strong> Compare resultados de diferentes corridas de produção em um mesmo relatório comparativo</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. Automação e Scripting (imagem à esquerda) -->
+    <div class="gcx-feature gcx-anim gcx-anim-d5">
+      <img class="gcx-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_keyvisual_robot.jpg"
+        alt="Automação e Visual Scripting no Geomagic Control X" />
+      <div class="gcx-feature-body">
+        <h2>Automação Total — Defina Uma Vez, Execute Sempre</h2>
+        <h3>Visual Scripting + Automation Server + Python</h3>
+        <ul>
+          <li><strong>Visual Scripting:</strong> Construa fluxos de inspeção automatizados sem programação — interface visual intuitiva para workflows complexos</li>
+          <li><strong>Python Scripting:</strong> Para desafios avançados de automação, escreva scripts Python que se integram diretamente ao Control X</li>
+          <li><strong>Automation Server:</strong> Maximize a utilização do PC processando múltiplos arquivos de scan em paralelo — jobs simultâneos em servidor e clientes</li>
+          <li><strong>Batch Processing:</strong> Processe dezenas ou centenas de arquivos de scan contra o mesmo CAD de referência sem intervenção manual</li>
+          <li><strong>Preset de Dados:</strong> Defina sequências de otimização de dados de scan e compartilhe com toda a equipe para minimizar o tempo de setup</li>
+          <li><strong>Transferência de Expertise:</strong> Preserve o conhecimento de inspeção dos especialistas em scripts reutilizáveis — reduza a curva de aprendizado</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. Compatibilidade Universal (imagem à direita) -->
+    <div class="gcx-feature rev gcx-anim gcx-anim-d6">
+      <img class="gcx-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_interface_manufacturing.png"
+        alt="Compatibilidade Universal — Todos os Scanners 3D e CMMs" />
+      <div class="gcx-feature-body">
+        <h2>Compatibilidade Universal com Todos os Dispositivos</h2>
+        <h3>Integração Direta: Scanners, CMMs Portáteis e CT</h3>
+        <ul>
+          <li><strong>Controle Direto de Scanner:</strong> Capture dados 3D diretamente no Control X, sem software intermediário — integração com KSCAN, SIMSCAN, NimbleTrack e outros</li>
+          <li><strong>Braço de Medição Portátil:</strong> Compatível com Hexagon, FARO, Creaform, Renishaw e outras marcas de PCMM</li>
+          <li><strong>Tomografia CT:</strong> Importe dados de CT para inspeção de geometrias internas, análise de porosidade e espessura de parede</li>
+          <li><strong>Formatos Abertos:</strong> STL, OBJ, PLY, ASC, E57, PTX, FARO FLS/FWS, ZFS — sem taxas extras de importação</li>
+          <li><strong>Tudo Incluído:</strong> Importadores CAD, ferramentas de processamento de malha, análise de aerofólio — sem módulos pagos adicionais</li>
+          <li><strong>Análise de Aerofólio:</strong> Ferramentas especializadas para inspeção de pás de turbina, perfis aerodinâmicos e componentes de aviação</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /gcx-features-wrap -->
+
+  <!-- ══════════════════════════════════════════════
+       FLUXO DE TRABALHO — 5 passos
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-workflow gcx-anim">
+    <div class="gcx-workflow-header">
+      <h2>Fluxo de Trabalho Intuitivo — Do Scan ao Relatório</h2>
+      <p>Inspeção de primeiro artigo, controle de linha de produção ou verificação de protótipo — tudo no mesmo software</p>
+    </div>
+    <div class="gcx-workflow-steps">
+      <div class="gcx-step">
+        <div class="gcx-step-num">1</div>
+        <div class="gcx-step-title">Importar</div>
+        <p class="gcx-step-desc">Capture diretamente ou importe dados do scanner 3D, CMM portátil ou CT</p>
+        <div class="gcx-step-arrow">›</div>
+      </div>
+      <div class="gcx-step">
+        <div class="gcx-step-num">2</div>
+        <div class="gcx-step-title">Alinhar</div>
+        <p class="gcx-step-desc">Alinhamento automático ou manual ao CAD de referência com vários métodos</p>
+        <div class="gcx-step-arrow">›</div>
+      </div>
+      <div class="gcx-step">
+        <div class="gcx-step-num">3</div>
+        <div class="gcx-step-title">Medir</div>
+        <p class="gcx-step-desc">Comparação 3D, GD&amp;T, seções, furos e todas as entidades geométricas</p>
+        <div class="gcx-step-arrow">›</div>
+      </div>
+      <div class="gcx-step">
+        <div class="gcx-step-num">4</div>
+        <div class="gcx-step-title">Analisar</div>
+        <p class="gcx-step-desc">Mapas de desvio, análise de tendência, navegador multi-resultado</p>
+        <div class="gcx-step-arrow">›</div>
+      </div>
+      <div class="gcx-step">
+        <div class="gcx-step-num">5</div>
+        <div class="gcx-step-title">Reportar</div>
+        <p class="gcx-step-desc">Relatórios em PDF, Excel, HTML com layout e identidade visual personalizados</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       VÍDEO DEMONSTRAÇÃO
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-video-wrap gcx-anim">
+    <h2>▶ Geomagic Control X em Ação</h2>
+    <div class="gcx-iframe-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/YGvoYfD7yVs?rel=0&modestbranding=1"
+        allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+        allowfullscreen loading="lazy"
+        title="Geomagic Control X — Demo Oficial de Inspeção 3D"></iframe>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       COMPATIBILIDADE DE HARDWARE
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-card gcx-anim">
+    <h2>Compatível com Qualquer Scanner 3D e CMM</h2>
+    <div class="gcx-compat-grid">
+      <div class="gcx-compat-item"><p>KSCAN-X / KSCAN-Magic / KSCAN-E</p></div>
+      <div class="gcx-compat-item"><p>SIMSCAN-S Gen2 / SIMSCAN-E</p></div>
+      <div class="gcx-compat-item"><p>NimbleTrack Gen2 (i-Scanner + i-Tracker)</p></div>
+      <div class="gcx-compat-item"><p>AM-DESK / TrackProbe</p></div>
+      <div class="gcx-compat-item"><p>FARO Arm e Focus</p></div>
+      <div class="gcx-compat-item"><p>Hexagon Absolute Arm e Romer</p></div>
+      <div class="gcx-compat-item"><p>Renishaw / Creaform</p></div>
+      <div class="gcx-compat-item"><p>Zeiss T-SCAN / Artec / Leica</p></div>
+      <div class="gcx-compat-item"><p>Tomografia Computadorizada (CT)</p></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ESPECIFICAÇÕES / REQUISITOS DO SISTEMA
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-card gcx-anim">
+    <h2>Requisitos do Sistema — Geomagic Control X</h2>
+    <div class="gcx-tbl-wrap">
+      <table class="gcx-tbl">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Mínimo</th>
+            <th>Recomendado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Sistema Operacional</td><td>Windows 10 (64-bit)</td><td>Windows 11 (64-bit)</td></tr>
+          <tr><td>Processador</td><td>Intel Core i7 / AMD Ryzen 7 quad-core 64-bit</td><td>Intel Core i9 / AMD Ryzen 9 6+ núcleos</td></tr>
+          <tr><td>Memória RAM</td><td>16 GB DDR4</td><td>32 GB DDR4 (64 GB para grandes conjuntos de dados)</td></tr>
+          <tr><td>Placa de Vídeo</td><td>NVIDIA / AMD — OpenGL 3.1+, 4 GB VRAM</td><td>NVIDIA RTX / Quadro com 8 GB VRAM</td></tr>
+          <tr><td>Armazenamento</td><td>20 GB livres (HDD)</td><td>SSD 256 GB+ (projetos de scan ocupam espaço)</td></tr>
+          <tr><td>Display</td><td>1280 × 1024 px, 32-bit</td><td>Full HD (1920×1080) ou superior</td></tr>
+          <tr><td>Conectividade</td><td>1 porta USB 3.0 (para dongle de licença)</td><td>USB 3.0 + Ethernet Gigabit</td></tr>
+          <tr><td>Versão OpenGL</td><td>3.1</td><td>4.5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="gcx-fn">Requisitos válidos para Geomagic Control X versão 2023.x e superior. Para projetos com dados de scanner de alta densidade (acima de 200 M pontos), recomenda-se fortemente SSD NVMe e RAM de 64 GB.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ESPECIFICAÇÕES DO SOFTWARE
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-card gcx-anim">
+    <h2>Especificações do Software — Geomagic Control X</h2>
+    <div class="gcx-tbl-wrap">
+      <table class="gcx-tbl">
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th>Recurso / Especificação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Fabricante</td><td>Hexagon AB (marca Geomagic)</td></tr>
+          <tr><td>Tipo de Licença</td><td>Perpétua + Programa de Manutenção Anual (GMP) recomendado</td></tr>
+          <tr><td>Idiomas</td><td>PT-BR, EN, DE, ES, FR, IT, JA, KO, ZH, RU, PL, TR, CS (13 idiomas)</td></tr>
+          <tr><td>Inspeção 3D</td><td>Comparação CAD vs Scan, mapas de desvio 2D/3D, análise de seção</td></tr>
+          <tr><td>GD&amp;T / PMI</td><td>ASME Y14.5 e ISO 1101 — importação PMI inclusa sem custo adicional</td></tr>
+          <tr><td>Automação</td><td>Visual Scripting, Python Scripting, Automation Server (batch/paralelo)</td></tr>
+          <tr><td>Formatos de Entrada CAD</td><td>CATIA V4/V5/V6, SolidWorks, NX, Creo/ProE, Inventor, STEP, IGES, JT, Parasolid, ACIS, 3DXML e mais</td></tr>
+          <tr><td>Formatos de Entrada Scan</td><td>STL, OBJ, PLY, ASC, E57, PTX, ZFS, FARO FLS/FWS e demais</td></tr>
+          <tr><td>Saída de Relatório</td><td>PDF, Excel (XLSX), HTML, Word (DOCX) com templates personalizáveis</td></tr>
+          <tr><td>Exportação de Dados</td><td>STL, OBJ, PLY, ASCII, XML, SPC/SQC, DXF</td></tr>
+          <tr><td>Análises Especiais</td><td>Aerofólio, análise de CT, SPC ready, multi-resultado, família de peças</td></tr>
+          <tr><td>Alinhamentos</td><td>Best-fit, RPS, Iterativo (ICP), por datum, local e global</td></tr>
+          <tr><td>Certificação</td><td>NIST-PTB · Resultados rastreáveis internacionalmente</td></tr>
+          <tr><td>Integração</td><td>Scanners 3D, CMMs portáteis (braço), tomografia CT, CMM fixas</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       APLICAÇÕES
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-card gcx-anim">
+    <h2>Aplicações Diversas</h2>
+    <div class="gcx-apps-grid">
+      <div class="gcx-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_automotivo.png"
+          alt="Automotivo — Controle de Qualidade e Inspeção 3D" />
+        <div class="gcx-app-body">
+          <h3>Automotivo</h3>
+          <p>Inspeção de primeiro artigo (FAI), controle dimensional de carroceria, matrizes de estampagem, conjuntos soldados e validação de protótipos em linha de produção.</p>
+        </div>
+      </div>
+      <div class="gcx-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_aeroespacial.png"
+          alt="Aeroespacial — Inspeção Dimensional Certificada" />
+        <div class="gcx-app-body">
+          <h3>Aeroespacial</h3>
+          <p>Verificação de componentes estruturais, pás de turbina, fuselagens e dutos com tolerâncias críticas, análise de aerofólio integrada e rastreabilidade completa.</p>
+        </div>
+      </div>
+      <div class="gcx-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_moldes.png"
+          alt="Moldes e Ferramentaria" />
+        <div class="gcx-app-body">
+          <h3>Moldes e Ferramentaria</h3>
+          <p>Controle dimensional de moldes de injeção, fundição e estampagem — verificação de cavidades, canais e superfícies de vedação com comparação direta ao CAD original.</p>
+        </div>
+      </div>
+      <div class="gcx-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_energia.png"
+          alt="Energia e Indústria Pesada" />
+        <div class="gcx-app-body">
+          <h3>Energia e Indústria Pesada</h3>
+          <p>Inspeção de turbinas, compressores, válvulas industriais, estruturas offshore e equipamentos de usinas — com suporte para dados de CT e análise de componentes internos.</p>
+        </div>
+      </div>
+      <div class="gcx-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_ferroviario.png"
+          alt="Ferrovia e Naval" />
+        <div class="gcx-app-body">
+          <h3>Ferrovia e Naval</h3>
+          <p>Verificação de rodeiros, trilhos, cascos e componentes estruturais de embarcações — inspeção de manutenção preditiva com rastreamento histórico de desvios ao longo do tempo.</p>
+        </div>
+      </div>
+      <div class="gcx-app">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simsg2_app_outros.png"
+          alt="Dispositivos Médicos e Eletrônicos" />
+        <div class="gcx-app-body">
+          <h3>Dispositivos Médicos &amp; Outros</h3>
+          <p>Conformidade dimensional de implantes, próteses, dispositivos ortopédicos, eletrônicos de precisão e qualquer componente que exija rastreabilidade metrológica certificada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ECOSSISTEMA DE SOFTWARE
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-soft gcx-anim">
+    <h2>Ecossistema Geomagic &amp; Compatibilidade</h2>
+    <div class="gcx-soft-main">
+      <img class="icon" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/gcx_produto.png"
+        alt="Geomagic Control X" />
+      <div class="gcx-soft-main-body">
+        <h3>Geomagic Control X — Metrologia 3D Profissional</h3>
+        <p>Software líder de mercado da Hexagon para inspeção 3D baseada em scan. Fluxos de trabalho intuitivos, GD&T integrado, relatórios ricos e automação completa — tudo em uma única plataforma certificada pelo NIST-PTB.</p>
+      </div>
+    </div>
+    <div class="gcx-soft-compatible">
+      <h3>Compatível com Scanners e Softwares do Ecossistema:</h3>
+      <div class="gcx-soft-tags">
+        <span class="gcx-soft-tag">KSCAN-X</span>
+        <span class="gcx-soft-tag">SIMSCAN-S Gen2</span>
+        <span class="gcx-soft-tag">SIMSCAN-E</span>
+        <span class="gcx-soft-tag">NimbleTrack Gen2</span>
+        <span class="gcx-soft-tag">AM-DESK</span>
+        <span class="gcx-soft-tag">TrackProbe</span>
+        <span class="gcx-soft-tag">FARO série</span>
+        <span class="gcx-soft-tag">Hexagon Absolute Arm</span>
+        <span class="gcx-soft-tag">Renishaw</span>
+        <span class="gcx-soft-tag">Creaform</span>
+        <span class="gcx-soft-tag">Geomagic Design X</span>
+        <span class="gcx-soft-tag">Geomagic Wrap</span>
+        <span class="gcx-soft-tag">PolyWorks Inspector</span>
+        <span class="gcx-soft-tag">Verisurf</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════════════ -->
+  <div class="gcx-cta gcx-anim">
+    <p><strong>Geomagic® Control X™</strong> — O software de metrologia 3D mais completo e confiável do mercado.</p>
+    <p>
+      Com <strong>20+ anos de desenvolvimento pela Hexagon</strong>, fluxos de trabalho intuitivos, <strong>GD&amp;T integrado</strong>,
+      automação total por Visual Scripting e compatibilidade com qualquer scanner 3D ou CMM portátil,
+      o Control X capacita sua equipe de qualidade a medir com mais precision, mais rapidez e mais confiança.
+    </p>
+    <div class="gcx-cta-btns">
+      <a class="gcx-btn-green" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Falar com Especialista</a>
+      <a class="gcx-btn-white" href="https://lp.enterfix.com.br/catalogo-geomagic-control-x" target="_blank" rel="noopener">📄 Baixar Catálogo Técnico</a>
+    </div>
+  </div>
+
+</div>

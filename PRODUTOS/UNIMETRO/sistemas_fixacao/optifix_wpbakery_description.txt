@@ -1,0 +1,56 @@
+[vc_row full_width="stretch_row" bg_type="image" bg_override="ex-full" css=".vc_custom_1742778000466{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_01.jpg?id=4712) !important;}"][vc_column][vc_single_image image="5523" img_size="FULL" alignment="center" css_animation="none" css=""][/vc_column][/vc_row][vc_row bg_type="image" bg_override="full" css=".vc_custom_1742847502067{padding-top: 80px !important;padding-bottom: 100px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_021.jpg?id=4723) !important;}"][vc_column][vc_column_text css_animation="none" css=".vc_custom_1743975859304{margin-top: 60px !important;margin-bottom: 60px !important;margin-left: 0px !important;padding-top: 32px !important;padding-right: 32px !important;padding-bottom: 32px !important;padding-left: 32px !important;}"]
+<p style="text-align: center;"><strong>SISTEMA DE FIXAÇÃO OPTIFIX PARA MÁQUINAS DE MEDIÇÃO POR VISÃO</strong></p>
+<p>A série OPTIFIX é projetada como um kit completo de componentes para fixação em máquinas de medição por visão. Desenvolvemos este sistema baseado na experiência de usuários VMM e referências de diferentes tipos de peças. O kit inclui componentes de suporte, pressão e fixação, permitindo ao usuário gerenciar facilmente a fixação sem necessidade de ferramentas especiais. Independente das formas ou materiais, o usuário pode facilmente encontrar a solução de fixação durante o processo de medição.[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1742770225154{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][vc_single_image image="5398" img_size="full" alignment="center" css_animation="fadeIn" css=""][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" css=".vc_custom_1742774265064{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_041.jpg?id=4732) !important;}"][vc_column][ind_custom_heading heading="Video" heading_color="#FFFFFF" position="center"][vc_column_text css=""]<span style="color: #ffffff;">Assista à demonstração do sistema de fixação OPTIFIX para máquinas de medição por visão, desenvolvido para oferecer máxima versatilidade e facilidade de uso. O sistema permite fixação segura de peças de diferentes formatos e materiais, garantindo precisão nas medições. Veja como a flexibilidade do kit de componentes OPTIFIX pode otimizar seus processos de medição, proporcionando soluções rápidas e eficientes para diversas aplicações industriais.</span>[/vc_column_text][ultimate_video u_video_url="https://www.youtube.com/watch?v=gyjDJUU2wBU" yt_autoplay="" yt_sugg_video="" yt_mute_control="" yt_modest_branding="" yt_privacy_mode="" thumbnail="custom" custom_thumb="id^5402|url^https://enterfix.com.br/wp-content/uploads/2025/03/Software-1.png|caption^null|alt^null|title^Software|description^null" play_source="image" play_image="id^5159|url^https://enterfix.com.br/wp-content/uploads/2025/03/Enterfix-Symbol.png|caption^null|alt^null|title^Enterfix-Symbol|description^null" play_size="75" hover_animation="wobble-vertical" enable_sub_bar="on" chanel_id_name="channel_id" yt_channel_id="UCLBOUkL5Gm5SwbVOfcmQ6TA" yt_channel_text="Inscreva-se em nosso canal no YouTube e fique por dentro de todas as novidades!" show_sub_count="" main_video_font_family="font_family:Poppins|font_call:Poppins"][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1742774273231{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_051.jpg?id=4759) !important;}"][vc_column][ind_custom_heading heading="Características do Sistema" position="center"][vc_column_text css=""]
+<table class="table-enterfix">
+<thead style="background: #A0BF30; color: #fff;">
+<tr>
+<th>Características</th>
+<th>OPTIFIX</th>
+</tr>
+</thead>
+<tbody style="background: #f3f4f9; color: #333;">
+<tr>
+<td>Kit Completo de Componentes</td>
+<td>✓ Incluído</td>
+</tr>
+<tr>
+<td>Componentes de Suporte</td>
+<td>Múltiplos tamanhos e formatos</td>
+</tr>
+<tr>
+<td>Componentes de Pressão</td>
+<td>Ajustáveis e versáteis</td>
+</tr>
+<tr>
+<td>Componentes de Fixação</td>
+<td>Sistema modular flexível</td>
+</tr>
+<tr>
+<td>Facilidade de Uso</td>
+<td>Sem ferramentas especiais necessárias</td>
+</tr>
+<tr>
+<td>Compatibilidade</td>
+<td>Todas as formas e materiais</td>
+</tr>
+<tr>
+<td>Aplicação</td>
+<td>Máquinas de medição por visão VMM</td>
+</tr>
+<tr>
+<td>Solução de Fixação</td>
+<td>Rápida e eficiente</td>
+</tr>
+<tr>
+<td>Precisão</td>
+<td>Alta estabilidade durante medições</td>
+</tr>
+<tr>
+<td>Versatilidade</td>
+<td>Múltiplas configurações possíveis</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="bg_color" bg_override="full" css=".vc_custom_1743500100468{padding-top: 40px !important;background-color: #14263C !important;}" bg_color_value="#14263C"][vc_column][ind_custom_heading heading="VANTAGENS DO OPTIFIX" heading_color="#FFFFFF" position="center"][vc_row_inner][vc_column_inner width="1/4"][vc_single_image image="5305" img_size="Full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=".vc_custom_1743499676874{border-radius: 10px !important;border-color: #FFFFFF !important;}"][ind_custom_heading heading="Kit Completo" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5375" img_size="full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=""][ind_custom_heading heading="Sem Ferramentas Especiais" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5376" img_size="full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=""][ind_custom_heading heading="Versatilidade Total" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5377" img_size="full" style="vc_box_rounded" onclick="zoom" css_animation="none" css=""][ind_custom_heading heading="Sistema Modular" heading_color="#FFFFFF" size="small"][/vc_column_inner][/vc_row_inner][vc_empty_space][/vc_column][/vc_row][vc_row bg_type="image" bg_override="full" css=".vc_custom_1742774292621{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][ind_custom_heading heading="Download do Catálogo" position="center"][vc_column_text css=".vc_custom_1743975987972{padding-top: 16px !important;padding-bottom: 16px !important;}"]
+<p style="text-align: center;">Faça o download do catálogo completo do sistema de fixação <strong>OPTIFIX</strong> e conheça todos os recursos, especificações e diferenciais que ele oferece.</p>
+[/vc_column_text][ult_buttons btn_title="DOWNLOAD" btn_link="url:https%3A%2F%2Flp.enterfix.com.br%2Fcatalogo-optifix|title:Contato" btn_align="ubtn-center" btn_size="ubtn-large" btn_title_color="#FFFFFF" btn_bg_color="#A0BF30" btn_bg_color_hover="#1E73BE" btn_title_color_hover="#FFFFFF" icon="none" icon_size="24" icon_color="#FFFFFF" btn_icon_pos="ubtn-sep-icon-at-left" btn_border_style="solid" btn_border_size="1" btn_radius="10" btn_font_family="font_family:Poppins|font_call:Poppins|variant:700" btn_font_style="font-weight:700;" btn_font_size="desktop:16px;"][/vc_column][/vc_row][vc_row css_animation="fadeIn" bg_type="bg_color" bg_override="ex-full" css=".vc_custom_1742847860593{padding-top: 32px !important;}" bg_color_value="#FFFFFF"][vc_column][ind_custom_heading heading="ENTRAR EM CONTATO" position="center"][contact-form-7 id="4149" title="Formulário de Contato"][/vc_column][/vc_row]

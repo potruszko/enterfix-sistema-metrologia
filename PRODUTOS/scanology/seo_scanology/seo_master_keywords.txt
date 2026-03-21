@@ -1,0 +1,120 @@
+# SEO MASTER - PALAVRAS-CHAVE ESTRATÉGICAS SCANOLOGY
+
+## KEYWORDS PRIMÁRIAS (Alto Volume)
+- scanner 3d
+- digitalização 3d  
+- scanner 3d profissional
+- scanner 3d industrial
+- controle de qualidade 3d
+- metrologia 3d
+- inspeção dimensional
+- engenharia reversa
+
+## KEYWORDS SECUNDÁRIAS (Médio Volume)
+- scanner 3d portátil
+- sistema de rastreamento 3d
+- fotogrametria 3d
+- scanner automatizado
+- software 3d profissional
+- análise dimensional
+- visualização 3d
+- realidade virtual 3d
+
+## KEYWORDS LONG-TAIL (Baixo Volume, Alta Conversão)
+- scanner 3d com inteligência artificial
+- sistema rastreamento 6 graus liberdade
+- célula digitalização automatizada
+- software análise dimensional GDT
+- scanner 3d cor textura 4k
+- rastreamento 3d referência absoluta
+- fotogrametria multi-câmera industrial
+- sistema sondagem 3d rastreada
+
+## KEYWORDS TÉCNICAS
+- precisão submilimétrica
+- nuvem de pontos 3d
+- malha triangular
+- comparação CAD
+- certificação ISO 17025
+- processamento GPU
+- tecnologia luz estruturada
+- calibração automática
+
+## KEYWORDS POR APLICAÇÃO
+### Automotiva
+- scanner 3d automotivo
+- controle qualidade automotivo
+- inspeção dimensional carroceria
+- digitalização componentes automotivos
+
+### Aeroespacial  
+- scanner 3d aeroespacial
+- metrologia aeronáutica
+- inspeção componentes críticos
+- certificação aeroespacial
+
+### Médico/Odontológico
+- scanner 3d médico
+- digitalização próteses
+- metrologia dispositivos médicos
+- scanner odontológico
+
+### Patrimônio Cultural
+- digitalização patrimônio
+- scanner 3d monumentos
+- preservação digital
+- fotogrametria cultural
+
+## KEYWORDS GEOGRÁFICAS
+- scanner 3d Brasil
+- digitalização 3d São Paulo
+- metrologia 3d Brasil
+- scanner industrial Brasil
+
+## KEYWORDS COMPETITIVAS
+- alternativa Creaform
+- substituto FARO
+- melhor que Artec
+- scanner profissional nacional
+
+## KEYWORDS SAZONAIS
+- scanner 3d 2025
+- tecnologia digitalização atual
+- inovação metrologia 3d
+- indústria 4.0 Brasil
+
+## META DESCRIPTIONS PADRÕES
+
+### Produtos Individuais (155-160 caracteres)
+[Produto] [especificação técnica principal] [benefício único] [call-to-action]
+Exemplo: "Scanner 3D SIMSCAN-E com precisão 0,04mm e 2M pontos/segundo. Tecnologia híbrida para digitalização profissional. Agende demonstração!"
+
+### Categorias (155-160 caracteres)  
+[Categoria] Scanology com [faixa precisão/característica]. [Quantidade] modelos [benefício principal]. [Call-to-action]
+Exemplo: "Scanners 3D portáteis Scanology com precisão 0,015-0,1mm. 8 modelos com mobilidade e precisão profissional. Veja todos!"
+
+## ESTRUTURA DE URLS (SLUGS)
+
+### Produtos
+/[nome-produto]-[tipo]-[característica-principal]
+Exemplos:
+- /simscan-e-scanner-3d-portatil
+- /kscan-magic-scanner-3d-ia
+- /definisight-analise-dimensional
+
+### Categorias
+/[categoria]-[marca]-[aplicacao]
+Exemplos:
+- /scanners-3d-portateis-scanology
+- /sistemas-rastreamento-3d-scanology
+- /linha-completa-scanology-3d
+
+## TÍTULOS H1 OTIMIZADOS
+
+### Produtos
+[Nome Produto] - [Benefício Principal] | Enterfix
+Exemplo: "SIMSCAN-E - Scanner 3D Portátil de Alta Precisão | Enterfix"
+
+### Categorias  
+[Categoria] - [Característica Principal] | Enterfix
+Exemplo: "Scanners 3D Portáteis - Linha Completa Scanology | Enterfix"

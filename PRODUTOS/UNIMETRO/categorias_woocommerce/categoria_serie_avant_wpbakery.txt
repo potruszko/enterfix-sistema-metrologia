@@ -1,0 +1,49 @@
+[vc_row][vc_column][vc_column_text]
+<h1 style="text-align: center; color: #0066cc;">SÉRIE AVANT - SOLUÇÕES ESPECIALIZADAS</h1>
+<p style="text-align: center; font-size: 18px; color: #333;">Tecnologia diferenciada para aplicações específicas - Recursos expandidos</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890123{background-color: #f8f9fa !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Sobre a Série AVANT</h2>
+<p>A Série AVANT representa a vanguarda em soluções especializadas de medição por visão, desenvolvida para atender aplicações específicas que demandam tecnologia diferenciada e recursos expandidos. Esta linha combina inovação tecnológica com flexibilidade operacional, oferecendo soluções customizadas para desafios únicos de medição.</p>
+
+<p>Projetada para indústrias que necessitam de funcionalidades especiais ou configurações diferenciadas, a Série AVANT incorpora tecnologias avançadas e recursos exclusivos que não estão disponíveis nas linhas convencionais. Cada máquina é cuidadosamente configurada para atender requisitos específicos do cliente.</p>
+
+<p>Com design modular e recursos expansíveis, as máquinas AVANT podem ser adaptadas para aplicações especiais, oferecendo máxima flexibilidade e capacidade de crescimento conforme as necessidades evoluem.</p>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Características Técnicas</h2>
+<ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Tecnologia Diferenciada:</strong> Recursos exclusivos não disponíveis em outras séries</li>
+<li><strong>Design Modular:</strong> Configuração adaptável às necessidades específicas</li>
+<li><strong>Recursos Expandidos:</strong> Funcionalidades avançadas personalizáveis</li>
+<li><strong>Aplicações Especiais:</strong> Soluções para desafios únicos de medição</li>
+<li><strong>Flexibilidade:</strong> Adaptação para diferentes tipos de componentes</li>
+<li><strong>Configuração Customizada:</strong> Setup específico para cada aplicação</li>
+<li><strong>Software Especializado:</strong> Algoritmos desenvolvidos para necessidades específicas</li>
+<li><strong>Precisão Adaptável:</strong> Configuração otimizada para cada tipo de medição</li>
+<li><strong>Integração Avançada:</strong> Conectividade especializada com sistemas externos</li>
+<li><strong>Suporte Técnico:</strong> Acompanhamento especializado para aplicações complexas</li>
+</ul>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row css=".vc_custom_1234567890124{background-color: #e9ecef !important;}"][vc_column][vc_column_text]
+<h2 style="color: #0066cc;">Modelos Disponíveis</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">AVANT 100</h3>
+<p><strong>Área de Medição:</strong> 100 x 80 x 80mm</p>
+<p><strong>Aplicação:</strong> Micro componentes especializados</p>
+<p><strong>Ideal para:</strong> Eletrônicos, relojaria, precisão extrema</p>
+<p><strong>Características:</strong> Design ultra-compacto</p>
+</div>
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+<h3 style="color: #0066cc; margin-bottom: 15px;">AVANT 190</h3>
+<p><strong>Área de Medição:</strong> 190 x 140 x 120mm</p>
+<p><strong>Aplicação:</strong> Componentes especializados expandidos</p>
+<p><strong>Ideal para:</strong> Aplicações complexas e customizadas</p>
+<p><strong>Características:</strong> Recursos avançados integrados</p>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]

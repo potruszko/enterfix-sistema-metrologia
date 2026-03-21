@@ -1,0 +1,194 @@
+<!-- Video Header Section -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background-image: url([ID_VIDEO_BACKGROUND]) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="video-header-scanology"][vc_column][vc_video link="[URL_VIDEO_DEMONSTRACAO]" align="center"][/vc_column][/vc_row]
+
+<!-- Main Product Section -->
+[vc_row][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_PRINCIPAL]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="1/2"][vc_column_text]
+<h1>AM-DESK - Sistema de Digitalização Desktop Automatizado</h1>
+
+<p class="produto-breve-descricao">Sistema avançado de digitalização 3D com tecnologia de ponta para aplicações industriais profissionais.</p>
+
+O <strong>AM-DESK</strong> é um sistema de digitalização 3D desktop automatizado que combina precisão industrial com facilidade de uso. Este sistema oferece automação completa em formato compacto, ideal para laboratórios e ambientes de desenvolvimento.
+
+<strong>Características Principais:</strong>
+• Sistema desktop totalmente automatizado
+• Mesa rotativa de alta precisão integrada
+• Interface touch screen intuitiva
+• Digitalização automática multi-ângulo
+• Processamento de dados em tempo real
+
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Description Section with Gradient Background -->
+[vc_row full_width="stretch_row" css=".vc_custom_1508859733758{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;padding-top: 60px !important;padding-bottom: 60px !important;}" el_class="gradient-description-section"][vc_column][vc_column_text css=".vc_custom_1508859733758{color: #ffffff !important;}"]
+<div style="text-align: center; color: white;">
+<h2 style="color: white; margin-bottom: 30px;">AM-DESK - Sistema de Digitalização Desktop Automatizado - Tecnologia Avançada de Digitalização 3D</h2>
+<p style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">Sistema avançado de digitalização 3D com tecnologia de ponta para aplicações industriais que exigem máxima precisão e eficiência operacional.</p>
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px;">
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Desktop</h3>
+        <p style="font-size: 16px;">Compacto</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Plug</h3>
+        <p style="font-size: 16px;">Play</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Auto</h3>
+        <p style="font-size: 16px;">Calibração</p>
+    </div>
+    <div style="text-align: center; margin: 15px;">
+        <h3 style="color: #ffd700; font-size: 24px; margin-bottom: 10px;">Office</h3>
+        <p style="font-size: 16px;">Ready</p>
+    </div>
+</div>
+</div>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Image Carousel Section -->
+[vc_row][vc_column][vc_images_carousel images="[ID_CAROUSEL_IMAGES]" img_size="full" speed="3000" autoplay="yes" wrap="yes"][/vc_column][/vc_row]
+
+<!-- Video Demonstration Section -->
+[vc_row css=".vc_custom_1508859733758{background-color: #f8f9fa !important;padding-top: 50px !important;padding-bottom: 50px !important;}"][vc_column width="1/3"][vc_column_text]
+<h3>Demonstração Técnica</h3>
+<p>Veja o AM-DESK demonstrando suas capacidades avançadas de digitalização 3D.</p>
+
+<ul style="list-style-type: disc; margin-left: 20px;">
+<li>Tecnologia de digitalização avançada</li>
+<li>Captura de alta precisão</li>
+<li>Processamento otimizado</li>
+<li>Interface profissional</li>
+</ul>
+[/vc_column_text][/vc_column][vc_column width="2/3"][vc_video link="[URL_VIDEO_TECNICO]" align="center"][/vc_column][/vc_row]
+
+<!-- Technical Specifications Table -->
+[vc_row][vc_column][vc_column_text]
+<h3 style="text-align: center; margin-bottom: 30px;">Especificações Técnicas</h3>
+
+[vc_row][vc_row][vc_column][vc_column_text]
+<h3>Tecnologia Desktop Automatizada</h3>
+
+O AM-DESK integra scanner 3D de precisão com mesa rotativa automatizada e iluminação controlada, oferecendo digitalização completa com mínima intervenção do operador em formato desktop compacto.
+
+<strong>Especificações Técnicas Desktop:</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<table class="table-enterfix">
+<thead>
+<tr>
+<th>Especificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Precisão de Digitalização</strong></td>
+<td>±0,01mm</td>
+</tr>
+<tr>
+<td><strong>Volume de Digitalização</strong></td>
+<td>200mm × 200mm × 150mm</td>
+</tr>
+<tr>
+<td><strong>Mesa Rotativa</strong></td>
+<td>360° com indexação automática</td>
+</tr>
+<tr>
+<td><strong>Capacidade de Carga</strong></td>
+<td>Até 5kg</td>
+</tr>
+<tr>
+<td><strong>Tempo de Digitalização</strong></td>
+<td>5-15 minutos (automático)</td>
+</tr>
+<tr>
+<td><strong>Interface</strong></td>
+<td>Touch screen 12" integrada</td>
+</tr>
+<tr>
+<td><strong>Iluminação</strong></td>
+<td>LED controlada automaticamente</td>
+</tr>
+<tr>
+<td><strong>Dimensões</strong></td>
+<td>800mm × 600mm × 700mm</td>
+</tr>
+<tr>
+<td><strong>Conectividade</strong></td>
+<td>Wi-Fi, Ethernet, USB</td>
+</tr>
+<tr>
+<td><strong>Alimentação</strong></td>
+<td>110-240V, 200W</td>
+</tr>
+</tbody>
+</table>
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/3"][vc_single_image image="[ID_IMAGEM_2]" img_size="full" add_caption="yes" alignment="center"][/vc_column][vc_column width="2/3"][vc_column_text]
+<h3>Aplicações Desktop Automatizadas</h3>
+
+<strong>Desenvolvimento de Produtos:</strong>
+• Digitalização rápida de protótipos
+• Análise comparativa com modelos CAD
+• Documentação digital de desenvolvimento
+
+<strong>Controle de Qualidade de Laboratório:</strong>
+• Inspeção dimensional de amostras
+• Verificação de conformidade
+• Análise de características superficiais
+
+<strong>Educação e Pesquisa:</strong>
+• Projetos educacionais em engenharia
+• Pesquisa em digitalização 3D
+• Treinamento em tecnologias 3D
+
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Software Desktop Pro</h3>
+
+O AM-DESK utiliza o software Desktop Pro, otimizado para facilidade de uso e automação:
+
+<strong>Recursos Desktop:</strong>
+• Interface touch intuitiva para operação simples
+• Sequências de digitalização pré-programadas
+• Processamento automático de dados
+• Exportação para múltiplos formatos
+• Relatórios automáticos de qualidade
+• Conectividade cloud para backup
+
+<strong>Facilidade de Uso:</strong>
+Operação simplificada permite resultados profissionais com mínimo treinamento
+[/vc_column_text][/vc_column][/vc_row]
+
+[vc_row][vc_column width="1/2"][vc_column_text]
+<h3>Vantagens do Sistema Desktop</h3>
+
+<strong>Facilidade de Operação:</strong>
+Interface touch screen elimina necessidade de treinamento complexo.
+
+<strong>Automação Completa:</strong>
+Digitalização multi-ângulo totalmente automatizada em formato compacto.
+
+<strong>Versatilidade:</strong>
+Ideal para laboratórios, escritórios e ambientes educacionais.
+
+[/vc_column_text][/vc_column][vc_column width="1/2"][vc_single_image image="[ID_IMAGEM_3]" img_size="full" add_caption="yes" alignment="center"][/vc_column][/vc_row]
+
+[vc_row][vc_column][vc_column_text]
+<h3>Suporte Técnico Desktop Enterfix</h3>
+
+A Enterfix oferece suporte técnico especializado para sistemas desktop:
+
+• <strong>Instalação Simplificada:</strong> Setup rápido e configuração inicial
+• <strong>Treinamento Básico:</strong> Cursos rápidos para operação eficiente
+• <strong>Suporte Remoto:</strong> Assistência via conectividade integrada
+• <strong>Atualizações Automáticas:</strong> Software sempre atualizado via cloud
+• <strong>Garantia Estendida:</strong> Programas de proteção para equipamentos
+
+<strong>Agende uma Demonstração e descubra a simplicidade da digitalização desktop com o AM-DESK!</strong>
+[/vc_column_text][/vc_column][/vc_row]
+
+<!-- Tags: scanner 3d, am desk, digitalização 3d, metrologia 3d, controle qualidade, scanology, enterfix, precisão industrial -->

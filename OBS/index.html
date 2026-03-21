@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>ENTERFIX - Broadcast Overlay</title>
+    
+    <!-- Google Fonts - Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="scene-1">
+    <!-- Sistema será controlado via JavaScript - Sem botões -->
+    
+    <!-- Moldura para Split Screen (Cena 3) -->
+    <div class="split-frame"></div>
+
+    <!-- Logo Bug (Canto Superior Direito) -->
+    <div id="logo-bug" class="logo-container">
+        <img src="assets/logo-enterfix.png" alt="ENTERFIX" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <div class="logo-placeholder" style="display: none;">
+            <span>ENTERFIX</span>
+        </div>
+    </div>
+
+    <!-- Lower Third (Identificação) -->
+    <div id="lower-third" class="lower-third-container">
+        <div class="lt-symbol-section">
+            <img src="assets/symbol-enterfix.png" alt="" class="symbol-image" onerror="this.style.display='none'">
+        </div>
+        <div class="lt-divider"></div>
+        <div class="lt-text-section">
+            <div class="lt-header">
+                <span class="primary-text" id="lt-name">Nome do Apresentador</span>
+            </div>
+            <div class="secondary-text" id="lt-title">Cargo/Função</div>
+        </div>
+        <div class="lt-tech-accent"></div>
+    </div>
+
+    <!-- Info Panel (Especificações Técnicas) -->
+    <div id="info-panel" class="info-panel-container">
+        <div class="panel-header">
+            <span>ESPECIFICAÇÕES</span>
+        </div>
+        <div class="specs-list" id="specs-content">
+            <!-- Specs serão inseridas dinamicamente -->
+        </div>
+    </div>
+
+    <!-- Ticker (Notícias/Rodapé) -->
+    <div id="ticker" class="ticker-container">
+        <div class="ticker-content">
+            <span id="ticker-text">Texto do ticker será inserido aqui</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

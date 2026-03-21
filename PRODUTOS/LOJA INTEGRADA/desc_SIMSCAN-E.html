@@ -1,0 +1,587 @@
+<style>
+/* ─────────────────────────────────────────────
+   PREFIX: .simse  |  SIMSCAN-E — Enterfix
+   Replica estrutural da página 3d-scantech.com
+───────────────────────────────────────────── */
+.simse{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#1e293b;line-height:1.7;font-size:15px;max-width:960px;margin:0 auto}
+.simse *{box-sizing:border-box}
+
+/* ── ANIMAÇÕES ── */
+@keyframes simse-fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.simse-anim{animation:simse-fadeUp .7s ease both}
+.simse-anim-d1{animation-delay:.1s}.simse-anim-d2{animation-delay:.25s}.simse-anim-d3{animation-delay:.4s}
+.simse-anim-d4{animation-delay:.55s}.simse-anim-d5{animation-delay:.7s}.simse-anim-d6{animation-delay:.85s}
+
+/* ── HERO ── */
+.simse-hero{position:relative;background:#0a0f2e;border-radius:14px;overflow:hidden;margin-bottom:22px;min-height:420px;display:flex;align-items:flex-end}
+.simse-hero-video{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;opacity:.38}
+.simse-hero-overlay{position:relative;z-index:2;padding:28px 32px;background:linear-gradient(to top,rgba(10,15,46,.92) 0%,transparent 65%);width:100%}
+.simse-hero-tag{display:inline-block;background:rgba(160,191,48,.2);border:1px solid rgba(160,191,48,.5);border-radius:50px;padding:3px 14px;font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#c8e05a;margin-bottom:12px}
+.simse-hero-title{font-size:26px;font-weight:900;color:#fff;margin:0 0 8px;line-height:1.25;max-width:600px}
+.simse-hero-sub{font-size:13px;color:rgba(255,255,255,.8);margin:6px 0 18px;max-width:640px}
+.simse-hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.simse-hero-btn-blue{display:inline-block;padding:10px 22px;border-radius:6px;background:#A0BF30;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none}
+.simse-hero-btn-outline{display:inline-block;padding:10px 22px;border-radius:6px;background:transparent;color:#fff;font-size:13.5px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.45)}
+.simse-hero-product-img{position:absolute;right:24px;bottom:0;max-height:90%;width:auto;max-width:320px;z-index:3;object-fit:contain}
+
+/* ── HIGHLIGHTS ── */
+.simse-prodes{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.simse-prodes h1{font-size:17px;font-weight:800;color:#1F1659;text-align:center;margin:0 0 18px}
+.simse-slides{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.simse-slide-img{width:100%;border-radius:10px;display:block;object-fit:cover;max-height:240px}
+.simse-desc-text{font-size:14px;color:#334155;line-height:1.75;margin:0 0 10px}
+.simse-key-feats{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.simse-key-feat{background:#f4f8e8;border:1px solid #c8dc82;border-radius:20px;padding:4px 12px;font-size:12.5px;color:#5a7200;font-weight:600}
+
+/* ── SYSTEM OVERVIEW ── */
+.simse-system{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.simse-system-inner{display:grid;grid-template-columns:1fr 1fr}
+.simse-system-photo{width:100%;height:100%;object-fit:cover;display:block;min-height:260px}
+.simse-system-icons{padding:28px 24px;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-content:center}
+.simse-spec-icon{text-align:center}
+.simse-spec-icon img{width:56px;height:56px;object-fit:contain;display:block;margin:0 auto 7px}
+.simse-spec-icon p{font-size:11.5px;font-weight:700;color:#1F1659;margin:0;line-height:1.4}
+.simse-cta-bar{background:linear-gradient(135deg,#161144,#1F1659);color:#fff;text-align:center;padding:20px 24px}
+.simse-cta-bar h3{font-size:15px;font-weight:800;margin:0 0 10px}
+.simse-cta-bar-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.simse-cta-bar a{display:inline-block;padding:9px 20px;border-radius:6px;font-size:13.5px;font-weight:700;text-decoration:none}
+.simse-cta-bar-primary{background:#fff;color:#1F1659}
+.simse-cta-bar-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+
+/* ── FEATURE SECTIONS ── */
+.simse-features-wrap{margin-bottom:16px}
+.simse-feature{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:12px}
+.simse-feature.rev{direction:rtl}
+.simse-feature.rev > *{direction:ltr}
+.simse-feature-img{width:100%;height:100%;object-fit:cover;min-height:240px;display:block}
+.simse-feature-body{padding:24px 28px;display:flex;flex-direction:column;justify-content:center}
+.simse-feature-body h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 12px}
+.simse-feature-body h3{font-size:13px;font-weight:700;color:#A0BF30;margin:0 0 10px}
+.simse-feature-body ul{margin:0;padding-left:18px}
+.simse-feature-body li{font-size:13.5px;color:#334155;line-height:1.65;margin-bottom:5px}
+.simse-feature-body li strong{color:#1e293b}
+.simse-feature-body p{font-size:13px;color:#475569;margin:0 0 6px}
+
+/* ── MODOS DE OPERAÇÃO ── */
+.simse-modes{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:16px}
+.simse-modes-header{background:linear-gradient(135deg,#1F1659,#14263C);color:#fff;padding:20px 28px;text-align:center}
+.simse-modes-header h2{font-size:16px;font-weight:800;margin:0 0 4px;color:#fff}
+.simse-modes-header p{font-size:13px;opacity:.8;margin:0}
+.simse-modes-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.simse-mode-card{border-right:1px solid #e2e8f0;overflow:hidden}
+.simse-mode-card:last-child{border-right:none}
+.simse-mode-card img{width:100%;height:180px;object-fit:cover;display:block}
+.simse-mode-card-body{padding:16px}
+.simse-mode-card-body h3{font-size:13.5px;font-weight:800;color:#1F1659;margin:0 0 6px}
+.simse-mode-card-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.55}
+.simse-mode-badge{display:inline-block;background:#A0BF30;color:#fff;font-size:11px;font-weight:700;border-radius:20px;padding:2px 10px;margin-bottom:6px}
+
+/* ── VÍDEO ── */
+.simse-video-wrap{background:linear-gradient(135deg,#1F1659,#14263C);border-radius:12px;padding:28px 32px;margin-bottom:16px;color:#fff}
+.simse-video-wrap h2{font-size:16px;font-weight:800;color:#fff;text-align:center;margin:0 0 18px}
+.simse-iframe-wrap{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden}
+.simse-iframe-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ── CARDS ── */
+.simse-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 32px;margin-bottom:16px}
+.simse-card h2{font-size:16px;font-weight:800;color:#1F1659;margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid #e2e8f0}
+
+/* ── TABELA ── */
+.simse-tbl-wrap{overflow-x:auto}
+.simse-tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}
+.simse-tbl th{background:#1F1659;color:#fff;padding:10px 14px;text-align:left;font-size:11.5px;font-weight:700}
+.simse-tbl th:first-child{border-radius:6px 0 0 0}
+.simse-tbl th:last-child{border-radius:0 6px 0 0}
+.simse-tbl td{padding:9px 14px;border-bottom:1px solid #e2e8f0;color:#334155;vertical-align:middle}
+.simse-tbl tr:nth-child(even) td{background:#f8fafc}
+.simse-tbl tr:last-child td{border-bottom:none}
+.simse-tbl td:first-child{font-weight:600;color:#1e293b;white-space:nowrap}
+.simse-fn{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.7}
+.simse-alert-amber{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #d97706;border-radius:9px;padding:12px 16px;font-size:13.5px;color:#92400e;margin:14px 0 0;line-height:1.6}
+
+/* ── APLICAÇÕES ── */
+.simse-apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:12px 0}
+.simse-app{border-radius:10px;overflow:hidden;border:1px solid #e2e8f0}
+.simse-app img{width:100%;height:160px;object-fit:cover;display:block}
+.simse-app-body{padding:12px 14px;background:#fff}
+.simse-app-body h3{font-size:13.5px;font-weight:700;color:#1F1659;margin:0 0 5px}
+.simse-app-body p{font-size:12.5px;color:#475569;margin:0;line-height:1.55}
+
+/* ── SOFTWARES ── */
+.simse-soft{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:22px 28px;margin-bottom:16px}
+.simse-soft h2{font-size:15px;font-weight:800;color:#1F1659;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.simse-soft-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;margin-top:12px}
+.simse-soft-logos img{max-width:100%;height:auto;display:block;margin:0 auto}
+
+/* ── CTA FINAL ── */
+.simse-cta{background:linear-gradient(135deg,#161144,#1F1659);border-radius:10px;padding:28px 32px;text-align:center;color:#fff;margin-top:16px}
+.simse-cta p{font-size:14px;opacity:.9;margin:0 0 6px}
+.simse-cta strong{color:#fff}
+.simse-cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.simse-btn-green{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:#A0BF30;color:#fff}
+.simse-btn-white{display:inline-block;padding:13px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35)}
+
+@media(max-width:700px){
+  .simse-slides,.simse-system-inner,.simse-feature,.simse-feature.rev,.simse-modes-grid{grid-template-columns:1fr;direction:ltr}
+  .simse-feature.rev>*{direction:ltr}
+  .simse-mode-card{border-right:none;border-bottom:1px solid #e2e8f0}
+  .simse-mode-card:last-child{border-bottom:none}
+  .simse-hero-product-img{display:none}
+  .simse-prodes,.simse-card,.simse-soft,.simse-video-wrap,.simse-cta{padding:20px 16px}
+  .simse-soft-logos{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:440px){
+  .simse-system-icons{grid-template-columns:1fr 1fr}
+  .simse-soft-logos{grid-template-columns:1fr}
+}
+</style>
+
+<div class="simse">
+
+  <!-- ══════════════════════════════════════════════
+       HERO — vídeo de fundo + imagem do produto
+  ══════════════════════════════════════════════ -->
+  <div class="simse-hero">
+    <iframe class="simse-hero-video"
+      src="https://www.youtube.com/embed/IYWhwlMGYx0?autoplay=1&mute=1&loop=1&playlist=IYWhwlMGYx0&controls=0&showinfo=0&modestbranding=1&rel=0"
+      allow="autoplay;encrypted-media" allowfullscreen loading="lazy" title="SIMSCAN-E Scanner 3D Sem Fio"></iframe>
+    <img class="simse-hero-product-img"
+      src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_hero_produto.png"
+      alt="SIMSCAN-E Scanner 3D Sem Fio" />
+    <div class="simse-hero-overlay">
+      <div class="simse-hero-tag">📡 Scanner 3D Industrial — Sem Fio Wi-Fi 6</div>
+      <h1 class="simse-hero-title simse-anim simse-anim-d1">SIMSCAN-E<br>Inteligente, Sem Fio e Tamanho de Bolso</h1>
+      <p class="simse-hero-sub simse-anim simse-anim-d2">
+        Digitalização 3D premium com Wi-Fi 6 nativo — precisão de até 0,020 mm e 6,3 milhões de medições por segundo em apenas 600 g
+      </p>
+      <div class="simse-hero-btns simse-anim simse-anim-d3">
+        <a class="simse-hero-btn-blue" href="https://www.youtube.com/watch?v=IYWhwlMGYx0" target="_blank" rel="noopener">▶ Assistir Vídeo</a>
+        <a class="simse-hero-btn-outline" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Demo Gratuita</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HIGHLIGHTS — descrição + banners
+  ══════════════════════════════════════════════ -->
+  <div class="simse-prodes simse-anim">
+    <h1>SIMSCAN-E: Precisão Industrial na Palma da Mão</h1>
+    <div class="simse-slides">
+      <img class="simse-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_hl_wireless.jpg"
+        alt="SIMSCAN-E — Transferência de Dados Sem Fio Wi-Fi 6" />
+      <img class="simse-slide-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_hl_laser81.jpg"
+        alt="SIMSCAN-E — 81 Linhas de Laser Azul" />
+    </div>
+    <p class="simse-desc-text">
+      O <strong>SIMSCAN-E</strong> é um scanner 3D industrial inteligente, sem fio e de bolso que redefine o padrão de digitalização portátil.
+      Equipado com <strong>81 linhas de laser azul</strong>, <strong>Wi-Fi 6 nativo</strong> e computação de borda integrada, oferece
+      precisão de até <strong>0,020 mm</strong> e taxa de digitalização de até <strong>6,3 milhões de medições por segundo</strong> —
+      tudo isso em um corpo compacto de <strong>600 g</strong>. Com três modos de operação (ultrarrápido, hyperfine e furos profundos),
+      adapta-se a qualquer desafio industrial: desde geometrias complexas até espaços restritos e furos profundos.
+    </p>
+    <div class="simse-key-feats">
+      <span class="simse-key-feat">0,020 mm de Precisão</span>
+      <span class="simse-key-feat">81 Linhas Laser Azul</span>
+      <span class="simse-key-feat">6,3M Medições/s</span>
+      <span class="simse-key-feat">180 FPS</span>
+      <span class="simse-key-feat">Wi-Fi 6 Nativo</span>
+      <span class="simse-key-feat">600 g</span>
+      <span class="simse-key-feat">3 Modos de Operação</span>
+      <span class="simse-key-feat">Classe Laser II</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SYSTEM OVERVIEW — foto + ícones de spec
+  ══════════════════════════════════════════════ -->
+  <div class="simse-system simse-anim simse-anim-d1">
+    <div class="simse-system-inner">
+      <img class="simse-system-photo" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_hl_dimensoes.jpg"
+        alt="SIMSCAN-E — Dimensões e Design Compacto" />
+      <div class="simse-system-icons">
+        <div class="simse-spec-icon simse-anim simse-anim-d1">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_icon_algoritmo.webp" alt="Wi-Fi 6 Nativo" loading="lazy"/>
+          <p>Wi-Fi 6<br>Nativo</p>
+        </div>
+        <div class="simse-spec-icon simse-anim simse-anim-d2">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_icon_cameras.webp" alt="6.300.000 Medições/s" loading="lazy"/>
+          <p>6,3M<br>Medições/s</p>
+        </div>
+        <div class="simse-spec-icon simse-anim simse-anim-d3">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_icon_subpixel.webp" alt="81 Linhas Laser Azul" loading="lazy"/>
+          <p>81 Linhas<br>Laser Azul</p>
+        </div>
+        <div class="simse-spec-icon simse-anim simse-anim-d4">
+          <img src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_icon_definsight.webp" alt="Dimensões 203×80×44mm" loading="lazy"/>
+          <p>203×80×44 mm<br>600 g</p>
+        </div>
+      </div>
+    </div>
+    <div class="simse-cta-bar">
+      <h3>Experimente o Desempenho do SIMSCAN-E</h3>
+      <div class="simse-cta-bar-btns">
+        <a class="simse-cta-bar-primary" href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">💬 Fale Conosco</a>
+        <a class="simse-cta-bar-secondary" href="https://lp.enterfix.com.br/catalogo-simscan-e" target="_blank" rel="noopener">📄 Baixar Catálogo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       FEATURES — 6 seções alternadas imagem+texto
+  ══════════════════════════════════════════════ -->
+  <div class="simse-features-wrap">
+
+    <!-- 1. Alta Taxa de Medição (imagem à esquerda) -->
+    <div class="simse-feature simse-anim simse-anim-d1">
+      <img class="simse-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_feat1_taxa.webp"
+        alt="Alta Taxa de Medição — 6,3 Milhões de Medições por Segundo" />
+      <div class="simse-feature-body">
+        <h2>Alta Taxa de Medição</h2>
+        <h3>6,3 Milhões de Medições por Segundo</h3>
+        <ul>
+          <li><strong>Algoritmo Avançado:</strong> Processamento embarcado de alta performance garante 6.300.000 medições/s em tempo real</li>
+          <li><strong>81 Linhas de Laser Azul:</strong> Triple Cross Technology maximiza cobertura e densidade de pontos por varredura</li>
+          <li><strong>180 FPS:</strong> Taxa de quadros industrial para rastreamento fluido de objetos e superfícies complexas</li>
+          <li><strong>Área de Varredura:</strong> Até 700×600 mm por frame — cobertura ampla sem comprometer precisão</li>
+          <li><strong>Resolução:</strong> Até 0,020 mm — aquisição de detalhes finos e bordas afiadas</li>
+          <li><strong>Laser Classe II (Olho-seguro):</strong> Uso contínuo sem equipamento de proteção ocular especial</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Scanning Suave e Eficiente (imagem à direita) -->
+    <div class="simse-feature rev simse-anim simse-anim-d2">
+      <img class="simse-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_feat1_suave.webp"
+        alt="Scanning Suave e Eficiente" />
+      <div class="simse-feature-body">
+        <h2>Scanning Suave e Eficiente</h2>
+        <h3>Fluxo Contínuo Sem Interrupções</h3>
+        <ul>
+          <li><strong>Rastreamento Estável:</strong> Algoritmos de alinhamento adaptativo mantêm continuidade mesmo em movimentos rápidos</li>
+          <li><strong>Sem Perda de Frame:</strong> Computação de borda embarcada elimina gargalos de transmissão</li>
+          <li><strong>Baixa Latência:</strong> Feedback visual em tempo real para ajuste imediato durante a captura</li>
+          <li><strong>Superfícies Desafiadoras:</strong> Captura eficiente em plásticos, metais, geometrias orgânicas e compósitos</li>
+          <li><strong>Digitalização Ergonômica:</strong> Peso de 600 g e design de uma mão reduzem fadiga em sessões longas</li>
+          <li><strong>Distância de Afastamento:</strong> 300 mm · Profundidade de campo: 550 mm — grande flexibilidade de posicionamento</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Design Compacto e Sem Fio (imagem à esquerda) -->
+    <div class="simse-feature simse-anim simse-anim-d3">
+      <img class="simse-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_feat2_bg.jpg"
+        alt="Design Compacto, Sem Fio e Prático" />
+      <div class="simse-feature-body">
+        <h2>Design Compacto, Sem Fio e Prático</h2>
+        <h3>Precisão Industrial em 600 g — Liberdade Total de Movimento</h3>
+        <ul>
+          <li><strong>Wi-Fi 6 Nativo:</strong> Conectividade 802.11a/b/g/n/ac integrada — sem necessidade de roteador externo</li>
+          <li><strong>Corpo Full-Metal:</strong> 203×80×44 mm em design de metal robusto e compacto</li>
+          <li><strong>Duas Baterias Hot-Swap:</strong> Troca a quente sem interromper a digitalização — operação contínua</li>
+          <li><strong>Modo Híbrido:</strong> Alterne entre cabeado (USB 3.0) e sem fio com base de carregamento destacável</li>
+          <li><strong>Ambient Hostil:</strong> Temperatura de operação –10 °C a 40 °C — shopfloor, campo ou locais remotos</li>
+          <li><strong>Portabilidade Real:</strong> Digitalização em altura, espaços confinados e locais de difícil acesso</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Processamento Robusto de Dados (imagem à direita) -->
+    <div class="simse-feature rev simse-anim simse-anim-d4">
+      <img class="simse-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_feat2_processamento.webp"
+        alt="Processamento Robusto de Dados Embarcado" />
+      <div class="simse-feature-body">
+        <h2>Processamento Robusto de Dados Embarcado</h2>
+        <h3>Edge Computing + Wi-Fi 6 — Qualquer Ambiente</h3>
+        <ul>
+          <li><strong>Computação de Borda:</strong> Processamento local avançado reduz dependência de notebook durante a captura</li>
+          <li><strong>Transferência Sem Fio Estável:</strong> Wi-Fi 6 com baixa latência para ambientes industriais ruidosos</li>
+          <li><strong>USB 3.0 Tipo B:</strong> Conexão cabeada de alta velocidade quando precisão de transmissão é crítica</li>
+          <li><strong>Formatos de Saída:</strong> .stl · .obj · .ply · .asc · .igs · .txt · .mk2 · .umk e outros</li>
+          <li><strong>Compatibilidade:</strong> Integração com PolyWorks, Geomagic, Verisurf, Zeiss Calypso e CATIA/NX</li>
+          <li><strong>Precisão Volumétrica Padrão:</strong> 0,015 mm + 0,035 mm/m — ou 0,015 mm + 0,012 mm/m com MSCAN-L15</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. Captura Excepcional de Detalhes (imagem à esquerda) -->
+    <div class="simse-feature simse-anim simse-anim-d5">
+      <img class="simse-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_feat3_bg.webp"
+        alt="Captura Excepcional de Detalhes — 0,020mm" />
+      <div class="simse-feature-body">
+        <h2>Captura Excepcional de Detalhes</h2>
+        <h3>Precisão de 0,020 mm com Componentes Aeroespaciais</h3>
+        <ul>
+          <li><strong>Câmeras Industriais de Alto Desempenho:</strong> Componentes de grau aeroespacial garantem estabilidade e fidelidade da imagem</li>
+          <li><strong>Algoritmo de Melhoria de Imagem:</strong> Processamento avançado de contraste e nitidez para dados 3D densos</li>
+          <li><strong>Extração Sub-Pixel:</strong> Algoritmo proprietário extrai características com precisão sub-pixel — bordas e ângulos nítidos</li>
+          <li><strong>Precisão Acreditada ISO 17025:</strong> Avaliada por VDI/VDE 2634 Parte 3 e JJF 1951 — PS(E) até 0,020 mm</li>
+          <li><strong>Ciclo de Vida do Produto:</strong> Rastreamento e registro de dados em desenvolvimento, inspeção e análise</li>
+          <li><strong>Certificações:</strong> 17 patentes registradas — tecnologia exclusiva de alta confiabilidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. Excelente para Espaços Restritos (imagem à direita) -->
+    <div class="simse-feature rev simse-anim simse-anim-d6">
+      <img class="simse-feature-img" loading="lazy"
+        src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_feat4_bg.webp"
+        alt="Excelente para Espaços Restritos e Furos Profundos" />
+      <div class="simse-feature-body">
+        <h2>Excelente para Espaços Restritos</h2>
+        <h3>Design de Câmera de Curta Distância — Ângulo Acentuado</h3>
+        <ul>
+          <li><strong>Ângulo de Visão Acentuado:</strong> Design de câmera de curta distância amplia acesso a áreas ocultas</li>
+          <li><strong>Ranhuras e Canais:</strong> Captura eficiente de fendas, slots e geometrias internas complexas</li>
+          <li><strong>Furos Profundos — 1 Linha Laser:</strong> Modo dedicado com 1 linha de laser azul para medição precisa de furos estreitos</li>
+          <li><strong>Dados Mais Completos:</strong> Integridade de dados superior — menos retrabalho e gaps no modelo 3D final</li>
+          <li><strong>Aplicações Críticas:</strong> Moldes de injeção, turbinas, peças fundidas, fixadores e estruturas multi-cavidade</li>
+          <li><strong>Preparação Mínima:</strong> Sem marcadores necessários para geometrias simples — digitalização direta e ágil</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /simse-features-wrap -->
+
+  <!-- ══════════════════════════════════════════════
+       MODOS DE OPERAÇÃO — 3 cards
+  ══════════════════════════════════════════════ -->
+  <div class="simse-modes simse-anim">
+    <div class="simse-modes-header">
+      <h2>🔵 3 Modos de Operação Versáteis</h2>
+      <p>Escolha o modo ideal para cada aplicação — de varrimentos ultra-rápidos a furos profundos</p>
+    </div>
+    <div class="simse-modes-grid">
+      <div class="simse-mode-card">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_modo_ultrarapido.webp"
+          alt="Modo Ultrarrápido — 63 Linhas Laser" />
+        <div class="simse-mode-card-body">
+          <div class="simse-mode-badge">Ultrarrápido</div>
+          <h3>63 Linhas Laser Azul</h3>
+          <p>Triple Cross Technology — ideal para avaliação rápida de geometria e dimensões gerais de peças.</p>
+        </div>
+      </div>
+      <div class="simse-mode-card">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_modo_hyperfine.webp"
+          alt="Modo Hyperfine — 17 Linhas Laser" />
+        <div class="simse-mode-card-body">
+          <div class="simse-mode-badge">Hyperfine</div>
+          <h3>17 Linhas Paralelas</h3>
+          <p>17 linhas de laser azul paralelas para captura detalhada de características intricadas e estruturas complexas.</p>
+        </div>
+      </div>
+      <div class="simse-mode-card">
+        <img loading="lazy"
+          src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_modo_furos.webp"
+          alt="Modo Furos Profundos — 1 Linha Laser" />
+        <div class="simse-mode-card-body">
+          <div class="simse-mode-badge">Furos Profundos</div>
+          <h3>1 Linha Laser Extra</h3>
+          <p>1 linha de laser azul extra para medição precisa de furos profundos e áreas de difícil acesso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       VÍDEO
+  ══════════════════════════════════════════════ -->
+  <div class="simse-video-wrap simse-anim">
+    <h2>🎬 SIMSCAN-E Scanner 3D Inteligente Sem Fio — Vídeo</h2>
+    <div class="simse-iframe-wrap">
+      <iframe allowfullscreen loading="lazy"
+        src="https://www.youtube.com/embed/IYWhwlMGYx0"
+        title="SIMSCAN-E Scanner 3D Sem Fio Wi-Fi 6 — Enterfix"></iframe>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ESPECIFICAÇÕES TÉCNICAS
+  ══════════════════════════════════════════════ -->
+  <div class="simse-card simse-anim">
+    <h2>📊 Especificações Técnicas</h2>
+    <div class="simse-tbl-wrap">
+      <table class="simse-tbl" aria-label="Especificações Técnicas SIMSCAN-E">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>SIMSCAN-E</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modo de Varredura — Ultrarrápido</td>
+            <td>63 linhas de laser azul (Triple Cross Technology)</td>
+          </tr>
+          <tr>
+            <td>Modo de Varredura — Hyperfine</td>
+            <td>17 linhas de laser azul paralelas</td>
+          </tr>
+          <tr>
+            <td>Modo de Varredura — Furos Profundos</td>
+            <td>1 linha de laser azul extra</td>
+          </tr>
+          <tr>
+            <td>Precisão ¹</td>
+            <td>Até <strong>0,020 mm</strong></td>
+          </tr>
+          <tr>
+            <td>Taxa de Digitalização</td>
+            <td><strong>6.300.000 medições/s</strong></td>
+          </tr>
+          <tr>
+            <td>Área de Varredura</td>
+            <td>Até 700 mm × 600 mm</td>
+          </tr>
+          <tr>
+            <td>Classe do Laser</td>
+            <td>Classe II (olho-seguro)</td>
+          </tr>
+          <tr>
+            <td>Resolução</td>
+            <td>Até 0,020 mm</td>
+          </tr>
+          <tr>
+            <td>Precisão Volumétrica Padrão ²</td>
+            <td>0,015 mm + 0,035 mm/m</td>
+          </tr>
+          <tr>
+            <td>Precisão Volumétrica c/ MSCAN-L15 ²</td>
+            <td>0,015 mm + 0,012 mm/m</td>
+          </tr>
+          <tr>
+            <td>Distância de Afastamento</td>
+            <td>300 mm</td>
+          </tr>
+          <tr>
+            <td>Profundidade de Campo</td>
+            <td>550 mm</td>
+          </tr>
+          <tr>
+            <td>Formatos de Saída</td>
+            <td>.stl · .obj · .ply · .asc · .igs · .txt · .mk2 · .umk e outros</td>
+          </tr>
+          <tr>
+            <td>Dimensões</td>
+            <td>203 mm × 80 mm × 44 mm</td>
+          </tr>
+          <tr>
+            <td>Peso</td>
+            <td><strong>600 g</strong></td>
+          </tr>
+          <tr>
+            <td>Temperatura de Operação</td>
+            <td>–10 °C a 40 °C</td>
+          </tr>
+          <tr>
+            <td>Interface Cabeada</td>
+            <td>USB 3.0 Tipo B</td>
+          </tr>
+          <tr>
+            <td>Padrão Sem Fio</td>
+            <td>Wi-Fi 6 — 802.11a/b/g/n/ac</td>
+          </tr>
+          <tr>
+            <td>Software Nativo</td>
+            <td>DefinSight</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="simse-fn">¹ Acreditado ISO 17025: Baseado na norma VDI/VDE 2634 Parte 3 e especificação JJF 1951 — erro de apalpação (tamanho) PS(E) avaliado.<br>² Acreditado ISO 17025: Baseado na norma VDI/VDE 2634 Parte 3 e especificação JJF 1951 — erro de espaçamento entre esferas SD avaliado.</p>
+    <div class="simse-alert-amber">
+      💻 <strong>Configuração de PC Recomendada:</strong> Windows 10/11 (64-bit) · CPU: i7-13650HX ou superior · RAM: 32 GB · GPU: NVIDIA RTX 3060 ou superior com 6 GB VRAM mínimo
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       APLICAÇÕES
+  ══════════════════════════════════════════════ -->
+  <div class="simse-card simse-anim">
+    <h2>🏭 Aplicações</h2>
+    <div class="simse-apps-grid">
+      <div class="simse-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_app_aeroespacial.png" alt="Aeroespacial" />
+        <div class="simse-app-body">
+          <h3>Aeroespacial</h3>
+          <p>Inspeção dimensional de componentes estruturais e peças de precisão com geometrias complexas — tolerâncias críticas garantidas.</p>
+        </div>
+      </div>
+      <div class="simse-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_app_moldes.png" alt="Moldes e Ferramentas" />
+        <div class="simse-app-body">
+          <h3>Moldes e Ferramentas</h3>
+          <p>Digitalização in-loco de moldes de injeção e estampagem — captura de detalhes finos e furos profundos sem desmontagem.</p>
+        </div>
+      </div>
+      <div class="simse-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_app_automotivo.png" alt="Automotivo" />
+        <div class="simse-app-body">
+          <h3>Automotivo</h3>
+          <p>Inspeção sem fio de carrocerias, painéis e matrizes de estampagem — 0,020 mm de precisão para controle dimensional ágil.</p>
+        </div>
+      </div>
+      <div class="simse-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_app_energia.png" alt="Energia e Indústria Pesada" />
+        <div class="simse-app-body">
+          <h3>Energia e Indústria Pesada</h3>
+          <p>Digitalização remota de turbinas, caldeiras e equipamentos de grande porte — mobilidade sem fio em ambientes hostis.</p>
+        </div>
+      </div>
+      <div class="simse-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_app_ferroviario.png" alt="Ferroviário e Naval" />
+        <div class="simse-app-body">
+          <h3>Ferroviário e Naval</h3>
+          <p>Manutenção preditiva e inspeção de componentes de trens e embarcações — acesso a áreas confinadas com design compacto.</p>
+        </div>
+      </div>
+      <div class="simse-app">
+        <img loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2026/03/simse_app_outros.png" alt="Outros Setores" />
+        <div class="simse-app-body">
+          <h3>Outros Setores</h3>
+          <p>Engenharia reversa, pesquisa e desenvolvimento, controle de qualidade e prototipagem rápida em qualquer segmento industrial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       SOFTWARE
+  ══════════════════════════════════════════════ -->
+  <div class="simse-soft simse-anim">
+    <h2>💻 Software Nativo e Compatibilidade</h2>
+    <p style="font-size:14px;color:#475569;margin:0 0 4px">O SIMSCAN-E opera nativamente com o <strong>DefinSight</strong> — nova plataforma de software com algoritmos de ponta e layout inovador para simplificar e acelerar a digitalização 3D. Interface intuitiva, parâmetros flexíveis e processamento em tempo real para máxima produtividade. Compatível também com os principais softwares de metrologia e engenharia reversa:</p>
+    <div class="simse-soft-logos">
+      <img alt="Zeiss" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/zeiss.webp" />
+      <img alt="Verisurf" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/verisurf.webp" />
+      <img alt="PolyWorks" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/polyworks.webp" />
+      <img alt="Geomagic" loading="lazy" src="https://enterfix.com.br/wp-content/uploads/2025/03/geomagic.webp" />
+    </div>
+    <p style="font-size:13px;color:#64748b;margin:14px 0 0">Compatível ainda com SolidWorks, CATIA, Siemens NX e demais plataformas CAD via .stl, .obj, .ply, .asc, .igs e outros formatos padrão da indústria.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════════════ -->
+  <div class="simse-cta simse-anim">
+    <p><strong>📞 Solicite uma demonstração ou orçamento personalizado</strong></p>
+    <p>Fale com nosso time técnico e descubra como o SIMSCAN-E pode atender sua aplicação — inspeção dimensional, controle de qualidade, engenharia reversa ou digitalização de campo.</p>
+    <div class="simse-cta-btns">
+      <a class="simse-btn-green" href="https://enterfix.com.br/produto/simscan-e/" rel="noopener" target="_blank">🛒 Comprar na Loja</a>
+      <a class="simse-btn-white" href="https://lp.enterfix.com.br/catalogo-simscan-e" rel="noopener" target="_blank">📄 Baixar Catálogo</a>
+      <a class="simse-btn-white" href="https://api.whatsapp.com/send?phone=5511968416776" rel="noopener" target="_blank">💬 WhatsApp (11) 96841-6776</a>
+      <a class="simse-btn-white" href="mailto:vendas@enterfix.com.br">✉️ vendas@enterfix.com.br</a>
+    </div>
+    <p style="font-size:12px;opacity:.65;margin-top:14px">Seg–Sex 08:00–12:00 e 13:00–17:30 &nbsp;|&nbsp; Enterfix Indústria, Comércio e Serviços Ltda.</p>
+  </div>
+
+</div>

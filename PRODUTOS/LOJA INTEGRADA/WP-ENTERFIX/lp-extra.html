@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Série EXTRA — Máquinas de Medição por Visão Semi-Automáticas | Enterfix</title>
+  <meta name="description" content="Máquinas de Medição por Visão Semi-Automáticas Enterfix Série EXTRA — precisão de 2,5 μm, câmera HD GIGA, software avançado. Modelos 200, 300, 400 e 500 mm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #A0BF30;
+      --navy: #14263C;
+      --deep: #1F1659;
+      --dark: #080528;
+      --gray: #f1f5f9;
+      --text: #334155;
+      --muted: #64748b;
+      --radius: 14px;
+      --max: 1180px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ─────────────────────────────────────── */
+    .lp-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8, 5, 40, 0.97);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px; height: 60px;
+    }
+    .lp-nav__logo { display: flex; align-items: center; gap: 10px; }
+    .lp-nav__logo img { height: 32px; }
+    .lp-nav__logo span { color: #fff; font-weight: 800; font-size: 15px; letter-spacing: -0.3px; }
+    .lp-nav__cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--green); color: #0e0a2e;
+      padding: 8px 18px; border-radius: 24px;
+      font-size: 13px; font-weight: 700; text-decoration: none;
+      white-space: nowrap;
+    }
+    .lp-nav__cta:hover { opacity: .88; }
+
+    /* ── HERO ────────────────────────────────────── */
+    .lp-hero {
+      background: var(--dark) url('https://enterfix.com.br/wp-content/uploads/2024/08/bg_01.jpg?id=4712') center / cover no-repeat;
+      min-height: 92vh;
+      display: flex; align-items: center;
+      padding: 80px 32px;
+    }
+    .lp-hero__inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .lp-hero__badge {
+      display: inline-block;
+      font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--green); background: rgba(160,191,48,.12);
+      border: 1px solid rgba(160,191,48,.38); border-radius: 20px;
+      padding: 5px 14px; margin-bottom: 18px;
+    }
+    .lp-hero__title {
+      font-size: clamp(28px, 4.5vw, 52px);
+      font-weight: 900; color: #fff; line-height: 1.1; letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+    .lp-hero__title em { color: var(--green); font-style: normal; }
+    .lp-hero__sub {
+      font-size: clamp(14px, 1.5vw, 16px); color: rgba(255,255,255,.78);
+      line-height: 1.75; margin-bottom: 32px;
+    }
+    .lp-hero__stats {
+      display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 36px;
+    }
+    .lp-hero__stat { display: flex; flex-direction: column; gap: 2px; }
+    .lp-hero__stat strong { font-size: 26px; font-weight: 900; color: var(--green); line-height: 1; }
+    .lp-hero__stat small { font-size: 10px; color: rgba(255,255,255,.55); letter-spacing: 1.2px; text-transform: uppercase; }
+    .lp-hero__sep { width: 1px; height: 36px; background: rgba(255,255,255,.2); flex-shrink: 0; }
+    .lp-hero__btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green); color: #0e0a2e;
+      padding: 14px 26px; border-radius: 30px;
+      font-size: 14px; font-weight: 700; text-decoration: none;
+    }
+    .btn-primary:hover { opacity: .87; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: #fff;
+      border: 2px solid rgba(255,255,255,.45);
+      padding: 14px 26px; border-radius: 30px;
+      font-size: 14px; font-weight: 700; text-decoration: none;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,.75); }
+
+    .lp-hero__img-box {
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lp-hero__img-box img {
+      max-width: 100%; border-radius: var(--radius);
+      box-shadow: 0 32px 80px rgba(0,0,0,.6);
+    }
+
+    /* ── STRIP ───────────────────────────────────── */
+    .lp-strip {
+      background: var(--green); padding: 16px 32px;
+    }
+    .lp-strip__inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .lp-strip__item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; font-weight: 700; color: #0e0a2e;
+    }
+    .lp-strip__item::before {
+      content: ''; width: 6px; height: 6px; min-width: 6px;
+      background: rgba(0,0,0,.35); border-radius: 50%;
+    }
+
+    /* ── SECTION HEADER ──────────────────────────── */
+    .section { padding: 72px 32px; }
+    .section--gray { background: var(--gray); }
+    .section--navy { background: var(--navy); }
+    .section--dark { background: var(--dark); }
+    .section__inner { max-width: var(--max); margin: 0 auto; }
+    .section__pre {
+      display: block; font-size: 10px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--green); margin-bottom: 8px;
+    }
+    .section__title {
+      font-size: clamp(20px, 3vw, 30px); font-weight: 900;
+      color: var(--navy); line-height: 1.25; margin-bottom: 14px;
+    }
+    .section__title--light { color: #fff; }
+    .section__sub {
+      font-size: 15px; color: var(--muted);
+      line-height: 1.75; max-width: 680px;
+    }
+    .section__sub--light { color: rgba(255,255,255,.72); }
+    .section__head { margin-bottom: 44px; }
+    .section__head--center { text-align: center; }
+    .section__head--center .section__sub { margin: 0 auto; }
+
+    /* ── FEAT CARDS ──────────────────────────────── */
+    .feat-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .feat-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 28px 24px;
+      border-top: 4px solid var(--green);
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    }
+    .feat-card__icon { font-size: 28px; margin-bottom: 12px; }
+    .feat-card__title {
+      font-size: 15px; font-weight: 800; color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .feat-card__text { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+    /* ── MODELS ──────────────────────────────────── */
+    .models-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+    .model-card {
+      background: var(--navy); border-radius: var(--radius);
+      overflow: hidden; display: flex; flex-direction: column;
+    }
+    .model-card__img {
+      width: 100%; aspect-ratio: 4/3; object-fit: contain;
+      background: #f1f5f9; display: block;
+    }
+    .model-card__head {
+      background: rgba(160,191,48,.12); border-bottom: 2px solid var(--green);
+      padding: 20px 24px;
+    }
+    .model-card__name { font-size: 22px; font-weight: 900; color: var(--green); }
+    .model-card__tagline { font-size: 12px; color: rgba(255,255,255,.65); margin-top: 4px; }
+    .model-card__badge-consult {
+      display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; background: rgba(255,255,255,.12); color: rgba(255,255,255,.7);
+      border: 1px solid rgba(255,255,255,.25); border-radius: 12px; padding: 3px 10px; margin-top: 6px;
+    }
+    .model-card__specs { padding: 20px 24px; flex: 1; }
+    .spec-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 12.5px;
+    }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-row__label { color: rgba(255,255,255,.58); }
+    .spec-row__value { color: #fff; font-weight: 600; text-align: right; }
+    .model-card__cta {
+      padding: 16px 24px; background: rgba(0,0,0,.25);
+      display: flex; gap: 8px; flex-direction: column;
+    }
+    .model-card__link {
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      background: var(--green); color: #0e0a2e;
+      padding: 11px 20px; border-radius: 28px;
+      font-size: 13px; font-weight: 700; text-decoration: none;
+    }
+    .model-card__link:hover { opacity: .87; }
+    .model-card__link--secondary {
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      background: transparent; color: rgba(255,255,255,.75);
+      border: 1px solid rgba(255,255,255,.3);
+      padding: 10px 20px; border-radius: 28px;
+      font-size: 12px; font-weight: 600; text-decoration: none;
+    }
+    .model-card__link--secondary:hover { border-color: rgba(255,255,255,.6); color: #fff; }
+    .model-card__link--consult {
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.7);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 11px 20px; border-radius: 28px;
+      font-size: 13px; font-weight: 600; text-decoration: none;
+    }
+    .model-card__link--consult:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+    /* ── COMPARISON TABLE ────────────────────────── */
+    .comp-wrap { overflow-x: auto; border-radius: var(--radius); }
+    .comp-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    .comp-table thead tr {
+      background: var(--navy); color: #fff;
+    }
+    .comp-table thead th {
+      padding: 14px 18px; text-align: center; font-weight: 700;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .comp-table thead th:first-child { text-align: left; }
+    .comp-table thead th.th-model { color: var(--green); font-size: 15px; }
+    .comp-table tbody tr:nth-child(odd) { background: #f8fafc; }
+    .comp-table tbody tr:nth-child(even) { background: #fff; }
+    .comp-table tbody td {
+      padding: 12px 18px; border: 1px solid #e2e8f0;
+      text-align: center; color: var(--text);
+    }
+    .comp-table tbody td:first-child { text-align: left; font-weight: 600; color: var(--navy); }
+    .comp-table tfoot td {
+      padding: 14px 18px; background: var(--green); text-align: center;
+    }
+    .comp-table tfoot a {
+      font-size: 12px; font-weight: 700; color: #0e0a2e; text-decoration: none;
+    }
+
+    /* ── APPS ────────────────────────────────────── */
+    .apps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .app-chip {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 10px; padding: 14px 18px;
+    }
+    .app-chip__icon { font-size: 22px; flex-shrink: 0; }
+    .app-chip__name { font-size: 13px; font-weight: 700; color: #fff; }
+
+    /* ── CTA SECTION ─────────────────────────────── */
+    .lp-cta {
+      background: var(--dark) url('https://enterfix.com.br/wp-content/uploads/2024/08/bg_051.jpg?id=4759') center / cover no-repeat;
+      padding: 100px 32px;
+      text-align: center;
+    }
+    .lp-cta__box {
+      display: inline-block; max-width: 700px;
+      background: rgba(8,5,40,.9); border-radius: 20px;
+      padding: 60px 56px;
+    }
+    .lp-cta__title { font-size: clamp(22px, 3.5vw, 36px); font-weight: 900; color: #fff; margin-bottom: 14px; }
+    .lp-cta__sub { font-size: 15px; color: rgba(255,255,255,.75); line-height: 1.75; margin-bottom: 32px; }
+    .lp-cta__btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    /* ── FORM ────────────────────────────────────── */
+    .lp-form { max-width: 560px; margin: 0 auto; }
+    .lp-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .lp-form input, .lp-form select, .lp-form textarea {
+      width: 100%; padding: 13px 16px; border: 1.5px solid #d1d5db;
+      border-radius: 8px; font-family: inherit; font-size: 14px; color: var(--text);
+      background: #fff; outline: none;
+      transition: border-color .2s;
+    }
+    .lp-form input:focus, .lp-form select:focus, .lp-form textarea:focus {
+      border-color: var(--green);
+    }
+    .lp-form textarea { resize: vertical; min-height: 100px; }
+    .lp-form__single { margin-bottom: 14px; }
+    .lp-form__submit {
+      width: 100%; padding: 15px; background: var(--green);
+      color: #0e0a2e; font-size: 15px; font-weight: 800;
+      border: none; border-radius: 30px; cursor: pointer;
+      font-family: inherit; margin-top: 6px;
+    }
+    .lp-form__submit:hover { opacity: .88; }
+    .lp-form__notice { font-size: 11px; color: var(--muted); text-align: center; margin-top: 10px; }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    .lp-footer {
+      background: #080528; padding: 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 14px;
+    }
+    .lp-footer__brand { font-size: 13px; color: rgba(255,255,255,.5); }
+    .lp-footer__brand strong { color: rgba(255,255,255,.8); }
+    .lp-footer__links { display: flex; gap: 20px; }
+    .lp-footer__links a { font-size: 12px; color: rgba(255,255,255,.45); text-decoration: none; }
+    .lp-footer__links a:hover { color: var(--green); }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 768px) {
+      .lp-hero__inner { grid-template-columns: 1fr; }
+      .lp-hero__img-box { display: none; }
+      .lp-hero { min-height: auto; }
+      .lp-cta__box { padding: 40px 24px; }
+      .lp-form__row { grid-template-columns: 1fr; }
+      .lp-footer { flex-direction: column; text-align: center; }
+      .lp-footer__links { justify-content: center; }
+      .lp-strip__inner { gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      .lp-nav { padding: 0 16px; }
+      .section { padding: 52px 16px; }
+      .lp-hero { padding: 60px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     NAV
+════════════════════════════════════ -->
+<nav class="lp-nav">
+  <div class="lp-nav__logo">
+    <img src="https://enterfix.com.br/wp-content/uploads/2025/03/Enterfix-Symbol.png" alt="Enterfix">
+    <span>Enterfix</span>
+  </div>
+  <a href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener" class="lp-nav__cta">
+    Falar com Consultor
+  </a>
+</nav>
+
+<!-- ════════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+<section class="lp-hero">
+  <div class="lp-hero__inner">
+    <div>
+      <span class="lp-hero__badge">Máquinas de Medição por Visão · Série Semi-Automática</span>
+      <h1 class="lp-hero__title">
+        Série EXTRA —<br>
+        <em>Precisão que<br>se adapta ao<br>seu processo</em>
+      </h1>
+      <p class="lp-hero__sub">
+        Quatro modelos semi-automáticos para inspeção dimensional de peças pequenas a grandes — com câmera HD GIGA, lente zoom motorizada e software avançado de metrologia. Da ferramentaria à montadora.
+      </p>
+      <div class="lp-hero__stats">
+        <div class="lp-hero__stat">
+          <strong>2,5 μm</strong>
+          <small>Precisão</small>
+        </div>
+        <div class="lp-hero__sep"></div>
+        <div class="lp-hero__stat">
+          <strong>4 Modelos</strong>
+          <small>200 a 500 mm</small>
+        </div>
+        <div class="lp-hero__sep"></div>
+        <div class="lp-hero__stat">
+          <strong>1,3 MP</strong>
+          <small>Câmera HD GIGA</small>
+        </div>
+        <div class="lp-hero__sep"></div>
+        <div class="lp-hero__stat">
+          <strong>0,1 μm</strong>
+          <small>Resolução escala</small>
+        </div>
+      </div>
+      <div class="lp-hero__btns">
+        <a href="#contato" class="btn-primary">Solicitar Proposta</a>
+        <a href="#modelos" class="btn-outline">Ver Modelos</a>
+      </div>
+    </div>
+    <div class="lp-hero__img-box">
+      <img
+        src="https://enterfix.com.br/wp-content/uploads/2025/11/EXTRA-300.png"
+        alt="Enterfix EXTRA 300 – Máquina de Medição por Visão Semi-Automática"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     STRIP
+════════════════════════════════════ -->
+<div class="lp-strip">
+  <div class="lp-strip__inner">
+    <div class="lp-strip__item">Semi-automático — mais produtivo que manual, mais acessível que CNC</div>
+    <div class="lp-strip__item">Iluminação LED programável em múltiplas zonas</div>
+    <div class="lp-strip__item">Suporte técnico nacional Enterfix</div>
+    <div class="lp-strip__item">4 tamanhos de mesa: 200 · 300 · 400 · 500 mm</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     O QUE É A SÉRIE EXTRA
+════════════════════════════════════ -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section__head section__head--center">
+      <span class="section__pre">Visão Geral</span>
+      <h2 class="section__title">O melhor dos dois mundos: precisão manual + automação inteligente</h2>
+      <p class="section__sub">
+        A Série EXTRA são Máquinas de Medição por Visão Semi-Automáticas projetadas para quem precisa ir além da medição manual mas não quer o custo de uma máquina totalmente CNC. Com movimentação X/Y manual e lente zoom com controle motorizado, o operador tem agilidade e o software garante a precisão.
+      </p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-card__icon">🎯</div>
+        <div class="feat-card__title">Precisão de 2,5 + L/200 μm</div>
+        <p class="feat-card__text">Repetibilidade de 1,5 μm e escala linear com resolução de 0,1 μm. Resultados rastreáveis e confiáveis para seu processo de qualidade.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card__icon">📷</div>
+        <div class="feat-card__title">Câmera CCD HD GIGA 1,3 MP</div>
+        <p class="feat-card__text">Câmera digital de alta resolução com lente zoom semi-automática 0.7–4.5× controlada por motor — imagem nítida em qualquer ampliação.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card__icon">💡</div>
+        <div class="feat-card__title">Iluminação LED Avançada</div>
+        <p class="feat-card__text">Sistema de iluminação LED programável em múltiplas zonas com luz paralela inferior. Contraste ideal para peças transparentes, reflexivas ou escuras.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card__icon">🖥️</div>
+        <div class="feat-card__title">Software de Metrologia Industrial</div>
+        <p class="feat-card__text">Software avançado com medição automática de elementos geométricos, relatórios detalhados e exportação de dados para seu sistema de qualidade.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card__icon">🕹️</div>
+        <div class="feat-card__title">Joystick + Controles CNC</div>
+        <p class="feat-card__text">Modelos 300, 400 e 500 contam com joystick e controles CNC assistidos para posicionamento preciso e ágil sem esforço do operador.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card__icon">🔧</div>
+        <div class="feat-card__title">Suporte Técnico Enterfix</div>
+        <p class="feat-card__text">Equipe de engenheiros e técnicos certificados para instalação, treinamento, calibração e suporte contínuo — em todo o Brasil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     MODELOS
+════════════════════════════════════ -->
+<section class="section section--gray" id="modelos">
+  <div class="section__inner">
+    <div class="section__head section__head--center">
+      <span class="section__pre">Linha de Produtos</span>
+      <h2 class="section__title">Qual modelo é ideal para você?</h2>
+      <p class="section__sub">Escolha pelo tamanho das peças que você precisa inspecionar. Todos os modelos compartilham a mesma câmera, software e precisão — a diferença está na área de medição.</p>
+    </div>
+    <div class="models-grid">
+
+      <!-- EXTRA 200 -->
+      <div class="model-card">
+        <img class="model-card__img" src="https://enterfix.com.br/wp-content/uploads/2025/11/EXTRA-200.png" alt="Enterfix EXTRA 200">
+        <div class="model-card__head">
+          <div class="model-card__name">EXTRA 200</div>
+          <div class="model-card__tagline">Equilíbrio perfeito entre automação e controle manual — X/Y manual + zoom motorizado</div>
+        </div>
+        <div class="model-card__specs">
+          <div class="spec-row">
+            <span class="spec-row__label">Área de medição X×Y×Z</span>
+            <span class="spec-row__value">200×100×150 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Dimensão da máquina</span>
+            <span class="spec-row__value">650×550×895 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Precisão</span>
+            <span class="spec-row__value">2,5 + L/200 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Repetibilidade</span>
+            <span class="spec-row__value">1,5 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Acionamento</span>
+            <span class="spec-row__value">X/Y manual + zoom motorizado</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Peso</span>
+            <span class="spec-row__value">220 kg</span>
+          </div>
+        </div>
+        <div class="model-card__cta">
+          <a href="https://enterfix.com.br/produto/extra-200/" target="_blank" rel="noopener" class="model-card__link">
+            Ver Produto
+          </a>
+          <a href="https://lp.enterfix.com.br/catalogo-extra" target="_blank" rel="noopener" class="model-card__link--secondary">
+            Baixar Catálogo da Série
+          </a>
+        </div>
+      </div>
+
+      <!-- EXTRA 300 -->
+      <div class="model-card">
+        <img class="model-card__img" src="https://enterfix.com.br/wp-content/uploads/2025/11/EXTRA-300.png" alt="Enterfix EXTRA 300">
+        <div class="model-card__head">
+          <div class="model-card__name">EXTRA 300</div>
+          <div class="model-card__tagline">Área expandida e flexibilidade operacional superior para componentes variados</div>
+        </div>
+        <div class="model-card__specs">
+          <div class="spec-row">
+            <span class="spec-row__label">Área de medição X×Y×Z</span>
+            <span class="spec-row__value">300×200×150 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Dimensão da máquina</span>
+            <span class="spec-row__value">750×650×995 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Precisão</span>
+            <span class="spec-row__value">2,5 + L/200 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Repetibilidade</span>
+            <span class="spec-row__value">1,5 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Acionamento</span>
+            <span class="spec-row__value">CNC assistido + Joystick</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Peso</span>
+            <span class="spec-row__value">280 kg</span>
+          </div>
+        </div>
+        <div class="model-card__cta">
+          <a href="https://enterfix.com.br/produto/extra-300/" target="_blank" rel="noopener" class="model-card__link">
+            Ver Produto
+          </a>
+          <a href="https://lp.enterfix.com.br/catalogo-extra" target="_blank" rel="noopener" class="model-card__link--secondary">
+            Baixar Catálogo da Série
+          </a>
+        </div>
+      </div>
+
+      <!-- EXTRA 400 -->
+      <div class="model-card">
+        <img class="model-card__img" src="https://enterfix.com.br/wp-content/uploads/2025/11/EXTRA-400.png" alt="Enterfix EXTRA 400">
+        <div class="model-card__head">
+          <div class="model-card__name">EXTRA 400</div>
+          <div class="model-card__tagline">Recursos profissionais para componentes de médio a grande porte em linha de produção</div>
+        </div>
+        <div class="model-card__specs">
+          <div class="spec-row">
+            <span class="spec-row__label">Área de medição X×Y×Z</span>
+            <span class="spec-row__value">400×300×200 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Dimensão da máquina</span>
+            <span class="spec-row__value">850×750×1095 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Precisão</span>
+            <span class="spec-row__value">2,5 + L/200 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Repetibilidade</span>
+            <span class="spec-row__value">1,5 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Acionamento</span>
+            <span class="spec-row__value">CNC assistido + Joystick</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Peso</span>
+            <span class="spec-row__value">350 kg</span>
+          </div>
+        </div>
+        <div class="model-card__cta">
+          <a href="https://enterfix.com.br/produto/extra-400/" target="_blank" rel="noopener" class="model-card__link">
+            Ver Produto
+          </a>
+          <a href="https://lp.enterfix.com.br/catalogo-extra" target="_blank" rel="noopener" class="model-card__link--secondary">
+            Baixar Catálogo da Série
+          </a>
+        </div>
+      </div>
+
+      <!-- EXTRA 500 -->
+      <div class="model-card">
+        <img class="model-card__img" src="https://enterfix.com.br/wp-content/uploads/2025/11/EIXO-Z-EXTRA.png" alt="Enterfix EXTRA 500" style="opacity:.82;">
+        <div class="model-card__head">
+          <div class="model-card__name">EXTRA 500</div>
+          <div class="model-card__tagline">Maior área da série — peças grandes e conjuntos montados</div>
+          <span class="model-card__badge-consult">Disponível sob consulta</span>
+        </div>
+        <div class="model-card__specs">
+          <div class="spec-row">
+            <span class="spec-row__label">Área de medição X×Y×Z</span>
+            <span class="spec-row__value">500×400×200 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Dimensão da máquina</span>
+            <span class="spec-row__value">950×850×1195 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Precisão</span>
+            <span class="spec-row__value">2,5 + L/200 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Repetibilidade</span>
+            <span class="spec-row__value">1,5 μm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Acionamento</span>
+            <span class="spec-row__value">CNC assistido + Joystick</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-row__label">Peso</span>
+            <span class="spec-row__value">420 kg</span>
+          </div>
+        </div>
+        <div class="model-card__cta">
+          <a href="https://api.whatsapp.com/send?phone=5511968416776&text=Tenho%20interesse%20no%20EXTRA%20500%20%E2%80%94%20poderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener" class="model-card__link--consult">
+            Consultar Disponibilidade
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /models-grid -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     COMPARATIVO
+════════════════════════════════════ -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section__head section__head--center">
+      <span class="section__pre">Especificações Técnicas</span>
+      <h2 class="section__title">Comparativo completo da linha</h2>
+    </div>
+    <div class="comp-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Especificação</th>
+            <th class="th-model">EXTRA 200</th>
+            <th class="th-model">EXTRA 300</th>
+            <th class="th-model">EXTRA 400</th>
+            <th class="th-model">EXTRA 500</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Área X × Y × Z (mm)</td>
+            <td>200 × 100 × 150</td>
+            <td>300 × 200 × 150</td>
+            <td>400 × 300 × 200</td>
+            <td>500 × 400 × 200</td>
+          </tr>
+          <tr>
+            <td>Dimensão L × W × H (mm)</td>
+            <td>650 × 550 × 895</td>
+            <td>750 × 650 × 995</td>
+            <td>850 × 750 × 1095</td>
+            <td>950 × 850 × 1195</td>
+          </tr>
+          <tr>
+            <td>Precisão (μm)</td>
+            <td>2,5 + L/200</td>
+            <td>2,5 + L/200</td>
+            <td>2,5 + L/200</td>
+            <td>2,5 + L/200</td>
+          </tr>
+          <tr>
+            <td>Repetibilidade (μm)</td>
+            <td>1,5</td>
+            <td>1,5</td>
+            <td>1,5</td>
+            <td>1,5</td>
+          </tr>
+          <tr>
+            <td>Resolução da escala</td>
+            <td>0,1 μm</td>
+            <td>0,1 μm</td>
+            <td>0,1 μm</td>
+            <td>0,1 μm</td>
+          </tr>
+          <tr>
+            <td>Câmera CCD</td>
+            <td colspan="4">Digital HD GIGA — 1,3 M pixels</td>
+          </tr>
+          <tr>
+            <td>Lente Zoom</td>
+            <td colspan="4">0,7 – 4,5× com controle motorizado</td>
+          </tr>
+          <tr>
+            <td>Distância de trabalho</td>
+            <td colspan="4">90 mm</td>
+          </tr>
+          <tr>
+            <td>Acionamento</td>
+            <td>X/Y manual + zoom motorizado</td>
+            <td>CNC assistido + joystick</td>
+            <td>CNC assistido + joystick</td>
+            <td>CNC assistido + joystick</td>
+          </tr>
+          <tr>
+            <td>Iluminação</td>
+            <td colspan="4">LED programável em múltiplas zonas + luz paralela inferior LED</td>
+          </tr>
+          <tr>
+            <td>Peso (kg)</td>
+            <td>220</td>
+            <td>280</td>
+            <td>350</td>
+            <td>420</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><strong style="color:#0e0a2e;">Produto / Consulta</strong></td>
+            <td><a href="https://enterfix.com.br/produto/extra-200/" target="_blank" rel="noopener">Ver produto</a></td>
+            <td><a href="https://enterfix.com.br/produto/extra-300/" target="_blank" rel="noopener">Ver produto</a></td>
+            <td><a href="https://enterfix.com.br/produto/extra-400/" target="_blank" rel="noopener">Ver produto</a></td>
+            <td><a href="https://api.whatsapp.com/send?phone=5511968416776&text=Interesse%20no%20EXTRA%20500" target="_blank" rel="noopener">Consultar</a></td>
+          </tr>
+          <tr>
+            <td><strong style="color:#0e0a2e;">Catálogo da série</strong></td>
+            <td colspan="4" style="text-align:center;"><a href="https://lp.enterfix.com.br/catalogo-extra" target="_blank" rel="noopener">Baixar Catálogo Completo — Série EXTRA</a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     APLICAÇÕES
+════════════════════════════════════ -->
+<section class="section section--navy">
+  <div class="section__inner">
+    <div class="section__head section__head--center">
+      <span class="section__pre">Aplicações</span>
+      <h2 class="section__title section__title--light">Usada pelos principais setores industriais</h2>
+      <p class="section__sub section__sub--light">A Série EXTRA é adotada onde precisão e repetibilidade são requisitos não negociáveis do processo de qualidade.</p>
+    </div>
+    <div class="apps-grid" style="margin-top:36px;">
+      <div class="app-chip"><span class="app-chip__icon">🚗</span><span class="app-chip__name">Automotivo &amp; Sistemistas</span></div>
+      <div class="app-chip"><span class="app-chip__icon">✈️</span><span class="app-chip__name">Aeroespacial</span></div>
+      <div class="app-chip"><span class="app-chip__icon">⚙️</span><span class="app-chip__name">Ferramentaria &amp; Moldes</span></div>
+      <div class="app-chip"><span class="app-chip__icon">🏥</span><span class="app-chip__name">Dispositivos Médicos</span></div>
+      <div class="app-chip"><span class="app-chip__icon">🔩</span><span class="app-chip__name">Usinagem de Precisão</span></div>
+      <div class="app-chip"><span class="app-chip__icon">🔌</span><span class="app-chip__name">Eletrônica &amp; PCB</span></div>
+      <div class="app-chip"><span class="app-chip__icon">🏭</span><span class="app-chip__name">Bens de Capital</span></div>
+      <div class="app-chip"><span class="app-chip__icon">🔬</span><span class="app-chip__name">Laboratórios de Metrologia</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     CONTATO / LEAD — Formulário RD Station
+════════════════════════════════════ -->
+<section class="section" id="contato">
+  <div class="section__inner">
+    <div class="section__head section__head--center">
+      <span class="section__pre">Entre em Contato</span>
+      <h2 class="section__title">Solicite uma proposta para a Série EXTRA</h2>
+      <p class="section__sub">Nossa equipe entra em contato em até 1 dia útil com uma proposta personalizada para o seu processo.</p>
+    </div>
+    <!-- ↓ Cole aqui o código de incorporação do formulário RD Station ↓ -->
+    <div style="max-width:600px;margin:0 auto;">
+
+    </div>
+    <!-- ↑ Fim do formulário RD Station ↑ -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     CTA FINAL
+════════════════════════════════════ -->
+<div class="lp-cta">
+  <div class="lp-cta__box">
+    <h2 class="lp-cta__title">Pronto para elevar sua inspeção dimensional?</h2>
+    <p class="lp-cta__sub">Fale agora com nossos engenheiros especialistas e descubra qual modelo da Série EXTRA é a escolha certa para o seu processo de qualidade.</p>
+    <div class="lp-cta__btns">
+      <a href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener" class="btn-primary">WhatsApp</a>
+      <a href="#contato" class="btn-outline">Preencher Formulário</a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+<footer class="lp-footer">
+  <p class="lp-footer__brand"><strong>Enterfix Brasil</strong> · São Bernardo do Campo, SP &nbsp;|&nbsp; (11) 4942-2222 &nbsp;|&nbsp; vendas@enterfix.com.br &nbsp;|&nbsp; Seg–Sex 8h–17h30</p>
+  <div class="lp-footer__links">
+    <a href="https://enterfix.com.br" target="_blank" rel="noopener">Site Enterfix</a>
+    <a href="https://enterfix.com.br/categoria-produto/medicao-opticas/maquinas-semi-automaticas-serie-extra/" target="_blank" rel="noopener">Série EXTRA</a>
+    <a href="https://enterfix.com.br/politica-de-privacidade" target="_blank" rel="noopener">Privacidade</a>
+    <a href="https://api.whatsapp.com/send?phone=5511968416776" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

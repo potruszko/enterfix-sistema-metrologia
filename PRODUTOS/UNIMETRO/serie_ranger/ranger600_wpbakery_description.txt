@@ -1,0 +1,86 @@
+[vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1743466047292{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_01.jpg?id=4712) !important;}"][vc_column][vc_single_image image="5468" img_size="full" css_animation="top-to-bottom" css=""][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="grad" css=".vc_custom_1743500586919{background-color: #E4E4E4 !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}" bg_grad="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FCFCFC), color-stop(100%, #E3E3E3));background: -moz-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -webkit-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -o-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: -ms-linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);background: linear-gradient(top,#FCFCFC 0%,#E3E3E3 100%);"][vc_column][vc_column_text css=".vc_custom_1744639747855{padding-top: 64px !important;padding-bottom: 64px !important;}"]
+<p style="text-align: center;"><strong>ENTERFIX RANGER600</strong> é a máquina de medição universal para brocas, fresas, alargadores e escareadores sob sistema de iluminação flexível. Graças ao design compacto e grande estabilidade, a <strong>RANGER 600</strong> pode ser empregada na sala de metrologia, recebendo inspeção ou diretamente na produção.
+O sistema de inspeção de ferramentas RANGER600 é configurado com o software de medição universal SMARTOOL, o que o torna o melhor instrumento para todos os tipos de ferramentas de corte de metal, começando pela verificação rápida de critérios únicos, como contorno externo ou ângulos, até o controle completo de geometrias especiais de ferramentas.</p>
+[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" css_animation="none" bg_type="image" css=".vc_custom_1743466131080{background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column][vc_single_image image="5427" img_size="full" css_animation="bottom-to-top" css=""][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" css=".vc_custom_1742774265064{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_041.jpg?id=4732) !important;}"][vc_column][ind_custom_heading heading="Video" heading_color="#FFFFFF" position="center"][vc_column_text css=""]
+<p style="text-align: center;"><span style="color: #ffffff;">
+O <strong style="color: #ffffff;">software de medição SMARTOOL</strong> foi projetado para garantir precisão e eficiência na inspeção de <strong style="color: #ffffff;">ferramentas de corte</strong> fabricadas ou reafiadas. Baseado em tecnologia óptica e digital de alta resolução, o SMARTOOL oferece uma operação intuitiva, com algoritmos avançados de medição e avaliação específicos para o setor de retificação. As imagens são nítidas, com alto contraste em todos os níveis de zoom — e todas as ampliações são totalmente calibradas para resultados confiáveis.
+</span></p>
+[/vc_column_text][ultimate_video u_video_url="https://youtu.be/tBNDnxqXNFM" yt_autoplay="" yt_sugg_video="" yt_mute_control="" yt_modest_branding="" yt_privacy_mode="" thumbnail="custom" custom_thumb="id^5432|url^https://enterfix.com.br/wp-content/uploads/2025/03/software-ranger.png|caption^null|alt^null|title^software-ranger|description^null" play_source="image" play_image="id^5159|url^https://enterfix.com.br/wp-content/uploads/2025/03/Enterfix-Symbol.png|caption^null|alt^null|title^Enterfix-Symbol|description^null" play_size="75" hover_animation="float" enable_sub_bar=""][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="image" bg_override="full" css=".vc_custom_1742774273231{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_051.jpg?id=4759) !important;}"][vc_column css_animation="bottom-to-top"][ind_custom_heading heading="Informações Técnicas" colored_line="yes" position="center"][vc_column_text css=".vc_custom_1760979739128{padding-bottom: 35px !important;}"]
+<table class="table-enterfix">
+<thead style="background: #0F94D5; color: #fff;">
+<tr>
+<th>Itens</th>
+<th>RANGER 600</th>
+</tr>
+</thead>
+<tbody style="background: #f3f4f9; color: #333;">
+<tr>
+<td>X axis travel (mm)</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Y axis travel (mm)</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Z axis Faixa de medição (mm)</td>
+<td>60</td>
+</tr>
+<tr>
+<td>MAX Diâmetro da Ferramenta (mm)</td>
+<td>0.2-35</td>
+</tr>
+<tr>
+<td>MAX Comprimento da Ferramenta (mm)</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Distância de Trabalho</td>
+<td>65mm</td>
+</tr>
+<tr>
+<td>Sistema Lente Zoom</td>
+<td>0.7X-4.5X Lente Zoom</td>
+</tr>
+<tr>
+<td>Câmera CCD</td>
+<td>2M pixel HD câmera / 5M pixel HD câmera (opcional)</td>
+</tr>
+<tr>
+<td>Escala linear Resolução</td>
+<td>0.0001mm</td>
+</tr>
+<tr>
+<td>Ampliação</td>
+<td>12.6X~79.2X/25.2X~158.4X (optional)</td>
+</tr>
+<tr>
+<td>FOV</td>
+<td>27*20mm~4.3*3.3mm/13.5*10mm~2.3*1.6mm (opcional)</td>
+</tr>
+<tr>
+<td>Precisão</td>
+<td>X~Y, (2.5+L/100)μm, L is the measuring length</td>
+</tr>
+<tr>
+<td>PC</td>
+<td>Computador All-in-one, Sistema operacional Windows 10, 24" monitor</td>
+</tr>
+<tr>
+<td>Sistema de iluminação</td>
+<td>Luz de superfície de anel LED programável de 8 seções, fonte de luz programável e fonte de luz auxiliar multiângulo</td>
+</tr>
+<tr>
+<td>Formato do arquivo de entrada</td>
+<td>DXF</td>
+</tr>
+<tr>
+<td>Formato do arquivo de saída</td>
+<td>EXCEL, DXF</td>
+</tr>
+</tbody>
+</table>
+<div></div>
+[/vc_column_text][/vc_column][/vc_row][vc_row full_width="stretch_row" bg_type="bg_color" css=".vc_custom_1743460822456{background-color: #14263C !important;}" bg_color_value="#14263C"][vc_column][ind_custom_heading heading="ACESSÓRIOS" heading_color="#FFFFFF" position="center" margin_top="32"][vc_row_inner][vc_column_inner width="1/4"][vc_single_image image="5431" img_size="Medium" style="vc_box_rounded" css=""][ind_custom_heading heading="Porta Ferramentas" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5430" img_size="medium" style="vc_box_rounded" css=""][ind_custom_heading heading="Multi-Ângulo" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5429" img_size="Medium" style="vc_box_rounded" css=""][ind_custom_heading heading="Gabinete" heading_color="#FFFFFF" size="small"][/vc_column_inner][vc_column_inner width="1/4"][vc_single_image image="5428" img_size="Medium" style="vc_box_rounded" css=""][ind_custom_heading heading="Luz LED Inferior" heading_color="#FFFFFF" size="small"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row bg_type="image" bg_override="full" css=".vc_custom_1743464785626{padding-top: 32px !important;background-image: url(https://enterfix.com.br/wp-content/uploads/2024/08/bg_031.jpg?id=4728) !important;}"][vc_column css=".vc_custom_1743454027743{background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}"][ind_custom_heading heading="Download do Catálogo" position="center"][vc_column_text css=".vc_custom_1743274849021{padding-top: 16px !important;padding-bottom: 16px !important;}"]
+<p style="text-align: center;">Baixe o catálogo completo da máquina de medição ENTERFIX RANGER 600 e descubra todos os recursos técnicos, especificações e vantagens para aplicações em usinagem e retífica.</p>
+[/vc_column_text][ult_buttons btn_title="DOWNLOAD" btn_link="url:https%3A%2F%2Flp.enterfix.com.br%2Franger-600|title:Contato" btn_align="ubtn-center" btn_size="ubtn-large" btn_title_color="#FFFFFF" btn_bg_color="#A0BF30" btn_bg_color_hover="#1E73BE" btn_title_color_hover="#FFFFFF" icon="none" icon_size="24" icon_color="#FFFFFF" btn_icon_pos="ubtn-sep-icon-at-left" btn_border_style="solid" btn_border_size="1" btn_radius="10" btn_font_family="font_family:Poppins|font_call:Poppins|variant:700" btn_font_style="font-weight:700;" btn_font_size="desktop:16px;"][/vc_column][/vc_row][vc_row css_animation="none" bg_type="bg_color" bg_override="ex-full" css=".vc_custom_1743500127107{padding-top: 32px !important;background-color: #FFFFFF !important;}" bg_color_value="#FFFFFF"][vc_column][ind_custom_heading heading="ENTRAR EM CONTATO" position="center"][contact-form-7 id="4149" title="Formulário de Contato"][/vc_column][/vc_row]

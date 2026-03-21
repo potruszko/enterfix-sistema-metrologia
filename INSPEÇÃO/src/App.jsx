@@ -12,6 +12,7 @@ import PerfilUsuario from './components/PerfilUsuario';
 import ListaContratos from './components/ListaContratos';
 import GerenciarClientes from './components/GerenciarClientes';
 import NovoContrato from './components/NovoContrato';
+import BlingSync from './components/BlingSync';
 import { AlertProvider } from './components/AlertSystem';
 import { useMobileMenu } from './hooks/useMobileMenu';
 
@@ -91,6 +92,8 @@ function App() {
         );
       case 'equipamentos':
         return <GestaoEquipamentos />;
+      case 'bling-sync':
+        return <BlingSync />;
       case 'perfil':
         return <PerfilUsuario />;
       case 'configuracoes':
