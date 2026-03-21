@@ -109,6 +109,30 @@ function Etapa1({ form, onChange }) {
           placeholder="Ex: Ponta de medição com esfera de rubi 2mm" />
       </div>
 
+      <div>
+        <label className="label">Categoria do produto *</label>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { value: 'materia_prima', label: 'Matéria Prima',  desc: 'Blank, haste, esfera avulsa' },
+            { value: 'componente',   label: 'Componente',     desc: 'Conjunto intermediário' },
+            { value: 'semiacabado',  label: 'Semiacabado',    desc: 'Subconjunto com BOM própria' },
+            { value: 'acabado',      label: 'Acabado',        desc: 'Produto final para venda' },
+          ].map(c => (
+            <button key={c.value} type="button"
+              onClick={() => set('categoria', c.value)}
+              className={`p-2.5 rounded-xl border-2 text-left transition-all ${
+                form.categoria === c.value
+                  ? 'border-blue-600 bg-blue-50'
+                  : 'border-gray-200 hover:border-gray-300'
+              }`}
+            >
+              <p className="font-semibold text-sm text-gray-900">{c.label}</p>
+              <p className="text-xs text-gray-500 mt-0.5">{c.desc}</p>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {codigoGerado && (
         <div className="flex items-center gap-2 p-3 bg-blue-50 rounded-lg text-sm">
           <Info size={15} className="text-blue-600 shrink-0" />
@@ -353,8 +377,8 @@ function Etapa5({ form, esferas, hastes, blanks, maoDeObra }) {
 
   const custoHaste = haste && form.comprimentoHaste
     ? haste.custo_por_mm * parseFloat(form.comprimentoHaste) : 0
-  const custoEsfera = esfera?.custo || 0
-  const custoBlank  = blank?.custo  || 0
+  const custoEsfera = (esfera && esfera.custo) || 0
+  const custoBlank  = (blank && blank.custo)  || 0
   const custoMO     = mos.reduce((s, m) => s + m.custo, 0)
   const custoTotal  = custoBlank + custoHaste + custoEsfera + custoMO
 
@@ -436,6 +460,7 @@ function Etapa5({ form, esferas, hastes, blanks, maoDeObra }) {
 // ─── Wizard principal ─────────────────────────────────────────────────────────
 const FORM_INIT = {
   tipo: 'PM', rosca: 'M2', nome: '', codigo: '',
+  categoria: 'acabado',
   materialEsfera: '', diametroEsfera: '',
   comprimentoTotal: '',
   materialHaste: '', hasteId: null,
@@ -583,6 +608,7 @@ export default function ConstruirProduto() {
       const payload = {
         codigo, nome: form.nome || codigo,
         tipo: form.tipo, rosca: form.rosca,
+        categoria: form.categoria || 'acabado',
         comprimento_total: parseFloat(form.comprimentoTotal),
         diametro_esfera:   parseFloat(form.diametroEsfera) || null,
         componentes
@@ -591,7 +617,7 @@ export default function ConstruirProduto() {
       await createProduto(payload)
       navigate('/produtos')
     } catch (e) {
-      setError(e.response?.data?.erro || 'Erro ao salvar produto')
+      setError((e.response && e.response.data && e.response.data.erro) || 'Erro ao salvar produto')
     } finally {
       setSaving(false)
     }

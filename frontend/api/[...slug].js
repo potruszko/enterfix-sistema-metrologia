@@ -854,7 +854,7 @@ async function route(req, res, slug, rawBody) {
                comprimento=EXCLUDED.comprimento, material=EXCLUDED.material,
                custo=CASE WHEN EXCLUDED.custo > 0 THEN EXCLUDED.custo ELSE blanks.custo END,
                bling_id=EXCLUDED.bling_id, bling_codigo=EXCLUDED.bling_codigo`,
-                        [codigo, descricao, specs.rosca, specs.diametro_corpo ?? 0, specs.diametro_furo ?? 0, specs.comprimento ?? 0, specs.material, custoBling, blingId, codigo]
+                        [codigo, descricao, specs.rosca, specs.diametro_corpo || 0, specs.diametro_furo || 0, specs.comprimento || 0, specs.material, custoBling, blingId, codigo]
                     );
                     resultados.importados++;
                 } catch (err) {
@@ -1243,7 +1243,7 @@ async function route(req, res, slug, rawBody) {
                 } catch (err) {
                     return res.status(500).json({
                         erro: 'Falha na autenticação Bling',
-                        detalhe: err.response ?.data || err.message
+                        detalhe: (err.response && err.response.data) || err.message
                     });
                 }
             }
@@ -1325,21 +1325,33 @@ async function route(req, res, slug, rawBody) {
             const token = await obterAccessToken();
             const client = blingClient(token);
             let blingId = produto.bling_id;
-            let respData;
             if (blingId) {
-                const resp = await client.patch(`/produtos/${blingId}`, payload);
-                respData = resp.data;
+                await client.put(`/produtos/${blingId}`, payload);
             } else {
                 const resp = await client.post('/produtos', payload);
-                respData = resp.data;
-                blingId = respData ?.data ?.id;
+                const respData = resp.data;
+                blingId = respData && respData.data && respData.data.id;
                 if (blingId) await query('UPDATE produtos SET bling_id=$1, status=$2 WHERE id=$3', [String(blingId), 'sincronizado', produtoId]);
+            }
+            // Sincronizar estrutura BOM se houver componentes com bling_id
+            if (blingId) {
+                const compsComBling = componentes.filter(c => c.bling_id);
+                if (compsComBling.length > 0) {
+                    try {
+                        await client.put(`/produtos/${blingId}/estruturas`, {
+                            tipoEstutura: 'P',
+                            componentes: compsComBling.map(c => ({
+                                produto: { id: parseInt(c.bling_id) },
+                                quantidade: parseFloat(c.quantidade)
+                            }))
+                        });
+                    } catch { /* estrutura opcional */ }
+                }
             }
             await query('UPDATE produtos SET status=$1, updated_at=NOW() WHERE id=$2', ['sincronizado', produtoId]);
             return res.json({
                 mensagem: 'Produto sincronizado com Bling',
-                bling_id: blingId,
-                resposta: respData
+                bling_id: blingId
             });
         }
 
@@ -1347,7 +1359,7 @@ async function route(req, res, slug, rawBody) {
         if (s1 === 'importar' && s2 && method === 'POST') {
             const token = await obterAccessToken();
             const resp = await blingClient(token).get(`/produtos/${s2}`);
-            const p = resp.data ?.data;
+            const p = resp.data && resp.data.data;
             if (!p) return res.status(404).json({
                 erro: 'Produto não encontrado no Bling'
             });
@@ -1357,7 +1369,7 @@ async function route(req, res, slug, rawBody) {
                 id: existente.id
             });
             const prefixos = ['PM', 'EM', 'AM', 'SM', 'DM', 'BM', 'CM'];
-            const tipo = prefixos.find(k => p.codigo ?.toUpperCase().startsWith(k)) || 'PM';
+            const tipo = prefixos.find(k => p.codigo && p.codigo.toUpperCase().startsWith(k)) || 'PM';
             const row = await queryOne(`INSERT INTO produtos (codigo, nome, tipo, bling_id, status) VALUES ($1,$2,$3,$4,'sincronizado') RETURNING id`, [p.codigo, p.nome, tipo, String(p.id)]);
             return res.status(201).json({
                 mensagem: 'Importado com sucesso',
@@ -1467,7 +1479,7 @@ async function route(req, res, slug, rawBody) {
             if (s2 === 'importar' && s3 && method === 'POST') {
                 const token = await obterAccessToken();
                 const resp = await blingClient(token).get(`/produtos/${s3}`);
-                const p = resp.data ?.data;
+                const p = resp.data && resp.data.data;
                 if (!p) return res.status(404).json({
                     erro: 'Produto não encontrado no Bling'
                 });
@@ -1514,7 +1526,7 @@ async function route(req, res, slug, rawBody) {
                     await client.put(`/produtos/${blingId}`, payload);
                 } else {
                     const resp = await client.post('/produtos', payload);
-                    blingId = resp.data ?.data ?.id;
+                    blingId = resp.data && resp.data.data && resp.data.data.id;
                     if (blingId) await query('UPDATE blanks SET bling_id=$1, bling_codigo=$2 WHERE id=$3', [String(blingId), blank.codigo, s2]);
                 }
                 return res.json({

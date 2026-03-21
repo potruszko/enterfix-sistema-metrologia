@@ -39,6 +39,7 @@ export const getProdutos = (params) => api.get('/produtos', {
     params
 })
 export const getProduto = (id) => api.get(`/produtos/${id}`)
+export const getProdutoBom = (id) => api.get(`/produtos/${id}/bom`)
 export const createProduto = (data) => api.post('/produtos', data)
 export const updateProduto = (id, d) => api.put(`/produtos/${id}`, d)
 export const deleteProduto = (id) => api.delete(`/produtos/${id}`)

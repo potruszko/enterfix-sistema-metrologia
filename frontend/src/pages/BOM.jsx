@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { GitBranch, ChevronRight, ChevronDown, RefreshCw, AlertCircle, Loader2 } from 'lucide-react'
-
-const API = '/api'
+import { getProdutos, getProdutoBom } from '../lib/api'
 
 const CATEGORIAS = {
   materia_prima: { label: 'Matéria Prima', color: 'bg-gray-600 text-gray-100' },
@@ -83,13 +82,12 @@ export default function BOM() {
     setLoading(true)
     setErro(null)
     try {
-      const r = await fetch(`${API}/produtos?limit=500`)
-      const data = await r.json()
-      const list = Array.isArray(data) ? data : (data.produtos || [])
+      const r = await getProdutos({ limit: 500 })
+      const list = Array.isArray(r.data) ? r.data : (r.data.produtos || [])
       list.sort((a, b) => {
         const order = { materia_prima: 0, componente: 1, semiacabado: 2, acabado: 3 }
-        const oa = order[a.categoria] ?? 3
-        const ob = order[b.categoria] ?? 3
+        const oa = order[a.categoria] !== undefined ? order[a.categoria] : 3
+        const ob = order[b.categoria] !== undefined ? order[b.categoria] : 3
         return oa - ob || (a.codigo || '').localeCompare(b.codigo || '')
       })
       setProdutos(list)
@@ -107,9 +105,8 @@ export default function BOM() {
     setBom(null)
     setLoadingBom(true)
     try {
-      const r = await fetch(`${API}/produtos/${produto.id}/bom`)
-      const data = await r.json()
-      setBom(data)
+      const r = await getProdutoBom(produto.id)
+      setBom(r.data)
     } catch (e) {
       setErro('Erro ao carregar BOM: ' + e.message)
     } finally {
@@ -122,7 +119,7 @@ export default function BOM() {
     setSyncing(true)
     setSyncResult(null)
     try {
-      const r = await fetch(`${API}/bling/sync-full`, { method: 'POST' })
+      const r = await fetch('/api/bling/sync-full', { method: 'POST' })
       const data = await r.json()
       setSyncResult(data)
     } catch (e) {
