@@ -193,6 +193,11 @@ async function route(req, res, slug, rawBody) {
     const [s0, s1, s2, s3] = slug;
     const method = req.method;
 
+    // GET /api/debug — diagnóstico de roteamento
+    if (s0 === 'debug') {
+        return res.json({ slug, s0, s1, s2, s3, method, url: req.url, query: req.query });
+    }
+
     // GET /api/health
     if (s0 === 'health' || !s0) {
         return res.json({
@@ -1339,7 +1344,9 @@ async function route(req, res, slug, rawBody) {
                  FROM produtos p WHERE p.id=$1`,
                 [s2]
             );
-            if (!produto) return res.status(404).json({ erro: 'Produto nao encontrado' });
+            if (!produto) return res.status(404).json({
+                erro: 'Produto nao encontrado'
+            });
             let produtoBling = null;
             let estruturaBling = null;
             let erroPreview = null;
@@ -1353,21 +1360,36 @@ async function route(req, res, slug, rawBody) {
                         const respEst = await client.get(`/produtos/${produto.bling_id}/estruturas`);
                         const est = respEst.data && respEst.data.data;
                         if (est && est.componentes && est.componentes.length > 0) estruturaBling = est;
-                    } catch { /* estrutura e opcional */ }
+                    } catch {
+                        /* estrutura e opcional */ }
                 } catch (e) {
                     erroPreview = e.message;
                 }
             }
             const mudancas = [];
             if (produtoBling) {
-                if (produtoBling.nome !== produto.nome) mudancas.push({ campo: 'nome', local: produto.nome, bling: produtoBling.nome });
-                if (produtoBling.codigo !== produto.codigo) mudancas.push({ campo: 'codigo', local: produto.codigo, bling: produtoBling.codigo });
+                if (produtoBling.nome !== produto.nome) mudancas.push({
+                    campo: 'nome',
+                    local: produto.nome,
+                    bling: produtoBling.nome
+                });
+                if (produtoBling.codigo !== produto.codigo) mudancas.push({
+                    campo: 'codigo',
+                    local: produto.codigo,
+                    bling: produtoBling.codigo
+                });
                 const custoBling = parseFloat(produtoBling.precoCusto || 0);
                 const custoLocal = parseFloat(produto.custo_total || 0);
-                if (Math.abs(custoBling - custoLocal) > 0.01) mudancas.push({ campo: 'custo', local: custoLocal, bling: custoBling });
+                if (Math.abs(custoBling - custoLocal) > 0.01) mudancas.push({
+                    campo: 'custo',
+                    local: custoLocal,
+                    bling: custoBling
+                });
             }
             return res.json({
-                produto_local: { ...produto },
+                produto_local: {
+                    ...produto
+                },
                 produto_bling: produtoBling || null,
                 estrutura_bling: estruturaBling || null,
                 mudancas,
