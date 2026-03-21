@@ -1,9 +1,9 @@
-﻿import { useState, useEffect, useCallback, useRef } from 'react'
+﻿import { useState, useEffect, useCallback } from 'react'
 import {
-  GitBranch, ChevronRight, ChevronDown, RefreshCw, AlertCircle, Loader2,
-  Pencil, Check, X, Printer, Search, Tag
+  GitBranch, ChevronRight, ChevronDown, AlertCircle, Loader2,
+  Pencil, Check, X, Printer, Search, Upload, Eye
 } from 'lucide-react'
-import { getProdutos, getProdutoBom, updateProduto } from '../lib/api'
+import { getProdutos, getProdutoBom, getBlingPreview, sincronizarBling } from '../lib/api'
 
 const CATEGORIAS = {
   materia_prima: { label: 'Matéria Prima', color: 'bg-gray-600 text-gray-100' },
@@ -268,9 +268,13 @@ export default function BOM() {
   const [bom, setBom] = useState(null)
   const [loading, setLoading] = useState(false)
   const [loadingBom, setLoadingBom] = useState(false)
-  const [syncing, setSyncing] = useState(false)
-  const [syncResult, setSyncResult] = useState(null)
   const [erro, setErro] = useState(null)
+  // Preview/Sync modal
+  const [syncModal, setSyncModal] = useState(null)   // { produto }
+  const [preview, setPreview] = useState(null)
+  const [loadingPreview, setLoadingPreview] = useState(false)
+  const [syncing, setSyncing] = useState(false)
+  const [syncMsg, setSyncMsg] = useState(null)
 
   const fetchProdutos = useCallback(async () => {
     setLoading(true)
@@ -313,17 +317,32 @@ export default function BOM() {
     if (selected) fetchBom(selected)
   }
 
-  async function syncCompleto() {
-    if (!confirm('Sincronizar TODOS os produtos ativos com o Bling (incluindo estrutura BOM)?\n\nEsta operação pode demorar vários minutos.')) return
-    setSyncing(true)
-    setSyncResult(null)
-    setErro(null)
+  async function abrirSyncModal(produto, e) {
+    e.stopPropagation()
+    setSyncModal({ produto })
+    setPreview(null)
+    setSyncMsg(null)
+    setLoadingPreview(true)
     try {
-      const r = await fetch('/api/bling/sync-full', { method: 'POST' })
-      const data = await r.json()
-      setSyncResult(data)
+      const r = await getBlingPreview(produto.id)
+      setPreview(r.data)
+    } catch (ex) {
+      setPreview({ erro: ex.message, acao: 'erro', produto_local: produto, produto_bling: null, mudancas: [] })
+    } finally {
+      setLoadingPreview(false)
+    }
+  }
+
+  async function confirmarSync() {
+    if (!syncModal) return
+    setSyncing(true)
+    setSyncMsg(null)
+    try {
+      await sincronizarBling(syncModal.produto.id)
+      setSyncMsg({ tipo: 'ok', texto: 'Sincronizado com sucesso!' })
+      fetchProdutos()
     } catch (e) {
-      setErro('Erro no sync: ' + e.message)
+      setSyncMsg({ tipo: 'erro', texto: 'Erro: ' + (e.response && e.response.data && e.response.data.erro) || e.message })
     } finally {
       setSyncing(false)
     }
@@ -378,21 +397,32 @@ export default function BOM() {
                   </p>
                 </div>
                 {items.map(p => (
-                  <button
+                  <div
                     key={p.id}
-                    onClick={() => fetchBom(p)}
-                    className={`w-full text-left px-3 py-2 transition-colors border-l-2 ${
+                    className={`flex items-center group transition-colors border-l-2 ${
                       selected && selected.id === p.id
                         ? 'bg-gray-800 border-blue-500'
                         : 'border-transparent hover:bg-gray-800/60 hover:border-gray-600'
                     }`}
                   >
-                    <p className="text-[11px] font-mono text-gray-400">{p.codigo}</p>
-                    <p className="text-sm text-white truncate leading-tight">{p.nome}</p>
-                    {p.custo_total && (
-                      <p className="text-[10px] text-green-400 font-mono mt-0.5">{brl(p.custo_total)}</p>
-                    )}
-                  </button>
+                    <button
+                      onClick={() => fetchBom(p)}
+                      className="flex-1 text-left px-3 py-2 min-w-0"
+                    >
+                      <p className="text-[11px] font-mono text-gray-400">{p.codigo}</p>
+                      <p className="text-sm text-white truncate leading-tight">{p.nome}</p>
+                      {p.custo_total && (
+                        <p className="text-[10px] text-green-400 font-mono mt-0.5">{brl(p.custo_total)}</p>
+                      )}
+                    </button>
+                    <button
+                      onClick={(e) => abrirSyncModal(p, e)}
+                      title="Prévia e Sincronizar no Bling"
+                      className="px-2 py-3 text-gray-600 hover:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0"
+                    >
+                      <Upload size={13} />
+                    </button>
+                  </div>
                 ))}
               </div>
             )
@@ -435,14 +465,14 @@ export default function BOM() {
                 <Printer size={13} /> Exportar PDF
               </button>
             )}
-            <button
-              onClick={syncCompleto}
-              disabled={syncing}
-              className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-colors"
-            >
-              {syncing ? <Loader2 size={13} className="animate-spin" /> : <RefreshCw size={13} />}
-              Sync Bling
-            </button>
+            {selected && (
+              <button
+                onClick={(e) => abrirSyncModal(selected, e)}
+                className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition-colors"
+              >
+                <Eye size={13} /> Prévia Bling
+              </button>
+            )}
           </div>
         </div>
 
@@ -453,17 +483,13 @@ export default function BOM() {
           </div>
         )}
 
-        {syncResult && (
-          <div className="mx-5 mt-3 text-sm bg-gray-900 border border-gray-700 rounded-lg px-4 py-2.5 flex-shrink-0">
-            <p className="font-semibold text-white mb-1 text-xs">Resultado do Sync</p>
-            <div className="flex gap-4 text-xs">
-              <span className="text-green-400">✓ Criados: {syncResult.sincronizados}</span>
-              <span className="text-blue-400">↑ Atualizados: {syncResult.atualizados}</span>
-              <span className="text-yellow-400">⚙ Estruturas: {syncResult.estruturas}</span>
-              {syncResult.erros && syncResult.erros.length > 0 && (
-                <span className="text-red-400">✗ Erros: {syncResult.erros.length}</span>
-              )}
-            </div>
+        {syncMsg && (
+          <div className={`mx-5 mt-3 text-sm rounded-lg px-4 py-2 flex-shrink-0 border ${
+            syncMsg.tipo === 'ok'
+              ? 'bg-green-950 border-green-800 text-green-300'
+              : 'bg-red-950 border-red-800 text-red-300'
+          }`}>
+            {syncMsg.texto}
           </div>
         )}
 
@@ -531,6 +557,125 @@ export default function BOM() {
           )}
         </div>
       </main>
+
+      {/* ══ Modal de Prévia e Sync Bling ══ */}
+      {syncModal && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+          <div className="bg-gray-900 border border-gray-700 rounded-2xl w-full max-w-lg shadow-2xl">
+            {/* Header */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-700">
+              <div>
+                <h2 className="font-bold text-white text-sm">Prévia de Sincronização — Bling</h2>
+                <p className="text-[11px] text-gray-400 font-mono mt-0.5">{syncModal.produto.codigo} · {syncModal.produto.nome}</p>
+              </div>
+              <button onClick={() => setSyncModal(null)} className="text-gray-500 hover:text-white p-1">
+                <X size={16} />
+              </button>
+            </div>
+
+            {/* Corpo */}
+            <div className="px-5 py-4 space-y-4">
+              {loadingPreview && (
+                <div className="flex items-center justify-center py-8 gap-3">
+                  <Loader2 className="animate-spin text-blue-400" size={20} />
+                  <span className="text-gray-400 text-sm">Consultando Bling...</span>
+                </div>
+              )}
+
+              {!loadingPreview && preview && (
+                <>
+                  {/* Badge de ação */}
+                  <div className={`text-xs font-semibold px-3 py-2 rounded-lg border ${
+                    preview.acao === 'criar'      ? 'bg-green-900/50 text-green-300 border-green-700' :
+                    preview.acao === 'atualizar' ? 'bg-blue-900/50 text-blue-300 border-blue-700' :
+                    'bg-red-900/50 text-red-300 border-red-700'
+                  }`}>
+                    {preview.acao === 'criar'      ? '+ Produto NÃO existe no Bling — será criado' :
+                     preview.acao === 'atualizar' ? '↑ Produto existe no Bling — campos abaixo serão atualizados' :
+                     '✗ Não foi possível consultar Bling: ' + preview.erro}
+                  </div>
+
+                  {/* Tabela de comparação */}
+                  <table className="w-full text-xs">
+                    <thead>
+                      <tr className="text-gray-500 border-b border-gray-700">
+                        <th className="text-left pb-2">Campo</th>
+                        <th className="text-left pb-2">Local (será enviado)</th>
+                        <th className="text-left pb-2">Bling atual</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-800">
+                      {[
+                        { campo: 'Código',   local: preview.produto_local.codigo,      bling: preview.produto_bling ? preview.produto_bling.codigo : '—' },
+                        { campo: 'Nome',     local: preview.produto_local.nome,        bling: preview.produto_bling ? preview.produto_bling.nome : '—' },
+                        { campo: 'Custo',    local: brl(preview.produto_local.custo_total), bling: preview.produto_bling ? brl(preview.produto_bling.precoCusto) : '—' },
+                        { campo: 'Preço',    local: brl(preview.produto_local.preco_venda), bling: preview.produto_bling ? brl(preview.produto_bling.preco) : '—' },
+                      ].map(({ campo, local, bling }) => {
+                        const changed = bling !== '—' && local !== bling
+                        return (
+                          <tr key={campo} className={changed ? 'bg-yellow-900/20' : ''}>
+                            <td className="py-2 text-gray-400 pr-3">{campo}</td>
+                            <td className="py-2 text-white font-mono pr-3">{local}</td>
+                            <td className={`py-2 font-mono ${changed ? 'text-yellow-400' : 'text-gray-500'}`}>
+                              {bling}{changed ? ' ← será alterado' : ''}
+                            </td>
+                          </tr>
+                        )
+                      })}
+                    </tbody>
+                  </table>
+
+                  {/* Estrutura */}
+                  <div className="text-xs p-3 bg-gray-800 rounded-lg space-y-1">
+                    <p className="text-gray-400 font-semibold">Composição BOM</p>
+                    <p className="text-white">
+                      {preview.produto_local.componentes_count || 0} componente(s) local será(ão) enviado(s)
+                    </p>
+                    {preview.estrutura_bling ? (
+                      <p className="text-yellow-400">
+                        ⚠ Bling já tem estrutura com {preview.estrutura_bling.componentes.length} item(s) — será substituída
+                      </p>
+                    ) : (
+                      <p className="text-gray-500">Bling não tem estrutura cadastrada</p>
+                    )}
+                  </div>
+
+                  {/* Resultado do sync */}
+                  {syncMsg && (
+                    <div className={`text-xs px-3 py-2 rounded-lg border ${
+                      syncMsg.tipo === 'ok'
+                        ? 'bg-green-900/50 border-green-700 text-green-300'
+                        : 'bg-red-900/50 border-red-700 text-red-300'
+                    }`}>{syncMsg.texto}</div>
+                  )}
+                </>
+              )}
+            </div>
+
+            {/* Footer */}
+            <div className="flex gap-2 px-5 py-4 border-t border-gray-700">
+              <button
+                onClick={() => { setSyncModal(null); setSyncMsg(null) }}
+                className="flex-1 py-2 text-sm text-gray-300 border border-gray-600 rounded-lg hover:border-gray-400 transition-colors"
+              >
+                {syncMsg && syncMsg.tipo === 'ok' ? 'Fechar' : 'Cancelar'}
+              </button>
+              {(!syncMsg || syncMsg.tipo !== 'ok') && (
+                <button
+                  onClick={confirmarSync}
+                  disabled={syncing || loadingPreview || !preview || preview.acao === 'erro'}
+                  className="flex-1 py-2 text-sm font-medium bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white rounded-lg flex items-center justify-center gap-2 transition-colors"
+                >
+                  {syncing
+                    ? <><Loader2 size={13} className="animate-spin" /> Enviando...</>
+                    : <><Upload size={13} /> Confirmar e Enviar ao Bling</>
+                  }
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

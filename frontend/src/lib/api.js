@@ -58,6 +58,8 @@ export const getBlingProdutos = (q) => api.get('/bling/produtos', {
         q
     }
 })
+export const getBlingPreview = (id) => api.get(`/bling/preview/${id}`)
+export const sincronizarBling = (id) => api.post(`/bling/sincronizar/${id}`)
 export const sincronizarBling = (id) => api.post(`/bling/sincronizar/${id}`)
 export const importarDoBling = (bId) => api.post(`/bling/importar/${bId}`)
 export const importarBlankDoBling = (blingId) => api.post(`/bling/blanks/importar/${blingId}`)

@@ -1332,6 +1332,50 @@ async function route(req, res, slug, rawBody) {
             }
         }
 
+        // ── Preview produto local vs Bling ────────────────────────────────────
+        if (s1 === 'preview' && s2 && method === 'GET') {
+            const produto = await queryOne(
+                `SELECT p.*, (SELECT COUNT(*) FROM produto_componentes WHERE produto_id=p.id)::int AS componentes_count
+                 FROM produtos p WHERE p.id=$1`,
+                [s2]
+            );
+            if (!produto) return res.status(404).json({ erro: 'Produto nao encontrado' });
+            let produtoBling = null;
+            let estruturaBling = null;
+            let erroPreview = null;
+            if (produto.bling_id) {
+                try {
+                    const token = await obterAccessToken();
+                    const client = blingClient(token);
+                    const resp = await client.get(`/produtos/${produto.bling_id}`);
+                    produtoBling = resp.data && resp.data.data;
+                    try {
+                        const respEst = await client.get(`/produtos/${produto.bling_id}/estruturas`);
+                        const est = respEst.data && respEst.data.data;
+                        if (est && est.componentes && est.componentes.length > 0) estruturaBling = est;
+                    } catch { /* estrutura e opcional */ }
+                } catch (e) {
+                    erroPreview = e.message;
+                }
+            }
+            const mudancas = [];
+            if (produtoBling) {
+                if (produtoBling.nome !== produto.nome) mudancas.push({ campo: 'nome', local: produto.nome, bling: produtoBling.nome });
+                if (produtoBling.codigo !== produto.codigo) mudancas.push({ campo: 'codigo', local: produto.codigo, bling: produtoBling.codigo });
+                const custoBling = parseFloat(produtoBling.precoCusto || 0);
+                const custoLocal = parseFloat(produto.custo_total || 0);
+                if (Math.abs(custoBling - custoLocal) > 0.01) mudancas.push({ campo: 'custo', local: custoLocal, bling: custoBling });
+            }
+            return res.json({
+                produto_local: { ...produto },
+                produto_bling: produtoBling || null,
+                estrutura_bling: estruturaBling || null,
+                mudancas,
+                acao: produto.bling_id ? (produtoBling ? 'atualizar' : 'erro') : 'criar',
+                erro: erroPreview || null
+            });
+        }
+
         // ── Produtos Bling ────────────────────────────────────────────────────
         if (s1 === 'produtos') {
             const token = await obterAccessToken();
