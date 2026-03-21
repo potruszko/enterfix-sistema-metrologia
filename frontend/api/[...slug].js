@@ -733,11 +733,19 @@ async function route(req, res, slug, rawBody) {
     // ═══════════════════════════════════════════ PRODUTO-COMPONENTES ══════════
     if (s0 === 'produto-componentes') {
         const compId = s1;
-        if (!compId) return res.status(400).json({ erro: 'id do componente obrigatorio' });
+        if (!compId) return res.status(400).json({
+            erro: 'id do componente obrigatorio'
+        });
 
         if (method === 'PUT') {
-            const { quantidade, unidade, fator_perda } = req.body;
-            if (quantidade === undefined || quantidade === null) return res.status(400).json({ erro: 'quantidade obrigatoria' });
+            const {
+                quantidade,
+                unidade,
+                fator_perda
+            } = req.body;
+            if (quantidade === undefined || quantidade === null) return res.status(400).json({
+                erro: 'quantidade obrigatoria'
+            });
             await query(
                 `UPDATE produto_componentes SET quantidade=$1, unidade=$2, fator_perda=$3 WHERE id=$4`,
                 [parseFloat(quantidade), unidade || 'un', parseFloat(fator_perda) || 1, compId]
@@ -755,10 +763,14 @@ async function route(req, res, slug, rawBody) {
                     client.release();
                 }
             }
-            return res.json({ mensagem: 'Componente atualizado' });
+            return res.json({
+                mensagem: 'Componente atualizado'
+            });
         }
 
-        return res.status(405).json({ erro: 'Metodo nao permitido' });
+        return res.status(405).json({
+            erro: 'Metodo nao permitido'
+        });
     }
 
     // ═══════════════════════════════════════════════════ COMPOSICOES ══════════
@@ -1392,7 +1404,8 @@ async function route(req, res, slug, rawBody) {
                             }))
                         });
                     } catch {
-                        /* estrutura opcional */ }
+                        /* estrutura opcional */
+                    }
                 }
             }
             await query('UPDATE produtos SET status=$1, updated_at=NOW() WHERE id=$2', ['sincronizado', produtoId]);
