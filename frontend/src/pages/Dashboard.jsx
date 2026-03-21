@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Layers, Wrench, Circle, Package, RefreshCw, Wand2, TrendingUp, AlertTriangle } from 'lucide-react'
+import { Layers, Wrench, Circle, Package, RefreshCw, Wand2, TrendingUp, AlertTriangle, GitBranch } from 'lucide-react'
 import { getBlanks, getHashtes, getEsferas, getProdutos, getBlingStatus } from '../lib/api'
 import { brl } from '../lib/utils'
 
@@ -108,7 +108,7 @@ export default function Dashboard() {
       </div>
 
       {/* Ações rápidas */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Link to="/construir" className="card flex items-center gap-4 hover:shadow-md transition-shadow group">
           <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
             <Wand2 size={22} className="text-white" />
@@ -116,6 +116,16 @@ export default function Dashboard() {
           <div className="flex-1">
             <p className="font-semibold text-gray-900 group-hover:text-blue-700">Construir Novo Produto</p>
             <p className="text-sm text-gray-500">Wizard passo a passo para montar a composição</p>
+          </div>
+        </Link>
+
+        <Link to="/bom" className="card flex items-center gap-4 hover:shadow-md transition-shadow group">
+          <div className="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center">
+            <GitBranch size={22} className="text-white" />
+          </div>
+          <div className="flex-1">
+            <p className="font-semibold text-gray-900 group-hover:text-indigo-700">Árvore BOM</p>
+            <p className="text-sm text-gray-500">Visualizar e editar estrutura de composição</p>
           </div>
         </Link>
 

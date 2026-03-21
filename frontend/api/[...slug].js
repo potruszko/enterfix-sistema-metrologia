@@ -606,10 +606,19 @@ async function route(req, res, slug, rawBody) {
                 if (!produto) return res.status(404).json({
                     erro: 'Produto nao encontrado'
                 });
+                const visitados = new Set();
                 async function buildBom(prodId, nivel) {
-                    if (nivel > 4) return [];
+                    if (nivel > 5) return [];
+                    if (visitados.has(String(prodId))) return [];
+                    visitados.add(String(prodId));
                     const comps = await query(
-                        `SELECT pc.*, p.nome AS filho_nome, p.custo_total AS filho_custo_total, p.categoria AS filho_categoria
+                        `SELECT pc.id, pc.produto_id, pc.tipo_componente, pc.ref_id,
+                                pc.codigo_componente, pc.nome_componente, pc.quantidade,
+                                pc.custo_unitario, pc.bling_id, pc.bling_codigo,
+                                COALESCE(pc.unidade, 'un') AS unidade,
+                                COALESCE(pc.fator_perda, 1) AS fator_perda,
+                                p.nome AS filho_nome, p.custo_total AS filho_custo_total,
+                                p.categoria AS filho_categoria
                          FROM produto_componentes pc
                          LEFT JOIN produtos p ON p.id = pc.ref_id AND pc.tipo_componente = 'produto'
                          WHERE pc.produto_id = $1 ORDER BY pc.id`,
@@ -617,9 +626,12 @@ async function route(req, res, slug, rawBody) {
                     );
                     const result = [];
                     for (const c of comps) {
+                        const qtd = parseFloat(c.quantidade) || 0;
+                        const perda = parseFloat(c.fator_perda) || 1;
+                        const qtdEfetiva = qtd * perda;
                         const node = {
                             ...c,
-                            custo_linha: parseFloat(c.quantidade) * parseFloat(c.custo_unitario),
+                            custo_linha: qtdEfetiva * (parseFloat(c.custo_unitario) || 0),
                             filhos: []
                         };
                         if (c.tipo_componente === 'produto' && c.ref_id) {
@@ -627,10 +639,11 @@ async function route(req, res, slug, rawBody) {
                         }
                         result.push(node);
                     }
+                    visitados.delete(String(prodId));
                     return result;
                 }
                 const arvore = await buildBom(id, 1);
-                const custoTotal = arvore.reduce((acc, n) => acc + n.custo_linha, 0);
+                const custoTotal = arvore.reduce((acc, n) => acc + (n.custo_linha || 0), 0);
                 return res.json({
                     ...produto,
                     arvore,
@@ -715,6 +728,37 @@ async function route(req, res, slug, rawBody) {
                 }
             }
         }
+    }
+
+    // ═══════════════════════════════════════════ PRODUTO-COMPONENTES ══════════
+    if (s0 === 'produto-componentes') {
+        const compId = s1;
+        if (!compId) return res.status(400).json({ erro: 'id do componente obrigatorio' });
+
+        if (method === 'PUT') {
+            const { quantidade, unidade, fator_perda } = req.body;
+            if (quantidade === undefined || quantidade === null) return res.status(400).json({ erro: 'quantidade obrigatoria' });
+            await query(
+                `UPDATE produto_componentes SET quantidade=$1, unidade=$2, fator_perda=$3 WHERE id=$4`,
+                [parseFloat(quantidade), unidade || 'un', parseFloat(fator_perda) || 1, compId]
+            );
+            const comp = await queryOne('SELECT produto_id FROM produto_componentes WHERE id=$1', [compId]);
+            if (comp) {
+                const client = await getPool2().connect();
+                try {
+                    await client.query('BEGIN');
+                    await recalcularCusto(client, comp.produto_id);
+                    await client.query('COMMIT');
+                } catch (err) {
+                    await client.query('ROLLBACK');
+                } finally {
+                    client.release();
+                }
+            }
+            return res.json({ mensagem: 'Componente atualizado' });
+        }
+
+        return res.status(405).json({ erro: 'Metodo nao permitido' });
     }
 
     // ═══════════════════════════════════════════════════ COMPOSICOES ══════════
@@ -1341,11 +1385,14 @@ async function route(req, res, slug, rawBody) {
                         await client.put(`/produtos/${blingId}/estruturas`, {
                             tipoEstutura: 'P',
                             componentes: compsComBling.map(c => ({
-                                produto: { id: parseInt(c.bling_id) },
+                                produto: {
+                                    id: parseInt(c.bling_id)
+                                },
                                 quantidade: parseFloat(c.quantidade)
                             }))
                         });
-                    } catch { /* estrutura opcional */ }
+                    } catch {
+                        /* estrutura opcional */ }
                 }
             }
             await query('UPDATE produtos SET status=$1, updated_at=NOW() WHERE id=$2', ['sincronizado', produtoId]);
@@ -1437,7 +1484,8 @@ async function route(req, res, slug, rawBody) {
                                 });
                                 result.estruturas++;
                             } catch {
-                                /* estrutura opcional */ }
+                                /* estrutura opcional */
+                            }
                         }
                     }
                 } catch (err) {

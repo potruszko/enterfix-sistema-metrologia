@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react'
-import { ExternalLink, CheckCircle, Key, Save } from 'lucide-react'
+import { ExternalLink, CheckCircle, Key, Save, AlertCircle } from 'lucide-react'
 import { getConfigs, saveConfigs, getBlingAuthUrl, salvarTokenManual, getBlingStatus } from '../lib/api'
 import PageHeader from '../components/PageHeader'
 import { Alert } from '../components/Alert'
+
+// Fallback para quando a API não responder — usa as credenciais hardcoded
+const BLING_CLIENT_ID = 'fa9f73b7934f56edb9f8c40a3a81b7abc2d4f365'
+const BLING_CALLBACK  = 'https://composicao.enterfix.com.br/api/bling/auth/callback'
+const FALLBACK_AUTH_URL = `https://www.bling.com.br/Api/v3/oauth/authorize?response_type=code&client_id=${BLING_CLIENT_ID}&state=composicao&redirect_uri=${encodeURIComponent(BLING_CALLBACK)}`
 
 export default function Configuracoes() {
   const [configs, setConfigs]       = useState({})
@@ -13,34 +18,36 @@ export default function Configuracoes() {
   const [saving, setSaving]         = useState(false)
   const [error, setError]           = useState('')
   const [success, setSuccess]       = useState('')
-  const [authUrl, setAuthUrl]       = useState('')
+  const [authUrl, setAuthUrl]       = useState(FALLBACK_AUTH_URL)
+  const [authDebug, setAuthDebug]   = useState('')
 
   const searchParams = new URLSearchParams(window.location.search)
   const blingOk = searchParams.get('bling') === 'ok'
 
   useEffect(() => {
     async function load() {
-      // Chamadas separadas para não quebrar tudo se uma falhar
       try {
         const c = await getConfigs()
         setConfigs(c.data)
         setHoraMaquina(c.data.hora_maquina || '150')
         setLotePadrao(c.data.lote_padrao || '10')
       } catch (e) {
-        console.error('[Configuracoes] getConfigs falhou:', e.response?.status, e.message)
+        console.error('[Configuracoes] getConfigs falhou:', e.message)
       }
       try {
         const s = await getBlingStatus()
         setBlingStatus(s.data)
       } catch (e) {
-        console.error('[Configuracoes] getBlingStatus falhou:', e.response?.status, e.message)
+        console.error('[Configuracoes] getBlingStatus falhou:', e.message)
       }
       try {
         const u = await getBlingAuthUrl()
-        setAuthUrl(u.data?.url || '')
-        console.log('[Configuracoes] authUrl:', u.data?.url, '| configurado:', u.data?.configurado)
+        const url = (u.data && u.data.url) ? u.data.url : FALLBACK_AUTH_URL
+        setAuthUrl(url)
+        setAuthDebug('API: ' + ((u.data && u.data.configurado) ? 'configurado' : 'fallback'))
       } catch (e) {
-        console.error('[Configuracoes] getBlingAuthUrl falhou:', e.response?.status, e.message)
+        setAuthDebug('API falhou — usando URL local. Erro: ' + e.message)
+        setAuthUrl(FALLBACK_AUTH_URL)
       }
     }
     load()
@@ -102,20 +109,25 @@ export default function Configuracoes() {
             de volta automaticamente após autorizar.
           </p>
           {authUrl ? (
-            <div className="flex flex-wrap gap-2">
-              <a href={authUrl} className="btn-primary inline-flex items-center gap-1.5">
-                <ExternalLink size={15} />
-                {blingStatus?.valido ? 'Reconectar Bling' : 'Conectar com Bling'}
-              </a>
-              {blingStatus?.valido && (
-                <span className="text-xs text-gray-400 self-center">
-                  Token válido — clique para renovar a conexão se necessário
-                </span>
+            <div className="space-y-2">
+              <div className="flex flex-wrap gap-2">
+                <a href={authUrl} className="btn-primary inline-flex items-center gap-1.5">
+                  <ExternalLink size={15} />
+                  {blingStatus && blingStatus.valido ? 'Reconectar Bling' : 'Conectar com Bling'}
+                </a>
+                {blingStatus && blingStatus.valido && (
+                  <span className="text-xs text-gray-400 self-center">
+                    Token válido — clique para renovar a conexão se necessário
+                  </span>
+                )}
+              </div>
+              {authDebug && (
+                <p className="text-[11px] text-gray-400 font-mono">{authDebug}</p>
               )}
             </div>
           ) : (
             <p className="text-xs text-red-500">
-              Configure BLING_CLIENT_ID e BLING_CLIENT_SECRET no arquivo .env do backend.
+              Erro ao gerar URL de autorização. Tente recarregar a página.
             </p>
           )}
         </div>
